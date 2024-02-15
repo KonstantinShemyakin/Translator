@@ -1,0 +1,739 @@
+
+TNodeDefFunc    line=000, column=005, len=04, text=f011
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 001, Local  , mode = 002, type = Int       
+command = PushVar   , addr  = 001, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 012, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 002, Local  , mode = 002, type = Int       
+command = Pop       , param = 001, mode = 000, type = Void      
+command = NewVar    , addr  = 002, Local  , mode = 002, type = Int       
+command = Pop       , param = 001, mode = 000, type = Void      
+command = Pop       , param = 002, mode = 000, type = Void      
+command = Exit      , param = 000, mode = 000, type = Void      
+TNodeDefFunc    line=001, column=005, len=04, text=f000
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = Label     , param = 024, mode = 001, type = Void      
+command = GoTo      , label = 024, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 026, mode = 001, type = Void      
+command = GoTo      , label = 026, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 028, mode = 001, type = Void      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = Oper      , oper  = PostInc       , mode = 001, type = Void      
+command = GoTo      , label = 028, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 033, mode = 001, type = Void      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = Oper      , oper  = PostInc       , mode = 001, type = Void      
+command = GoTo      , label = 033, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 038, mode = 001, type = Void      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = Oper      , oper  = LT            , mode = 000, type = CInt      
+command = GoTo      , label = 038, If   , mode = 001, type = Unknown   
+command = Pop       , param = 001, mode = 000, type = Void      
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = Label     , param = 046, mode = 001, type = Void      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = Oper      , oper  = LT            , mode = 000, type = CInt      
+command = GoTo      , label = 057, Else , mode = 002, type = Unknown   
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = Oper      , oper  = AddAssign     , mode = 001, type = Void      
+command = GoTo      , label = 046, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 057, mode = 001, type = Void      
+command = Pop       , param = 001, mode = 000, type = Void      
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = Label     , param = 060, mode = 001, type = Void      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = Oper      , oper  = LT            , mode = 000, type = CInt      
+command = GoTo      , label = 070, Else , mode = 002, type = Unknown   
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = Oper      , oper  = PostInc       , mode = 001, type = Void      
+command = GoTo      , label = 060, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 070, mode = 001, type = Void      
+command = Pop       , param = 001, mode = 000, type = Void      
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = Label     , param = 073, mode = 001, type = Void      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = Oper      , oper  = LT            , mode = 000, type = CInt      
+command = GoTo      , label = 085, If   , mode = 001, type = Unknown   
+command = GoTo      , label = 091, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 080, mode = 001, type = Void      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = Oper      , oper  = PostInc       , mode = 001, type = Void      
+command = GoTo      , label = 073, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 085, mode = 001, type = Void      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = Oper      , oper  = AddAssign     , mode = 001, type = Void      
+command = GoTo      , label = 080, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 091, mode = 001, type = Void      
+command = Pop       , param = 001, mode = 000, type = Void      
+command = Exit      , param = 001, mode = 000, type = Void      
+command = NewVar    , addr  = 000, Global , mode = 001, type = Int       
+command = NewVar    , addr  = 001, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 001, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushVar   , addr  = 000, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 012, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = NewArr    , range = 001, Global , mode = 001, type = Int       
+TNodeDefFunc    line=013, column=028, len=04, text=ffff
+command = PushVar   , addr  = 000, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = PushVar   , addr  = 001, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushVar   , addr  = 000, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = Oper      , oper  = PostInc       , mode = 000, type = CInt      
+command = Oper      , oper  = SubAssign     , mode = 001, type = Void      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = Oper      , oper  = PostInc       , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = Oper      , oper  = Add           , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = Exit      , param = 002, mode = 000, type = Void      
+command = NewVar    , addr  = 003, Global , mode = 001, type = Int       
+command = NewVar    , addr  = 004, Global , mode = 001, type = Int       
+command = NewVar    , addr  = 005, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 005, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+TNodeDefFunc    line=014, column=022, len=04, text=f001
+command = Label     , param = 149, mode = 001, type = Void      
+command = GoTo      , label = 149, GoTo , mode = 003, type = Unknown   
+command = Exit      , param = 003, mode = 000, type = Void      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = NewArr    , range = 001, Global , mode = 001, type = Int       
+command = PushInt   , param = 010, mode = 000, type = CInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = InitArr   , addr  = 006, Global , mode = 001, type = Int       
+command = PushInt   , param = 011, mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = InitArr   , addr  = 006, Global , mode = 001, type = Int       
+command = PushInt   , param = 012, mode = 000, type = CInt      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = InitArr   , addr  = 006, Global , mode = 001, type = Int       
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = NewArr    , range = 001, Global , mode = 001, type = Int       
+command = PushInt   , param = 020, mode = 000, type = CInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = InitArr   , addr  = 007, Global , mode = 001, type = Int       
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = PushArr   , addr  = 006, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = InitArr   , addr  = 007, Global , mode = 001, type = Int       
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = NewArr    , range = 001, Global , mode = 001, type = Int       
+command = PushInt   , param = 010, mode = 000, type = CInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = InitArr   , addr  = 008, Global , mode = 001, type = Int       
+command = PushInt   , param = 011, mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = InitArr   , addr  = 008, Global , mode = 001, type = Int       
+command = PushInt   , param = 012, mode = 000, type = CInt      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = InitArr   , addr  = 008, Global , mode = 001, type = Int       
+command = NewVar    , addr  = 009, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 009, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 010, Global , mode = 001, type = Int       
+command = NewVar    , addr  = 011, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 011, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 012, mode = 000, type = CInt      
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = PushInt   , param = 006, mode = 000, type = CInt      
+command = Oper      , oper  = Multi         , mode = 000, type = CInt      
+command = Oper      , oper  = Add           , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 012, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 012, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushVar   , addr  = 011, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = Oper      , oper  = PostInc       , mode = 000, type = CInt      
+command = Oper      , oper  = UnaryAdd      , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+TNodeDefFunc    line=017, column=045, len=04, text=f003
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = PushInt   , param = 004, mode = 000, type = CInt      
+command = Oper      , oper  = LT            , mode = 000, type = CInt      
+command = GoTo      , label = 221, Else , mode = 002, type = Unknown   
+command = NewVar    , addr  = 001, Local  , mode = 002, type = Int       
+command = Call      , param = 004, mode = 000, type = Void      
+command = Pop       , param = 002, mode = 000, type = Void      
+command = Label     , param = 221, mode = 001, type = Void      
+command = Pop       , param = 001, mode = 000, type = Void      
+command = Exit      , param = 004, mode = 000, type = Void      
+TNodeDefFunc    line=018, column=005, len=04, text=f004
+command = PushVar   , addr  = 000, Param  , mode = 003, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = Oper      , oper  = PostInc       , mode = 001, type = Void      
+command = Exit      , param = 005, mode = 000, type = Void      
+TNodeDefFunc    line=018, column=032, len=07, text=main004
+command = PushNum   , param = 000, mode = 000, type = CDouble   
+command = Cast      , cast  = DC__I__       , mode = 000, type = Int       
+command = Call      , param = 005, mode = 000, type = Void      
+command = Exit      , param = 006, mode = 000, type = Void      
+command = NewVar    , addr  = 013, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 013, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 099, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+TNodeDefFunc    line=019, column=018, len=01, text=u
+TNodeDefFunc    line=019, column=028, len=04, text=f005
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = NewArr    , range = 001, Local  , mode = 002, type = Int       
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = PushArr   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushNum   , param = 000, mode = 000, type = CDouble   
+command = Cast      , cast  = DC__IC_       , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = Exit      , param = 008, mode = 000, type = Void      
+TNodeDefFunc    line=019, column=066, len=01, text=f
+command = PushInt   , param = 012, mode = 000, type = CInt      
+command = Cast      , cast  = IC__I__       , mode = 000, type = Int       
+command = Return    , param = 000, mode = 000, type = CInt      
+command = Exit      , param = 009, mode = 000, type = Void      
+TNodeDefFunc    line=019, column=091, len=07, text=main005
+command = Call      , param = 008, mode = 000, type = Void      
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushVar   , addr  = 013, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = PushInt   , param = 013, mode = 000, type = CInt      
+command = Oper      , oper  = Add           , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = Exit      , param = 010, mode = 000, type = Void      
+command = NewVar    , addr  = 014, Global , mode = 001, type = Int       
+TNodeDefFunc    line=020, column=013, len=01, text=f
+command = PushVar   , addr  = 001, Param  , mode = 003, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = Oper      , oper  = Not           , mode = 000, type = CInt      
+command = GoTo      , label = 276, Else , mode = 002, type = Unknown   
+command = PushVar   , addr  = 000, Param  , mode = 003, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = Oper      , oper  = PostInc       , mode = 001, type = Void      
+command = GoTo      , label = 280, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 276, mode = 001, type = Void      
+command = PushVar   , addr  = 000, Param  , mode = 003, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = Oper      , oper  = PostDec       , mode = 001, type = Void      
+command = Label     , param = 280, mode = 001, type = Void      
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = NewVar    , addr  = 001, Local  , mode = 002, type = Int       
+command = NewVar    , addr  = 002, Local  , mode = 002, type = Int       
+command = NewVar    , addr  = 003, Local  , mode = 002, type = Int       
+command = Pop       , param = 004, mode = 000, type = Void      
+command = Exit      , param = 011, mode = 000, type = Void      
+TNodeDefFunc    line=020, column=082, len=07, text=main006
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = Cast      , cast  = IC__I__       , mode = 000, type = Int       
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = Cast      , cast  = IC__I__       , mode = 000, type = Int       
+command = PushInt   , param = 006, mode = 000, type = CInt      
+command = Cast      , cast  = IC__I__       , mode = 000, type = Int       
+command = Call      , param = 011, mode = 000, type = Void      
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = Pop       , param = 001, mode = 000, type = Void      
+command = Exit      , param = 012, mode = 000, type = Void      
+TNodeDefFunc    line=021, column=005, len=04, text=f007
+command = Return    , param = 000, mode = 000, type = Void      
+command = Exit      , param = 013, mode = 000, type = Void      
+TNodeDefFunc    line=021, column=040, len=01, text=r
+command = PushNum   , param = 000, mode = 000, type = CDouble   
+command = Cast      , cast  = DC__I__       , mode = 000, type = Int       
+command = Return    , param = 000, mode = 000, type = CDouble   
+command = Exit      , param = 014, mode = 000, type = Void      
+TNodeDefFunc    line=022, column=005, len=04, text=f008
+command = Label     , param = 307, mode = 001, type = Void      
+command = GoTo      , label = 307, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 309, mode = 001, type = Void      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = PushInt   , param = 004, mode = 000, type = CInt      
+command = Oper      , oper  = LT            , mode = 000, type = CInt      
+command = GoTo      , label = 319, Else , mode = 002, type = Unknown   
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = Oper      , oper  = PostInc       , mode = 001, type = Void      
+command = GoTo      , label = 309, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 319, mode = 001, type = Void      
+command = Pop       , param = 001, mode = 000, type = Void      
+command = Exit      , param = 015, mode = 000, type = Void      
+TNodeDefFunc    line=023, column=005, len=04, text=f009
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = GoTo      , label = 328, Else , mode = 002, type = Unknown   
+command = Pop       , param = 001, mode = 000, type = Void      
+command = Label     , param = 328, mode = 001, type = Void      
+command = Pop       , param = 001, mode = 000, type = Void      
+command = Exit      , param = 016, mode = 000, type = Void      
+TNodeDefFunc    line=024, column=005, len=04, text=f010
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 001, Local  , mode = 002, type = Int       
+command = PushVar   , addr  = 001, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 012, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = Label     , param = 347, mode = 001, type = Void      
+command = PushVar   , addr  = 001, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 000, type = CInt      
+command = GoTo      , label = 347, If   , mode = 001, type = Unknown   
+command = PushVar   , addr  = 001, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = Oper      , oper  = PostInc       , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 000, type = CInt      
+command = Oper      , oper  = AddAssign     , mode = 001, type = Void      
+command = Pop       , param = 002, mode = 000, type = Void      
+command = Exit      , param = 017, mode = 000, type = Void      
+TNodeDefFunc    line=025, column=005, len=04, text=r011
+command = Return    , param = 000, mode = 000, type = Void      
+command = Exit      , param = 018, mode = 000, type = Void      
+TNodeDefFunc    line=025, column=029, len=04, text=f011
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 001, Local  , mode = 002, type = Int       
+command = PushVar   , addr  = 001, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 012, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 002, Local  , mode = 002, type = Int       
+command = Pop       , param = 001, mode = 000, type = Void      
+command = NewVar    , addr  = 002, Local  , mode = 002, type = Int       
+command = Pop       , param = 001, mode = 000, type = Void      
+command = Pop       , param = 002, mode = 000, type = Void      
+command = Exit      , param = 000, mode = 000, type = Void      
+command = NewVar    , addr  = 015, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 015, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushNum   , param = 000, mode = 000, type = CDouble   
+command = Cast      , cast  = DC__IC_       , mode = 000, type = CInt      
+command = Cast      , cast  = IC__I__       , mode = 000, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+TNodeDefFunc    line=027, column=005, len=04, text=f013
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = Label     , param = 400, mode = 001, type = Void      
+command = NewVar    , addr  = 001, Local  , mode = 002, type = Int       
+command = Pop       , param = 001, mode = 000, type = Void      
+command = GoTo      , label = 400, GoTo , mode = 003, type = Unknown   
+command = Exit      , param = 019, mode = 000, type = Void      
+TNodeDefFunc    line=028, column=005, len=04, text=r014
+command = PushInt   , param = 007, mode = 000, type = CInt      
+command = Cast      , cast  = IC__I__       , mode = 000, type = Int       
+command = PushInt   , param = 008, mode = 000, type = CInt      
+command = Cast      , cast  = IC__I__       , mode = 000, type = Int       
+command = Call      , param = 020, mode = 000, type = Void      
+command = Label     , param = 411, mode = 001, type = Void      
+command = GoTo      , label = 411, GoTo , mode = 003, type = Unknown   
+command = Exit      , param = 020, mode = 000, type = Void      
+TNodeDefFunc    line=029, column=005, len=04, text=f015
+command = PushVar   , addr  = 000, Param  , mode = 003, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 007, mode = 000, type = CInt      
+command = PushInt   , param = 006, mode = 000, type = CInt      
+command = Oper      , oper  = Sub           , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 000, type = CInt      
+command = Cast      , cast  = IC__I__       , mode = 000, type = Int       
+command = PushInt   , param = 008, mode = 000, type = CInt      
+command = PushInt   , param = 009, mode = 000, type = CInt      
+command = Oper      , oper  = Add           , mode = 000, type = CInt      
+command = Cast      , cast  = IC__I__       , mode = 000, type = Int       
+command = Call      , param = 020, mode = 000, type = Void      
+command = PushVar   , addr  = 000, Param  , mode = 003, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 007, mode = 000, type = CInt      
+command = PushInt   , param = 006, mode = 000, type = CInt      
+command = Oper      , oper  = Sub           , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = Exit      , param = 021, mode = 000, type = Void      
+TNodeDefFunc    line=030, column=005, len=04, text=f016
+command = PushVar   , addr  = 000, Param  , mode = 003, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = GoTo      , label = 441, Else , mode = 002, type = Unknown   
+command = PushNum   , param = 000, mode = 000, type = CDouble   
+command = Cast      , cast  = DC__I__       , mode = 000, type = Int       
+command = Return    , param = 000, mode = 000, type = CDouble   
+command = Label     , param = 441, mode = 001, type = Void      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = Cast      , cast  = IC__I__       , mode = 000, type = Int       
+command = Return    , param = 000, mode = 000, type = CInt      
+command = Exit      , param = 022, mode = 000, type = Void      
+command = NewVar    , addr  = 016, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 016, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = PushInt   , param = 004, mode = 000, type = CInt      
+command = NewArr    , range = 002, Global , mode = 001, type = Int       
+command = NewVar    , addr  = 018, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 018, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = PushArr   , addr  = 017, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 019, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 019, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushNum   , param = 000, mode = 000, type = CDouble   
+command = Cast      , cast  = DC__IC_       , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+TNodeDefFunc    line=033, column=005, len=04, text=f017
+command = Exit      , param = 023, mode = 000, type = Void      
+TNodeDefFunc    line=034, column=005, len=04, text=f018
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = Oper      , oper  = Sub           , mode = 001, type = Void      
+command = Exit      , param = 024, mode = 000, type = Void      
+TNodeDefFunc    line=035, column=005, len=04, text=f019
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = Exit      , param = 025, mode = 000, type = Void      
+TNodeDefFunc    line=036, column=005, len=04, text=f020
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = Label     , param = 484, mode = 001, type = Void      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = Oper      , oper  = PostInc       , mode = 001, type = Void      
+command = GoTo      , label = 484, GoTo , mode = 003, type = Unknown   
+command = Exit      , param = 026, mode = 000, type = Void      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = NewArr    , range = 002, Global , mode = 001, type = SCInt     
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = InitArr   , addr  = 020, Global , mode = 001, type = SCInt     
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = InitArr   , addr  = 020, Global , mode = 001, type = SCInt     
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = InitArr   , addr  = 020, Global , mode = 001, type = SCInt     
+command = PushInt   , param = 004, mode = 000, type = CInt      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = InitArr   , addr  = 020, Global , mode = 001, type = SCInt     
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = PushInt   , param = 004, mode = 000, type = CInt      
+command = InitArr   , addr  = 020, Global , mode = 001, type = SCInt     
+command = PushInt   , param = 006, mode = 000, type = CInt      
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = InitArr   , addr  = 020, Global , mode = 001, type = SCInt     
+command = PushInt   , param = -01, mode = 000, type = CInt      
+command = NewArr    , range = 001, Global , mode = 001, type = Int       
+command = NewVar    , addr  = 022, Global , mode = 001, type = Int       
+command = PushInt   , param = 007, mode = 000, type = CInt      
+command = PushInt   , param = 008, mode = 000, type = CInt      
+command = NewArr    , range = 002, Global , mode = 001, type = Int       
+TNodeDefFunc    line=038, column=005, len=04, text=f021
+command = Exit      , param = 027, mode = 000, type = Void      
+TNodeDefFunc    line=039, column=005, len=04, text=F022
+command = Call      , param = 009, mode = 000, type = Int       
+command = Pop       , param = 001, mode = 000, type = Void      
+command = Exit      , param = 028, mode = 000, type = Void      
+TNodeDefFunc    line=040, column=005, len=07, text=main023
+command = Call      , param = 009, mode = 000, type = Int       
+command = Pop       , param = 001, mode = 000, type = Void      
+command = Call      , param = 001, mode = 000, type = Void      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = PushArr   , addr  = 021, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 012, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = PushVar   , addr  = 022, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 033, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = PushVar   , addr  = 022, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushVar   , addr  = 022, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = Exit      , param = 029, mode = 000, type = Void      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = NewArr    , range = 001, Global , mode = 001, type = Int       
+command = PushInt   , param = 011, mode = 000, type = CInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = InitArr   , addr  = 024, Global , mode = 001, type = Int       
+command = PushNum   , param = 000, mode = 000, type = CDouble   
+command = Cast      , cast  = DC__IC_       , mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = InitArr   , addr  = 024, Global , mode = 001, type = Int       
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = NewArr    , range = 002, Global , mode = 001, type = Int       
+command = PushInt   , param = 021, mode = 000, type = CInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = InitArr   , addr  = 025, Global , mode = 001, type = Int       
+command = PushInt   , param = 022, mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = InitArr   , addr  = 025, Global , mode = 001, type = Int       
+command = PushInt   , param = 031, mode = 000, type = CInt      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = InitArr   , addr  = 025, Global , mode = 001, type = Int       
+command = PushInt   , param = 032, mode = 000, type = CInt      
+command = PushInt   , param = 004, mode = 000, type = CInt      
+command = InitArr   , addr  = 025, Global , mode = 001, type = Int       
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = NewArr    , range = 004, Global , mode = 001, type = Int       
+command = PushInt   , param = 1111, mode = 000, type = CInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = InitArr   , addr  = 026, Global , mode = 001, type = Int       
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = NewArr    , range = 001, Global , mode = 001, type = Int       
+command = PushInt   , param = 021, mode = 000, type = CInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = InitArr   , addr  = 027, Global , mode = 001, type = Int       
+command = PushInt   , param = 022, mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = InitArr   , addr  = 027, Global , mode = 001, type = Int       
+command = PushInt   , param = 023, mode = 000, type = CInt      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = InitArr   , addr  = 027, Global , mode = 001, type = Int       
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = NewArr    , range = 002, Global , mode = 001, type = SCInt     
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = InitArr   , addr  = 028, Global , mode = 001, type = SCInt     
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = InitArr   , addr  = 028, Global , mode = 001, type = SCInt     
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = InitArr   , addr  = 028, Global , mode = 001, type = SCInt     
+command = PushInt   , param = 004, mode = 000, type = CInt      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = InitArr   , addr  = 028, Global , mode = 001, type = SCInt     
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = PushInt   , param = 004, mode = 000, type = CInt      
+command = InitArr   , addr  = 028, Global , mode = 001, type = SCInt     
+command = PushInt   , param = 006, mode = 000, type = CInt      
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = InitArr   , addr  = 028, Global , mode = 001, type = SCInt     
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = NewArr    , range = 002, Global , mode = 001, type = Int       
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = InitArr   , addr  = 029, Global , mode = 001, type = Int       
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = InitArr   , addr  = 029, Global , mode = 001, type = Int       
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = InitArr   , addr  = 029, Global , mode = 001, type = Int       
+command = PushInt   , param = 004, mode = 000, type = CInt      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = InitArr   , addr  = 029, Global , mode = 001, type = Int       
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = PushInt   , param = 004, mode = 000, type = CInt      
+command = InitArr   , addr  = 029, Global , mode = 001, type = Int       
+command = PushInt   , param = 006, mode = 000, type = CInt      
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = InitArr   , addr  = 029, Global , mode = 001, type = Int       
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = NewArr    , range = 002, Global , mode = 001, type = Int       
+command = PushInt   , param = 031, mode = 000, type = CInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = InitArr   , addr  = 030, Global , mode = 001, type = Int       
+command = PushInt   , param = 032, mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = InitArr   , addr  = 030, Global , mode = 001, type = Int       
+command = PushInt   , param = 043, mode = 000, type = CInt      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = InitArr   , addr  = 030, Global , mode = 001, type = Int       
+TNodeDefFunc    line=047, column=005, len=04, text=f030
+command = PushInt   , param = 022, mode = 000, type = CInt      
+command = Oper      , oper  = UnarySub      , mode = 001, type = Void      
+command = Exit      , param = 030, mode = 000, type = Void      
+TNodeDefFunc    line=048, column=005, len=04, text=f031
+command = Label     , param = 644, mode = 001, type = Void      
+command = GoTo      , label = 644, GoTo , mode = 003, type = Unknown   
+command = Exit      , param = 031, mode = 000, type = Void      
+command = NewVar    , addr  = 031, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 031, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 032, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 032, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = PushVar   , addr  = 031, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = PushVar   , addr  = 032, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = NewArr    , range = 002, Global , mode = 001, type = Int       
+TNodeDefFunc    line=050, column=006, len=10, text=init_array
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = NewArr    , range = 001, Local  , mode = 002, type = Int       
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = InitArr   , addr  = 000, Local  , mode = 002, type = Int       
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = PushArr   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = InitArr   , addr  = 000, Local  , mode = 002, type = Int       
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = NewArr    , range = 002, Local  , mode = 002, type = Int       
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = InitArr   , addr  = 001, Local  , mode = 002, type = Int       
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = InitArr   , addr  = 001, Local  , mode = 002, type = Int       
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = NewArr    , range = 002, Local  , mode = 002, type = SCInt     
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = InitArr   , addr  = 002, Local  , mode = 002, type = SCInt     
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = InitArr   , addr  = 002, Local  , mode = 002, type = SCInt     
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = InitArr   , addr  = 002, Local  , mode = 002, type = SCInt     
+command = PushInt   , param = 004, mode = 000, type = CInt      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = InitArr   , addr  = 002, Local  , mode = 002, type = SCInt     
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = PushInt   , param = 004, mode = 000, type = CInt      
+command = InitArr   , addr  = 002, Local  , mode = 002, type = SCInt     
+command = PushInt   , param = 006, mode = 000, type = CInt      
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = InitArr   , addr  = 002, Local  , mode = 002, type = SCInt     
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = NewArr    , range = 002, Local  , mode = 002, type = Int       
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = InitArr   , addr  = 003, Local  , mode = 002, type = Int       
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = InitArr   , addr  = 003, Local  , mode = 002, type = Int       
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = InitArr   , addr  = 003, Local  , mode = 002, type = Int       
+command = PushInt   , param = 004, mode = 000, type = CInt      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = InitArr   , addr  = 003, Local  , mode = 002, type = Int       
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = PushInt   , param = 004, mode = 000, type = CInt      
+command = InitArr   , addr  = 003, Local  , mode = 002, type = Int       
+command = Pop       , param = 004, mode = 000, type = Void      
+command = Exit      , param = 032, mode = 000, type = Void      
+TNodeDefFunc    line=057, column=012, len=03, text=f_s
+command = NewVar    , addr  = 000, Local  , mode = 002, type = SCInt     
+command = PushVar   , addr  = 000, Local  , mode = 002, type = SCInt     
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 012, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 001, Local  , mode = 002, type = SCInt     
+command = NewVar    , addr  = 002, Local  , mode = 002, type = RInt      
+command = PushVar   , addr  = 002, Local  , mode = 002, type = RInt      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = SCInt     
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 003, Local  , mode = 002, type = RInt      
+command = Pop       , param = 004, mode = 000, type = Void      
+command = Exit      , param = 033, mode = 000, type = Void      
+command = Pop       , param = 034, mode = 000, type = Void      

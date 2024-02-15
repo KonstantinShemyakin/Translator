@@ -1,0 +1,22 @@
+
+S_                       
+                         :   E                        
+                         ;
+E                        
+                         :   T                           _f_00002_                
+                         ;
+_f_00002_                
+                         :   <Priority,Term>             T                        
+                         ;
+T                        
+                         :   F                           _f_00004_                
+                         ;
+_f_00004_                
+                         :   <Priority,Factor>           F                        
+                         ;
+F                        
+                         :   <Separator,LeftBracket>     E                           <Separator,RightBracket> 
+                         |   <Integer>                
+                         |   <Number>                 
+                         |   <Ident>                  
+                         ;

@@ -1,0 +1,17 @@
+1: MOVE #A,R1
+4: ADD #A$$,R1
+1: MOVE #i,R2
+6: ADD #i$$(R2),R1
+1: MOVE #b,R3
+4: ADD #b$$,R3
+1: MOVE #j,R4
+3: MOVE #j$$(R4),R4
+1: MOVE #c,R5
+4: ADD #c$$,R5
+1: MOVE #k,R6
+6: ADD #k$$(R6),R5
+7: MOVE (R5),R5
+5: ADD R4,R5
+5: ADD R3,R4
+7: MOVE (R3),R3
+8: MOVE R3,(R1)

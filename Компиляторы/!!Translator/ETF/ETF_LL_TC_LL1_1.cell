@@ -1,0 +1,17 @@
+{S_                       ,<Separator,LeftBracket>  }[  0] S_                 -> _E                       
+{                         ,<Integer>                }[  0] S_                 -> _E                       
+{_E                       ,<Separator,LeftBracket>  }[  0] _E                 -> { MAKE(BegStmExprLL); }  E                        { TREE(AddToList); }     { CODE(EndBlock); }      
+{                         ,<Integer>                }[  0] _E                 -> { MAKE(BegStmExprLL); }  E                        { TREE(AddToList); }     { CODE(EndBlock); }      
+{E_                       ,<Separator,RightBracket> }[  1] E_                 -> 
+{                         ,<Priority,Term>          }[  0] E_                 -> <Priority,Term>          T                        { MAKE(Binary); }        E_                       
+{                         ,Eof                      }[  1] E_                 -> 
+{E                        ,<Separator,LeftBracket>  }[  0] E                  -> T                        E_                       
+{                         ,<Integer>                }[  0] E                  -> T                        E_                       
+{T_                       ,<Separator,RightBracket> }[  1] T_                 -> 
+{                         ,<Priority,Term>          }[  1] T_                 -> 
+{                         ,<Priority,Factor>        }[  0] T_                 -> <Priority,Factor>        F                        { MAKE(Binary); }        T_                       
+{                         ,Eof                      }[  1] T_                 -> 
+{T                        ,<Separator,LeftBracket>  }[  0] T                  -> F                        T_                       
+{                         ,<Integer>                }[  0] T                  -> F                        T_                       
+{F                        ,<Separator,LeftBracket>  }[  0] F                  -> <Separator,LeftBracket>  E                        <Separator,RightBracket> 
+{                         ,<Integer>                }[  1] F                  -> <Integer>                { MAKE(Number); }        

@@ -1,0 +1,74 @@
+На вход подается грамматика в виде
+Список терминальных символов, заканчивющися ";"
+Список нетерминальных символов, заканчивющися ";"
+Аксиома, ";"
+Список правил, разделенных ";", в виде нетерминал, правая часть. "$" обозначает пустую строку.
+
+Например, 
+
+
+a  c ;
+S A B ;
+S ; 
+S B a A ; S B ;   B B c ; B $ ; A c ;
+
+
+На строке 
+
+a c #
+
+выдает протокол
+
+S=[A, B, a]
+S=[B]
+B=[c, B]
+B=[$]
+A=[c]
+A=[c]
+B=[$]
+B=[c, B]
+S=[A, B, a]
+S=[B]
+showState 
+State 1 LAH # action reduce4
+State 1 LAH c action reduce4
+State 1 LAH a action reduce4
+State 1 LAH c action reduce4
+State 1 LAH # action reduce4
+State 1 LAH a action reduce4
+State 1 Nonterm B goto 2
+State 1 Nonterm S goto 3
+showState 
+State 2 LAH # action reduce2
+State 2 LAH c action shift5
+State 2 LAH a action shift4
+State 2 LAH # action reduce2
+State 2 LAH c action shift5
+State 2 LAH a action shift4
+showState 
+State 3 LAH # action reduce0
+State 3 LAH # action reduce0
+showState 
+State 4 LAH c action shift6
+State 4 LAH c action shift6
+State 4 Nonterm A goto 7
+showState 
+State 5 LAH # action reduce3
+State 5 LAH c action reduce3
+State 5 LAH a action reduce3
+State 5 LAH c action reduce3
+State 5 LAH a action reduce3
+State 5 LAH # action reduce3
+showState 
+State 6 LAH # action reduce5
+State 6 LAH # action reduce5
+showState 
+State 7 LAH # action reduce1
+State 7 LAH # action reduce1
+Reduce rule 4
+Shift a
+Shift c
+Reduce rule 5
+Reduce rule 1
+Accept 
+

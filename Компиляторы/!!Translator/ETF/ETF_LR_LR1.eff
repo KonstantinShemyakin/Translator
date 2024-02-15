@@ -1,0 +1,10 @@
+S_                       -> <Ident>                   { <Ident>                  <Priority,Factor>         }  { <Separator,LeftBracket>  <Ident>                   }  { <Ident>                  <Priority,Term>           }  { <Separator,LeftBracket>  <Separator,LeftBracket>   } 
+E                        -> <Ident>                   { <Ident>                  <Priority,Factor>         }  { <Separator,LeftBracket>  <Ident>                   }  { <Ident>                  <Priority,Term>           }  { <Separator,LeftBracket>  <Separator,LeftBracket>   } 
+T                        -> <Ident>                   { <Ident>                  <Priority,Factor>         }  { <Separator,LeftBracket>  <Ident>                   }  { <Separator,LeftBracket>  <Separator,LeftBracket>   } 
+F                        -> <Ident>                   { <Separator,LeftBracket>  <Ident>                   }  { <Separator,LeftBracket>  <Separator,LeftBracket>   } 
+<Separator,LeftBracket>  -> <Separator,LeftBracket>  
+<Separator,RightBracket> -> <Separator,RightBracket> 
+<Ident>                  -> <Ident>                  
+<Priority,Term>          -> <Priority,Term>          
+<Priority,Factor>        -> <Priority,Factor>        
+Empty                    -> Empty                    

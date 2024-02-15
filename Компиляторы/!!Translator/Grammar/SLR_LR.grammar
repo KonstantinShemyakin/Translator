@@ -1,0 +1,15 @@
+
+S_                       
+                         : S                        
+                         ;
+S                        
+                         : L                           <Oper,Assign>               R                        
+                         | R                        
+                         ;
+L                        
+                         : <Oper,Multi>                R                        
+                         | <Ident>                  
+                         ;
+R                        
+                         : L                        
+                         ;

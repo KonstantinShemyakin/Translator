@@ -1,0 +1,19 @@
+
+S_                       
+                         :   E                        
+                         ;
+E                        
+                         :   E                           <Oper,Add>                  T                        
+                         |   E                           <Oper,Or>                   T                        
+                         |   T                        
+                         ;
+T                        
+                         :   T                           <Oper,Multi>                F                        
+                         |   T                           <Oper,Div>                  F                        
+                         |   F                        
+                         ;
+F                        
+                         :   <Separator,LeftBracket>     E                           <Separator,RightBracket> 
+                         |   <Integer>                
+                         |   <Number>                 
+                         ;

@@ -1,0 +1,23 @@
+
+S_                       
+                         ::= E                        
+                         
+E                        
+                         ::= T                           
+                         [
+                         Priority_Term               T                        
+                         ]... 
+                         
+T                        
+                         ::= F                           
+                         [
+                         Priority_Factor             F                        
+                         ]... 
+                         
+F                        
+                         ::= { 
+                             (                           E                           )                        
+                         |   Ident_lexeme             
+                         |   Integer_lexeme           
+                         |   Number_lexeme            
+                             } 

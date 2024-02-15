@@ -1,0 +1,13 @@
+
+TNodeStatements type = Void      , 
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=000, column=005, len=01, value=0, text=f
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeWhile      type = Unknown   ,   group=Separator , type=LeftBracket , line=002, column=007, len=01, value=55, text=(
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=002, column=008, len=01, value=2, text=2 part=241 
+        TNodeNull       type = Unknown   ,  number=3, size=0
+      TNodeDo         type = Unknown   ,   group=Separator , type=LeftCramp   , line=003, column=004, len=01, value=53, text={
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=003, column=013, len=01, value=2, text=2 part=241 
+        TNodeStatements type = Void      ,  number=5, size=0 number=4, size=0 number=2, size=0 number=1, size=0 number=0, size=0

@@ -1,0 +1,18 @@
+﻿  stdafx.cpp
+  C99_Lexer.cpp
+  CSyntax.cpp
+  FSyntax.cpp
+  FYaccParse.cpp
+  GBuilder.cpp
+  GSyntax.cpp
+  KBuilder.cpp
+  LRBuilder.cpp
+  MSyntax.cpp
+  PSyntax.cpp
+  RSyntax.cpp
+  SQLSyntax.cpp
+  Syntax.cpp
+  TSyntax.cpp
+  Translator.cpp
+  Generating Code...
+LINK : fatal error LNK1104: cannot open file 'P:\!!Translator\Debug\CodeTreeNode.lib'

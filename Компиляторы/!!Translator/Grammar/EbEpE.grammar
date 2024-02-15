@@ -1,0 +1,13 @@
+// Red(p=255,(4.25))
+S_                       
+                         : E                        
+                         ;
+E                        
+                         : E                           <Oper,Sub>                  E                        <Oper,Add>                  E                        
+                         | E                           <Oper,Sub>                  E                        
+                         | E                           <Oper,Add>                  E                        
+                         | <Separator,LeftCramp>       E                           <Separator,RightCramp>   
+                         | <Ident>                     
+                         ;
+
+

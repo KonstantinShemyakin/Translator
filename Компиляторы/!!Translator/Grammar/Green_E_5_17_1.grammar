@@ -1,0 +1,8 @@
+S    : 
+     | <Integer> <Number>   A
+     ;
+
+A    : S         <Integer>  <Integer>
+     | <Number>
+     ;
+   

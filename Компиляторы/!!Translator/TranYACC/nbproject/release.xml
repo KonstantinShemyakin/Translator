@@ -1,0 +1,38 @@
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>MinGW|MinGW</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>../Generated</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibFileItem>../TreeNodeCode/dist/Release/MinGW-Windows/libtreenodecode.a</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="../Translator/CGrammar.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/CSyntax.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/GSyntax.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/PSyntax.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/Parse.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/Rules.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/Tables.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/TranYACC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/YSyntax.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>

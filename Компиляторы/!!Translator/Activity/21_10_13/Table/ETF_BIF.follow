@@ -1,0 +1,9 @@
+S_                       -> Eof                      
+E                        -> <Separator,RightBracket> Eof                      
+_f_00002_                -> <Separator,RightBracket> <Priority,Term>          Eof                      
+_f_00003_                -> <Separator,RightBracket> Eof                      
+T                        -> <Separator,RightBracket> <Priority,Term>          Eof                      
+_f_00005_                -> <Oper,Multi>             <Oper,Div>               <Separator,RightBracket> <Priority,Term>          Eof                      
+_f_00006_                -> <Separator,LeftBracket>  <Integer>                <Number>                 
+_f_00007_                -> <Separator,RightBracket> <Priority,Term>          Eof                      
+F                        -> <Oper,Multi>             <Oper,Div>               <Separator,RightBracket> <Priority,Term>          Eof                      

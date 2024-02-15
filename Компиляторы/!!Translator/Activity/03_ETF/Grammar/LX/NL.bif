@@ -1,0 +1,320 @@
+
+S_                       
+                         ::= Program                  
+                         
+Program                  
+                         ::= 
+                         [
+                         
+                             { 
+                             ;                        
+                         |   
+                                                      { 
+                                                      const                       void                     
+                                                  |   void                     
+                                                  |   static                      
+                                                                               { 
+                                                                               void                     
+                                                                           |   void                     
+                                                                           |   const                       void                     
+                                                                               } 
+                                                  |   void                     
+                                                      }    Ident                       (                           
+                                                      { 
+                                                      )                        
+                                                  |   DefParItem                  
+                                                                           [
+                                                                           ,                           DefParItem               
+                                                                           ]... 
+                                                                              )                        
+                                                      }    
+                                                      { 
+                                                      ;                        
+                                                  |   '{'                         _f_00093_                
+                                                      } 
+                                                  
+                         |   DefineSemi               
+                             } 
+                         ]... 
+                         
+                         
+DefParType               
+                         ::= 
+                             { 
+                             const                       void                        _f_00091_                
+                         |   void                        _f_00091_                
+                             }    Ident                    
+                         
+DefPar                   
+                         ::= [ 
+                             =                           Assign                   
+                             ] 
+DefParItem               
+                         ::= DefParType                  
+                             { 
+                             DefPar                   
+                         |   '['                         DefArrDA                    DefPar                   
+                             } 
+                         
+Initializer              
+                         ::= '{'                         
+                             { 
+                             AInitItem                   
+                                                  [
+                                                  ,                           AInitItem                
+                                                  ]... 
+                                                     '}'                      
+                         |   '}'                      
+                             } 
+                         
+AInitItem                
+                         ::= { 
+                             Initializer              
+                         |   Assign                   
+                             } 
+DefArrDA                 
+                         ::= 
+                             { 
+                             ']'                      
+                         |   Assign                      ']'                      
+                             }    
+                         [
+                         '['                         Assign                      ']'                      
+                         ]... 
+                         
+DefArr                   
+                         ::= Ident                       '['                         DefArrDA                    
+                             [ 
+                             =                           Initializer              
+                             ] 
+                         
+DefVar                   
+                         ::= Ident                       
+                             [ 
+                             =                           Assign                   
+                             ] 
+                         
+DefItem                  
+                         ::= { 
+                             &                           
+                             { 
+                             DefArr                   
+                         |   DefVar                   
+                             } 
+                         |   DefArr                   
+                         |   DefVar                   
+                             } 
+DefType                  
+                         ::= { 
+                             static                      
+                             { 
+                             void                     
+                         |   const                       void                     
+                             } 
+                         |   const                       void                     
+                         |   void                     
+                             } 
+Condition                
+                         ::= { 
+                             DefType                     
+                             { 
+                             &                           DefVar                   
+                         |   DefVar                   
+                             } 
+                         |   Expressions              
+                                                  
+                             } 
+Expressions              
+                         ::= Assign                      
+                         [
+                         ,                           Assign                   
+                         ]... 
+                         
+Assign                   
+                         ::= Question                    
+                             [ 
+                             Priority_Assign             Assign                   
+                             ] 
+                         
+Question                 
+                         ::= AndAnd                      
+                         [
+                         Priority_OrOr               AndAnd                   
+                         ]... 
+                            
+                             [ 
+                             Priority_Question           ExpressionValue             :                           Question                 
+                             ] 
+                         
+AndAnd                   
+                         ::= Or                          
+                         [
+                         Priority_AndAnd             Or                       
+                         ]... 
+                         
+Or                       
+                         ::= XOr                         
+                         [
+                         Priority_Or                 XOr                      
+                         ]... 
+                         
+XOr                      
+                         ::= And                         
+                         [
+                         Priority_XOr                And                      
+                         ]... 
+                         
+And                      
+                         ::= Equ                         
+                         [
+                         Priority_And                Equ                      
+                         ]... 
+                         
+Equ                      
+                         ::= Compare                     
+                         [
+                         Priority_Equ                Compare                  
+                         ]... 
+                         
+Compare                  
+                         ::= Shift                       
+                         [
+                         Priority_Compare            Shift                    
+                         ]... 
+                         
+Shift                    
+                         ::= Term                        
+                         [
+                         Priority_Shift              Term                     
+                         ]... 
+                         
+Term                     
+                         ::= Factor                      
+                         [
+                         Priority_Term               Factor                   
+                         ]... 
+                         
+Factor                   
+                         ::= Unary                       
+                         [
+                         Priority_Factor             Unary                    
+                         ]... 
+                         
+Unary                    
+                         ::= { 
+                             Priority_Unary              Unary                    
+                         |   Priority_Term               Unary                    
+                         |   Priority_IncDec             Unary                    
+                         |   (                           
+                                                      { 
+                                                      const                       void                     
+                                                  |   void                     
+                                                      }    )                           Unary                    
+                         |   
+                                                      { 
+                                                      Integer                  
+                                                  |   Number                   
+                                                  |   Ident                       
+                                                                               [ 
+                                                                               (                           
+                                                                                                        { 
+                                                                                                        )                        
+                                                                                                    |   Expressions              
+                                                                                                                                )                        
+                                                                                                        } 
+                                                                           |   '['                         ExpressionValue             ']'                         
+                                                                                                    [
+                                                                                                    '['                         ExpressionValue             ']'                      
+                                                                                                    ]... 
+                                                                                                    
+                                                                               ] 
+                                                  |   Primary                  
+                                                  |   void                        Primary                  
+                                                      }    
+                                                  [
+                                                  Priority_IncDec          
+                                                  ]... 
+                             } 
+Primary                  
+                         ::= (                           Expressions              
+                            )                        
+                         
+DefineSemi               
+                         ::= DefType                     DefItem                     
+                         [
+                         ,                           DefItem                  
+                         ]... 
+                            ;                        
+                         
+ExprSemi                 
+                         ::= ExpressionExpression        ;                        
+                         
+DefExpr                  
+                         ::= { 
+                             ;                        
+                         |   Ident                       :                           DefExpr                  
+                         |   DefineSemi               
+                         |   
+                                                      { 
+                                                      if                          (                           Condition                   )                           DefExpr                     
+                                                                               [ 
+                                                                               else                        DefExpr                  
+                                                                               ] 
+                                                                           
+                                                  |   do                          DefExpr                     while                       (                           Condition                   )                           ;                        
+                                                                           
+                                                  |   while                       (                           Condition                   )                           DefExpr                  
+                                                                           
+                                                  |   for                         (                           
+                                                                               { 
+                                                                               ;                        
+                                                                           |   DefineSemi               
+                                                                           |   ExprSemi                 
+                                                                               }    
+                                                                               { 
+                                                                               ;                        
+                                                                           |   Condition                   ;                        
+                                                                               }    
+                                                                               { 
+                                                                               )                        
+                                                                           |   ExpressionExpression        )                        
+                                                                               }    DefExpr                  
+                                                                           
+                                                  |   switch                      (                           )                        
+                                                                           
+                                                  |   goto                        Ident                       ;                        
+                                                                           
+                                                  |   break                       ;                        
+                                                                           
+                                                  |   continue                    ;                        
+                                                                           
+                                                  |   return                      
+                                                                               [ 
+                                                                               ExpressionValue          
+                                                                               ]    ;                        
+                                                                           
+                                                  |   '{'                         _f_00093_                
+                                                                           
+                                                      } 
+                         |   ExprSemi                 
+                             } 
+StmExpr                  
+                         ::= 
+                         [
+                         DefExpr                  
+                         ]... 
+ExpressionExpression     
+                         ::= Expressions              
+                         
+ExpressionValue          
+                         ::= Expressions              
+                         
+_f_00091_                
+                         ::= [ 
+                             &                        
+                             ] 
+_f_00093_                
+                         ::= { 
+                             StmExpr                     '}'                      
+                         |   '}'                      
+                             } 

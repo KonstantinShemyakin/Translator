@@ -1,0 +1,76 @@
+
+S_                       
+                         :   rules                    
+                         ;
+rules                    
+                         :   rule                        _f_00002_                
+                         ;
+_f_00002_                
+                         :   rule                     
+                         ;
+rule                     
+                         :   <Space>                     <Separator,BNFSet>          item_list                
+                         ;
+item_list                
+                         :   item_symbol                 _f_00005_                
+                         ;
+_f_00005_                
+                         :   item_symbol              
+                         ;
+item_symbol              
+                         :   <Space>                  
+                         |   item                     
+                         ;
+item                     
+                         :   <Separator,LeftScrape>      or_list                     <Separator,RightScrape>  
+                         |   <Separator,LeftScrape>      or_list                     <Separator,RightScrape>     <Meta,Ellipsis>          
+                         |   <Separator,LeftCramp>       or_list                     <Separator,RightCramp>   
+                         |   _f_00008_                
+                         ;
+_f_00008_                
+                         :   _f_00009_                
+                         |   _f_00010_                
+                         |   _f_00011_                
+                         ;
+_f_00009_                
+                         :   <Meta,LeftMaker>            Ident_Maker                 <Separator,LeftBracket>     <Ident>                     <Separator,Comma>           int_body                    <Separator,RightBracket>    <Separator,Semicolon>       <Meta,RightMaker>        
+                         |   <Meta,LeftMaker>            Ident_Maker                 <Separator,LeftBracket>     <Ident>                     <Separator,RightBracket>    <Separator,Semicolon>       <Meta,RightMaker>        
+                         ;
+_f_00010_                
+                         :   <Meta,LeftMaker>            <Reserv,Node>               <Separator,LeftBracket>     <Ident>                     <Separator,Comma>           node_body                   <Separator,Comma>           int_body                    <Separator,RightBracket>    <Separator,Semicolon>       <Meta,RightMaker>        
+                         |   <Meta,LeftMaker>            <Reserv,Node>               <Separator,LeftBracket>     <Ident>                     <Separator,Comma>           node_body                   <Separator,RightBracket>    <Separator,Semicolon>       <Meta,RightMaker>        
+                         ;
+_f_00011_                
+                         :   <Meta,LeftMaker>            <Reserv,Turn>               <Separator,LeftBracket>     <Ident>                     <Separator,Comma>           <Ident>                     <Separator,Comma>           int_body                    <Separator,RightBracket>    <Separator,Semicolon>       <Meta,RightMaker>        
+                         |   <Meta,LeftMaker>            <Reserv,Turn>               <Separator,LeftBracket>     <Ident>                     <Separator,Comma>           <Ident>                     <Separator,RightBracket>    <Separator,Semicolon>       <Meta,RightMaker>           _f_00012_                
+                         ;
+_f_00012_                
+                         :   <Meta,LeftMaker>            <Reserv,Call>               <Separator,LeftBracket>     <Ident>                     <Separator,Comma>           int_body                    <Separator,Comma>           int_body                    <Separator,RightBracket>    <Separator,Semicolon>       <Meta,RightMaker>        
+                         |   <Meta,LeftMaker>            <Reserv,Call>               <Separator,LeftBracket>     <Ident>                     <Separator,Comma>           int_body                    <Separator,RightBracket>    <Separator,Semicolon>       <Meta,RightMaker>        
+                         ;
+or_list                  
+                         :   item_list                   _f_00014_                
+                         ;
+_f_00014_                
+                         :   <Oper,Or>                   item_list                
+                         ;
+Ident_Maker              
+                         :   <Reserv,All>             
+                         |   <Reserv,Make>            
+                         |   <Reserv,Code>            
+                         |   <Reserv,Tree>            
+                         |   <Reserv,Yacc>            
+                         ;
+node_body                
+                         :   <Separator,LeftBracket>     int_body                    <Separator,RightBracket> 
+                         |   <Separator,LeftBracket>     int_body                    <Separator,Comma>           int_body                    <Separator,RightBracket> 
+                         |   <Separator,LeftBracket>     int_body                    <Separator,Comma>           int_body                    <Separator,Comma>           int_body                    <Separator,RightBracket> 
+                         |   <Separator,LeftBracket>     int_body                    <Separator,Comma>           int_body                    <Separator,Comma>           int_body                    <Separator,Comma>           int_body                    <Separator,RightBracket> 
+                         |   <Separator,LeftBracket>     int_body                    <Separator,Comma>           int_body                    <Separator,Comma>           int_body                    <Separator,Comma>           int_body                    <Separator,Comma>           int_body                    <Separator,RightBracket> 
+                         ;
+int_body                 
+                         :   <Integer>                
+                         |   <Ident>                  
+                         |   <Ident>                     <Separator,ColonColon>      <Ident>                  
+                         |   <Oper,Sub>                  <Integer>                
+                         ;

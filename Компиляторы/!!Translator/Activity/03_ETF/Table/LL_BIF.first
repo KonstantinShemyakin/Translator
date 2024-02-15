@@ -1,0 +1,164 @@
+S_                       -> <Separator,Semicolon>    <Syntax,DefFunc>         <Syntax,DefArr>          <Syntax,DefVar>          Empty                    
+Program                  -> <Separator,Semicolon>    <Syntax,DefFunc>         <Syntax,DefArr>          <Syntax,DefVar>          Empty                    
+_f_00002_                -> <Separator,Semicolon>    <Syntax,DefFunc>         <Syntax,DefArr>          <Syntax,DefVar>          
+_f_00003_                -> <Separator,LeftBracket>  <Syntax,EmptyBracket>    
+_f_00004_                -> <Separator,Comma>        
+_f_00005_                -> <Separator,Comma>        Empty                    
+_f_00006_                -> <Separator,LeftCramp>    <Separator,Semicolon>    <Syntax,EmptyCramp>      
+_f_00007_                -> <Separator,Semicolon>    <Syntax,DefFunc>         <Syntax,DefArr>          <Syntax,DefVar>          Empty                    
+DefParInit               -> <Oper,Assign>            Empty                    
+DefParItem               -> <Syntax,DefArr>          <Syntax,DefVar>          
+Initializer              -> <Separator,LeftCramp>    <Syntax,EmptyCramp>      
+_f_00011_                -> <Separator,Comma>        
+_f_00012_                -> <Separator,Comma>        Empty                    
+AInitItem                -> <Separator,LeftCramp>    <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        
+                            <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+DefArrDA                 -> <Separator,LeftScrape>   <Syntax,EmptyScrape>     
+_f_00015_                -> <Separator,LeftScrape>   <Syntax,EmptyScrape>     
+_f_00016_                -> <Separator,LeftScrape>   
+_f_00017_                -> <Separator,LeftScrape>   Empty                    
+DefVar                   -> <Ident>                  
+_f_00019_                -> <Oper,Assign>            Empty                    
+DefIAV                   -> <Ident>                  <Syntax,IdentArr>        
+_f_00021_                -> <Oper,Assign>            Empty                    
+DefItem                  -> <Ident>                  <Priority,And>           <Syntax,IdentArr>        
+Condition                -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,DefVar>          
+                            <Syntax,Cast>            <Syntax,CastUnary>       
+_f_00024_                -> <Ident>                  <Priority,And>           
+Expressions              -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+_f_00026_                -> <Separator,Comma>        
+_f_00027_                -> <Separator,Comma>        Empty                    
+Assign                   -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+_f_00029_                -> <Priority,Assign>        Empty                    
+Question                 -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+_f_00031_                -> <Priority,OrOr>          
+_f_00032_                -> <Priority,OrOr>          Empty                    
+_f_00033_                -> <Priority,Question>      Empty                    
+AndAnd                   -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+_f_00035_                -> <Priority,AndAnd>        
+_f_00036_                -> <Priority,AndAnd>        Empty                    
+Or                       -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+_f_00038_                -> <Priority,Or>            
+_f_00039_                -> <Priority,Or>            Empty                    
+XOr                      -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+_f_00041_                -> <Priority,XOr>           
+_f_00042_                -> <Priority,XOr>           Empty                    
+And                      -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+_f_00044_                -> <Priority,And>           
+_f_00045_                -> <Priority,And>           Empty                    
+Equ                      -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+_f_00047_                -> <Priority,Equ>           
+_f_00048_                -> <Priority,Equ>           Empty                    
+Compare                  -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+_f_00050_                -> <Priority,Compare>       
+_f_00051_                -> <Priority,Compare>       Empty                    
+Shift                    -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+_f_00053_                -> <Priority,Shift>         
+_f_00054_                -> <Priority,Shift>         Empty                    
+Term                     -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+_f_00056_                -> <Priority,Term>          
+_f_00057_                -> <Priority,Term>          Empty                    
+Factor                   -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+_f_00059_                -> <Priority,Factor>        
+_f_00060_                -> <Priority,Factor>        Empty                    
+Unary                    -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+_f_00062_                -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+_f_00063_                -> <Separator,LeftScrape>   
+_f_00064_                -> <Separator,LeftScrape>   Empty                    
+_f_00065_                -> <Separator,LeftBracket>  <Syntax,EmptyBracket>    
+_f_00066_                -> <Priority,IncDec>        Empty                    
+Primary                  -> <Separator,LeftBracket>  
+DefineSemi               -> <Syntax,DefArr>          <Syntax,DefVar>          
+_f_00069_                -> <Syntax,DefArr>          <Syntax,DefVar>          
+_f_00070_                -> <Separator,Comma>        
+_f_00071_                -> <Separator,Comma>        Empty                    
+ExprSemi                 -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+DefExpr                  -> <Separator,LeftCramp>    <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              <Reserv,Do>              
+                            <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,DefArr>          
+                            <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+_f_00074_                -> <Separator,LeftCramp>    <Reserv,For>             <Reserv,While>           <Reserv,If>              <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Syntax,Label>           
+                            <Syntax,EmptyCramp>      
+_f_00075_                -> <Reserv,Else>            Empty                    
+_f_00076_                -> <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        
+                            <Syntax,DefArr>          <Syntax,DefVar>          <Syntax,Cast>            <Syntax,CastUnary>       
+_f_00077_                -> <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        
+                            <Syntax,DefVar>          <Syntax,Cast>            <Syntax,CastUnary>       
+_f_00078_                -> <Separator,LeftBracket>  <Separator,RightBracket> <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        
+                            <Syntax,Cast>            <Syntax,CastUnary>       
+_f_00079_                -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       Empty                    
+_f_00080_                -> <Separator,LeftCramp>    <Syntax,EmptyCramp>      
+StmExpr                  -> <Separator,LeftCramp>    <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              <Reserv,Do>              
+                            <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,DefArr>          
+                            <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      Empty                    
+_f_00082_                -> <Separator,LeftCramp>    <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              <Reserv,Do>              
+                            <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,DefArr>          
+                            <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+_f_00083_                -> <Separator,LeftCramp>    <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              <Reserv,Do>              
+                            <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,DefArr>          
+                            <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      Empty                    
+ExpressionExpression     -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+ExpressionValue          -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+<Oper,Assign>            -> <Oper,Assign>            
+<Separator,LeftCramp>    -> <Separator,LeftCramp>    
+<Separator,RightCramp>   -> <Separator,RightCramp>   
+<Separator,LeftBracket>  -> <Separator,LeftBracket>  
+<Separator,RightBracket> -> <Separator,RightBracket> 
+<Separator,LeftScrape>   -> <Separator,LeftScrape>   
+<Separator,RightScrape>  -> <Separator,RightScrape>  
+<Separator,Comma>        -> <Separator,Comma>        
+<Separator,Semicolon>    -> <Separator,Semicolon>    
+<Separator,Colon>        -> <Separator,Colon>        
+<Integer>                -> <Integer>                
+<Number>                 -> <Number>                 
+<Ident>                  -> <Ident>                  
+<Reserv,For>             -> <Reserv,For>             
+<Reserv,While>           -> <Reserv,While>           
+<Reserv,If>              -> <Reserv,If>              
+<Reserv,Else>            -> <Reserv,Else>            
+<Reserv,Do>              -> <Reserv,Do>              
+<Reserv,GoTo>            -> <Reserv,GoTo>            
+<Reserv,Continue>        -> <Reserv,Continue>        
+<Reserv,Break>           -> <Reserv,Break>           
+<Reserv,Return>          -> <Reserv,Return>          
+<Priority,Assign>        -> <Priority,Assign>        
+<Priority,Question>      -> <Priority,Question>      
+<Priority,OrOr>          -> <Priority,OrOr>          
+<Priority,AndAnd>        -> <Priority,AndAnd>        
+<Priority,Or>            -> <Priority,Or>            
+<Priority,XOr>           -> <Priority,XOr>           
+<Priority,And>           -> <Priority,And>           
+<Priority,Equ>           -> <Priority,Equ>           
+<Priority,Compare>       -> <Priority,Compare>       
+<Priority,Shift>         -> <Priority,Shift>         
+<Priority,Term>          -> <Priority,Term>          
+<Priority,Factor>        -> <Priority,Factor>        
+<Priority,Unary>         -> <Priority,Unary>         
+<Priority,IncDec>        -> <Priority,IncDec>        
+<Syntax,IdentFunc>       -> <Syntax,IdentFunc>       
+<Syntax,IdentArr>        -> <Syntax,IdentArr>        
+<Syntax,DefFunc>         -> <Syntax,DefFunc>         
+<Syntax,DefArr>          -> <Syntax,DefArr>          
+<Syntax,DefVar>          -> <Syntax,DefVar>          
+<Syntax,Label>           -> <Syntax,Label>           
+<Syntax,Cast>            -> <Syntax,Cast>            
+<Syntax,CastUnary>       -> <Syntax,CastUnary>       
+<Syntax,EmptyCramp>      -> <Syntax,EmptyCramp>      
+<Syntax,EmptyBracket>    -> <Syntax,EmptyBracket>    
+<Syntax,EmptyScrape>     -> <Syntax,EmptyScrape>     

@@ -1,0 +1,355 @@
+
+S_                       
+                         ::= Program                  
+                         
+Program                  
+                         ::= Defines                  
+                         
+DefineParType            
+                         ::= const                       void                        &                        
+                         |   void                        &                        
+                         |   const                       void                     
+                         |   void                     
+                         
+DefParType               
+                         ::= DefineParType               Ident                    
+                         
+DefPar                   
+                         ::= =                           Assign                   
+                         |   
+                         
+DefParItem               
+                         ::= DefParType                  [                           DefArrDA                    DefPar                   
+                         |   DefParType                  DefPar                   
+                         
+DefParamsList            
+                         ::= ,                           DefParItem                  DefParamsList            
+                         |   
+                         
+DefParams                
+                         ::= DefParItem                  DefParamsList            
+                         
+BodyFunc                 
+                         ::= ;                        
+                         |   '{'                         '}'                      
+                         |   '{'                         StmExpr                     '}'                      
+                         
+DefFuncType              
+                         ::= static                      const                       void                     
+                         |   static                      void                     
+                         |   const                       void                     
+                         |   void                     
+                         |   static                      void                     
+                         |   void                     
+                         
+DefFuncParams            
+                         ::= )                        
+                         |   DefParams                   )                        
+                         
+DefFunc                  
+                         ::= DefFuncType                 Ident                       (                           DefFuncParams               BodyFunc                 
+                         
+AInitialList             
+                         ::= ,                           AInitItem                   AInitialList             
+                         |   
+                         
+AInitial                 
+                         ::= AInitItem                   AInitialList             
+                         
+Initializer              
+                         ::= '{'                         '}'                      
+                         |   '{'                         AInitial                    '}'                      
+                         
+AInitItem                
+                         ::= Initializer              
+                         |   Assign                   
+                         
+DefAInit                 
+                         ::= =                           Initializer              
+                         |   
+                         
+DRanges                  
+                         ::= [                           Assign                      ]                           DRanges                  
+                         |   
+                         
+DefArrD1A                
+                         ::= ]                        
+                         |   Assign                      ]                        
+                         
+DefArrDA                 
+                         ::= DefArrD1A                   DRanges                  
+                         
+DefArr                   
+                         ::= Ident                       [                           DefArrDA                    DefAInit                 
+                         
+DefVarInit               
+                         ::= =                           Assign                   
+                         |   
+                         
+DefVar                   
+                         ::= Ident                       DefVarInit               
+                         
+DefItem                  
+                         ::= &                           DefArr                   
+                         |   &                           DefVar                   
+                         |   DefArr                   
+                         |   DefVar                   
+                         
+DefType                  
+                         ::= static                      const                       void                     
+                         |   static                      void                     
+                         |   const                       void                     
+                         |   void                     
+                         
+DefineList               
+                         ::= ,                           DefItem                     DefineList               
+                         |   
+                         
+Define                   
+                         ::= DefType                     DefItem                     DefineList               
+                         
+ConditionVar             
+                         ::= &                           DefVar                   
+                         |   DefVar                   
+                         
+Condition                
+                         ::= DefType                     ConditionVar             
+                         |   ExpressionCondition      
+                         
+ExpressionsList          
+                         ::= ,                           Assign                      ExpressionsList          
+                         |   
+                         
+Expressions              
+                         ::= Assign                      ExpressionsList          
+                         
+AssignList               
+                         ::= Priority_Assign             Assign                   
+                         |   
+                         
+Assign                   
+                         ::= Question                    AssignList               
+                         
+QuestionList             
+                         ::= Priority_Question           ExpressionValue             :                           Question                 
+                         |   
+                         
+Question                 
+                         ::= OrOr                        QuestionList             
+                         
+OrOr                     
+                         ::= AndAnd                      OrOr_                    
+                         
+OrOr_                    
+                         ::= Priority_OrOr               AndAnd                      OrOr_                    
+                         |   
+                         
+AndAnd                   
+                         ::= Or                          AndAnd_                  
+                         
+AndAnd_                  
+                         ::= Priority_AndAnd             Or                          AndAnd_                  
+                         |   
+                         
+Or                       
+                         ::= XOr                         Or_                      
+                         
+Or_                      
+                         ::= Priority_Or                 XOr                         Or_                      
+                         |   
+                         
+XOr                      
+                         ::= And                         XOr_                     
+                         
+XOr_                     
+                         ::= Priority_XOr                And                         XOr_                     
+                         |   
+                         
+And                      
+                         ::= Equ                         And_                     
+                         
+And_                     
+                         ::= Priority_And                Equ                         And_                     
+                         |   
+                         
+Equ                      
+                         ::= Compare                     Equ_                     
+                         
+Equ_                     
+                         ::= Priority_Equ                Compare                     Equ_                     
+                         |   
+                         
+Compare                  
+                         ::= Shift                       Compare_                 
+                         
+Compare_                 
+                         ::= Priority_Compare            Shift                       Compare_                 
+                         |   
+                         
+Shift                    
+                         ::= Term                        Shift_                   
+                         
+Shift_                   
+                         ::= Priority_Shift              Term                        Shift_                   
+                         |   
+                         
+Term                     
+                         ::= Factor                      Term_                    
+                         
+Term_                    
+                         ::= Priority_Term               Factor                      Term_                    
+                         |   
+                         
+Factor                   
+                         ::= Unary                       Factor_                  
+                         
+Factor_                  
+                         ::= Priority_Factor             Unary                       Factor_                  
+                         |   
+                         
+UnaryIncDec              
+                         ::= Priority_IncDec             UnaryIncDec              
+                         |   
+                         
+DefineCast               
+                         ::= const                       void                     
+                         |   void                     
+                         
+Unary                    
+                         ::= Priority_Unary              Unary                    
+                         |   Priority_Term               Unary                    
+                         |   Priority_IncDec             Unary                    
+                         |   (                           DefineCast                  )                           Unary                    
+                         |   PrimaryExpr                 UnaryIncDec              
+                         
+Primary                  
+                         ::= (                           ExpressionNone              )                        
+                         
+PrimaryExpr              
+                         ::= Ident                       [                           Ranges                   
+                         |   Ident                       (                           CallParams               
+                         |   Integer                  
+                         |   Number                   
+                         |   Ident                    
+                         |   Primary                  
+                         |   void                        Primary                  
+                         
+Range                    
+                         ::= [                           ExpressionValue             ]                           Range                    
+                         |   
+                         
+Ranges                   
+                         ::= ExpressionValue             ]                           Range                    
+                         
+CallParams               
+                         ::= )                        
+                         |   ExpressionValueList         )                        
+                         
+CompaundStmnt            
+                         ::= '{'                         '}'                      
+                         |   '{'                         StmExpr                     '}'                      
+                         
+IfStmntElse              
+                         ::= else                        DefExpr                  
+                         |   
+                         
+IfStmnt                  
+                         ::= if                          (                           Condition                   )                           DefExpr                     IfStmntElse              
+                         
+ForPrefix                
+                         ::= ;                        
+                         |   DefineSemi               
+                         |   ExprSemi                 
+                         
+ForCondition             
+                         ::= ;                        
+                         |   Condition                   ;                        
+                         
+ForPostfix               
+                         ::= )                        
+                         |   ExpressionExpression        )                        
+                         
+ForStmnt                 
+                         ::= for                         (                           ForPrefix                   ForCondition                ForPostfix                  DefExpr                  
+                         
+DoStmnt                  
+                         ::= do                          DefExpr                     while                       (                           Condition                   )                           ;                        
+                         
+WhileStmnt               
+                         ::= while                       (                           Condition                   )                           DefExpr                  
+                         
+SwitchStmnt              
+                         ::= switch                      (                           )                        
+                         
+GoToStmnt                
+                         ::= goto                        Ident                       ;                        
+                         
+BreakStmnt               
+                         ::= break                       ;                        
+                         
+ContinueStmnt            
+                         ::= continue                    ;                        
+                         
+ReturnValue              
+                         ::= ExpressionValue          
+                         |   
+                         
+ReturnStmnt              
+                         ::= return                      ReturnValue                 ;                        
+                         
+Statement                
+                         ::= IfStmnt                  
+                         |   DoStmnt                  
+                         |   WhileStmnt               
+                         |   ForStmnt                 
+                         |   SwitchStmnt              
+                         |   GoToStmnt                
+                         |   BreakStmnt               
+                         |   ContinueStmnt            
+                         |   ReturnStmnt              
+                         |   CompaundStmnt            
+                         
+DefineSemi               
+                         ::= Define                      ;                        
+                         
+ExprSemi                 
+                         ::= ExpressionExpression        ;                        
+                         
+DefExpr                  
+                         ::= ;                        
+                         |   Ident                       :                           DefExpr                  
+                         |   DefineSemi               
+                         |   Statement                
+                         |   ExprSemi                 
+                         
+StmExpr                  
+                         ::= DefExpr                     StmExpr                  
+                         |   
+                         
+DefFAV                   
+                         ::= ;                        
+                         |   DefFunc                  
+                         |   DefineSemi               
+                         
+DefinesBeg               
+                         ::= DefFAV                      DefinesBeg               
+                         |   
+                         
+Defines                  
+                         ::= DefinesBeg               
+                         
+ExpressionExpression     
+                         ::= Expressions              
+                         
+ExpressionCondition      
+                         ::= Expressions              
+                         
+ExpressionNone           
+                         ::= Expressions              
+                         
+ExpressionValue          
+                         ::= Expressions              
+                         
+ExpressionValueList      
+                         ::= Expressions              
+                         

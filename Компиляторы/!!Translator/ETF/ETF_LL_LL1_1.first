@@ -1,0 +1,11 @@
+S_                       -> <Separator,LeftBracket>  <Ident>                  
+E                        -> <Separator,LeftBracket>  <Ident>                  
+E_                       -> <Oper,Add>               Empty                    
+T                        -> <Separator,LeftBracket>  <Ident>                  
+T_                       -> <Oper,Multi>             Empty                    
+F                        -> <Separator,LeftBracket>  <Ident>                  
+<Oper,Add>               -> <Oper,Add>               
+<Oper,Multi>             -> <Oper,Multi>             
+<Separator,LeftBracket>  -> <Separator,LeftBracket>  
+<Separator,RightBracket> -> <Separator,RightBracket> 
+<Ident>                  -> <Ident>                  

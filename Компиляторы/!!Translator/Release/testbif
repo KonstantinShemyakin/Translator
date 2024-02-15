@@ -1,0 +1,644 @@
+
+C:\Translator\Release>TableBuilder.exe 0x000000 0x000000C1 ..\Table\LL_BIF.grammar 
+TableBuilder.exe
+0x000000
+0x000000C1
+..\Table\LL_BIF.grammar
+
+
+--- RuleNames --- <93> ---
+
+
+time: 0.007s
+
+C:\Translator\Release>rem TableBuilder.exe 0x000A15 0x0009110f ..\Table\LL_TC_BIF_LL1.tab ..\Table\LL_BIF.grammar 
+
+C:\Translator\Release>TableBuilder.exe 0x000A16 0x0009110f ..\Table\LL_TC_BIF_LR0.tab ..\Table\LL_BIF.grammar 
+TableBuilder.exe
+0x000A16
+0x0009110f
+..\Table\LL_TC_BIF_LR0.tab
+..\Table\LL_BIF.grammar
+
+
+level=19, step=4773
+--- semantic_tree = 0, syntax_tree = 1, lexemes = 0 ----
+
+--- RuleNames --- <93> ---
+
+
+#define: PRIOR_ASSIGN 
+
+true
+
+00000
+00100
+00200
+00300
+00364, delete=865, empty=0, add=363, true_count=4801, false_count=-9130, closure_count=1229
+--- Situations --- <364> --- <1538> ---
+
+--- GOTOtable --- <1228> ---
+
+00000,00000
+00100,00843
+00200,02153
+00300,03676
+Duplicate:
+{Situation: 00350         ,<Reserv,Else>            } -> Shift   Situation: 00356         
+{Situation: 00350         ,<Reserv,Else>            } -> Reduce  [  1] IfStmnt_           -> 
+
+00364,04555, not_find=66665, empty=0, shift=553, reduce=3326, goto=675
+
+--- LR table --- <4555> ---
+
+Duplicate: 1
+
+time: 0.353s
+
+C:\Translator\Release>rem TranGrammar.exe 1 0830 text.cpp ..\Table\LL_TC_BIF_LL1.tab 
+
+C:\Translator\Release>rem move text.code ..\Code\LL_Tree_BIF_LL1.code 
+
+C:\Translator\Release>rem move text.tree ..\Code\LL_Tree_BIF_LL1.tree 
+
+C:\Translator\Release>TranGrammar.exe 2 0830 text.cpp ..\Table\LL_TC_BIF_LR0.tab 
+TranGrammar.exe
+2
+0830
+text.cpp
+..\Table\LL_TC_BIF_LR0.tab
+
+
+--- LR table --- <4555> ---
+
+--- Grammar --- <186> --- <272> --- <0> --- <0> ---
+
+level=33, step=14409
+--- semantic_tree = 0, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 12 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Separator , type=Semicolon   , pos=0971, line=021, column=032, len=01, value=62, text=;
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=Semicolon   , pos=1003, line=021, column=064, len=01, value=62, text=;
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.145s
+
+C:\Translator\Release>move text.code ..\Code\LL_Code_BIF_LR0.code 
+        1 file(s) moved.
+
+C:\Translator\Release>TableBuilder.exe 0x000200 0x000000C1 ..\Table\LR_BIF.grammar 
+TableBuilder.exe
+0x000200
+0x000000C1
+..\Table\LR_BIF.grammar
+
+
+--- RuleNames --- <73> ---
+
+
+time: 0.006s
+
+C:\Translator\Release>TableBuilder.exe 0x000A16 0x0009110f ..\Table\LR_TC_BIF_LR0.tab ..\Table\LR_BIF.grammar 
+TableBuilder.exe
+0x000A16
+0x0009110f
+..\Table\LR_TC_BIF_LR0.tab
+..\Table\LR_BIF.grammar
+
+
+level=19, step=4268
+--- semantic_tree = 0, syntax_tree = 1, lexemes = 0 ----
+
+--- RuleNames --- <73> ---
+
+
+#define: PRIOR_ASSIGN 
+
+true
+
+00000
+00100
+00200
+00300
+00346, delete=1343, empty=0, add=345, true_count=8908, false_count=-31090, closure_count=1689
+--- Situations --- <346> --- <2082> ---
+
+--- GOTOtable --- <1688> ---
+
+00000,00000
+00100,00874
+00200,02262
+Duplicate:
+{Situation: 00210         ,<Reserv,Else>            } -> Shift   Situation: 00253         
+{Situation: 00210         ,<Reserv,Else>            } -> Reduce  [  1] Statement          -> BegIfStmnt
+
+00300,03865
+00346,04641, not_find=53399, empty=0, shift=765, reduce=2952, goto=923
+
+--- LR table --- <4641> ---
+
+Duplicate: 1
+
+time: 0.341s
+
+C:\Translator\Release>TableBuilder.exe 0x000A48 0x0009110f ..\Table\LR_UR_BIF_LR1.tab ..\Table\LR_BIF.grammar 
+TableBuilder.exe
+0x000A48
+0x0009110f
+..\Table\LR_UR_BIF_LR1.tab
+..\Table\LR_BIF.grammar
+
+
+level=19, step=4268
+--- semantic_tree = 0, syntax_tree = 1, lexemes = 0 ----
+
+--- RuleNames --- <73> ---
+
+
+#define: PRIOR_ASSIGN 
+
+true
+
+00000,00001,00000
+00100,00241,00361
+00200,00429,00886
+00300,00593,01322
+00400,00668,01806
+00500,00746,02421
+00600,00803,02951
+00700,00872,03300
+00800,00917,03772
+00900,01007,04418
+01000,01054,04792
+01100,01189,05418
+01200,01307,06108
+01300,01363,06712
+01395,07131
+--- Situations --- <1395> --- <95116> ---
+
+--- GOTOtable --- <7131> ---
+
+00000,00000
+00100,00740
+00200,01932
+00300,03070
+00400,04234
+00500,05398
+00600,06533
+00700,07684
+00800,08827
+00900,10082
+Duplicate:
+{Situation: 00981         ,<Reserv,Else>            } -> Shift   Situation: 01039         
+{Situation: 00981         ,<Reserv,Else>            } -> Reduce  [  1] Statement          -> BegIfStmnt
+
+01000,11362
+Duplicate:
+{Situation: 01060         ,<Reserv,Else>            } -> Shift   Situation: 01134         
+{Situation: 01060         ,<Reserv,Else>            } -> Reduce  [  1] Statement          -> BegIfStmnt
+
+01100,12689
+01200,13977
+01300,15203
+01395,16427, not_find=-195752, empty=0, shift=3398, reduce=9295, goto=3733, equ=42651
+
+--- LR table --- <16427> ---
+
+Duplicate: 2
+
+time: 1.905s
+
+C:\Translator\Release>TranGrammar.exe 1 0830 text.cpp ..\Table\LR_TC_BIF_LR0.tab 
+TranGrammar.exe
+1
+0830
+text.cpp
+..\Table\LR_TC_BIF_LR0.tab
+
+
+--- LR table --- <4641> ---
+
+--- Grammar --- <158> --- <247> --- <0> --- <0> ---
+
+level=34, step=10899
+--- semantic_tree = 1, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 14 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Separator , type=RightCramp  , pos=0973, line=021, column=034, len=01, value=54, text=}
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=RightCramp  , pos=1005, line=021, column=066, len=01, value=54, text=}
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.141s
+
+C:\Translator\Release>move text.code ..\Code\LR_Tree_BIF_LR0.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\LR_Tree_BIF_LR0.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 4 0830 text.cpp ..\Table\LR_UR_BIF_LR1.tab 
+TranGrammar.exe
+4
+0830
+text.cpp
+..\Table\LR_UR_BIF_LR1.tab
+
+
+--- LR table --- <16427> ---
+
+--- Grammar --- <144> --- <233> --- <0> --- <0> ---
+
+level=33, step=10903
+--- semantic_tree = 0, syntax_tree = 1, lexemes = 0 ----
+
+--- ErrorTable ---- 14 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=None      , type=00          , pos=0000, line=000, column=000, len=00
+
+Error:NoValue       , error=07, value=00
+group=None      , type=00          , pos=0000, line=000, column=000, len=00
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.182s
+
+C:\Translator\Release>move text.code ..\Code\LR_Turn_BIF_LR1.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\LR_Turn_BIF_LR1.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>TableBuilder.exe 0x000300 0x000000C1 ..\Table\NR_BIF.grammar 
+TableBuilder.exe
+0x000300
+0x000000C1
+..\Table\NR_BIF.grammar
+
+
+--- RuleNames --- <106> ---
+
+
+time: 0.009s
+
+C:\Translator\Release>TableBuilder.exe 0x000A18 0x0009110f ..\Table\NR_TC_BIF_LR1.tab ..\Table\NR_BIF.grammar 
+TableBuilder.exe
+0x000A18
+0x0009110f
+..\Table\NR_TC_BIF_LR1.tab
+..\Table\NR_BIF.grammar
+
+
+level=22, step=5953
+--- semantic_tree = 0, syntax_tree = 1, lexemes = 0 ----
+
+--- RuleNames --- <106> ---
+
+
+#define: PRIOR_ASSIGN 
+
+true
+
+00000,00001,00000
+00100,00176,00238
+00200,00399,00752
+00300,00520,01338
+00400,00635,01974
+00500,00711,02512
+00600,00806,03094
+00700,00898,03564
+00800,00975,04070
+00900,01017,04512
+01000,01071,04990
+01100,01127,05598
+01200,01275,06398
+01300,01364,07124
+01400,01461,07915
+01500,01526,08584
+01546,08866
+--- Situations --- <1546> --- <228197> ---
+
+--- GOTOtable --- <8866> ---
+
+00000,00000
+00100,00498
+00200,02257
+00300,04256
+00400,06343
+00500,08500
+00600,10681
+00700,12663
+00800,14689
+00900,16484
+01000,17995
+01100,19645
+Duplicate:
+{Situation: 01162         ,<Reserv,Else>            } -> Shift   Situation: 01217         
+{Situation: 01162         ,<Reserv,Else>            } -> Reduce  [  1] Statement          -> BegIfStmnt
+
+01200,21211
+Duplicate:
+{Situation: 01241         ,<Reserv,Else>            } -> Shift   Situation: 01329         
+{Situation: 01241         ,<Reserv,Else>            } -> Reduce  [  1] Statement          -> BegIfStmnt
+
+01300,23146
+01400,25220
+01500,27508
+01546,28630, not_find=-291677, empty=0, shift=3711, reduce=19763, goto=5155, equ=88892
+
+--- LR table --- <28630> ---
+
+Duplicate: 2
+
+time: 5.462s
+
+C:\Translator\Release>TranGrammar.exe 1 0830 text.cpp ..\Table\NR_TC_BIF_LR1.tab 
+TranGrammar.exe
+1
+0830
+text.cpp
+..\Table\NR_TC_BIF_LR1.tab
+
+
+--- LR table --- <28630> ---
+
+--- Grammar --- <193> --- <318> --- <0> --- <0> ---
+
+level=36, step=11059
+--- semantic_tree = 1, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 14 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0027, line=000, column=027, len=02, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Separator , type=RightCramp  , pos=0973, line=021, column=034, len=01, value=54, text=}
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=RightCramp  , pos=1005, line=021, column=066, len=01, value=54, text=}
+
+Error:DuplicateBody , error=22, value=00
+group=Ident     , type=00          , pos=1221, line=025, column=029, len=04, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1243, line=025, column=051, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1367, line=027, column=021, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1391, line=027, column=045, len=02, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1395, line=027, column=049, len=02, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Ident     , type=00          , pos=0710, line=019, column=018, len=01, text=u
+
+store_parse=0, restore_parse=0, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.211s
+
+C:\Translator\Release>move text.code ..\Code\NR_Tree_BIF_LR1.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\NR_Tree_BIF_LR1.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 2 0830 text.cpp ..\Table\NR_TC_BIF_LR1.tab 
+TranGrammar.exe
+2
+0830
+text.cpp
+..\Table\NR_TC_BIF_LR1.tab
+
+
+--- LR table --- <28630> ---
+
+--- Grammar --- <193> --- <318> --- <0> --- <0> ---
+
+level=36, step=11059
+--- semantic_tree = 0, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 10 ----
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0027, line=000, column=027, len=02, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Separator , type=RightCramp  , pos=0973, line=021, column=034, len=01, value=54, text=}
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=RightCramp  , pos=1005, line=021, column=066, len=01, value=54, text=}
+
+Error:DuplicateBody , error=22, value=00
+group=Ident     , type=00          , pos=1221, line=025, column=029, len=04, text=f011
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1243, line=025, column=051, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1367, line=027, column=021, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1391, line=027, column=045, len=02, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1395, line=027, column=049, len=02, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:UnknownBody   , error=23, value=00
+group=Ident     , type=00          , pos=0710, line=019, column=018, len=01, text=u
+
+store_parse=0, restore_parse=0, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.207s
+
+C:\Translator\Release>move text.code ..\Code\NR_Code_BIF_LR1.code 
+        1 file(s) moved.
+
+C:\Translator\Release>fc /L /N ..\Code\C_Code.code ..\Code\LL_Tree_BIF_LL1.code 
+Comparing files ..\CODE\C_Code.code and ..\CODE\LL_TREE_BIF_LL1.CODE
+FC: no differences encountered
+
+
+C:\Translator\Release>fc /L /N ..\Code\C_Code.code ..\Code\LL_Code_BIF_LR0.code 
+Comparing files ..\CODE\C_Code.code and ..\CODE\LL_CODE_BIF_LR0.CODE
+FC: no differences encountered
+
+
+C:\Translator\Release>fc /L /N ..\Code\C_Code.code ..\Code\LR_Tree_BIF_LR0.code 
+Comparing files ..\CODE\C_Code.code and ..\CODE\LR_TREE_BIF_LR0.CODE
+FC: no differences encountered
+
+
+C:\Translator\Release>fc /L /N ..\Code\C_Code.code ..\Code\LR_Turn_BIF_LR1.code 
+Comparing files ..\CODE\C_Code.code and ..\CODE\LR_TURN_BIF_LR1.CODE
+FC: no differences encountered
+
+
+C:\Translator\Release>fc /L /N ..\Code\C_Code.code ..\Code\NR_Tree_BIF_LR1.code 
+Comparing files ..\CODE\C_Code.code and ..\CODE\NR_TREE_BIF_LR1.CODE
+FC: no differences encountered
+
+
+C:\Translator\Release>fc /L /N ..\Code\C_Code.code ..\Code\NR_Code_BIF_LR1.code 
+Comparing files ..\CODE\C_Code.code and ..\CODE\NR_CODE_BIF_LR1.CODE
+FC: no differences encountered
+

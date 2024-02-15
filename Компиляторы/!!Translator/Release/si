@@ -1,0 +1,436 @@
+
+C:\Translator\Release>TranSyntax.exe 1 0830 text.cpp 
+TranSyntax.exe
+1
+0830
+text.cpp
+
+option_mode: Phase=One, Grammar=LL, Generate=None, Semantic=None, Lexer=Mine, Method=1, Main=None
+
+store_parse=390, restore_parse=39, store_syntax=390, restore_syntax=39
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.091s
+
+C:\Translator\Release>TranSyntax.exe 2 0830 text.cpp 
+TranSyntax.exe
+2
+0830
+text.cpp
+
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=2, Main=Tree
+
+Error:Uninitialized , error=31, value=00
+group=Separator , type=Semicolon   , pos=2701, line=057, column=046, len=01, value=62, text=;
+
+Error:Uninitialized , error=31, value=00
+group=Separator , type=Semicolon   , pos=2717, line=057, column=062, len=01, value=62, text=;
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0027, line=000, column=027, len=02, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Reserv    , type=Return      , pos=0961, line=021, column=022, len=06, value=14, text=return
+
+Error:NoValue       , error=07, value=00
+group=Reserv    , type=Return      , pos=0997, line=021, column=058, len=06, value=14, text=return
+
+Error:DuplicateBody , error=22, value=00
+group=Ident     , type=00          , pos=1221, line=025, column=029, len=04, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1243, line=025, column=051, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1367, line=027, column=021, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1391, line=027, column=045, len=02, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1395, line=027, column=049, len=02, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Ident     , type=00          , pos=0710, line=019, column=018, len=01, text=u
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Int         , pos=0074, line=000, column=074, len=03, value=2, text=int
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Continue    , pos=0619, line=017, column=101, len=08, value=12, text=continue
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0961, line=021, column=022, len=06, value=14, text=return
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0997, line=021, column=058, len=06, value=14, text=return
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Int         , pos=1290, line=025, column=098, len=03, value=2, text=int
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostDec     , pos=1917, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostInc     , pos=1929, line=036, column=058, len=02, value=51, text=++
+
+store_parse=479, restore_parse=92, store_syntax=479, restore_syntax=92
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.100s
+
+C:\Translator\Release>move text.code ..\Code\T_Tree.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\T_Tree.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>TranSyntax.exe 6 0830 text.cpp 
+TranSyntax.exe
+6
+0830
+text.cpp
+
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=6, Main=Tree
+
+--- ErrorTable ---- 23 ----
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0027, line=000, column=027, len=02, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Reserv    , type=Return      , pos=0961, line=021, column=022, len=06, value=14, text=return
+
+Error:NoValue       , error=07, value=00
+group=Reserv    , type=Return      , pos=0997, line=021, column=058, len=06, value=14, text=return
+
+Error:DuplicateBody , error=22, value=00
+group=Ident     , type=00          , pos=1221, line=025, column=029, len=04, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1243, line=025, column=051, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1367, line=027, column=021, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1391, line=027, column=045, len=02, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1395, line=027, column=049, len=02, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Ident     , type=00          , pos=0710, line=019, column=018, len=01, text=u
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Int         , pos=0074, line=000, column=074, len=03, value=2, text=int
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Continue    , pos=0619, line=017, column=101, len=08, value=12, text=continue
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0961, line=021, column=022, len=06, value=14, text=return
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0997, line=021, column=058, len=06, value=14, text=return
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Int         , pos=1290, line=025, column=098, len=03, value=2, text=int
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostDec     , pos=1917, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostInc     , pos=1929, line=036, column=058, len=02, value=51, text=++
+
+store_parse=479, restore_parse=92, store_syntax=479, restore_syntax=92
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.104s
+
+C:\Translator\Release>move text.code ..\Code\D_Tree.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\D_Tree.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>TranSyntax.exe 3 0830 text.cpp 
+TranSyntax.exe
+3
+0830
+text.cpp
+
+option_mode: Phase=One, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=3, Main=Code
+
+--- ErrorTable ---- 19 ----
+
+Error:Impossible    , error=33, value=00
+group=Ident     , type=00          , pos=0078, line=000, column=078, len=03, text=jjj
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0027, line=000, column=027, len=02, text=L1
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Continue    , pos=0619, line=017, column=101, len=08, value=12, text=continue
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0961, line=021, column=022, len=06, value=14, text=return
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0968, line=021, column=029, len=03, value=123, text=123
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0997, line=021, column=058, len=06, value=14, text=return
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=Semicolon   , pos=1003, line=021, column=064, len=01, value=62, text=;
+
+Error:DuplicateBody , error=22, value=00
+group=Ident     , type=00          , pos=1221, line=025, column=029, len=04, text=f011
+
+Error:Impossible    , error=33, value=00
+group=Ident     , type=00          , pos=1294, line=025, column=102, len=03, text=jjj
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1243, line=025, column=051, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1367, line=027, column=021, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1391, line=027, column=045, len=02, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1395, line=027, column=049, len=02, text=L4
+
+Error:Impossible    , error=33, value=00
+group=Ident     , type=00          , pos=1916, line=036, column=045, len=01, text=i
+
+Error:Impossible    , error=33, value=00
+group=Ident     , type=00          , pos=1928, line=036, column=057, len=01, text=i
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Ident     , type=00          , pos=0710, line=019, column=018, len=01, text=u
+
+store_parse=390, restore_parse=39, store_syntax=390, restore_syntax=39
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.094s
+
+C:\Translator\Release>move text.code ..\Code\C_Code.code 
+        1 file(s) moved.
+
+C:\Translator\Release>TranSyntax.exe 4 0830 text.cpp 
+TranSyntax.exe
+4
+0830
+text.cpp
+
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=4, Main=Tree
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0968, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=Semicolon   , pos=1003, line=021, column=064, len=01, value=62, text=;
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefType     , pos=0074, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Continue    , pos=0619, line=017, column=101, len=08, value=12, text=continue
+
+Error:Impossible    , error=33, value=00
+group=Integer   , type=00          , pos=0968, line=021, column=029, len=03, value=123, text=123
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=Semicolon   , pos=1003, line=021, column=064, len=01, value=62, text=;
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefType     , pos=1290, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostDec     , pos=1917, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostInc     , pos=1929, line=036, column=058, len=02, value=51, text=++
+
+store_parse=2284, restore_parse=1555, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.119s
+
+C:\Translator\Release>move text.code ..\Code\M_Tree.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\M_Tree.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>TranSyntax.exe 5 0830 text.cpp 
+TranSyntax.exe
+5
+0830
+text.cpp
+
+option_mode: Phase=One, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=5, Main=Code
+
+--- ErrorTable ---- 10 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+
+store_parse=2284, restore_parse=1555, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.100s
+
+C:\Translator\Release>move text.code ..\Code\M_Code.code 
+        1 file(s) moved.
+
+C:\Translator\Release>fc /L /N ..\Code\C_Code.code ..\Code\T_Tree.code 
+Comparing files ..\CODE\C_Code.code and ..\CODE\T_TREE.CODE
+FC: no differences encountered
+
+
+C:\Translator\Release>fc /L /N ..\Code\C_Code.code ..\Code\D_Tree.code 
+Comparing files ..\CODE\C_Code.code and ..\CODE\D_TREE.CODE
+FC: no differences encountered
+
+
+C:\Translator\Release>fc /L /N ..\Code\C_Code.code ..\Code\M_Tree.code 
+Comparing files ..\CODE\C_Code.code and ..\CODE\M_TREE.CODE
+FC: no differences encountered
+
+
+C:\Translator\Release>fc /L /N ..\Code\C_Code.code ..\Code\M_Code.code 
+Comparing files ..\CODE\C_Code.code and ..\CODE\M_CODE.CODE
+FC: no differences encountered
+

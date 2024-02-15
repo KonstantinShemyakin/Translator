@@ -1,0 +1,64 @@
+
+[  0] S_                 
+  [  0] P                  
+    [  0] DS                 
+      [  0] _f_00005_          
+        group=Reserv    , type=Int         , pos=0000, line=000, column=000, len=03, value=2, text=int
+      group=Ident     , type=00          , pos=0004, line=000, column=004, len=01, text=c
+    [  0] _f_00003_          
+      [  0] _f_00002_          
+        [  0] DS                 
+          [  1] _f_00005_          
+            group=Reserv    , type=Double      , pos=0009, line=001, column=000, len=06, value=5, text=double
+          group=Ident     , type=00          , pos=0016, line=001, column=007, len=01, text=e
+      [  0] _f_00003_          
+        [  0] _f_00002_          
+          [  1] DS                 
+            [  0] E                  
+              [  0] T                  
+                [  1] F                  
+                  group=Integer   , type=00          , pos=0020, line=002, column=000, len=01, value=0, text=1
+              [  0] _f_00009_          
+                [  0] _f_00007_          
+                  [  0] _f_00008_          
+                    group=Oper      , type=Add         , pos=0022, line=002, column=002, len=01, value=33, text=+
+                  [  0] T                  
+                    [  1] F                  
+                      group=Integer   , type=00          , pos=0024, line=002, column=004, len=01, value=1, text=2
+                    [  0] _f_00013_          
+                      [  0] _f_00011_          
+                        [  0] _f_00012_          
+                          group=Oper      , type=Multi       , pos=0026, line=002, column=006, len=01, value=29, text=*
+                        [  0] F                  
+                          [  0] E                  
+                            [  0] T                  
+                              [  3] F                  
+                                group=Ident     , type=00          , pos=0029, line=002, column=009, len=01, text=c
+                            [  0] _f_00009_          
+                              [  0] _f_00007_          
+                                [  0] _f_00008_          
+                                  group=Oper      , type=Add         , pos=0031, line=002, column=011, len=01, value=33, text=+
+                                [  0] T                  
+                                  [  2] F                  
+                                    group=Number    , type=00          , pos=0033, line=002, column=013, len=04, value=0, text=12.3
+                [  0] _f_00009_          
+                  [  0] _f_00007_          
+                    [  1] _f_00008_          
+                      group=Oper      , type=Sub         , pos=0039, line=002, column=019, len=01, value=35, text=-
+                    [  0] T                  
+                      [  3] F                  
+                        group=Ident     , type=00          , pos=0041, line=002, column=021, len=01, text=e
+        [  0] _f_00003_          
+          [  0] _f_00002_          
+            [  1] DS                 
+              [  0] E                  
+                [  0] T                  
+                  [  1] F                  
+                    group=Integer   , type=00          , pos=0045, line=003, column=000, len=01, value=0, text=1
+                [  0] _f_00009_          
+                  [  0] _f_00007_          
+                    [  0] _f_00008_          
+                      group=Oper      , type=Add         , pos=0047, line=003, column=002, len=01, value=33, text=+
+                    [  0] T                  
+                      [  1] F                  
+                        group=Integer   , type=00          , pos=0049, line=003, column=004, len=01, value=1, text=2

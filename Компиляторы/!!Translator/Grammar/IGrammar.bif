@@ -1,0 +1,78 @@
+
+S_                       
+                         ::= rules                 
+                         
+rules                    
+                         ::= rule                  /. TURN(Make,Formula,1); ./  /. TURN(Command,Param,0); ./ 
+                         [
+                             rule                  /. TURN(Down,None); ./                    
+                         ]... 
+rule                     
+                         ::= Space_lexeme          Separator_BNFSet      item_list             /. TURN(Command,Lexeme,-1); ./  /. TURN(Make,Formula,-1); ./  /. TURN(Command,Param,0); ./
+                         
+item_list                
+                         ::= item_symbol           /. TURN(Make,Produce,1); ./  /. TURN(Command,Param,8); ./
+                         [
+                             item_symbol           /. TURN(Down,None); ./       /. TURN(Command,Param,7); ./
+                         ]... 
+item_symbol              
+                         ::= { 
+                             Space_lexeme          /. TURN(Push,Item,0);   ./
+                         |   item
+                             } 
+item                     
+                         ::= { 
+                             '['                   or_list               ']'                   /. TURN(Command,Lexeme,-1); ./  /. TURN(Command,Lexeme,1); ./
+                         |   '['                   or_list               ']'                   Meta_Ellipsis         /. TURN(Command,Lexeme,1); ./ /. TURN(Command,Lexeme,-2); ./
+                         |   '{'                   or_list               '}'                   /. TURN(Command,Lexeme,-1); ./  /. TURN(Command,Lexeme,1); ./                      
+                         |   
+                                 { 
+                                 
+                                                   { 
+                                                   Meta_LeftMaker        Ident_Maker           (         Ident_lexeme          ,         int_body        )               ;            Meta_RightMaker   /. TURN(Command,Lexeme,-4); ./  /. TURN(Push,Maker,0);      ./  /. TURN(Swap,None);     ./   /. TURN(Command,Lexeme,-1); ./  /. TURN(Make,Maker,-2);     ./  /. TURN(Command,Param,0);  ./  /. TURN(Command,Lexeme,-1); ./ 
+                                               |   Meta_LeftMaker        Ident_Maker           (         Ident_lexeme          )         ;               Meta_RightMaker /. TURN(Command,Lexeme,-3); ./ /. TURN(Push,Maker,0); ./       /. TURN(Command,Lexeme,-1); ./  /. TURN(Make,Maker,-1); ./   /. TURN(Command,Param,0);   ./  /. TURN(Command,Lexeme,-1); ./ 
+                                                   }                                          
+                             |                                                                
+                                                   {                                          
+                                                   Meta_LeftMaker        NODE                  (         Ident_lexeme          ,         node_body       ,               int_body     )               ;           Meta_RightMaker       /. TURN(Command,Lexeme,-5); ./  /. TURN(Make,Maker,-2); ./   /. TURN(Command,Param,1);   ./  /. TURN(Command,Lexeme,-3); ./
+                                               |   Meta_LeftMaker        NODE                  (         Ident_lexeme          ,         node_body       )               ;            Meta_RightMaker /. TURN(Command,Lexeme,-4); ./    /. TURN(Make,Maker,-1); ./      /. TURN(Command,Param,1);./  /. TURN(Command,Lexeme,-3); ./
+                                                   }                                          
+                             |                                                                
+                                                   {                                          
+                                                   Meta_LeftMaker        TURN                  (         Ident_lexeme          ,         Ident_lexeme    ,               int_body     )               ;           Meta_RightMaker       /. TURN(Command,Lexeme,-4); ./  /. TURN(Push,Maker,5);     ./ /. TURN(Swap,None);        ./  /. TURN(Command,Lexeme,-1); ./  /. TURN(Make,Maker,-2);    ./  /. TURN(Command,Param,5);   ./  /. TURN(Command,Lexeme,-3); ./
+                                               |   Meta_LeftMaker        TURN                  (         Ident_lexeme          ,         Ident_lexeme    )               ;            Meta_RightMaker /. TURN(Command,Lexeme,-3); ./    /. TURN(Push,Maker,5); ./       /. TURN(Command,Lexeme,-1);./ /. TURN(Make,Maker,-1);    ./  /. TURN(Command,Param,5);   ./  /. TURN(Command,Lexeme,-3);./ 
+                                                   {                                          
+                                                   Meta_LeftMaker        CALL                  (         Ident_lexeme          ,         int_body        ,               int_body     )               ;           Meta_RightMaker       /. TURN(Command,Lexeme,-4); ./  /. TURN(Push,Maker,5);     ./ /. TURN(Swap,None);        ./  /. TURN(Command,Lexeme,-1); ./  /. TURN(Make,Maker,-2);    ./  /. TURN(Command,Param,6);   ./  /. TURN(Command,Lexeme,-3); ./
+                                               |   Meta_LeftMaker        CALL                  (         Ident_lexeme          ,         int_body        )               ;            Meta_RightMaker /. TURN(Command,Lexeme,-3); ./    /. TURN(Push,Maker,5); ./       /. TURN(Command,Lexeme,-1);./ /. TURN(Make,Maker,-1);    ./  /. TURN(Command,Param,6);   ./  /. TURN(Command,Lexeme,-3);./ 
+                                                   } 
+                                                   } 
+                                 } 
+                             } 
+or_list                  
+                         ::= item_list             /. TURN(Make,Formula,1); ./  /. TURN(Command,Param,0); ./
+                         [
+                             '|'                   item_list             /. TURN(Down,None); ./  /. TURN(Command,Lexeme,-1); ./                   
+                         ]... 
+Ident_Maker              
+                         ::= { 
+                             ALL                
+                         |   MAKE               
+                         |   CODE               
+                         |   TREE               
+                         |   YACC               
+                             } 
+node_body                
+                         ::= { 
+                             (                     int_body              )                     /. TURN(Make,Maker,1); ./  /. TURN(Command,Param,2); ./   /. TURN(Command,Lexeme,-2); ./
+                         |   (                     int_body              ,                     int_body              )                     /. TURN(Make,Maker,2); ./  /. TURN(Command,Param,2); ./  /. TURN(Command,Lexeme,-3); ./
+                         |   (                     int_body              ,                     int_body              ,                     int_body              )                     /. TURN(Make,Maker,3); ./  /. TURN(Command,Param,2); ./  /. TURN(Command,Lexeme,-4); ./
+                         |   (                     int_body              ,                     int_body              ,                     int_body              ,                     int_body              )                     /. TURN(Make,Maker,4); ./  /. TURN(Command,Param,2); ./  /. TURN(Command,Lexeme,-5); ./
+                         |   (                     int_body              ,                     int_body              ,                     int_body              ,                     int_body              ,                     int_body              )                     /. TURN(Make,Maker,5); ./  /. TURN(Command,Param,2); ./  /. TURN(Command,Lexeme,-6); ./
+                             } 
+int_body                 
+                         ::= { 
+                             Integer_lexeme        /. TURN(Push,Maker,3); ./ 
+                         |   Ident_lexeme          /. TURN(Push,Maker,3); ./ 
+                         |   Ident_lexeme          ::                    /. TURN(Command,Lexeme,-1); ./  /. TURN(Push,Maker,3);      ./   Ident_lexeme           /. TURN(Add,Maker,3); ./                        
+                         |   -                     Integer_lexeme        /. TURN(Push,Maker,4);      ./  /. TURN(Command,Lexeme,-1); ./
+                             } 

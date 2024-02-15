@@ -1,0 +1,45 @@
+{Situation: 00000         ,E                        } -> Goto    Situation: 00001         
+{                         ,T                        } -> Goto    Situation: 00002         
+{                         ,F                        } -> Goto    Situation: 00003         
+{                         ,<Separator,LeftBracket>  } -> Shift   Situation: 00004         
+{                         ,<Integer>                } -> Shift   Situation: 00005         
+{Situation: 00001         ,<Priority,Term>          } -> Shift   Situation: 00006         
+{                         ,Eof                      } -> Accept  
+{Situation: 00002         ,<Separator,RightBracket> } -> Reduce  [  1] E                  
+{                         ,<Priority,Term>          } -> Reduce  [  1] E                  
+{                         ,<Priority,Factor>        } -> Shift   Situation: 00007         
+{                         ,Eof                      } -> Reduce  [  1] E                  
+{Situation: 00003         ,<Separator,RightBracket> } -> Reduce  [  1] T                  
+{                         ,<Priority,Term>          } -> Reduce  [  1] T                  
+{                         ,<Priority,Factor>        } -> Reduce  [  1] T                  
+{                         ,Eof                      } -> Reduce  [  1] T                  
+{Situation: 00004         ,E                        } -> Goto    Situation: 00008         
+{                         ,T                        } -> Goto    Situation: 00002         
+{                         ,F                        } -> Goto    Situation: 00003         
+{                         ,<Separator,LeftBracket>  } -> Shift   Situation: 00004         
+{                         ,<Integer>                } -> Shift   Situation: 00005         
+{Situation: 00005         ,<Separator,RightBracket> } -> Reduce  [  1] F                  
+{                         ,<Priority,Term>          } -> Reduce  [  1] F                  
+{                         ,<Priority,Factor>        } -> Reduce  [  1] F                  
+{                         ,Eof                      } -> Reduce  [  1] F                  
+{Situation: 00006         ,T                        } -> Goto    Situation: 00009         
+{                         ,F                        } -> Goto    Situation: 00003         
+{                         ,<Separator,LeftBracket>  } -> Shift   Situation: 00004         
+{                         ,<Integer>                } -> Shift   Situation: 00005         
+{Situation: 00007         ,F                        } -> Goto    Situation: 00010         
+{                         ,<Separator,LeftBracket>  } -> Shift   Situation: 00004         
+{                         ,<Integer>                } -> Shift   Situation: 00005         
+{Situation: 00008         ,<Separator,RightBracket> } -> Shift   Situation: 00011         
+{                         ,<Priority,Term>          } -> Shift   Situation: 00006         
+{Situation: 00009         ,<Separator,RightBracket> } -> Reduce  [  0] E                  
+{                         ,<Priority,Term>          } -> Reduce  [  0] E                  
+{                         ,<Priority,Factor>        } -> Shift   Situation: 00007         
+{                         ,Eof                      } -> Reduce  [  0] E                  
+{Situation: 00010         ,<Separator,RightBracket> } -> Reduce  [  0] T                  
+{                         ,<Priority,Term>          } -> Reduce  [  0] T                  
+{                         ,<Priority,Factor>        } -> Reduce  [  0] T                  
+{                         ,Eof                      } -> Reduce  [  0] T                  
+{Situation: 00011         ,<Separator,RightBracket> } -> Reduce  [  0] F                  
+{                         ,<Priority,Term>          } -> Reduce  [  0] F                  
+{                         ,<Priority,Factor>        } -> Reduce  [  0] F                  
+{                         ,Eof                      } -> Reduce  [  0] F                  

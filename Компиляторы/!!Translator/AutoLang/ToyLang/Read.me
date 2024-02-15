@@ -1,0 +1,229 @@
+На вход подается программа, соответствующая следующему синтаксису:
+
+Ident Index 'program'  '.' 'begin'  'end'  'type'  '='  'var'   'ARRAY' ':'  ';' ‘,’  '['  ']' ‘+’ ‘*’ ‘('  ‘)’ ;
+Prog Block Declaration_List Statement_List Declaration Type_Decl_List Type_List 
+Type_Decl Type_Defin Type_Use Var_List Var_Decl Ident_List Ident_Tail Statement 
+Variable Access Expression_Tail Expression Term Term_Tail Factor ;
+Prog ;
+Prog 'program' Ident Block '.' ;
+Block 'begin' Declaration_List Statement_List 'end' ;
+Declaration_List Declaration Declaration_List ;
+Declaration_List $ ;
+Statement_List Statement Statement_List ;
+Statement_List $ ;
+Declaration 'type'  Type_Decl_List ;
+Type_Decl_List Type_Decl Type_List ;
+Type_List Type_Decl_List ;
+Type_List $ ;
+Type_Decl Ident '=' Type_Defin ;
+Type_Defin 'ARRAY' Index 'OF' Type_Defin ;
+Type_Defin Type_Use ;
+Type_Use Ident ;
+Declaration 'var'  Var_Decl_List ;
+Var_Decl_List Var_Decl Var_List ;
+Var_List Var_Decl_List ;
+Var_List $ ;
+Var_Decl Ident_List ':' Type_Use ';' ;
+Ident_List Ident Ident_Tail ;
+Ident_Tail ‘,’ Ident Ident_Tail ;
+Ident_Tail $ ;
+Statement Block ';' ;
+Statement Variable '=' Expression ';' ;
+Variable Ident Access ;
+Access '[' Expression ']' Access ;
+Access $ ;
+Expression Term Expression_Tail ;
+Expression_Tail ‘+’ Term Expression_Tail ;
+Expression_Tail $ ;
+Term Factor Term_Tail ;
+Term_Tail ‘*’ Factor Term_Tail ;
+Term_Tail $ ;
+Factor Variable ;
+Factor ‘(‘Expression ‘)’ ;
+
+Например
+
+program Toy3;
+
+	type T1 = array 100  of  integer;
+	T2=T1;
+	var v1:T1;
+	v2:T2;
+begin 	v1=v2;
+	v2[1]=v1[2]*1;
+	 type T3=array 300 of T1;
+		var v3:T3;
+		var A,B,C,D,E : integer;
+		begin	v3[50]=v1;
+			v1[A] =A* v2[B]+C*(D+E);
+	end	end
+
+end
+
+Результатом работы является программа на Java, которая записывается в файл AutoLang\ToyLang\ToyLangJava.java.
+Протокол работы
+
+Лексема program
+Лексема Toy3
+Лексема ;
+Лексема type
+Лексема T1
+Лексема =
+Лексема array
+Лексема ?
+Лексема of
+Лексема integer
+Лексема integer
+Лексема ;
+Лексема T2
+Лексема =
+Лексема T1
+Лексема T1
+Лексема ;
+Лексема var
+Лексема var
+Лексема v1
+Лексема :
+Лексема :
+Лексема T1
+Лексема ;
+Лексема v2
+Лексема :
+Лексема :
+Лексема T2
+Лексема ;
+Лексема begin
+Лексема begin
+Лексема v1
+Лексема v1
+Лексема =
+Лексема =
+Лексема v2
+Лексема v2
+Лексема ;
+Лексема ;
+Лексема ;
+Лексема ;
+Лексема v2
+Лексема v2
+Лексема v2
+Лексема [
+Лексема ?
+Лексема ]
+Лексема ]
+Лексема ]
+Лексема =
+Лексема =
+Лексема v1
+Лексема v1
+Лексема [
+Лексема ?
+Лексема ]
+Лексема ]
+Лексема ]
+Лексема *
+Лексема *
+Лексема ?
+Лексема ;
+Лексема ;
+Лексема ;
+Лексема type
+Лексема type
+Лексема type
+Лексема T3
+Лексема =
+Лексема array
+Лексема ?
+Лексема of
+Лексема T1
+Лексема T1
+Лексема ;
+Лексема var
+Лексема var
+Лексема v3
+Лексема :
+Лексема :
+Лексема T3
+Лексема ;
+Лексема var
+Лексема var
+Лексема A
+Лексема ,
+Лексема B
+Лексема ,
+Лексема C
+Лексема ,
+Лексема D
+Лексема ,
+Лексема E
+Лексема :
+Лексема :
+Лексема integer
+Лексема ;
+Лексема begin
+Лексема begin
+Лексема v3
+Лексема v3
+Лексема [
+Лексема ?
+Лексема ]
+Лексема ]
+Лексема ]
+Лексема =
+Лексема =
+Лексема v1
+Лексема v1
+Лексема ;
+Лексема ;
+Лексема ;
+Лексема ;
+Лексема v1
+Лексема v1
+Лексема v1
+Лексема [
+Лексема A
+Лексема A
+Лексема ]
+Лексема ]
+Лексема ]
+Лексема ]
+Лексема =
+Лексема =
+Лексема A
+Лексема A
+Лексема *
+Лексема *
+Лексема v2
+Лексема v2
+Лексема [
+Лексема B
+Лексема B
+Лексема ]
+Лексема ]
+Лексема ]
+Лексема ]
+Лексема +
+Лексема +
+Лексема +
+Лексема C
+Лексема C
+Лексема *
+Лексема *
+Лексема (
+Лексема D
+Лексема D
+Лексема +
+Лексема +
+Лексема +
+Лексема E
+Лексема E
+Лексема )
+Лексема )
+Лексема )
+Лексема )
+Лексема ;
+Лексема ;
+Лексема ;
+Лексема end
+Лексема end
+Лексема end

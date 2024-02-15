@@ -1,0 +1,1 @@
+zip -u -r E:\Translator.zip E:\Translator

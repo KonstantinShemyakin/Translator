@@ -1,0 +1,97 @@
+Comparing files tc and TT
+***** tc
+    6:      TNodeDefFunc    type = Void      ,   group=Ident     , type=00          , line=000, column=005, len=04, text=f011
+    7:        TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=voi
+    8:  d
+    9:        TNodeStatements type = Void      ,
+***** TT
+    6:      TNodeDefFunc    type = Void      ,   group=Ident     , type=00          , line=000, column=005, len=04, text=f011
+    7:        TNodeStatements type = Void      ,
+*****
+
+***** tc
+   33:              alloc=None   , offset=00
+   34:          T_NodeList      type = Unknown   ,
+   35:            TNodeUserLabel  type = Void      ,   group=Ident     , type=00          , line=000, column=027, len=02, text=L1      
+***** TT
+   31:              alloc=None   , offset=00
+   32:          T_NodeList      type = Void      ,
+   33:            TNodeUserLabel  type = Void      ,   group=Ident     , type=00          , line=000, column=027, len=02, text=L1      
+*****
+
+***** tc
+   36:        go_to=00
+   37:            TNodeExpressions type = Unknown   ,   group=Ident     , type=00          , line=000, column=030, len=01, text=i
+   38:              TNodeBinary     type = Unknown   ,   group=Oper      , type=Assign      , line=000, column=031, len=01, value=37, t
+   39:  ext==
+   40:                TNodeVar        type = Unknown   ,   group=Ident     , type=00          , line=000, column=030, len=01, text=i
+   41:                TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=000, column=032, len=02, value=12,
+   42:   text=12 part=29
+   43:          TNodeStatements type = Void      ,
+***** TT
+   34:        go_to=00
+   35:          TNodeExpressions type = Unknown   ,   group=Ident     , type=00          , line=000, column=030, len=01, text=i
+   36:            TNodeBinary     type = Unknown   ,   group=Oper      , type=Assign      , line=000, column=031, len=01, value=37, tex
+   37:  t==
+   38:              TNodeVar        type = Unknown   ,   group=Ident     , type=00          , line=000, column=030, len=01, text=i
+   39:              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=000, column=032, len=02, value=12, t
+   40:  ext=12 part=29
+   41:          TNodeStatements type = Void      ,
+*****
+
+***** tc
+   50:            TNodeUserGoTo   type = Unknown   ,   group=Ident     , type=00          , line=000, column=050, len=03, text=L15
+   51:            T_NodeList      type = Unknown   ,
+   52:              TNodeUserLabel  type = Void      ,   group=Ident     , type=00          , line=000, column=055, len=03, text=L15   
+***** TT
+   48:            TNodeUserGoTo   type = Unknown   ,   group=Ident     , type=00          , line=000, column=050, len=03, text=L15
+   49:            T_NodeList      type = Void      ,
+   50:              TNodeUserLabel  type = Void      ,   group=Ident     , type=00          , line=000, column=055, len=03, text=L15   
+*****
+
+***** tc
+   53:             go_to=00
+   54:              TNodeUserGoTo   type = Unknown   ,   group=Ident     , type=00          , line=000, column=065, len=02, text=L2 num
+   55:  ber=0, size=0
+   56:          TNodeStatements type = Void      ,
+***** TT
+   51:             go_to=00
+   52:            TNodeUserGoTo   type = Unknown   ,   group=Ident     , type=00          , line=000, column=065, len=02, text=L2 numbe
+   53:  r=0, size=0
+   54:          TNodeStatements type = Void      ,
+*****
+
+***** tc
+   65:                TNodeUserLabel  type = Void      ,   group=Ident     , type=00          , line=000, column=083, len=02, text=L2  
+   66:                go_to=00 number=0, size=0 number=0, size=0 number=0, size=0 number=0, size=0 number=0, size=0
+   67:  --- ErrorTable ---- 3 ----
+   68:  
+   69:  Error:UnusedLabel   , error=16777243, value=00
+   70:  group=Ident     , type=00          , pos=0027, line=000, column=027, len=02, text=L1
+   71:  
+   72:  Error:ErrorLabel    , error=26, value=00
+   73:  group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+   74:  
+   75:  Error:Impossible    , error=33, value=00
+   76:  group=Reserv    , type=Int         , pos=0074, line=000, column=074, len=03, value=2, text=int
+   77:  
+***** TT
+   63:                TNodeUserLabel  type = Void      ,   group=Ident     , type=00          , line=000, column=083, len=02, text=L2  
+   64:                go_to=00
+   65:              TNodeNull       type = Unknown   ,  number=0, size=0 number=0, size=0 number=0, size=0 number=0, size=0 number=0, s
+   66:  ize=0
+   67:  --- ErrorTable ---- 1 ----
+   68:  
+   69:  Error:UnknownBody   , error=23, value=00
+   70:  group=Ident     , type=00          , pos=0005, line=000, column=005, len=04, text=f011
+   71:  
+*****
+
+***** tc
+   82:  
+   83:  time: 0.092s
+***** TT
+   76:  
+   77:  time: 0.097s
+*****
+

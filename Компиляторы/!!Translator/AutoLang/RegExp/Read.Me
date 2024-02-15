@@ -1,0 +1,71 @@
+На вход подается регулярное выражение, имеющее скобочную структуру, заканчивающееся "#".
+Терминальные символы заключаются в простые кавычки.
+По регулярному выражению строится детерминированный конечный автомат.
+
+Например
+
+( 'a' 'b' ) * ( 'a' | 'b' ) * #
+
+Протокол работы
+
+Position 1 Symbol a
+Position 2 Symbol b
+Position 3 Symbol a
+Position 4 Symbol b
+entry = 2
+followPos:entry = 2 positions = 4135
+entry = 4
+followPos:entry = 4 positions = 435
+entry = 1
+followPos:entry = 1 positions = 2
+entry = 3
+followPos:entry = 3 positions = 435
+Current unmarkedState 1
+ 4 1 3 5
+nextPos 4 currentSymbol a
+nextPos 1 currentSymbol a
+nextPos 3 currentSymbol a
+nextPos 5 currentSymbol a
+from  4 1 3 5
+by ato  2 4 3 5
+transition from 1 by a to 2
+nextPos 4 currentSymbol b
+nextPos 1 currentSymbol b
+nextPos 3 currentSymbol b
+nextPos 5 currentSymbol b
+from  4 1 3 5
+by bto  4 3 5
+transition from 1 by b to 3
+Current unmarkedState 2
+ 2 4 3 5
+nextPos 2 currentSymbol a
+nextPos 4 currentSymbol a
+nextPos 3 currentSymbol a
+nextPos 5 currentSymbol a
+from  2 4 3 5
+by ato  4 3 5
+transition from 2 by a to 3
+nextPos 2 currentSymbol b
+nextPos 4 currentSymbol b
+nextPos 3 currentSymbol b
+nextPos 5 currentSymbol b
+from  2 4 3 5
+by bto  4 1 3 5
+transition from 2 by b to 1
+Current unmarkedState 3
+ 4 3 5
+nextPos 4 currentSymbol a
+nextPos 3 currentSymbol a
+nextPos 5 currentSymbol a
+from  4 3 5
+by ato  4 3 5
+transition from 3 by a to 3
+nextPos 4 currentSymbol b
+nextPos 3 currentSymbol b
+nextPos 5 currentSymbol b
+from  4 3 5
+by bto  4 3 5
+transition from 3 by b to 3
+Map:2{a=[3], b=[1]}
+Map:1{a=[2], b=[3]}
+Map:3{a=[3], b=[3]}

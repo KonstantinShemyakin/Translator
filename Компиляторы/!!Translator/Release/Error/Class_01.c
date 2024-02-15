@@ -1,0 +1,2 @@
+// Array
+int a[];

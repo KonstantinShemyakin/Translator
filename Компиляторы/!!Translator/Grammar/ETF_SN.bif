@@ -1,0 +1,15 @@
+S_       ::=   E
+
+E        ::=   T  [  {  +  |  -  }  T  /. NODE(Binary,(2,1,3),0); ./ ]...
+
+T        ::=   F  [  {  *  |  /  }  F  /. NODE(Binary,(2,1,3),0); ./ ]...         
+
+F        ::=   {  
+                  (  E  )  /. NODE(Primary, (1, 2), 0); ./  
+               |  Integer  /. NODE(Number,(1),0); ./  
+               |  Number   /. NODE(Number,(1),4440); ./  
+               }
+
+//E_       ::=   /. TREE(BegStmExpr); ./   E   /. TREE(AddToList); ./
+
+

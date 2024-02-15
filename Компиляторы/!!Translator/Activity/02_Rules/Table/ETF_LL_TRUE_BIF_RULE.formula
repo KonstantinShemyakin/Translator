@@ -1,0 +1,18 @@
+
+--- BIF_Grammar --- formula=6, produce=9, item=15, maker=0, used=6, vector=0, type=050021 ---
+
+S_:                      used=1, mode=0000, 00000
+[  0] S_                 -> E                        
+E:                       used=2, mode=0000, 00001
+[  0] E                  -> T                        _f_00002_                
+_f_00002_:               used=1, mode=8000, 00002
+[  0] _f_00002_          -> <Priority,Term>          T                        
+T:                       used=2, mode=0000, 00003
+[  0] T                  -> F                        _f_00004_                
+_f_00004_:               used=1, mode=8000, 00004
+[  0] _f_00004_          -> <Priority,Factor>        F                        
+F:                       used=2, mode=0000, 00005
+[  0] F                  -> <Separator,LeftBracket>  E                        <Separator,RightBracket> 
+[  1] F                  -> <Integer>                
+[  2] F                  -> <Number>                 
+[  3] F                  -> <Ident>                  

@@ -1,0 +1,18 @@
+S_                       -> Eof                      
+Assign                   -> <Separator,Colon>        Eof                      
+_f_00002_                -> <Separator,Colon>        Eof                      
+Question                 -> <Separator,Colon>        <Priority,Assign>        Eof                      
+_f_00004_                -> <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          Eof                      
+_f_00005_                -> <Separator,Colon>        <Priority,Assign>        <Priority,Question>      Eof                      
+_f_00006_                -> <Separator,Colon>        <Priority,Assign>        Eof                      
+AndAnd                   -> <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          Eof                      
+_f_00008_                -> <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        Eof                      
+_f_00009_                -> <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          Eof                      
+Or                       -> <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        Eof                      
+E                        -> <Separator,RightBracket> <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        Eof                      
+_f_00012_                -> <Separator,RightBracket> <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        <Priority,Term>          Eof                      
+_f_00013_                -> <Separator,RightBracket> <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        Eof                      
+T                        -> <Separator,RightBracket> <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        <Priority,Term>          Eof                      
+_f_00015_                -> <Separator,RightBracket> <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        <Priority,Term>          <Priority,Factor>        Eof                      
+_f_00016_                -> <Separator,RightBracket> <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        <Priority,Term>          Eof                      
+F                        -> <Separator,RightBracket> <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        <Priority,Term>          <Priority,Factor>        Eof                      

@@ -1,0 +1,203 @@
+{Situation: 00000         ,E                        } -> Goto    Situation: 00001         
+{                         ,T                        } -> Goto    Situation: 00002         
+{                         ,F                        } -> Goto    Situation: 00003         
+{                         ,<Integer>                } -> Shift   Situation: 00005         
+{                         , { <Integer>                <Priority,Factor>         } } -> Shift   Situation: 00005         
+{                         , { <Separator,LeftBracket>  <Integer>                 } } -> Shift   Situation: 00004         
+{                         , { <Integer>                <Priority,Term>           } } -> Shift   Situation: 00005         
+{                         , { <Separator,LeftBracket>  <Separator,LeftBracket>   } } -> Shift   Situation: 00004         
+{Situation: 00001         , { <Priority,Term>          <Integer>                 } } -> Shift   Situation: 00006         
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Shift   Situation: 00006         
+{                         ,Empty                    } -> Accept  
+{Situation: 00002         , { <Priority,Factor>        <Integer>                 } } -> Shift   Situation: 00007         
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Shift   Situation: 00007         
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  1] E                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  1] E                  
+{                         ,Empty                    } -> Reduce  [  1] E                  
+{Situation: 00003         , { <Priority,Factor>        <Integer>                 } } -> Reduce  [  1] T                  
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Reduce  [  1] T                  
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  1] T                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  1] T                  
+{                         ,Empty                    } -> Reduce  [  1] T                  
+{Situation: 00004         ,E                        } -> Goto    Situation: 00008         
+{                         ,T                        } -> Goto    Situation: 00009         
+{                         ,F                        } -> Goto    Situation: 00010         
+{                         , { <Integer>                <Priority,Factor>         } } -> Shift   Situation: 00012         
+{                         , { <Separator,LeftBracket>  <Integer>                 } } -> Shift   Situation: 00011         
+{                         , { <Integer>                <Priority,Term>           } } -> Shift   Situation: 00012         
+{                         , { <Separator,LeftBracket>  <Separator,LeftBracket>   } } -> Shift   Situation: 00011         
+{                         , { <Integer>                <Separator,RightBracket>  } } -> Shift   Situation: 00012         
+{Situation: 00005         , { <Priority,Factor>        <Integer>                 } } -> Reduce  [  1] F                  
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Reduce  [  1] F                  
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  1] F                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  1] F                  
+{                         ,Empty                    } -> Reduce  [  1] F                  
+{Situation: 00006         ,T                        } -> Goto    Situation: 00013         
+{                         ,F                        } -> Goto    Situation: 00003         
+{                         ,<Integer>                } -> Shift   Situation: 00005         
+{                         , { <Integer>                <Priority,Factor>         } } -> Shift   Situation: 00005         
+{                         , { <Separator,LeftBracket>  <Integer>                 } } -> Shift   Situation: 00004         
+{                         , { <Integer>                <Priority,Term>           } } -> Shift   Situation: 00005         
+{                         , { <Separator,LeftBracket>  <Separator,LeftBracket>   } } -> Shift   Situation: 00004         
+{Situation: 00007         ,F                        } -> Goto    Situation: 00014         
+{                         ,<Integer>                } -> Shift   Situation: 00005         
+{                         , { <Integer>                <Priority,Factor>         } } -> Shift   Situation: 00005         
+{                         , { <Separator,LeftBracket>  <Integer>                 } } -> Shift   Situation: 00004         
+{                         , { <Integer>                <Priority,Term>           } } -> Shift   Situation: 00005         
+{                         , { <Separator,LeftBracket>  <Separator,LeftBracket>   } } -> Shift   Situation: 00004         
+{Situation: 00008         ,<Separator,RightBracket> } -> Shift   Situation: 00015         
+{                         , { <Priority,Term>          <Integer>                 } } -> Shift   Situation: 00016         
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Shift   Situation: 00016         
+{                         , { <Separator,RightBracket> <Priority,Factor>         } } -> Shift   Situation: 00015         
+{                         , { <Separator,RightBracket> <Priority,Term>           } } -> Shift   Situation: 00015         
+{Situation: 00009         ,<Separator,RightBracket> } -> Reduce  [  1] E                  
+{                         , { <Priority,Factor>        <Integer>                 } } -> Shift   Situation: 00017         
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Shift   Situation: 00017         
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  1] E                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  1] E                  
+{                         , { <Separator,RightBracket> <Priority,Factor>         } } -> Reduce  [  1] E                  
+{                         , { <Separator,RightBracket> <Priority,Term>           } } -> Reduce  [  1] E                  
+{Situation: 00010         ,<Separator,RightBracket> } -> Reduce  [  1] T                  
+{                         , { <Priority,Factor>        <Integer>                 } } -> Reduce  [  1] T                  
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Reduce  [  1] T                  
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  1] T                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  1] T                  
+{                         , { <Separator,RightBracket> <Priority,Factor>         } } -> Reduce  [  1] T                  
+{                         , { <Separator,RightBracket> <Priority,Term>           } } -> Reduce  [  1] T                  
+{Situation: 00011         ,E                        } -> Goto    Situation: 00018         
+{                         ,T                        } -> Goto    Situation: 00019         
+{                         ,F                        } -> Goto    Situation: 00020         
+{                         , { <Integer>                <Priority,Factor>         } } -> Shift   Situation: 00022         
+{                         , { <Separator,LeftBracket>  <Integer>                 } } -> Shift   Situation: 00021         
+{                         , { <Integer>                <Priority,Term>           } } -> Shift   Situation: 00022         
+{                         , { <Separator,LeftBracket>  <Separator,LeftBracket>   } } -> Shift   Situation: 00021         
+{                         , { <Integer>                <Separator,RightBracket>  } } -> Shift   Situation: 00022         
+{Situation: 00012         ,<Separator,RightBracket> } -> Reduce  [  1] F                  
+{                         , { <Priority,Factor>        <Integer>                 } } -> Reduce  [  1] F                  
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Reduce  [  1] F                  
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  1] F                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  1] F                  
+{                         , { <Separator,RightBracket> <Priority,Factor>         } } -> Reduce  [  1] F                  
+{                         , { <Separator,RightBracket> <Priority,Term>           } } -> Reduce  [  1] F                  
+{Situation: 00013         , { <Priority,Factor>        <Integer>                 } } -> Shift   Situation: 00007         
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Shift   Situation: 00007         
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  0] E                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  0] E                  
+{                         ,Empty                    } -> Reduce  [  0] E                  
+{Situation: 00014         , { <Priority,Factor>        <Integer>                 } } -> Reduce  [  0] T                  
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Reduce  [  0] T                  
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  0] T                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  0] T                  
+{                         ,Empty                    } -> Reduce  [  0] T                  
+{Situation: 00015         , { <Priority,Factor>        <Integer>                 } } -> Reduce  [  0] F                  
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Reduce  [  0] F                  
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  0] F                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  0] F                  
+{                         ,Empty                    } -> Reduce  [  0] F                  
+{Situation: 00016         ,T                        } -> Goto    Situation: 00023         
+{                         ,F                        } -> Goto    Situation: 00010         
+{                         , { <Integer>                <Priority,Factor>         } } -> Shift   Situation: 00012         
+{                         , { <Separator,LeftBracket>  <Integer>                 } } -> Shift   Situation: 00011         
+{                         , { <Integer>                <Priority,Term>           } } -> Shift   Situation: 00012         
+{                         , { <Separator,LeftBracket>  <Separator,LeftBracket>   } } -> Shift   Situation: 00011         
+{                         , { <Integer>                <Separator,RightBracket>  } } -> Shift   Situation: 00012         
+{Situation: 00017         ,F                        } -> Goto    Situation: 00024         
+{                         , { <Integer>                <Priority,Factor>         } } -> Shift   Situation: 00012         
+{                         , { <Separator,LeftBracket>  <Integer>                 } } -> Shift   Situation: 00011         
+{                         , { <Integer>                <Priority,Term>           } } -> Shift   Situation: 00012         
+{                         , { <Separator,LeftBracket>  <Separator,LeftBracket>   } } -> Shift   Situation: 00011         
+{                         , { <Integer>                <Separator,RightBracket>  } } -> Shift   Situation: 00012         
+{Situation: 00018         , { <Priority,Term>          <Integer>                 } } -> Shift   Situation: 00026         
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Shift   Situation: 00026         
+{                         , { <Separator,RightBracket> <Priority,Factor>         } } -> Shift   Situation: 00025         
+{                         , { <Separator,RightBracket> <Separator,RightBracket>  } } -> Shift   Situation: 00025         
+{                         , { <Separator,RightBracket> <Priority,Term>           } } -> Shift   Situation: 00025         
+{Situation: 00019         , { <Priority,Factor>        <Integer>                 } } -> Shift   Situation: 00027         
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Shift   Situation: 00027         
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  1] E                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  1] E                  
+{                         , { <Separator,RightBracket> <Priority,Factor>         } } -> Reduce  [  1] E                  
+{                         , { <Separator,RightBracket> <Separator,RightBracket>  } } -> Reduce  [  1] E                  
+{                         , { <Separator,RightBracket> <Priority,Term>           } } -> Reduce  [  1] E                  
+{Situation: 00020         , { <Priority,Factor>        <Integer>                 } } -> Reduce  [  1] T                  
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Reduce  [  1] T                  
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  1] T                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  1] T                  
+{                         , { <Separator,RightBracket> <Priority,Factor>         } } -> Reduce  [  1] T                  
+{                         , { <Separator,RightBracket> <Separator,RightBracket>  } } -> Reduce  [  1] T                  
+{                         , { <Separator,RightBracket> <Priority,Term>           } } -> Reduce  [  1] T                  
+{Situation: 00021         ,E                        } -> Goto    Situation: 00028         
+{                         ,T                        } -> Goto    Situation: 00019         
+{                         ,F                        } -> Goto    Situation: 00020         
+{                         , { <Integer>                <Priority,Factor>         } } -> Shift   Situation: 00022         
+{                         , { <Separator,LeftBracket>  <Integer>                 } } -> Shift   Situation: 00021         
+{                         , { <Integer>                <Priority,Term>           } } -> Shift   Situation: 00022         
+{                         , { <Separator,LeftBracket>  <Separator,LeftBracket>   } } -> Shift   Situation: 00021         
+{                         , { <Integer>                <Separator,RightBracket>  } } -> Shift   Situation: 00022         
+{Situation: 00022         , { <Priority,Factor>        <Integer>                 } } -> Reduce  [  1] F                  
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Reduce  [  1] F                  
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  1] F                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  1] F                  
+{                         , { <Separator,RightBracket> <Priority,Factor>         } } -> Reduce  [  1] F                  
+{                         , { <Separator,RightBracket> <Separator,RightBracket>  } } -> Reduce  [  1] F                  
+{                         , { <Separator,RightBracket> <Priority,Term>           } } -> Reduce  [  1] F                  
+{Situation: 00023         ,<Separator,RightBracket> } -> Reduce  [  0] E                  
+{                         , { <Priority,Factor>        <Integer>                 } } -> Shift   Situation: 00017         
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Shift   Situation: 00017         
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  0] E                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  0] E                  
+{                         , { <Separator,RightBracket> <Priority,Factor>         } } -> Reduce  [  0] E                  
+{                         , { <Separator,RightBracket> <Priority,Term>           } } -> Reduce  [  0] E                  
+{Situation: 00024         ,<Separator,RightBracket> } -> Reduce  [  0] T                  
+{                         , { <Priority,Factor>        <Integer>                 } } -> Reduce  [  0] T                  
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Reduce  [  0] T                  
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  0] T                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  0] T                  
+{                         , { <Separator,RightBracket> <Priority,Factor>         } } -> Reduce  [  0] T                  
+{                         , { <Separator,RightBracket> <Priority,Term>           } } -> Reduce  [  0] T                  
+{Situation: 00025         ,<Separator,RightBracket> } -> Reduce  [  0] F                  
+{                         , { <Priority,Factor>        <Integer>                 } } -> Reduce  [  0] F                  
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Reduce  [  0] F                  
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  0] F                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  0] F                  
+{                         , { <Separator,RightBracket> <Priority,Factor>         } } -> Reduce  [  0] F                  
+{                         , { <Separator,RightBracket> <Priority,Term>           } } -> Reduce  [  0] F                  
+{Situation: 00026         ,T                        } -> Goto    Situation: 00029         
+{                         ,F                        } -> Goto    Situation: 00020         
+{                         , { <Integer>                <Priority,Factor>         } } -> Shift   Situation: 00022         
+{                         , { <Separator,LeftBracket>  <Integer>                 } } -> Shift   Situation: 00021         
+{                         , { <Integer>                <Priority,Term>           } } -> Shift   Situation: 00022         
+{                         , { <Separator,LeftBracket>  <Separator,LeftBracket>   } } -> Shift   Situation: 00021         
+{                         , { <Integer>                <Separator,RightBracket>  } } -> Shift   Situation: 00022         
+{Situation: 00027         ,F                        } -> Goto    Situation: 00030         
+{                         , { <Integer>                <Priority,Factor>         } } -> Shift   Situation: 00022         
+{                         , { <Separator,LeftBracket>  <Integer>                 } } -> Shift   Situation: 00021         
+{                         , { <Integer>                <Priority,Term>           } } -> Shift   Situation: 00022         
+{                         , { <Separator,LeftBracket>  <Separator,LeftBracket>   } } -> Shift   Situation: 00021         
+{                         , { <Integer>                <Separator,RightBracket>  } } -> Shift   Situation: 00022         
+{Situation: 00028         , { <Priority,Term>          <Integer>                 } } -> Shift   Situation: 00026         
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Shift   Situation: 00026         
+{                         , { <Separator,RightBracket> <Priority,Factor>         } } -> Shift   Situation: 00031         
+{                         , { <Separator,RightBracket> <Separator,RightBracket>  } } -> Shift   Situation: 00031         
+{                         , { <Separator,RightBracket> <Priority,Term>           } } -> Shift   Situation: 00031         
+{Situation: 00029         , { <Priority,Factor>        <Integer>                 } } -> Shift   Situation: 00027         
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Shift   Situation: 00027         
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  0] E                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  0] E                  
+{                         , { <Separator,RightBracket> <Priority,Factor>         } } -> Reduce  [  0] E                  
+{                         , { <Separator,RightBracket> <Separator,RightBracket>  } } -> Reduce  [  0] E                  
+{                         , { <Separator,RightBracket> <Priority,Term>           } } -> Reduce  [  0] E                  
+{Situation: 00030         , { <Priority,Factor>        <Integer>                 } } -> Reduce  [  0] T                  
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Reduce  [  0] T                  
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  0] T                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  0] T                  
+{                         , { <Separator,RightBracket> <Priority,Factor>         } } -> Reduce  [  0] T                  
+{                         , { <Separator,RightBracket> <Separator,RightBracket>  } } -> Reduce  [  0] T                  
+{                         , { <Separator,RightBracket> <Priority,Term>           } } -> Reduce  [  0] T                  
+{Situation: 00031         , { <Priority,Factor>        <Integer>                 } } -> Reduce  [  0] F                  
+{                         , { <Priority,Factor>        <Separator,LeftBracket>   } } -> Reduce  [  0] F                  
+{                         , { <Priority,Term>          <Integer>                 } } -> Reduce  [  0] F                  
+{                         , { <Priority,Term>          <Separator,LeftBracket>   } } -> Reduce  [  0] F                  
+{                         , { <Separator,RightBracket> <Priority,Factor>         } } -> Reduce  [  0] F                  
+{                         , { <Separator,RightBracket> <Separator,RightBracket>  } } -> Reduce  [  0] F                  
+{                         , { <Separator,RightBracket> <Priority,Term>           } } -> Reduce  [  0] F                  

@@ -1,0 +1,11 @@
+Binary     Oper           0 Integer        2 Integer        3                 , oper  = Add           , type = CInt      
+Binary     Oper           1 Integer        1 Oper           0                 , oper  = Multi         , type = CInt      
+Binary     Oper           2 Integer        0 Oper           1                 , oper  = Add           , type = CInt      
+Binary     Oper           3 Oper           2 Integer        4                 , oper  = Sub           , type = CInt      
+
+Integer        0 3
+Integer        1 6
+Integer        2 7
+Integer        3 8
+Integer        4 5
+

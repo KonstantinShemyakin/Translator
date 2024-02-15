@@ -1,0 +1,73 @@
+Comparing files project.xml and RELEASE.XML
+***** project.xml
+    1:  <?xml version="1.0" encoding="UTF-8"?>
+    2:  <project xmlns="http://www.netbeans.org/ns/project/1">
+    3:      <type>org.netbeans.modules.cnd.makeproject</type>
+    4:      <configuration>
+    5:          <data xmlns="http://www.netbeans.org/ns/make-project/1">
+    6:              <name>TranYACC</name>
+    7:              <c-extensions/>
+    8:              <cpp-extensions>cpp</cpp-extensions>
+    9:              <header-extensions/>
+   10:              <sourceEncoding>UTF-8</sourceEncoding>
+   11:              <make-dep-projects>
+   12:                  <make-dep-project>../TreeNodeCode</make-dep-project>
+   13:              </make-dep-projects>
+   14:              <sourceRootList/>
+   15:              <confList>
+   16:                  <confElem>
+   17:                      <name>Debug</name>
+   18:                      <type>1</type>
+   19:                  </confElem>
+   20:                  <confElem>
+   21:                      <name>Release</name>
+   22:                      <type>1</type>
+   23:                  </confElem>
+   24:              </confList>
+   25:              <formatting>
+   26:                  <project-formatting-style>false</project-formatting-style>
+   27:              </formatting>
+   28:          </data>
+   29:      </configuration>
+   30:  </project>
+***** RELEASE.XML
+    1:      <conf name="Release" type="1">
+    2:        <toolsSet>
+    3:          <compilerSet>MinGW|MinGW</compilerSet>
+    4:          <dependencyChecking>true</dependencyChecking>
+    5:          <rebuildPropChanged>false</rebuildPropChanged>
+    6:        </toolsSet>
+    7:        <compileType>
+    8:          <ccTool>
+    9:            <incDir>
+   10:              <pElem>../Generated</pElem>
+   11:            </incDir>
+   12:          </ccTool>
+   13:          <linkerTool>
+   14:            <linkerLibItems>
+   15:              <linkerLibFileItem>../TreeNodeCode/dist/Release/MinGW-Windows/libtreenodecode.a</linkerLibFileItem>
+   16:            </linkerLibItems>
+   17:          </linkerTool>
+   18:        </compileType>
+   19:        <item path="../Translator/CGrammar.cpp" ex="false" tool="1" flavor2="0">
+   20:        </item>
+   21:        <item path="../Translator/CSyntax.cpp" ex="false" tool="1" flavor2="0">
+   22:        </item>
+   23:        <item path="../Translator/GSyntax.cpp" ex="false" tool="1" flavor2="0">
+   24:        </item>
+   25:        <item path="../Translator/PSyntax.cpp" ex="false" tool="1" flavor2="0">
+   26:        </item>
+   27:        <item path="../Translator/Parse.cpp" ex="false" tool="1" flavor2="0">
+   28:        </item>
+   29:        <item path="../Translator/Rules.cpp" ex="false" tool="1" flavor2="0">
+   30:        </item>
+   31:        <item path="../Translator/Tables.cpp" ex="false" tool="1" flavor2="0">
+   32:        </item>
+   33:        <item path="../Translator/TranYACC.cpp" ex="false" tool="1" flavor2="0">
+   34:        </item>
+   35:        <item path="../Translator/YSyntax.cpp" ex="false" tool="1" flavor2="0">
+   36:        </item>
+   37:      </conf>
+   38:    </confs>
+*****
+

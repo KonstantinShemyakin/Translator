@@ -1,0 +1,9 @@
+S_                       -> <Separator,LeftBracket>  <Integer>                
+E                        -> <Separator,LeftBracket>  <Integer>                
+T                        -> <Separator,LeftBracket>  <Integer>                
+F                        -> <Separator,LeftBracket>  <Integer>                
+<Separator,LeftBracket>  -> <Separator,LeftBracket>  
+<Separator,RightBracket> -> <Separator,RightBracket> 
+<Integer>                -> <Integer>                
+<Priority,Term>          -> <Priority,Term>          
+<Priority,Factor>        -> <Priority,Factor>        

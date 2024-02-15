@@ -1,0 +1,679 @@
+{S_                       ,<Separator,Semicolon>    }[  0] S_                 -> Program                  
+{                         ,<Syntax,DefFunc>         }[  0] S_                 -> Program                  
+{                         ,<Syntax,DefArr>          }[  0] S_                 -> Program                  
+{                         ,<Syntax,DefVar>          }[  0] S_                 -> Program                  
+{                         ,Eof                      }[  0] S_                 -> Program                  
+{Program                  ,<Separator,Semicolon>    }[  0] Program            -> _f_00007_                
+{                         ,<Syntax,DefFunc>         }[  0] Program            -> _f_00007_                
+{                         ,<Syntax,DefArr>          }[  0] Program            -> _f_00007_                
+{                         ,<Syntax,DefVar>          }[  0] Program            -> _f_00007_                
+{                         ,Eof                      }[  0] Program            -> _f_00007_                
+{_f_00002_                ,<Separator,Semicolon>    }[  0] _f_00002_          -> <Separator,Semicolon>    
+{                         ,<Syntax,DefFunc>         }[  1] _f_00002_          -> <Syntax,DefFunc>         <Syntax,IdentFunc>       _f_00003_                _f_00006_                
+{                         ,<Syntax,DefArr>          }[  2] _f_00002_          -> DefineSemi               
+{                         ,<Syntax,DefVar>          }[  2] _f_00002_          -> DefineSemi               
+{_f_00003_                ,<Separator,LeftBracket>  }[  1] _f_00003_          -> <Separator,LeftBracket>  DefParItem               _f_00005_                <Separator,RightBracket> 
+{                         ,<Syntax,EmptyBracket>    }[  0] _f_00003_          -> <Syntax,EmptyBracket>    
+{_f_00004_                ,<Separator,Comma>        }[  0] _f_00004_          -> <Separator,Comma>        DefParItem               
+{_f_00005_                ,<Separator,RightBracket> }[  1] _f_00005_          -> 
+{                         ,<Separator,Comma>        }[  0] _f_00005_          -> _f_00004_                _f_00005_                
+{_f_00006_                ,<Separator,LeftCramp>    }[  2] _f_00006_          -> <Separator,LeftCramp>    StmExpr                  <Separator,RightCramp>   
+{                         ,<Separator,Semicolon>    }[  0] _f_00006_          -> <Separator,Semicolon>    
+{                         ,<Syntax,EmptyCramp>      }[  1] _f_00006_          -> <Syntax,EmptyCramp>      
+{_f_00007_                ,<Separator,Semicolon>    }[  0] _f_00007_          -> _f_00002_                _f_00007_                
+{                         ,<Syntax,DefFunc>         }[  0] _f_00007_          -> _f_00002_                _f_00007_                
+{                         ,<Syntax,DefArr>          }[  0] _f_00007_          -> _f_00002_                _f_00007_                
+{                         ,<Syntax,DefVar>          }[  0] _f_00007_          -> _f_00002_                _f_00007_                
+{                         ,Eof                      }[  1] _f_00007_          -> 
+{DefParInit               ,<Oper,Assign>            }[  0] DefParInit         -> <Oper,Assign>            Assign                   
+{                         ,<Separator,RightBracket> }[  1] DefParInit         -> 
+{                         ,<Separator,Comma>        }[  1] DefParInit         -> 
+{DefParItem               ,<Syntax,DefArr>          }[  0] DefParItem         -> <Syntax,DefArr>          <Syntax,IdentArr>        DefArrDA                 DefParInit               
+{                         ,<Syntax,DefVar>          }[  1] DefParItem         -> <Syntax,DefVar>          <Ident>                  DefParInit               
+{Initializer              ,<Separator,LeftCramp>    }[  1] Initializer        -> <Separator,LeftCramp>    AInitItem                _f_00012_                <Separator,RightCramp>   
+{                         ,<Syntax,EmptyCramp>      }[  0] Initializer        -> <Syntax,EmptyCramp>      
+{_f_00011_                ,<Separator,Comma>        }[  0] _f_00011_          -> <Separator,Comma>        AInitItem                
+{_f_00012_                ,<Separator,RightCramp>   }[  1] _f_00012_          -> 
+{                         ,<Separator,Comma>        }[  0] _f_00012_          -> _f_00011_                _f_00012_                
+{AInitItem                ,<Separator,LeftCramp>    }[  0] AInitItem          -> Initializer              
+{                         ,<Separator,LeftBracket>  }[  1] AInitItem          -> Assign                   
+{                         ,<Integer>                }[  1] AInitItem          -> Assign                   
+{                         ,<Number>                 }[  1] AInitItem          -> Assign                   
+{                         ,<Ident>                  }[  1] AInitItem          -> Assign                   
+{                         ,<Priority,Term>          }[  1] AInitItem          -> Assign                   
+{                         ,<Priority,Unary>         }[  1] AInitItem          -> Assign                   
+{                         ,<Priority,IncDec>        }[  1] AInitItem          -> Assign                   
+{                         ,<Syntax,IdentFunc>       }[  1] AInitItem          -> Assign                   
+{                         ,<Syntax,IdentArr>        }[  1] AInitItem          -> Assign                   
+{                         ,<Syntax,Cast>            }[  1] AInitItem          -> Assign                   
+{                         ,<Syntax,CastUnary>       }[  1] AInitItem          -> Assign                   
+{                         ,<Syntax,EmptyCramp>      }[  0] AInitItem          -> Initializer              
+{DefArrDA                 ,<Separator,LeftScrape>   }[  0] DefArrDA           -> _f_00015_                _f_00017_                
+{                         ,<Syntax,EmptyScrape>     }[  0] DefArrDA           -> _f_00015_                _f_00017_                
+{_f_00015_                ,<Separator,LeftScrape>   }[  1] _f_00015_          -> <Separator,LeftScrape>   Assign                   <Separator,RightScrape>  
+{                         ,<Syntax,EmptyScrape>     }[  0] _f_00015_          -> <Syntax,EmptyScrape>     
+{_f_00016_                ,<Separator,LeftScrape>   }[  0] _f_00016_          -> <Separator,LeftScrape>   Assign                   <Separator,RightScrape>  
+{_f_00017_                ,<Oper,Assign>            }[  1] _f_00017_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00017_          -> 
+{                         ,<Separator,LeftScrape>   }[  0] _f_00017_          -> _f_00016_                _f_00017_                
+{                         ,<Separator,Comma>        }[  1] _f_00017_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00017_          -> 
+{DefVar                   ,<Ident>                  }[  0] DefVar             -> <Ident>                  _f_00019_                
+{_f_00019_                ,<Oper,Assign>            }[  0] _f_00019_          -> <Oper,Assign>            Assign                   
+{                         ,<Separator,RightBracket> }[  1] _f_00019_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00019_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00019_          -> 
+{DefIAV                   ,<Ident>                  }[  1] DefIAV             -> DefVar                   
+{                         ,<Syntax,IdentArr>        }[  0] DefIAV             -> <Syntax,IdentArr>        DefArrDA                 _f_00021_                
+{_f_00021_                ,<Oper,Assign>            }[  0] _f_00021_          -> <Oper,Assign>            Initializer              
+{                         ,<Separator,Comma>        }[  1] _f_00021_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00021_          -> 
+{DefItem                  ,<Ident>                  }[  1] DefItem            -> DefIAV                   
+{                         ,<Priority,And>           }[  0] DefItem            -> <Priority,And>           DefIAV                   
+{                         ,<Syntax,IdentArr>        }[  1] DefItem            -> DefIAV                   
+{Condition                ,<Separator,LeftBracket>  }[  1] Condition          -> Expressions              
+{                         ,<Integer>                }[  1] Condition          -> Expressions              
+{                         ,<Number>                 }[  1] Condition          -> Expressions              
+{                         ,<Ident>                  }[  1] Condition          -> Expressions              
+{                         ,<Priority,Term>          }[  1] Condition          -> Expressions              
+{                         ,<Priority,Unary>         }[  1] Condition          -> Expressions              
+{                         ,<Priority,IncDec>        }[  1] Condition          -> Expressions              
+{                         ,<Syntax,IdentFunc>       }[  1] Condition          -> Expressions              
+{                         ,<Syntax,IdentArr>        }[  1] Condition          -> Expressions              
+{                         ,<Syntax,DefVar>          }[  0] Condition          -> <Syntax,DefVar>          _f_00024_                
+{                         ,<Syntax,Cast>            }[  1] Condition          -> Expressions              
+{                         ,<Syntax,CastUnary>       }[  1] Condition          -> Expressions              
+{_f_00024_                ,<Ident>                  }[  1] _f_00024_          -> DefVar                   
+{                         ,<Priority,And>           }[  0] _f_00024_          -> <Priority,And>           DefVar                   
+{Expressions              ,<Separator,LeftBracket>  }[  0] Expressions        -> Assign                   _f_00027_                
+{                         ,<Integer>                }[  0] Expressions        -> Assign                   _f_00027_                
+{                         ,<Number>                 }[  0] Expressions        -> Assign                   _f_00027_                
+{                         ,<Ident>                  }[  0] Expressions        -> Assign                   _f_00027_                
+{                         ,<Priority,Term>          }[  0] Expressions        -> Assign                   _f_00027_                
+{                         ,<Priority,Unary>         }[  0] Expressions        -> Assign                   _f_00027_                
+{                         ,<Priority,IncDec>        }[  0] Expressions        -> Assign                   _f_00027_                
+{                         ,<Syntax,IdentFunc>       }[  0] Expressions        -> Assign                   _f_00027_                
+{                         ,<Syntax,IdentArr>        }[  0] Expressions        -> Assign                   _f_00027_                
+{                         ,<Syntax,Cast>            }[  0] Expressions        -> Assign                   _f_00027_                
+{                         ,<Syntax,CastUnary>       }[  0] Expressions        -> Assign                   _f_00027_                
+{_f_00026_                ,<Separator,Comma>        }[  0] _f_00026_          -> <Separator,Comma>        Assign                   
+{_f_00027_                ,<Separator,RightBracket> }[  1] _f_00027_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00027_          -> 
+{                         ,<Separator,Comma>        }[  0] _f_00027_          -> _f_00026_                _f_00027_                
+{                         ,<Separator,Semicolon>    }[  1] _f_00027_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00027_          -> 
+{Assign                   ,<Separator,LeftBracket>  }[  0] Assign             -> Question                 _f_00029_                
+{                         ,<Integer>                }[  0] Assign             -> Question                 _f_00029_                
+{                         ,<Number>                 }[  0] Assign             -> Question                 _f_00029_                
+{                         ,<Ident>                  }[  0] Assign             -> Question                 _f_00029_                
+{                         ,<Priority,Term>          }[  0] Assign             -> Question                 _f_00029_                
+{                         ,<Priority,Unary>         }[  0] Assign             -> Question                 _f_00029_                
+{                         ,<Priority,IncDec>        }[  0] Assign             -> Question                 _f_00029_                
+{                         ,<Syntax,IdentFunc>       }[  0] Assign             -> Question                 _f_00029_                
+{                         ,<Syntax,IdentArr>        }[  0] Assign             -> Question                 _f_00029_                
+{                         ,<Syntax,Cast>            }[  0] Assign             -> Question                 _f_00029_                
+{                         ,<Syntax,CastUnary>       }[  0] Assign             -> Question                 _f_00029_                
+{_f_00029_                ,<Separator,RightCramp>   }[  1] _f_00029_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00029_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00029_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00029_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00029_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00029_          -> 
+{                         ,<Priority,Assign>        }[  0] _f_00029_          -> <Priority,Assign>        Assign                   
+{Question                 ,<Separator,LeftBracket>  }[  0] Question           -> AndAnd                   _f_00032_                _f_00033_                
+{                         ,<Integer>                }[  0] Question           -> AndAnd                   _f_00032_                _f_00033_                
+{                         ,<Number>                 }[  0] Question           -> AndAnd                   _f_00032_                _f_00033_                
+{                         ,<Ident>                  }[  0] Question           -> AndAnd                   _f_00032_                _f_00033_                
+{                         ,<Priority,Term>          }[  0] Question           -> AndAnd                   _f_00032_                _f_00033_                
+{                         ,<Priority,Unary>         }[  0] Question           -> AndAnd                   _f_00032_                _f_00033_                
+{                         ,<Priority,IncDec>        }[  0] Question           -> AndAnd                   _f_00032_                _f_00033_                
+{                         ,<Syntax,IdentFunc>       }[  0] Question           -> AndAnd                   _f_00032_                _f_00033_                
+{                         ,<Syntax,IdentArr>        }[  0] Question           -> AndAnd                   _f_00032_                _f_00033_                
+{                         ,<Syntax,Cast>            }[  0] Question           -> AndAnd                   _f_00032_                _f_00033_                
+{                         ,<Syntax,CastUnary>       }[  0] Question           -> AndAnd                   _f_00032_                _f_00033_                
+{_f_00031_                ,<Priority,OrOr>          }[  0] _f_00031_          -> <Priority,OrOr>          AndAnd                   
+{_f_00032_                ,<Separator,RightCramp>   }[  1] _f_00032_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00032_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00032_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00032_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00032_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00032_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00032_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00032_          -> 
+{                         ,<Priority,OrOr>          }[  0] _f_00032_          -> _f_00031_                _f_00032_                
+{_f_00033_                ,<Separator,RightCramp>   }[  1] _f_00033_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00033_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00033_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00033_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00033_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00033_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00033_          -> 
+{                         ,<Priority,Question>      }[  0] _f_00033_          -> <Priority,Question>      ExpressionValue          <Separator,Colon>        Question                 
+{AndAnd                   ,<Separator,LeftBracket>  }[  0] AndAnd             -> Or                       _f_00036_                
+{                         ,<Integer>                }[  0] AndAnd             -> Or                       _f_00036_                
+{                         ,<Number>                 }[  0] AndAnd             -> Or                       _f_00036_                
+{                         ,<Ident>                  }[  0] AndAnd             -> Or                       _f_00036_                
+{                         ,<Priority,Term>          }[  0] AndAnd             -> Or                       _f_00036_                
+{                         ,<Priority,Unary>         }[  0] AndAnd             -> Or                       _f_00036_                
+{                         ,<Priority,IncDec>        }[  0] AndAnd             -> Or                       _f_00036_                
+{                         ,<Syntax,IdentFunc>       }[  0] AndAnd             -> Or                       _f_00036_                
+{                         ,<Syntax,IdentArr>        }[  0] AndAnd             -> Or                       _f_00036_                
+{                         ,<Syntax,Cast>            }[  0] AndAnd             -> Or                       _f_00036_                
+{                         ,<Syntax,CastUnary>       }[  0] AndAnd             -> Or                       _f_00036_                
+{_f_00035_                ,<Priority,AndAnd>        }[  0] _f_00035_          -> <Priority,AndAnd>        Or                       
+{_f_00036_                ,<Separator,RightCramp>   }[  1] _f_00036_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00036_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00036_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00036_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00036_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00036_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00036_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00036_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00036_          -> 
+{                         ,<Priority,AndAnd>        }[  0] _f_00036_          -> _f_00035_                _f_00036_                
+{Or                       ,<Separator,LeftBracket>  }[  0] Or                 -> XOr                      _f_00039_                
+{                         ,<Integer>                }[  0] Or                 -> XOr                      _f_00039_                
+{                         ,<Number>                 }[  0] Or                 -> XOr                      _f_00039_                
+{                         ,<Ident>                  }[  0] Or                 -> XOr                      _f_00039_                
+{                         ,<Priority,Term>          }[  0] Or                 -> XOr                      _f_00039_                
+{                         ,<Priority,Unary>         }[  0] Or                 -> XOr                      _f_00039_                
+{                         ,<Priority,IncDec>        }[  0] Or                 -> XOr                      _f_00039_                
+{                         ,<Syntax,IdentFunc>       }[  0] Or                 -> XOr                      _f_00039_                
+{                         ,<Syntax,IdentArr>        }[  0] Or                 -> XOr                      _f_00039_                
+{                         ,<Syntax,Cast>            }[  0] Or                 -> XOr                      _f_00039_                
+{                         ,<Syntax,CastUnary>       }[  0] Or                 -> XOr                      _f_00039_                
+{_f_00038_                ,<Priority,Or>            }[  0] _f_00038_          -> <Priority,Or>            XOr                      
+{_f_00039_                ,<Separator,RightCramp>   }[  1] _f_00039_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00039_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00039_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00039_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00039_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00039_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00039_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00039_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00039_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00039_          -> 
+{                         ,<Priority,Or>            }[  0] _f_00039_          -> _f_00038_                _f_00039_                
+{XOr                      ,<Separator,LeftBracket>  }[  0] XOr                -> And                      _f_00042_                
+{                         ,<Integer>                }[  0] XOr                -> And                      _f_00042_                
+{                         ,<Number>                 }[  0] XOr                -> And                      _f_00042_                
+{                         ,<Ident>                  }[  0] XOr                -> And                      _f_00042_                
+{                         ,<Priority,Term>          }[  0] XOr                -> And                      _f_00042_                
+{                         ,<Priority,Unary>         }[  0] XOr                -> And                      _f_00042_                
+{                         ,<Priority,IncDec>        }[  0] XOr                -> And                      _f_00042_                
+{                         ,<Syntax,IdentFunc>       }[  0] XOr                -> And                      _f_00042_                
+{                         ,<Syntax,IdentArr>        }[  0] XOr                -> And                      _f_00042_                
+{                         ,<Syntax,Cast>            }[  0] XOr                -> And                      _f_00042_                
+{                         ,<Syntax,CastUnary>       }[  0] XOr                -> And                      _f_00042_                
+{_f_00041_                ,<Priority,XOr>           }[  0] _f_00041_          -> <Priority,XOr>           And                      
+{_f_00042_                ,<Separator,RightCramp>   }[  1] _f_00042_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00042_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00042_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00042_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00042_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00042_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00042_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00042_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00042_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00042_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00042_          -> 
+{                         ,<Priority,XOr>           }[  0] _f_00042_          -> _f_00041_                _f_00042_                
+{And                      ,<Separator,LeftBracket>  }[  0] And                -> Equ                      _f_00045_                
+{                         ,<Integer>                }[  0] And                -> Equ                      _f_00045_                
+{                         ,<Number>                 }[  0] And                -> Equ                      _f_00045_                
+{                         ,<Ident>                  }[  0] And                -> Equ                      _f_00045_                
+{                         ,<Priority,Term>          }[  0] And                -> Equ                      _f_00045_                
+{                         ,<Priority,Unary>         }[  0] And                -> Equ                      _f_00045_                
+{                         ,<Priority,IncDec>        }[  0] And                -> Equ                      _f_00045_                
+{                         ,<Syntax,IdentFunc>       }[  0] And                -> Equ                      _f_00045_                
+{                         ,<Syntax,IdentArr>        }[  0] And                -> Equ                      _f_00045_                
+{                         ,<Syntax,Cast>            }[  0] And                -> Equ                      _f_00045_                
+{                         ,<Syntax,CastUnary>       }[  0] And                -> Equ                      _f_00045_                
+{_f_00044_                ,<Priority,And>           }[  0] _f_00044_          -> <Priority,And>           Equ                      
+{_f_00045_                ,<Separator,RightCramp>   }[  1] _f_00045_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00045_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00045_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00045_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00045_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00045_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00045_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00045_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00045_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00045_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00045_          -> 
+{                         ,<Priority,XOr>           }[  1] _f_00045_          -> 
+{                         ,<Priority,And>           }[  0] _f_00045_          -> _f_00044_                _f_00045_                
+{Equ                      ,<Separator,LeftBracket>  }[  0] Equ                -> Compare                  _f_00048_                
+{                         ,<Integer>                }[  0] Equ                -> Compare                  _f_00048_                
+{                         ,<Number>                 }[  0] Equ                -> Compare                  _f_00048_                
+{                         ,<Ident>                  }[  0] Equ                -> Compare                  _f_00048_                
+{                         ,<Priority,Term>          }[  0] Equ                -> Compare                  _f_00048_                
+{                         ,<Priority,Unary>         }[  0] Equ                -> Compare                  _f_00048_                
+{                         ,<Priority,IncDec>        }[  0] Equ                -> Compare                  _f_00048_                
+{                         ,<Syntax,IdentFunc>       }[  0] Equ                -> Compare                  _f_00048_                
+{                         ,<Syntax,IdentArr>        }[  0] Equ                -> Compare                  _f_00048_                
+{                         ,<Syntax,Cast>            }[  0] Equ                -> Compare                  _f_00048_                
+{                         ,<Syntax,CastUnary>       }[  0] Equ                -> Compare                  _f_00048_                
+{_f_00047_                ,<Priority,Equ>           }[  0] _f_00047_          -> <Priority,Equ>           Compare                  
+{_f_00048_                ,<Separator,RightCramp>   }[  1] _f_00048_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00048_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00048_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00048_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00048_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00048_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00048_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00048_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00048_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00048_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00048_          -> 
+{                         ,<Priority,XOr>           }[  1] _f_00048_          -> 
+{                         ,<Priority,And>           }[  1] _f_00048_          -> 
+{                         ,<Priority,Equ>           }[  0] _f_00048_          -> _f_00047_                _f_00048_                
+{Compare                  ,<Separator,LeftBracket>  }[  0] Compare            -> Shift                    _f_00051_                
+{                         ,<Integer>                }[  0] Compare            -> Shift                    _f_00051_                
+{                         ,<Number>                 }[  0] Compare            -> Shift                    _f_00051_                
+{                         ,<Ident>                  }[  0] Compare            -> Shift                    _f_00051_                
+{                         ,<Priority,Term>          }[  0] Compare            -> Shift                    _f_00051_                
+{                         ,<Priority,Unary>         }[  0] Compare            -> Shift                    _f_00051_                
+{                         ,<Priority,IncDec>        }[  0] Compare            -> Shift                    _f_00051_                
+{                         ,<Syntax,IdentFunc>       }[  0] Compare            -> Shift                    _f_00051_                
+{                         ,<Syntax,IdentArr>        }[  0] Compare            -> Shift                    _f_00051_                
+{                         ,<Syntax,Cast>            }[  0] Compare            -> Shift                    _f_00051_                
+{                         ,<Syntax,CastUnary>       }[  0] Compare            -> Shift                    _f_00051_                
+{_f_00050_                ,<Priority,Compare>       }[  0] _f_00050_          -> <Priority,Compare>       Shift                    
+{_f_00051_                ,<Separator,RightCramp>   }[  1] _f_00051_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00051_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00051_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00051_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00051_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00051_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00051_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00051_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00051_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00051_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00051_          -> 
+{                         ,<Priority,XOr>           }[  1] _f_00051_          -> 
+{                         ,<Priority,And>           }[  1] _f_00051_          -> 
+{                         ,<Priority,Equ>           }[  1] _f_00051_          -> 
+{                         ,<Priority,Compare>       }[  0] _f_00051_          -> _f_00050_                _f_00051_                
+{Shift                    ,<Separator,LeftBracket>  }[  0] Shift              -> Term                     _f_00054_                
+{                         ,<Integer>                }[  0] Shift              -> Term                     _f_00054_                
+{                         ,<Number>                 }[  0] Shift              -> Term                     _f_00054_                
+{                         ,<Ident>                  }[  0] Shift              -> Term                     _f_00054_                
+{                         ,<Priority,Term>          }[  0] Shift              -> Term                     _f_00054_                
+{                         ,<Priority,Unary>         }[  0] Shift              -> Term                     _f_00054_                
+{                         ,<Priority,IncDec>        }[  0] Shift              -> Term                     _f_00054_                
+{                         ,<Syntax,IdentFunc>       }[  0] Shift              -> Term                     _f_00054_                
+{                         ,<Syntax,IdentArr>        }[  0] Shift              -> Term                     _f_00054_                
+{                         ,<Syntax,Cast>            }[  0] Shift              -> Term                     _f_00054_                
+{                         ,<Syntax,CastUnary>       }[  0] Shift              -> Term                     _f_00054_                
+{_f_00053_                ,<Priority,Shift>         }[  0] _f_00053_          -> <Priority,Shift>         Term                     
+{_f_00054_                ,<Separator,RightCramp>   }[  1] _f_00054_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00054_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00054_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00054_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00054_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00054_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00054_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00054_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00054_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00054_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00054_          -> 
+{                         ,<Priority,XOr>           }[  1] _f_00054_          -> 
+{                         ,<Priority,And>           }[  1] _f_00054_          -> 
+{                         ,<Priority,Equ>           }[  1] _f_00054_          -> 
+{                         ,<Priority,Compare>       }[  1] _f_00054_          -> 
+{                         ,<Priority,Shift>         }[  0] _f_00054_          -> _f_00053_                _f_00054_                
+{Term                     ,<Separator,LeftBracket>  }[  0] Term               -> Factor                   _f_00057_                
+{                         ,<Integer>                }[  0] Term               -> Factor                   _f_00057_                
+{                         ,<Number>                 }[  0] Term               -> Factor                   _f_00057_                
+{                         ,<Ident>                  }[  0] Term               -> Factor                   _f_00057_                
+{                         ,<Priority,Term>          }[  0] Term               -> Factor                   _f_00057_                
+{                         ,<Priority,Unary>         }[  0] Term               -> Factor                   _f_00057_                
+{                         ,<Priority,IncDec>        }[  0] Term               -> Factor                   _f_00057_                
+{                         ,<Syntax,IdentFunc>       }[  0] Term               -> Factor                   _f_00057_                
+{                         ,<Syntax,IdentArr>        }[  0] Term               -> Factor                   _f_00057_                
+{                         ,<Syntax,Cast>            }[  0] Term               -> Factor                   _f_00057_                
+{                         ,<Syntax,CastUnary>       }[  0] Term               -> Factor                   _f_00057_                
+{_f_00056_                ,<Priority,Term>          }[  0] _f_00056_          -> <Priority,Term>          Factor                   
+{_f_00057_                ,<Separator,RightCramp>   }[  1] _f_00057_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00057_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00057_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00057_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00057_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00057_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00057_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00057_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00057_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00057_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00057_          -> 
+{                         ,<Priority,XOr>           }[  1] _f_00057_          -> 
+{                         ,<Priority,And>           }[  1] _f_00057_          -> 
+{                         ,<Priority,Equ>           }[  1] _f_00057_          -> 
+{                         ,<Priority,Compare>       }[  1] _f_00057_          -> 
+{                         ,<Priority,Shift>         }[  1] _f_00057_          -> 
+{                         ,<Priority,Term>          }[  0] _f_00057_          -> _f_00056_                _f_00057_                
+{Factor                   ,<Separator,LeftBracket>  }[  0] Factor             -> Unary                    _f_00060_                
+{                         ,<Integer>                }[  0] Factor             -> Unary                    _f_00060_                
+{                         ,<Number>                 }[  0] Factor             -> Unary                    _f_00060_                
+{                         ,<Ident>                  }[  0] Factor             -> Unary                    _f_00060_                
+{                         ,<Priority,Term>          }[  0] Factor             -> Unary                    _f_00060_                
+{                         ,<Priority,Unary>         }[  0] Factor             -> Unary                    _f_00060_                
+{                         ,<Priority,IncDec>        }[  0] Factor             -> Unary                    _f_00060_                
+{                         ,<Syntax,IdentFunc>       }[  0] Factor             -> Unary                    _f_00060_                
+{                         ,<Syntax,IdentArr>        }[  0] Factor             -> Unary                    _f_00060_                
+{                         ,<Syntax,Cast>            }[  0] Factor             -> Unary                    _f_00060_                
+{                         ,<Syntax,CastUnary>       }[  0] Factor             -> Unary                    _f_00060_                
+{_f_00059_                ,<Priority,Factor>        }[  0] _f_00059_          -> <Priority,Factor>        Unary                    
+{_f_00060_                ,<Separator,RightCramp>   }[  1] _f_00060_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00060_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00060_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00060_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00060_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00060_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00060_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00060_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00060_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00060_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00060_          -> 
+{                         ,<Priority,XOr>           }[  1] _f_00060_          -> 
+{                         ,<Priority,And>           }[  1] _f_00060_          -> 
+{                         ,<Priority,Equ>           }[  1] _f_00060_          -> 
+{                         ,<Priority,Compare>       }[  1] _f_00060_          -> 
+{                         ,<Priority,Shift>         }[  1] _f_00060_          -> 
+{                         ,<Priority,Term>          }[  1] _f_00060_          -> 
+{                         ,<Priority,Factor>        }[  0] _f_00060_          -> _f_00059_                _f_00060_                
+{Unary                    ,<Separator,LeftBracket>  }[  4] Unary              -> _f_00062_                _f_00066_                
+{                         ,<Integer>                }[  4] Unary              -> _f_00062_                _f_00066_                
+{                         ,<Number>                 }[  4] Unary              -> _f_00062_                _f_00066_                
+{                         ,<Ident>                  }[  4] Unary              -> _f_00062_                _f_00066_                
+{                         ,<Priority,Term>          }[  1] Unary              -> <Priority,Term>          Unary                    
+{                         ,<Priority,Unary>         }[  0] Unary              -> <Priority,Unary>         Unary                    
+{                         ,<Priority,IncDec>        }[  2] Unary              -> <Priority,IncDec>        Unary                    
+{                         ,<Syntax,IdentFunc>       }[  4] Unary              -> _f_00062_                _f_00066_                
+{                         ,<Syntax,IdentArr>        }[  4] Unary              -> _f_00062_                _f_00066_                
+{                         ,<Syntax,Cast>            }[  4] Unary              -> _f_00062_                _f_00066_                
+{                         ,<Syntax,CastUnary>       }[  3] Unary              -> <Syntax,CastUnary>       Unary                    
+{_f_00062_                ,<Separator,LeftBracket>  }[  6] _f_00062_          -> Primary                  
+{                         ,<Integer>                }[  0] _f_00062_          -> <Integer>                
+{                         ,<Number>                 }[  1] _f_00062_          -> <Number>                 
+{                         ,<Ident>                  }[  5] _f_00062_          -> <Ident>                  
+{                         ,<Syntax,IdentFunc>       }[  3] _f_00062_          -> <Syntax,IdentFunc>       _f_00065_                
+{                         ,<Syntax,IdentArr>        }[  2] _f_00062_          -> <Syntax,IdentArr>        _f_00064_                
+{                         ,<Syntax,Cast>            }[  4] _f_00062_          -> <Syntax,Cast>            Primary                  
+{_f_00063_                ,<Separator,LeftScrape>   }[  0] _f_00063_          -> <Separator,LeftScrape>   ExpressionValue          <Separator,RightScrape>  
+{_f_00064_                ,<Separator,RightCramp>   }[  1] _f_00064_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00064_          -> 
+{                         ,<Separator,LeftScrape>   }[  0] _f_00064_          -> _f_00063_                _f_00064_                
+{                         ,<Separator,RightScrape>  }[  1] _f_00064_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00064_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00064_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00064_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00064_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00064_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00064_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00064_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00064_          -> 
+{                         ,<Priority,XOr>           }[  1] _f_00064_          -> 
+{                         ,<Priority,And>           }[  1] _f_00064_          -> 
+{                         ,<Priority,Equ>           }[  1] _f_00064_          -> 
+{                         ,<Priority,Compare>       }[  1] _f_00064_          -> 
+{                         ,<Priority,Shift>         }[  1] _f_00064_          -> 
+{                         ,<Priority,Term>          }[  1] _f_00064_          -> 
+{                         ,<Priority,Factor>        }[  1] _f_00064_          -> 
+{                         ,<Priority,IncDec>        }[  1] _f_00064_          -> 
+{_f_00065_                ,<Separator,LeftBracket>  }[  1] _f_00065_          -> <Separator,LeftBracket>  Expressions              <Separator,RightBracket> 
+{                         ,<Syntax,EmptyBracket>    }[  0] _f_00065_          -> <Syntax,EmptyBracket>    
+{_f_00066_                ,<Separator,RightCramp>   }[  1] _f_00066_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00066_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00066_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00066_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00066_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00066_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00066_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00066_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00066_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00066_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00066_          -> 
+{                         ,<Priority,XOr>           }[  1] _f_00066_          -> 
+{                         ,<Priority,And>           }[  1] _f_00066_          -> 
+{                         ,<Priority,Equ>           }[  1] _f_00066_          -> 
+{                         ,<Priority,Compare>       }[  1] _f_00066_          -> 
+{                         ,<Priority,Shift>         }[  1] _f_00066_          -> 
+{                         ,<Priority,Term>          }[  1] _f_00066_          -> 
+{                         ,<Priority,Factor>        }[  1] _f_00066_          -> 
+{                         ,<Priority,IncDec>        }[  0] _f_00066_          -> <Priority,IncDec>        
+{Primary                  ,<Separator,LeftBracket>  }[  0] Primary            -> <Separator,LeftBracket>  Expressions              <Separator,RightBracket> 
+{DefineSemi               ,<Syntax,DefArr>          }[  0] DefineSemi         -> _f_00069_                DefItem                  _f_00071_                <Separator,Semicolon>    
+{                         ,<Syntax,DefVar>          }[  0] DefineSemi         -> _f_00069_                DefItem                  _f_00071_                <Separator,Semicolon>    
+{_f_00069_                ,<Syntax,DefArr>          }[  0] _f_00069_          -> <Syntax,DefArr>          
+{                         ,<Syntax,DefVar>          }[  1] _f_00069_          -> <Syntax,DefVar>          
+{_f_00070_                ,<Separator,Comma>        }[  0] _f_00070_          -> <Separator,Comma>        DefItem                  
+{_f_00071_                ,<Separator,Comma>        }[  0] _f_00071_          -> _f_00070_                _f_00071_                
+{                         ,<Separator,Semicolon>    }[  1] _f_00071_          -> 
+{ExprSemi                 ,<Separator,LeftBracket>  }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Integer>                }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Number>                 }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Ident>                  }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Priority,Term>          }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Priority,Unary>         }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Priority,IncDec>        }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Syntax,IdentFunc>       }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Syntax,IdentArr>        }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Syntax,Cast>            }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Syntax,CastUnary>       }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{DefExpr                  ,<Separator,LeftCramp>    }[  2] DefExpr            -> _f_00074_                
+{                         ,<Separator,LeftBracket>  }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Separator,Semicolon>    }[  0] DefExpr            -> <Separator,Semicolon>    
+{                         ,<Integer>                }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Number>                 }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Ident>                  }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Reserv,For>             }[  2] DefExpr            -> _f_00074_                
+{                         ,<Reserv,While>           }[  2] DefExpr            -> _f_00074_                
+{                         ,<Reserv,If>              }[  2] DefExpr            -> _f_00074_                
+{                         ,<Reserv,Do>              }[  2] DefExpr            -> _f_00074_                
+{                         ,<Reserv,GoTo>            }[  2] DefExpr            -> _f_00074_                
+{                         ,<Reserv,Continue>        }[  2] DefExpr            -> _f_00074_                
+{                         ,<Reserv,Break>           }[  2] DefExpr            -> _f_00074_                
+{                         ,<Reserv,Return>          }[  2] DefExpr            -> _f_00074_                
+{                         ,<Priority,Term>          }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Priority,Unary>         }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Priority,IncDec>        }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Syntax,IdentFunc>       }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Syntax,IdentArr>        }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Syntax,DefArr>          }[  1] DefExpr            -> DefineSemi               
+{                         ,<Syntax,DefVar>          }[  1] DefExpr            -> DefineSemi               
+{                         ,<Syntax,Label>           }[  2] DefExpr            -> _f_00074_                
+{                         ,<Syntax,Cast>            }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Syntax,CastUnary>       }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Syntax,EmptyCramp>      }[  2] DefExpr            -> _f_00074_                
+{_f_00074_                ,<Separator,LeftCramp>    }[  9] _f_00074_          -> _f_00080_                
+{                         ,<Reserv,For>             }[  4] _f_00074_          -> <Reserv,For>             <Separator,LeftBracket>  _f_00076_                _f_00077_                _f_00078_                DefExpr                  
+{                         ,<Reserv,While>           }[  3] _f_00074_          -> <Reserv,While>           <Separator,LeftBracket>  Condition                <Separator,RightBracket> DefExpr                  
+{                         ,<Reserv,If>              }[  1] _f_00074_          -> <Reserv,If>              <Separator,LeftBracket>  Condition                <Separator,RightBracket> DefExpr                  _f_00075_                
+{                         ,<Reserv,Do>              }[  2] _f_00074_          -> <Reserv,Do>              DefExpr                  <Reserv,While>           <Separator,LeftBracket>  Condition                <Separator,RightBracket> <Separator,Semicolon>    
+{                         ,<Reserv,GoTo>            }[  5] _f_00074_          -> <Reserv,GoTo>            <Ident>                  <Separator,Semicolon>    
+{                         ,<Reserv,Continue>        }[  7] _f_00074_          -> <Reserv,Continue>        <Separator,Semicolon>    
+{                         ,<Reserv,Break>           }[  6] _f_00074_          -> <Reserv,Break>           <Separator,Semicolon>    
+{                         ,<Reserv,Return>          }[  8] _f_00074_          -> <Reserv,Return>          _f_00079_                <Separator,Semicolon>    
+{                         ,<Syntax,Label>           }[  0] _f_00074_          -> <Syntax,Label>           <Separator,Colon>        DefExpr                  
+{                         ,<Syntax,EmptyCramp>      }[  9] _f_00074_          -> _f_00080_                
+{_f_00075_                ,<Separator,LeftCramp>    }[  1] _f_00075_          -> 
+{                         ,<Separator,RightCramp>   }[  1] _f_00075_          -> 
+{                         ,<Separator,LeftBracket>  }[  1] _f_00075_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00075_          -> 
+{                         ,<Integer>                }[  1] _f_00075_          -> 
+{                         ,<Number>                 }[  1] _f_00075_          -> 
+{                         ,<Ident>                  }[  1] _f_00075_          -> 
+{                         ,<Reserv,For>             }[  1] _f_00075_          -> 
+{                         ,<Reserv,While>           }[  1] _f_00075_          -> 
+{                         ,<Reserv,If>              }[  1] _f_00075_          -> 
+{                         ,<Reserv,Else>            }[  0] _f_00075_          -> <Reserv,Else>            DefExpr                  
+{                         ,<Reserv,Do>              }[  1] _f_00075_          -> 
+{                         ,<Reserv,GoTo>            }[  1] _f_00075_          -> 
+{                         ,<Reserv,Continue>        }[  1] _f_00075_          -> 
+{                         ,<Reserv,Break>           }[  1] _f_00075_          -> 
+{                         ,<Reserv,Return>          }[  1] _f_00075_          -> 
+{                         ,<Priority,Term>          }[  1] _f_00075_          -> 
+{                         ,<Priority,Unary>         }[  1] _f_00075_          -> 
+{                         ,<Priority,IncDec>        }[  1] _f_00075_          -> 
+{                         ,<Syntax,IdentFunc>       }[  1] _f_00075_          -> 
+{                         ,<Syntax,IdentArr>        }[  1] _f_00075_          -> 
+{                         ,<Syntax,DefArr>          }[  1] _f_00075_          -> 
+{                         ,<Syntax,DefVar>          }[  1] _f_00075_          -> 
+{                         ,<Syntax,Label>           }[  1] _f_00075_          -> 
+{                         ,<Syntax,Cast>            }[  1] _f_00075_          -> 
+{                         ,<Syntax,CastUnary>       }[  1] _f_00075_          -> 
+{                         ,<Syntax,EmptyCramp>      }[  1] _f_00075_          -> 
+{_f_00076_                ,<Separator,LeftBracket>  }[  2] _f_00076_          -> ExprSemi                 
+{                         ,<Separator,Semicolon>    }[  0] _f_00076_          -> <Separator,Semicolon>    
+{                         ,<Integer>                }[  2] _f_00076_          -> ExprSemi                 
+{                         ,<Number>                 }[  2] _f_00076_          -> ExprSemi                 
+{                         ,<Ident>                  }[  2] _f_00076_          -> ExprSemi                 
+{                         ,<Priority,Term>          }[  2] _f_00076_          -> ExprSemi                 
+{                         ,<Priority,Unary>         }[  2] _f_00076_          -> ExprSemi                 
+{                         ,<Priority,IncDec>        }[  2] _f_00076_          -> ExprSemi                 
+{                         ,<Syntax,IdentFunc>       }[  2] _f_00076_          -> ExprSemi                 
+{                         ,<Syntax,IdentArr>        }[  2] _f_00076_          -> ExprSemi                 
+{                         ,<Syntax,DefArr>          }[  1] _f_00076_          -> DefineSemi               
+{                         ,<Syntax,DefVar>          }[  1] _f_00076_          -> DefineSemi               
+{                         ,<Syntax,Cast>            }[  2] _f_00076_          -> ExprSemi                 
+{                         ,<Syntax,CastUnary>       }[  2] _f_00076_          -> ExprSemi                 
+{_f_00077_                ,<Separator,LeftBracket>  }[  1] _f_00077_          -> Condition                <Separator,Semicolon>    
+{                         ,<Separator,Semicolon>    }[  0] _f_00077_          -> <Separator,Semicolon>    
+{                         ,<Integer>                }[  1] _f_00077_          -> Condition                <Separator,Semicolon>    
+{                         ,<Number>                 }[  1] _f_00077_          -> Condition                <Separator,Semicolon>    
+{                         ,<Ident>                  }[  1] _f_00077_          -> Condition                <Separator,Semicolon>    
+{                         ,<Priority,Term>          }[  1] _f_00077_          -> Condition                <Separator,Semicolon>    
+{                         ,<Priority,Unary>         }[  1] _f_00077_          -> Condition                <Separator,Semicolon>    
+{                         ,<Priority,IncDec>        }[  1] _f_00077_          -> Condition                <Separator,Semicolon>    
+{                         ,<Syntax,IdentFunc>       }[  1] _f_00077_          -> Condition                <Separator,Semicolon>    
+{                         ,<Syntax,IdentArr>        }[  1] _f_00077_          -> Condition                <Separator,Semicolon>    
+{                         ,<Syntax,DefVar>          }[  1] _f_00077_          -> Condition                <Separator,Semicolon>    
+{                         ,<Syntax,Cast>            }[  1] _f_00077_          -> Condition                <Separator,Semicolon>    
+{                         ,<Syntax,CastUnary>       }[  1] _f_00077_          -> Condition                <Separator,Semicolon>    
+{_f_00078_                ,<Separator,LeftBracket>  }[  1] _f_00078_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Separator,RightBracket> }[  0] _f_00078_          -> <Separator,RightBracket> 
+{                         ,<Integer>                }[  1] _f_00078_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Number>                 }[  1] _f_00078_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Ident>                  }[  1] _f_00078_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Priority,Term>          }[  1] _f_00078_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Priority,Unary>         }[  1] _f_00078_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Priority,IncDec>        }[  1] _f_00078_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Syntax,IdentFunc>       }[  1] _f_00078_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Syntax,IdentArr>        }[  1] _f_00078_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Syntax,Cast>            }[  1] _f_00078_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Syntax,CastUnary>       }[  1] _f_00078_          -> ExpressionExpression     <Separator,RightBracket> 
+{_f_00079_                ,<Separator,LeftBracket>  }[  0] _f_00079_          -> ExpressionValue          
+{                         ,<Separator,Semicolon>    }[  1] _f_00079_          -> 
+{                         ,<Integer>                }[  0] _f_00079_          -> ExpressionValue          
+{                         ,<Number>                 }[  0] _f_00079_          -> ExpressionValue          
+{                         ,<Ident>                  }[  0] _f_00079_          -> ExpressionValue          
+{                         ,<Priority,Term>          }[  0] _f_00079_          -> ExpressionValue          
+{                         ,<Priority,Unary>         }[  0] _f_00079_          -> ExpressionValue          
+{                         ,<Priority,IncDec>        }[  0] _f_00079_          -> ExpressionValue          
+{                         ,<Syntax,IdentFunc>       }[  0] _f_00079_          -> ExpressionValue          
+{                         ,<Syntax,IdentArr>        }[  0] _f_00079_          -> ExpressionValue          
+{                         ,<Syntax,Cast>            }[  0] _f_00079_          -> ExpressionValue          
+{                         ,<Syntax,CastUnary>       }[  0] _f_00079_          -> ExpressionValue          
+{_f_00080_                ,<Separator,LeftCramp>    }[  1] _f_00080_          -> <Separator,LeftCramp>    StmExpr                  <Separator,RightCramp>   
+{                         ,<Syntax,EmptyCramp>      }[  0] _f_00080_          -> <Syntax,EmptyCramp>      
+{StmExpr                  ,<Separator,LeftCramp>    }[  0] StmExpr            -> _f_00083_                
+{                         ,<Separator,RightCramp>   }[  0] StmExpr            -> _f_00083_                
+{                         ,<Separator,LeftBracket>  }[  0] StmExpr            -> _f_00083_                
+{                         ,<Separator,Semicolon>    }[  0] StmExpr            -> _f_00083_                
+{                         ,<Integer>                }[  0] StmExpr            -> _f_00083_                
+{                         ,<Number>                 }[  0] StmExpr            -> _f_00083_                
+{                         ,<Ident>                  }[  0] StmExpr            -> _f_00083_                
+{                         ,<Reserv,For>             }[  0] StmExpr            -> _f_00083_                
+{                         ,<Reserv,While>           }[  0] StmExpr            -> _f_00083_                
+{                         ,<Reserv,If>              }[  0] StmExpr            -> _f_00083_                
+{                         ,<Reserv,Do>              }[  0] StmExpr            -> _f_00083_                
+{                         ,<Reserv,GoTo>            }[  0] StmExpr            -> _f_00083_                
+{                         ,<Reserv,Continue>        }[  0] StmExpr            -> _f_00083_                
+{                         ,<Reserv,Break>           }[  0] StmExpr            -> _f_00083_                
+{                         ,<Reserv,Return>          }[  0] StmExpr            -> _f_00083_                
+{                         ,<Priority,Term>          }[  0] StmExpr            -> _f_00083_                
+{                         ,<Priority,Unary>         }[  0] StmExpr            -> _f_00083_                
+{                         ,<Priority,IncDec>        }[  0] StmExpr            -> _f_00083_                
+{                         ,<Syntax,IdentFunc>       }[  0] StmExpr            -> _f_00083_                
+{                         ,<Syntax,IdentArr>        }[  0] StmExpr            -> _f_00083_                
+{                         ,<Syntax,DefArr>          }[  0] StmExpr            -> _f_00083_                
+{                         ,<Syntax,DefVar>          }[  0] StmExpr            -> _f_00083_                
+{                         ,<Syntax,Label>           }[  0] StmExpr            -> _f_00083_                
+{                         ,<Syntax,Cast>            }[  0] StmExpr            -> _f_00083_                
+{                         ,<Syntax,CastUnary>       }[  0] StmExpr            -> _f_00083_                
+{                         ,<Syntax,EmptyCramp>      }[  0] StmExpr            -> _f_00083_                
+{_f_00082_                ,<Separator,LeftCramp>    }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Separator,LeftBracket>  }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Separator,Semicolon>    }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Integer>                }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Number>                 }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Ident>                  }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Reserv,For>             }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Reserv,While>           }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Reserv,If>              }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Reserv,Do>              }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Reserv,GoTo>            }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Reserv,Continue>        }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Reserv,Break>           }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Reserv,Return>          }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Priority,Term>          }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Priority,Unary>         }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Priority,IncDec>        }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Syntax,IdentFunc>       }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Syntax,IdentArr>        }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Syntax,DefArr>          }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Syntax,DefVar>          }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Syntax,Label>           }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Syntax,Cast>            }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Syntax,CastUnary>       }[  0] _f_00082_          -> DefExpr                  
+{                         ,<Syntax,EmptyCramp>      }[  0] _f_00082_          -> DefExpr                  
+{_f_00083_                ,<Separator,LeftCramp>    }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Separator,RightCramp>   }[  1] _f_00083_          -> 
+{                         ,<Separator,LeftBracket>  }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Separator,Semicolon>    }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Integer>                }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Number>                 }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Ident>                  }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Reserv,For>             }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Reserv,While>           }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Reserv,If>              }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Reserv,Do>              }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Reserv,GoTo>            }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Reserv,Continue>        }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Reserv,Break>           }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Reserv,Return>          }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Priority,Term>          }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Priority,Unary>         }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Priority,IncDec>        }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Syntax,IdentFunc>       }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Syntax,IdentArr>        }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Syntax,DefArr>          }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Syntax,DefVar>          }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Syntax,Label>           }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Syntax,Cast>            }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Syntax,CastUnary>       }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{                         ,<Syntax,EmptyCramp>      }[  0] _f_00083_          -> _f_00082_                _f_00083_                
+{ExpressionExpression     ,<Separator,LeftBracket>  }[  0] ExpressionExpression-> Expressions              
+{                         ,<Integer>                }[  0] ExpressionExpression-> Expressions              
+{                         ,<Number>                 }[  0] ExpressionExpression-> Expressions              
+{                         ,<Ident>                  }[  0] ExpressionExpression-> Expressions              
+{                         ,<Priority,Term>          }[  0] ExpressionExpression-> Expressions              
+{                         ,<Priority,Unary>         }[  0] ExpressionExpression-> Expressions              
+{                         ,<Priority,IncDec>        }[  0] ExpressionExpression-> Expressions              
+{                         ,<Syntax,IdentFunc>       }[  0] ExpressionExpression-> Expressions              
+{                         ,<Syntax,IdentArr>        }[  0] ExpressionExpression-> Expressions              
+{                         ,<Syntax,Cast>            }[  0] ExpressionExpression-> Expressions              
+{                         ,<Syntax,CastUnary>       }[  0] ExpressionExpression-> Expressions              
+{ExpressionValue          ,<Separator,LeftBracket>  }[  0] ExpressionValue    -> Expressions              
+{                         ,<Integer>                }[  0] ExpressionValue    -> Expressions              
+{                         ,<Number>                 }[  0] ExpressionValue    -> Expressions              
+{                         ,<Ident>                  }[  0] ExpressionValue    -> Expressions              
+{                         ,<Priority,Term>          }[  0] ExpressionValue    -> Expressions              
+{                         ,<Priority,Unary>         }[  0] ExpressionValue    -> Expressions              
+{                         ,<Priority,IncDec>        }[  0] ExpressionValue    -> Expressions              
+{                         ,<Syntax,IdentFunc>       }[  0] ExpressionValue    -> Expressions              
+{                         ,<Syntax,IdentArr>        }[  0] ExpressionValue    -> Expressions              
+{                         ,<Syntax,Cast>            }[  0] ExpressionValue    -> Expressions              
+{                         ,<Syntax,CastUnary>       }[  0] ExpressionValue    -> Expressions              

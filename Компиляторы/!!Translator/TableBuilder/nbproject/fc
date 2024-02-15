@@ -1,0 +1,197 @@
+Comparing files Makefile-Debug.mk and MAKEFILE-RELEASE.MK
+***** Makefile-Debug.mk
+   16:  RANLIB=ranlib
+   17:  CC=clang
+   18:  CCC=clang++
+   19:  CXX=clang++
+   20:  FC=gfortran
+***** MAKEFILE-RELEASE.MK
+   16:  RANLIB=ranlib
+   17:  CC=gcc
+   18:  CCC=g++
+   19:  CXX=g++
+   20:  FC=gfortran
+*****
+
+***** Makefile-Debug.mk
+   23:  # Macros
+   24:  CND_PLATFORM=CLang-Windows
+   25:  CND_DLIB_EXT=dll
+   26:  CND_CONF=Debug
+   27:  CND_DISTDIR=dist
+***** MAKEFILE-RELEASE.MK
+   23:  # Macros
+   24:  CND_PLATFORM=MinGW-Windows
+   25:  CND_DLIB_EXT=dll
+   26:  CND_CONF=Release
+   27:  CND_DISTDIR=dist
+*****
+
+***** Makefile-Debug.mk
+   64:  # Link Libraries and Options
+   65:  LDLIBSOPTIONS=-L../TreeNodeCode/dist/Debug/MinGW-Windows -lTreeNodeCode
+   66:  
+***** MAKEFILE-RELEASE.MK
+   64:  # Link Libraries and Options
+   65:  LDLIBSOPTIONS=-L../TreeNodeCode/dist/Release/MinGW-Windows -lTreeNodeCode
+   66:  
+*****
+
+***** Makefile-Debug.mk
+   70:  
+   71:  ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tablebuilder.exe: ../TreeNodeCode/dist/Debug/MinGW-Windows/libTreeNodeCode.dll
+   72:  
+***** MAKEFILE-RELEASE.MK
+   70:  
+   71:  ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tablebuilder.exe: ../TreeNodeCode/dist/Release/MinGW-Windows/libTreeNodeCode.dll
+   72:  
+*****
+
+***** Makefile-Debug.mk
+   79:          ${RM} "$@.d"
+   80:          $(COMPILE.cc) -g -I../Translator -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/C99_Lexer.o ../Translator/C99_Lexer.
+   81:  cpp
+   82:  
+***** MAKEFILE-RELEASE.MK
+   79:          ${RM} "$@.d"
+   80:          $(COMPILE.cc) -g -I../Translator -I../Generated -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/C99_Lexer.o ../Transl
+   81:  ator/C99_Lexer.cpp
+   82:  
+*****
+
+***** Makefile-Debug.mk
+   85:          ${RM} "$@.d"
+   86:          $(COMPILE.cc) -g -I../Translator -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/FSyntax.o ../Translator/FSyntax.cpp
+   87:  
+***** MAKEFILE-RELEASE.MK
+   85:          ${RM} "$@.d"
+   86:          $(COMPILE.cc) -g -I../Translator -I../Generated -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/FSyntax.o ../Translat
+   87:  or/FSyntax.cpp
+   88:  
+*****
+
+***** Makefile-Debug.mk
+   90:          ${RM} "$@.d"
+   91:          $(COMPILE.cc) -g -I../Translator -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/FYaccParse.o ../Translator/FYaccPars
+   92:  e.cpp
+   93:  
+***** MAKEFILE-RELEASE.MK
+   91:          ${RM} "$@.d"
+   92:          $(COMPILE.cc) -g -I../Translator -I../Generated -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/FYaccParse.o ../Trans
+   93:  lator/FYaccParse.cpp
+   94:  
+*****
+
+***** Makefile-Debug.mk
+   96:          ${RM} "$@.d"
+   97:          $(COMPILE.cc) -g -I../Translator -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/GBuilder.o ../Translator/GBuilder.cp
+   98:  p
+   99:  
+***** MAKEFILE-RELEASE.MK
+   97:          ${RM} "$@.d"
+   98:          $(COMPILE.cc) -g -I../Translator -I../Generated -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/GBuilder.o ../Transla
+   99:  tor/GBuilder.cpp
+  100:  
+*****
+
+***** Makefile-Debug.mk
+  102:          ${RM} "$@.d"
+  103:          $(COMPILE.cc) -g -I../Translator -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/GSyntax.o ../Translator/GSyntax.cpp
+  104:  
+***** MAKEFILE-RELEASE.MK
+  103:          ${RM} "$@.d"
+  104:          $(COMPILE.cc) -g -I../Translator -I../Generated -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/GSyntax.o ../Translat
+  105:  or/GSyntax.cpp
+  106:  
+*****
+
+***** Makefile-Debug.mk
+  107:          ${RM} "$@.d"
+  108:          $(COMPILE.cc) -g -I../Translator -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/GrammarStock.o ../Translator/Grammar
+  109:  Stock.cpp
+  110:  
+***** MAKEFILE-RELEASE.MK
+  109:          ${RM} "$@.d"
+  110:          $(COMPILE.cc) -g -I../Translator -I../Generated -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/GrammarStock.o ../Tra
+  111:  nslator/GrammarStock.cpp
+  112:  
+*****
+
+***** Makefile-Debug.mk
+  113:          ${RM} "$@.d"
+  114:          $(COMPILE.cc) -g -I../Translator -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/KBuilder.o ../Translator/KBuilder.cp
+  115:  p
+  116:  
+***** MAKEFILE-RELEASE.MK
+  115:          ${RM} "$@.d"
+  116:          $(COMPILE.cc) -g -I../Translator -I../Generated -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/KBuilder.o ../Transla
+  117:  tor/KBuilder.cpp
+  118:  
+*****
+
+***** Makefile-Debug.mk
+  119:          ${RM} "$@.d"
+  120:          $(COMPILE.cc) -g -I../Translator -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/LRBuilder.o ../Translator/LRBuilder.
+  121:  cpp
+  122:  
+***** MAKEFILE-RELEASE.MK
+  121:          ${RM} "$@.d"
+  122:          $(COMPILE.cc) -g -I../Translator -I../Generated -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/LRBuilder.o ../Transl
+  123:  ator/LRBuilder.cpp
+  124:  
+*****
+
+***** Makefile-Debug.mk
+  125:          ${RM} "$@.d"
+  126:          $(COMPILE.cc) -g -I../Translator -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/Parse.o ../Translator/Parse.cpp
+  127:  
+***** MAKEFILE-RELEASE.MK
+  127:          ${RM} "$@.d"
+  128:          $(COMPILE.cc) -g -I../Translator -I../Generated -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/Parse.o ../Translator
+  129:  /Parse.cpp
+  130:  
+*****
+
+***** Makefile-Debug.mk
+  130:          ${RM} "$@.d"
+  131:          $(COMPILE.cc) -g -I../Translator -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/RSyntax.o ../Translator/RSyntax.cpp
+  132:  
+***** MAKEFILE-RELEASE.MK
+  133:          ${RM} "$@.d"
+  134:          $(COMPILE.cc) -g -I../Translator -I../Generated -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/RSyntax.o ../Translat
+  135:  or/RSyntax.cpp
+  136:  
+*****
+
+***** Makefile-Debug.mk
+  135:          ${RM} "$@.d"
+  136:          $(COMPILE.cc) -g -I../Translator -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/TableBuilder.o ../Translator/TableBu
+  137:  ilder.cpp
+  138:  
+***** MAKEFILE-RELEASE.MK
+  139:          ${RM} "$@.d"
+  140:          $(COMPILE.cc) -g -I../Translator -I../Generated -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/a3a2c9e9/TableBuilder.o ../Tra
+  141:  nslator/TableBuilder.cpp
+  142:  
+*****
+
+***** Makefile-Debug.mk
+  140:  .build-subprojects:
+  141:          cd ../TreeNodeCode && ${MAKE}  -f Makefile CONF=Debug
+  142:  
+***** MAKEFILE-RELEASE.MK
+  144:  .build-subprojects:
+  145:          cd ../TreeNodeCode && ${MAKE}  -f Makefile CONF=Release
+  146:  
+*****
+
+***** Makefile-Debug.mk
+  150:  .clean-subprojects:
+  151:          cd ../TreeNodeCode && ${MAKE}  -f Makefile CONF=Debug clean
+  152:  
+***** MAKEFILE-RELEASE.MK
+  154:  .clean-subprojects:
+  155:          cd ../TreeNodeCode && ${MAKE}  -f Makefile CONF=Release clean
+  156:  
+*****
+

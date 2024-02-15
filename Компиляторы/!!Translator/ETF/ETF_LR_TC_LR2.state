@@ -1,0 +1,582 @@
+
+--- Situations --- <32> --- <484> ---
+
+--- (00000) --- <27> ---
+
+(0,Empty                    )[  0] S_                 ->  . E
+(0, { <Priority,Term>          <Integer>                 } )[  0] E                  ->  . E   <Priority,Term>   T
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] E                  ->  . E   <Priority,Term>   T
+(0,Empty                    )[  0] E                  ->  . E   <Priority,Term>   T
+(0, { <Priority,Term>          <Integer>                 } )[  1] E                  ->  . T
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] E                  ->  . T
+(0,Empty                    )[  1] E                  ->  . T
+(0, { <Priority,Factor>        <Integer>                 } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Term>          <Integer>                 } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0,Empty                    )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Factor>        <Integer>                 } )[  1] T                  ->  . F
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] T                  ->  . F
+(0, { <Priority,Term>          <Integer>                 } )[  1] T                  ->  . F
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] T                  ->  . F
+(0,Empty                    )[  1] T                  ->  . F
+(0, { <Priority,Factor>        <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0,Empty                    )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0,Empty                    )[  1] F                  ->  . <Integer>
+
+--- (00001) --- <4> ---
+
+(1,Empty                    )[  0] S_                 -> E . 
+(1, { <Priority,Term>          <Integer>                 } )[  0] E                  -> E . <Priority,Term>   T
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] E                  -> E . <Priority,Term>   T
+(1,Empty                    )[  0] E                  -> E . <Priority,Term>   T
+
+--- (00002) --- <8> ---
+
+(1, { <Priority,Term>          <Integer>                 } )[  1] E                  -> T . 
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] E                  -> T . 
+(1,Empty                    )[  1] E                  -> T . 
+(1, { <Priority,Factor>        <Integer>                 } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Term>          <Integer>                 } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  -> T . <Priority,Factor>   F
+(1,Empty                    )[  0] T                  -> T . <Priority,Factor>   F
+
+--- (00003) --- <5> ---
+
+(1, { <Priority,Factor>        <Integer>                 } )[  1] T                  -> F . 
+(1, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] T                  -> F . 
+(1, { <Priority,Term>          <Integer>                 } )[  1] T                  -> F . 
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] T                  -> F . 
+(1,Empty                    )[  1] T                  -> F . 
+
+--- (00004) --- <43> ---
+
+(1, { <Priority,Factor>        <Integer>                 } )[  0] F                  -> '(' . E   ')'
+(1, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  -> '(' . E   ')'
+(1, { <Priority,Term>          <Integer>                 } )[  0] F                  -> '(' . E   ')'
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  -> '(' . E   ')'
+(1,Empty                    )[  0] F                  -> '(' . E   ')'
+(0,<Separator,RightBracket> )[  0] E                  ->  . E   <Priority,Term>   T
+(0, { <Priority,Term>          <Integer>                 } )[  0] E                  ->  . E   <Priority,Term>   T
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] E                  ->  . E   <Priority,Term>   T
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  0] E                  ->  . E   <Priority,Term>   T
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  0] E                  ->  . E   <Priority,Term>   T
+(0,<Separator,RightBracket> )[  1] E                  ->  . T
+(0, { <Priority,Term>          <Integer>                 } )[  1] E                  ->  . T
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] E                  ->  . T
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  1] E                  ->  . T
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  1] E                  ->  . T
+(0,<Separator,RightBracket> )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Factor>        <Integer>                 } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Term>          <Integer>                 } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0,<Separator,RightBracket> )[  1] T                  ->  . F
+(0, { <Priority,Factor>        <Integer>                 } )[  1] T                  ->  . F
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] T                  ->  . F
+(0, { <Priority,Term>          <Integer>                 } )[  1] T                  ->  . F
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] T                  ->  . F
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  1] T                  ->  . F
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  1] T                  ->  . F
+(0,<Separator,RightBracket> )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  0] F                  ->  . '('   E   ')'
+(0,<Separator,RightBracket> )[  1] F                  ->  . <Integer>
+(0, { <Priority,Factor>        <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  1] F                  ->  . <Integer>
+
+--- (00005) --- <5> ---
+
+(1, { <Priority,Factor>        <Integer>                 } )[  1] F                  -> <Integer> . 
+(1, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] F                  -> <Integer> . 
+(1, { <Priority,Term>          <Integer>                 } )[  1] F                  -> <Integer> . 
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] F                  -> <Integer> . 
+(1,Empty                    )[  1] F                  -> <Integer> . 
+
+--- (00006) --- <23> ---
+
+(2, { <Priority,Term>          <Integer>                 } )[  0] E                  -> E   <Priority,Term> . T
+(2, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] E                  -> E   <Priority,Term> . T
+(2,Empty                    )[  0] E                  -> E   <Priority,Term> . T
+(0, { <Priority,Factor>        <Integer>                 } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Term>          <Integer>                 } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0,Empty                    )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Factor>        <Integer>                 } )[  1] T                  ->  . F
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] T                  ->  . F
+(0, { <Priority,Term>          <Integer>                 } )[  1] T                  ->  . F
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] T                  ->  . F
+(0,Empty                    )[  1] T                  ->  . F
+(0, { <Priority,Factor>        <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0,Empty                    )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0,Empty                    )[  1] F                  ->  . <Integer>
+
+--- (00007) --- <15> ---
+
+(2, { <Priority,Factor>        <Integer>                 } )[  0] T                  -> T   <Priority,Factor> . F
+(2, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  -> T   <Priority,Factor> . F
+(2, { <Priority,Term>          <Integer>                 } )[  0] T                  -> T   <Priority,Factor> . F
+(2, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  -> T   <Priority,Factor> . F
+(2,Empty                    )[  0] T                  -> T   <Priority,Factor> . F
+(0, { <Priority,Factor>        <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0,Empty                    )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0,Empty                    )[  1] F                  ->  . <Integer>
+
+--- (00008) --- <10> ---
+
+(2, { <Priority,Factor>        <Integer>                 } )[  0] F                  -> '('   E . ')'
+(2, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  -> '('   E . ')'
+(2, { <Priority,Term>          <Integer>                 } )[  0] F                  -> '('   E . ')'
+(2, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  -> '('   E . ')'
+(2,Empty                    )[  0] F                  -> '('   E . ')'
+(1,<Separator,RightBracket> )[  0] E                  -> E . <Priority,Term>   T
+(1, { <Priority,Term>          <Integer>                 } )[  0] E                  -> E . <Priority,Term>   T
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] E                  -> E . <Priority,Term>   T
+(1, { <Separator,RightBracket> <Priority,Factor>         } )[  0] E                  -> E . <Priority,Term>   T
+(1, { <Separator,RightBracket> <Priority,Term>           } )[  0] E                  -> E . <Priority,Term>   T
+
+--- (00009) --- <12> ---
+
+(1,<Separator,RightBracket> )[  1] E                  -> T . 
+(1, { <Priority,Term>          <Integer>                 } )[  1] E                  -> T . 
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] E                  -> T . 
+(1, { <Separator,RightBracket> <Priority,Factor>         } )[  1] E                  -> T . 
+(1, { <Separator,RightBracket> <Priority,Term>           } )[  1] E                  -> T . 
+(1,<Separator,RightBracket> )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Factor>        <Integer>                 } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Term>          <Integer>                 } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Separator,RightBracket> <Priority,Factor>         } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Separator,RightBracket> <Priority,Term>           } )[  0] T                  -> T . <Priority,Factor>   F
+
+--- (00010) --- <7> ---
+
+(1,<Separator,RightBracket> )[  1] T                  -> F . 
+(1, { <Priority,Factor>        <Integer>                 } )[  1] T                  -> F . 
+(1, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] T                  -> F . 
+(1, { <Priority,Term>          <Integer>                 } )[  1] T                  -> F . 
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] T                  -> F . 
+(1, { <Separator,RightBracket> <Priority,Factor>         } )[  1] T                  -> F . 
+(1, { <Separator,RightBracket> <Priority,Term>           } )[  1] T                  -> F . 
+
+--- (00011) --- <45> ---
+
+(1,<Separator,RightBracket> )[  0] F                  -> '(' . E   ')'
+(1, { <Priority,Factor>        <Integer>                 } )[  0] F                  -> '(' . E   ')'
+(1, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  -> '(' . E   ')'
+(1, { <Priority,Term>          <Integer>                 } )[  0] F                  -> '(' . E   ')'
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  -> '(' . E   ')'
+(1, { <Separator,RightBracket> <Priority,Factor>         } )[  0] F                  -> '(' . E   ')'
+(1, { <Separator,RightBracket> <Priority,Term>           } )[  0] F                  -> '(' . E   ')'
+(0, { <Priority,Term>          <Integer>                 } )[  0] E                  ->  . E   <Priority,Term>   T
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] E                  ->  . E   <Priority,Term>   T
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  0] E                  ->  . E   <Priority,Term>   T
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] E                  ->  . E   <Priority,Term>   T
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  0] E                  ->  . E   <Priority,Term>   T
+(0, { <Priority,Term>          <Integer>                 } )[  1] E                  ->  . T
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] E                  ->  . T
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  1] E                  ->  . T
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  1] E                  ->  . T
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  1] E                  ->  . T
+(0, { <Priority,Factor>        <Integer>                 } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Term>          <Integer>                 } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Factor>        <Integer>                 } )[  1] T                  ->  . F
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] T                  ->  . F
+(0, { <Priority,Term>          <Integer>                 } )[  1] T                  ->  . F
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] T                  ->  . F
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  1] T                  ->  . F
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  1] T                  ->  . F
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  1] T                  ->  . F
+(0, { <Priority,Factor>        <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  1] F                  ->  . <Integer>
+
+--- (00012) --- <7> ---
+
+(1,<Separator,RightBracket> )[  1] F                  -> <Integer> . 
+(1, { <Priority,Factor>        <Integer>                 } )[  1] F                  -> <Integer> . 
+(1, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] F                  -> <Integer> . 
+(1, { <Priority,Term>          <Integer>                 } )[  1] F                  -> <Integer> . 
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] F                  -> <Integer> . 
+(1, { <Separator,RightBracket> <Priority,Factor>         } )[  1] F                  -> <Integer> . 
+(1, { <Separator,RightBracket> <Priority,Term>           } )[  1] F                  -> <Integer> . 
+
+--- (00013) --- <8> ---
+
+(3, { <Priority,Term>          <Integer>                 } )[  0] E                  -> E   <Priority,Term>   T . 
+(3, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] E                  -> E   <Priority,Term>   T . 
+(3,Empty                    )[  0] E                  -> E   <Priority,Term>   T . 
+(1, { <Priority,Factor>        <Integer>                 } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Term>          <Integer>                 } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  -> T . <Priority,Factor>   F
+(1,Empty                    )[  0] T                  -> T . <Priority,Factor>   F
+
+--- (00014) --- <5> ---
+
+(3, { <Priority,Factor>        <Integer>                 } )[  0] T                  -> T   <Priority,Factor>   F . 
+(3, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  -> T   <Priority,Factor>   F . 
+(3, { <Priority,Term>          <Integer>                 } )[  0] T                  -> T   <Priority,Factor>   F . 
+(3, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  -> T   <Priority,Factor>   F . 
+(3,Empty                    )[  0] T                  -> T   <Priority,Factor>   F . 
+
+--- (00015) --- <5> ---
+
+(3, { <Priority,Factor>        <Integer>                 } )[  0] F                  -> '('   E   ')' . 
+(3, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  -> '('   E   ')' . 
+(3, { <Priority,Term>          <Integer>                 } )[  0] F                  -> '('   E   ')' . 
+(3, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  -> '('   E   ')' . 
+(3,Empty                    )[  0] F                  -> '('   E   ')' . 
+
+--- (00016) --- <33> ---
+
+(2,<Separator,RightBracket> )[  0] E                  -> E   <Priority,Term> . T
+(2, { <Priority,Term>          <Integer>                 } )[  0] E                  -> E   <Priority,Term> . T
+(2, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] E                  -> E   <Priority,Term> . T
+(2, { <Separator,RightBracket> <Priority,Factor>         } )[  0] E                  -> E   <Priority,Term> . T
+(2, { <Separator,RightBracket> <Priority,Term>           } )[  0] E                  -> E   <Priority,Term> . T
+(0,<Separator,RightBracket> )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Factor>        <Integer>                 } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Term>          <Integer>                 } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0,<Separator,RightBracket> )[  1] T                  ->  . F
+(0, { <Priority,Factor>        <Integer>                 } )[  1] T                  ->  . F
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] T                  ->  . F
+(0, { <Priority,Term>          <Integer>                 } )[  1] T                  ->  . F
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] T                  ->  . F
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  1] T                  ->  . F
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  1] T                  ->  . F
+(0,<Separator,RightBracket> )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  0] F                  ->  . '('   E   ')'
+(0,<Separator,RightBracket> )[  1] F                  ->  . <Integer>
+(0, { <Priority,Factor>        <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  1] F                  ->  . <Integer>
+
+--- (00017) --- <21> ---
+
+(2,<Separator,RightBracket> )[  0] T                  -> T   <Priority,Factor> . F
+(2, { <Priority,Factor>        <Integer>                 } )[  0] T                  -> T   <Priority,Factor> . F
+(2, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  -> T   <Priority,Factor> . F
+(2, { <Priority,Term>          <Integer>                 } )[  0] T                  -> T   <Priority,Factor> . F
+(2, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  -> T   <Priority,Factor> . F
+(2, { <Separator,RightBracket> <Priority,Factor>         } )[  0] T                  -> T   <Priority,Factor> . F
+(2, { <Separator,RightBracket> <Priority,Term>           } )[  0] T                  -> T   <Priority,Factor> . F
+(0,<Separator,RightBracket> )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  0] F                  ->  . '('   E   ')'
+(0,<Separator,RightBracket> )[  1] F                  ->  . <Integer>
+(0, { <Priority,Factor>        <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  1] F                  ->  . <Integer>
+
+--- (00018) --- <12> ---
+
+(2,<Separator,RightBracket> )[  0] F                  -> '('   E . ')'
+(2, { <Priority,Factor>        <Integer>                 } )[  0] F                  -> '('   E . ')'
+(2, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  -> '('   E . ')'
+(2, { <Priority,Term>          <Integer>                 } )[  0] F                  -> '('   E . ')'
+(2, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  -> '('   E . ')'
+(2, { <Separator,RightBracket> <Priority,Factor>         } )[  0] F                  -> '('   E . ')'
+(2, { <Separator,RightBracket> <Priority,Term>           } )[  0] F                  -> '('   E . ')'
+(1, { <Priority,Term>          <Integer>                 } )[  0] E                  -> E . <Priority,Term>   T
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] E                  -> E . <Priority,Term>   T
+(1, { <Separator,RightBracket> <Priority,Factor>         } )[  0] E                  -> E . <Priority,Term>   T
+(1, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] E                  -> E . <Priority,Term>   T
+(1, { <Separator,RightBracket> <Priority,Term>           } )[  0] E                  -> E . <Priority,Term>   T
+
+--- (00019) --- <12> ---
+
+(1, { <Priority,Term>          <Integer>                 } )[  1] E                  -> T . 
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] E                  -> T . 
+(1, { <Separator,RightBracket> <Priority,Factor>         } )[  1] E                  -> T . 
+(1, { <Separator,RightBracket> <Separator,RightBracket>  } )[  1] E                  -> T . 
+(1, { <Separator,RightBracket> <Priority,Term>           } )[  1] E                  -> T . 
+(1, { <Priority,Factor>        <Integer>                 } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Term>          <Integer>                 } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Separator,RightBracket> <Priority,Factor>         } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Separator,RightBracket> <Priority,Term>           } )[  0] T                  -> T . <Priority,Factor>   F
+
+--- (00020) --- <7> ---
+
+(1, { <Priority,Factor>        <Integer>                 } )[  1] T                  -> F . 
+(1, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] T                  -> F . 
+(1, { <Priority,Term>          <Integer>                 } )[  1] T                  -> F . 
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] T                  -> F . 
+(1, { <Separator,RightBracket> <Priority,Factor>         } )[  1] T                  -> F . 
+(1, { <Separator,RightBracket> <Separator,RightBracket>  } )[  1] T                  -> F . 
+(1, { <Separator,RightBracket> <Priority,Term>           } )[  1] T                  -> F . 
+
+--- (00021) --- <45> ---
+
+(1, { <Priority,Factor>        <Integer>                 } )[  0] F                  -> '(' . E   ')'
+(1, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  -> '(' . E   ')'
+(1, { <Priority,Term>          <Integer>                 } )[  0] F                  -> '(' . E   ')'
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  -> '(' . E   ')'
+(1, { <Separator,RightBracket> <Priority,Factor>         } )[  0] F                  -> '(' . E   ')'
+(1, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] F                  -> '(' . E   ')'
+(1, { <Separator,RightBracket> <Priority,Term>           } )[  0] F                  -> '(' . E   ')'
+(0, { <Priority,Term>          <Integer>                 } )[  0] E                  ->  . E   <Priority,Term>   T
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] E                  ->  . E   <Priority,Term>   T
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  0] E                  ->  . E   <Priority,Term>   T
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] E                  ->  . E   <Priority,Term>   T
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  0] E                  ->  . E   <Priority,Term>   T
+(0, { <Priority,Term>          <Integer>                 } )[  1] E                  ->  . T
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] E                  ->  . T
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  1] E                  ->  . T
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  1] E                  ->  . T
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  1] E                  ->  . T
+(0, { <Priority,Factor>        <Integer>                 } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Term>          <Integer>                 } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Factor>        <Integer>                 } )[  1] T                  ->  . F
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] T                  ->  . F
+(0, { <Priority,Term>          <Integer>                 } )[  1] T                  ->  . F
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] T                  ->  . F
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  1] T                  ->  . F
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  1] T                  ->  . F
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  1] T                  ->  . F
+(0, { <Priority,Factor>        <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  1] F                  ->  . <Integer>
+
+--- (00022) --- <7> ---
+
+(1, { <Priority,Factor>        <Integer>                 } )[  1] F                  -> <Integer> . 
+(1, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] F                  -> <Integer> . 
+(1, { <Priority,Term>          <Integer>                 } )[  1] F                  -> <Integer> . 
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] F                  -> <Integer> . 
+(1, { <Separator,RightBracket> <Priority,Factor>         } )[  1] F                  -> <Integer> . 
+(1, { <Separator,RightBracket> <Separator,RightBracket>  } )[  1] F                  -> <Integer> . 
+(1, { <Separator,RightBracket> <Priority,Term>           } )[  1] F                  -> <Integer> . 
+
+--- (00023) --- <12> ---
+
+(3,<Separator,RightBracket> )[  0] E                  -> E   <Priority,Term>   T . 
+(3, { <Priority,Term>          <Integer>                 } )[  0] E                  -> E   <Priority,Term>   T . 
+(3, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] E                  -> E   <Priority,Term>   T . 
+(3, { <Separator,RightBracket> <Priority,Factor>         } )[  0] E                  -> E   <Priority,Term>   T . 
+(3, { <Separator,RightBracket> <Priority,Term>           } )[  0] E                  -> E   <Priority,Term>   T . 
+(1,<Separator,RightBracket> )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Factor>        <Integer>                 } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Term>          <Integer>                 } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Separator,RightBracket> <Priority,Factor>         } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Separator,RightBracket> <Priority,Term>           } )[  0] T                  -> T . <Priority,Factor>   F
+
+--- (00024) --- <7> ---
+
+(3,<Separator,RightBracket> )[  0] T                  -> T   <Priority,Factor>   F . 
+(3, { <Priority,Factor>        <Integer>                 } )[  0] T                  -> T   <Priority,Factor>   F . 
+(3, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  -> T   <Priority,Factor>   F . 
+(3, { <Priority,Term>          <Integer>                 } )[  0] T                  -> T   <Priority,Factor>   F . 
+(3, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  -> T   <Priority,Factor>   F . 
+(3, { <Separator,RightBracket> <Priority,Factor>         } )[  0] T                  -> T   <Priority,Factor>   F . 
+(3, { <Separator,RightBracket> <Priority,Term>           } )[  0] T                  -> T   <Priority,Factor>   F . 
+
+--- (00025) --- <7> ---
+
+(3,<Separator,RightBracket> )[  0] F                  -> '('   E   ')' . 
+(3, { <Priority,Factor>        <Integer>                 } )[  0] F                  -> '('   E   ')' . 
+(3, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  -> '('   E   ')' . 
+(3, { <Priority,Term>          <Integer>                 } )[  0] F                  -> '('   E   ')' . 
+(3, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  -> '('   E   ')' . 
+(3, { <Separator,RightBracket> <Priority,Factor>         } )[  0] F                  -> '('   E   ')' . 
+(3, { <Separator,RightBracket> <Priority,Term>           } )[  0] F                  -> '('   E   ')' . 
+
+--- (00026) --- <33> ---
+
+(2, { <Priority,Term>          <Integer>                 } )[  0] E                  -> E   <Priority,Term> . T
+(2, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] E                  -> E   <Priority,Term> . T
+(2, { <Separator,RightBracket> <Priority,Factor>         } )[  0] E                  -> E   <Priority,Term> . T
+(2, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] E                  -> E   <Priority,Term> . T
+(2, { <Separator,RightBracket> <Priority,Term>           } )[  0] E                  -> E   <Priority,Term> . T
+(0, { <Priority,Factor>        <Integer>                 } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Term>          <Integer>                 } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  0] T                  ->  . T   <Priority,Factor>   F
+(0, { <Priority,Factor>        <Integer>                 } )[  1] T                  ->  . F
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] T                  ->  . F
+(0, { <Priority,Term>          <Integer>                 } )[  1] T                  ->  . F
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] T                  ->  . F
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  1] T                  ->  . F
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  1] T                  ->  . F
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  1] T                  ->  . F
+(0, { <Priority,Factor>        <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  1] F                  ->  . <Integer>
+
+--- (00027) --- <21> ---
+
+(2, { <Priority,Factor>        <Integer>                 } )[  0] T                  -> T   <Priority,Factor> . F
+(2, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  -> T   <Priority,Factor> . F
+(2, { <Priority,Term>          <Integer>                 } )[  0] T                  -> T   <Priority,Factor> . F
+(2, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  -> T   <Priority,Factor> . F
+(2, { <Separator,RightBracket> <Priority,Factor>         } )[  0] T                  -> T   <Priority,Factor> . F
+(2, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] T                  -> T   <Priority,Factor> . F
+(2, { <Separator,RightBracket> <Priority,Term>           } )[  0] T                  -> T   <Priority,Factor> . F
+(0, { <Priority,Factor>        <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Integer>                 } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] F                  ->  . '('   E   ')'
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  0] F                  ->  . '('   E   ')'
+(0, { <Priority,Factor>        <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Factor>        <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Integer>                 } )[  1] F                  ->  . <Integer>
+(0, { <Priority,Term>          <Separator,LeftBracket>   } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Priority,Factor>         } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Separator,RightBracket>  } )[  1] F                  ->  . <Integer>
+(0, { <Separator,RightBracket> <Priority,Term>           } )[  1] F                  ->  . <Integer>
+
+--- (00028) --- <12> ---
+
+(2, { <Priority,Factor>        <Integer>                 } )[  0] F                  -> '('   E . ')'
+(2, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  -> '('   E . ')'
+(2, { <Priority,Term>          <Integer>                 } )[  0] F                  -> '('   E . ')'
+(2, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  -> '('   E . ')'
+(2, { <Separator,RightBracket> <Priority,Factor>         } )[  0] F                  -> '('   E . ')'
+(2, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] F                  -> '('   E . ')'
+(2, { <Separator,RightBracket> <Priority,Term>           } )[  0] F                  -> '('   E . ')'
+(1, { <Priority,Term>          <Integer>                 } )[  0] E                  -> E . <Priority,Term>   T
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] E                  -> E . <Priority,Term>   T
+(1, { <Separator,RightBracket> <Priority,Factor>         } )[  0] E                  -> E . <Priority,Term>   T
+(1, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] E                  -> E . <Priority,Term>   T
+(1, { <Separator,RightBracket> <Priority,Term>           } )[  0] E                  -> E . <Priority,Term>   T
+
+--- (00029) --- <12> ---
+
+(3, { <Priority,Term>          <Integer>                 } )[  0] E                  -> E   <Priority,Term>   T . 
+(3, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] E                  -> E   <Priority,Term>   T . 
+(3, { <Separator,RightBracket> <Priority,Factor>         } )[  0] E                  -> E   <Priority,Term>   T . 
+(3, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] E                  -> E   <Priority,Term>   T . 
+(3, { <Separator,RightBracket> <Priority,Term>           } )[  0] E                  -> E   <Priority,Term>   T . 
+(1, { <Priority,Factor>        <Integer>                 } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Term>          <Integer>                 } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Separator,RightBracket> <Priority,Factor>         } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] T                  -> T . <Priority,Factor>   F
+(1, { <Separator,RightBracket> <Priority,Term>           } )[  0] T                  -> T . <Priority,Factor>   F
+
+--- (00030) --- <7> ---
+
+(3, { <Priority,Factor>        <Integer>                 } )[  0] T                  -> T   <Priority,Factor>   F . 
+(3, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] T                  -> T   <Priority,Factor>   F . 
+(3, { <Priority,Term>          <Integer>                 } )[  0] T                  -> T   <Priority,Factor>   F . 
+(3, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] T                  -> T   <Priority,Factor>   F . 
+(3, { <Separator,RightBracket> <Priority,Factor>         } )[  0] T                  -> T   <Priority,Factor>   F . 
+(3, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] T                  -> T   <Priority,Factor>   F . 
+(3, { <Separator,RightBracket> <Priority,Term>           } )[  0] T                  -> T   <Priority,Factor>   F . 
+
+--- (00031) --- <7> ---
+
+(3, { <Priority,Factor>        <Integer>                 } )[  0] F                  -> '('   E   ')' . 
+(3, { <Priority,Factor>        <Separator,LeftBracket>   } )[  0] F                  -> '('   E   ')' . 
+(3, { <Priority,Term>          <Integer>                 } )[  0] F                  -> '('   E   ')' . 
+(3, { <Priority,Term>          <Separator,LeftBracket>   } )[  0] F                  -> '('   E   ')' . 
+(3, { <Separator,RightBracket> <Priority,Factor>         } )[  0] F                  -> '('   E   ')' . 
+(3, { <Separator,RightBracket> <Separator,RightBracket>  } )[  0] F                  -> '('   E   ')' . 
+(3, { <Separator,RightBracket> <Priority,Term>           } )[  0] F                  -> '('   E   ')' . 

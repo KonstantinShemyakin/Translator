@@ -1,0 +1,219 @@
+Входом являются оператры присваивания вида
+
+A[i] = b[j+ c[k]]
+
+Протокол работы
+
+Лексема A
+Лексема [
+Лексема i
+Лексема i
+Лексема ]
+Лексема ]
+Лексема ]
+Лексема =
+Лексема b
+Лексема b
+Лексема [
+Лексема j
+Лексема j
+Лексема +
+Лексема +
+Лексема c
+Лексема c
+Лексема [
+Лексема k
+Лексема k
+Лексема ]
+Лексема ]
+Лексема ]
+Лексема ]
+Лексема ]
+Лексема ?
+Enter op==
+Left
+Enter op=+
+Left
+Enter op=+
+Left
+Enter op=%
+Left
+leaf #A
+Found patNumber:1 minCost:2
+After left op=+
+Enter op=%
+Left
+leaf #A$$
+Found patNumber:1 minCost:2
+After right op=+
+Found patNumber:4 minCost:5
+After left op=+
+Enter op=@
+Left
+Enter op=+
+Left
+Enter op=%
+Left
+leaf #i
+Found patNumber:1 minCost:2
+After left op=+
+Enter op=%
+Left
+leaf #i$$
+Found patNumber:1 minCost:2
+After right op=+
+Found patNumber:4 minCost:5
+After left op=@
+After right op=@
+Found patNumber:3 minCost:6
+After right op=+
+Found patNumber:6 minCost:11
+After left op==
+Enter op=@
+Left
+Enter op=+
+Left
+Enter op=+
+Left
+Enter op=%
+Left
+leaf #b
+Found patNumber:1 minCost:2
+After left op=+
+Enter op=%
+Left
+leaf #b$$
+Found patNumber:1 minCost:2
+After right op=+
+Found patNumber:4 minCost:5
+After left op=+
+Enter op=+
+Left
+Enter op=@
+Left
+Enter op=+
+Left
+Enter op=%
+Left
+leaf #j
+Found patNumber:1 minCost:2
+After left op=+
+Enter op=%
+Left
+leaf #j$$
+Found patNumber:1 minCost:2
+After right op=+
+Found patNumber:4 minCost:5
+After left op=@
+After right op=@
+Found patNumber:3 minCost:6
+After left op=+
+Enter op=@
+Left
+Enter op=+
+Left
+Enter op=+
+Left
+Enter op=%
+Left
+leaf #c
+Found patNumber:1 minCost:2
+After left op=+
+Enter op=%
+Left
+leaf #c$$
+Found patNumber:1 minCost:2
+After right op=+
+Found patNumber:4 minCost:5
+After left op=+
+Enter op=@
+Left
+Enter op=+
+Left
+Enter op=%
+Left
+leaf #k
+Found patNumber:1 minCost:2
+After left op=+
+Enter op=%
+Left
+leaf #k$$
+Found patNumber:1 minCost:2
+After right op=+
+Found patNumber:4 minCost:5
+After left op=@
+After right op=@
+Found patNumber:3 minCost:6
+After right op=+
+Found patNumber:6 minCost:11
+After left op=@
+After right op=@
+Found patNumber:7 minCost:13
+After right op=+
+Found patNumber:5 minCost:21
+After right op=+
+Found patNumber:5 minCost:28
+After left op=@
+After right op=@
+Found patNumber:7 minCost:30
+After right op==
+Found patNumber:8 minCost:43
+op==
+Left
+op=+
+Left
+op=+
+Left
+op=%
+Left
+leaf #A
+op=%
+Left
+leaf #i
+op=@
+Left
+op=+
+Left
+op=+
+Left
+op=%
+Left
+leaf #b
+op=+
+Left
+op=@
+Left
+op=%
+Left
+leaf #j
+op=@
+Left
+op=+
+Left
+op=+
+Left
+op=%
+Left
+leaf #c
+op=%
+Left
+leaf #k
+
+Результат - ассемблерный код, пишется в файл AutoLang\CodOpt\Out.
+1: MOVE #A,R1
+4: ADD #A$$,R1
+1: MOVE #i,R2
+6: ADD #i$$(R2),R1
+1: MOVE #b,R3
+4: ADD #b$$,R3
+1: MOVE #j,R4
+3: MOVE #j$$(R4),R4
+1: MOVE #c,R5
+4: ADD #c$$,R5
+1: MOVE #k,R6
+6: ADD #k$$(R6),R5
+7: MOVE (R5),R5
+5: ADD R4,R5
+5: ADD R3,R4
+7: MOVE (R3),R3
+8: MOVE R3,(R1) 

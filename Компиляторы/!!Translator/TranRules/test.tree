@@ -1,0 +1,8 @@
+
+TNodeStatements type = Void      , 
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=002, column=005, len=04, value=0, text=r011
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeUserGoTo   type = Unknown   ,   group=Ident     , type=00          , line=002, column=019, len=03, text=L15 (2,0)
+      TNodeUserLabel  type = Void      ,   group=Syntax    , type=Label       , line=002, column=024, len=03, value=1, text=L15        go_to=00 (2,0)
+      TNodeNull       type = Unknown   ,  number=2, size=0 number=1, size=0 number=3, size=0

@@ -1,0 +1,174 @@
+S_                       -> <Separator,Semicolon>    <Syntax,DefFunc>         <Syntax,DefArr>          <Syntax,DefVar>          Empty                    
+Program                  -> <Separator,Semicolon>    <Syntax,DefFunc>         <Syntax,DefArr>          <Syntax,DefVar>          Empty                    
+DefParInit               -> <Oper,Assign>            Empty                    
+DefParVar                -> <Syntax,DefVar>          
+DefParArr                -> <Syntax,DefArr>          
+DefPar                   -> <Syntax,DefArr>          <Syntax,DefVar>          
+DefParItem               -> <Syntax,DefArr>          <Syntax,DefVar>          
+DefParList               -> <Separator,Comma>        Empty                    
+DefParams                -> <Syntax,DefArr>          <Syntax,DefVar>          
+BodyFunc                 -> <Separator,LeftCramp>    <Separator,Semicolon>    <Syntax,EmptyCramp>      
+DefFunc_                 -> <Separator,LeftBracket>  <Syntax,EmptyBracket>    
+DefFunc                  -> <Syntax,DefFunc>         
+AInitialList             -> <Separator,Comma>        Empty                    
+AInitial                 -> <Separator,LeftCramp>    <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        
+                            <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+Initializer              -> <Separator,LeftCramp>    <Syntax,EmptyCramp>      
+AInitItem                -> <Separator,LeftCramp>    <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        
+                            <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+DefAInit                 -> <Oper,Assign>            Empty                    
+DRanges                  -> <Separator,LeftScrape>   Empty                    
+DefArrD1A                -> <Separator,LeftScrape>   <Syntax,EmptyScrape>     
+DefArrDA                 -> <Separator,LeftScrape>   <Syntax,EmptyScrape>     
+DefArr                   -> <Syntax,IdentArr>        
+DefVarAssign             -> <Oper,Assign>            
+DefVarInit               -> <Oper,Assign>            Empty                    
+DefVar                   -> <Ident>                  
+DefIAV                   -> <Ident>                  <Syntax,IdentArr>        
+DefItem                  -> <Ident>                  <Priority,And>           <Syntax,IdentArr>        
+DefType                  -> <Syntax,DefArr>          <Syntax,DefVar>          
+DefineList               -> <Separator,Comma>        Empty                    
+Define                   -> <Syntax,DefArr>          <Syntax,DefVar>          
+ConditionDef             -> <Ident>                  <Priority,And>           
+Condition                -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,DefVar>          
+                            <Syntax,Cast>            <Syntax,CastUnary>       
+ExprList                 -> <Separator,Comma>        Empty                    
+Expressions              -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+PriorAssign              -> <Priority,Assign>        
+AssignList               -> <Priority,Assign>        Empty                    
+Assign                   -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+QuestionList             -> <Priority,Question>      Empty                    
+Question                 -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+OrOr                     -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+OrOr_                    -> <Priority,OrOr>          Empty                    
+AndAnd                   -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+AndAnd_                  -> <Priority,AndAnd>        Empty                    
+Or                       -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+Or_                      -> <Priority,Or>            Empty                    
+XOr                      -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+XOr_                     -> <Priority,XOr>           Empty                    
+And                      -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+And_                     -> <Priority,And>           Empty                    
+Equ                      -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+Equ_                     -> <Priority,Equ>           Empty                    
+Compare                  -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+Compare_                 -> <Priority,Compare>       Empty                    
+Shift                    -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+Shift_                   -> <Priority,Shift>         Empty                    
+Term                     -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+Term_                    -> <Priority,Term>          Empty                    
+Factor                   -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+Factor_                  -> <Priority,Factor>        Empty                    
+UnaryIncDec              -> <Priority,IncDec>        Empty                    
+Unary                    -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+Primary                  -> <Separator,LeftBracket>  
+PrimaryExpr              -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+RangesList               -> <Separator,LeftScrape>   Empty                    
+Ranges                   -> <Separator,LeftScrape>   Empty                    
+CallParams               -> <Separator,LeftBracket>  <Syntax,EmptyBracket>    
+CompaundStmnt            -> <Separator,LeftCramp>    <Syntax,EmptyCramp>      
+IfStmnt_                 -> <Reserv,Else>            Empty                    
+IfStmnt                  -> <Reserv,If>              
+ForPrefix                -> <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        
+                            <Syntax,DefArr>          <Syntax,DefVar>          <Syntax,Cast>            <Syntax,CastUnary>       
+ForCondition             -> <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        
+                            <Syntax,DefVar>          <Syntax,Cast>            <Syntax,CastUnary>       
+ForPosfix                -> <Separator,LeftBracket>  <Separator,RightBracket> <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        
+                            <Syntax,Cast>            <Syntax,CastUnary>       
+ForStmnt                 -> <Reserv,For>             
+DoStmnt                  -> <Reserv,Do>              
+WhileStmnt               -> <Reserv,While>           
+GoToStmnt                -> <Reserv,GoTo>            
+BreakStmnt               -> <Reserv,Break>           
+ContinueStmnt            -> <Reserv,Continue>        
+ReturnVal                -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       Empty                    
+ReturnStmnt              -> <Reserv,Return>          
+Statement                -> <Separator,LeftCramp>    <Reserv,For>             <Reserv,While>           <Reserv,If>              <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Syntax,Label>           
+                            <Syntax,EmptyCramp>      
+DefineSemi               -> <Syntax,DefArr>          <Syntax,DefVar>          
+ExprSemi                 -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+DefExpr                  -> <Separator,LeftCramp>    <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              <Reserv,Do>              
+                            <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,DefArr>          
+                            <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+StmExprList              -> <Separator,LeftCramp>    <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              <Reserv,Do>              
+                            <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,DefArr>          
+                            <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      Empty                    
+StmExpr                  -> <Separator,LeftCramp>    <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              <Reserv,Do>              
+                            <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,DefArr>          
+                            <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      Empty                    
+DefFAV                   -> <Separator,Semicolon>    <Syntax,DefFunc>         <Syntax,DefArr>          <Syntax,DefVar>          
+DefinesList              -> <Separator,Semicolon>    <Syntax,DefFunc>         <Syntax,DefArr>          <Syntax,DefVar>          Empty                    
+Defines                  -> <Separator,Semicolon>    <Syntax,DefFunc>         <Syntax,DefArr>          <Syntax,DefVar>          Empty                    
+ExpressionExpression     -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+ExpressionCondition      -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+ExpressionNone           -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+ExpressionValue          -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+ExpressionValueList      -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+<Oper,Assign>            -> <Oper,Assign>            
+<Separator,LeftCramp>    -> <Separator,LeftCramp>    
+<Separator,RightCramp>   -> <Separator,RightCramp>   
+<Separator,LeftBracket>  -> <Separator,LeftBracket>  
+<Separator,RightBracket> -> <Separator,RightBracket> 
+<Separator,LeftScrape>   -> <Separator,LeftScrape>   
+<Separator,RightScrape>  -> <Separator,RightScrape>  
+<Separator,Comma>        -> <Separator,Comma>        
+<Separator,Semicolon>    -> <Separator,Semicolon>    
+<Separator,Colon>        -> <Separator,Colon>        
+<Integer>                -> <Integer>                
+<Number>                 -> <Number>                 
+<Ident>                  -> <Ident>                  
+<Reserv,For>             -> <Reserv,For>             
+<Reserv,While>           -> <Reserv,While>           
+<Reserv,If>              -> <Reserv,If>              
+<Reserv,Else>            -> <Reserv,Else>            
+<Reserv,Do>              -> <Reserv,Do>              
+<Reserv,GoTo>            -> <Reserv,GoTo>            
+<Reserv,Continue>        -> <Reserv,Continue>        
+<Reserv,Break>           -> <Reserv,Break>           
+<Reserv,Return>          -> <Reserv,Return>          
+<Priority,Assign>        -> <Priority,Assign>        
+<Priority,Question>      -> <Priority,Question>      
+<Priority,OrOr>          -> <Priority,OrOr>          
+<Priority,AndAnd>        -> <Priority,AndAnd>        
+<Priority,Or>            -> <Priority,Or>            
+<Priority,XOr>           -> <Priority,XOr>           
+<Priority,And>           -> <Priority,And>           
+<Priority,Equ>           -> <Priority,Equ>           
+<Priority,Compare>       -> <Priority,Compare>       
+<Priority,Shift>         -> <Priority,Shift>         
+<Priority,Term>          -> <Priority,Term>          
+<Priority,Factor>        -> <Priority,Factor>        
+<Priority,Unary>         -> <Priority,Unary>         
+<Priority,IncDec>        -> <Priority,IncDec>        
+<Syntax,IdentFunc>       -> <Syntax,IdentFunc>       
+<Syntax,IdentArr>        -> <Syntax,IdentArr>        
+<Syntax,DefFunc>         -> <Syntax,DefFunc>         
+<Syntax,DefArr>          -> <Syntax,DefArr>          
+<Syntax,DefVar>          -> <Syntax,DefVar>          
+<Syntax,Label>           -> <Syntax,Label>           
+<Syntax,Cast>            -> <Syntax,Cast>            
+<Syntax,CastUnary>       -> <Syntax,CastUnary>       
+<Syntax,EmptyCramp>      -> <Syntax,EmptyCramp>      
+<Syntax,EmptyBracket>    -> <Syntax,EmptyBracket>    
+<Syntax,EmptyScrape>     -> <Syntax,EmptyScrape>     

@@ -1,0 +1,167 @@
+[  0] S_                 -> <Separator,Semicolon>    <Reserv,Void>            <Reserv,Define>          <Reserv,Const>           <Reserv,Static>          Empty                    
+[  0] _f_00001_          -> <Reserv,Const>           
+[  1] _f_00001_          -> <Reserv,Define>          
+[  2] _f_00001_          -> <Reserv,Const>           
+[  3] _f_00001_          -> <Reserv,Define>          
+[  0] _f_00002_          -> <Oper,Assign>            
+[  1] _f_00002_          -> Empty                    
+[  0] DefParItem         -> <Reserv,Define>          <Reserv,Const>           
+[  1] DefParItem         -> <Reserv,Define>          <Reserv,Const>           
+[  0] _f_00004_          -> <Separator,Comma>        
+[  1] _f_00004_          -> Empty                    
+[  0] BodyFunc           -> <Separator,Semicolon>    
+[  1] BodyFunc           -> <Separator,LeftCramp>    
+[  2] BodyFunc           -> <Separator,LeftCramp>    
+[  0] StmExpr            -> <Separator,LeftCramp>    <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              <Reserv,Do>              
+                            <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Reserv,Switch>          <Reserv,Define>          <Reserv,Const>           <Reserv,Static>          <Priority,Term>          <Priority,Unary>         
+                            <Priority,IncDec>        
+[  1] StmExpr            -> Empty                    
+[  0] DefFuncType        -> <Reserv,Static>          
+[  1] DefFuncType        -> <Reserv,Static>          
+[  2] DefFuncType        -> <Reserv,Const>           
+[  3] DefFuncType        -> <Reserv,Define>          
+[  4] DefFuncType        -> <Reserv,Static>          
+[  5] DefFuncType        -> <Reserv,Void>            
+[  0] DefFunc_           -> <Separator,RightBracket> 
+[  1] DefFunc_           -> <Reserv,Define>          <Reserv,Const>           
+[  0] AInitItem          -> <Separator,LeftCramp>    
+[  1] AInitItem          -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] _f_00010_          -> <Separator,Comma>        
+[  1] _f_00010_          -> Empty                    
+[  0] Initializer        -> <Separator,LeftCramp>    
+[  1] Initializer        -> <Separator,LeftCramp>    
+[  0] DefAInit           -> <Oper,Assign>            
+[  1] DefAInit           -> Empty                    
+[  0] DRanges_           -> <Separator,LeftScrape>   
+[  1] DRanges_           -> Empty                    
+[  0] DefArrD1A          -> <Separator,RightScrape>  
+[  1] DefArrD1A          -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] DefVarInit         -> <Oper,Assign>            
+[  1] DefVarInit         -> Empty                    
+[  0] DefItem            -> <Oper,And>               
+[  1] DefItem            -> <Oper,And>               
+[  2] DefItem            -> <Ident>                  
+[  3] DefItem            -> <Ident>                  
+[  0] DefType            -> <Reserv,Static>          
+[  1] DefType            -> <Reserv,Static>          
+[  2] DefType            -> <Reserv,Const>           
+[  3] DefType            -> <Reserv,Define>          
+[  0] _f_00018_          -> <Separator,Comma>        
+[  1] _f_00018_          -> Empty                    
+[  0] Condition          -> <Reserv,Define>          <Reserv,Const>           <Reserv,Static>          
+[  1] Condition          -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] Condition_         -> <Oper,And>               
+[  1] Condition_         -> <Ident>                  
+[  0] Expressions_       -> <Separator,Comma>        
+[  1] Expressions_       -> Empty                    
+[  0] _f_00022_          -> <Priority,Assign>        
+[  1] _f_00022_          -> Empty                    
+[  0] _f_00023_          -> <Priority,Question>      
+[  1] _f_00023_          -> Empty                    
+[  0] AndAnd_            -> <Priority,OrOr>          
+[  1] AndAnd_            -> Empty                    
+[  0] Or_                -> <Priority,AndAnd>        
+[  1] Or_                -> Empty                    
+[  0] XOr_               -> <Priority,Or>            
+[  1] XOr_               -> Empty                    
+[  0] And_               -> <Priority,XOr>           
+[  1] And_               -> Empty                    
+[  0] Equ_               -> <Priority,And>           
+[  1] Equ_               -> Empty                    
+[  0] Compare_           -> <Priority,Equ>           
+[  1] Compare_           -> Empty                    
+[  0] Shift_             -> <Priority,Compare>       
+[  1] Shift_             -> Empty                    
+[  0] Term_              -> <Priority,Shift>         
+[  1] Term_              -> Empty                    
+[  0] Factor_            -> <Priority,Term>          
+[  1] Factor_            -> Empty                    
+[  0] Unary_             -> <Priority,Factor>        
+[  1] Unary_             -> Empty                    
+[  0] UnaryIncDec        -> <Priority,IncDec>        
+[  1] UnaryIncDec        -> Empty                    
+[  0] _f_00035_          -> <Reserv,Const>           
+[  1] _f_00035_          -> <Reserv,Define>          
+[  0] _f_00036_          -> <Priority,Unary>         
+[  1] _f_00036_          -> <Priority,Term>          
+[  2] _f_00036_          -> <Priority,IncDec>        
+[  3] _f_00036_          -> <Separator,LeftBracket>  
+[  4] _f_00036_          -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          
+[  0] PrimaryExpr        -> <Ident>                  
+[  1] PrimaryExpr        -> <Ident>                  
+[  2] PrimaryExpr        -> <Integer>                
+[  3] PrimaryExpr        -> <Number>                 
+[  4] PrimaryExpr        -> <Ident>                  
+[  5] PrimaryExpr        -> <Separator,LeftBracket>  
+[  6] PrimaryExpr        -> <Reserv,Define>          
+[  0] Ranges_            -> <Separator,LeftScrape>   
+[  1] Ranges_            -> Empty                    
+[  0] _f_00039_          -> <Separator,RightBracket> 
+[  1] _f_00039_          -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] CompaundStmnt      -> <Separator,LeftCramp>    
+[  1] CompaundStmnt      -> <Separator,LeftCramp>    
+[  0] IfStmnt_           -> <Reserv,Else>            
+[  1] IfStmnt_           -> Empty                    
+[  0] DefExpr            -> <Separator,Semicolon>    
+[  1] DefExpr            -> <Ident>                  
+[  2] DefExpr            -> <Reserv,Define>          <Reserv,Const>           <Reserv,Static>          
+[  3] DefExpr            -> <Separator,LeftCramp>    <Reserv,For>             <Reserv,While>           <Reserv,If>              <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Reserv,Switch>          
+[  4] DefExpr            -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] _For               -> <Separator,Semicolon>    
+[  1] _For               -> <Reserv,Define>          <Reserv,Const>           <Reserv,Static>          
+[  2] _For               -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] _f_00044_          -> <Separator,Semicolon>    
+[  1] _f_00044_          -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Reserv,Const>           <Reserv,Static>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] _f_00045_          -> <Separator,RightBracket> 
+[  1] _f_00045_          -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] _f_00046_          -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  1] _f_00046_          -> Empty                    
+[  0] Statement          -> <Reserv,If>              
+[  1] Statement          -> <Reserv,Do>              
+[  2] Statement          -> <Reserv,While>           
+[  3] Statement          -> <Reserv,For>             
+[  4] Statement          -> <Reserv,Switch>          
+[  5] Statement          -> <Reserv,GoTo>            
+[  6] Statement          -> <Reserv,Break>           
+[  7] Statement          -> <Reserv,Continue>        
+[  8] Statement          -> <Reserv,Return>          
+[  9] Statement          -> <Separator,LeftCramp>    
+[  0] DefFAV             -> <Separator,Semicolon>    
+[  1] DefFAV             -> <Reserv,Void>            <Reserv,Define>          <Reserv,Const>           <Reserv,Static>          
+[  2] DefFAV             -> <Reserv,Define>          <Reserv,Const>           <Reserv,Static>          
+[  0] _f_00049_          -> <Separator,Semicolon>    <Reserv,Void>            <Reserv,Define>          <Reserv,Const>           <Reserv,Static>          
+[  1] _f_00049_          -> Empty                    
+[  0] Program            -> <Separator,Semicolon>    <Reserv,Void>            <Reserv,Define>          <Reserv,Const>           <Reserv,Static>          Empty                    
+[  0] Defines            -> <Separator,Semicolon>    <Reserv,Void>            <Reserv,Define>          <Reserv,Const>           <Reserv,Static>          Empty                    
+[  0] DefParType         -> <Reserv,Define>          <Reserv,Const>           
+[  0] DefPar             -> <Oper,Assign>            Empty                    
+[  0] Assign             -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] DefArrDA           -> <Separator,LeftBracket>  <Separator,RightScrape>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] DefParams          -> <Reserv,Define>          <Reserv,Const>           
+[  0] AInitial           -> <Separator,LeftCramp>    <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] DRanges            -> <Separator,LeftScrape>   Empty                    
+[  0] DRangeExpr         -> <Separator,LeftScrape>   
+[  0] DefArr             -> <Ident>                  
+[  0] DefVar             -> <Ident>                  
+[  0] Define             -> <Reserv,Define>          <Reserv,Const>           <Reserv,Static>          
+[  0] ExpressionCondition-> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] Expressions        -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] Question           -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] OrOr               -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] AndAnd             -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] Or                 -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] XOr                -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] And                -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] Equ                -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] Compare            -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] Shift              -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] Term               -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] Factor             -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] Unary              -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] Ranges             -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] CallParams         -> <Separator,LeftBracket>  <Separator,RightBracket> <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] Primary            -> <Separator,LeftBracket>  
+[  0] ExpressionNone     -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] ExpressionValue    -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] ExpressionValueList-> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        
+[  0] ExpressionExpression-> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Reserv,Define>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        

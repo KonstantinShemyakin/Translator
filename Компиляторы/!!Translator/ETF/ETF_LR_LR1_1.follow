@@ -1,0 +1,4 @@
+S_                       -> Eof                      
+E                        -> <Separator,RightBracket> <Priority,Term>          Eof                      
+T                        -> <Separator,RightBracket> <Priority,Term>          <Priority,Factor>        Eof                      
+F                        -> <Separator,RightBracket> <Priority,Term>          <Priority,Factor>        Eof                      

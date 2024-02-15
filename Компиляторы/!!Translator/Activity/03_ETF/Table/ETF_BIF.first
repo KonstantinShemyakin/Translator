@@ -1,0 +1,18 @@
+S_                       -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  
+Assign                   -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  
+_f_00002_                -> <Priority,Assign>        Empty                    
+E                        -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  
+_f_00004_                -> <Priority,Term>          
+_f_00005_                -> <Priority,Term>          Empty                    
+T                        -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  
+_f_00007_                -> <Priority,Factor>        
+_f_00008_                -> <Priority,Factor>        Empty                    
+F                        -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  
+<Separator,LeftBracket>  -> <Separator,LeftBracket>  
+<Separator,RightBracket> -> <Separator,RightBracket> 
+<Integer>                -> <Integer>                
+<Number>                 -> <Number>                 
+<Ident>                  -> <Ident>                  
+<Priority,Assign>        -> <Priority,Assign>        
+<Priority,Term>          -> <Priority,Term>          
+<Priority,Factor>        -> <Priority,Factor>        

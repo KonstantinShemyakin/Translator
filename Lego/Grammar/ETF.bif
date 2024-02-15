@@ -1,0 +1,7 @@
+Z        ::=   E
+
+E        ::=   T  [  {  +  |  -  }  T  ]...
+
+T        ::=   F  [  {  *  |  /  }  F  ]...
+
+F        ::=   {  (  E  )  |  Integer  |  Number  |  Ident  }

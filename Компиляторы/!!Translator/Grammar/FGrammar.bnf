@@ -1,0 +1,100 @@
+
+S_                       
+                         ::= Grammar                  
+                         
+Grammar                  
+                         ::= Enum_part                   Token_part                  Rules                       %%                          { NODE(Formula,(0,1,2,3),5); }                    
+                         |   Enum_part                   Token_part                  Rules                       { NODE(Formula,(0,1,2,3),5); }                    
+                         
+Enum_part                
+                         ::= %{                          Enums                       %}                          { NODE(Enums,(0,2),7); } 
+                         |   
+                         
+Enums                    
+                         ::= Enums                       Enum                        { NODE(Enums,(0,1,2),6); }                        
+                         |   Enum                        { NODE(Enums,(0,1),5); } 
+                         
+Enum                     
+                         ::= enum                        '{'                         enum_list                   '}'                         ;                           { NODE(Enums,(0,3),4); } 
+                         |   enum                        Ident_lexeme                '{'                         enum_list                   '}'                         ;                           { NODE(Enums,(2,4),4); } 
+                         |   enum                        class                       Ident_lexeme                '{'                         enum_list                   '}'                         ;                           { NODE(Enums,(3,5),4); } 
+                         
+enum_list                
+                         ::= enum_list                   ,                           enum_item                   { NODE(Enums,(0,1,3),3); }                        
+                         |   enum_item                   { NODE(Enums,(0,1),2); } 
+                         
+enum_item                
+                         ::= Ident_lexeme                =                           Integer_lexeme              { NODE(Enums,(1,3),1); } 
+                         |   Ident_lexeme                { NODE(Enums,(1)); }     
+                         
+Token_part               
+                         ::= Tokens                      %%                       
+                         |   
+                         
+Tokens                   
+                         ::= Tokens                      Token                       { NODE(Tokens,(0,1,2),2); }                       
+                         |   Token                       { NODE(Tokens,(0,1),1); }
+                         
+Token                    
+                         ::= %token                      Ident_lexeme                Integer_lexeme              { NODE(Tokens,(2,3)); }  
+                         
+Rules                    
+                         ::= Rules                       Formula                     { NODE(Formula,(0,1,2),1); }                      
+                         |   Formula                     { NODE(Formula,(0,1)); } 
+                         
+Formula                  
+                         ::= Ident_lexeme                :                           Produces                    ;                           { NODE(Formula,(1,3),2); }                        
+                         
+Produces                 
+                         ::= Produces                    '|'                         Produce                     { NODE(Formula,(0,1,3),1); }                      
+                         |   Produce                     { NODE(Formula,(0,1)); } 
+                         
+Produce                  
+                         ::= Produce                     produce_item                { NODE(Produce,(0,1,2),5); }                      
+                         |   { NODE(Produce,(0),4); } 
+                         
+produce_item             
+                         ::= Maker_Make               
+                         |   Maker_Node               
+                         |   Maker_Turn               
+                         |   Ident_lexeme                { NODE(Item,(1)); }      
+                         |   Integer_lexeme              { NODE(Item,(1),1); }    
+                         |   <                           lexeme_item                 >                           { NODE(Item,(2),2); }    
+                         |   <                           lexeme_item                 ,                           lexeme_item                 >                           { NODE(Item,(2,4),3); }  
+                         
+lexeme_item              
+                         ::= Ident_lexeme             
+                         |   Integer_lexeme           
+                         
+Maker_Make               
+                         ::= '{'                         Ident_Maker                 (                           Ident_lexeme                ,                           int_body                    )                           ;                           '}'                         { NODE(Maker,(2,4,6)); } 
+                         |   '{'                         Ident_Maker                 (                           Ident_lexeme                )                           ;                           '}'                         { NODE(Maker,(2,4)); }   
+                         
+Ident_Maker              
+                         ::= ALL                      
+                         |   MAKE                     
+                         |   CODE                     
+                         |   TREE                     
+                         |   YACC                     
+                         
+Maker_Node               
+                         ::= '{'                         NODE                        (                           Ident_lexeme                ,                           node_body                   ,                           int_body                    )                           ;                           '}'                         { NODE(Maker,(4,6,8),1); }                        
+                         |   '{'                         NODE                        (                           Ident_lexeme                ,                           node_body                   )                           ;                           '}'                         { NODE(Maker,(4,6),1); } 
+                         
+node_body                
+                         ::= (                           int_body                    )                           { NODE(Maker,(2),2); }   
+                         |   (                           int_body                    ,                           int_body                    )                           { NODE(Maker,(2,4),2); } 
+                         |   (                           int_body                    ,                           int_body                    ,                           int_body                    )                           { NODE(Maker,(2,4,6),2); }                        
+                         |   (                           int_body                    ,                           int_body                    ,                           int_body                    ,                           int_body                    )                           { NODE(Maker,(2,4,6,8),2); }                      
+                         |   (                           int_body                    ,                           int_body                    ,                           int_body                    ,                           int_body                    ,                           int_body                    )                           { NODE(Maker,(2,4,6,8,10),2); }                   
+                         
+int_body                 
+                         ::= Integer_lexeme              { NODE(Maker,(1),3); }   
+                         |   Ident_lexeme                { NODE(Maker,(1),3); }   
+                         |   Ident_lexeme                ::                          Ident_lexeme                { NODE(Maker,(1,3),3); } 
+                         |   -                           Integer_lexeme              { NODE(Maker,(2),4); }   
+                         
+Maker_Turn               
+                         ::= '{'                         TURN                        (                           Ident_lexeme                ,                           Ident_lexeme                ,                           int_body                    )                           ;                           '}'                         { NODE(Maker,(4,6,8),5); }                        
+                         |   '{'                         TURN                        (                           Ident_lexeme                ,                           Ident_lexeme                )                           ;                           '}'                         { NODE(Maker,(4,6),5); } 
+                         

@@ -1,0 +1,22 @@
+
+S_                       
+           : S                        
+           ;
+S                        
+           : M
+           | U
+           ;  
+
+B                        
+           : <Reserv,If>    <Separator,LeftBracket>     <Integer>     <Separator,RightBracket>                        
+           ;
+
+M                        
+           : B              M      <Reserv,Else>      M                        
+           | <Ident>        
+           ;
+     
+U                        
+           : B              S
+           | B              M      <Reserv,Else>      U                                                
+           ;

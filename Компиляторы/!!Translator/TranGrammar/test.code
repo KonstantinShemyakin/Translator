@@ -1,0 +1,10 @@
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = PushInt   , param = 006, mode = 000, type = CInt      
+command = PushInt   , param = 007, mode = 000, type = CInt      
+command = Oper      , oper  = Multi         , mode = 000, type = CInt      
+command = Oper      , oper  = Add           , mode = 000, type = CInt      
+
+Integer        0 3
+Integer        1 6
+Integer        2 7
+

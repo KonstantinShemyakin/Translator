@@ -1,0 +1,12 @@
+xcopy *.cpp     /S /Y E:\Translator
+xcopy *.h       /S /Y E:\Translator
+xcopy *.sln     /S /Y E:\Translator
+xcopy *.vcxproj /S /Y E:\Translator
+xcopy *.c       /S /Y E:\Translator
+xcopy *.l       /S /Y E:\Translator
+xcopy *.y       /S /Y E:\Translator
+xcopy *.doc     /S /Y E:\Translator
+xcopy *.pdf     /S /Y E:\Translator
+xcopy *.bat     /S /Y E:\Translator
+xcopy Translator\rule_def_*.txt /S /Y E:\Translator\Translator\rule_def_*.txt
+xcopy Release\*.exe /S /Y E:\Translator\Release\*.exe

@@ -1,0 +1,11 @@
+
+TNodeStatements type = Void      , 
+  TNodeBinary     type = CInt      ,   group=Oper      , type=Sub         , line=000, column=016, len=01, value=35, text=-
+    TNodeBinary     type = CInt      ,   group=Oper      , type=Add         , line=000, column=002, len=01, value=33, text=+
+      TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=000, column=000, len=01, value=3, text=3
+      TNodeBinary     type = CInt      ,   group=Oper      , type=Multi       , line=000, column=006, len=01, value=29, text=*
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=000, column=004, len=01, value=6, text=6
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Add         , line=000, column=011, len=01, value=33, text=+
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=000, column=009, len=01, value=7, text=7
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=000, column=013, len=01, value=8, text=8
+    TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=000, column=018, len=01, value=5, text=5 number=0, size=0

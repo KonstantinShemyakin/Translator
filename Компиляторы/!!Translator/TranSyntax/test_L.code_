@@ -1,0 +1,21 @@
+TNodeDefFunc    line=002, column=005, len=04, text=f001
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 012, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 000, type = CInt      
+command = Pop       , param = 001, mode = 000, type = Void      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = GoTo      , label = 010, If   , mode = 001, type = Unknown   
+command = GoTo      , label = 012, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 010, mode = 001, type = Void      
+command = GoTo      , label = 013, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 012, mode = 001, type = Void      
+command = Label     , param = 013, mode = 001, type = Void      
+command = Pop       , param = 001, mode = 000, type = Void      
+command = Exit      , param = 000, mode = 000, type = Void      
+
+
+Integer        0 12
+

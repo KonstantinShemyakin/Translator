@@ -1,0 +1,6 @@
+
+--- Lexemes --- <5> ---
+
+<Oper,Add>               <Oper,Multi>             
+<Separator,LeftBracket>  <Separator,RightBracket> 
+<Ident>                  

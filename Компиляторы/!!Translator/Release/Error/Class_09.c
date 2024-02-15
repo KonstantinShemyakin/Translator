@@ -1,0 +1,4 @@
+// Logical
+void f()
+{
+}

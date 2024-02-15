@@ -1,0 +1,13 @@
+
+TNodeStatements type = Void      , 
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefType     , line=001, column=000, len=03, value=65555, text=int
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=001, column=004, len=01, text=i
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=001, column=006, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=001, column=004, len=01, text=i
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=001, column=004, len=01, text=i
+          TNodeExpressions type = CInt      , 
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=001, column=008, len=02, value=12, text=12 part=256  part=16 
+      alloc=Global , offset=00 number=0, size=1

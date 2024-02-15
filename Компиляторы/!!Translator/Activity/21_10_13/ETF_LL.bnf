@@ -1,0 +1,22 @@
+
+S_                       
+                         ::= E                        
+                         
+E                        
+                         ::= T                           E_                       
+                         
+E_                       
+                         ::= Priority_Term               T                           E_                       
+                         |   
+                         
+T                        
+                         ::= F                           T_                       
+                         
+T_                       
+                         ::= Priority_Factor             F                           T_                       
+                         |   
+                         
+F                        
+                         ::= (                           E                           )                        
+                         |   Ident             
+                         

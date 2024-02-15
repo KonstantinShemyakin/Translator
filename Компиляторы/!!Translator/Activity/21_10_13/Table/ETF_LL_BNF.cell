@@ -1,0 +1,15 @@
+{S_                       ,<Separator,LeftBracket>  }[  0] S_                 -> E                        
+{                         ,<Ident>                  }[  0] S_                 -> E                        
+{E                        ,<Separator,LeftBracket>  }[  0] E                  -> T                        E_                       
+{                         ,<Ident>                  }[  0] E                  -> T                        E_                       
+{E_                       ,<Separator,RightBracket> }[  1] E_                 -> 
+{                         ,<Priority,Term>          }[  0] E_                 -> <Priority,Term>          T                        E_                       
+{                         ,Eof                      }[  1] E_                 -> 
+{T                        ,<Separator,LeftBracket>  }[  0] T                  -> F                        T_                       
+{                         ,<Ident>                  }[  0] T                  -> F                        T_                       
+{T_                       ,<Separator,RightBracket> }[  1] T_                 -> 
+{                         ,<Priority,Term>          }[  1] T_                 -> 
+{                         ,<Priority,Factor>        }[  0] T_                 -> <Priority,Factor>        F                        T_                       
+{                         ,Eof                      }[  1] T_                 -> 
+{F                        ,<Separator,LeftBracket>  }[  0] F                  -> <Separator,LeftBracket>  E                        <Separator,RightBracket> 
+{                         ,<Ident>                  }[  1] F                  -> <Ident>                  

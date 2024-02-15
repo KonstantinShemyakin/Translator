@@ -1,0 +1,722 @@
+TNodeDefFunc    line=000, column=005, len=04, text=f011
+Cast       Oper           0 Local          0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper           1 Oper           0 Integer        0                 , oper  = Assign        , type = CInt      
+Cast       Oper           2 Local          1                                  , cast  = I___IR_       , type = RInt      
+Cast       Oper           3 Local          0                                  , cast  = I___IC_       , type = CInt      
+Binary     Oper           4 Oper           2 Oper           3                 , oper  = Assign        , type = CInt      
+None      
+Cast       Oper           6 Local          0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper           7 Oper           6 Integer        1                 , oper  = Assign        , type = CInt      
+None      
+None      
+None      
+None      
+
+Label          0 refer =     0     5
+Label          1 refer =     0     9
+Label          2 refer =     0    11
+
+TNodeDefFunc    line=001, column=005, len=04, text=f000
+Label      Label          0                                                   
+Label      Label          1                                                   
+Goto       Command        2 Label          0                                  , goto  = GoTo          
+None      
+Goto       Command        4 Label          1                                  , goto  = GoTo          
+None      
+Label      Label          4                                                   
+Label      Label          5                                                   
+Goto       Command        8 Label          4                                  , goto  = GoTo          
+None      
+Cast       Oper          10 Local          0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper          11 Oper          10 Integer        2                 , oper  = AddAssign     , type = CInt      
+Goto       Command       12 Label          5                                  , goto  = GoTo          
+None      
+Label      Label          8                                                   
+Label      Label          9                                                   
+Cast       Oper          16 Local          0                                  , cast  = I___IR_       , type = RInt      
+Unary      Oper          17 Oper          16                                  , oper  = PostInc       , type = CInt      
+Goto       Command       18 Label          8                                  , goto  = GoTo          
+None      
+Goto       Command       20 Label          9                                  , goto  = GoTo          
+None      
+Label      Label         12                                                   
+Label      Label         13                                                   
+Cast       Oper          24 Local          0                                  , cast  = I___IR_       , type = RInt      
+Unary      Oper          25 Oper          24                                  , oper  = PostInc       , type = CInt      
+Goto       Command       26 Label         12                                  , goto  = GoTo          
+None      
+Cast       Oper          28 Local          0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper          29 Oper          28 Integer        2                 , oper  = AddAssign     , type = CInt      
+Goto       Command       30 Label         13                                  , goto  = GoTo          
+None      
+Label      Label         16                                                   
+Cast       Oper          33 Local          0                                  , cast  = I___IC_       , type = CInt      
+Binary     Oper          34 Oper          33 Integer        3                 , oper  = LT            , type = CInt      
+Goto       Command       35 Label         18 Oper          34                 , goto  = If            
+Goto       Command       36 Label         19                                  , goto  = GoTo          
+Label      Label         17                                                   
+Goto       Command       38 Label         16                                  , goto  = GoTo          
+Label      Label         18                                                   
+Goto       Command       40 Label         17                                  , goto  = GoTo          
+Label      Label         19                                                   
+Label      Label         20                                                   
+Cast       Oper          43 Local          0                                  , cast  = I___IC_       , type = CInt      
+Binary     Oper          44 Oper          43 Integer        3                 , oper  = LT            , type = CInt      
+Goto       Command       45 Label         22 Oper          44                 , goto  = If            
+Goto       Command       46 Label         23                                  , goto  = GoTo          
+Label      Label         21                                                   
+Goto       Command       48 Label         20                                  , goto  = GoTo          
+Label      Label         22                                                   
+Cast       Oper          50 Local          0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper          51 Oper          50 Integer        2                 , oper  = AddAssign     , type = CInt      
+Goto       Command       52 Label         21                                  , goto  = GoTo          
+Label      Label         23                                                   
+Label      Label         24                                                   
+Cast       Oper          55 Local          0                                  , cast  = I___IC_       , type = CInt      
+Binary     Oper          56 Oper          55 Integer        3                 , oper  = LT            , type = CInt      
+Goto       Command       57 Label         26 Oper          56                 , goto  = If            
+Goto       Command       58 Label         27                                  , goto  = GoTo          
+Label      Label         25                                                   
+Cast       Oper          60 Local          0                                  , cast  = I___IR_       , type = RInt      
+Unary      Oper          61 Oper          60                                  , oper  = PostInc       , type = CInt      
+Goto       Command       62 Label         24                                  , goto  = GoTo          
+Label      Label         26                                                   
+Goto       Command       64 Label         25                                  , goto  = GoTo          
+Label      Label         27                                                   
+Label      Label         28                                                   
+Cast       Oper          67 Local          0                                  , cast  = I___IC_       , type = CInt      
+Binary     Oper          68 Oper          67 Integer        3                 , oper  = LT            , type = CInt      
+Goto       Command       69 Label         30 Oper          68                 , goto  = If            
+Goto       Command       70 Label         31                                  , goto  = GoTo          
+Label      Label         29                                                   
+Cast       Oper          72 Local          0                                  , cast  = I___IR_       , type = RInt      
+Unary      Oper          73 Oper          72                                  , oper  = PostInc       , type = CInt      
+Goto       Command       74 Label         28                                  , goto  = GoTo          
+Label      Label         30                                                   
+Cast       Oper          76 Local          0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper          77 Oper          76 Integer        2                 , oper  = AddAssign     , type = CInt      
+Goto       Command       78 Label         29                                  , goto  = GoTo          
+Label      Label         31                                                   
+
+Label          0 refer =     1     0
+Label          1 refer =     1     1
+Label          2 refer =     0     3
+Label          3 refer =     0     5
+Label          4 refer =     1     6
+Label          5 refer =     1     7
+Label          6 refer =     0     9
+Label          7 refer =     0    13
+Label          8 refer =     1    14
+Label          9 refer =     1    15
+Label         10 refer =     0    19
+Label         11 refer =     0    21
+Label         12 refer =     1    22
+Label         13 refer =     1    23
+Label         14 refer =     0    27
+Label         15 refer =     0    31
+Label         16 refer =     1    32
+Label         17 refer =     1    37
+Label         18 refer =     1    39
+Label         19 refer =     1    41
+Label         20 refer =     1    42
+Label         21 refer =     1    47
+Label         22 refer =     1    49
+Label         23 refer =     1    53
+Label         24 refer =     1    54
+Label         25 refer =     1    59
+Label         26 refer =     1    63
+Label         27 refer =     1    65
+Label         28 refer =     1    66
+Label         29 refer =     1    71
+Label         30 refer =     1    75
+Label         31 refer =     1    79
+
+TNodeDefFunc    line=013, column=028, len=04, text=ffff
+Cast       Oper           0 Global         0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper           1 Oper           0 Integer        3                 , oper  = Assign        , type = CInt      
+Cast       Oper           2 Global         1                                  , cast  = I___IR_       , type = RInt      
+Cast       Oper           3 Global         0                                  , cast  = I___IR_       , type = RInt      
+Unary      Oper           4 Oper           3                                  , oper  = PostInc       , type = CInt      
+Binary     Oper           5 Oper           2 Oper           4                 , oper  = SubAssign     , type = CInt      
+Set        Oper           6 Oper           6 Integer        0                 
+Index      Oper           7 Oper           6 Global         2 Global         2,                       , type = Int       
+Cast       Oper           8 Oper           7                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper           9 Oper           8 Integer        2                 , oper  = Assign        , type = CInt      
+Set        Oper          10 Oper          10 Integer        5                 
+Index      Oper          11 Oper          10 Global         2 Global         2,                       , type = Int       
+Cast       Oper          12 Oper          11                                  , cast  = I___IR_       , type = RInt      
+Set        Oper          13 Oper          13 Integer        0                 
+Index      Oper          14 Oper          13 Global         2 Global         2,                       , type = Int       
+Cast       Oper          15 Oper          14                                  , cast  = I___IR_       , type = RInt      
+Unary      Oper          16 Oper          15                                  , oper  = PostInc       , type = CInt      
+Binary     Oper          17 Oper          12 Oper          16                 , oper  = Assign        , type = CInt      
+Set        Oper          18 Oper          18 Integer        2                 
+Index      Oper          19 Oper          18 Global         2 Global         2,                       , type = Int       
+Cast       Oper          20 Oper          19                                  , cast  = I___IR_       , type = RInt      
+Set        Oper          21 Oper          21 Integer        0                 
+Index      Oper          22 Global         2 Oper          21 Oper          22,                       , type = Int       
+Cast       Oper          23 Oper          22                                  , cast  = I___IC_       , type = CInt      
+Set        Oper          24 Oper          24 Integer        5                 
+Index      Oper          25 Global         2 Oper          24 Oper          25,                       , type = Int       
+Cast       Oper          26 Oper          25                                  , cast  = I___IC_       , type = CInt      
+Binary     Oper          27 Oper          23 Oper          26                 , oper  = Add           , type = CInt      
+Binary     Oper          28 Oper          20 Oper          27                 , oper  = Assign        , type = CInt      
+
+
+TNodeDefFunc    line=014, column=022, len=04, text=f001
+Label      Label          0                                                   
+Label      Label          1                                                   
+Goto       Command        2 Label          0                                  , goto  = GoTo          
+None      
+Goto       Command        4 Label          1                                  , goto  = GoTo          
+None      
+
+Label          0 refer =     1     0
+Label          1 refer =     1     1
+Label          2 refer =     0     3
+Label          3 refer =     0     5
+
+TNodeDefFunc    line=017, column=045, len=04, text=f003
+Cast       Oper           0 Local          0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper           1 Oper           0 Integer        0                 , oper  = Assign        , type = CInt      
+Label      Label          0                                                   
+Cast       Oper           3 Local          0                                  , cast  = I___IC_       , type = CInt      
+Binary     Oper           4 Oper           3 Integer       10                 , oper  = LT            , type = CInt      
+Goto       Command        5 Label          2 Oper           4                 , goto  = If            
+Goto       Command        6 Label          3                                  , goto  = GoTo          
+Label      Label          1                                                   
+Cast       Oper           8 Local          0                                  , cast  = I___IR_       , type = RInt      
+Unary      Oper           9 Oper           8                                  , oper  = PostInc       , type = CInt      
+Goto       Command       10 Label          0                                  , goto  = GoTo          
+Label      Label          2                                                   
+Call       Command       12                                                   , func  = f003          
+Goto       Command       13 Label          3                                  , goto  = GoTo          
+Goto       Command       14 Label          1                                  , goto  = GoTo          
+Goto       Command       15 Label          1                                  , goto  = GoTo          
+Label      Label          3                                                   
+
+Label          0 refer =     1     2
+Label          1 refer =     2     7
+Label          2 refer =     1    11
+Label          3 refer =     2    16
+
+TNodeDefFunc    line=018, column=005, len=04, text=f004
+Cast       Oper           0 Param          0                                  , cast  = I___IR_       , type = RInt      
+Unary      Oper           1 Oper           0                                  , oper  = PostInc       , type = CInt      
+
+
+TNodeDefFunc    line=018, column=032, len=07, text=main004
+Cast       Oper           0 Number         0                                  , cast  = DC__I__       , type = Int       
+Param      Command        1 Oper           0                                  
+Call       Command        2                                                   , func  = f004          
+
+
+TNodeDefFunc    line=019, column=018, len=01, text=u
+
+
+TNodeDefFunc    line=019, column=028, len=04, text=f005
+Set        Oper           0 Oper           0 Integer        5                 
+Index      Oper           1 Oper           0 Local          0 Local          0,                       , type = Int       
+Cast       Oper           2 Oper           1                                  , cast  = I___IR_       , type = RInt      
+Cast       Oper           3 Number         1                                  , cast  = DC__IC_       , type = CInt      
+Binary     Oper           4 Oper           2 Oper           3                 , oper  = Assign        , type = CInt      
+
+
+TNodeDefFunc    line=019, column=066, len=01, text=f
+Cast       Oper           0 Integer        1                                  , cast  = IC__I__       , type = Int       
+Return     Command        1 Oper           0                                  
+
+
+TNodeDefFunc    line=019, column=091, len=07, text=main005
+Call       Command        0                                                   , func  = f005          
+Cast       Oper           1 Local          0                                  , cast  = I___IR_       , type = RInt      
+Cast       Oper           2 Global        13                                  , cast  = I___IC_       , type = CInt      
+Binary     Oper           3 Oper           2 Integer       12                 , oper  = Add           , type = CInt      
+Binary     Oper           4 Oper           1 Oper           3                 , oper  = Assign        , type = CInt      
+
+
+TNodeDefFunc    line=020, column=013, len=01, text=f
+Cast       Oper           0 Param          1                                  , cast  = I___IC_       , type = CInt      
+Unary      Oper           1 Oper           0                                  , oper  = Not           , type = CInt      
+Goto       Command        2 Label          1 Oper           1                 , goto  = Else          
+None      
+None      
+Cast       Oper           5 Param          0                                  , cast  = I___IR_       , type = RInt      
+Unary      Oper           6 Oper           5                                  , oper  = PostInc       , type = CInt      
+Goto       Command        7 Label          2                                  , goto  = GoTo          
+Label      Label          1                                                   
+Cast       Oper           9 Param          0                                  , cast  = I___IR_       , type = RInt      
+Unary      Oper          10 Oper           9                                  , oper  = PostDec       , type = CInt      
+Label      Label          2                                                   
+
+Label          0 refer =     0     4
+Label          1 refer =     1     8
+Label          2 refer =     1    11
+
+TNodeDefFunc    line=020, column=082, len=07, text=main006
+Cast       Oper           0 Integer        3                                  , cast  = IC__I__       , type = Int       
+Cast       Oper           1 Integer        5                                  , cast  = IC__I__       , type = Int       
+Cast       Oper           2 Integer        9                                  , cast  = IC__I__       , type = Int       
+Param      Command        3 Oper           0                                  
+Param      Command        4 Oper           1                                  
+Param      Command        5 Oper           2                                  
+Call       Command        6                                                   , func  = f             
+
+
+TNodeDefFunc    line=021, column=005, len=04, text=f007
+Return     Command        0                                                   
+Return     Command        1 Integer       13                                  
+
+
+TNodeDefFunc    line=021, column=040, len=01, text=r
+Cast       Oper           0 Number         1                                  , cast  = DC__I__       , type = Int       
+Return     Command        1 Oper           0                                  
+Return     Command        2                                                   
+
+
+TNodeDefFunc    line=022, column=005, len=04, text=f008
+Goto       Command        0 Label          1 Integer        1                 , goto  = Else          
+None      
+None      
+Goto       Command        3 Label          2                                  , goto  = GoTo          
+Label      Label          1                                                   
+Label      Label          2                                                   
+Label      Label          3                                                   
+Label      Label          4                                                   
+Goto       Command        8 Label          3                                  , goto  = GoTo          
+None      
+Goto       Command       10 Label          4                                  , goto  = GoTo          
+None      
+Cast       Oper          12 Local          0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper          13 Oper          12 Integer        0                 , oper  = Assign        , type = CInt      
+Label      Label          7                                                   
+Cast       Oper          15 Local          0                                  , cast  = I___IC_       , type = CInt      
+Binary     Oper          16 Oper          15 Integer       10                 , oper  = LT            , type = CInt      
+Goto       Command       17 Label          9 Oper          16                 , goto  = If            
+Goto       Command       18 Label         10                                  , goto  = GoTo          
+Label      Label          8                                                   
+Cast       Oper          20 Local          0                                  , cast  = I___IR_       , type = RInt      
+Unary      Oper          21 Oper          20                                  , oper  = PostInc       , type = CInt      
+Goto       Command       22 Label          7                                  , goto  = GoTo          
+Label      Label          9                                                   
+Goto       Command       24 Label          8                                  , goto  = GoTo          
+Label      Label         10                                                   
+
+Label          0 refer =     0     2
+Label          1 refer =     1     4
+Label          2 refer =     1     5
+Label          3 refer =     1     6
+Label          4 refer =     1     7
+Label          5 refer =     0     9
+Label          6 refer =     0    11
+Label          7 refer =     1    14
+Label          8 refer =     1    19
+Label          9 refer =     1    23
+Label         10 refer =     1    25
+
+TNodeDefFunc    line=023, column=005, len=04, text=f009
+Label      Label          0                                                   
+Cast       Oper           1 Local          0                                  , cast  = I___IC_       , type = CInt      
+Goto       Command        2 Label          2 Oper           1                 , goto  = If            
+Goto       Command        3 Label          3                                  , goto  = GoTo          
+Label      Label          1                                                   
+Goto       Command        5 Label          0                                  , goto  = GoTo          
+Label      Label          2                                                   
+Goto       Command        7 Label          3                                  , goto  = GoTo          
+Goto       Command        8 Label          1                                  , goto  = GoTo          
+Label      Label          3                                                   
+
+Label          0 refer =     1     0
+Label          1 refer =     1     4
+Label          2 refer =     1     6
+Label          3 refer =     2     9
+
+TNodeDefFunc    line=024, column=005, len=04, text=f010
+Cast       Oper           0 Local          0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper           1 Oper           0 Integer        0                 , oper  = Assign        , type = CInt      
+Cast       Oper           2 Local          1                                  , cast  = I___IR_       , type = RInt      
+Cast       Oper           3 Local          0                                  , cast  = I___IC_       , type = CInt      
+Binary     Oper           4 Oper           2 Oper           3                 , oper  = Assign        , type = CInt      
+Cast       Oper           5 Local          0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper           6 Oper           5 Integer        1                 , oper  = Assign        , type = CInt      
+Label      Label          0                                                   
+Cast       Oper           8 Local          1                                  , cast  = I___IR_       , type = RInt      
+Cast       Oper           9 Local          0                                  , cast  = I___IC_       , type = CInt      
+Binary     Oper          10 Oper           8 Oper           9                 , oper  = Assign        , type = CInt      
+Goto       Command       11 Label          2 Oper          10                 , goto  = If            
+Goto       Command       12 Label          3                                  , goto  = GoTo          
+Label      Label          1                                                   
+Goto       Command       14 Label          0                                  , goto  = GoTo          
+Label      Label          2                                                   
+Goto       Command       16 Label          1                                  , goto  = GoTo          
+Label      Label          3                                                   
+Cast       Oper          18 Local          1                                  , cast  = I___IR_       , type = RInt      
+Cast       Oper          19 Local          0                                  , cast  = I___IR_       , type = RInt      
+Cast       Oper          20 Local          0                                  , cast  = I___IR_       , type = RInt      
+Unary      Oper          21 Oper          20                                  , oper  = PostInc       , type = CInt      
+Binary     Oper          22 Oper          19 Oper          21                 , oper  = Assign        , type = CInt      
+Binary     Oper          23 Oper          18 Oper          22                 , oper  = AddAssign     , type = CInt      
+
+Label          0 refer =     1     7
+Label          1 refer =     1    13
+Label          2 refer =     1    15
+Label          3 refer =     1    17
+
+TNodeDefFunc    line=025, column=005, len=04, text=r011
+Return     Command        0                                                   
+
+
+TNodeDefFunc    line=025, column=029, len=04, text=f011
+Cast       Oper           0 Local          0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper           1 Oper           0 Integer        0                 , oper  = Assign        , type = CInt      
+Cast       Oper           2 Local          1                                  , cast  = I___IR_       , type = RInt      
+Cast       Oper           3 Local          0                                  , cast  = I___IC_       , type = CInt      
+Binary     Oper           4 Oper           2 Oper           3                 , oper  = Assign        , type = CInt      
+None      
+Cast       Oper           6 Local          0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper           7 Oper           6 Integer        1                 , oper  = Assign        , type = CInt      
+None      
+None      
+None      
+None      
+
+Label          0 refer =     0     5
+Label          1 refer =     0     9
+Label          2 refer =     0    11
+
+TNodeDefFunc    line=027, column=005, len=04, text=f013
+None      
+None      
+None      
+None      
+None      
+
+Label          0 refer =     0     0
+Label          1 refer =     0     1
+Label          2 refer =     0     3
+Label          3 refer =     0     4
+
+TNodeDefFunc    line=028, column=005, len=04, text=r014
+Cast       Oper           0 Integer       16                                  , cast  = IC__I__       , type = Int       
+Cast       Oper           1 Integer       17                                  , cast  = IC__I__       , type = Int       
+Param      Command        2 Oper           0                                  
+Param      Command        3 Oper           1                                  
+Call       Command        4                                                   , func  = r014          
+Goto       Command        5 Label          1 Integer        6                 , goto  = Else          
+None      
+None      
+Goto       Command        8 Label          2                                  , goto  = GoTo          
+Label      Label          1                                                   
+Label      Label          2                                                   
+Label      Label          3                                                   
+Goto       Command       12 Label          5 Integer       22                 , goto  = If            
+Goto       Command       13 Label          6                                  , goto  = GoTo          
+Label      Label          4                                                   
+Goto       Command       15 Label          3                                  , goto  = GoTo          
+Label      Label          5                                                   
+Goto       Command       17 Label          4                                  , goto  = GoTo          
+Label      Label          6                                                   
+
+Label          0 refer =     0     7
+Label          1 refer =     1     9
+Label          2 refer =     1    10
+Label          3 refer =     1    11
+Label          4 refer =     1    14
+Label          5 refer =     1    16
+Label          6 refer =     1    18
+
+TNodeDefFunc    line=029, column=005, len=04, text=f015
+Cast       Oper           0 Param          0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper           1 Integer       16 Integer        9                 , oper  = Sub           , type = CInt      
+Binary     Oper           2 Oper           0 Oper           1                 , oper  = Assign        , type = CInt      
+Cast       Oper           3 Oper           2                                  , cast  = IC__I__       , type = Int       
+Binary     Oper           4 Integer       17 Integer       18                 , oper  = Add           , type = CInt      
+Cast       Oper           5 Oper           4                                  , cast  = IC__I__       , type = Int       
+Param      Command        6 Oper           3                                  
+Param      Command        7 Oper           5                                  
+Call       Command        8                                                   , func  = r014          
+Cast       Oper           9 Param          0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper          10 Integer       16 Integer        9                 , oper  = Sub           , type = CInt      
+Binary     Oper          11 Oper           9 Oper          10                 , oper  = Assign        , type = CInt      
+
+
+TNodeDefFunc    line=030, column=005, len=04, text=f016
+Cast       Oper           0 Param          0                                  , cast  = I___IC_       , type = CInt      
+Goto       Command        1 Label          1 Oper           0                 , goto  = Else          
+None      
+None      
+Cast       Oper           4 Number         3                                  , cast  = DC__I__       , type = Int       
+Return     Command        5 Oper           4                                  
+Goto       Command        6 Label          2                                  , goto  = GoTo          
+Label      Label          1                                                   
+Cast       Oper           8 Integer        2                                  , cast  = IC__I__       , type = Int       
+Return     Command        9 Oper           8                                  
+Label      Label          2                                                   
+
+Label          0 refer =     0     3
+Label          1 refer =     1     7
+Label          2 refer =     1    10
+
+TNodeDefFunc    line=033, column=005, len=04, text=f017
+Goto       Command        0 Label          2 Integer        7                 , goto  = If            
+None      
+None      
+Cast       Oper           3 Number         1                                  , cast  = DC__IC_       , type = CInt      
+Goto       Command        4 Label         10 Oper           3                 , goto  = Else          
+None      
+None      
+Goto       Command        7 Label          6 Integer       12                 , goto  = If            
+None      
+None      
+Unary      Oper          10 Integer       19                                  , oper  = Not           , type = CInt      
+Goto       Command       11 Label         10 Oper          10                 , goto  = Else          
+None      
+None      
+Goto       Command       14 Label         10 Integer       20                 , goto  = If            
+None      
+None      
+Goto       Command       17 Label         10 Integer       21                 , goto  = If            
+None      
+None      
+Goto       Command       20 Label         12                                  , goto  = GoTo          
+Label      Label         10                                                   
+Label      Label         12                                                   
+
+    -1
+Label          1 refer =     0     2
+Label          2 refer =     1     6
+    -1
+    -1
+Label          5 refer =     0     9
+Label          6 refer =     1    13
+    -1
+    -1
+Label          9 refer =     0    16
+Label         10 refer =     4    21
+Label         11 refer =     0    19
+Label         12 refer =     1    22
+
+TNodeDefFunc    line=034, column=005, len=04, text=f018
+Goto       Command        0 Label          2 Integer        7                 , goto  = If            
+None      
+None      
+Goto       Command        3 Label          2 Integer        1                 , goto  = If            
+None      
+None      
+Binary     Oper           6 Integer        2 Integer        5                 , oper  = Add           , type = CInt      
+Goto       Command        7 Label          4                                  , goto  = GoTo          
+Label      Label          2                                                   
+Binary     Oper           9 Integer        4 Integer        5                 , oper  = Sub           , type = CInt      
+Label      Label          4                                                   
+
+    -1
+Label          1 refer =     0     2
+Label          2 refer =     2     8
+Label          3 refer =     0     5
+Label          4 refer =     1    10
+
+TNodeDefFunc    line=035, column=005, len=04, text=f019
+Cast       Oper           0 Local          0                                  , cast  = I___IR_       , type = RInt      
+Goto       Command        1 Label          2 Integer        7                 , goto  = If            
+None      
+None      
+Goto       Command        4 Label          2 Integer        1                 , goto  = If            
+Goto       Command        5 Label          3                                  , goto  = GoTo          
+Binary     Oper           6 Oper           0                                  , oper  = Assign        , type = CInt      
+
+    -1
+Label          1 refer =     0     3
+
+TNodeDefFunc    line=036, column=005, len=04, text=f020
+Label      Label          0                                                   
+Goto       Command        1 Label          2 Integer       26                 , goto  = If            
+Goto       Command        2 Label          3                                  , goto  = GoTo          
+Label      Label          1                                                   
+Cast       Oper           4 Local          0                                  , cast  = I___IR_       , type = RInt      
+Unary      Oper           5 Oper           4                                  , oper  = PostInc       , type = CInt      
+Goto       Command        6 Label          0                                  , goto  = GoTo          
+Label      Label          2                                                   
+Goto       Command        8 Label          1                                  , goto  = GoTo          
+Cast       Oper           9 Local          0                                  , cast  = I___IR_       , type = RInt      
+Unary      Oper          10 Oper           9                                  , oper  = PostDec       , type = CInt      
+Goto       Command       11 Label          3                                  , goto  = GoTo          
+Cast       Oper          12 Local          0                                  , cast  = I___IR_       , type = RInt      
+Unary      Oper          13 Oper          12                                  , oper  = PostInc       , type = CInt      
+Goto       Command       14 Label          1                                  , goto  = GoTo          
+Label      Label          3                                                   
+
+Label          0 refer =     1     0
+Label          1 refer =     2     3
+Label          2 refer =     1     7
+Label          3 refer =     2    15
+
+TNodeDefFunc    line=038, column=005, len=04, text=f021
+
+
+TNodeDefFunc    line=039, column=005, len=04, text=F022
+Call       Command        0                                                   , func  = f             
+
+
+TNodeDefFunc    line=040, column=005, len=07, text=main023
+Call       Command        0                                                   , func  = f             
+Call       Command        1                                                   , func  = f000          
+Set        Oper           2 Oper           2 Integer        5                 
+Index      Oper           3 Oper           2 Global        21 Global        21,                       , type = Int       
+Cast       Oper           4 Oper           3                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper           5 Oper           4 Integer        1                 , oper  = Assign        , type = CInt      
+Cast       Oper           6 Global        22                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper           7 Oper           6 Integer       26                 , oper  = Assign        , type = CInt      
+Cast       Oper           8 Global        22                                  , cast  = I___IR_       , type = RInt      
+Cast       Oper           9 Global        22                                  , cast  = I___IC_       , type = CInt      
+Binary     Oper          10 Oper           8 Oper           9                 , oper  = Assign        , type = CInt      
+
+
+TNodeDefFunc    line=047, column=005, len=04, text=f030
+Goto       Command        0 Label          1 Integer       29                 , goto  = Else          
+None      
+None      
+Unary      Oper           3 Integer       20                                  , oper  = UnarySub      , type = CInt      
+Goto       Command        4 Label          2                                  , goto  = GoTo          
+Label      Label          1                                                   
+Label      Label          2                                                   
+Label      Label          3                                                   
+Goto       Command        8 Label          5 Integer        0                 , goto  = If            
+Goto       Command        9 Label          6                                  , goto  = GoTo          
+Label      Label          4                                                   
+Goto       Command       11 Label          3                                  , goto  = GoTo          
+Label      Label          5                                                   
+Goto       Command       13 Label          4                                  , goto  = GoTo          
+Label      Label          6                                                   
+
+Label          0 refer =     0     2
+Label          1 refer =     1     5
+Label          2 refer =     1     6
+Label          3 refer =     1     7
+Label          4 refer =     1    10
+Label          5 refer =     1    12
+Label          6 refer =     1    14
+
+TNodeDefFunc    line=048, column=005, len=04, text=f031
+Label      Label          0                                                   
+Label      Label          1                                                   
+Goto       Command        2 Label          0                                  , goto  = GoTo          
+None      
+Goto       Command        4 Label          1                                  , goto  = GoTo          
+None      
+
+Label          0 refer =     1     0
+Label          1 refer =     1     1
+Label          2 refer =     0     3
+Label          3 refer =     0     5
+
+TNodeDefFunc    line=050, column=006, len=10, text=init_array
+Set        Oper           0 Oper           0 Integer        2                 
+Index      Oper           1 Local          0 Oper           0 Oper           1,                       , type = Int       
+Cast       Oper           2 Oper           1                                  , cast  = I___IC_       , type = CInt      
+
+
+TNodeDefFunc    line=057, column=012, len=03, text=f_s
+Cast       Oper           0 Local          0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper           1 Oper           0 Integer        1                 , oper  = Assign        , type = CInt      
+Binary     Oper           2 Local          2 Local          0                 , oper  = Assign        , type = CInt      
+
+
+Cast       Oper           0 Global         1                                  , cast  = I___IR_       , type = RInt      
+Cast       Oper           1 Global         0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper           2 Oper           1 Integer        1                 , oper  = Assign        , type = CInt      
+Binary     Oper           3 Oper           0 Oper           2                 , oper  = Assign        , type = CInt      
+Cast       Oper           4 Global         5                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper           5 Oper           4 Integer        5                 , oper  = Assign        , type = CInt      
+Set        Oper           6 Oper           6 Integer        5                 
+Index      Oper           7 Global         6 Oper           6 Oper           7,                       , type = Int       
+Cast       Oper           8 Oper           7                                  , cast  = I___IC_       , type = CInt      
+Cast       Oper           9 Global         9                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper          10 Oper           9 Integer        0                 , oper  = Assign        , type = CInt      
+Cast       Oper          11 Global        11                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper          12 Integer        3 Integer        9                 , oper  = Multi         , type = CInt      
+Binary     Oper          13 Integer        1 Oper          12                 , oper  = Add           , type = CInt      
+Binary     Oper          14 Oper          11 Oper          13                 , oper  = Assign        , type = CInt      
+Cast       Oper          15 Global        12                                  , cast  = I___IR_       , type = RInt      
+Cast       Oper          16 Global        11                                  , cast  = I___IR_       , type = RInt      
+Unary      Oper          17 Oper          16                                  , oper  = PostInc       , type = CInt      
+Unary      Oper          18 Oper          17                                  , oper  = UnaryAdd      , type = CInt      
+Binary     Oper          19 Oper          15 Oper          18                 , oper  = Assign        , type = CInt      
+Cast       Oper          20 Global        13                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper          21 Oper          20 Integer       11                 , oper  = Assign        , type = CInt      
+Cast       Oper          22 Global        15                                  , cast  = I___IR_       , type = RInt      
+Cast       Oper          23 Number         2                                  , cast  = DC__IC_       , type = CInt      
+Cast       Oper          24 Oper          23                                  , cast  = IC__I__       , type = Int       
+Cast       Oper          25 Oper          24                                  , cast  = I___IC_       , type = CInt      
+Binary     Oper          26 Oper          22 Oper          25                 , oper  = Assign        , type = CInt      
+Cast       Oper          27 Global        16                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper          28 Oper          27 Integer        3                 , oper  = Assign        , type = CInt      
+Cast       Oper          29 Global        18                                  , cast  = I___IR_       , type = RInt      
+Set        Oper          30 Oper          30 Integer        2                 
+Binary     Oper          31 Oper          30 Global        18                 , oper  = MultiAssign   
+Binary     Oper          32 Oper          30 Integer        4                 , oper  = AddAssign     
+Index      Oper          33 Global        17 Oper          30 Oper          33,                       , type = Int       
+Cast       Oper          34 Oper          33                                  , cast  = I___IC_       , type = CInt      
+Binary     Oper          35 Oper          29 Oper          34                 , oper  = Assign        , type = CInt      
+Cast       Oper          36 Global        19                                  , cast  = I___IR_       , type = RInt      
+Goto       Command       37 Label          2 Integer        3                 , goto  = Else          
+None      
+None      
+Set        Oper          40 Oper          40 Number         4                 
+Goto       Command       41 Label          0                                  , goto  = GoTo          
+Label      Label          2                                                   
+Cast       Oper          43 Integer       16                                  , cast  = IC__DC_       , type = CDouble   
+Set        Oper          44 Oper          40 Oper          43                 
+Label      Label          0                                                   
+Cast       Oper          46 Oper          40                                  , cast  = DC__IC_       , type = CInt      
+Binary     Oper          47 Oper          36 Oper          46                 , oper  = Assign        , type = CInt      
+Cast       Oper          48 Number         5                                  , cast  = DC__IC_       , type = CInt      
+Cast       Oper          49 Global        31                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper          50 Oper          49 Integer        2                 , oper  = Assign        , type = CInt      
+Cast       Oper          51 Global        32                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper          52 Oper          51 Integer        4                 , oper  = Assign        , type = CInt      
+Cast       Oper          53 Global        31                                  , cast  = I___IC_       , type = CInt      
+Cast       Oper          54 Global        32                                  , cast  = I___IC_       , type = CInt      
+
+Label          0 refer =     1    45
+Label          1 refer =     0    39
+Label          2 refer =     1    42
+
+Integer        0 0
+Integer        1 12
+Integer        2 2
+Integer        3 5
+Integer        4 3
+Integer        5 1
+Integer        6 10
+Integer        7 11
+Integer        8 20
+Integer        9 6
+Integer       10 4
+Integer       11 99
+Integer       12 13
+Integer       13 123
+Integer       14 14
+Integer       15 25
+Integer       16 7
+Integer       17 8
+Integer       18 9
+Integer       19 21
+Integer       20 22
+Integer       21 23
+Integer       22 24
+Integer       23 26
+Integer       24 31
+Integer       25 32
+Integer       26 33
+Integer       27 1111
+Integer       28 43
+Integer       29 111
+Integer       30 222
+Integer       31 333
+
+Number         0 5.000000
+Number         1 1.200000
+Number         2 12.200000
+Number         3 2.100000
+Number         4 6.300000
+Number         5 12.210000

@@ -1,0 +1,685 @@
+{S_                       ,<Separator,Semicolon>    }[  0] S_                 -> Program                  
+{                         ,<Syntax,DefFunc>         }[  0] S_                 -> Program                  
+{                         ,<Syntax,DefArr>          }[  0] S_                 -> Program                  
+{                         ,<Syntax,DefVar>          }[  0] S_                 -> Program                  
+{                         ,Eof                      }[  0] S_                 -> Program                  
+{Program                  ,<Separator,Semicolon>    }[  0] Program            -> { MAKE(BegStmExprLL); }  _f_00008_                { CODE(EndBlock); }      
+{                         ,<Syntax,DefFunc>         }[  0] Program            -> { MAKE(BegStmExprLL); }  _f_00008_                { CODE(EndBlock); }      
+{                         ,<Syntax,DefArr>          }[  0] Program            -> { MAKE(BegStmExprLL); }  _f_00008_                { CODE(EndBlock); }      
+{                         ,<Syntax,DefVar>          }[  0] Program            -> { MAKE(BegStmExprLL); }  _f_00008_                { CODE(EndBlock); }      
+{                         ,Eof                      }[  0] Program            -> { MAKE(BegStmExprLL); }  _f_00008_                { CODE(EndBlock); }      
+{_f_00002_                ,<Separator,Semicolon>    }[  0] _f_00002_          -> _f_00003_                { TREE(AddToList); }     
+{                         ,<Syntax,DefFunc>         }[  0] _f_00002_          -> _f_00003_                { TREE(AddToList); }     
+{                         ,<Syntax,DefArr>          }[  0] _f_00002_          -> _f_00003_                { TREE(AddToList); }     
+{                         ,<Syntax,DefVar>          }[  0] _f_00002_          -> _f_00003_                { TREE(AddToList); }     
+{_f_00003_                ,<Separator,Semicolon>    }[  0] _f_00003_          -> <Separator,Semicolon>    { TREE(NodeNull); }      
+{                         ,<Syntax,DefFunc>         }[  1] _f_00003_          -> <Syntax,DefFunc>         <Syntax,IdentFunc>       { MAKE(FuncIdent); }     _f_00004_                _f_00007_                
+{                         ,<Syntax,DefArr>          }[  2] _f_00003_          -> DefineSemi               
+{                         ,<Syntax,DefVar>          }[  2] _f_00003_          -> DefineSemi               
+{_f_00004_                ,<Separator,LeftBracket>  }[  1] _f_00004_          -> <Separator,LeftBracket>  { TREE(Define,2); }      DefParItem               _f_00006_                { TREE(EndParams); }     <Separator,RightBracket> 
+{                         ,<Syntax,EmptyBracket>    }[  0] _f_00004_          -> <Syntax,EmptyBracket>    { TREE(EndParams,2); }   
+{_f_00005_                ,<Separator,Comma>        }[  0] _f_00005_          -> <Separator,Comma>        DefParItem               
+{_f_00006_                ,<Separator,RightBracket> }[  1] _f_00006_          -> 
+{                         ,<Separator,Comma>        }[  0] _f_00006_          -> _f_00005_                _f_00006_                
+{_f_00007_                ,<Separator,LeftCramp>    }[  2] _f_00007_          -> <Separator,LeftCramp>    { CODE(EndParams); }     StmExpr                  <Separator,RightCramp>   { MAKE(BodyFunc,2); }    
+{                         ,<Separator,Semicolon>    }[  0] _f_00007_          -> <Separator,Semicolon>    { MAKE(BodyFunc); }      
+{                         ,<Syntax,EmptyCramp>      }[  1] _f_00007_          -> <Syntax,EmptyCramp>      { MAKE(BodyFunc,1); }    
+{_f_00008_                ,<Separator,Semicolon>    }[  0] _f_00008_          -> _f_00002_                _f_00008_                
+{                         ,<Syntax,DefFunc>         }[  0] _f_00008_          -> _f_00002_                _f_00008_                
+{                         ,<Syntax,DefArr>          }[  0] _f_00008_          -> _f_00002_                _f_00008_                
+{                         ,<Syntax,DefVar>          }[  0] _f_00008_          -> _f_00002_                _f_00008_                
+{                         ,Eof                      }[  1] _f_00008_          -> 
+{DefParInit               ,<Oper,Assign>            }[  0] DefParInit         -> <Oper,Assign>            { CODE(BegParVarAssign); }                        Assign                   { MAKE(ParVarAssign); }  
+{                         ,<Separator,RightBracket> }[  1] DefParInit         -> 
+{                         ,<Separator,Comma>        }[  1] DefParInit         -> 
+{DefParItem               ,<Syntax,DefArr>          }[  0] DefParItem         -> _f_00011_                { TREE(AddToList); }     
+{                         ,<Syntax,DefVar>          }[  0] DefParItem         -> _f_00011_                { TREE(AddToList); }     
+{_f_00011_                ,<Syntax,DefArr>          }[  0] _f_00011_          -> <Syntax,DefArr>          <Syntax,IdentArr>        { MAKE(DefParArr); }     DefArrDA                 DefParInit               
+{                         ,<Syntax,DefVar>          }[  1] _f_00011_          -> <Syntax,DefVar>          <Ident>                  { MAKE(DefParVar); }     DefParInit               
+{Initializer              ,<Separator,LeftCramp>    }[  1] Initializer        -> <Separator,LeftCramp>    { CODE(BegInitial,1); }  { TREE(NodeListLL); }    AInitItem                { TREE(AddToList); }     _f_00014_                <Separator,RightCramp>   { CODE(EndInitial); }    
+{                         ,<Syntax,EmptyCramp>      }[  0] Initializer        -> <Syntax,EmptyCramp>      { CODE(BegInitial); }    { TREE(NodeListLL); }    
+{_f_00013_                ,<Separator,Comma>        }[  0] _f_00013_          -> <Separator,Comma>        AInitItem                { TREE(AddToList); }     
+{_f_00014_                ,<Separator,RightCramp>   }[  1] _f_00014_          -> 
+{                         ,<Separator,Comma>        }[  0] _f_00014_          -> _f_00013_                _f_00014_                
+{AInitItem                ,<Separator,LeftCramp>    }[  0] AInitItem          -> Initializer              
+{                         ,<Separator,LeftBracket>  }[  1] AInitItem          -> Assign                   { CODE(AInitItem); }     
+{                         ,<Integer>                }[  1] AInitItem          -> Assign                   { CODE(AInitItem); }     
+{                         ,<Number>                 }[  1] AInitItem          -> Assign                   { CODE(AInitItem); }     
+{                         ,<Ident>                  }[  1] AInitItem          -> Assign                   { CODE(AInitItem); }     
+{                         ,<Priority,Term>          }[  1] AInitItem          -> Assign                   { CODE(AInitItem); }     
+{                         ,<Priority,Unary>         }[  1] AInitItem          -> Assign                   { CODE(AInitItem); }     
+{                         ,<Priority,IncDec>        }[  1] AInitItem          -> Assign                   { CODE(AInitItem); }     
+{                         ,<Syntax,IdentFunc>       }[  1] AInitItem          -> Assign                   { CODE(AInitItem); }     
+{                         ,<Syntax,IdentArr>        }[  1] AInitItem          -> Assign                   { CODE(AInitItem); }     
+{                         ,<Syntax,Cast>            }[  1] AInitItem          -> Assign                   { CODE(AInitItem); }     
+{                         ,<Syntax,CastUnary>       }[  1] AInitItem          -> Assign                   { CODE(AInitItem); }     
+{                         ,<Syntax,EmptyCramp>      }[  0] AInitItem          -> Initializer              
+{DefArrDA                 ,<Separator,LeftScrape>   }[  0] DefArrDA           -> _f_00017_                _f_00019_                { CODE(EndRanges); }     
+{                         ,<Syntax,EmptyScrape>     }[  0] DefArrDA           -> _f_00017_                _f_00019_                { CODE(EndRanges); }     
+{_f_00017_                ,<Separator,LeftScrape>   }[  1] _f_00017_          -> <Separator,LeftScrape>   Assign                   <Separator,RightScrape>  { MAKE(DRange); }        
+{                         ,<Syntax,EmptyScrape>     }[  0] _f_00017_          -> <Syntax,EmptyScrape>     { MAKE(DefArrD1AEmpty); }
+{_f_00018_                ,<Separator,LeftScrape>   }[  0] _f_00018_          -> <Separator,LeftScrape>   Assign                   <Separator,RightScrape>  { MAKE(DRange); }        
+{_f_00019_                ,<Oper,Assign>            }[  1] _f_00019_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00019_          -> 
+{                         ,<Separator,LeftScrape>   }[  0] _f_00019_          -> _f_00018_                _f_00019_                
+{                         ,<Separator,Comma>        }[  1] _f_00019_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00019_          -> 
+{DefVar                   ,<Ident>                  }[  0] DefVar             -> <Ident>                  { MAKE(DefIdent); }      _f_00021_                
+{_f_00021_                ,<Oper,Assign>            }[  0] _f_00021_          -> <Oper,Assign>            { CODE(BegDefVarAssign); }                        Assign                   { MAKE(DefVarAssign); }  
+{                         ,<Separator,RightBracket> }[  1] _f_00021_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00021_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00021_          -> 
+{DefIAV                   ,<Ident>                  }[  1] DefIAV             -> DefVar                   
+{                         ,<Syntax,IdentArr>        }[  0] DefIAV             -> <Syntax,IdentArr>        { MAKE(DefArray); }      DefArrDA                 _f_00023_                
+{_f_00023_                ,<Oper,Assign>            }[  0] _f_00023_          -> <Oper,Assign>            { CODE(BegAInit); }      Initializer              { MAKE(EndAInit); }      
+{                         ,<Separator,Comma>        }[  1] _f_00023_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00023_          -> 
+{DefItem                  ,<Ident>                  }[  1] DefItem            -> DefIAV                   
+{                         ,<Priority,And>           }[  0] DefItem            -> <Priority,And>           DefIAV                   { TREE(RefDef); }        
+{                         ,<Syntax,IdentArr>        }[  1] DefItem            -> DefIAV                   
+{Condition                ,<Separator,LeftBracket>  }[  1] Condition          -> { CODE(Part,241); }      Expressions              { TREE(ExpressionSLL,241); }                      
+{                         ,<Integer>                }[  1] Condition          -> { CODE(Part,241); }      Expressions              { TREE(ExpressionSLL,241); }                      
+{                         ,<Number>                 }[  1] Condition          -> { CODE(Part,241); }      Expressions              { TREE(ExpressionSLL,241); }                      
+{                         ,<Ident>                  }[  1] Condition          -> { CODE(Part,241); }      Expressions              { TREE(ExpressionSLL,241); }                      
+{                         ,<Priority,Term>          }[  1] Condition          -> { CODE(Part,241); }      Expressions              { TREE(ExpressionSLL,241); }                      
+{                         ,<Priority,Unary>         }[  1] Condition          -> { CODE(Part,241); }      Expressions              { TREE(ExpressionSLL,241); }                      
+{                         ,<Priority,IncDec>        }[  1] Condition          -> { CODE(Part,241); }      Expressions              { TREE(ExpressionSLL,241); }                      
+{                         ,<Syntax,IdentFunc>       }[  1] Condition          -> { CODE(Part,241); }      Expressions              { TREE(ExpressionSLL,241); }                      
+{                         ,<Syntax,IdentArr>        }[  1] Condition          -> { CODE(Part,241); }      Expressions              { TREE(ExpressionSLL,241); }                      
+{                         ,<Syntax,DefVar>          }[  0] Condition          -> <Syntax,DefVar>          { MAKE(Define); }        _f_00026_                { MAKE(PushDef); }       
+{                         ,<Syntax,Cast>            }[  1] Condition          -> { CODE(Part,241); }      Expressions              { TREE(ExpressionSLL,241); }                      
+{                         ,<Syntax,CastUnary>       }[  1] Condition          -> { CODE(Part,241); }      Expressions              { TREE(ExpressionSLL,241); }                      
+{_f_00026_                ,<Ident>                  }[  1] _f_00026_          -> DefVar                   
+{                         ,<Priority,And>           }[  0] _f_00026_          -> <Priority,And>           DefVar                   { TREE(RefDef); }        
+{Expressions              ,<Separator,LeftBracket>  }[  0] Expressions        -> Assign                   { MAKE(ExpressionsLL); } _f_00029_                { CODE(ExpressionSLL); } 
+{                         ,<Integer>                }[  0] Expressions        -> Assign                   { MAKE(ExpressionsLL); } _f_00029_                { CODE(ExpressionSLL); } 
+{                         ,<Number>                 }[  0] Expressions        -> Assign                   { MAKE(ExpressionsLL); } _f_00029_                { CODE(ExpressionSLL); } 
+{                         ,<Ident>                  }[  0] Expressions        -> Assign                   { MAKE(ExpressionsLL); } _f_00029_                { CODE(ExpressionSLL); } 
+{                         ,<Priority,Term>          }[  0] Expressions        -> Assign                   { MAKE(ExpressionsLL); } _f_00029_                { CODE(ExpressionSLL); } 
+{                         ,<Priority,Unary>         }[  0] Expressions        -> Assign                   { MAKE(ExpressionsLL); } _f_00029_                { CODE(ExpressionSLL); } 
+{                         ,<Priority,IncDec>        }[  0] Expressions        -> Assign                   { MAKE(ExpressionsLL); } _f_00029_                { CODE(ExpressionSLL); } 
+{                         ,<Syntax,IdentFunc>       }[  0] Expressions        -> Assign                   { MAKE(ExpressionsLL); } _f_00029_                { CODE(ExpressionSLL); } 
+{                         ,<Syntax,IdentArr>        }[  0] Expressions        -> Assign                   { MAKE(ExpressionsLL); } _f_00029_                { CODE(ExpressionSLL); } 
+{                         ,<Syntax,Cast>            }[  0] Expressions        -> Assign                   { MAKE(ExpressionsLL); } _f_00029_                { CODE(ExpressionSLL); } 
+{                         ,<Syntax,CastUnary>       }[  0] Expressions        -> Assign                   { MAKE(ExpressionsLL); } _f_00029_                { CODE(ExpressionSLL); } 
+{_f_00028_                ,<Separator,Comma>        }[  0] _f_00028_          -> <Separator,Comma>        Assign                   { TREE(AddToList); }     { CODE(AddToExpr); }     
+{_f_00029_                ,<Separator,RightBracket> }[  1] _f_00029_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00029_          -> 
+{                         ,<Separator,Comma>        }[  0] _f_00029_          -> _f_00028_                _f_00029_                
+{                         ,<Separator,Semicolon>    }[  1] _f_00029_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00029_          -> 
+{Assign                   ,<Separator,LeftBracket>  }[  0] Assign             -> Question                 _f_00031_                
+{                         ,<Integer>                }[  0] Assign             -> Question                 _f_00031_                
+{                         ,<Number>                 }[  0] Assign             -> Question                 _f_00031_                
+{                         ,<Ident>                  }[  0] Assign             -> Question                 _f_00031_                
+{                         ,<Priority,Term>          }[  0] Assign             -> Question                 _f_00031_                
+{                         ,<Priority,Unary>         }[  0] Assign             -> Question                 _f_00031_                
+{                         ,<Priority,IncDec>        }[  0] Assign             -> Question                 _f_00031_                
+{                         ,<Syntax,IdentFunc>       }[  0] Assign             -> Question                 _f_00031_                
+{                         ,<Syntax,IdentArr>        }[  0] Assign             -> Question                 _f_00031_                
+{                         ,<Syntax,Cast>            }[  0] Assign             -> Question                 _f_00031_                
+{                         ,<Syntax,CastUnary>       }[  0] Assign             -> Question                 _f_00031_                
+{_f_00031_                ,<Separator,RightCramp>   }[  1] _f_00031_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00031_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00031_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00031_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00031_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00031_          -> 
+{                         ,<Priority,Assign>        }[  0] _f_00031_          -> <Priority,Assign>        Assign                   { MAKE(Binary); }        
+{Question                 ,<Separator,LeftBracket>  }[  0] Question           -> AndAnd                   _f_00034_                _f_00035_                
+{                         ,<Integer>                }[  0] Question           -> AndAnd                   _f_00034_                _f_00035_                
+{                         ,<Number>                 }[  0] Question           -> AndAnd                   _f_00034_                _f_00035_                
+{                         ,<Ident>                  }[  0] Question           -> AndAnd                   _f_00034_                _f_00035_                
+{                         ,<Priority,Term>          }[  0] Question           -> AndAnd                   _f_00034_                _f_00035_                
+{                         ,<Priority,Unary>         }[  0] Question           -> AndAnd                   _f_00034_                _f_00035_                
+{                         ,<Priority,IncDec>        }[  0] Question           -> AndAnd                   _f_00034_                _f_00035_                
+{                         ,<Syntax,IdentFunc>       }[  0] Question           -> AndAnd                   _f_00034_                _f_00035_                
+{                         ,<Syntax,IdentArr>        }[  0] Question           -> AndAnd                   _f_00034_                _f_00035_                
+{                         ,<Syntax,Cast>            }[  0] Question           -> AndAnd                   _f_00034_                _f_00035_                
+{                         ,<Syntax,CastUnary>       }[  0] Question           -> AndAnd                   _f_00034_                _f_00035_                
+{_f_00033_                ,<Priority,OrOr>          }[  0] _f_00033_          -> <Priority,OrOr>          AndAnd                   { MAKE(Binary); }        
+{_f_00034_                ,<Separator,RightCramp>   }[  1] _f_00034_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00034_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00034_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00034_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00034_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00034_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00034_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00034_          -> 
+{                         ,<Priority,OrOr>          }[  0] _f_00034_          -> _f_00033_                _f_00034_                
+{_f_00035_                ,<Separator,RightCramp>   }[  1] _f_00035_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00035_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00035_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00035_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00035_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00035_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00035_          -> 
+{                         ,<Priority,Question>      }[  0] _f_00035_          -> <Priority,Question>      { CODE(BegQuestion); }   ExpressionValue          <Separator,Colon>        { CODE(MidQuestion); }   Question                 { MAKE(Question); }      
+{AndAnd                   ,<Separator,LeftBracket>  }[  0] AndAnd             -> Or                       _f_00038_                
+{                         ,<Integer>                }[  0] AndAnd             -> Or                       _f_00038_                
+{                         ,<Number>                 }[  0] AndAnd             -> Or                       _f_00038_                
+{                         ,<Ident>                  }[  0] AndAnd             -> Or                       _f_00038_                
+{                         ,<Priority,Term>          }[  0] AndAnd             -> Or                       _f_00038_                
+{                         ,<Priority,Unary>         }[  0] AndAnd             -> Or                       _f_00038_                
+{                         ,<Priority,IncDec>        }[  0] AndAnd             -> Or                       _f_00038_                
+{                         ,<Syntax,IdentFunc>       }[  0] AndAnd             -> Or                       _f_00038_                
+{                         ,<Syntax,IdentArr>        }[  0] AndAnd             -> Or                       _f_00038_                
+{                         ,<Syntax,Cast>            }[  0] AndAnd             -> Or                       _f_00038_                
+{                         ,<Syntax,CastUnary>       }[  0] AndAnd             -> Or                       _f_00038_                
+{_f_00037_                ,<Priority,AndAnd>        }[  0] _f_00037_          -> <Priority,AndAnd>        Or                       { MAKE(Binary); }        
+{_f_00038_                ,<Separator,RightCramp>   }[  1] _f_00038_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00038_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00038_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00038_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00038_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00038_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00038_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00038_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00038_          -> 
+{                         ,<Priority,AndAnd>        }[  0] _f_00038_          -> _f_00037_                _f_00038_                
+{Or                       ,<Separator,LeftBracket>  }[  0] Or                 -> XOr                      _f_00041_                
+{                         ,<Integer>                }[  0] Or                 -> XOr                      _f_00041_                
+{                         ,<Number>                 }[  0] Or                 -> XOr                      _f_00041_                
+{                         ,<Ident>                  }[  0] Or                 -> XOr                      _f_00041_                
+{                         ,<Priority,Term>          }[  0] Or                 -> XOr                      _f_00041_                
+{                         ,<Priority,Unary>         }[  0] Or                 -> XOr                      _f_00041_                
+{                         ,<Priority,IncDec>        }[  0] Or                 -> XOr                      _f_00041_                
+{                         ,<Syntax,IdentFunc>       }[  0] Or                 -> XOr                      _f_00041_                
+{                         ,<Syntax,IdentArr>        }[  0] Or                 -> XOr                      _f_00041_                
+{                         ,<Syntax,Cast>            }[  0] Or                 -> XOr                      _f_00041_                
+{                         ,<Syntax,CastUnary>       }[  0] Or                 -> XOr                      _f_00041_                
+{_f_00040_                ,<Priority,Or>            }[  0] _f_00040_          -> <Priority,Or>            XOr                      { MAKE(Binary); }        
+{_f_00041_                ,<Separator,RightCramp>   }[  1] _f_00041_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00041_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00041_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00041_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00041_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00041_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00041_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00041_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00041_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00041_          -> 
+{                         ,<Priority,Or>            }[  0] _f_00041_          -> _f_00040_                _f_00041_                
+{XOr                      ,<Separator,LeftBracket>  }[  0] XOr                -> And                      _f_00044_                
+{                         ,<Integer>                }[  0] XOr                -> And                      _f_00044_                
+{                         ,<Number>                 }[  0] XOr                -> And                      _f_00044_                
+{                         ,<Ident>                  }[  0] XOr                -> And                      _f_00044_                
+{                         ,<Priority,Term>          }[  0] XOr                -> And                      _f_00044_                
+{                         ,<Priority,Unary>         }[  0] XOr                -> And                      _f_00044_                
+{                         ,<Priority,IncDec>        }[  0] XOr                -> And                      _f_00044_                
+{                         ,<Syntax,IdentFunc>       }[  0] XOr                -> And                      _f_00044_                
+{                         ,<Syntax,IdentArr>        }[  0] XOr                -> And                      _f_00044_                
+{                         ,<Syntax,Cast>            }[  0] XOr                -> And                      _f_00044_                
+{                         ,<Syntax,CastUnary>       }[  0] XOr                -> And                      _f_00044_                
+{_f_00043_                ,<Priority,XOr>           }[  0] _f_00043_          -> <Priority,XOr>           And                      { MAKE(Binary); }        
+{_f_00044_                ,<Separator,RightCramp>   }[  1] _f_00044_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00044_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00044_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00044_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00044_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00044_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00044_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00044_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00044_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00044_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00044_          -> 
+{                         ,<Priority,XOr>           }[  0] _f_00044_          -> _f_00043_                _f_00044_                
+{And                      ,<Separator,LeftBracket>  }[  0] And                -> Equ                      _f_00047_                
+{                         ,<Integer>                }[  0] And                -> Equ                      _f_00047_                
+{                         ,<Number>                 }[  0] And                -> Equ                      _f_00047_                
+{                         ,<Ident>                  }[  0] And                -> Equ                      _f_00047_                
+{                         ,<Priority,Term>          }[  0] And                -> Equ                      _f_00047_                
+{                         ,<Priority,Unary>         }[  0] And                -> Equ                      _f_00047_                
+{                         ,<Priority,IncDec>        }[  0] And                -> Equ                      _f_00047_                
+{                         ,<Syntax,IdentFunc>       }[  0] And                -> Equ                      _f_00047_                
+{                         ,<Syntax,IdentArr>        }[  0] And                -> Equ                      _f_00047_                
+{                         ,<Syntax,Cast>            }[  0] And                -> Equ                      _f_00047_                
+{                         ,<Syntax,CastUnary>       }[  0] And                -> Equ                      _f_00047_                
+{_f_00046_                ,<Priority,And>           }[  0] _f_00046_          -> <Priority,And>           Equ                      { MAKE(Binary); }        
+{_f_00047_                ,<Separator,RightCramp>   }[  1] _f_00047_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00047_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00047_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00047_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00047_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00047_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00047_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00047_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00047_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00047_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00047_          -> 
+{                         ,<Priority,XOr>           }[  1] _f_00047_          -> 
+{                         ,<Priority,And>           }[  0] _f_00047_          -> _f_00046_                _f_00047_                
+{Equ                      ,<Separator,LeftBracket>  }[  0] Equ                -> Compare                  _f_00050_                
+{                         ,<Integer>                }[  0] Equ                -> Compare                  _f_00050_                
+{                         ,<Number>                 }[  0] Equ                -> Compare                  _f_00050_                
+{                         ,<Ident>                  }[  0] Equ                -> Compare                  _f_00050_                
+{                         ,<Priority,Term>          }[  0] Equ                -> Compare                  _f_00050_                
+{                         ,<Priority,Unary>         }[  0] Equ                -> Compare                  _f_00050_                
+{                         ,<Priority,IncDec>        }[  0] Equ                -> Compare                  _f_00050_                
+{                         ,<Syntax,IdentFunc>       }[  0] Equ                -> Compare                  _f_00050_                
+{                         ,<Syntax,IdentArr>        }[  0] Equ                -> Compare                  _f_00050_                
+{                         ,<Syntax,Cast>            }[  0] Equ                -> Compare                  _f_00050_                
+{                         ,<Syntax,CastUnary>       }[  0] Equ                -> Compare                  _f_00050_                
+{_f_00049_                ,<Priority,Equ>           }[  0] _f_00049_          -> <Priority,Equ>           Compare                  { MAKE(Binary); }        
+{_f_00050_                ,<Separator,RightCramp>   }[  1] _f_00050_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00050_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00050_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00050_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00050_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00050_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00050_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00050_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00050_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00050_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00050_          -> 
+{                         ,<Priority,XOr>           }[  1] _f_00050_          -> 
+{                         ,<Priority,And>           }[  1] _f_00050_          -> 
+{                         ,<Priority,Equ>           }[  0] _f_00050_          -> _f_00049_                _f_00050_                
+{Compare                  ,<Separator,LeftBracket>  }[  0] Compare            -> Shift                    _f_00053_                
+{                         ,<Integer>                }[  0] Compare            -> Shift                    _f_00053_                
+{                         ,<Number>                 }[  0] Compare            -> Shift                    _f_00053_                
+{                         ,<Ident>                  }[  0] Compare            -> Shift                    _f_00053_                
+{                         ,<Priority,Term>          }[  0] Compare            -> Shift                    _f_00053_                
+{                         ,<Priority,Unary>         }[  0] Compare            -> Shift                    _f_00053_                
+{                         ,<Priority,IncDec>        }[  0] Compare            -> Shift                    _f_00053_                
+{                         ,<Syntax,IdentFunc>       }[  0] Compare            -> Shift                    _f_00053_                
+{                         ,<Syntax,IdentArr>        }[  0] Compare            -> Shift                    _f_00053_                
+{                         ,<Syntax,Cast>            }[  0] Compare            -> Shift                    _f_00053_                
+{                         ,<Syntax,CastUnary>       }[  0] Compare            -> Shift                    _f_00053_                
+{_f_00052_                ,<Priority,Compare>       }[  0] _f_00052_          -> <Priority,Compare>       Shift                    { MAKE(Binary); }        
+{_f_00053_                ,<Separator,RightCramp>   }[  1] _f_00053_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00053_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00053_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00053_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00053_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00053_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00053_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00053_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00053_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00053_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00053_          -> 
+{                         ,<Priority,XOr>           }[  1] _f_00053_          -> 
+{                         ,<Priority,And>           }[  1] _f_00053_          -> 
+{                         ,<Priority,Equ>           }[  1] _f_00053_          -> 
+{                         ,<Priority,Compare>       }[  0] _f_00053_          -> _f_00052_                _f_00053_                
+{Shift                    ,<Separator,LeftBracket>  }[  0] Shift              -> Term                     _f_00056_                
+{                         ,<Integer>                }[  0] Shift              -> Term                     _f_00056_                
+{                         ,<Number>                 }[  0] Shift              -> Term                     _f_00056_                
+{                         ,<Ident>                  }[  0] Shift              -> Term                     _f_00056_                
+{                         ,<Priority,Term>          }[  0] Shift              -> Term                     _f_00056_                
+{                         ,<Priority,Unary>         }[  0] Shift              -> Term                     _f_00056_                
+{                         ,<Priority,IncDec>        }[  0] Shift              -> Term                     _f_00056_                
+{                         ,<Syntax,IdentFunc>       }[  0] Shift              -> Term                     _f_00056_                
+{                         ,<Syntax,IdentArr>        }[  0] Shift              -> Term                     _f_00056_                
+{                         ,<Syntax,Cast>            }[  0] Shift              -> Term                     _f_00056_                
+{                         ,<Syntax,CastUnary>       }[  0] Shift              -> Term                     _f_00056_                
+{_f_00055_                ,<Priority,Shift>         }[  0] _f_00055_          -> <Priority,Shift>         Term                     { MAKE(Binary); }        
+{_f_00056_                ,<Separator,RightCramp>   }[  1] _f_00056_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00056_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00056_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00056_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00056_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00056_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00056_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00056_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00056_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00056_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00056_          -> 
+{                         ,<Priority,XOr>           }[  1] _f_00056_          -> 
+{                         ,<Priority,And>           }[  1] _f_00056_          -> 
+{                         ,<Priority,Equ>           }[  1] _f_00056_          -> 
+{                         ,<Priority,Compare>       }[  1] _f_00056_          -> 
+{                         ,<Priority,Shift>         }[  0] _f_00056_          -> _f_00055_                _f_00056_                
+{Term                     ,<Separator,LeftBracket>  }[  0] Term               -> Factor                   _f_00059_                
+{                         ,<Integer>                }[  0] Term               -> Factor                   _f_00059_                
+{                         ,<Number>                 }[  0] Term               -> Factor                   _f_00059_                
+{                         ,<Ident>                  }[  0] Term               -> Factor                   _f_00059_                
+{                         ,<Priority,Term>          }[  0] Term               -> Factor                   _f_00059_                
+{                         ,<Priority,Unary>         }[  0] Term               -> Factor                   _f_00059_                
+{                         ,<Priority,IncDec>        }[  0] Term               -> Factor                   _f_00059_                
+{                         ,<Syntax,IdentFunc>       }[  0] Term               -> Factor                   _f_00059_                
+{                         ,<Syntax,IdentArr>        }[  0] Term               -> Factor                   _f_00059_                
+{                         ,<Syntax,Cast>            }[  0] Term               -> Factor                   _f_00059_                
+{                         ,<Syntax,CastUnary>       }[  0] Term               -> Factor                   _f_00059_                
+{_f_00058_                ,<Priority,Term>          }[  0] _f_00058_          -> <Priority,Term>          Factor                   { MAKE(Binary); }        
+{_f_00059_                ,<Separator,RightCramp>   }[  1] _f_00059_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00059_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00059_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00059_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00059_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00059_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00059_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00059_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00059_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00059_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00059_          -> 
+{                         ,<Priority,XOr>           }[  1] _f_00059_          -> 
+{                         ,<Priority,And>           }[  1] _f_00059_          -> 
+{                         ,<Priority,Equ>           }[  1] _f_00059_          -> 
+{                         ,<Priority,Compare>       }[  1] _f_00059_          -> 
+{                         ,<Priority,Shift>         }[  1] _f_00059_          -> 
+{                         ,<Priority,Term>          }[  0] _f_00059_          -> _f_00058_                _f_00059_                
+{Factor                   ,<Separator,LeftBracket>  }[  0] Factor             -> Unary                    _f_00062_                
+{                         ,<Integer>                }[  0] Factor             -> Unary                    _f_00062_                
+{                         ,<Number>                 }[  0] Factor             -> Unary                    _f_00062_                
+{                         ,<Ident>                  }[  0] Factor             -> Unary                    _f_00062_                
+{                         ,<Priority,Term>          }[  0] Factor             -> Unary                    _f_00062_                
+{                         ,<Priority,Unary>         }[  0] Factor             -> Unary                    _f_00062_                
+{                         ,<Priority,IncDec>        }[  0] Factor             -> Unary                    _f_00062_                
+{                         ,<Syntax,IdentFunc>       }[  0] Factor             -> Unary                    _f_00062_                
+{                         ,<Syntax,IdentArr>        }[  0] Factor             -> Unary                    _f_00062_                
+{                         ,<Syntax,Cast>            }[  0] Factor             -> Unary                    _f_00062_                
+{                         ,<Syntax,CastUnary>       }[  0] Factor             -> Unary                    _f_00062_                
+{_f_00061_                ,<Priority,Factor>        }[  0] _f_00061_          -> <Priority,Factor>        Unary                    { MAKE(Binary); }        
+{_f_00062_                ,<Separator,RightCramp>   }[  1] _f_00062_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00062_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00062_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00062_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00062_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00062_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00062_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00062_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00062_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00062_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00062_          -> 
+{                         ,<Priority,XOr>           }[  1] _f_00062_          -> 
+{                         ,<Priority,And>           }[  1] _f_00062_          -> 
+{                         ,<Priority,Equ>           }[  1] _f_00062_          -> 
+{                         ,<Priority,Compare>       }[  1] _f_00062_          -> 
+{                         ,<Priority,Shift>         }[  1] _f_00062_          -> 
+{                         ,<Priority,Term>          }[  1] _f_00062_          -> 
+{                         ,<Priority,Factor>        }[  0] _f_00062_          -> _f_00061_                _f_00062_                
+{Unary                    ,<Separator,LeftBracket>  }[  4] Unary              -> _f_00064_                _f_00068_                
+{                         ,<Integer>                }[  4] Unary              -> _f_00064_                _f_00068_                
+{                         ,<Number>                 }[  4] Unary              -> _f_00064_                _f_00068_                
+{                         ,<Ident>                  }[  4] Unary              -> _f_00064_                _f_00068_                
+{                         ,<Priority,Term>          }[  1] Unary              -> <Priority,Term>          Unary                    { MAKE(Unary); }         
+{                         ,<Priority,Unary>         }[  0] Unary              -> <Priority,Unary>         Unary                    { MAKE(Unary); }         
+{                         ,<Priority,IncDec>        }[  2] Unary              -> <Priority,IncDec>        Unary                    { MAKE(Unary); }         
+{                         ,<Syntax,IdentFunc>       }[  4] Unary              -> _f_00064_                _f_00068_                
+{                         ,<Syntax,IdentArr>        }[  4] Unary              -> _f_00064_                _f_00068_                
+{                         ,<Syntax,Cast>            }[  4] Unary              -> _f_00064_                _f_00068_                
+{                         ,<Syntax,CastUnary>       }[  3] Unary              -> <Syntax,CastUnary>       Unary                    { MAKE(Cast); }          
+{_f_00064_                ,<Separator,LeftBracket>  }[  6] _f_00064_          -> Primary                  
+{                         ,<Integer>                }[  0] _f_00064_          -> <Integer>                { MAKE(Number); }        
+{                         ,<Number>                 }[  1] _f_00064_          -> <Number>                 { MAKE(Number); }        
+{                         ,<Ident>                  }[  5] _f_00064_          -> <Ident>                  { MAKE(Ident); }         
+{                         ,<Syntax,IdentFunc>       }[  3] _f_00064_          -> <Syntax,IdentFunc>       _f_00067_                
+{                         ,<Syntax,IdentArr>        }[  2] _f_00064_          -> <Syntax,IdentArr>        { MAKE(BegIndexLL); }    _f_00066_                { MAKE(EndIndex); }      
+{                         ,<Syntax,Cast>            }[  4] _f_00064_          -> <Syntax,Cast>            Primary                  { MAKE(Cast); }          
+{_f_00065_                ,<Separator,LeftScrape>   }[  0] _f_00065_          -> <Separator,LeftScrape>   ExpressionValue          <Separator,RightScrape>  { MAKE(IndexLL); }       
+{_f_00066_                ,<Separator,RightCramp>   }[  1] _f_00066_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00066_          -> 
+{                         ,<Separator,LeftScrape>   }[  0] _f_00066_          -> _f_00065_                _f_00066_                
+{                         ,<Separator,RightScrape>  }[  1] _f_00066_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00066_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00066_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00066_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00066_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00066_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00066_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00066_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00066_          -> 
+{                         ,<Priority,XOr>           }[  1] _f_00066_          -> 
+{                         ,<Priority,And>           }[  1] _f_00066_          -> 
+{                         ,<Priority,Equ>           }[  1] _f_00066_          -> 
+{                         ,<Priority,Compare>       }[  1] _f_00066_          -> 
+{                         ,<Priority,Shift>         }[  1] _f_00066_          -> 
+{                         ,<Priority,Term>          }[  1] _f_00066_          -> 
+{                         ,<Priority,Factor>        }[  1] _f_00066_          -> 
+{                         ,<Priority,IncDec>        }[  1] _f_00066_          -> 
+{_f_00067_                ,<Separator,LeftBracket>  }[  1] _f_00067_          -> <Separator,LeftBracket>  { CODE(Part,512); }      Expressions              { TREE(ExpressionSLL,512); }                      <Separator,RightBracket> { MAKE(Params,1); }      
+{                         ,<Syntax,EmptyBracket>    }[  0] _f_00067_          -> <Syntax,EmptyBracket>    { MAKE(Params); }        
+{_f_00068_                ,<Separator,RightCramp>   }[  1] _f_00068_          -> 
+{                         ,<Separator,RightBracket> }[  1] _f_00068_          -> 
+{                         ,<Separator,RightScrape>  }[  1] _f_00068_          -> 
+{                         ,<Separator,Comma>        }[  1] _f_00068_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00068_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00068_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00068_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00068_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00068_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00068_          -> 
+{                         ,<Priority,Or>            }[  1] _f_00068_          -> 
+{                         ,<Priority,XOr>           }[  1] _f_00068_          -> 
+{                         ,<Priority,And>           }[  1] _f_00068_          -> 
+{                         ,<Priority,Equ>           }[  1] _f_00068_          -> 
+{                         ,<Priority,Compare>       }[  1] _f_00068_          -> 
+{                         ,<Priority,Shift>         }[  1] _f_00068_          -> 
+{                         ,<Priority,Term>          }[  1] _f_00068_          -> 
+{                         ,<Priority,Factor>        }[  1] _f_00068_          -> 
+{                         ,<Priority,IncDec>        }[  0] _f_00068_          -> <Priority,IncDec>        { MAKE(IncDec); }        
+{Primary                  ,<Separator,LeftBracket>  }[  0] Primary            -> <Separator,LeftBracket>  { CODE(Part); }          Expressions              { TREE(ExpressionSLL); } <Separator,RightBracket> { TREE(Primary); }       
+{DefineSemi               ,<Syntax,DefArr>          }[  0] DefineSemi         -> _f_00071_                { MAKE(Define); }        DefItem                  { TREE(AddToList); }     _f_00073_                { CODE(EndDefine); }     <Separator,Semicolon>    
+{                         ,<Syntax,DefVar>          }[  0] DefineSemi         -> _f_00071_                { MAKE(Define); }        DefItem                  { TREE(AddToList); }     _f_00073_                { CODE(EndDefine); }     <Separator,Semicolon>    
+{_f_00071_                ,<Syntax,DefArr>          }[  0] _f_00071_          -> <Syntax,DefArr>          
+{                         ,<Syntax,DefVar>          }[  1] _f_00071_          -> <Syntax,DefVar>          
+{_f_00072_                ,<Separator,Comma>        }[  0] _f_00072_          -> <Separator,Comma>        DefItem                  { TREE(AddToList); }     
+{_f_00073_                ,<Separator,Comma>        }[  0] _f_00073_          -> _f_00072_                _f_00073_                
+{                         ,<Separator,Semicolon>    }[  1] _f_00073_          -> 
+{ExprSemi                 ,<Separator,LeftBracket>  }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Integer>                }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Number>                 }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Ident>                  }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Priority,Term>          }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Priority,Unary>         }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Priority,IncDec>        }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Syntax,IdentFunc>       }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Syntax,IdentArr>        }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Syntax,Cast>            }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{                         ,<Syntax,CastUnary>       }[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+{DefExpr                  ,<Separator,LeftCramp>    }[  2] DefExpr            -> _f_00076_                
+{                         ,<Separator,LeftBracket>  }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Separator,Semicolon>    }[  0] DefExpr            -> <Separator,Semicolon>    { TREE(NodeNull); }      
+{                         ,<Integer>                }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Number>                 }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Ident>                  }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Reserv,For>             }[  2] DefExpr            -> _f_00076_                
+{                         ,<Reserv,While>           }[  2] DefExpr            -> _f_00076_                
+{                         ,<Reserv,If>              }[  2] DefExpr            -> _f_00076_                
+{                         ,<Reserv,Do>              }[  2] DefExpr            -> _f_00076_                
+{                         ,<Reserv,GoTo>            }[  2] DefExpr            -> _f_00076_                
+{                         ,<Reserv,Continue>        }[  2] DefExpr            -> _f_00076_                
+{                         ,<Reserv,Break>           }[  2] DefExpr            -> _f_00076_                
+{                         ,<Reserv,Return>          }[  2] DefExpr            -> _f_00076_                
+{                         ,<Priority,Term>          }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Priority,Unary>         }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Priority,IncDec>        }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Syntax,IdentFunc>       }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Syntax,IdentArr>        }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Syntax,DefArr>          }[  1] DefExpr            -> DefineSemi               
+{                         ,<Syntax,DefVar>          }[  1] DefExpr            -> DefineSemi               
+{                         ,<Syntax,Label>           }[  2] DefExpr            -> _f_00076_                
+{                         ,<Syntax,Cast>            }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Syntax,CastUnary>       }[  3] DefExpr            -> ExprSemi                 
+{                         ,<Syntax,EmptyCramp>      }[  2] DefExpr            -> _f_00076_                
+{_f_00076_                ,<Separator,LeftCramp>    }[  9] _f_00076_          -> _f_00082_                
+{                         ,<Reserv,For>             }[  4] _f_00076_          -> <Reserv,For>             <Separator,LeftBracket>  { MAKE(BegFor); }        _f_00078_                { CODE(PrefFor); }       _f_00079_                { CODE(ConditionFor); }  _f_00080_                { CODE(PostFor); }       DefExpr                  { MAKE(For); }           
+{                         ,<Reserv,While>           }[  3] _f_00076_          -> <Reserv,While>           { MAKE(BegWhile); }      <Separator,LeftBracket>  Condition                <Separator,RightBracket> { CODE(MidWhile); }      DefExpr                  { MAKE(While); }         
+{                         ,<Reserv,If>              }[  1] _f_00076_          -> <Reserv,If>              <Separator,LeftBracket>  { CODE(BegIf); }         Condition                <Separator,RightBracket> { CODE(Then); }          DefExpr                  _f_00077_                
+{                         ,<Reserv,Do>              }[  2] _f_00076_          -> <Reserv,Do>              { MAKE(BegDo); }         DefExpr                  <Reserv,While>           <Separator,LeftBracket>  { CODE(MidDo); }         Condition                <Separator,RightBracket> <Separator,Semicolon>    { MAKE(Do); }            
+{                         ,<Reserv,GoTo>            }[  5] _f_00076_          -> <Reserv,GoTo>            <Ident>                  <Separator,Semicolon>    { MAKE(GoTo); }          
+{                         ,<Reserv,Continue>        }[  7] _f_00076_          -> <Reserv,Continue>        <Separator,Semicolon>    { MAKE(Continue); }      
+{                         ,<Reserv,Break>           }[  6] _f_00076_          -> <Reserv,Break>           <Separator,Semicolon>    { MAKE(Break); }         
+{                         ,<Reserv,Return>          }[  8] _f_00076_          -> <Reserv,Return>          _f_00081_                <Separator,Semicolon>    
+{                         ,<Syntax,Label>           }[  0] _f_00076_          -> <Syntax,Label>           <Separator,Colon>        { CODE(Label); }         DefExpr                  { TREE(Label); }         
+{                         ,<Syntax,EmptyCramp>      }[  9] _f_00076_          -> _f_00082_                
+{_f_00077_                ,<Separator,LeftCramp>    }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Separator,RightCramp>   }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Separator,LeftBracket>  }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Separator,Semicolon>    }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Integer>                }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Number>                 }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Ident>                  }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Reserv,For>             }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Reserv,While>           }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Reserv,If>              }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Reserv,Else>            }[  0] _f_00077_          -> <Reserv,Else>            { CODE(Else); }          DefExpr                  { MAKE(If,1); }          
+{                         ,<Reserv,Do>              }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Reserv,GoTo>            }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Reserv,Continue>        }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Reserv,Break>           }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Reserv,Return>          }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Priority,Term>          }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Priority,Unary>         }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Priority,IncDec>        }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Syntax,IdentFunc>       }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Syntax,IdentArr>        }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Syntax,DefArr>          }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Syntax,DefVar>          }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Syntax,Label>           }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Syntax,Cast>            }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Syntax,CastUnary>       }[  1] _f_00077_          -> { MAKE(If); }            
+{                         ,<Syntax,EmptyCramp>      }[  1] _f_00077_          -> { MAKE(If); }            
+{_f_00078_                ,<Separator,LeftBracket>  }[  2] _f_00078_          -> ExprSemi                 
+{                         ,<Separator,Semicolon>    }[  0] _f_00078_          -> <Separator,Semicolon>    { TREE(NodeNull); }      
+{                         ,<Integer>                }[  2] _f_00078_          -> ExprSemi                 
+{                         ,<Number>                 }[  2] _f_00078_          -> ExprSemi                 
+{                         ,<Ident>                  }[  2] _f_00078_          -> ExprSemi                 
+{                         ,<Priority,Term>          }[  2] _f_00078_          -> ExprSemi                 
+{                         ,<Priority,Unary>         }[  2] _f_00078_          -> ExprSemi                 
+{                         ,<Priority,IncDec>        }[  2] _f_00078_          -> ExprSemi                 
+{                         ,<Syntax,IdentFunc>       }[  2] _f_00078_          -> ExprSemi                 
+{                         ,<Syntax,IdentArr>        }[  2] _f_00078_          -> ExprSemi                 
+{                         ,<Syntax,DefArr>          }[  1] _f_00078_          -> DefineSemi               
+{                         ,<Syntax,DefVar>          }[  1] _f_00078_          -> DefineSemi               
+{                         ,<Syntax,Cast>            }[  2] _f_00078_          -> ExprSemi                 
+{                         ,<Syntax,CastUnary>       }[  2] _f_00078_          -> ExprSemi                 
+{_f_00079_                ,<Separator,LeftBracket>  }[  1] _f_00079_          -> Condition                <Separator,Semicolon>    
+{                         ,<Separator,Semicolon>    }[  0] _f_00079_          -> <Separator,Semicolon>    { MAKE(NodeNull); }      
+{                         ,<Integer>                }[  1] _f_00079_          -> Condition                <Separator,Semicolon>    
+{                         ,<Number>                 }[  1] _f_00079_          -> Condition                <Separator,Semicolon>    
+{                         ,<Ident>                  }[  1] _f_00079_          -> Condition                <Separator,Semicolon>    
+{                         ,<Priority,Term>          }[  1] _f_00079_          -> Condition                <Separator,Semicolon>    
+{                         ,<Priority,Unary>         }[  1] _f_00079_          -> Condition                <Separator,Semicolon>    
+{                         ,<Priority,IncDec>        }[  1] _f_00079_          -> Condition                <Separator,Semicolon>    
+{                         ,<Syntax,IdentFunc>       }[  1] _f_00079_          -> Condition                <Separator,Semicolon>    
+{                         ,<Syntax,IdentArr>        }[  1] _f_00079_          -> Condition                <Separator,Semicolon>    
+{                         ,<Syntax,DefVar>          }[  1] _f_00079_          -> Condition                <Separator,Semicolon>    
+{                         ,<Syntax,Cast>            }[  1] _f_00079_          -> Condition                <Separator,Semicolon>    
+{                         ,<Syntax,CastUnary>       }[  1] _f_00079_          -> Condition                <Separator,Semicolon>    
+{_f_00080_                ,<Separator,LeftBracket>  }[  1] _f_00080_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Separator,RightBracket> }[  0] _f_00080_          -> <Separator,RightBracket> { TREE(NodeNull); }      
+{                         ,<Integer>                }[  1] _f_00080_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Number>                 }[  1] _f_00080_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Ident>                  }[  1] _f_00080_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Priority,Term>          }[  1] _f_00080_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Priority,Unary>         }[  1] _f_00080_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Priority,IncDec>        }[  1] _f_00080_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Syntax,IdentFunc>       }[  1] _f_00080_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Syntax,IdentArr>        }[  1] _f_00080_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Syntax,Cast>            }[  1] _f_00080_          -> ExpressionExpression     <Separator,RightBracket> 
+{                         ,<Syntax,CastUnary>       }[  1] _f_00080_          -> ExpressionExpression     <Separator,RightBracket> 
+{_f_00081_                ,<Separator,LeftBracket>  }[  0] _f_00081_          -> ExpressionValue          { MAKE(Return,1); }      
+{                         ,<Separator,Semicolon>    }[  1] _f_00081_          -> { MAKE(Return); }        
+{                         ,<Integer>                }[  0] _f_00081_          -> ExpressionValue          { MAKE(Return,1); }      
+{                         ,<Number>                 }[  0] _f_00081_          -> ExpressionValue          { MAKE(Return,1); }      
+{                         ,<Ident>                  }[  0] _f_00081_          -> ExpressionValue          { MAKE(Return,1); }      
+{                         ,<Priority,Term>          }[  0] _f_00081_          -> ExpressionValue          { MAKE(Return,1); }      
+{                         ,<Priority,Unary>         }[  0] _f_00081_          -> ExpressionValue          { MAKE(Return,1); }      
+{                         ,<Priority,IncDec>        }[  0] _f_00081_          -> ExpressionValue          { MAKE(Return,1); }      
+{                         ,<Syntax,IdentFunc>       }[  0] _f_00081_          -> ExpressionValue          { MAKE(Return,1); }      
+{                         ,<Syntax,IdentArr>        }[  0] _f_00081_          -> ExpressionValue          { MAKE(Return,1); }      
+{                         ,<Syntax,Cast>            }[  0] _f_00081_          -> ExpressionValue          { MAKE(Return,1); }      
+{                         ,<Syntax,CastUnary>       }[  0] _f_00081_          -> ExpressionValue          { MAKE(Return,1); }      
+{_f_00082_                ,<Separator,LeftCramp>    }[  1] _f_00082_          -> <Separator,LeftCramp>    { MAKE(Compaund); }      StmExpr                  <Separator,RightCramp>   { CODE(EndBlock); }      { TREE(AddToList); }     
+{                         ,<Syntax,EmptyCramp>      }[  0] _f_00082_          -> <Syntax,EmptyCramp>      { MAKE(Compaund); }      { CODE(EndBlock); }      
+{StmExpr                  ,<Separator,LeftCramp>    }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Separator,RightCramp>   }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Separator,LeftBracket>  }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Separator,Semicolon>    }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Integer>                }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Number>                 }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Ident>                  }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Reserv,For>             }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Reserv,While>           }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Reserv,If>              }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Reserv,Do>              }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Reserv,GoTo>            }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Reserv,Continue>        }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Reserv,Break>           }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Reserv,Return>          }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Priority,Term>          }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Priority,Unary>         }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Priority,IncDec>        }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Syntax,IdentFunc>       }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Syntax,IdentArr>        }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Syntax,DefArr>          }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Syntax,DefVar>          }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Syntax,Label>           }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Syntax,Cast>            }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Syntax,CastUnary>       }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{                         ,<Syntax,EmptyCramp>      }[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+{_f_00084_                ,<Separator,LeftCramp>    }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Separator,LeftBracket>  }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Separator,Semicolon>    }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Integer>                }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Number>                 }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Ident>                  }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Reserv,For>             }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Reserv,While>           }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Reserv,If>              }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Reserv,Do>              }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Reserv,GoTo>            }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Reserv,Continue>        }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Reserv,Break>           }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Reserv,Return>          }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Priority,Term>          }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Priority,Unary>         }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Priority,IncDec>        }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Syntax,IdentFunc>       }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Syntax,IdentArr>        }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Syntax,DefArr>          }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Syntax,DefVar>          }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Syntax,Label>           }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Syntax,Cast>            }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Syntax,CastUnary>       }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{                         ,<Syntax,EmptyCramp>      }[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+{_f_00085_                ,<Separator,LeftCramp>    }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Separator,RightCramp>   }[  1] _f_00085_          -> 
+{                         ,<Separator,LeftBracket>  }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Separator,Semicolon>    }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Integer>                }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Number>                 }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Ident>                  }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Reserv,For>             }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Reserv,While>           }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Reserv,If>              }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Reserv,Do>              }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Reserv,GoTo>            }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Reserv,Continue>        }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Reserv,Break>           }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Reserv,Return>          }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Priority,Term>          }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Priority,Unary>         }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Priority,IncDec>        }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Syntax,IdentFunc>       }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Syntax,IdentArr>        }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Syntax,DefArr>          }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Syntax,DefVar>          }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Syntax,Label>           }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Syntax,Cast>            }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Syntax,CastUnary>       }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{                         ,<Syntax,EmptyCramp>      }[  0] _f_00085_          -> _f_00084_                _f_00085_                
+{ExpressionExpression     ,<Separator,LeftBracket>  }[  0] ExpressionExpression-> { CODE(Part,16); }       Expressions              { TREE(ExpressionSLL,16); }                       
+{                         ,<Integer>                }[  0] ExpressionExpression-> { CODE(Part,16); }       Expressions              { TREE(ExpressionSLL,16); }                       
+{                         ,<Number>                 }[  0] ExpressionExpression-> { CODE(Part,16); }       Expressions              { TREE(ExpressionSLL,16); }                       
+{                         ,<Ident>                  }[  0] ExpressionExpression-> { CODE(Part,16); }       Expressions              { TREE(ExpressionSLL,16); }                       
+{                         ,<Priority,Term>          }[  0] ExpressionExpression-> { CODE(Part,16); }       Expressions              { TREE(ExpressionSLL,16); }                       
+{                         ,<Priority,Unary>         }[  0] ExpressionExpression-> { CODE(Part,16); }       Expressions              { TREE(ExpressionSLL,16); }                       
+{                         ,<Priority,IncDec>        }[  0] ExpressionExpression-> { CODE(Part,16); }       Expressions              { TREE(ExpressionSLL,16); }                       
+{                         ,<Syntax,IdentFunc>       }[  0] ExpressionExpression-> { CODE(Part,16); }       Expressions              { TREE(ExpressionSLL,16); }                       
+{                         ,<Syntax,IdentArr>        }[  0] ExpressionExpression-> { CODE(Part,16); }       Expressions              { TREE(ExpressionSLL,16); }                       
+{                         ,<Syntax,Cast>            }[  0] ExpressionExpression-> { CODE(Part,16); }       Expressions              { TREE(ExpressionSLL,16); }                       
+{                         ,<Syntax,CastUnary>       }[  0] ExpressionExpression-> { CODE(Part,16); }       Expressions              { TREE(ExpressionSLL,16); }                       
+{ExpressionValue          ,<Separator,LeftBracket>  }[  0] ExpressionValue    -> { CODE(Part,256); }      Expressions              { TREE(ExpressionSLL,256); }                      
+{                         ,<Integer>                }[  0] ExpressionValue    -> { CODE(Part,256); }      Expressions              { TREE(ExpressionSLL,256); }                      
+{                         ,<Number>                 }[  0] ExpressionValue    -> { CODE(Part,256); }      Expressions              { TREE(ExpressionSLL,256); }                      
+{                         ,<Ident>                  }[  0] ExpressionValue    -> { CODE(Part,256); }      Expressions              { TREE(ExpressionSLL,256); }                      
+{                         ,<Priority,Term>          }[  0] ExpressionValue    -> { CODE(Part,256); }      Expressions              { TREE(ExpressionSLL,256); }                      
+{                         ,<Priority,Unary>         }[  0] ExpressionValue    -> { CODE(Part,256); }      Expressions              { TREE(ExpressionSLL,256); }                      
+{                         ,<Priority,IncDec>        }[  0] ExpressionValue    -> { CODE(Part,256); }      Expressions              { TREE(ExpressionSLL,256); }                      
+{                         ,<Syntax,IdentFunc>       }[  0] ExpressionValue    -> { CODE(Part,256); }      Expressions              { TREE(ExpressionSLL,256); }                      
+{                         ,<Syntax,IdentArr>        }[  0] ExpressionValue    -> { CODE(Part,256); }      Expressions              { TREE(ExpressionSLL,256); }                      
+{                         ,<Syntax,Cast>            }[  0] ExpressionValue    -> { CODE(Part,256); }      Expressions              { TREE(ExpressionSLL,256); }                      
+{                         ,<Syntax,CastUnary>       }[  0] ExpressionValue    -> { CODE(Part,256); }      Expressions              { TREE(ExpressionSLL,256); }                      

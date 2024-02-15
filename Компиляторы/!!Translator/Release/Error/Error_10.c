@@ -1,0 +1,4 @@
+// Condition
+void f()
+{
+}

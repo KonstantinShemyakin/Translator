@@ -1,0 +1,11 @@
+C:/Translator/CMakeFiles/TranBuilder.dir
+C:/Translator/CMakeFiles/Translator.dir
+C:/Translator/CMakeFiles/TranRules.dir
+C:/Translator/CMakeFiles/TranParse.dir
+C:/Translator/CMakeFiles/TranSyntax.dir
+C:/Translator/CMakeFiles/TranGrammar.dir
+C:/Translator/CMakeFiles/TreeNodeCode.dir
+C:/Translator/CMakeFiles/TranYACC.dir
+C:/Translator/CMakeFiles/TableBuilder.dir
+C:/Translator/CMakeFiles/edit_cache.dir
+C:/Translator/CMakeFiles/rebuild_cache.dir

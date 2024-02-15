@@ -1,0 +1,15 @@
+﻿  ASyntax.cpp
+  Grammar.cpp
+  GrammarStock.cpp
+  InHelp.cpp
+  Maker.cpp
+  Parse.cpp
+  Rules.cpp
+  SNodes.cpp
+  Tables.cpp
+  TNodes.cpp
+  TSemantic.cpp
+  Variables.cpp
+  stdafx.cpp
+p:\!!translator\treenodecode\stdafx.cpp(5): fatal error C1083: Cannot open include file: 'stdafx.h': No such file or directory
+  Generating Code...

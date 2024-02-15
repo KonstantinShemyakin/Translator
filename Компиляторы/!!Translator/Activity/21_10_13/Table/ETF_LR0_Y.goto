@@ -1,0 +1,26 @@
+{Situation: 00000         ,E                        } -> Situation: 00001         
+{                         ,T                        } -> Situation: 00002         
+{                         ,F                        } -> Situation: 00003         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00004         
+{                         ,<Integer>                } -> Situation: 00005         
+{                         ,<Number>                 } -> Situation: 00006         
+{Situation: 00001         ,<Priority,Term>          } -> Situation: 00007         
+{Situation: 00002         ,<Priority,Factor>        } -> Situation: 00008         
+{Situation: 00004         ,E                        } -> Situation: 00009         
+{                         ,T                        } -> Situation: 00002         
+{                         ,F                        } -> Situation: 00003         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00004         
+{                         ,<Integer>                } -> Situation: 00005         
+{                         ,<Number>                 } -> Situation: 00006         
+{Situation: 00007         ,T                        } -> Situation: 00010         
+{                         ,F                        } -> Situation: 00003         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00004         
+{                         ,<Integer>                } -> Situation: 00005         
+{                         ,<Number>                 } -> Situation: 00006         
+{Situation: 00008         ,F                        } -> Situation: 00011         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00004         
+{                         ,<Integer>                } -> Situation: 00005         
+{                         ,<Number>                 } -> Situation: 00006         
+{Situation: 00009         ,<Separator,RightBracket> } -> Situation: 00012         
+{                         ,<Priority,Term>          } -> Situation: 00007         
+{Situation: 00010         ,<Priority,Factor>        } -> Situation: 00008         

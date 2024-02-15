@@ -1,0 +1,41 @@
+Ident Index 'program'  '.' 'begin'  'end'  'type'  '='  'var'   'ARRAY' ':'  ';' ‘,’  '['  ']' ‘+’ ‘*’ ‘('  ‘)’ ;
+Prog Block Declaration_List Statement_List Declaration Type_Decl_List Type_List 
+Type_Decl Type_Defin Type_Use Var_List Var_Decl Ident_List Ident_Tail Statement 
+Variable Access Expression_Tail Expression Term Term_Tail Factor ;
+Prog ;
+Prog 'program' Ident Block '.' ;
+Block 'begin' Declaration_List Statement_List 'end' ;
+Declaration_List Declaration Declaration_List ;
+Declaration_List $ ;
+Statement_List Statement Statement_List ;
+Statement_List $ ;
+Declaration 'type'  Type_Decl_List ;
+Type_Decl_List Type_Decl Type_List ;
+Type_List Type_Decl_List ;
+Type_List $ ;
+Type_Decl Ident '=' Type_Defin ;
+Type_Defin 'ARRAY' Index 'OF' Type_Defin ;
+Type_Defin Type_Use ;
+Type_Use Ident ;
+Declaration 'var'  Var_Decl_List ;
+Var_Decl_List Var_Decl Var_List ;
+Var_List Var_Decl_List ;
+Var_List $ ;
+Var_Decl Ident_List ':' Type_Use ';' ;
+Ident_List Ident Ident_Tail ;
+Ident_Tail ‘,’ Ident Ident_Tail ;
+Ident_Tail $ ;
+Statement Block ';' ;
+Statement Variable '=' Expression ';' ;
+Variable Ident Access ;
+Access '[' Expression ']' Access ;
+Access $ ;
+Expression Term Expression_Tail ;
+Expression_Tail ‘+’ Term Expression_Tail ;
+Expression_Tail $ ;
+Term Factor Term_Tail ;
+Term_Tail ‘*’ Factor Term_Tail ;
+Term_Tail $ ;
+Factor Variable ;
+Factor ‘(‘Expression ‘)’ ;
+

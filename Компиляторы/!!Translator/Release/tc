@@ -1,0 +1,2229 @@
+
+C:\Translator\Release>TranGrammar.exe 1 0820 text.cpp ..\Table\LL_TC_LL1.tab 
+TranGrammar.exe
+1
+0820
+text.cpp
+..\Table\LL_TC_LL1.tab
+
+
+--- M table --- <740> ---
+
+--- Grammar --- formula=93, produce=161, item=386, maker=121, used=0, vector=0, type=010370 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=0, Main=Tree
+
+level=63, step=12524
+--- semantic_tree = 1, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0968, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=Semicolon   , pos=1003, line=021, column=064, len=01, value=62, text=;
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=0074, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=0629, line=017, column=111, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=Semicolon   , pos=0971, line=021, column=032, len=01, value=62, text=;
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=Semicolon   , pos=1003, line=021, column=064, len=01, value=62, text=;
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=1290, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=1917, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=1929, line=036, column=058, len=02, value=51, text=++
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.118s
+
+C:\Translator\Release>move text.code ..\Code\LL_Tree_LL1.code 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 2 0820 text.cpp ..\Table\LL_TC_LL1.tab 
+TranGrammar.exe
+2
+0820
+text.cpp
+..\Table\LL_TC_LL1.tab
+
+
+--- M table --- <740> ---
+
+--- Grammar --- formula=93, produce=161, item=386, maker=121, used=0, vector=0, type=010370 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=0, Main=Code
+
+level=63, step=12524
+--- semantic_tree = 0, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 12 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Separator , type=Semicolon   , pos=0971, line=021, column=032, len=01, value=62, text=;
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=Semicolon   , pos=1003, line=021, column=064, len=01, value=62, text=;
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.095s
+
+C:\Translator\Release>move text.code ..\Code\LL_Code_LL1.code 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 11 0830 text.cpp ..\Table\LL_TC_LR0.tab 
+TranGrammar.exe
+11
+0830
+text.cpp
+..\Table\LL_TC_LR0.tab
+
+
+--- LR table --- <322,4205> ---
+
+--- Grammar --- formula=133, produce=201, item=321, maker=100, used=0, vector=5, type=010370 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=FLex, Method=0, Main=Tree
+
+level=154, step=11484
+--- semantic_tree = 1, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0000, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0000, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=Semicolon   , pos=0000, line=021, column=064, len=01, value=62, text=;
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=0000, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0000, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=0000, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=0000, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=0000, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0000, line=019, column=018, len=01, value=39, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=0000, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=0000, line=017, column=111, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=Semicolon   , pos=0000, line=021, column=032, len=01, value=62, text=;
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=Semicolon   , pos=0000, line=021, column=064, len=01, value=62, text=;
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=0000, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=0000, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=0000, line=036, column=058, len=02, value=51, text=++
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=0000, line=058, column=000, len=00
+
+time: 0.027s
+
+C:\Translator\Release>move text.code ..\Code\LL_Tree_LR0.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\LL_Tree_LR0.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 2 0820 text.cpp ..\Table\LL_TC_LR0.tab 
+TranGrammar.exe
+2
+0820
+text.cpp
+..\Table\LL_TC_LR0.tab
+
+
+--- LR table --- <322,4205> ---
+
+--- Grammar --- formula=133, produce=201, item=321, maker=100, used=0, vector=5, type=010370 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=0, Main=Code
+
+level=154, step=11484
+--- semantic_tree = 0, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 12 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Separator , type=Semicolon   , pos=0971, line=021, column=032, len=01, value=62, text=;
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=Semicolon   , pos=1003, line=021, column=064, len=01, value=62, text=;
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.100s
+
+C:\Translator\Release>move text.code ..\Code\LL_Code_LR0.code 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 1 0830 text.cpp ..\Table\LL_TC_LR1.tab 
+TranGrammar.exe
+1
+0830
+text.cpp
+..\Table\LL_TC_LR1.tab
+
+
+--- LR table --- <1362,15336> ---
+
+--- Grammar --- formula=133, produce=201, item=321, maker=100, used=0, vector=5, type=010370 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=0, Main=Tree
+
+level=154, step=11484
+--- semantic_tree = 1, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0968, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=Semicolon   , pos=1003, line=021, column=064, len=01, value=62, text=;
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=0074, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=0629, line=017, column=111, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=Semicolon   , pos=0971, line=021, column=032, len=01, value=62, text=;
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=Semicolon   , pos=1003, line=021, column=064, len=01, value=62, text=;
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=1290, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=1917, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=1929, line=036, column=058, len=02, value=51, text=++
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.142s
+
+C:\Translator\Release>move text.code ..\Code\LL_Tree_LR1.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\LL_Tree_LR1.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 12 0820 text.cpp ..\Table\LL_TC_LR1.tab 
+TranGrammar.exe
+12
+0820
+text.cpp
+..\Table\LL_TC_LR1.tab
+
+
+--- LR table --- <1362,15336> ---
+
+--- Grammar --- formula=133, produce=201, item=321, maker=100, used=0, vector=5, type=010370 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=FLex, Method=0, Main=Code
+
+level=154, step=11484
+--- semantic_tree = 0, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 12 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0000, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Separator , type=Semicolon   , pos=0000, line=021, column=032, len=01, value=62, text=;
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=Semicolon   , pos=0000, line=021, column=064, len=01, value=62, text=;
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=0000, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0000, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=0000, line=037, column=054, len=01, text=i
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0000, line=019, column=018, len=01, value=39, text=u
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=0000, line=058, column=000, len=00
+
+time: 0.054s
+
+C:\Translator\Release>move text.code ..\Code\LL_Code_LR1.code 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 1 0830 text.cpp ..\Table\LL_TC_LALR.tab 
+TranGrammar.exe
+1
+0830
+text.cpp
+..\Table\LL_TC_LALR.tab
+
+
+--- LR table --- <322,3997> ---
+
+--- Grammar --- formula=133, produce=201, item=321, maker=100, used=0, vector=5, type=010370 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=0, Main=Tree
+
+level=154, step=11484
+--- semantic_tree = 1, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0968, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=Semicolon   , pos=1003, line=021, column=064, len=01, value=62, text=;
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=0074, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=0629, line=017, column=111, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=Semicolon   , pos=0971, line=021, column=032, len=01, value=62, text=;
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=Semicolon   , pos=1003, line=021, column=064, len=01, value=62, text=;
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=1290, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=1917, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=1929, line=036, column=058, len=02, value=51, text=++
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.110s
+
+C:\Translator\Release>move text.code ..\Code\LL_Tree_LALR.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\LL_Tree_LALR.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 2 0820 text.cpp ..\Table\LL_TC_LALR.tab 
+TranGrammar.exe
+2
+0820
+text.cpp
+..\Table\LL_TC_LALR.tab
+
+
+--- LR table --- <322,3997> ---
+
+--- Grammar --- formula=133, produce=201, item=321, maker=100, used=0, vector=5, type=010370 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=0, Main=Code
+
+level=154, step=11484
+--- semantic_tree = 0, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 12 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Separator , type=Semicolon   , pos=0971, line=021, column=032, len=01, value=62, text=;
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=Semicolon   , pos=1003, line=021, column=064, len=01, value=62, text=;
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.105s
+
+C:\Translator\Release>move text.code ..\Code\LL_Code_LALR.code 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 13 1830 text.cpp ..\Table\LL_SN_LL1.tab 
+TranGrammar.exe
+13
+1830
+text.cpp
+..\Table\LL_SN_LL1.tab
+
+
+--- M table --- <740> ---
+
+--- Grammar --- formula=93, produce=161, item=377, maker=112, used=0, vector=0, type=010C70 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=FLex, Method=0, Main=Node
+
+level=237, step=24722
+--- semantic_tree = 0, syntax_tree = 1, lexemes = 0 ----
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0000, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0000, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=Reserv    , type=Return      , pos=0000, line=021, column=058, len=06, value=14, text=return
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=0000, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0000, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=0000, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=0000, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=0000, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0000, line=019, column=018, len=01, value=39, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=0000, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Continue    , pos=0000, line=017, column=101, len=08, value=12, text=continue
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0000, line=021, column=022, len=06, value=14, text=return
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0000, line=021, column=058, len=06, value=14, text=return
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=0000, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=0000, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=0000, line=036, column=058, len=02, value=51, text=++
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=0000, line=058, column=000, len=00
+
+time: 0.030s
+
+C:\Translator\Release>move text.code ..\Code\LL_Node_LL1.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\LL_Node_LL1.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.node ..\Code\LL_Node_LL1.node 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 5 1830 text.cpp ..\Table\LL_SN_LL1.tab 
+TranGrammar.exe
+5
+1830
+text.cpp
+..\Table\LL_SN_LL1.tab
+
+
+--- M table --- <740> ---
+
+--- Grammar --- formula=93, produce=161, item=377, maker=112, used=0, vector=0, type=010C70 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=0, Main=Made
+
+level=237, step=24722
+--- semantic_tree = 0, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0968, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=Reserv    , type=Return      , pos=0997, line=021, column=058, len=06, value=14, text=return
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=0074, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Continue    , pos=0619, line=017, column=101, len=08, value=12, text=continue
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0961, line=021, column=022, len=06, value=14, text=return
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0997, line=021, column=058, len=06, value=14, text=return
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=1290, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=1917, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=1929, line=036, column=058, len=02, value=51, text=++
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.098s
+
+C:\Translator\Release>move text.code ..\Code\LL_Made_LL1.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\LL_Made_LL1.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 11 0830 text.cpp ..\Table\LR_TC_LR0.tab 
+TranGrammar.exe
+11
+0830
+text.cpp
+..\Table\LR_TC_LR0.tab
+
+
+--- LR table --- <262,3598> ---
+
+--- Grammar --- formula=98, produce=169, item=288, maker=110, used=0, vector=5, type=010372 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=FLex, Method=0, Main=Tree
+
+level=24, step=7453
+--- semantic_tree = 1, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0000, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0000, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=RightCramp  , pos=0000, line=021, column=066, len=01, value=54, text=}
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=0000, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0000, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=0000, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=0000, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=0000, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0000, line=019, column=018, len=01, value=39, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=0000, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=0000, line=017, column=111, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=0000, line=021, column=034, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=0000, line=021, column=066, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=0000, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=0000, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=0000, line=036, column=058, len=02, value=51, text=++
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=0000, line=058, column=000, len=00
+
+time: 0.025s
+
+C:\Translator\Release>move text.code ..\Code\LR_Tree_LR0.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\LR_Tree_LR0.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 12 0820 text.cpp ..\Table\LR_TC_LR0.tab 
+TranGrammar.exe
+12
+0820
+text.cpp
+..\Table\LR_TC_LR0.tab
+
+
+--- LR table --- <262,3598> ---
+
+--- Grammar --- formula=98, produce=169, item=288, maker=110, used=0, vector=5, type=010372 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=FLex, Method=0, Main=Code
+
+level=24, step=7453
+--- semantic_tree = 0, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 10 ----
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Separator , type=RightCramp  , pos=0000, line=021, column=034, len=01, value=54, text=}
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=RightCramp  , pos=0000, line=021, column=066, len=01, value=54, text=}
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=0000, line=025, column=029, len=04, value=0, text=f011
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=0000, line=037, column=054, len=01, text=i
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0000, line=019, column=018, len=01, value=39, text=u
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=0000, line=058, column=000, len=00
+
+time: 0.020s
+
+C:\Translator\Release>move text.code ..\Code\LR_Code_LR0.code 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 14 1830 text.cpp ..\Table\LR_UR_LR0.tab 
+TranGrammar.exe
+14
+1830
+text.cpp
+..\Table\LR_UR_LR0.tab
+
+
+--- LR table --- <255,3477> ---
+
+--- Grammar --- formula=85, produce=156, item=281, maker=92, used=0, vector=4, type=011072 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=FLex, Method=0, Main=Turn
+
+level=25, step=7423
+--- semantic_tree = 1, syntax_tree = 1, lexemes = 0 ----
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0000, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0000, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=None      , type=00          , pos=0000, line=000, column=000, len=00
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=0000, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0000, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=0000, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=0000, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=0000, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0000, line=019, column=018, len=01, value=39, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=0000, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=None      , type=00          , pos=0000, line=000, column=000, len=00
+
+Error:Impossible    , error=33, value=00
+group=None      , type=00          , pos=0000, line=000, column=000, len=00
+
+Error:Impossible    , error=33, value=00
+group=None      , type=00          , pos=0000, line=000, column=000, len=00
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=0000, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=0000, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=0000, line=036, column=058, len=02, value=51, text=++
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=0000, line=058, column=000, len=00
+
+time: 0.027s
+
+C:\Translator\Release>move text.code ..\Code\LR_Turn_LR0.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\LR_Turn_LR0.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.node ..\Code\LR_Turn_LR0.node 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 1 0830 text.cpp ..\Table\LR_TC_LR1.tab 
+TranGrammar.exe
+1
+0830
+text.cpp
+..\Table\LR_TC_LR1.tab
+
+
+--- LR table --- <1015,13469> ---
+
+--- Grammar --- formula=98, produce=169, item=288, maker=110, used=0, vector=5, type=010372 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=0, Main=Tree
+
+level=24, step=7453
+--- semantic_tree = 1, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0968, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=RightCramp  , pos=1005, line=021, column=066, len=01, value=54, text=}
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=0074, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=0629, line=017, column=111, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=0973, line=021, column=034, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=1005, line=021, column=066, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=1290, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=1917, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=1929, line=036, column=058, len=02, value=51, text=++
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.132s
+
+C:\Translator\Release>move text.code ..\Code\LR_Tree_LR1.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\LR_Tree_LR1.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 2 0820 text.cpp ..\Table\LR_TC_LR1.tab 
+TranGrammar.exe
+2
+0820
+text.cpp
+..\Table\LR_TC_LR1.tab
+
+
+--- LR table --- <1015,13469> ---
+
+--- Grammar --- formula=98, produce=169, item=288, maker=110, used=0, vector=5, type=010372 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=0, Main=Code
+
+level=24, step=7453
+--- semantic_tree = 0, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 10 ----
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Separator , type=RightCramp  , pos=0973, line=021, column=034, len=01, value=54, text=}
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=RightCramp  , pos=1005, line=021, column=066, len=01, value=54, text=}
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.127s
+
+C:\Translator\Release>move text.code ..\Code\LR_Code_LR1.code 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 14 1830 text.cpp ..\Table\LR_UR_LR1.tab 
+TranGrammar.exe
+14
+1830
+text.cpp
+..\Table\LR_UR_LR1.tab
+
+
+--- LR table --- <984,12737> ---
+
+--- Grammar --- formula=85, produce=156, item=281, maker=92, used=0, vector=4, type=011072 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=FLex, Method=0, Main=Turn
+
+level=25, step=7423
+--- semantic_tree = 1, syntax_tree = 1, lexemes = 0 ----
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0000, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0000, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=None      , type=00          , pos=0000, line=000, column=000, len=00
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=0000, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0000, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0000, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=0000, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=0000, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=0000, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0000, line=019, column=018, len=01, value=39, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=0000, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=None      , type=00          , pos=0000, line=000, column=000, len=00
+
+Error:Impossible    , error=33, value=00
+group=None      , type=00          , pos=0000, line=000, column=000, len=00
+
+Error:Impossible    , error=33, value=00
+group=None      , type=00          , pos=0000, line=000, column=000, len=00
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=0000, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=0000, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=0000, line=036, column=058, len=02, value=51, text=++
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=0000, line=058, column=000, len=00
+
+time: 0.052s
+
+C:\Translator\Release>move text.code ..\Code\LR_Turn_LR1.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\LR_Turn_LR1.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.node ..\Code\LR_Turn_LR1.node 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 1 0830 text.cpp ..\Table\LR_TC_LALR.tab 
+TranGrammar.exe
+1
+0830
+text.cpp
+..\Table\LR_TC_LALR.tab
+
+
+--- LR table --- <262,3595> ---
+
+--- Grammar --- formula=98, produce=169, item=288, maker=110, used=0, vector=5, type=010372 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=0, Main=Tree
+
+level=24, step=7453
+--- semantic_tree = 1, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0968, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=RightCramp  , pos=1005, line=021, column=066, len=01, value=54, text=}
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=0074, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=0629, line=017, column=111, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=0973, line=021, column=034, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=1005, line=021, column=066, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=1290, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=1917, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=1929, line=036, column=058, len=02, value=51, text=++
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.105s
+
+C:\Translator\Release>move text.code ..\Code\LR_Tree_LALR.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\LR_Tree_LALR.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 2 0820 text.cpp ..\Table\LR_TC_LALR.tab 
+TranGrammar.exe
+2
+0820
+text.cpp
+..\Table\LR_TC_LALR.tab
+
+
+--- LR table --- <262,3595> ---
+
+--- Grammar --- formula=98, produce=169, item=288, maker=110, used=0, vector=5, type=010372 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=0, Main=Code
+
+level=24, step=7453
+--- semantic_tree = 0, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 10 ----
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Separator , type=RightCramp  , pos=0973, line=021, column=034, len=01, value=54, text=}
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=RightCramp  , pos=1005, line=021, column=066, len=01, value=54, text=}
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.102s
+
+C:\Translator\Release>move text.code ..\Code\LR_Code_LALR.code 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 4 1830 text.cpp ..\Table\LR_UR_LALR.tab 
+TranGrammar.exe
+4
+1830
+text.cpp
+..\Table\LR_UR_LALR.tab
+
+
+--- LR table --- <255,3414> ---
+
+--- Grammar --- formula=85, produce=156, item=281, maker=92, used=0, vector=4, type=011072 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=0, Main=Turn
+
+level=25, step=7423
+--- semantic_tree = 1, syntax_tree = 1, lexemes = 0 ----
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0968, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=None      , type=00          , pos=0000, line=000, column=000, len=00
+
+Error:DuplicateBody , error=22, value=00
+group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=0074, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=None      , type=00          , pos=0000, line=000, column=000, len=00
+
+Error:Impossible    , error=33, value=00
+group=None      , type=00          , pos=0000, line=000, column=000, len=00
+
+Error:Impossible    , error=33, value=00
+group=None      , type=00          , pos=0000, line=000, column=000, len=00
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefVar      , pos=1290, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=1917, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Priority  , type=IncDec      , pos=1929, line=036, column=058, len=02, value=51, text=++
+
+store_parse=498, restore_parse=204, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.108s
+
+C:\Translator\Release>move text.code ..\Code\LR_Turn_LALR.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\LR_Turn_LALR.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.node ..\Code\LR_Turn_LALR.node 
+        1 file(s) moved.
+
+C:\Translator\Release>rem TranGrammar.exe 1 0830 text.cpp ..\Table\NR_TC_LR0.tab 
+
+C:\Translator\Release>rem move text.code ..\Code\NR_Tree_LR0.code 
+
+C:\Translator\Release>rem move text.tree ..\Code\NR_Tree_LR0.tree 
+
+C:\Translator\Release>rem TranGrammar.exe 2 0820 text.cpp ..\Table\NR_TC_LR0.tab 
+
+C:\Translator\Release>rem move text.code ..\Code\NR_Code_LR0.code 
+
+C:\Translator\Release>rem TranGrammar.exe 3 1830 text.cpp ..\Table\NR_SN_LR0.tab 
+
+C:\Translator\Release>rem move text.code ..\Code\NR_Node_LR0.code 
+
+C:\Translator\Release>rem move text.tree ..\Code\NR_Node_LR0.tree 
+
+C:\Translator\Release>rem move text.node ..\Code\NR_Node_LR0.node 
+
+C:\Translator\Release>TranGrammar.exe 11 0830 text.cpp ..\Table\NR_TC_LR1.tab 
+TranGrammar.exe
+11
+0830
+text.cpp
+..\Table\NR_TC_LR1.tab
+
+
+--- LR table --- <1136,21293> ---
+
+--- Grammar --- formula=134, produce=241, item=410, maker=139, used=0, vector=9, type=040302 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=FLex, Method=0, Main=Tree
+
+level=26, step=7621
+--- semantic_tree = 1, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0000, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0000, line=000, column=027, len=02, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0000, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=RightCramp  , pos=0000, line=021, column=066, len=01, value=54, text=}
+
+Error:DuplicateBody , error=22, value=00
+group=Ident     , type=00          , pos=0000, line=025, column=029, len=04, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0000, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0000, line=025, column=051, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0000, line=027, column=021, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0000, line=027, column=045, len=02, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0000, line=027, column=049, len=02, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=0000, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=0000, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=0000, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Ident     , type=00          , pos=0000, line=019, column=018, len=01, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefType     , pos=0000, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=0000, line=017, column=111, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=0000, line=021, column=034, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=0000, line=021, column=066, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefType     , pos=0000, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostDec     , pos=0000, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostInc     , pos=0000, line=036, column=058, len=02, value=51, text=++
+
+store_parse=0, restore_parse=0, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=0000, line=058, column=000, len=00
+
+time: 0.069s
+
+C:\Translator\Release>move text.code ..\Code\NR_Tree_LR1.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\NR_Tree_LR1.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 2 0820 text.cpp ..\Table\NR_TC_LR1.tab 
+TranGrammar.exe
+2
+0820
+text.cpp
+..\Table\NR_TC_LR1.tab
+
+
+--- LR table --- <1136,21293> ---
+
+--- Grammar --- formula=134, produce=241, item=410, maker=139, used=0, vector=9, type=040302 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=0, Main=Code
+
+level=26, step=7621
+--- semantic_tree = 0, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 10 ----
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0027, line=000, column=027, len=02, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Separator , type=RightCramp  , pos=0973, line=021, column=034, len=01, value=54, text=}
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=RightCramp  , pos=1005, line=021, column=066, len=01, value=54, text=}
+
+Error:DuplicateBody , error=22, value=00
+group=Ident     , type=00          , pos=1221, line=025, column=029, len=04, text=f011
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1243, line=025, column=051, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1367, line=027, column=021, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1391, line=027, column=045, len=02, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1395, line=027, column=049, len=02, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:UnknownBody   , error=23, value=00
+group=Ident     , type=00          , pos=0710, line=019, column=018, len=01, text=u
+
+store_parse=0, restore_parse=0, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.158s
+
+C:\Translator\Release>move text.code ..\Code\NR_Code_LR1.code 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 3 1830 text.cpp ..\Table\NR_SN_LR1.tab 
+TranGrammar.exe
+3
+1830
+text.cpp
+..\Table\NR_SN_LR1.tab
+
+
+--- LR table --- <1057,20285> ---
+
+--- Grammar --- formula=106, produce=213, item=375, maker=122, used=0, vector=0, type=040C02 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=0, Main=Node
+
+level=18, step=7267
+--- semantic_tree = 0, syntax_tree = 1, lexemes = 0 ----
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0027, line=000, column=027, len=02, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0968, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=Reserv    , type=Return      , pos=0997, line=021, column=058, len=06, value=14, text=return
+
+Error:DuplicateBody , error=22, value=00
+group=Ident     , type=00          , pos=1221, line=025, column=029, len=04, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1243, line=025, column=051, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1367, line=027, column=021, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1391, line=027, column=045, len=02, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1395, line=027, column=049, len=02, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Ident     , type=00          , pos=0710, line=019, column=018, len=01, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefType     , pos=0074, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Continue    , pos=0619, line=017, column=101, len=08, value=12, text=continue
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0961, line=021, column=022, len=06, value=14, text=return
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0997, line=021, column=058, len=06, value=14, text=return
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefType     , pos=1290, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostDec     , pos=1917, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostInc     , pos=1929, line=036, column=058, len=02, value=51, text=++
+
+store_parse=0, restore_parse=0, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.156s
+
+C:\Translator\Release>move text.code ..\Code\NR_Node_LR1.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\NR_Node_LR1.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.node ..\Code\NR_Node_LR1.node 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 15 1830 text.cpp ..\Table\NR_SN_LR1.tab 
+TranGrammar.exe
+15
+1830
+text.cpp
+..\Table\NR_SN_LR1.tab
+
+
+--- LR table --- <1057,20285> ---
+
+--- Grammar --- formula=106, produce=213, item=375, maker=122, used=0, vector=0, type=040C02 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=FLex, Method=0, Main=Made
+
+level=18, step=7267
+--- semantic_tree = 0, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0000, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0000, line=000, column=027, len=02, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0000, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=Reserv    , type=Return      , pos=0000, line=021, column=058, len=06, value=14, text=return
+
+Error:DuplicateBody , error=22, value=00
+group=Ident     , type=00          , pos=0000, line=025, column=029, len=04, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0000, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0000, line=025, column=051, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0000, line=027, column=021, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0000, line=027, column=045, len=02, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0000, line=027, column=049, len=02, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=0000, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=0000, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=0000, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Ident     , type=00          , pos=0000, line=019, column=018, len=01, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefType     , pos=0000, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Continue    , pos=0000, line=017, column=101, len=08, value=12, text=continue
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0000, line=021, column=022, len=06, value=14, text=return
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0000, line=021, column=058, len=06, value=14, text=return
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefType     , pos=0000, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostDec     , pos=0000, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostInc     , pos=0000, line=036, column=058, len=02, value=51, text=++
+
+store_parse=0, restore_parse=0, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=0000, line=058, column=000, len=00
+
+time: 0.070s
+
+C:\Translator\Release>move text.code ..\Code\NR_Made_LR1.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\NR_Made_LR1.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 1 0830 text.cpp ..\Table\NR_TC_LALR.tab 
+TranGrammar.exe
+1
+0830
+text.cpp
+..\Table\NR_TC_LALR.tab
+
+
+--- LR table --- <357,5302> ---
+
+--- Grammar --- formula=134, produce=241, item=410, maker=139, used=0, vector=9, type=040302 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=0, Main=Tree
+
+level=26, step=7621
+--- semantic_tree = 1, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0027, line=000, column=027, len=02, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0968, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=RightCramp  , pos=1005, line=021, column=066, len=01, value=54, text=}
+
+Error:DuplicateBody , error=22, value=00
+group=Ident     , type=00          , pos=1221, line=025, column=029, len=04, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1243, line=025, column=051, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1367, line=027, column=021, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1391, line=027, column=045, len=02, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1395, line=027, column=049, len=02, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Ident     , type=00          , pos=0710, line=019, column=018, len=01, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefType     , pos=0074, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=0629, line=017, column=111, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=0973, line=021, column=034, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=RightCramp  , pos=1005, line=021, column=066, len=01, value=54, text=}
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefType     , pos=1290, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostDec     , pos=1917, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostInc     , pos=1929, line=036, column=058, len=02, value=51, text=++
+
+store_parse=0, restore_parse=0, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.117s
+
+C:\Translator\Release>move text.code ..\Code\NR_Tree_LALR.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\NR_Tree_LALR.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 2 0820 text.cpp ..\Table\NR_TC_LALR.tab 
+TranGrammar.exe
+2
+0820
+text.cpp
+..\Table\NR_TC_LALR.tab
+
+
+--- LR table --- <357,5302> ---
+
+--- Grammar --- formula=134, produce=241, item=410, maker=139, used=0, vector=9, type=040302 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=0, Main=Code
+
+level=26, step=7621
+--- semantic_tree = 0, syntax_tree = 0, lexemes = 0 ----
+
+--- ErrorTable ---- 10 ----
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0027, line=000, column=027, len=02, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Separator , type=RightCramp  , pos=0973, line=021, column=034, len=01, value=54, text=}
+
+Error:NoValue       , error=07, value=00
+group=Separator , type=RightCramp  , pos=1005, line=021, column=066, len=01, value=54, text=}
+
+Error:DuplicateBody , error=22, value=00
+group=Ident     , type=00          , pos=1221, line=025, column=029, len=04, text=f011
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1243, line=025, column=051, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1367, line=027, column=021, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1391, line=027, column=045, len=02, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1395, line=027, column=049, len=02, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:UnknownBody   , error=23, value=00
+group=Ident     , type=00          , pos=0710, line=019, column=018, len=01, text=u
+
+store_parse=0, restore_parse=0, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.109s
+
+C:\Translator\Release>move text.code ..\Code\NR_Code_LALR.code 
+        1 file(s) moved.
+
+C:\Translator\Release>TranGrammar.exe 3 1830 text.cpp ..\Table\NR_SN_LALR.tab 
+TranGrammar.exe
+3
+1830
+text.cpp
+..\Table\NR_SN_LALR.tab
+
+
+--- LR table --- <323,4965> ---
+
+--- Grammar --- formula=106, produce=213, item=375, maker=122, used=0, vector=0, type=040C02 ---
+option_mode: Phase=Three, Grammar=LL, Generate=Code, Semantic=BlockTable, Lexer=Mine, Method=0, Main=Node
+
+level=18, step=7267
+--- semantic_tree = 0, syntax_tree = 1, lexemes = 0 ----
+
+--- ErrorTable ---- 21 ----
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=0027, line=000, column=027, len=02, text=L1
+
+Error:UnknownCast   , error=19, value=00
+group=Integer   , type=00          , pos=0968, line=021, column=029, len=03, value=123, text=123
+
+Error:NoValue       , error=07, value=00
+group=Reserv    , type=Return      , pos=0997, line=021, column=058, len=06, value=14, text=return
+
+Error:DuplicateBody , error=22, value=00
+group=Ident     , type=00          , pos=1221, line=025, column=029, len=04, text=f011
+
+Error:ErrorLabel    , error=26, value=00
+group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1243, line=025, column=051, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1367, line=027, column=021, len=02, text=L1
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1391, line=027, column=045, len=02, text=L3
+
+Error:UnusedLabel   , error=16777243, value=00
+group=Ident     , type=00          , pos=1395, line=027, column=049, len=02, text=L4
+
+Error:DuplicateIdent, error=15, value=00
+group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+
+Error:Uninitialized , error=31, value=00
+group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m
+
+Error:UnknownBody   , error=23, value=00
+group=Ident     , type=00          , pos=0710, line=019, column=018, len=01, text=u
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefType     , pos=0074, line=000, column=074, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Continue    , pos=0619, line=017, column=101, len=08, value=12, text=continue
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0961, line=021, column=022, len=06, value=14, text=return
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0997, line=021, column=058, len=06, value=14, text=return
+
+Error:Impossible    , error=33, value=00
+group=Syntax    , type=DefType     , pos=1290, line=025, column=098, len=03, value=65555, text=int
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostDec     , pos=1917, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostInc     , pos=1929, line=036, column=058, len=02, value=51, text=++
+
+store_parse=0, restore_parse=0, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=2722, line=058, column=000, len=00
+
+time: 0.114s
+
+C:\Translator\Release>move text.code ..\Code\NR_Node_LALR.code 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.tree ..\Code\NR_Node_LALR.tree 
+        1 file(s) moved.
+
+C:\Translator\Release>move text.node ..\Code\NR_Node_LALR.node 
+        1 file(s) moved.

@@ -1,0 +1,19 @@
+TNodeDefFunc    line=002, column=005, len=01, text=f
+Call       Command        0                                                   , func  = f             
+None      
+Goto       Command        2 Label          0 Integer        2                 , goto  = If            
+None      
+None      
+
+    -1
+Label          1 refer =     0     1
+Label          2 refer =     0     4
+
+Cast       Oper           0 Global         0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper           1 Integer        0 Integer        1                 , oper  = Add           , type = CInt      
+Binary     Oper           2 Oper           0 Oper           1                 , oper  = Assign        , type = CInt      
+
+Integer        0 12
+Integer        1 13
+Integer        2 2
+

@@ -1,0 +1,14 @@
+
+--- Grammar --- formula=4, produce=7, item=13, maker=0, used=4, vector=0, type=050022 ---
+
+S_:                      used=1, 00000
+[  0] S_                 -> E                        
+E:                       used=3, 00001
+[  0] E                  -> E                        <Priority,Term>          T                        
+[  1] E                  -> T                        
+T:                       used=3, 00002
+[  0] T                  -> T                        <Priority,Factor>        F                        
+[  1] T                  -> F                        
+F:                       used=2, 00003
+[  0] F                  -> <Separator,LeftBracket>  E                        <Separator,RightBracket> 
+[  1] F                  -> <Ident>                  

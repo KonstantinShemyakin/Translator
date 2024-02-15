@@ -1,0 +1,71 @@
+{S_                       ,<Separator,LeftBracket>  }[  0] S_                 -> Assign                   
+{                         ,<Integer>                }[  0] S_                 -> Assign                   
+{                         ,<Number>                 }[  0] S_                 -> Assign                   
+{                         ,<Ident>                  }[  0] S_                 -> Assign                   
+{Assign                   ,<Separator,LeftBracket>  }[  0] Assign             -> Question                 _f_00002_                
+{                         ,<Integer>                }[  0] Assign             -> Question                 _f_00002_                
+{                         ,<Number>                 }[  0] Assign             -> Question                 _f_00002_                
+{                         ,<Ident>                  }[  0] Assign             -> Question                 _f_00002_                
+{_f_00002_                ,<Separator,Colon>        }[  1] _f_00002_          -> 
+{                         ,<Priority,Assign>        }[  0] _f_00002_          -> <Priority,Assign>        Assign                   
+{                         ,Eof                      }[  1] _f_00002_          -> 
+{Question                 ,<Separator,LeftBracket>  }[  0] Question           -> AndAnd                   _f_00005_                _f_00006_                
+{                         ,<Integer>                }[  0] Question           -> AndAnd                   _f_00005_                _f_00006_                
+{                         ,<Number>                 }[  0] Question           -> AndAnd                   _f_00005_                _f_00006_                
+{                         ,<Ident>                  }[  0] Question           -> AndAnd                   _f_00005_                _f_00006_                
+{_f_00004_                ,<Priority,OrOr>          }[  0] _f_00004_          -> <Priority,OrOr>          AndAnd                   
+{_f_00005_                ,<Separator,Colon>        }[  1] _f_00005_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00005_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00005_          -> 
+{                         ,<Priority,OrOr>          }[  0] _f_00005_          -> _f_00004_                _f_00005_                
+{                         ,Eof                      }[  1] _f_00005_          -> 
+{_f_00006_                ,<Separator,Colon>        }[  1] _f_00006_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00006_          -> 
+{                         ,<Priority,Question>      }[  0] _f_00006_          -> <Priority,Question>      Assign                   <Separator,Colon>        Question                 
+{                         ,Eof                      }[  1] _f_00006_          -> 
+{AndAnd                   ,<Separator,LeftBracket>  }[  0] AndAnd             -> Or                       _f_00009_                
+{                         ,<Integer>                }[  0] AndAnd             -> Or                       _f_00009_                
+{                         ,<Number>                 }[  0] AndAnd             -> Or                       _f_00009_                
+{                         ,<Ident>                  }[  0] AndAnd             -> Or                       _f_00009_                
+{_f_00008_                ,<Priority,AndAnd>        }[  0] _f_00008_          -> <Priority,AndAnd>        Or                       
+{_f_00009_                ,<Separator,Colon>        }[  1] _f_00009_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00009_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00009_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00009_          -> 
+{                         ,<Priority,AndAnd>        }[  0] _f_00009_          -> _f_00008_                _f_00009_                
+{                         ,Eof                      }[  1] _f_00009_          -> 
+{Or                       ,<Separator,LeftBracket>  }[  0] Or                 -> E                        
+{                         ,<Integer>                }[  0] Or                 -> E                        
+{                         ,<Number>                 }[  0] Or                 -> E                        
+{                         ,<Ident>                  }[  0] Or                 -> E                        
+{E                        ,<Separator,LeftBracket>  }[  0] E                  -> T                        _f_00013_                
+{                         ,<Integer>                }[  0] E                  -> T                        _f_00013_                
+{                         ,<Number>                 }[  0] E                  -> T                        _f_00013_                
+{                         ,<Ident>                  }[  0] E                  -> T                        _f_00013_                
+{_f_00012_                ,<Priority,Term>          }[  0] _f_00012_          -> <Priority,Term>          T                        
+{_f_00013_                ,<Separator,RightBracket> }[  1] _f_00013_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00013_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00013_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00013_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00013_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00013_          -> 
+{                         ,<Priority,Term>          }[  0] _f_00013_          -> _f_00012_                _f_00013_                
+{                         ,Eof                      }[  1] _f_00013_          -> 
+{T                        ,<Separator,LeftBracket>  }[  0] T                  -> F                        _f_00016_                
+{                         ,<Integer>                }[  0] T                  -> F                        _f_00016_                
+{                         ,<Number>                 }[  0] T                  -> F                        _f_00016_                
+{                         ,<Ident>                  }[  0] T                  -> F                        _f_00016_                
+{_f_00015_                ,<Priority,Factor>        }[  0] _f_00015_          -> <Priority,Factor>        F                        
+{_f_00016_                ,<Separator,RightBracket> }[  1] _f_00016_          -> 
+{                         ,<Separator,Colon>        }[  1] _f_00016_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00016_          -> 
+{                         ,<Priority,Question>      }[  1] _f_00016_          -> 
+{                         ,<Priority,OrOr>          }[  1] _f_00016_          -> 
+{                         ,<Priority,AndAnd>        }[  1] _f_00016_          -> 
+{                         ,<Priority,Term>          }[  1] _f_00016_          -> 
+{                         ,<Priority,Factor>        }[  0] _f_00016_          -> _f_00015_                _f_00016_                
+{                         ,Eof                      }[  1] _f_00016_          -> 
+{F                        ,<Separator,LeftBracket>  }[  0] F                  -> <Separator,LeftBracket>  E                        <Separator,RightBracket> 
+{                         ,<Integer>                }[  2] F                  -> <Integer>                
+{                         ,<Number>                 }[  3] F                  -> <Number>                 
+{                         ,<Ident>                  }[  1] F                  -> <Ident>                  

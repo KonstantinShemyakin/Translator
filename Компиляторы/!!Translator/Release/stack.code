@@ -1,0 +1,8 @@
+TNodeDefFunc    line=000, column=005, len=01, text=f
+command = Label     , param = 000, mode = 001, type = Void      
+command = GoTo      , label = 000, GoTo , mode = 003, type = Unknown   
+command = Exit      , param = 000, mode = 000, type = Void      
+
+
+Integer        0 2
+

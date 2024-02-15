@@ -1,0 +1,20 @@
+
+--- ETF_LL_Grammar --- formula=7, produce=10, item=22, maker=6, used=7, vector=0, type=000001 ---
+
+S_:                      used=1, 00000
+[  0] S_                 -> _E                       
+_E:                      used=1, 00001
+[  0] _E                 -> { MAKE(BegStmExprLL); }  E                        { TREE(AddToList); }     { CODE(EndBlock); }      
+E_:                      used=2, 00002
+[  0] E_                 -> <Priority,Term>          T                        { MAKE(Binary); }        E_                       
+[  1] E_                 -> 
+E:                       used=2, 00003
+[  0] E                  -> T                        E_                       
+T_:                      used=2, 00004
+[  0] T_                 -> <Priority,Factor>        F                        { MAKE(Binary); }        T_                       
+[  1] T_                 -> 
+T:                       used=2, 00005
+[  0] T                  -> F                        T_                       
+F:                       used=2, 00006
+[  0] F                  -> <Separator,LeftBracket>  E                        <Separator,RightBracket> 
+[  1] F                  -> <Integer>                { MAKE(Number); }        

@@ -1,0 +1,982 @@
+
+SNodeList      , type=Statements, option=00000000 
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=0005, line=000, column=005, len=04, value=0, text=f011
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=0000, line=000, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Define, option=00000001 
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0014, line=000, column=014, len=03, value=65555, text=int
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0018, line=000, column=018, len=01, text=i
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0020, line=000, column=020, len=01, value=0, text=0
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0022, line=000, column=022, len=01, text=j
+          SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0024, line=000, column=024, len=01, text=i
+      SNodeList      , type=List, option=00000002 
+        SNodeList      , type=Label, option=00000000   group=Syntax    , type=Label       , pos=0027, line=000, column=027, len=02, value=4, text=L1
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=Assign      , pos=0031, line=000, column=031, len=01, value=37, text==
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0030, line=000, column=030, len=01, text=i
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0032, line=000, column=032, len=02, value=12, text=12
+      SNodeList      , type=Statements, option=00000000 
+        SNodeList      , type=Define, option=00000001 
+          SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0038, line=000, column=038, len=03, value=65555, text=int
+          SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0042, line=000, column=042, len=01, text=k
+        SNodeList      , type=GoTo, option=00000000   group=Ident     , type=00          , pos=0050, line=000, column=050, len=03, text=L15
+        SNodeList      , type=List, option=00000002 
+          SNodeList      , type=Label, option=00000000   group=Syntax    , type=Label       , pos=0055, line=000, column=055, len=03, value=7, text=L15
+          SNodeList      , type=GoTo, option=00000000   group=Ident     , type=00          , pos=0065, line=000, column=065, len=02, text=L2
+      SNodeList      , type=Statements, option=00000000 
+        SNodeList      , type=Statements, option=00000000 
+          SNodeList      , type=Define, option=00000001 
+            SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0074, line=000, column=074, len=03, value=65555, text=int
+            SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0078, line=000, column=078, len=03, text=jjj
+          SNodeList      , type=List, option=00000002 
+            SNodeList      , type=Label, option=00000000   group=Syntax    , type=Label       , pos=0083, line=000, column=083, len=02, value=8, text=L2
+            SNodeList      , type=Null, option=00000000 
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=0100, line=001, column=005, len=04, value=10, text=f000
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=0095, line=001, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Define, option=00000001 
+          SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0115, line=003, column=004, len=03, value=65555, text=int
+          SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0119, line=003, column=008, len=01, text=i
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Define, option=00000001 
+          SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0130, line=004, column=004, len=03, value=65555, text=int
+          SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0134, line=004, column=008, len=01, text=i
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=AddAssign   , pos=0139, line=004, column=013, len=02, value=15, text=+=
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0138, line=004, column=012, len=01, text=i
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0141, line=004, column=015, len=01, value=2, text=2
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Define, option=00000001 
+          SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0149, line=005, column=004, len=03, value=65555, text=int
+          SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0153, line=005, column=008, len=01, text=i
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=IncDec, option=FFFFFFFF   group=Priority  , type=IncDec      , pos=0157, line=005, column=012, len=02, value=51, text=++
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0156, line=005, column=011, len=01, text=i
+        SNodeList      , type=Null, option=00000000 
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Define, option=00000001 
+          SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0167, line=006, column=004, len=03, value=65555, text=int
+          SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0171, line=006, column=008, len=01, text=i
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=IncDec, option=FFFFFFFF   group=Priority  , type=IncDec      , pos=0175, line=006, column=012, len=02, value=51, text=++
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0174, line=006, column=011, len=01, text=i
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=AddAssign   , pos=0179, line=006, column=016, len=02, value=15, text=+=
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0178, line=006, column=015, len=01, text=i
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0181, line=006, column=018, len=01, value=2, text=2
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Define, option=00000001 
+          SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0189, line=007, column=004, len=03, value=65555, text=int
+          SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0193, line=007, column=008, len=01, text=i
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=Compare     , pos=0196, line=007, column=011, len=01, value=43, text=<
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0195, line=007, column=010, len=01, text=i
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0197, line=007, column=012, len=01, value=5, text=5
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Define, option=00000001 
+          SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0207, line=008, column=004, len=03, value=65555, text=int
+          SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0211, line=008, column=008, len=01, text=i
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=Compare     , pos=0214, line=008, column=011, len=01, value=43, text=<
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0213, line=008, column=010, len=01, text=i
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0215, line=008, column=012, len=01, value=5, text=5
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=AddAssign   , pos=0219, line=008, column=016, len=02, value=15, text=+=
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0218, line=008, column=015, len=01, text=i
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0221, line=008, column=018, len=01, value=2, text=2
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Define, option=00000001 
+          SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0229, line=009, column=004, len=03, value=65555, text=int
+          SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0233, line=009, column=008, len=01, text=i
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=Compare     , pos=0236, line=009, column=011, len=01, value=43, text=<
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0235, line=009, column=010, len=01, text=i
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0237, line=009, column=012, len=01, value=5, text=5
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=IncDec, option=FFFFFFFF   group=Priority  , type=IncDec      , pos=0240, line=009, column=015, len=02, value=51, text=++
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0239, line=009, column=014, len=01, text=i
+        SNodeList      , type=Null, option=00000000 
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Define, option=00000001 
+          SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0250, line=010, column=004, len=03, value=65555, text=int
+          SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0254, line=010, column=008, len=01, text=i
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=Compare     , pos=0257, line=010, column=011, len=01, value=43, text=<
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0256, line=010, column=010, len=01, text=i
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0258, line=010, column=012, len=01, value=5, text=5
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=IncDec, option=FFFFFFFF   group=Priority  , type=IncDec      , pos=0261, line=010, column=015, len=02, value=51, text=++
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0260, line=010, column=014, len=01, text=i
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=AddAssign   , pos=0265, line=010, column=019, len=02, value=15, text=+=
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0264, line=010, column=018, len=01, text=i
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0267, line=010, column=021, len=01, value=2, text=2
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0276, line=013, column=000, len=03, value=65555, text=int
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0281, line=013, column=005, len=01, text=i
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0284, line=013, column=008, len=01, text=j
+      SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=Assign      , pos=0287, line=013, column=011, len=01, value=37, text==
+        SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0286, line=013, column=010, len=01, text=i
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0288, line=013, column=012, len=02, value=12, text=12
+    SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=0292, line=013, column=016, len=03, value=13, text=arr
+      SNodeList      , type=Ranges, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0296, line=013, column=020, len=01, value=3, text=3
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=0304, line=013, column=028, len=04, value=15, text=ffff
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=0299, line=013, column=023, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=Assign      , pos=0315, line=013, column=039, len=01, value=37, text==
+          SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0313, line=013, column=037, len=01, text=i
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0317, line=013, column=041, len=01, value=5, text=5
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=SubAssign   , pos=0321, line=013, column=045, len=02, value=16, text=-=
+          SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0320, line=013, column=044, len=01, text=j
+          SNodeList      , type=IncDec, option=FFFFFFFF   group=Priority  , type=IncDec      , pos=0324, line=013, column=048, len=02, value=51, text=++
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0323, line=013, column=047, len=01, text=i
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=Assign      , pos=0334, line=013, column=058, len=01, value=37, text==
+          SNodeList      , type=Index, option=00000000   group=Syntax    , type=IdentArr    , pos=0328, line=013, column=052, len=03, value=13, text=arr
+            SNodeList      , type=Ranges, option=00000001 
+              SNodeList      , type=Expressions, option=00000100 
+                SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0332, line=013, column=056, len=01, value=0, text=0
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0335, line=013, column=059, len=01, value=2, text=2
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=Assign      , pos=0344, line=013, column=068, len=01, value=37, text==
+          SNodeList      , type=Index, option=00000000   group=Syntax    , type=IdentArr    , pos=0338, line=013, column=062, len=03, value=13, text=arr
+            SNodeList      , type=Ranges, option=00000001 
+              SNodeList      , type=Expressions, option=00000100 
+                SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0342, line=013, column=066, len=01, value=1, text=1
+          SNodeList      , type=IncDec, option=FFFFFFFF   group=Priority  , type=IncDec      , pos=0351, line=013, column=075, len=02, value=51, text=++
+            SNodeList      , type=Index, option=00000000   group=Syntax    , type=IdentArr    , pos=0345, line=013, column=069, len=03, value=13, text=arr
+              SNodeList      , type=Ranges, option=00000001 
+                SNodeList      , type=Expressions, option=00000100 
+                  SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0349, line=013, column=073, len=01, value=0, text=0
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=Assign      , pos=0361, line=013, column=085, len=01, value=37, text==
+          SNodeList      , type=Index, option=00000000   group=Syntax    , type=IdentArr    , pos=0355, line=013, column=079, len=03, value=13, text=arr
+            SNodeList      , type=Ranges, option=00000001 
+              SNodeList      , type=Expressions, option=00000100 
+                SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0359, line=013, column=083, len=01, value=2, text=2
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=Term        , pos=0368, line=013, column=092, len=01, value=33, text=+
+            SNodeList      , type=Index, option=00000000   group=Syntax    , type=IdentArr    , pos=0362, line=013, column=086, len=03, value=13, text=arr
+              SNodeList      , type=Ranges, option=00000001 
+                SNodeList      , type=Expressions, option=00000100 
+                  SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0366, line=013, column=090, len=01, value=0, text=0
+            SNodeList      , type=Index, option=00000000   group=Syntax    , type=IdentArr    , pos=0369, line=013, column=093, len=03, value=13, text=arr
+              SNodeList      , type=Ranges, option=00000001 
+                SNodeList      , type=Expressions, option=00000100 
+                  SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0373, line=013, column=097, len=01, value=1, text=1
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0379, line=014, column=000, len=03, value=65555, text=int
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0384, line=014, column=005, len=02, text=i0
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0387, line=014, column=008, len=02, text=j0
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0390, line=014, column=011, len=02, text=k0
+      SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0393, line=014, column=014, len=01, value=1, text=1
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=0401, line=014, column=022, len=04, value=20, text=f001
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=0396, line=014, column=017, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+  SNodeList      , type=Null, option=00000000 
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefArr      , pos=0424, line=015, column=000, len=03, value=65555, text=int
+    SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=0429, line=015, column=005, len=04, value=21, text=a000
+      SNodeList      , type=Ranges, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+      SNodeList      , type=List, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0437, line=015, column=013, len=02, value=10, text=10
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0440, line=015, column=016, len=02, value=11, text=11
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0443, line=015, column=019, len=02, value=12, text=12
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefArr      , pos=0448, line=015, column=024, len=03, value=65555, text=int
+    SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=0452, line=015, column=028, len=04, value=24, text=b000
+      SNodeList      , type=Ranges, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0457, line=015, column=033, len=01, value=2, text=2
+      SNodeList      , type=List, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0461, line=015, column=037, len=02, value=20, text=20
+        SNodeList      , type=Index, option=00000000   group=Syntax    , type=IdentArr    , pos=0464, line=015, column=040, len=04, value=21, text=a000
+          SNodeList      , type=Ranges, option=00000001 
+            SNodeList      , type=Expressions, option=00000100 
+              SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0469, line=015, column=045, len=01, value=1, text=1
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefArr      , pos=0475, line=016, column=000, len=03, value=65555, text=int
+    SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=0480, line=016, column=005, len=04, value=26, text=a001
+      SNodeList      , type=Ranges, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+      SNodeList      , type=List, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0488, line=016, column=013, len=02, value=10, text=10
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0491, line=016, column=016, len=02, value=11, text=11
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0494, line=016, column=019, len=02, value=12, text=12
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0499, line=016, column=024, len=03, value=65555, text=int
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0503, line=016, column=028, len=04, text=i002
+      SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0508, line=016, column=033, len=01, value=0, text=0
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0511, line=016, column=036, len=04, text=j002
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0518, line=017, column=000, len=03, value=65555, text=int
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0523, line=017, column=005, len=04, text=i003
+      SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=Term        , pos=0533, line=017, column=015, len=01, value=33, text=+
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0530, line=017, column=012, len=02, value=12, text=12
+        SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=Factor      , pos=0537, line=017, column=019, len=01, value=29, text=*
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0535, line=017, column=017, len=01, value=5, text=5
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0539, line=017, column=021, len=01, value=6, text=6
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0542, line=017, column=024, len=04, text=j003
+      SNodeList      , type=Unary, option=FFFFFFFF   group=Priority  , type=Unary       , pos=0549, line=017, column=031, len=01, value=49, text=+
+        SNodeList      , type=IncDec, option=FFFFFFFF   group=Priority  , type=IncDec      , pos=0554, line=017, column=036, len=02, value=51, text=++
+          SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0550, line=017, column=032, len=04, text=i003
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=0563, line=017, column=045, len=04, value=32, text=f003
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=0558, line=017, column=040, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Define, option=00000001 
+          SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0577, line=017, column=059, len=03, value=65555, text=int
+          SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0581, line=017, column=063, len=01, text=i
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0583, line=017, column=065, len=01, value=0, text=0
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=Compare     , pos=0587, line=017, column=069, len=01, value=43, text=<
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0586, line=017, column=068, len=01, text=i
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0588, line=017, column=070, len=01, value=4, text=4
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=IncDec, option=FFFFFFFF   group=Priority  , type=IncDec      , pos=0591, line=017, column=073, len=02, value=51, text=++
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0590, line=017, column=072, len=01, text=i
+        SNodeList      , type=Statements, option=00000000 
+          SNodeList      , type=Define, option=00000001 
+            SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0597, line=017, column=079, len=03, value=65555, text=int
+            SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0601, line=017, column=083, len=01, text=j
+          SNodeList      , type=Expressions, option=00000010 
+            SNodeList      , type=Call, option=00000000   group=Syntax    , type=IdentFunc   , pos=0604, line=017, column=086, len=04, value=32, text=f003
+              SNodeList      , type=Null, option=00000000 
+          SNodeList      , type=Break, option=00000000 
+          SNodeList      , type=Continue, option=00000000 
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=0639, line=018, column=005, len=04, value=34, text=f004
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=0634, line=018, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Define, option=00000000 
+      SNodeList      , type=DefVar, option=FFFFFFFF   group=Ident     , type=00          , pos=0648, line=018, column=014, len=01, text=i
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0644, line=018, column=010, len=03, value=65555, text=int
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=IncDec, option=FFFFFFFF   group=Priority  , type=IncDec      , pos=0654, line=018, column=020, len=02, value=51, text=++
+          SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0653, line=018, column=019, len=01, text=i
+  SNodeList      , type=Null, option=00000000 
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=0666, line=018, column=032, len=07, value=35, text=main004
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=0661, line=018, column=027, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Call, option=00000000   group=Syntax    , type=IdentFunc   , pos=0678, line=018, column=044, len=04, value=34, text=f004
+          SNodeList      , type=Expressions, option=00000200 
+            SNodeList      , type=Number, option=00000000   group=Number    , type=00          , pos=0683, line=018, column=049, len=03, number=5.000000, text=5.0
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0692, line=019, column=000, len=03, value=65555, text=int
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0697, line=019, column=005, len=01, text=g
+      SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0701, line=019, column=009, len=02, value=99, text=99
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=0710, line=019, column=018, len=01, value=39, text=u
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=0705, line=019, column=013, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Null, option=00000000 
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=0720, line=019, column=028, len=04, value=40, text=f005
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=0715, line=019, column=023, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Define, option=00000001 
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefArr      , pos=0729, line=019, column=037, len=03, value=65555, text=int
+        SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=0733, line=019, column=041, len=01, value=41, text=a
+          SNodeList      , type=Ranges, option=00000000 
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0735, line=019, column=043, len=01, value=5, text=5
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=Assign      , pos=0744, line=019, column=052, len=01, value=37, text==
+          SNodeList      , type=Index, option=00000000   group=Syntax    , type=IdentArr    , pos=0739, line=019, column=047, len=01, value=41, text=a
+            SNodeList      , type=Ranges, option=00000001 
+              SNodeList      , type=Expressions, option=00000100 
+                SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0741, line=019, column=049, len=01, value=1, text=1
+          SNodeList      , type=Number, option=00000000   group=Number    , type=00          , pos=0746, line=019, column=054, len=03, number=1.200000, text=1.2
+  SNodeList      , type=Null, option=00000000 
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=0758, line=019, column=066, len=01, value=43, text=f
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=0754, line=019, column=062, len=03, value=65555, text=int
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Return, option=00000001 
+        SNodeList      , type=Expressions, option=00000100 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0771, line=019, column=079, len=02, value=12, text=12
+  SNodeList      , type=Null, option=00000000 
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=0783, line=019, column=091, len=07, value=44, text=main005
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=0778, line=019, column=086, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Call, option=00000000   group=Syntax    , type=IdentFunc   , pos=0795, line=019, column=103, len=04, value=40, text=f005
+          SNodeList      , type=Null, option=00000000 
+      SNodeList      , type=Define, option=00000001 
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0803, line=019, column=111, len=03, value=65555, text=int
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0807, line=019, column=115, len=01, text=i
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=Assign      , pos=0812, line=019, column=120, len=01, value=37, text==
+          SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0810, line=019, column=118, len=01, text=i
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=Term        , pos=0816, line=019, column=124, len=01, value=33, text=+
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0814, line=019, column=122, len=01, text=g
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0818, line=019, column=126, len=02, value=13, text=13
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0825, line=020, column=000, len=03, value=65555, text=int
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0830, line=020, column=005, len=01, text=k
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=0838, line=020, column=013, len=01, value=43, text=f
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=0833, line=020, column=008, len=04, value=2097169, text=void
+    SNodeList      , type=Define, option=00000000 
+      SNodeList      , type=DefVar, option=FFFFFFFF   group=Ident     , type=00          , pos=0844, line=020, column=019, len=01, text=i
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0840, line=020, column=015, len=03, value=65555, text=int
+      SNodeList      , type=DefVar, option=FFFFFFFF   group=Ident     , type=00          , pos=0851, line=020, column=026, len=01, text=j
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0847, line=020, column=022, len=03, value=65555, text=int
+      SNodeList      , type=DefVar, option=FFFFFFFF   group=Ident     , type=00          , pos=0858, line=020, column=033, len=01, text=t
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0854, line=020, column=029, len=03, value=65555, text=int
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=If, option=00000002 
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Unary, option=FFFFFFFF   group=Priority  , type=Unary       , pos=0867, line=020, column=042, len=01, value=39, text=!
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0868, line=020, column=043, len=01, text=j
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=IncDec, option=FFFFFFFF   group=Priority  , type=IncDec      , pos=0872, line=020, column=047, len=02, value=51, text=++
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0871, line=020, column=046, len=01, text=i
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=IncDec, option=FFFFFFFF   group=Priority  , type=IncDec      , pos=0882, line=020, column=057, len=02, value=52, text=--
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=0881, line=020, column=056, len=01, text=i
+      SNodeList      , type=Define, option=00000001 
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0886, line=020, column=061, len=03, value=65555, text=int
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0890, line=020, column=065, len=01, text=q
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0892, line=020, column=067, len=01, text=r
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0894, line=020, column=069, len=01, text=w
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0896, line=020, column=071, len=01, text=z
+  SNodeList      , type=Null, option=00000000 
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=0907, line=020, column=082, len=07, value=51, text=main006
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=0902, line=020, column=077, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Call, option=00000000   group=Syntax    , type=IdentFunc   , pos=0919, line=020, column=094, len=01, value=43, text=f
+          SNodeList      , type=Expressions, option=00000200 
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0921, line=020, column=096, len=01, value=5, text=5
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0923, line=020, column=098, len=01, value=1, text=1
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0925, line=020, column=100, len=01, value=6, text=6
+      SNodeList      , type=Define, option=00000001 
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=0929, line=020, column=104, len=03, value=65555, text=int
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=0933, line=020, column=108, len=01, text=w
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=0944, line=021, column=005, len=04, value=52, text=f007
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=0939, line=021, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Return, option=00000000 
+      SNodeList      , type=Return, option=00000001 
+        SNodeList      , type=Expressions, option=00000100 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=0968, line=021, column=029, len=03, value=123, text=123
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=0979, line=021, column=040, len=01, value=48, text=r
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=0975, line=021, column=036, len=03, value=65555, text=int
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Return, option=00000001 
+        SNodeList      , type=Expressions, option=00000100 
+          SNodeList      , type=Number, option=00000000   group=Number    , type=00          , pos=0992, line=021, column=053, len=03, number=1.200000, text=1.2
+      SNodeList      , type=Return, option=00000000 
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=1013, line=022, column=005, len=04, value=54, text=f008
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=1008, line=022, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=If, option=00000002 
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1026, line=022, column=018, len=02, value=12, text=12
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1030, line=022, column=022, len=02, value=13, text=13
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1039, line=022, column=031, len=02, value=14, text=14
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Define, option=00000001 
+          SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1057, line=022, column=049, len=03, value=65555, text=int
+          SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=1061, line=022, column=053, len=01, text=i
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1063, line=022, column=055, len=01, value=0, text=0
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=Compare     , pos=1067, line=022, column=059, len=01, value=43, text=<
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1066, line=022, column=058, len=01, text=i
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1068, line=022, column=060, len=01, value=4, text=4
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=IncDec, option=FFFFFFFF   group=Priority  , type=IncDec      , pos=1072, line=022, column=064, len=02, value=51, text=++
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1071, line=022, column=063, len=01, text=i
+        SNodeList      , type=Statements, option=00000000 
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=1087, line=023, column=005, len=04, value=56, text=f009
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=1082, line=023, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Define, option=00000001 
+          SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1100, line=023, column=018, len=03, value=65555, text=int
+          SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=1104, line=023, column=022, len=01, text=i
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1106, line=023, column=024, len=01, text=i
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Statements, option=00000000 
+          SNodeList      , type=Expressions, option=00000010 
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1112, line=023, column=030, len=02, value=25, text=25
+          SNodeList      , type=Break, option=00000000 
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=1133, line=024, column=005, len=04, value=58, text=f010
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=1128, line=024, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Define, option=00000001 
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1142, line=024, column=014, len=03, value=65555, text=int
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=1146, line=024, column=018, len=01, text=i
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1148, line=024, column=020, len=01, value=0, text=0
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=1150, line=024, column=022, len=01, text=j
+          SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1152, line=024, column=024, len=01, text=i
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=Assign      , pos=1156, line=024, column=028, len=01, value=37, text==
+          SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1155, line=024, column=027, len=01, text=i
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1157, line=024, column=029, len=02, value=12, text=12
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=Assign      , pos=1167, line=024, column=039, len=01, value=37, text==
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1166, line=024, column=038, len=01, text=j
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1168, line=024, column=040, len=01, text=i
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1170, line=024, column=042, len=01, value=1, text=1
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1172, line=024, column=044, len=01, value=2, text=2
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1174, line=024, column=046, len=01, value=3, text=3
+        SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=AddAssign   , pos=1180, line=024, column=052, len=02, value=15, text=+=
+          SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1179, line=024, column=051, len=01, text=j
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=Assign      , pos=1183, line=024, column=055, len=01, value=37, text==
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1182, line=024, column=054, len=01, text=i
+            SNodeList      , type=IncDec, option=FFFFFFFF   group=Priority  , type=IncDec      , pos=1185, line=024, column=057, len=02, value=51, text=++
+              SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1184, line=024, column=056, len=01, text=i
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=1197, line=025, column=005, len=04, value=59, text=r011
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=1192, line=025, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Return, option=00000000 
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=1221, line=025, column=029, len=04, value=0, text=f011
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=1216, line=025, column=024, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Define, option=00000001 
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1230, line=025, column=038, len=03, value=65555, text=int
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=1234, line=025, column=042, len=01, text=i
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1236, line=025, column=044, len=01, value=0, text=0
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=1238, line=025, column=046, len=01, text=j
+          SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1240, line=025, column=048, len=01, text=i
+      SNodeList      , type=List, option=00000002 
+        SNodeList      , type=Label, option=00000000   group=Syntax    , type=Label       , pos=1243, line=025, column=051, len=02, value=4, text=L1
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=Assign      , pos=1247, line=025, column=055, len=01, value=37, text==
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1246, line=025, column=054, len=01, text=i
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1248, line=025, column=056, len=02, value=12, text=12
+      SNodeList      , type=Statements, option=00000000 
+        SNodeList      , type=Define, option=00000001 
+          SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1254, line=025, column=062, len=03, value=65555, text=int
+          SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=1258, line=025, column=066, len=01, text=k
+        SNodeList      , type=GoTo, option=00000000   group=Ident     , type=00          , pos=1266, line=025, column=074, len=03, text=L15
+        SNodeList      , type=List, option=00000002 
+          SNodeList      , type=Label, option=00000000   group=Syntax    , type=Label       , pos=1271, line=025, column=079, len=03, value=7, text=L15
+          SNodeList      , type=GoTo, option=00000000   group=Ident     , type=00          , pos=1281, line=025, column=089, len=02, text=L2
+      SNodeList      , type=Statements, option=00000000 
+        SNodeList      , type=Statements, option=00000000 
+          SNodeList      , type=Define, option=00000001 
+            SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1290, line=025, column=098, len=03, value=65555, text=int
+            SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=1294, line=025, column=102, len=03, text=jjj
+          SNodeList      , type=List, option=00000002 
+            SNodeList      , type=Label, option=00000000   group=Syntax    , type=Label       , pos=1299, line=025, column=107, len=02, value=8, text=L2
+            SNodeList      , type=Null, option=00000000 
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1311, line=026, column=000, len=03, value=65555, text=int
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=1316, line=026, column=005, len=04, text=i012
+      SNodeList      , type=Primary, option=00000001 
+        SNodeList      , type=Expressions, option=00000000 
+          SNodeList      , type=Cast, option=FFFFFFFF   group=Syntax    , type=Cast        , pos=1322, line=026, column=011, len=03, value=65555, text=int
+            SNodeList      , type=Primary, option=00000001 
+              SNodeList      , type=Expressions, option=00000000 
+                SNodeList      , type=Cast, option=FFFFFFFF   group=Syntax    , type=CastUnary   , pos=1333, line=026, column=022, len=03, value=196627, text=int
+                  SNodeList      , type=Number, option=00000000   group=Number    , type=00          , pos=1337, line=026, column=026, len=04, number=12.200000, text=12.2
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=1351, line=027, column=005, len=04, value=62, text=f013
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=1346, line=027, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Define, option=00000001 
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1360, line=027, column=014, len=03, value=65555, text=int
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=1364, line=027, column=018, len=01, text=i
+      SNodeList      , type=List, option=00000002 
+        SNodeList      , type=Label, option=00000000   group=Syntax    , type=Label       , pos=1367, line=027, column=021, len=02, value=4, text=L1
+        SNodeList      , type=List, option=00000002 
+          SNodeList      , type=Label, option=00000000   group=Syntax    , type=Label       , pos=1371, line=027, column=025, len=02, value=8, text=L2
+          SNodeList      , type=Define, option=00000001 
+            SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1375, line=027, column=029, len=03, value=65555, text=int
+            SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=1379, line=027, column=033, len=01, text=g
+      SNodeList      , type=GoTo, option=00000000   group=Ident     , type=00          , pos=1387, line=027, column=041, len=02, text=L2
+      SNodeList      , type=List, option=00000002 
+        SNodeList      , type=Label, option=00000000   group=Syntax    , type=Label       , pos=1391, line=027, column=045, len=02, value=63, text=L3
+        SNodeList      , type=List, option=00000002 
+          SNodeList      , type=Label, option=00000000   group=Syntax    , type=Label       , pos=1395, line=027, column=049, len=02, value=64, text=L4
+          SNodeList      , type=Null, option=00000000 
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=1408, line=028, column=005, len=04, value=65, text=r014
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=1403, line=028, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Define, option=00000000 
+      SNodeList      , type=DefVar, option=FFFFFFFF   group=Ident     , type=00          , pos=1417, line=028, column=014, len=01, text=i
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1413, line=028, column=010, len=03, value=65555, text=int
+      SNodeList      , type=DefVar, option=FFFFFFFF   group=Ident     , type=00          , pos=1424, line=028, column=021, len=01, text=j
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1420, line=028, column=017, len=03, value=65555, text=int
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1429, line=028, column=026, len=01, value=1, text=1
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1431, line=028, column=028, len=01, value=2, text=2
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1433, line=028, column=030, len=01, value=3, text=3
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1436, line=028, column=033, len=01, value=4, text=4
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1438, line=028, column=035, len=01, value=5, text=5
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1440, line=028, column=037, len=01, value=6, text=6
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Call, option=00000000   group=Syntax    , type=IdentFunc   , pos=1443, line=028, column=040, len=04, value=65, text=r014
+          SNodeList      , type=Expressions, option=00000200 
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1448, line=028, column=045, len=01, value=7, text=7
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1450, line=028, column=047, len=01, value=8, text=8
+      SNodeList      , type=If, option=00000002 
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1458, line=028, column=055, len=01, value=9, text=9
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1460, line=028, column=057, len=02, value=10, text=10
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1464, line=028, column=061, len=02, value=11, text=11
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1473, line=028, column=070, len=02, value=12, text=12
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1482, line=028, column=079, len=02, value=21, text=21
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1485, line=028, column=082, len=02, value=22, text=22
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1488, line=028, column=085, len=02, value=23, text=23
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1491, line=028, column=088, len=02, value=24, text=24
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1494, line=028, column=091, len=02, value=25, text=25
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1497, line=028, column=094, len=02, value=26, text=26
+        SNodeList      , type=Statements, option=00000000 
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=1512, line=029, column=005, len=04, value=74, text=f015
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=1507, line=029, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Define, option=00000000 
+      SNodeList      , type=DefVar, option=FFFFFFFF   group=Ident     , type=00          , pos=1521, line=029, column=014, len=01, text=i
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1517, line=029, column=010, len=03, value=65555, text=int
+      SNodeList      , type=DefVar, option=FFFFFFFF   group=Ident     , type=00          , pos=1528, line=029, column=021, len=01, text=j
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1524, line=029, column=017, len=03, value=65555, text=int
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Call, option=00000000   group=Syntax    , type=IdentFunc   , pos=1533, line=029, column=026, len=04, value=65, text=r014
+          SNodeList      , type=Expressions, option=00000200 
+            SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=Assign      , pos=1539, line=029, column=032, len=01, value=37, text==
+              SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1538, line=029, column=031, len=01, text=i
+              SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=Term        , pos=1541, line=029, column=034, len=01, value=35, text=-
+                SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1540, line=029, column=033, len=01, value=7, text=7
+                SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1542, line=029, column=035, len=01, value=6, text=6
+            SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=Term        , pos=1545, line=029, column=038, len=01, value=33, text=+
+              SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1544, line=029, column=037, len=01, value=8, text=8
+              SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1546, line=029, column=039, len=01, value=9, text=9
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=Assign      , pos=1551, line=029, column=044, len=01, value=37, text==
+          SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1550, line=029, column=043, len=01, text=i
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=Term        , pos=1553, line=029, column=046, len=01, value=35, text=-
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1552, line=029, column=045, len=01, value=7, text=7
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1554, line=029, column=047, len=01, value=6, text=6
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=1565, line=030, column=005, len=04, value=75, text=f016
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=1560, line=030, column=000, len=03, value=65555, text=int
+    SNodeList      , type=Define, option=00000000 
+      SNodeList      , type=DefVar, option=FFFFFFFF   group=Ident     , type=00          , pos=1574, line=030, column=014, len=01, text=i
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1570, line=030, column=010, len=03, value=65555, text=int
+      SNodeList      , type=DefVar, option=FFFFFFFF   group=Ident     , type=00          , pos=1581, line=030, column=021, len=01, text=j
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1577, line=030, column=017, len=03, value=65555, text=int
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=If, option=00000002 
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1590, line=030, column=030, len=01, text=i
+        SNodeList      , type=Return, option=00000001 
+          SNodeList      , type=Expressions, option=00000100 
+            SNodeList      , type=Number, option=00000000   group=Number    , type=00          , pos=1600, line=030, column=040, len=03, number=2.100000, text=2.1
+        SNodeList      , type=Statements, option=00000000 
+          SNodeList      , type=Expressions, option=00000010 
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1612, line=030, column=052, len=02, value=13, text=13
+          SNodeList      , type=Return, option=00000001 
+            SNodeList      , type=Expressions, option=00000100 
+              SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1623, line=030, column=063, len=01, value=2, text=2
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1631, line=031, column=000, len=03, value=65555, text=int
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=1636, line=031, column=005, len=04, text=j016
+      SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1643, line=031, column=012, len=01, value=5, text=5
+    SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=1646, line=031, column=015, len=04, value=78, text=a016
+      SNodeList      , type=Ranges, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1651, line=031, column=020, len=01, value=3, text=3
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1654, line=031, column=023, len=01, value=4, text=4
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1658, line=031, column=027, len=03, value=65555, text=int
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=1662, line=031, column=031, len=04, text=i016
+      SNodeList      , type=Index, option=00000000   group=Syntax    , type=IdentArr    , pos=1669, line=031, column=038, len=04, value=78, text=a016
+        SNodeList      , type=Ranges, option=00000001 
+          SNodeList      , type=Expressions, option=00000100 
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1674, line=031, column=043, len=01, value=2, text=2
+          SNodeList      , type=Expressions, option=00000100 
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1677, line=031, column=046, len=01, value=3, text=3
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1682, line=032, column=000, len=03, value=65555, text=int
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=1687, line=032, column=005, len=04, text=i017
+      SNodeList      , type=Trio, option=FFFFFFFD   group=Priority  , type=Question    , pos=1696, line=032, column=014, len=01, value=48, text=?
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1694, line=032, column=012, len=01, value=5, text=5
+        SNodeList      , type=Number, option=00000000   group=Number    , type=00          , pos=1698, line=032, column=016, len=03, number=6.300000, text=6.3
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1704, line=032, column=022, len=01, value=7, text=7
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=1713, line=033, column=005, len=04, value=82, text=f017
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=1708, line=033, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=If, option=00000002 
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=AndAnd      , pos=1753, line=033, column=045, len=02, value=25, text=&&
+            SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=AndAnd      , pos=1738, line=033, column=030, len=02, value=25, text=&&
+              SNodeList      , type=Primary, option=00000001 
+                SNodeList      , type=Expressions, option=00000000 
+                  SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=OrOr        , pos=1730, line=033, column=022, len=02, value=23, text=||
+                    SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1727, line=033, column=019, len=02, value=11, text=11
+                    SNodeList      , type=Number, option=00000000   group=Number    , type=00          , pos=1733, line=033, column=025, len=03, number=1.200000, text=1.2
+              SNodeList      , type=Primary, option=00000001 
+                SNodeList      , type=Expressions, option=00000000 
+                  SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=OrOr        , pos=1745, line=033, column=037, len=02, value=23, text=||
+                    SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1742, line=033, column=034, len=02, value=13, text=13
+                    SNodeList      , type=Unary, option=FFFFFFFF   group=Priority  , type=Unary       , pos=1748, line=033, column=040, len=01, value=39, text=!
+                      SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1749, line=033, column=041, len=02, value=21, text=21
+            SNodeList      , type=Unary, option=FFFFFFFF   group=Priority  , type=Unary       , pos=1756, line=033, column=048, len=01, value=39, text=!
+              SNodeList      , type=Primary, option=00000001 
+                SNodeList      , type=Expressions, option=00000000 
+                  SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=OrOr        , pos=1761, line=033, column=053, len=02, value=23, text=||
+                    SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1758, line=033, column=050, len=02, value=22, text=22
+                    SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1764, line=033, column=056, len=02, value=23, text=23
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1769, line=033, column=061, len=02, value=31, text=31
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1778, line=033, column=070, len=02, value=32, text=32
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=1790, line=034, column=005, len=04, value=85, text=f018
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=1785, line=034, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=If, option=00000002 
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Unary, option=FFFFFFFF   group=Priority  , type=Unary       , pos=1803, line=034, column=018, len=01, value=39, text=!
+            SNodeList      , type=Primary, option=00000001 
+              SNodeList      , type=Expressions, option=00000000 
+                SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=OrOr        , pos=1808, line=034, column=023, len=02, value=23, text=||
+                  SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1805, line=034, column=020, len=02, value=11, text=11
+                  SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1811, line=034, column=026, len=02, value=12, text=12
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=Term        , pos=1817, line=034, column=032, len=01, value=33, text=+
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1816, line=034, column=031, len=01, value=2, text=2
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1818, line=034, column=033, len=01, value=1, text=1
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=Term        , pos=1827, line=034, column=042, len=01, value=35, text=-
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1826, line=034, column=041, len=01, value=3, text=3
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1828, line=034, column=043, len=01, value=1, text=1
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=1839, line=035, column=005, len=04, value=86, text=f019
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=1834, line=035, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Define, option=00000001 
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1848, line=035, column=014, len=03, value=65555, text=int
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=1852, line=035, column=018, len=01, text=i
+          SNodeList      , type=Primary, option=00000001 
+            SNodeList      , type=Expressions, option=00000000 
+              SNodeList      , type=Binary, option=FFFFFFFE   group=Priority  , type=OrOr        , pos=1860, line=035, column=026, len=02, value=23, text=||
+                SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1857, line=035, column=023, len=02, value=11, text=11
+                SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1863, line=035, column=029, len=02, value=12, text=12
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=1876, line=036, column=005, len=04, value=87, text=f020
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=1871, line=036, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Define, option=00000001 
+          SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=1890, line=036, column=019, len=03, value=65555, text=int
+          SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=1894, line=036, column=023, len=01, text=i
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1896, line=036, column=025, len=02, value=33, text=33
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=IncDec, option=FFFFFFFF   group=Priority  , type=IncDec      , pos=1900, line=036, column=029, len=02, value=51, text=++
+            SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1899, line=036, column=028, len=01, text=i
+        SNodeList      , type=Statements, option=00000000 
+          SNodeList      , type=Continue, option=00000000 
+          SNodeList      , type=Expressions, option=00000010 
+            SNodeList      , type=IncDec, option=FFFFFFFF   group=Priority  , type=IncDec      , pos=1917, line=036, column=046, len=02, value=52, text=--
+              SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1916, line=036, column=045, len=01, text=i
+          SNodeList      , type=Break, option=00000000 
+          SNodeList      , type=Expressions, option=00000010 
+            SNodeList      , type=IncDec, option=FFFFFFFF   group=Priority  , type=IncDec      , pos=1929, line=036, column=058, len=02, value=51, text=++
+              SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=1928, line=036, column=057, len=01, text=i
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefArr      , pos=1951, line=037, column=013, len=03, value=458771, text=int
+    SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=1955, line=037, column=017, len=01, value=89, text=A
+      SNodeList      , type=Ranges, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1959, line=037, column=021, len=01, value=3, text=3
+      SNodeList      , type=List, option=00000000 
+        SNodeList      , type=List, option=00000000 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1966, line=037, column=028, len=01, value=1, text=1
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1968, line=037, column=030, len=01, value=2, text=2
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1970, line=037, column=032, len=01, value=3, text=3
+        SNodeList      , type=List, option=00000000 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1974, line=037, column=036, len=01, value=4, text=4
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1976, line=037, column=038, len=01, value=5, text=5
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1978, line=037, column=040, len=01, value=6, text=6
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefArr      , pos=1983, line=037, column=045, len=03, value=65555, text=int
+    SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=1987, line=037, column=049, len=01, value=41, text=a
+      SNodeList      , type=Ranges, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=1992, line=037, column=054, len=01, text=i
+    SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=1995, line=037, column=057, len=01, value=90, text=b
+      SNodeList      , type=Ranges, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=1997, line=037, column=059, len=01, value=7, text=7
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2000, line=037, column=062, len=01, value=8, text=8
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=2011, line=038, column=005, len=04, value=91, text=f021
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=2006, line=038, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=2029, line=039, column=005, len=04, value=92, text=F022
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=2024, line=039, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Call, option=00000000   group=Syntax    , type=IdentFunc   , pos=2038, line=039, column=014, len=01, value=43, text=f
+          SNodeList      , type=Null, option=00000000 
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=2052, line=040, column=005, len=07, value=93, text=main023
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=2047, line=040, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Call, option=00000000   group=Syntax    , type=IdentFunc   , pos=2064, line=040, column=017, len=01, value=43, text=f
+          SNodeList      , type=Null, option=00000000 
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Call, option=00000000   group=Syntax    , type=IdentFunc   , pos=2069, line=040, column=022, len=04, value=10, text=f000
+          SNodeList      , type=Null, option=00000000 
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=Assign      , pos=2084, line=040, column=037, len=01, value=37, text==
+          SNodeList      , type=Index, option=00000000   group=Syntax    , type=IdentArr    , pos=2077, line=040, column=030, len=01, value=41, text=a
+            SNodeList      , type=Ranges, option=00000001 
+              SNodeList      , type=Expressions, option=00000100 
+                SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2079, line=040, column=032, len=01, value=2, text=2
+                SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2081, line=040, column=034, len=01, value=1, text=1
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2086, line=040, column=039, len=02, value=12, text=12
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=Assign      , pos=2092, line=040, column=045, len=01, value=37, text==
+          SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=2090, line=040, column=043, len=01, text=i
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2094, line=040, column=047, len=02, value=33, text=33
+      SNodeList      , type=Expressions, option=00000010 
+        SNodeList      , type=Binary, option=FFFFFFFE   group=Oper      , type=Assign      , pos=2100, line=040, column=053, len=01, value=37, text==
+          SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=2098, line=040, column=051, len=01, text=i
+          SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=2102, line=040, column=055, len=01, text=i
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefArr      , pos=2109, line=041, column=000, len=03, value=65555, text=int
+    SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=2114, line=041, column=005, len=04, value=94, text=a024
+      SNodeList      , type=Ranges, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2119, line=041, column=010, len=01, value=3, text=3
+      SNodeList      , type=List, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2126, line=041, column=017, len=02, value=11, text=11
+        SNodeList      , type=Number, option=00000000   group=Number    , type=00          , pos=2130, line=041, column=021, len=05, number=12.210000, text=12.21
+    SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=2139, line=041, column=030, len=04, value=96, text=b024
+      SNodeList      , type=Ranges, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2144, line=041, column=035, len=01, value=2, text=2
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2147, line=041, column=038, len=01, value=3, text=3
+      SNodeList      , type=List, option=00000000 
+        SNodeList      , type=List, option=00000000 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2155, line=041, column=046, len=02, value=21, text=21
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2159, line=041, column=050, len=02, value=22, text=22
+        SNodeList      , type=List, option=00000000 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2167, line=041, column=058, len=02, value=31, text=31
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2171, line=041, column=062, len=02, value=32, text=32
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefArr      , pos=2179, line=042, column=000, len=03, value=65555, text=int
+    SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=2184, line=042, column=005, len=04, value=97, text=a025
+      SNodeList      , type=Ranges, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2189, line=042, column=010, len=01, value=1, text=1
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2192, line=042, column=013, len=01, value=1, text=1
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2195, line=042, column=016, len=01, value=1, text=1
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2198, line=042, column=019, len=01, value=1, text=1
+      SNodeList      , type=List, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2205, line=042, column=026, len=04, value=1111, text=1111
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefArr      , pos=2214, line=043, column=000, len=03, value=65555, text=int
+    SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=2219, line=043, column=005, len=04, value=99, text=a026
+      SNodeList      , type=Ranges, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+      SNodeList      , type=List, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2229, line=043, column=015, len=02, value=21, text=21
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2232, line=043, column=018, len=02, value=22, text=22
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2235, line=043, column=021, len=02, value=23, text=23
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefArr      , pos=2254, line=044, column=013, len=03, value=458771, text=int
+    SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=2258, line=044, column=017, len=04, value=100, text=A027
+      SNodeList      , type=Ranges, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2265, line=044, column=024, len=01, value=3, text=3
+      SNodeList      , type=List, option=00000000 
+        SNodeList      , type=List, option=00000000 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2272, line=044, column=031, len=01, value=1, text=1
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2274, line=044, column=033, len=01, value=2, text=2
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2276, line=044, column=035, len=01, value=3, text=3
+        SNodeList      , type=List, option=00000000 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2280, line=044, column=039, len=01, value=4, text=4
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2282, line=044, column=041, len=01, value=5, text=5
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2284, line=044, column=043, len=01, value=6, text=6
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefArr      , pos=2290, line=045, column=000, len=03, value=65555, text=int
+    SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=2295, line=045, column=005, len=04, value=101, text=A028
+      SNodeList      , type=Ranges, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2302, line=045, column=012, len=01, value=3, text=3
+      SNodeList      , type=List, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2308, line=045, column=018, len=01, value=1, text=1
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2310, line=045, column=020, len=01, value=2, text=2
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2312, line=045, column=022, len=01, value=3, text=3
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2314, line=045, column=024, len=01, value=4, text=4
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2316, line=045, column=026, len=01, value=5, text=5
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2318, line=045, column=028, len=01, value=6, text=6
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefArr      , pos=2323, line=046, column=000, len=03, value=65555, text=int
+    SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=2328, line=046, column=005, len=04, value=102, text=A029
+      SNodeList      , type=Ranges, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2335, line=046, column=012, len=01, value=3, text=3
+      SNodeList      , type=List, option=00000000 
+        SNodeList      , type=List, option=00000000 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2342, line=046, column=019, len=02, value=31, text=31
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2345, line=046, column=022, len=02, value=32, text=32
+        SNodeList      , type=List, option=00000000 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2350, line=046, column=027, len=02, value=43, text=43
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=2362, line=047, column=005, len=04, value=104, text=f030
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=2357, line=047, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=If, option=00000002 
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2375, line=047, column=018, len=03, value=111, text=111
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Unary, option=FFFFFFFF   group=Priority  , type=Unary       , pos=2380, line=047, column=023, len=01, value=50, text=-
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2381, line=047, column=024, len=02, value=22, text=22
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2390, line=047, column=033, len=02, value=33, text=33
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2399, line=047, column=042, len=03, value=111, text=111
+        SNodeList      , type=Expressions, option=000000F1 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2403, line=047, column=046, len=01, value=0, text=0
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2405, line=047, column=048, len=03, value=222, text=222
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2409, line=047, column=052, len=03, value=333, text=333
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=2422, line=048, column=005, len=04, value=108, text=f031
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=2417, line=048, column=000, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=For, option=00000004 
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Null, option=00000000 
+        SNodeList      , type=Expressions, option=00000010 
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2438, line=048, column=021, len=03, value=222, text=222
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2442, line=048, column=025, len=03, value=333, text=333
+        SNodeList      , type=Null, option=00000000 
+  SNodeList      , type=Define, option=00000001 
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=2451, line=049, column=000, len=03, value=65555, text=int
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=2456, line=049, column=005, len=04, text=a032
+      SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2463, line=049, column=012, len=01, value=2, text=2
+    SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=2466, line=049, column=015, len=04, text=b032
+      SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2473, line=049, column=022, len=01, value=3, text=3
+    SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=2476, line=049, column=025, len=04, value=111, text=A032
+      SNodeList      , type=Ranges, option=00000000 
+        SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=2481, line=049, column=030, len=04, text=a032
+        SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=2487, line=049, column=036, len=04, text=b032
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=2501, line=050, column=006, len=10, value=112, text=init_array
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=2496, line=050, column=001, len=04, value=2097169, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Define, option=00000001 
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefArr      , pos=2518, line=052, column=000, len=03, value=65555, text=int
+        SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=2522, line=052, column=004, len=01, value=41, text=a
+          SNodeList      , type=Ranges, option=00000000 
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2524, line=052, column=006, len=01, value=3, text=3
+          SNodeList      , type=List, option=00000000 
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2531, line=052, column=013, len=01, value=1, text=1
+            SNodeList      , type=Index, option=00000000   group=Syntax    , type=IdentArr    , pos=2534, line=052, column=016, len=01, value=41, text=a
+              SNodeList      , type=Ranges, option=00000001 
+                SNodeList      , type=Expressions, option=00000100 
+                  SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2536, line=052, column=018, len=01, value=2, text=2
+        SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=2542, line=052, column=024, len=01, value=90, text=b
+          SNodeList      , type=Ranges, option=00000000 
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2544, line=052, column=026, len=01, value=2, text=2
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2547, line=052, column=029, len=01, value=2, text=2
+          SNodeList      , type=List, option=00000000 
+            SNodeList      , type=List, option=00000000 
+              SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2554, line=052, column=036, len=01, value=1, text=1
+              SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2556, line=052, column=038, len=01, value=2, text=2
+            SNodeList      , type=List, option=00000000 
+      SNodeList      , type=Define, option=00000001 
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefArr      , pos=2578, line=053, column=013, len=03, value=458771, text=int
+        SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=2582, line=053, column=017, len=01, value=89, text=A
+          SNodeList      , type=Ranges, option=00000000 
+            SNodeList      , type=Null, option=00000000 
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2586, line=053, column=021, len=01, value=3, text=3
+          SNodeList      , type=List, option=00000000 
+            SNodeList      , type=List, option=00000000 
+              SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2593, line=053, column=028, len=01, value=1, text=1
+              SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2595, line=053, column=030, len=01, value=2, text=2
+              SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2597, line=053, column=032, len=01, value=3, text=3
+            SNodeList      , type=List, option=00000000 
+              SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2601, line=053, column=036, len=01, value=4, text=4
+              SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2603, line=053, column=038, len=01, value=5, text=5
+              SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2605, line=053, column=040, len=01, value=6, text=6
+      SNodeList      , type=Define, option=00000001 
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefArr      , pos=2611, line=054, column=000, len=03, value=65555, text=int
+        SNodeList      , type=DefArr, option=00000000   group=Syntax    , type=IdentArr    , pos=2615, line=054, column=004, len=02, value=113, text=b2
+          SNodeList      , type=Ranges, option=00000000 
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2618, line=054, column=007, len=01, value=3, text=3
+            SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2621, line=054, column=010, len=01, value=2, text=2
+          SNodeList      , type=List, option=00000000 
+            SNodeList      , type=List, option=00000000 
+              SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2629, line=054, column=018, len=01, value=1, text=1
+              SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2631, line=054, column=020, len=01, value=2, text=2
+            SNodeList      , type=List, option=00000000 
+              SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2636, line=054, column=025, len=01, value=3, text=3
+              SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2638, line=054, column=027, len=01, value=4, text=4
+            SNodeList      , type=List, option=00000000 
+              SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2643, line=054, column=032, len=01, value=5, text=5
+  SNodeList      , type=DefFunc, option=FFFFFFFF   group=Syntax    , type=IdentFunc   , pos=2667, line=057, column=012, len=03, value=114, text=f_s
+    SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefFunc     , pos=2662, line=057, column=007, len=04, value=2359313, text=void
+    SNodeList      , type=Null, option=00000000 
+    SNodeList      , type=Statements, option=00000000 
+      SNodeList      , type=Define, option=00000001 
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=2688, line=057, column=033, len=03, value=458771, text=int
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=2692, line=057, column=037, len=01, text=i
+          SNodeList      , type=Number, option=00000000   group=Integer   , type=00          , pos=2696, line=057, column=041, len=02, value=12, text=12
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=2700, line=057, column=045, len=01, text=k
+      SNodeList      , type=Define, option=00000001 
+        SNodeList      , type=Type, option=00000000   group=Syntax    , type=DefVar      , pos=2703, line=057, column=048, len=03, value=589843, text=int
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=2708, line=057, column=053, len=01, text=j
+          SNodeList      , type=Var, option=00000000   group=Ident     , type=00          , pos=2712, line=057, column=057, len=01, text=i
+        SNodeList      , type=DefVar, option=00000000   group=Ident     , type=00          , pos=2716, line=057, column=061, len=01, text=m

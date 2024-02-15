@@ -1,0 +1,47 @@
+{Situation: 00000         ,F                        } -> Situation: 00001         
+{                         ,E                        } -> Situation: 00002         
+{                         ,T                        } -> Situation: 00003         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00004         
+{                         ,<Integer>                } -> Situation: 00005         
+{Situation: 00001         ,T_                       } -> Situation: 00006         
+{                         ,<Priority,Factor>        } -> Situation: 00007         
+{Situation: 00003         ,E_                       } -> Situation: 00008         
+{                         ,<Priority,Term>          } -> Situation: 00009         
+{Situation: 00004         ,F                        } -> Situation: 00010         
+{                         ,E                        } -> Situation: 00011         
+{                         ,T                        } -> Situation: 00012         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00013         
+{                         ,<Integer>                } -> Situation: 00014         
+{Situation: 00007         ,F                        } -> Situation: 00015         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00004         
+{                         ,<Integer>                } -> Situation: 00005         
+{Situation: 00009         ,F                        } -> Situation: 00001         
+{                         ,T                        } -> Situation: 00016         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00004         
+{                         ,<Integer>                } -> Situation: 00005         
+{Situation: 00010         ,T_                       } -> Situation: 00017         
+{                         ,<Priority,Factor>        } -> Situation: 00018         
+{Situation: 00011         ,<Separator,RightBracket> } -> Situation: 00019         
+{Situation: 00012         ,E_                       } -> Situation: 00020         
+{                         ,<Priority,Term>          } -> Situation: 00021         
+{Situation: 00013         ,F                        } -> Situation: 00010         
+{                         ,E                        } -> Situation: 00022         
+{                         ,T                        } -> Situation: 00012         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00013         
+{                         ,<Integer>                } -> Situation: 00014         
+{Situation: 00015         ,T_                       } -> Situation: 00023         
+{                         ,<Priority,Factor>        } -> Situation: 00007         
+{Situation: 00016         ,E_                       } -> Situation: 00024         
+{                         ,<Priority,Term>          } -> Situation: 00009         
+{Situation: 00018         ,F                        } -> Situation: 00025         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00013         
+{                         ,<Integer>                } -> Situation: 00014         
+{Situation: 00021         ,F                        } -> Situation: 00010         
+{                         ,T                        } -> Situation: 00026         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00013         
+{                         ,<Integer>                } -> Situation: 00014         
+{Situation: 00022         ,<Separator,RightBracket> } -> Situation: 00027         
+{Situation: 00025         ,T_                       } -> Situation: 00028         
+{                         ,<Priority,Factor>        } -> Situation: 00018         
+{Situation: 00026         ,E_                       } -> Situation: 00029         
+{                         ,<Priority,Term>          } -> Situation: 00021         

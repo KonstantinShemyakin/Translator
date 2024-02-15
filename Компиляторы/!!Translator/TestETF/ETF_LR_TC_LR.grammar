@@ -1,0 +1,20 @@
+
+S_                       
+                         ::= E_                       
+                         
+E                        
+                         ::= E                           Priority_Term               T                           { MAKE(Binary); }        
+                         |   T                        
+                         
+T                        
+                         ::= T                           Priority_Factor             F                           { MAKE(Binary); }        
+                         |   F                        
+                         
+F                        
+                         ::= (                           E                           )                        
+                         |   Integer_lexeme              { MAKE(Number); }        
+                         |   Number_lexeme               { MAKE(Number); }        
+                         
+E_                       
+                         ::= { TREE(BegStmExpr); }       E                           { TREE(AddToList); }     
+                         

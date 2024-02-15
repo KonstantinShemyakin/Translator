@@ -1,0 +1,22 @@
+{Situation: 00000         ,E                        } -> Situation: 00001         
+{                         ,T                        } -> Situation: 00002         
+{                         ,F                        } -> Situation: 00003         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00004         
+{                         ,<Integer>                } -> Situation: 00005         
+{Situation: 00001         ,<Priority,Term>          } -> Situation: 00006         
+{Situation: 00002         ,<Priority,Factor>        } -> Situation: 00007         
+{Situation: 00004         ,E                        } -> Situation: 00008         
+{                         ,T                        } -> Situation: 00002         
+{                         ,F                        } -> Situation: 00003         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00004         
+{                         ,<Integer>                } -> Situation: 00005         
+{Situation: 00006         ,T                        } -> Situation: 00009         
+{                         ,F                        } -> Situation: 00003         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00004         
+{                         ,<Integer>                } -> Situation: 00005         
+{Situation: 00007         ,F                        } -> Situation: 00010         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00004         
+{                         ,<Integer>                } -> Situation: 00005         
+{Situation: 00008         ,<Separator,RightBracket> } -> Situation: 00011         
+{                         ,<Priority,Term>          } -> Situation: 00006         
+{Situation: 00009         ,<Priority,Factor>        } -> Situation: 00007         

@@ -1,0 +1,155 @@
+TranGrammar.exe
+2
+4FF8
+ETFtest.cpp
+..\ETF\ETF_LL_TC_LL1.tab
+
+3 + 6 * (7 + 8)
+
+--- M table --- <17> ---
+
+--- Grammar --- formula=7, produce=10, item=22, maker=6, used=0, vector=0, type=050320 ---
+group=Integer   , type=00          , pos=0000, line=000, column=000, len=01, value=3, text=3
+
+*00001* {S_                       ,<Integer>                }
+*00000*  << _E                       
+
+*00001* {_E                       ,<Integer>                }
+*00000*  << { CODE(EndBlock); }       { TREE(AddToList); }      E                         { MAKE(BegStmExprLL); }  
+Maker[BegStmExprLL,0], ret=1 n=[0,0],l=[0,0],t=[0,0],e=[0,1],b=[0,0],i=[0,0],s=[0,0]
+
+*00003* {E                        ,<Integer>                }
+*00002*  << E_                        T                        
+
+*00004* {T                        ,<Integer>                }
+*00003*  << T_                        F                        
+
+*00005* {F                        ,<Integer>                }
+*00004*  << { MAKE(Number); }         <Integer>                
+
+ ? group=Integer   , type=00          , pos=0000, line=000, column=000, len=01, value=3, text=3
+   <Integer>                
+group=Priority  , type=Term        , pos=0002, line=000, column=002, len=01, value=33, text=+
+
+*00006* <Integer>                , ret=1 [0] -> [1]
+
+TNodeCommand    type = CInt      ,   command = PushInt   , param = 003, mode = 000, type = CInt       -->> 00000
+Maker[Number,0], ret=1 n=[0,0],l=[1,0],t=[0,1],e=[1,1],b=[0,0],i=[0,0],s=[0,0]
+
+*00004* {T_                       ,<Priority,Term>          }
+*00003* {E_                       ,<Priority,Term>          }
+*00002*  << E_                        { MAKE(Binary); }         T                         <Priority,Term>          
+
+ ? group=Priority  , type=Term        , pos=0002, line=000, column=002, len=01, value=33, text=+
+   <Priority,Term>          
+group=Integer   , type=00          , pos=0004, line=000, column=004, len=01, value=6, text=6
+
+*00006* <Priority,Term>          , ret=1 [0] -> [1]
+
+*00005* {T                        ,<Integer>                }
+*00004*  << T_                        F                        
+
+*00006* {F                        ,<Integer>                }
+*00005*  << { MAKE(Number); }         <Integer>                
+
+ ? group=Integer   , type=00          , pos=0004, line=000, column=004, len=01, value=6, text=6
+   <Integer>                
+group=Priority  , type=Factor      , pos=0006, line=000, column=006, len=01, value=29, text=*
+
+*00007* <Integer>                , ret=1 [1] -> [2]
+
+TNodeCommand    type = CInt      ,   command = PushInt   , param = 006, mode = 000, type = CInt       -->> 00001
+Maker[Number,0], ret=1 n=[0,0],l=[2,1],t=[1,2],e=[1,1],b=[0,0],i=[0,0],s=[0,0]
+
+*00005* {T_                       ,<Priority,Factor>        }
+*00004*  << T_                        { MAKE(Binary); }         F                         <Priority,Factor>        
+
+ ? group=Priority  , type=Factor      , pos=0006, line=000, column=006, len=01, value=29, text=*
+   <Priority,Factor>        
+group=Separator , type=LeftBracket , pos=0008, line=000, column=008, len=01, value=55, text=(
+
+*00008* <Priority,Factor>        , ret=1 [1] -> [2]
+
+*00007* {F                        ,<Separator,LeftBracket>  }
+*00006*  << ')'                       E                         '('                      
+
+ ? group=Separator , type=LeftBracket , pos=0008, line=000, column=008, len=01, value=55, text=(
+   <Separator,LeftBracket>  
+group=Integer   , type=00          , pos=0009, line=000, column=009, len=01, value=7, text=7
+
+*00009* <Separator,LeftBracket>  , ret=1 [2] -> [2]
+
+*00008* {E                        ,<Integer>                }
+*00007*  << E_                        T                        
+
+*00009* {T                        ,<Integer>                }
+*00008*  << T_                        F                        
+
+*00010* {F                        ,<Integer>                }
+*00009*  << { MAKE(Number); }         <Integer>                
+
+ ? group=Integer   , type=00          , pos=0009, line=000, column=009, len=01, value=7, text=7
+   <Integer>                
+group=Priority  , type=Term        , pos=0011, line=000, column=011, len=01, value=33, text=+
+
+*00011* <Integer>                , ret=1 [2] -> [3]
+
+TNodeCommand    type = CInt      ,   command = PushInt   , param = 007, mode = 000, type = CInt       -->> 00002
+Maker[Number,0], ret=1 n=[0,0],l=[3,2],t=[2,3],e=[1,1],b=[0,0],i=[0,0],s=[0,0]
+
+*00009* {T_                       ,<Priority,Term>          }
+*00008* {E_                       ,<Priority,Term>          }
+*00007*  << E_                        { MAKE(Binary); }         T                         <Priority,Term>          
+
+ ? group=Priority  , type=Term        , pos=0011, line=000, column=011, len=01, value=33, text=+
+   <Priority,Term>          
+group=Integer   , type=00          , pos=0013, line=000, column=013, len=01, value=8, text=8
+
+*00011* <Priority,Term>          , ret=1 [2] -> [3]
+
+*00010* {T                        ,<Integer>                }
+*00009*  << T_                        F                        
+
+*00011* {F                        ,<Integer>                }
+*00010*  << { MAKE(Number); }         <Integer>                
+
+ ? group=Integer   , type=00          , pos=0013, line=000, column=013, len=01, value=8, text=8
+   <Integer>                
+group=Separator , type=RightBracket, pos=0014, line=000, column=014, len=01, value=56, text=)
+
+*00012* <Integer>                , ret=1 [3] -> [4]
+
+TNodeCommand    type = CInt      ,   command = PushInt   , param = 008, mode = 000, type = CInt       -->> 00003
+Maker[Number,0], ret=1 n=[0,0],l=[4,3],t=[3,4],e=[1,1],b=[0,0],i=[0,0],s=[0,0]
+
+*00010* {T_                       ,<Separator,RightBracket> }
+TNodeCommand    type = CInt      ,   command = Oper      , oper  = Add           , mode = 000, type = CInt       -->> 00004
+Maker[Binary,0], ret=1 n=[0,0],l=[3,2],t=[4,3],e=[1,1],b=[0,0],i=[0,0],s=[0,0]
+
+*00008* {E_                       ,<Separator,RightBracket> }
+ ? group=Separator , type=RightBracket, pos=0014, line=000, column=014, len=01, value=56, text=)
+   <Separator,RightBracket> 
+group=Eof       , type=00          , pos=0015, line=000, column=015, len=00
+
+*00007* <Separator,RightBracket> , ret=1 [2] -> [2]
+
+TNodeCommand    type = CInt      ,   command = Oper      , oper  = Multi         , mode = 000, type = CInt       -->> 00005
+Maker[Binary,0], ret=1 n=[0,0],l=[2,1],t=[3,2],e=[1,1],b=[0,0],i=[0,0],s=[0,0]
+
+*00005* {T_                       ,Eof                      }
+TNodeCommand    type = CInt      ,   command = Oper      , oper  = Add           , mode = 000, type = CInt       -->> 00006
+Maker[Binary,0], ret=1 n=[0,0],l=[1,0],t=[2,1],e=[1,1],b=[0,0],i=[0,0],s=[0,0]
+
+*00003* {E_                       ,Eof                      }Maker[EndBlock,0], ret=1 n=[0,0],l=[0,0],t=[1,1],e=[1,0],b=[0,0],i=[0,0],s=[0,0]
+
+level=12, step=41
+--- semantic_tree = 0, syntax_tree = 0, lexemes = 0 ----
+
+store_parse=0, restore_parse=0, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=0015, line=000, column=015, len=00
+
+time: 0.002s

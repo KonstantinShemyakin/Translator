@@ -1,0 +1,7 @@
+﻿  C99_Lexer.cpp
+  CGrammar.cpp
+  GSyntax.cpp
+  TranGrammar.cpp
+  stdafx.cpp
+  Generating Code...
+LINK : fatal error LNK1104: cannot open file 'P:\!!Translator\Debug\CodeTreeNode.lib'

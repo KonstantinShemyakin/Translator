@@ -1,0 +1,342 @@
+
+S_                       
+                         :   Program                  
+                         ;
+Program                  
+                         :   Defines                  
+                         ;
+DefParInit               
+                         :   <Oper,Assign>               Assign                   
+                         |   
+                         ;
+DefParVar                
+                         :   <Syntax,DefVar>             <Ident>                     { CALL(DefVar,1,1); }       DefParInit                  { CALL(DefVar,2,1); }    
+                         ;
+DefParArr                
+                         :   <Syntax,DefArr>             <Syntax,IdentArr>           { CALL(DefArr,1,1); }       DefArrDA                    DefParInit                  { CALL(DefArr,2,1); }    
+                         ;
+DefPar                   
+                         :   DefParArr                
+                         |   DefParVar                
+                         ;
+DefParItem               
+                         :   DefPar                   
+                         ;
+DefParList               
+                         :   <Separator,Comma>           DefParItem                  DefParList               
+                         |   
+                         ;
+DefParams                
+                         :   { CALL(Define,1,1); }       DefParItem                  DefParList                  { CALL(Define,2,1); }    
+                         ;
+BodyFunc                 
+                         :   <Separator,Semicolon>    
+                         |   <Syntax,EmptyCramp>         { CALL(Null,0); }        
+                         |   <Separator,LeftCramp>       StmExpr                     <Separator,RightCramp>   
+                         ;
+DefFuncParam             
+                         :   <Syntax,EmptyBracket>       { CALL(DefFunc,4); }     
+                         |   <Separator,LeftBracket>     DefParams                   { CALL(DefFunc,4,1); }      <Separator,RightBracket> 
+                         ;
+DefFunc                  
+                         :   <Syntax,DefFunc>            { CALL(DefFunc,1); }        <Syntax,IdentFunc>          { CALL(DefFunc,2); }        DefFuncParam                BodyFunc                    { CALL(DefFunc,8); }        { CALL(DefFunc,16); }    
+                         ;
+AInitialList             
+                         :   <Separator,Comma>           AInitItem                   AInitialList             
+                         |   
+                         ;
+AInitial                 
+                         :   AInitItem                   AInitialList             
+                         ;
+Initializer              
+                         :   <Syntax,EmptyCramp>         { CALL(List,1); }           { CALL(List,2); }        
+                         |   <Separator,LeftCramp>       { CALL(List,1); }           AInitial                    { CALL(List,2); }           <Separator,RightCramp>   
+                         ;
+AInitItem                
+                         :   Initializer              
+                         |   Assign                   
+                         ;
+DefAInit                 
+                         :   <Oper,Assign>               Initializer              
+                         |   
+                         ;
+DRanges                  
+                         :   <Separator,LeftScrape>      Assign                      <Separator,RightScrape>     DRanges                  
+                         |   
+                         ;
+DefArrD1A                
+                         :   <Syntax,EmptyScrape>        { CALL(Null,0); }        
+                         |   <Separator,LeftScrape>      Assign                      <Separator,RightScrape>  
+                         ;
+DefArrDA                 
+                         :   { CALL(List,1); }           DefArrD1A                   DRanges                     { CALL(List,2); }        
+                         ;
+DefArr                   
+                         :   <Syntax,IdentArr>           { CALL(DefArr,1); }         DefArrDA                    { CALL(DefArr,4); }         DefAInit                    { CALL(DefArr,2); }      
+                         ;
+DefVarInit               
+                         :   <Oper,Assign>               Assign                   
+                         |   
+                         ;
+DefVar                   
+                         :   <Ident>                     { CALL(DefVar,1); }         DefVarInit                  { CALL(DefVar,2); }      
+                         ;
+DefIAV                   
+                         :   DefArr                   
+                         |   DefVar                   
+                         ;
+DefItem                  
+                         :   <Priority,And>              DefIAV                      { CALL(RefDef,0); }      
+                         |   DefIAV                   
+                         ;
+DefType                  
+                         :   <Syntax,DefArr>          
+                         |   <Syntax,DefVar>          
+                         ;
+DefineList               
+                         :   <Separator,Comma>           DefItem                     DefineList               
+                         |   
+                         ;
+Define                   
+                         :   DefType                     { CALL(Define,1); }         DefItem                     DefineList                  { CALL(Define,2); }      
+                         ;
+ConditionDef             
+                         :   <Priority,And>              DefVar                      { CALL(RefDef,0); }      
+                         |   DefVar                   
+                         ;
+Condition                
+                         :   <Syntax,DefVar>             ConditionDef             
+                         |   ExpressionCondition      
+                         ;
+ExprList                 
+                         :   <Separator,Comma>           Assign                      ExprList                 
+                         |   
+                         ;
+PriorAssign              
+                         :   <Priority,Assign>        
+                         ;
+AssignList               
+                         :   PriorAssign                 { CALL(Binary,1); }         Assign                      { CALL(Binary,2); }      
+                         |   
+                         ;
+Assign                   
+                         :   Question                    AssignList               
+                         ;
+QuestionList             
+                         :   <Priority,Question>         { CALL(Trio,1); }           ExpressionValue             <Separator,Colon>           Question                    { CALL(Trio,2); }        
+                         |   
+                         ;
+Question                 
+                         :   OrOr                        QuestionList             
+                         ;
+OrOr                     
+                         :   AndAnd                      OrOr_                    
+                         ;
+OrOr_                    
+                         :   <Priority,OrOr>             { CALL(Binary,1); }         AndAnd                      { CALL(Binary,2); }         OrOr_                    
+                         |   
+                         ;
+AndAnd                   
+                         :   Or                          AndAnd_                  
+                         ;
+AndAnd_                  
+                         :   <Priority,AndAnd>           { CALL(Binary,1); }         Or                          { CALL(Binary,2); }         AndAnd_                  
+                         |   
+                         ;
+Or                       
+                         :   XOr                         Or_                      
+                         ;
+Or_                      
+                         :   <Priority,Or>               { CALL(Binary,1); }         XOr                         { CALL(Binary,2); }         Or_                      
+                         |   
+                         ;
+XOr                      
+                         :   And                         XOr_                     
+                         ;
+XOr_                     
+                         :   <Priority,XOr>              { CALL(Binary,1); }         And                         { CALL(Binary,2); }         XOr_                     
+                         |   
+                         ;
+And                      
+                         :   Equ                         And_                     
+                         ;
+And_                     
+                         :   <Priority,And>              { CALL(Binary,1); }         Equ                         { CALL(Binary,2); }         And_                     
+                         |   
+                         ;
+Equ                      
+                         :   Compare                     Equ_                     
+                         ;
+Equ_                     
+                         :   <Priority,Equ>              { CALL(Binary,1); }         Compare                     { CALL(Binary,2); }         Equ_                     
+                         |   
+                         ;
+Compare                  
+                         :   Shift                       Compare_                 
+                         ;
+Compare_                 
+                         :   <Priority,Compare>          { CALL(Binary,1); }         Shift                       { CALL(Binary,2); }         Compare_                 
+                         |   
+                         ;
+Shift                    
+                         :   Term                        Shift_                   
+                         ;
+Shift_                   
+                         :   <Priority,Shift>            { CALL(Binary,1); }         Term                        { CALL(Binary,2); }         Shift_                   
+                         |   
+                         ;
+Term                     
+                         :   Factor                      Term_                    
+                         ;
+Term_                    
+                         :   <Priority,Term>             { CALL(Binary,1); }         Factor                      { CALL(Binary,2); }         Term_                    
+                         |   
+                         ;
+Factor                   
+                         :   Unary                       Factor_                  
+                         ;
+Factor_                  
+                         :   <Priority,Factor>           { CALL(Binary,1); }         Unary                       { CALL(Binary,2); }         Factor_                  
+                         |   
+                         ;
+UnaryIncDec              
+                         :   <Priority,IncDec>           { CALL(Unary,4); }       
+                         |   
+                         ;
+Unary                    
+                         :   <Priority,Unary>            { CALL(Unary,1); }          Unary                       { CALL(Unary,2); }       
+                         |   <Priority,Term>             { CALL(Unary,1,1); }        Unary                       { CALL(Unary,2); }       
+                         |   <Priority,IncDec>           { CALL(Unary,1); }          Unary                       { CALL(Unary,2); }       
+                         |   <Syntax,CastUnary>          { CALL(Cast,1); }           Unary                       { CALL(Cast,2); }        
+                         |   PrimaryExpr                 UnaryIncDec              
+                         ;
+Primary                  
+                         :   <Separator,LeftBracket>     ExpressionNone              <Separator,RightBracket> 
+                         ;
+PrimaryExpr              
+                         :   <Integer>                   { CALL(Number,0); }      
+                         |   <Number>                    { CALL(Number,0); }      
+                         |   <Syntax,IdentArr>           { CALL(Index,1); }          Ranges                      { CALL(Index,2); }       
+                         |   <Syntax,IdentFunc>          { CALL(Call,1); }           CallParams                  { CALL(Call,2); }        
+                         |   <Syntax,Cast>               { CALL(Cast,1); }           Primary                     { CALL(Cast,2); }        
+                         |   <Ident>                     { CALL(Var,0); }         
+                         |   Primary                  
+                         ;
+RangesList               
+                         :   <Separator,LeftScrape>      ExpressionValue             <Separator,RightScrape>     RangesList               
+                         |   
+                         ;
+Ranges                   
+                         :   { CALL(List,1); }           RangesList                  { CALL(List,2); }        
+                         ;
+CallParams               
+                         :   <Syntax,EmptyBracket>    
+                         |   <Separator,LeftBracket>     ExpressionValueList         <Separator,RightBracket> 
+                         ;
+CompaundStmnt            
+                         :   <Syntax,EmptyCramp>         { CALL(Null,0); }        
+                         |   <Separator,LeftCramp>       { CALL(Statements,1); }     StmExpr                     { CALL(Statements,4); }     <Separator,RightCramp>   
+                         ;
+IfStmnt_                 
+                         :   <Reserv,Else>               DefExpr                  
+                         |   
+                         ;
+IfStmnt                  
+                         :   <Reserv,If>                 <Separator,LeftBracket>     { CALL(If,1); }             Condition                   { CALL(If,2); }             <Separator,RightBracket>    DefExpr                     { CALL(If,4); }             IfStmnt_                    { CALL(If,8); }          
+                         ;
+ForPrefix                
+                         :   <Separator,Semicolon>       { CALL(Null,0); }        
+                         |   DefineSemi               
+                         |   ExprSemi                 
+                         ;
+ForCondition             
+                         :   <Separator,Semicolon>       { CALL(Null,0); }        
+                         |   Condition                   <Separator,Semicolon>    
+                         ;
+ForPosfix                
+                         :   <Separator,RightBracket>    { CALL(Null,0); }        
+                         |   ExpressionExpression        <Separator,RightBracket> 
+                         ;
+ForStmnt                 
+                         :   <Reserv,For>                <Separator,LeftBracket>     { CALL(For,1); }            ForPrefix                   ForCondition                ForPosfix                   { CALL(For,2); }            DefExpr                     { CALL(For,4); }            { CALL(For,8); }         
+                         ;
+DoStmnt                  
+                         :   <Reserv,Do>                 { CALL(Do,1); }             DefExpr                     { CALL(Do,4); }             <Reserv,While>              <Separator,LeftBracket>     Condition                   { CALL(Do,2); }             <Separator,RightBracket>    { CALL(Do,8); }             <Separator,Semicolon>    
+                         ;
+WhileStmnt               
+                         :   <Reserv,While>              { CALL(While,1); }          <Separator,LeftBracket>     Condition                   { CALL(While,2); }          <Separator,RightBracket>    DefExpr                     { CALL(While,4); }          { CALL(While,8); }       
+                         ;
+GoToStmnt                
+                         :   <Reserv,GoTo>               <Ident>                     <Separator,Semicolon>       { CALL(GoTo,0); }        
+                         ;
+BreakStmnt               
+                         :   <Reserv,Break>              <Separator,Semicolon>       { CALL(Break,0); }       
+                         ;
+ContinueStmnt            
+                         :   <Reserv,Continue>           <Separator,Semicolon>       { CALL(Continue,0); }    
+                         ;
+ReturnVal                
+                         :   ExpressionValue          
+                         |   
+                         ;
+ReturnStmnt              
+                         :   <Reserv,Return>             { CALL(Return,1); }         ReturnVal                   { CALL(Return,2); }         <Separator,Semicolon>    
+                         ;
+Statement                
+                         :   <Syntax,Label>              <Separator,Colon>           { CALL(Label,0); }       
+                         |   IfStmnt                  
+                         |   DoStmnt                  
+                         |   WhileStmnt               
+                         |   ForStmnt                 
+                         |   GoToStmnt                
+                         |   BreakStmnt               
+                         |   ContinueStmnt            
+                         |   ReturnStmnt              
+                         |   CompaundStmnt            
+                         ;
+DefineSemi               
+                         :   Define                      <Separator,Semicolon>    
+                         ;
+ExprSemi                 
+                         :   ExpressionExpression        <Separator,Semicolon>    
+                         ;
+DefExpr                  
+                         :   <Separator,Semicolon>       { CALL(Null,0); }        
+                         |   DefineSemi               
+                         |   Statement                
+                         |   ExprSemi                 
+                         ;
+StmExprList              
+                         :   DefExpr                     StmExprList              
+                         |   
+                         ;
+StmExpr                  
+                         :   { CALL(Statements,1); }     StmExprList                 { CALL(Statements,4); }  
+                         ;
+DefFAV                   
+                         :   <Separator,Semicolon>       { CALL(Null,0); }        
+                         |   DefFunc                  
+                         |   DefineSemi               
+                         ;
+DefinesList              
+                         :   DefFAV                      DefinesList              
+                         |   
+                         ;
+Defines                  
+                         :   { CALL(Statements,1); }     DefinesList                 { CALL(Statements,4); }  
+                         ;
+ExpressionExpression     
+                         :   Assign                      { CALL(Expressions,1); }    ExprList                    { CALL(Expressions,2,16); }                       
+                         ;
+ExpressionCondition      
+                         :   Assign                      { CALL(Expressions,1); }    ExprList                    { CALL(Expressions,2,241); }                      
+                         ;
+ExpressionNone           
+                         :   Assign                      { CALL(Expressions,1); }    ExprList                    { CALL(Expressions,2); } 
+                         ;
+ExpressionValue          
+                         :   Assign                      { CALL(Expressions,1); }    ExprList                    { CALL(Expressions,2,256); }                      
+                         ;
+ExpressionValueList      
+                         :   Assign                      { CALL(Expressions,1); }    ExprList                    { CALL(Expressions,2,512); }                      
+                         ;

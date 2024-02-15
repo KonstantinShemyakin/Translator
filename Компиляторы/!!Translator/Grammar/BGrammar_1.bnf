@@ -1,0 +1,62 @@
+
+S_                       
+                         ::= bnf                      
+                         
+bnf                      
+                         ::= bnf                         rules                       { NODE(Formula,(0,1,2),1); }                      
+                         |   { NODE(Formula,(0),6); } 
+                         
+rules                    
+                         ::= rules                       '|'                         symbol_list                 { NODE(Formula,(0,1,3),1); }                      
+                         |   rule                        { NODE(Formula,(0,1),7); }                        
+                         
+rule                     
+                         ::= Space_lexeme                Separator_BNFSet            symbol_list                 { NODE(Formula,(1,3),2); }                        
+                         
+symbol_list              
+                         ::= symbol_list                 produce_item                { NODE(Produce,(2,1),7); }                        
+                         |   { NODE(Produce,(0),6); } 
+                         
+produce_item             
+                         ::= Maker_Make               
+                         |   Maker_Node               
+                         |   Maker_Turn               
+                         |   Maker_Call               
+                         |   Space_lexeme             
+                         
+Maker_Make               
+                         ::= '{'                         Ident_Maker                 (                           Ident_lexeme                ,                           int_body                    )                           ;                           '}'                         { NODE(Maker,(2,4,6)); } 
+                         |   '{'                         Ident_Maker                 (                           Ident_lexeme                )                           ;                           '}'                         { NODE(Maker,(2,4)); }   
+                         
+Ident_Maker              
+                         ::= ALL                      
+                         |   MAKE                     
+                         |   CODE                     
+                         |   TREE                     
+                         |   YACC                     
+                         
+Maker_Node               
+                         ::= '{'                         NODE                        (                           Ident_lexeme                ,                           node_body                   ,                           int_body                    )                           ;                           '}'                         { NODE(Maker,(4,6,8),1); }                        
+                         |   '{'                         NODE                        (                           Ident_lexeme                ,                           node_body                   )                           ;                           '}'                         { NODE(Maker,(4,6),1); } 
+                         
+node_body                
+                         ::= (                           int_body                    )                           { NODE(Maker,(2),2); }   
+                         |   (                           int_body                    ,                           int_body                    )                           { NODE(Maker,(2,4),2); } 
+                         |   (                           int_body                    ,                           int_body                    ,                           int_body                    )                           { NODE(Maker,(2,4,6),2); }                        
+                         |   (                           int_body                    ,                           int_body                    ,                           int_body                    ,                           int_body                    )                           { NODE(Maker,(2,4,6,8),2); }                      
+                         |   (                           int_body                    ,                           int_body                    ,                           int_body                    ,                           int_body                    ,                           int_body                    )                           { NODE(Maker,(2,4,6,8,10),2); }                   
+                         
+int_body                 
+                         ::= Integer_lexeme              { NODE(Maker,(1),3); }   
+                         |   Ident_lexeme                { NODE(Maker,(1),3); }   
+                         |   Ident_lexeme                ::                          Ident_lexeme                { NODE(Maker,(1,3),3); } 
+                         |   -                           Integer_lexeme              { NODE(Maker,(2),4); }   
+                         
+Maker_Turn               
+                         ::= '{'                         TURN                        (                           Ident_lexeme                ,                           Ident_lexeme                ,                           int_body                    )                           ;                           '}'                         { NODE(Maker,(4,6,8),5); }                        
+                         |   '{'                         TURN                        (                           Ident_lexeme                ,                           Ident_lexeme                )                           ;                           '}'                         { NODE(Maker,(4,6),5); } 
+                         
+Maker_Call               
+                         ::= '{'                         CALL                        (                           Ident_lexeme                ,                           int_body                    ,                           int_body                    )                           ;                           '}'                         { NODE(Maker,(4,6,8),6); }                        
+                         |   '{'                         CALL                        (                           Ident_lexeme                ,                           int_body                    )                           ;                           '}'                         { NODE(Maker,(4,6),6); } 
+                         

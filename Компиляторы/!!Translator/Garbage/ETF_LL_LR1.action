@@ -1,0 +1,84 @@
+{Situation: 00000         ,F                        } -> Goto    Situation: 00001         
+{                         ,E                        } -> Goto    Situation: 00002         
+{                         ,T                        } -> Goto    Situation: 00003         
+{                         ,<Separator,LeftBracket>  } -> Shift   Situation: 00004         
+{                         ,<Integer>                } -> Shift   Situation: 00005         
+{Situation: 00001         ,T_                       } -> Goto    Situation: 00006         
+{                         ,<Priority,Term>          } -> Reduce  [  1] T_                 
+{                         ,<Priority,Factor>        } -> Shift   Situation: 00007         
+{                         ,Empty                    } -> Reduce  [  1] T_                 
+{Situation: 00002         ,Empty                    } -> Accept  
+{Situation: 00003         ,E_                       } -> Goto    Situation: 00008         
+{                         ,<Priority,Term>          } -> Shift   Situation: 00009         
+{                         ,Empty                    } -> Reduce  [  1] E_                 
+{Situation: 00004         ,F                        } -> Goto    Situation: 00010         
+{                         ,E                        } -> Goto    Situation: 00011         
+{                         ,T                        } -> Goto    Situation: 00012         
+{                         ,<Separator,LeftBracket>  } -> Shift   Situation: 00013         
+{                         ,<Integer>                } -> Shift   Situation: 00014         
+{Situation: 00005         ,<Priority,Term>          } -> Reduce  [  1] F                  
+{                         ,<Priority,Factor>        } -> Reduce  [  1] F                  
+{                         ,Empty                    } -> Reduce  [  1] F                  
+{Situation: 00006         ,<Priority,Term>          } -> Reduce  [  0] T                  
+{                         ,Empty                    } -> Reduce  [  0] T                  
+{Situation: 00007         ,F                        } -> Goto    Situation: 00015         
+{                         ,<Separator,LeftBracket>  } -> Shift   Situation: 00004         
+{                         ,<Integer>                } -> Shift   Situation: 00005         
+{Situation: 00008         ,Empty                    } -> Reduce  [  0] E                  
+{Situation: 00009         ,F                        } -> Goto    Situation: 00001         
+{                         ,T                        } -> Goto    Situation: 00016         
+{                         ,<Separator,LeftBracket>  } -> Shift   Situation: 00004         
+{                         ,<Integer>                } -> Shift   Situation: 00005         
+{Situation: 00010         ,T_                       } -> Goto    Situation: 00017         
+{                         ,<Separator,RightBracket> } -> Reduce  [  1] T_                 
+{                         ,<Priority,Term>          } -> Reduce  [  1] T_                 
+{                         ,<Priority,Factor>        } -> Shift   Situation: 00018         
+{Situation: 00011         ,<Separator,RightBracket> } -> Shift   Situation: 00019         
+{Situation: 00012         ,E_                       } -> Goto    Situation: 00020         
+{                         ,<Separator,RightBracket> } -> Reduce  [  1] E_                 
+{                         ,<Priority,Term>          } -> Shift   Situation: 00021         
+{Situation: 00013         ,F                        } -> Goto    Situation: 00010         
+{                         ,E                        } -> Goto    Situation: 00022         
+{                         ,T                        } -> Goto    Situation: 00012         
+{                         ,<Separator,LeftBracket>  } -> Shift   Situation: 00013         
+{                         ,<Integer>                } -> Shift   Situation: 00014         
+{Situation: 00014         ,<Separator,RightBracket> } -> Reduce  [  1] F                  
+{                         ,<Priority,Term>          } -> Reduce  [  1] F                  
+{                         ,<Priority,Factor>        } -> Reduce  [  1] F                  
+{Situation: 00015         ,T_                       } -> Goto    Situation: 00023         
+{                         ,<Priority,Term>          } -> Reduce  [  1] T_                 
+{                         ,<Priority,Factor>        } -> Shift   Situation: 00007         
+{                         ,Empty                    } -> Reduce  [  1] T_                 
+{Situation: 00016         ,E_                       } -> Goto    Situation: 00024         
+{                         ,<Priority,Term>          } -> Shift   Situation: 00009         
+{                         ,Empty                    } -> Reduce  [  1] E_                 
+{Situation: 00017         ,<Separator,RightBracket> } -> Reduce  [  0] T                  
+{                         ,<Priority,Term>          } -> Reduce  [  0] T                  
+{Situation: 00018         ,F                        } -> Goto    Situation: 00025         
+{                         ,<Separator,LeftBracket>  } -> Shift   Situation: 00013         
+{                         ,<Integer>                } -> Shift   Situation: 00014         
+{Situation: 00019         ,<Priority,Term>          } -> Reduce  [  0] F                  
+{                         ,<Priority,Factor>        } -> Reduce  [  0] F                  
+{                         ,Empty                    } -> Reduce  [  0] F                  
+{Situation: 00020         ,<Separator,RightBracket> } -> Reduce  [  0] E                  
+{Situation: 00021         ,F                        } -> Goto    Situation: 00010         
+{                         ,T                        } -> Goto    Situation: 00026         
+{                         ,<Separator,LeftBracket>  } -> Shift   Situation: 00013         
+{                         ,<Integer>                } -> Shift   Situation: 00014         
+{Situation: 00022         ,<Separator,RightBracket> } -> Shift   Situation: 00027         
+{Situation: 00023         ,<Priority,Term>          } -> Reduce  [  0] T_                 
+{                         ,Empty                    } -> Reduce  [  0] T_                 
+{Situation: 00024         ,Empty                    } -> Reduce  [  0] E_                 
+{Situation: 00025         ,T_                       } -> Goto    Situation: 00028         
+{                         ,<Separator,RightBracket> } -> Reduce  [  1] T_                 
+{                         ,<Priority,Term>          } -> Reduce  [  1] T_                 
+{                         ,<Priority,Factor>        } -> Shift   Situation: 00018         
+{Situation: 00026         ,E_                       } -> Goto    Situation: 00029         
+{                         ,<Separator,RightBracket> } -> Reduce  [  1] E_                 
+{                         ,<Priority,Term>          } -> Shift   Situation: 00021         
+{Situation: 00027         ,<Separator,RightBracket> } -> Reduce  [  0] F                  
+{                         ,<Priority,Term>          } -> Reduce  [  0] F                  
+{                         ,<Priority,Factor>        } -> Reduce  [  0] F                  
+{Situation: 00028         ,<Separator,RightBracket> } -> Reduce  [  0] T_                 
+{                         ,<Priority,Term>          } -> Reduce  [  0] T_                 
+{Situation: 00029         ,<Separator,RightBracket> } -> Reduce  [  0] E_                 

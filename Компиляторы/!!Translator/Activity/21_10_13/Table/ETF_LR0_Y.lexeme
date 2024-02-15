@@ -1,0 +1,7 @@
+
+--- Lexemes --- <6> ---
+
+<Separator,LeftBracket>  <Separator,RightBracket> 
+<Integer>                
+<Number>                 
+<Priority,Term>          <Priority,Factor>        

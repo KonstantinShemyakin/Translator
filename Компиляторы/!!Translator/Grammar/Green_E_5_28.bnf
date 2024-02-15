@@ -1,0 +1,10 @@
+S        ::= A        B
+
+A        ::= B        Ident
+         |
+
+B        ::= C        Integer
+         |   C
+
+C        ::= Number
+         |

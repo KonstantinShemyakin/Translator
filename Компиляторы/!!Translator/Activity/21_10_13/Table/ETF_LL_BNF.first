@@ -1,0 +1,11 @@
+S_                       -> <Separator,LeftBracket>  <Ident>                  
+E                        -> <Separator,LeftBracket>  <Ident>                  
+E_                       -> <Priority,Term>          Empty                    
+T                        -> <Separator,LeftBracket>  <Ident>                  
+T_                       -> <Priority,Factor>        Empty                    
+F                        -> <Separator,LeftBracket>  <Ident>                  
+<Separator,LeftBracket>  -> <Separator,LeftBracket>  
+<Separator,RightBracket> -> <Separator,RightBracket> 
+<Ident>                  -> <Ident>                  
+<Priority,Term>          -> <Priority,Term>          
+<Priority,Factor>        -> <Priority,Factor>        

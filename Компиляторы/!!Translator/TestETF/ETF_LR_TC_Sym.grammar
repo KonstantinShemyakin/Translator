@@ -1,0 +1,20 @@
+
+S_                       
+                         : E_                       
+                         ;
+E                        
+                         : E                           '+'             T           { MAKE(Binary); }        
+                         | T                        
+                         ;
+T                        
+                         : T                           '*'             F           { MAKE(Binary); }        
+                         | F                        
+                         ;
+F                        
+                         : '('                         E              ')' 
+                         | <Integer>                   { MAKE(Number); }        
+                         | <Number>                    { MAKE(Number); }        
+                         ;
+E_                       
+                         : { TREE(BegStmExpr); }       E                           { TREE(AddToList); }     
+                         ;

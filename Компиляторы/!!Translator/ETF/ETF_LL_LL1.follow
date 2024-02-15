@@ -1,0 +1,6 @@
+S_                       -> Eof                      
+E                        -> <Separator,RightBracket> Eof                      
+E_                       -> <Separator,RightBracket> Eof                      
+T                        -> <Oper,Add>               <Separator,RightBracket> Eof                      
+T_                       -> <Oper,Add>               <Separator,RightBracket> Eof                      
+F                        -> <Oper,Add>               <Oper,Multi>             <Separator,RightBracket> Eof                      

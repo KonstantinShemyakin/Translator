@@ -1,0 +1,11 @@
+command = NewVar    , addr  = 000, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 000, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushNum   , param = 000, mode = 000, type = CDouble   
+command = Cast      , cast  = DC__IC_       , mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+
+Integer        0 5
+Integer        1 7
+
+Number         0 6.300000

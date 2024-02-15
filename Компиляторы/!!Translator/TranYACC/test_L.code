@@ -1,0 +1,6 @@
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = NewArr    , range = 001, Global , mode = 001, type = Int       
+command = Pop       , param = 001, mode = 000, type = Void      
+
+Integer        0 3
+

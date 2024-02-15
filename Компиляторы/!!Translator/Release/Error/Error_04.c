@@ -1,0 +1,4 @@
+// GoTo, Label
+void f()
+{
+}

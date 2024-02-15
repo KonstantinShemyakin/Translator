@@ -1,0 +1,19 @@
+S_                       -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  
+E                        -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  
+_f_00002_                -> <Oper,Add>               <Oper,Sub>               
+_f_00003_                -> <Oper,Add>               <Oper,Sub>               
+_f_00004_                -> <Oper,Add>               <Oper,Sub>               Empty                    
+T                        -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  
+_f_00006_                -> <Oper,Multi>             <Oper,Div>               
+_f_00007_                -> <Oper,Multi>             <Oper,Div>               
+_f_00008_                -> <Oper,Multi>             <Oper,Div>               Empty                    
+F                        -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  
+<Oper,Add>               -> <Oper,Add>               
+<Oper,Sub>               -> <Oper,Sub>               
+<Oper,Multi>             -> <Oper,Multi>             
+<Oper,Div>               -> <Oper,Div>               
+<Separator,LeftBracket>  -> <Separator,LeftBracket>  
+<Separator,RightBracket> -> <Separator,RightBracket> 
+<Integer>                -> <Integer>                
+<Number>                 -> <Number>                 
+<Ident>                  -> <Ident>                  

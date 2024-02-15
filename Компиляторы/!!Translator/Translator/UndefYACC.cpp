@@ -1,0 +1,20 @@
+#undef YYERROR_VERBOSE
+#undef YYSTACK_FREE
+#undef YYNTOKENS
+#undef YYMAXUTOK
+#undef YYFINAL
+#undef YYLAST
+#undef YYNNTS
+#undef YYNRULES
+#undef YYNSTATES
+#undef YYPACT_NINF
+#undef YYTABLE_NINF
+#undef yypact_value_is_default
+
+#undef yyparse 
+#undef yylex   
+#undef yyerror 
+#undef yylval  
+#undef yychar  
+#undef yydebug 
+#undef yynerrs 

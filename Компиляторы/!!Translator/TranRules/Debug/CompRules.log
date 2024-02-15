@@ -1,0 +1,5 @@
+﻿  RSyntax.cpp
+  TranRules.cpp
+  stdafx.cpp
+  Generating Code...
+LINK : fatal error LNK1104: cannot open file 'P:\!!Translator\Debug\CodeTreeNode.lib'

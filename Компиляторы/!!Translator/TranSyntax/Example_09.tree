@@ -1,0 +1,50 @@
+
+TNodeStatements type = Void      , 
+  TNodeDefine     type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeDefFunc    type = Void      ,   group=Ident     , type=00          , line=000, column=005, len=05, text=f_for
+      TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+      TNodeStatements type = Void      , 
+        TNodeDefine     type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=019, len=01, text=j
+            TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+            alloc=Local , offset=00
+          TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=022, len=01, text=k
+            TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+            alloc=Local , offset=01
+        TNodeFor        type = Unknown   ,   group=Reserv    , type=For         , line=000, column=025, len=03, value=6, text=for
+          TNodeDefine     type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+            TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=034, len=01, text=i
+              TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+              alloc=Local , offset=02
+          TNodeExpressions type = Int       ,   group=Separator , type=Semicolon   , line=000, column=035, len=01, value=56, text=;
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=000, column=037, len=01, text=i
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=034, len=01, text=i part=209 
+          TNodeExpressions type = CInt      ,   group=Separator , type=Semicolon   , line=000, column=038, len=01, value=56, text=;
+            TNodeUnary      type = CInt      ,   group=Oper      , type=PostInc     , line=000, column=041, len=02, value=45, text=++
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=000, column=040, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=034, len=01, text=i part=16 
+          TNodeStatements type = Void      , 
+            TNodeDefine     type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=051, len=01, text=l
+                TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+                alloc=Local , offset=03
+            TNodeIf         type = Unknown   ,   group=Reserv    , type=If          , line=000, column=054, len=02, value=8, text=if
+              TNodeExpressions type = Int       ,   group=Separator , type=LeftBracket , line=000, column=057, len=01, value=49, text=(
+                TNodeVar        type = Int       ,   group=Ident     , type=00          , line=000, column=058, len=01, text=i
+                  TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=034, len=01, text=i part=241 
+              TNodeContinue   type = Unknown   ,   group=Reserv    , type=Continue    , line=000, column=061, len=08, value=12, text=continue
+                TNodeLabel      type = Void      ,                   go_to=02
+              TNodeNull       type = Unknown   ,  number=5, size=0
+            TNodeStatements type = Void      , 
+              TNodeDefine     type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=077, len=01, text=m
+                  TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+                  alloc=Local , offset=04
+              TNodeIf         type = Unknown   ,   group=Reserv    , type=If          , line=000, column=080, len=02, value=8, text=if
+                TNodeExpressions type = CInt      ,   group=Separator , type=LeftBracket , line=000, column=083, len=01, value=49, text=(
+                  TNodeUnary      type = CInt      ,   group=Oper      , type=Not         , line=000, column=084, len=01, value=33, text=!
+                    TNodeVar        type = Int       ,   group=Ident     , type=00          , line=000, column=085, len=01, text=i
+                      TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=034, len=01, text=i part=241 
+                TNodeBreak      type = Unknown   ,   group=Reserv    , type=Break       , line=000, column=088, len=05, value=13, text=break
+                  TNodeLabel      type = Void      ,                     go_to=02
+                TNodeNull       type = Unknown   ,  number=7, size=0 number=6, size=1 number=4, size=1 number=3, size=1 number=2, size=2 number=1, size=0 number=0, size=0

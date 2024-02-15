@@ -1,0 +1,49 @@
+
+--- ErrorTable ---- 19 ----
+
+Error:Impossible    , error=33, value=00
+group=Ident     , type=00          , pos=0078, line=000, column=078, len=03, text=jjj
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Continue    , pos=0619, line=017, column=101, len=08, value=12, text=continue
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0961, line=021, column=022, len=06, value=14, text=return
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Return      , pos=0997, line=021, column=058, len=06, value=14, text=return
+
+Error:Impossible    , error=33, value=00
+group=Ident     , type=00          , pos=1294, line=025, column=102, len=03, text=jjj
+
+Error:Impossible    , error=33, value=00
+group=Ident     , type=00          , pos=1916, line=036, column=045, len=01, text=i
+
+Error:Impossible    , error=33, value=00
+group=Ident     , type=00          , pos=1928, line=036, column=057, len=01, text=i
+
+
+
+--- ErrorTable ---- 21 ----
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Int         , pos=0000, line=000, column=000, len=00, value=2, text=int
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Continue    , pos=0619, line=017, column=101, len=08, value=12, text=continue
+
+Error:Impossible    , error=33, value=00
+group=Integer   , type=00          , pos=0968, line=021, column=029, len=03, value=123, text=123
+
+Error:Impossible    , error=33, value=00
+group=Separator , type=Semicolon   , pos=1003, line=021, column=064, len=01, value=62, text=;
+
+Error:Impossible    , error=33, value=00
+group=Reserv    , type=Int         , pos=0000, line=000, column=000, len=00, value=2, text=int
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostDec     , pos=1917, line=036, column=046, len=02, value=52, text=--
+
+Error:Impossible    , error=33, value=00
+group=Oper      , type=PostInc     , pos=1929, line=036, column=058, len=02, value=51, text=++
+

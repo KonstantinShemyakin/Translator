@@ -1,0 +1,19 @@
+{S_                       ,<Separator,LeftBracket>  }[  0] S_                 -> E                        
+{                         ,<Integer>                }[  0] S_                 -> E                        
+{                         ,<Number>                 }[  0] S_                 -> E                        
+{E                        ,<Separator,LeftBracket>  }[  0] E                  -> T                        E_                       
+{                         ,<Integer>                }[  0] E                  -> T                        E_                       
+{                         ,<Number>                 }[  0] E                  -> T                        E_                       
+{E_                       ,<Separator,RightBracket> }[  1] E_                 -> 
+{                         ,<Priority,Term>          }[  0] E_                 -> <Priority,Term>          T                        E_                       
+{                         ,Eof                      }[  1] E_                 -> 
+{T                        ,<Separator,LeftBracket>  }[  0] T                  -> F                        T_                       
+{                         ,<Integer>                }[  0] T                  -> F                        T_                       
+{                         ,<Number>                 }[  0] T                  -> F                        T_                       
+{T_                       ,<Separator,RightBracket> }[  1] T_                 -> 
+{                         ,<Priority,Term>          }[  1] T_                 -> 
+{                         ,<Priority,Factor>        }[  0] T_                 -> <Priority,Factor>        F                        T_                       
+{                         ,Eof                      }[  1] T_                 -> 
+{F                        ,<Separator,LeftBracket>  }[  0] F                  -> <Separator,LeftBracket>  E                        <Separator,RightBracket> 
+{                         ,<Integer>                }[  1] F                  -> <Integer>                
+{                         ,<Number>                 }[  2] F                  -> <Number>                 

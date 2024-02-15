@@ -1,0 +1,6 @@
+
+TNodeBinary     type = CInt      ,   group=Priority  , type=Term        , line=001, column=002, len=01, value=27, text=+
+  TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=001, column=000, len=01, value=3, text=3
+  TNodeBinary     type = CInt      ,   group=Priority  , type=Factor      , line=001, column=006, len=01, value=23, text=*
+    TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=001, column=004, len=01, value=6, text=6
+    TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=001, column=008, len=01, value=7, text=7

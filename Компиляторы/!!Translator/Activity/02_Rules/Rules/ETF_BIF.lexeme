@@ -1,0 +1,8 @@
+
+--- Lexemes --- <9> ---
+
+<Oper,Add>               <Oper,Sub>               <Oper,Multi>             <Oper,Div>               
+<Separator,LeftBracket>  <Separator,RightBracket> 
+<Integer>                
+<Number>                 
+<Ident>                  

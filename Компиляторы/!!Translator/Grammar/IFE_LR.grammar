@@ -1,0 +1,9 @@
+
+S_                       
+                         : S                        
+                         ;
+S                        
+                         : <Reserv,If>    <Separator,LeftBracket>     <Integer>     <Separator,RightBracket>    S      <Reserv,Else>      S                        
+                         | <Reserv,If>    <Separator,LeftBracket>     <Integer>     <Separator,RightBracket>    S                        
+                         | <Ident>                  
+                         ;

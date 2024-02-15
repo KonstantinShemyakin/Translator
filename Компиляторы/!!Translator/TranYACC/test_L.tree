@@ -1,0 +1,8 @@
+
+TNodeStatements type = Void      , 
+  TNodeDefine     type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+    TNodeDefArr     type = Int       ,   group=Ident     , type=00          , line=000, column=004, len=03, text=arr
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      T_NodeList      type = CInt      , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=000, column=008, len=01, value=3, text=3
+      alloc=Global , offset=00 number=0, size=1

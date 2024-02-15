@@ -1,0 +1,10 @@
+S_                       -> <Integer>                 { <Integer>                <Priority,Factor>         }  { <Separator,LeftBracket>  <Integer>                 }  { <Integer>                <Priority,Term>           }  { <Separator,LeftBracket>  <Separator,LeftBracket>   } 
+E                        -> <Integer>                 { <Integer>                <Priority,Factor>         }  { <Separator,LeftBracket>  <Integer>                 }  { <Integer>                <Priority,Term>           }  { <Separator,LeftBracket>  <Separator,LeftBracket>   } 
+T                        -> <Integer>                 { <Integer>                <Priority,Factor>         }  { <Separator,LeftBracket>  <Integer>                 }  { <Separator,LeftBracket>  <Separator,LeftBracket>   } 
+F                        -> <Integer>                 { <Separator,LeftBracket>  <Integer>                 }  { <Separator,LeftBracket>  <Separator,LeftBracket>   } 
+<Separator,LeftBracket>  -> <Separator,LeftBracket>  
+<Separator,RightBracket> -> <Separator,RightBracket> 
+<Integer>                -> <Integer>                
+<Priority,Term>          -> <Priority,Term>          
+<Priority,Factor>        -> <Priority,Factor>        
+Empty                    -> Empty                    

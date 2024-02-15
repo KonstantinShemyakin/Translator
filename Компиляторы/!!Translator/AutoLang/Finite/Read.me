@@ -1,0 +1,201 @@
+На вход подается описание конечного автомата в виде:
+Терминальный алфавит
+Список состояний
+Список конечных состояний
+Функция переходов в виде списка троек, разделенных ";": состояние, символ, состояние.
+Например:
+
+a  
+A B C D
+D C B
+A 
+A a B ; B a C ; C a D ; D a C ;
+
+
+Входная строка задается с терминала и должна заканчиваться символом "#".
+Если нет - авост!
+
+Протокол работы:
+
+Map:D{a=[C]}
+Map:A{a=[B]}
+Map:C{a=[D]}
+Map:B{a=[C]}
+Map:D{a=[C]}
+Map:C{a=[D, B]}
+Map:B{a=[A]}
+Disting D  A
+Result:
+State disting for D A
+State disting for A
+Disting C  A
+Result:
+State disting for D A
+State disting for A
+State disting for C A
+Disting B  A
+Result:
+State disting for D A
+State disting for A
+State disting for C A
+State disting for B A
+Result:
+State disting for D A
+State disting for A
+State disting for C A
+State disting for B A
+Result:
+State disting for D A
+State disting for A
+State disting for C A
+State disting for B A
+State disting for D A
+State disting for A
+State disting for C A
+State disting for B A
+State nextSet D C B
+State nextSet C B
+State nextSet A
+Result:
+State D C B
+State A
+Map:D{a=[D]}
+Map:A{a=[D]}
+Input string:
+a a #
+Configurations before transition:
+Configuration:State = A input = aa
+After modification
+Configuration:State = D input = a
+Transition:AaD
+Configurations after transition:
+Configuration:State = D input = a
+Configurations before transition:
+Configuration:State = D input = a
+Accept in the state D
+
+$ означает пустую строку, например
+
+a b 
+A B C D 
+D 
+A 
+A a B ; A a C ; B b D ; C $ A ; D $ A ; 
+
+Протокол
+
+Map:D{a=[A]}
+Map:A{a=[B, C]}
+Map:B{b=[D]}
+Map:C{b=[A]}
+Input string:
+a b #
+Configurations before transition:
+Configuration:State = A input = ab
+After modification
+Configuration:State = B input = b
+Transition:AaB
+After modification
+Configuration:State = B input = b
+Configuration:State = C input = b
+Transition:AaC
+Configurations after transition:
+Configuration:State = B input = b
+Configuration:State = C input = b
+Configurations before transition:
+Configuration:State = B input = b
+Configuration:State = C input = b
+Accept in the state D
+
+
+Пара методов 
+
+automaton.InvertTransitionFunction();
+automaton.equivalence();
+
+осуществляют минимазацию автомата.
+
+Пара методов
+
+automaton.read();
+automaton.ComeOn();
+
+обеспечивают чтение входной строки и ее чтение автоматом.
+
+Метод
+
+ automaton.NFAtoDFA();
+
+строит по недерминированному автомату эквивалентный детерминированный.
+
+Например, для автомата 
+
+a b 
+A B C D 
+D 
+A 
+A a B ; A a C ; B b D ; C $ A ; D $ A ; 
+
+протокол
+
+Map:D{a=[A]}
+Map:A{a=[B, C]}
+Map:B{b=[D]}
+Map:C{b=[A]}
+Current unmarkedState 1
+ A
+from 
+ A
+by b
+to 
+
+from 
+ A
+by a
+to 
+ B C
+transition from 1 by a to 2
+Current unmarkedState 2
+ B C
+from 
+ B C
+by b
+to 
+ D A
+transition from 2 by b to 3
+from 
+ B C
+by a
+to 
+
+Current unmarkedState 3
+ D A
+from 
+ D A
+by b
+to 
+
+from 
+ D A
+by a
+to 
+ A B C
+transition from 3 by a to 4
+Current unmarkedState 4
+ A B C
+from 
+ A B C
+by b
+to 
+ D A
+transition from 4 by b to 3
+from 
+ A B C
+by a
+to 
+ B C
+transition from 4 by a to 2
+Map:3{a=[4]}
+Map:2{b=[3]}
+Map:1{a=[2]}
+Map:4{b=[3], a=[2]}

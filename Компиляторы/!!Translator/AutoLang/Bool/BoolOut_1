@@ -1,0 +1,20 @@
+TST A
+BEQ 4
+5:
+TST B
+BNE 2
+4:
+TST C
+BEQ 3
+6:
+TST D
+BNE 2
+3:
+TST E
+BEQ 0
+7:
+TST F
+BEQ 0
+2:
+TST G
+BEQ 0

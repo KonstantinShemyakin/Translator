@@ -1,0 +1,412 @@
+Comparing files ..\CODE\C_Code.code and ..\CODE\FORMULA_LL_CODE_PSS.CODE
+***** ..\CODE\C_Code.code
+   39:  command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+   40:  command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+   41:  command = PushInt   , param = 005, mode = 000, type = CInt      
+   42:  command = Oper      , oper  = LT            , mode = 000, type = CInt      
+   43:  command = GoTo      , label = 015, If   , mode = 001, type = Unknown   
+   44:  command = Pop       , param = 001, mode = 000, type = Void      
+   45:  command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+   46:  command = Label     , param = 023, mode = 001, type = Void      
+***** ..\CODE\FORMULA_LL_CODE_PSS.CODE
+   39:  command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+   40:  command = PushInt   , param = 005, mode = 000, type = CInt      
+   41:  command = GoTo      , label = 015, GoTo , mode = 003, type = Unknown   
+   42:  command = Label     , param = 019, mode = 001, type = Void      
+   43:  command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+   44:  command = PushInt   , param = 005, mode = 000, type = CInt      
+   45:  command = GoTo      , label = 019, GoTo , mode = 003, type = Unknown   
+   46:  command = Label     , param = 023, mode = 001, type = Void      
+*****
+
+***** ..\CODE\C_Code.code
+   47:  command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+   48:  command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+   49:  command = PushInt   , param = 005, mode = 000, type = CInt      
+   50:  command = Oper      , oper  = LT            , mode = 000, type = CInt      
+   51:  command = GoTo      , label = 034, Else , mode = 002, type = Unknown   
+   52:  command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+***** ..\CODE\FORMULA_LL_CODE_PSS.CODE
+   47:  command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+   48:  command = PushInt   , param = 005, mode = 000, type = CInt      
+   49:  command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+*****
+
+***** ..\CODE\C_Code.code
+   53:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+   54:  command = PushInt   , param = 002, mode = 000, type = CInt      
+   55:  command = Oper      , oper  = AddAssign     , mode = 001, type = Void      
+   56:  command = GoTo      , label = 023, GoTo , mode = 003, type = Unknown   
+   57:  command = Label     , param = 034, mode = 001, type = Void      
+   58:  command = Pop       , param = 001, mode = 000, type = Void      
+   59:  command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+   60:  command = Label     , param = 037, mode = 001, type = Void      
+   61:  command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+   62:  command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+   63:  command = PushInt   , param = 005, mode = 000, type = CInt      
+   64:  command = Oper      , oper  = LT            , mode = 000, type = CInt      
+   65:  command = GoTo      , label = 047, Else , mode = 002, type = Unknown   
+   66:  command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+***** ..\CODE\FORMULA_LL_CODE_PSS.CODE
+   50:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+   51:  command = Oper      , oper  = PostInc       , mode = 001, type = Void      
+   52:  command = GoTo      , label = 023, GoTo , mode = 003, type = Unknown   
+   53:  command = Label     , param = 030, mode = 001, type = Void      
+   54:  command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+   55:  command = PushInt   , param = 005, mode = 000, type = CInt      
+   56:  command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+*****
+
+***** ..\CODE\C_Code.code
+   68:  command = Oper      , oper  = PostInc       , mode = 001, type = Void      
+   69:  command = GoTo      , label = 037, GoTo , mode = 003, type = Unknown   
+   70:  command = Label     , param = 047, mode = 001, type = Void      
+   71:  command = Pop       , param = 001, mode = 000, type = Void      
+   72:  command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+   73:  command = Label     , param = 050, mode = 001, type = Void      
+   74:  command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+   75:  command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+   76:  command = PushInt   , param = 005, mode = 000, type = CInt      
+   77:  command = Oper      , oper  = LT            , mode = 000, type = CInt      
+   78:  command = GoTo      , label = 062, If   , mode = 001, type = Unknown   
+   79:  command = GoTo      , label = 068, GoTo , mode = 003, type = Unknown   
+   80:  command = Label     , param = 057, mode = 001, type = Void      
+   81:  command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+   82:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+   83:  command = Oper      , oper  = PostInc       , mode = 001, type = Void      
+   84:  command = GoTo      , label = 050, GoTo , mode = 003, type = Unknown   
+   85:  command = Label     , param = 062, mode = 001, type = Void      
+   86:  command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+   87:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+***** ..\CODE\FORMULA_LL_CODE_PSS.CODE
+   58:  command = Oper      , oper  = PostInc       , mode = 001, type = Void      
+   59:  command = GoTo      , label = 030, GoTo , mode = 003, type = Unknown   
+   60:  command = Exit      , param = 001, mode = 000, type = Void      
+   61:  
+   62:  TNodeDefFunc    line=013, column=028, len=04, text=ffff
+   63:  command = PushVar   , addr  = 000, Global , mode = 001, type = Int       
+   64:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+   65:  command = PushInt   , param = 005, mode = 000, type = CInt      
+   66:  command = Oper      , oper  = Assign        , mode = 001, type = Void      
+   67:  command = PushVar   , addr  = 001, Global , mode = 001, type = Int       
+   68:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+   69:  command = PushVar   , addr  = 000, Global , mode = 001, type = Int       
+   70:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+   71:  command = Oper      , oper  = PostInc       , mode = 000, type = CInt      
+   72:  command = Oper      , oper  = SubAssign     , mode = 001, type = Void      
+   73:  command = PushInt   , param = 000, mode = 000, type = CInt      
+   74:  command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+   75:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+*****
+
+***** ..\CODE\C_Code.code
+   88:  command = PushInt   , param = 002, mode = 000, type = CInt      
+   89:  command = Oper      , oper  = AddAssign     , mode = 001, type = Void      
+   90:  command = GoTo      , label = 057, GoTo , mode = 003, type = Unknown   
+   91:  command = Label     , param = 068, mode = 001, type = Void      
+   92:  command = Pop       , param = 001, mode = 000, type = Void      
+   93:  command = Exit      , param = 001, mode = 000, type = Void      
+   94:  
+   95:  TNodeDefFunc    line=013, column=028, len=04, text=ffff
+   96:  command = PushVar   , addr  = 000, Global , mode = 001, type = Int       
+   97:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+   98:  command = PushInt   , param = 005, mode = 000, type = CInt      
+   99:  command = Oper      , oper  = Assign        , mode = 001, type = Void      
+  100:  command = PushVar   , addr  = 001, Global , mode = 001, type = Int       
+  101:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+  102:  command = PushVar   , addr  = 000, Global , mode = 001, type = Int       
+  103:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+***** ..\CODE\FORMULA_LL_CODE_PSS.CODE
+   76:  command = PushInt   , param = 002, mode = 000, type = CInt      
+   77:  command = Oper      , oper  = Assign        , mode = 001, type = Void      
+   78:  command = PushInt   , param = 001, mode = 000, type = CInt      
+   79:  command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+   80:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+   81:  command = PushInt   , param = 000, mode = 000, type = CInt      
+   82:  command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+   83:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+*****
+
+***** ..\CODE\C_Code.code
+  104:  command = Oper      , oper  = PostInc       , mode = 000, type = CInt      
+  105:  command = Oper      , oper  = SubAssign     , mode = 001, type = Void      
+  106:  command = PushInt   , param = 000, mode = 000, type = CInt      
+***** ..\CODE\FORMULA_LL_CODE_PSS.CODE
+   84:  command = Oper      , oper  = PostInc       , mode = 000, type = CInt      
+   85:  command = Oper      , oper  = Assign        , mode = 001, type = Void      
+   86:  command = PushInt   , param = 002, mode = 000, type = CInt      
+   87:  command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+   88:  command = PushInt   , param = 000, mode = 000, type = CInt      
+*****
+
+***** ..\CODE\C_Code.code
+  107:  command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+  108:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+  109:  command = PushInt   , param = 002, mode = 000, type = CInt      
+  110:  command = Oper      , oper  = Assign        , mode = 001, type = Void      
+  111:  command = PushInt   , param = 001, mode = 000, type = CInt      
+***** ..\CODE\FORMULA_LL_CODE_PSS.CODE
+   89:  command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+   90:  command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+   91:  command = PushInt   , param = 001, mode = 000, type = CInt      
+*****
+
+***** ..\CODE\C_Code.code
+  112:  command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+  113:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+  114:  command = PushInt   , param = 000, mode = 000, type = CInt      
+  115:  command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+  116:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+  117:  command = Oper      , oper  = PostInc       , mode = 000, type = CInt      
+  118:  command = Oper      , oper  = Assign        , mode = 001, type = Void      
+  119:  command = PushInt   , param = 002, mode = 000, type = CInt      
+  120:  command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+  121:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+  122:  command = PushInt   , param = 000, mode = 000, type = CInt      
+  123:  command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+  124:  command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+  125:  command = PushInt   , param = 001, mode = 000, type = CInt      
+  126:  command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+  127:  command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+***** ..\CODE\FORMULA_LL_CODE_PSS.CODE
+   92:  command = PushArr   , addr  = 002, Global , mode = 001, type = Int       
+   93:  command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+*****
+
+***** ..\CODE\C_Code.code
+  128:  command = Oper      , oper  = Add           , mode = 000, type = CInt      
+  129:  command = Oper      , oper  = Assign        , mode = 001, type = Void      
+  130:  command = Exit      , param = 002, mode = 000, type = Void      
+***** ..\CODE\FORMULA_LL_CODE_PSS.CODE
+   94:  command = Oper      , oper  = Add           , mode = 000, type = CInt      
+   95:  command = Exit      , param = 002, mode = 000, type = Void      
+*****
+
+***** ..\CODE\C_Code.code
+  136:  
+  137:  TNodeDefFunc    line=017, column=045, len=04, text=f003
+  138:  command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+  139:  command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+  140:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+***** ..\CODE\FORMULA_LL_CODE_PSS.CODE
+  101:  
+  102:  command = NewVar    , addr  = 000, Global , mode = 001, type = Int       
+  103:  command = NewVar    , addr  = 001, Global , mode = 001, type = Int       
+  104:  command = PushVar   , addr  = 001, Global , mode = 001, type = Int       
+  105:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+  106:  command = PushVar   , addr  = 000, Global , mode = 001, type = Int       
+  107:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+  108:  command = PushInt   , param = 012, mode = 000, type = CInt      
+  109:  command = Oper      , oper  = Assign        , mode = 000, type = CInt      
+  110:  command = Oper      , oper  = Assign        , mode = 000, type = CInt      
+  111:  command = Pop       , param = 001, mode = 000, type = Void      
+  112:  command = PushInt   , param = 003, mode = 000, type = CInt      
+  113:  command = NewArr    , range = 001, Global , mode = 001, type = Int       
+  114:  command = NewVar    , addr  = 003, Global , mode = 001, type = Int       
+  115:  command = NewVar    , addr  = 004, Global , mode = 001, type = Int       
+  116:  command = NewVar    , addr  = 005, Global , mode = 001, type = Int       
+  117:  command = PushVar   , addr  = 005, Global , mode = 001, type = Int       
+  118:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+  119:  command = PushInt   , param = 001, mode = 000, type = CInt      
+  120:  command = Oper      , oper  = Assign        , mode = 000, type = CInt      
+  121:  command = Pop       , param = 001, mode = 000, type = Void      
+  122:  command = PushInt   , param = 003, mode = 000, type = CInt      
+  123:  command = NewArr    , range = 001, Global , mode = 001, type = Int       
+  124:  command = PushInt   , param = 010, mode = 000, type = CInt      
+  125:  command = PushInt   , param = 000, mode = 000, type = CInt      
+  126:  command = InitArr   , addr  = 006, Global , mode = 001, type = Int       
+  127:  command = PushInt   , param = 011, mode = 000, type = CInt      
+  128:  command = PushInt   , param = 001, mode = 000, type = CInt      
+  129:  command = InitArr   , addr  = 006, Global , mode = 001, type = Int       
+  130:  command = PushInt   , param = 012, mode = 000, type = CInt      
+  131:  command = PushInt   , param = 002, mode = 000, type = CInt      
+  132:  command = InitArr   , addr  = 006, Global , mode = 001, type = Int       
+  133:  command = PushInt   , param = 002, mode = 000, type = CInt      
+  134:  command = NewArr    , range = 001, Global , mode = 001, type = Int       
+  135:  command = PushInt   , param = 020, mode = 000, type = CInt      
+  136:  command = PushInt   , param = 000, mode = 000, type = CInt      
+  137:  command = InitArr   , addr  = 007, Global , mode = 001, type = Int       
+  138:  command = PushInt   , param = 001, mode = 000, type = CInt      
+  139:  command = PushArr   , addr  = 006, Global , mode = 001, type = Int       
+  140:  command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+  141:  command = PushInt   , param = 001, mode = 000, type = CInt      
+  142:  command = InitArr   , addr  = 007, Global , mode = 001, type = Int       
+  143:  command = PushInt   , param = 003, mode = 000, type = CInt      
+  144:  command = NewArr    , range = 001, Global , mode = 001, type = Int       
+  145:  command = PushInt   , param = 010, mode = 000, type = CInt      
+  146:  command = PushInt   , param = 000, mode = 000, type = CInt      
+  147:  command = InitArr   , addr  = 008, Global , mode = 001, type = Int       
+  148:  command = PushInt   , param = 011, mode = 000, type = CInt      
+  149:  command = PushInt   , param = 001, mode = 000, type = CInt      
+  150:  command = InitArr   , addr  = 008, Global , mode = 001, type = Int       
+  151:  command = PushInt   , param = 012, mode = 000, type = CInt      
+  152:  command = PushInt   , param = 002, mode = 000, type = CInt      
+  153:  command = InitArr   , addr  = 008, Global , mode = 001, type = Int       
+  154:  command = NewVar    , addr  = 009, Global , mode = 001, type = Int       
+  155:  command = PushVar   , addr  = 009, Global , mode = 001, type = Int       
+  156:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+*****
+
+Resync Failed.  Files are too different.
+***** ..\CODE\C_Code.code
+  141:  command = PushInt   , param = 000, mode = 000, type = CInt      
+  142:  command = Oper      , oper  = Assign        , mode = 001, type = Void      
+  143:  command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+  144:  command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+  145:  command = PushInt   , param = 004, mode = 000, type = CInt      
+  146:  command = Oper      , oper  = LT            , mode = 000, type = CInt      
+  147:  command = GoTo      , label = 013, Else , mode = 002, type = Unknown   
+  148:  command = NewVar    , addr  = 001, Local  , mode = 002, type = Int       
+  149:  command = Call      , param = 004, mode = 000, type = Void      
+  150:  command = Pop       , param = 002, mode = 000, type = Void      
+  151:  command = Label     , param = 013, mode = 001, type = Void      
+  152:  command = Pop       , param = 001, mode = 000, type = Void      
+  153:  command = Exit      , param = 004, mode = 000, type = Void      
+  154:  
+  155:  TNodeDefFunc    line=018, column=005, len=04, text=f004
+  156:  command = PushVar   , addr  = 000, Param  , mode = 003, type = Int       
+  157:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+  158:  command = Oper      , oper  = PostInc       , mode = 001, type = Void      
+  159:  command = Exit      , param = 005, mode = 000, type = Void      
+  160:  
+  161:  TNodeDefFunc    line=018, column=032, len=07, text=main004
+  162:  command = PushNum   , param = 000, mode = 000, type = CDouble   
+  163:  command = Cast      , cast  = DC__I__       , mode = 000, type = Int       
+  164:  command = Call      , param = 005, mode = 000, type = Void      
+  165:  command = Exit      , param = 006, mode = 000, type = Void      
+  166:  
+  167:  TNodeDefFunc    line=019, column=018, len=01, text=u
+  168:  
+  169:  TNodeDefFunc    line=019, column=028, len=04, text=f005
+  170:  command = PushInt   , param = 005, mode = 000, type = CInt      
+  171:  command = NewArr    , range = 001, Local  , mode = 002, type = Int       
+  172:  command = PushInt   , param = 001, mode = 000, type = CInt      
+  173:  command = PushArr   , addr  = 000, Local  , mode = 002, type = Int       
+  174:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+  175:  command = PushNum   , param = 001, mode = 000, type = CDouble   
+  176:  command = Cast      , cast  = DC__IC_       , mode = 000, type = CInt      
+  177:  command = Oper      , oper  = Assign        , mode = 001, type = Void      
+  178:  command = Pop       , param = 001, mode = 000, type = Void      
+  179:  command = Exit      , param = 008, mode = 000, type = Void      
+  180:  
+  181:  TNodeDefFunc    line=019, column=066, len=01, text=f
+  182:  command = PushInt   , param = 012, mode = 000, type = CInt      
+  183:  command = Cast      , cast  = IC__I__       , mode = 000, type = Int       
+  184:  command = Return    , param = 000, mode = 000, type = Int       
+  185:  command = Exit      , param = 009, mode = 000, type = Void      
+  186:  
+  187:  TNodeDefFunc    line=019, column=091, len=07, text=main005
+  188:  command = Call      , param = 008, mode = 000, type = Void      
+  189:  command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+  190:  command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+  191:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+  192:  command = PushVar   , addr  = 013, Global , mode = 001, type = Int       
+  193:  command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+  194:  command = PushInt   , param = 013, mode = 000, type = CInt      
+  195:  command = Oper      , oper  = Add           , mode = 000, type = CInt      
+  196:  command = Oper      , oper  = Assign        , mode = 001, type = Void      
+  197:  command = Pop       , param = 001, mode = 000, type = Void      
+  198:  command = Exit      , param = 010, mode = 000, type = Void      
+  199:  
+  200:  TNodeDefFunc    line=020, column=013, len=01, text=f
+  201:  command = PushVar   , addr  = 001, Param  , mode = 003, type = Int       
+  202:  command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+  203:  command = Oper      , oper  = Not           , mode = 000, type = CInt      
+  204:  command = GoTo      , label = 008, Else , mode = 002, type = Unknown   
+  205:  command = PushVar   , addr  = 000, Param  , mode = 003, type = Int       
+  206:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+  207:  command = Oper      , oper  = PostInc       , mode = 001, type = Void      
+  208:  command = GoTo      , label = 012, GoTo , mode = 003, type = Unknown   
+  209:  command = Label     , param = 008, mode = 001, type = Void      
+  210:  command = PushVar   , addr  = 000, Param  , mode = 003, type = Int       
+  211:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+  212:  command = Oper      , oper  = PostDec       , mode = 001, type = Void      
+  213:  command = Label     , param = 012, mode = 001, type = Void      
+  214:  command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+  215:  command = NewVar    , addr  = 001, Local  , mode = 002, type = Int       
+  216:  command = NewVar    , addr  = 002, Local  , mode = 002, type = Int       
+  217:  command = NewVar    , addr  = 003, Local  , mode = 002, type = Int       
+  218:  command = Pop       , param = 004, mode = 000, type = Void      
+  219:  command = Exit      , param = 011, mode = 000, type = Void      
+  220:  
+  221:  TNodeDefFunc    line=020, column=082, len=07, text=main006
+  222:  command = PushInt   , param = 005, mode = 000, type = CInt      
+  223:  command = Cast      , cast  = IC__I__       , mode = 000, type = Int       
+  224:  command = PushInt   , param = 001, mode = 000, type = CInt      
+  225:  command = Cast      , cast  = IC__I__       , mode = 000, type = Int       
+  226:  command = PushInt   , param = 006, mode = 000, type = CInt      
+  227:  command = Cast      , cast  = IC__I__       , mode = 000, type = Int       
+  228:  command = Call      , param = 011, mode = 000, type = Void      
+  229:  command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+  230:  command = Pop       , param = 001, mode = 000, type = Void      
+  231:  command = Exit      , param = 012, mode = 000, type = Void      
+  232:  
+  233:  TNodeDefFunc    line=021, column=005, len=04, text=f007
+  234:  command = Return    , param = 000, mode = 000, type = Void      
+  235:  command = Exit      , param = 013, mode = 000, type = Void      
+  236:  
+  237:  TNodeDefFunc    line=021, column=040, len=01, text=r
+  238:  command = PushNum   , param = 001, mode = 000, type = CDouble   
+  239:  command = Cast      , cast  = DC__I__       , mode = 000, type = Int       
+  240:  command = Return    , param = 000, mode = 000, type = Int       
+***** ..\CODE\FORMULA_LL_CODE_PSS.CODE
+  157:  command = PushInt   , param = 000, mode = 000, type = CInt      
+  158:  command = Oper      , oper  = Assign        , mode = 000, type = CInt      
+  159:  command = Pop       , param = 001, mode = 000, type = Void      
+  160:  command = NewVar    , addr  = 010, Global , mode = 001, type = Int       
+  161:  command = NewVar    , addr  = 011, Global , mode = 001, type = Int       
+  162:  command = PushVar   , addr  = 011, Global , mode = 001, type = Int       
+  163:  command = PushInt   , param = 012, mode = 000, type = CInt      
+  164:  command = PushInt   , param = 005, mode = 000, type = CInt      
+  165:  command = PushInt   , param = 006, mode = 000, type = CInt      
+  166:  command = Oper      , oper  = Multi         , mode = 000, type = CInt      
+  167:  command = Pop       , param = 001, mode = 000, type = Void      
+  168:  command = NewVar    , addr  = 012, Global , mode = 001, type = Unknown   
+  169:  command = PushVar   , addr  = 012, Global , mode = 001, type = Unknown   
+  170:  command = PushVar   , addr  = 011, Global , mode = 001, type = Int       
+  171:  command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+  172:  command = Oper      , oper  = PostInc       , mode = 000, type = CInt      
+  173:  command = Oper      , oper  = UnaryAdd      , mode = 000, type = CInt      
+  174:  command = Pop       , param = 013, mode = 000, type = Void      
+  175:  
+  176:  Integer        0 0
+  177:  Integer        1 12
+  178:  Integer        2 2
+  179:  Integer        3 5
+  180:  Integer        4 3
+  181:  Integer        5 1
+  182:  Integer        6 10
+  183:  Integer        7 11
+  184:  Integer        8 20
+  185:  Integer        9 6
+  186:  Integer       10 4
+  187:  Integer       11 99
+  188:  Integer       12 13
+  189:  Integer       13 123
+  190:  Integer       14 14
+  191:  Integer       15 25
+  192:  Integer       16 7
+  193:  Integer       17 8
+  194:  Integer       18 9
+  195:  Integer       19 21
+  196:  Integer       20 22
+  197:  Integer       21 23
+  198:  Integer       22 24
+  199:  Integer       23 26
+  200:  Integer       24 31
+  201:  Integer       25 32
+  202:  Integer       26 33
+  203:  Integer       27 1111
+  204:  Integer       28 43
+  205:  Integer       29 111
+  206:  Integer       30 222
+  207:  Integer       31 333
+  208:  
+  209:  Number         0 5.000000
+  210:  Number         1 1.200000
+  211:  Number         2 12.200000
+  212:  Number         3 2.100000
+  213:  Number         4 6.300000
+  214:  Number         5 12.210000
+*****
+

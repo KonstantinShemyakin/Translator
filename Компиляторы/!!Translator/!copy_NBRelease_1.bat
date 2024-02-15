@@ -1,0 +1,9 @@
+copy TableBuilder\dist\Release\MinGW-Windows\*.exe MinGWRelease
+copy TranBuilder\dist\Release\MinGW-Windows\*.exe  MinGWRelease
+copy TranGrammar\dist\Release\MinGW-Windows\*.exe  MinGWRelease
+copy TranParse\dist\Release\MinGW-Windows\*.exe    MinGWRelease
+copy TranRules\dist\Release\MinGW-Windows\*.exe    MinGWRelease
+copy Translator\dist\Release\MinGW-Windows\*.exe   MinGWRelease
+copy TranSyntax\dist\Release\MinGW-Windows\*.exe   MinGWRelease
+copy TranYACC\dist\Release\MinGW-Windows\*.exe     MinGWRelease
+copy TreeNodeCode\dist\Release\MinGW-Windows\*.dll MinGWRelease

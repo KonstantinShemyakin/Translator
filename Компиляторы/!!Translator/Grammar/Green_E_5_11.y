@@ -1,0 +1,4 @@
+S     :
+      <Integer>        S          
+    | <Integer>   
+      ;

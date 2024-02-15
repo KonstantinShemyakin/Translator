@@ -1,0 +1,774 @@
+
+P:\01_Parse>TranParse.exe
+
+TranParse parse_mode print_mode file
+parse_mode:
+   0 - source
+   1 - scan
+   2 - next
+   3 - control
+   4 - lexeme
+   5 - prior
+   6 - syntax
+   7 - restore
+   8 - Z(),E(),T(),F()
+   9 - write
+   A - lexer
+
+print_mode:
+   0x00000001 - print_other,   0x00000002 - print_space,0x00000004 - print_line,  0x00000008 - print_Lexeme,
+   0x00000010 - print_tree,    0x00000020 - erase_code, 0x00000040 - print_code,  0x00000080 - print_operator,
+   0x00000100 - print_rule,    0x00000200 - print_maker,0x00000400 - print_stack, 0x00000800 - print_Code,
+   0x00001000 - print_SNode,   0x00002000 - print_Tree, 0x00004000 - print_source,0x00008000 - print_semantic
+   0x00010000 - select_produce,0x00020000 - trim_unit,  0x00040000 - print_auto,  0x00080000 - TreeTraversal
+   0x00100000 - print_quadro,  0x00200000 - at_once,    0x00400000 - !auto_digit
+
+time: 0.000s
+
+P:\01_Parse>rem   0 - source 
+
+P:\01_Parse>TranParse.exe 0 0007 
+TranParse.exe
+0
+0007
+
+3 + 6 * (7 + 8 - 4) / 3 - 7
++ (((((((((
+
+count=40
+
+time: 0.000s
+
+P:\01_Parse>rem   1 - scan 
+
+P:\01_Parse>TranParse.exe 1 0001 
+TranParse.exe
+1
+0001
+
+group=Integer   , type=00          , pos=0000, line=000, column=000, len=01, value=3, text=3
+group=Oper      , type=Add         , pos=0002, line=000, column=002, len=01, value=33, text=+
+group=Integer   , type=00          , pos=0004, line=000, column=004, len=01, value=6, text=6
+group=Oper      , type=Multi       , pos=0006, line=000, column=006, len=01, value=29, text=*
+group=Separator , type=LeftBracket , pos=0008, line=000, column=008, len=01, value=57, text=(
+group=Integer   , type=00          , pos=0009, line=000, column=009, len=01, value=7, text=7
+group=Oper      , type=Add         , pos=0011, line=000, column=011, len=01, value=33, text=+
+group=Integer   , type=00          , pos=0013, line=000, column=013, len=01, value=8, text=8
+group=Oper      , type=Sub         , pos=0015, line=000, column=015, len=01, value=35, text=-
+group=Integer   , type=00          , pos=0017, line=000, column=017, len=01, value=4, text=4
+group=Separator , type=RightBracket, pos=0018, line=000, column=018, len=01, value=58, text=)
+group=Oper      , type=Div         , pos=0020, line=000, column=020, len=01, value=30, text=/
+group=Integer   , type=00          , pos=0022, line=000, column=022, len=01, value=3, text=3
+group=Oper      , type=Sub         , pos=0024, line=000, column=024, len=01, value=35, text=-
+group=Integer   , type=00          , pos=0026, line=000, column=026, len=01, value=7, text=7
+group=Oper      , type=Add         , pos=0029, line=001, column=000, len=01, value=33, text=+
+group=Separator , type=LeftBracket , pos=0031, line=001, column=002, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0032, line=001, column=003, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0033, line=001, column=004, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0034, line=001, column=005, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0035, line=001, column=006, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0036, line=001, column=007, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0037, line=001, column=008, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0038, line=001, column=009, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0039, line=001, column=010, len=01, value=57, text=(
+group=Eof       , type=00          , pos=0040, line=001, column=011, len=00
+
+count=40
+
+time: 0.000s
+
+P:\01_Parse>rem   2 - next 
+
+P:\01_Parse>TranParse.exe 2 0001 
+TranParse.exe
+2
+0001
+
+group=Integer   , type=00          , pos=0000, line=000, column=000, len=01, value=3, text=3
+group=Oper      , type=Add         , pos=0002, line=000, column=002, len=01, value=33, text=+
+group=Integer   , type=00          , pos=0004, line=000, column=004, len=01, value=6, text=6
+group=Oper      , type=Multi       , pos=0006, line=000, column=006, len=01, value=29, text=*
+group=Separator , type=LeftBracket , pos=0008, line=000, column=008, len=01, value=57, text=(
+group=Integer   , type=00          , pos=0009, line=000, column=009, len=01, value=7, text=7
+group=Oper      , type=Add         , pos=0011, line=000, column=011, len=01, value=33, text=+
+group=Integer   , type=00          , pos=0013, line=000, column=013, len=01, value=8, text=8
+group=Oper      , type=Sub         , pos=0015, line=000, column=015, len=01, value=35, text=-
+group=Integer   , type=00          , pos=0017, line=000, column=017, len=01, value=4, text=4
+group=Separator , type=RightBracket, pos=0018, line=000, column=018, len=01, value=58, text=)
+group=Oper      , type=Div         , pos=0020, line=000, column=020, len=01, value=30, text=/
+group=Integer   , type=00          , pos=0022, line=000, column=022, len=01, value=3, text=3
+group=Oper      , type=Sub         , pos=0024, line=000, column=024, len=01, value=35, text=-
+group=Integer   , type=00          , pos=0026, line=000, column=026, len=01, value=7, text=7
+group=Oper      , type=Add         , pos=0029, line=001, column=000, len=01, value=33, text=+
+group=Separator , type=LeftBracket , pos=0031, line=001, column=002, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0032, line=001, column=003, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0033, line=001, column=004, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0034, line=001, column=005, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0035, line=001, column=006, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0036, line=001, column=007, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0037, line=001, column=008, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0038, line=001, column=009, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0039, line=001, column=010, len=01, value=57, text=(
+group=Eof       , type=00          , pos=0040, line=001, column=011, len=00
+
+count=25
+
+time: 0.000s
+
+P:\01_Parse>rem   3 - control 
+
+P:\01_Parse>TranParse.exe 3 0001 
+TranParse.exe
+3
+0001
+
+group=Integer   , type=00          , pos=0000, line=000, column=000, len=01, value=3, text=3
+group=Oper      , type=Add         , pos=0002, line=000, column=002, len=01, value=33, text=+
+group=Integer   , type=00          , pos=0004, line=000, column=004, len=01, value=6, text=6
+group=Oper      , type=Multi       , pos=0006, line=000, column=006, len=01, value=29, text=*
+group=Separator , type=LeftBracket , pos=0008, line=000, column=008, len=01, value=57, text=(
+group=Integer   , type=00          , pos=0009, line=000, column=009, len=01, value=7, text=7
+group=Oper      , type=Add         , pos=0011, line=000, column=011, len=01, value=33, text=+
+group=Integer   , type=00          , pos=0013, line=000, column=013, len=01, value=8, text=8
+group=Oper      , type=Sub         , pos=0015, line=000, column=015, len=01, value=35, text=-
+group=Integer   , type=00          , pos=0017, line=000, column=017, len=01, value=4, text=4
+group=Separator , type=RightBracket, pos=0018, line=000, column=018, len=01, value=58, text=)
+group=Oper      , type=Div         , pos=0020, line=000, column=020, len=01, value=30, text=/
+group=Integer   , type=00          , pos=0022, line=000, column=022, len=01, value=3, text=3
+group=Oper      , type=Sub         , pos=0024, line=000, column=024, len=01, value=35, text=-
+group=Integer   , type=00          , pos=0026, line=000, column=026, len=01, value=7, text=7
+group=Oper      , type=Add         , pos=0029, line=001, column=000, len=01, value=33, text=+
+group=Separator , type=LeftBracket , pos=0031, line=001, column=002, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0032, line=001, column=003, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0033, line=001, column=004, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0034, line=001, column=005, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0035, line=001, column=006, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0036, line=001, column=007, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0037, line=001, column=008, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0038, line=001, column=009, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0039, line=001, column=010, len=01, value=57, text=(
+group=Eof       , type=00          , pos=0040, line=001, column=011, len=00
+
+None=0, Oper=7, Separator=11, Integer=7, Number=0, String=0, Ident=0, Reserv=0, Space=0, Line=1, Error=0, Priority=0, Syntax=0, Eof=1
+count=26
+
+group=Integer   , type=00          , pos=0000, line=000, column=000, len=01, value=3, text=3
+group=Space     , type=01          , pos=0001, line=000, column=001, len=01, text= 
+group=Oper      , type=Add         , pos=0002, line=000, column=002, len=01, value=33, text=+
+group=Space     , type=01          , pos=0003, line=000, column=003, len=01, text= 
+group=Integer   , type=00          , pos=0004, line=000, column=004, len=01, value=6, text=6
+group=Space     , type=01          , pos=0005, line=000, column=005, len=01, text= 
+group=Oper      , type=Multi       , pos=0006, line=000, column=006, len=01, value=29, text=*
+group=Space     , type=01          , pos=0007, line=000, column=007, len=01, text= 
+group=Separator , type=LeftBracket , pos=0008, line=000, column=008, len=01, value=57, text=(
+group=Integer   , type=00          , pos=0009, line=000, column=009, len=01, value=7, text=7
+group=Space     , type=01          , pos=0010, line=000, column=010, len=01, text= 
+group=Oper      , type=Add         , pos=0011, line=000, column=011, len=01, value=33, text=+
+group=Space     , type=01          , pos=0012, line=000, column=012, len=01, text= 
+group=Integer   , type=00          , pos=0013, line=000, column=013, len=01, value=8, text=8
+group=Space     , type=01          , pos=0014, line=000, column=014, len=01, text= 
+group=Oper      , type=Sub         , pos=0015, line=000, column=015, len=01, value=35, text=-
+group=Space     , type=01          , pos=0016, line=000, column=016, len=01, text= 
+group=Integer   , type=00          , pos=0017, line=000, column=017, len=01, value=4, text=4
+group=Separator , type=RightBracket, pos=0018, line=000, column=018, len=01, value=58, text=)
+group=Space     , type=01          , pos=0019, line=000, column=019, len=01, text= 
+group=Oper      , type=Div         , pos=0020, line=000, column=020, len=01, value=30, text=/
+group=Space     , type=01          , pos=0021, line=000, column=021, len=01, text= 
+group=Integer   , type=00          , pos=0022, line=000, column=022, len=01, value=3, text=3
+group=Space     , type=01          , pos=0023, line=000, column=023, len=01, text= 
+group=Oper      , type=Sub         , pos=0024, line=000, column=024, len=01, value=35, text=-
+group=Space     , type=01          , pos=0025, line=000, column=025, len=01, text= 
+group=Integer   , type=00          , pos=0026, line=000, column=026, len=01, value=7, text=7
+group=Space     , type=01          , pos=0027, line=000, column=027, len=01, text=
+group=Line      , type=00          , pos=0028, line=000, column=028, len=01, text=
+group=Oper      , type=Add         , pos=0029, line=001, column=000, len=01, value=33, text=+
+group=Space     , type=01          , pos=0030, line=001, column=001, len=01, text= 
+group=Separator , type=LeftBracket , pos=0031, line=001, column=002, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0032, line=001, column=003, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0033, line=001, column=004, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0034, line=001, column=005, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0035, line=001, column=006, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0036, line=001, column=007, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0037, line=001, column=008, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0038, line=001, column=009, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0039, line=001, column=010, len=01, value=57, text=(
+group=Eof       , type=00          , pos=0040, line=001, column=011, len=00
+
+None=0, Oper=7, Separator=11, Integer=7, Number=0, String=0, Ident=0, Reserv=0, Space=14, Line=1, Error=0, Priority=0, Syntax=0, Eof=1
+
+count=41
+
+time: 0.000s
+
+P:\01_Parse>rem   4 - lexeme 
+
+P:\01_Parse>TranParse.exe 4 0008 
+TranParse.exe
+4
+0008
+
+group=Integer   , type=00          , pos=0000, line=000, column=000, len=01, value=3, text=3
+group=Oper      , type=Add         , pos=0002, line=000, column=002, len=01, value=33, text=+
+group=Integer   , type=00          , pos=0004, line=000, column=004, len=01, value=6, text=6
+group=Oper      , type=Multi       , pos=0006, line=000, column=006, len=01, value=29, text=*
+group=Separator , type=LeftBracket , pos=0008, line=000, column=008, len=01, value=57, text=(
+group=Integer   , type=00          , pos=0009, line=000, column=009, len=01, value=7, text=7
+group=Oper      , type=Add         , pos=0011, line=000, column=011, len=01, value=33, text=+
+group=Integer   , type=00          , pos=0013, line=000, column=013, len=01, value=8, text=8
+group=Oper      , type=Sub         , pos=0015, line=000, column=015, len=01, value=35, text=-
+group=Integer   , type=00          , pos=0017, line=000, column=017, len=01, value=4, text=4
+group=Separator , type=RightBracket, pos=0018, line=000, column=018, len=01, value=58, text=)
+group=Oper      , type=Div         , pos=0020, line=000, column=020, len=01, value=30, text=/
+group=Integer   , type=00          , pos=0022, line=000, column=022, len=01, value=3, text=3
+group=Oper      , type=Sub         , pos=0024, line=000, column=024, len=01, value=35, text=-
+group=Integer   , type=00          , pos=0026, line=000, column=026, len=01, value=7, text=7
+group=Line      , type=00          , pos=0028, line=000, column=028, len=01, text=
+group=Oper      , type=Add         , pos=0029, line=001, column=000, len=01, value=33, text=+
+group=Separator , type=LeftBracket , pos=0031, line=001, column=002, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0032, line=001, column=003, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0033, line=001, column=004, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0034, line=001, column=005, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0035, line=001, column=006, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0036, line=001, column=007, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0037, line=001, column=008, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0038, line=001, column=009, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0039, line=001, column=010, len=01, value=57, text=(
+group=Eof       , type=00          , pos=0040, line=001, column=011, len=00
+
+count=26
+
+time: 0.000s
+
+P:\01_Parse>rem   5 - prior 
+
+P:\01_Parse>TranParse.exe 5 0008 
+TranParse.exe
+5
+0008
+
+group=Integer   , type=00          , pos=0000, line=000, column=000, len=01, value=3, text=3
+group=Priority  , type=Term        , pos=0002, line=000, column=002, len=01, value=33, text=+
+group=Integer   , type=00          , pos=0004, line=000, column=004, len=01, value=6, text=6
+group=Priority  , type=Factor      , pos=0006, line=000, column=006, len=01, value=29, text=*
+group=Separator , type=LeftBracket , pos=0008, line=000, column=008, len=01, value=57, text=(
+group=Integer   , type=00          , pos=0009, line=000, column=009, len=01, value=7, text=7
+group=Priority  , type=Term        , pos=0011, line=000, column=011, len=01, value=33, text=+
+group=Integer   , type=00          , pos=0013, line=000, column=013, len=01, value=8, text=8
+group=Priority  , type=Term        , pos=0015, line=000, column=015, len=01, value=35, text=-
+group=Integer   , type=00          , pos=0017, line=000, column=017, len=01, value=4, text=4
+group=Separator , type=RightBracket, pos=0018, line=000, column=018, len=01, value=58, text=)
+group=Priority  , type=Factor      , pos=0020, line=000, column=020, len=01, value=30, text=/
+group=Integer   , type=00          , pos=0022, line=000, column=022, len=01, value=3, text=3
+group=Priority  , type=Term        , pos=0024, line=000, column=024, len=01, value=35, text=-
+group=Integer   , type=00          , pos=0026, line=000, column=026, len=01, value=7, text=7
+group=Line      , type=00          , pos=0028, line=000, column=028, len=01, text=
+group=Priority  , type=Term        , pos=0029, line=001, column=000, len=01, value=33, text=+
+group=Separator , type=LeftBracket , pos=0031, line=001, column=002, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0032, line=001, column=003, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0033, line=001, column=004, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0034, line=001, column=005, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0035, line=001, column=006, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0036, line=001, column=007, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0037, line=001, column=008, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0038, line=001, column=009, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0039, line=001, column=010, len=01, value=57, text=(
+group=Eof       , type=00          , pos=0040, line=001, column=011, len=00
+
+count=26
+
+time: 0.000s
+
+P:\01_Parse>rem   6 - syntax 
+
+P:\01_Parse>TranParse.exe 6 0008 test_group.cpp 
+TranParse.exe
+6
+0008
+test_group.cpp
+
+group=Syntax    , type=DefFunc     , pos=0000, line=000, column=000, len=04, value=2097169, text=void
+group=Syntax    , type=IdentFunc   , pos=0005, line=000, column=005, len=01, value=0, text=f
+group=Syntax    , type=EmptyBracket, pos=0006, line=000, column=006, len=01, value=57, text=(
+group=Syntax    , type=EmptyCramp  , pos=0009, line=000, column=009, len=01, value=55, text={
+group=Line      , type=00          , pos=0012, line=000, column=012, len=01, text=
+group=Syntax    , type=DefFunc     , pos=0013, line=001, column=000, len=04, value=2097169, text=void
+group=Syntax    , type=IdentFunc   , pos=0018, line=001, column=005, len=01, value=0, text=f
+group=Separator , type=LeftBracket , pos=0019, line=001, column=006, len=01, value=57, text=(
+group=Syntax    , type=DefVar      , pos=0020, line=001, column=007, len=03, value=65555, text=int
+group=Ident     , type=00          , pos=0024, line=001, column=011, len=01, text=i
+group=Separator , type=RightBracket, pos=0025, line=001, column=012, len=01, value=58, text=)
+group=Separator , type=LeftCramp   , pos=0027, line=001, column=014, len=01, value=55, text={
+group=Ident     , type=00          , pos=0029, line=001, column=016, len=01, text=i
+group=Oper      , type=PlusPlus    , pos=0030, line=001, column=017, len=02, value=32, text=++
+group=Separator , type=Semicolon   , pos=0032, line=001, column=019, len=01, value=64, text=;
+group=Separator , type=RightCramp  , pos=0034, line=001, column=021, len=01, value=56, text=}
+group=Line      , type=00          , pos=0036, line=001, column=023, len=01, text=
+group=Syntax    , type=DefVar      , pos=0037, line=002, column=000, len=03, value=65555, text=int
+group=Ident     , type=00          , pos=0041, line=002, column=004, len=01, text=i
+group=Oper      , type=Assign      , pos=0043, line=002, column=006, len=01, value=37, text==
+group=Integer   , type=00          , pos=0045, line=002, column=008, len=02, value=12, text=12
+group=Separator , type=Semicolon   , pos=0047, line=002, column=010, len=01, value=64, text=;
+group=Line      , type=00          , pos=0049, line=002, column=012, len=01, text=
+group=Syntax    , type=DefArr      , pos=0050, line=003, column=000, len=03, value=65555, text=int
+group=Syntax    , type=IdentArr    , pos=0054, line=003, column=004, len=01, value=0, text=f
+group=Syntax    , type=EmptyScrape , pos=0055, line=003, column=005, len=01, value=59, text=[
+group=Oper      , type=Assign      , pos=0058, line=003, column=008, len=01, value=37, text==
+group=Separator , type=LeftCramp   , pos=0060, line=003, column=010, len=01, value=55, text={
+group=Integer   , type=00          , pos=0062, line=003, column=012, len=01, value=1, text=1
+group=Separator , type=Comma       , pos=0063, line=003, column=013, len=01, value=66, text=,
+group=Integer   , type=00          , pos=0065, line=003, column=015, len=01, value=2, text=2
+group=Separator , type=RightCramp  , pos=0067, line=003, column=017, len=01, value=56, text=}
+group=Separator , type=Semicolon   , pos=0068, line=003, column=018, len=01, value=64, text=;
+group=Eof       , type=00          , pos=0069, line=003, column=019, len=00
+
+count=33
+
+time: 0.000s
+
+P:\01_Parse>rem   7 - restore 
+
+P:\01_Parse>TranParse.exe 7 0007 
+TranParse.exe
+7
+0007
+
+group=Integer   , type=00          , pos=0000, line=000, column=000, len=01, value=3, text=3
+group=Space     , type=01          , pos=0001, line=000, column=001, len=01, text= 
+group=Integer   , type=00          , pos=0000, line=000, column=000, len=01, value=3, text=3
+group=Space     , type=01          , pos=0001, line=000, column=001, len=01, text= 
+group=Oper      , type=Add         , pos=0002, line=000, column=002, len=01, value=33, text=+
+group=Space     , type=01          , pos=0003, line=000, column=003, len=01, text= 
+group=Space     , type=01          , pos=0001, line=000, column=001, len=01, text= 
+group=Oper      , type=Add         , pos=0002, line=000, column=002, len=01, value=33, text=+
+group=Space     , type=01          , pos=0003, line=000, column=003, len=01, text= 
+group=Integer   , type=00          , pos=0004, line=000, column=004, len=01, value=6, text=6
+group=Space     , type=01          , pos=0005, line=000, column=005, len=01, text= 
+group=Space     , type=01          , pos=0003, line=000, column=003, len=01, text= 
+group=Integer   , type=00          , pos=0004, line=000, column=004, len=01, value=6, text=6
+group=Space     , type=01          , pos=0005, line=000, column=005, len=01, text= 
+group=Oper      , type=Multi       , pos=0006, line=000, column=006, len=01, value=29, text=*
+group=Space     , type=01          , pos=0007, line=000, column=007, len=01, text= 
+group=Space     , type=01          , pos=0005, line=000, column=005, len=01, text= 
+group=Oper      , type=Multi       , pos=0006, line=000, column=006, len=01, value=29, text=*
+group=Space     , type=01          , pos=0007, line=000, column=007, len=01, text= 
+group=Separator , type=LeftBracket , pos=0008, line=000, column=008, len=01, value=57, text=(
+group=Integer   , type=00          , pos=0009, line=000, column=009, len=01, value=7, text=7
+group=Space     , type=01          , pos=0007, line=000, column=007, len=01, text= 
+group=Separator , type=LeftBracket , pos=0008, line=000, column=008, len=01, value=57, text=(
+group=Integer   , type=00          , pos=0009, line=000, column=009, len=01, value=7, text=7
+group=Space     , type=01          , pos=0010, line=000, column=010, len=01, text= 
+group=Integer   , type=00          , pos=0009, line=000, column=009, len=01, value=7, text=7
+group=Space     , type=01          , pos=0010, line=000, column=010, len=01, text= 
+group=Oper      , type=Add         , pos=0011, line=000, column=011, len=01, value=33, text=+
+group=Space     , type=01          , pos=0012, line=000, column=012, len=01, text= 
+group=Space     , type=01          , pos=0010, line=000, column=010, len=01, text= 
+group=Oper      , type=Add         , pos=0011, line=000, column=011, len=01, value=33, text=+
+group=Space     , type=01          , pos=0012, line=000, column=012, len=01, text= 
+group=Integer   , type=00          , pos=0013, line=000, column=013, len=01, value=8, text=8
+group=Space     , type=01          , pos=0014, line=000, column=014, len=01, text= 
+group=Space     , type=01          , pos=0012, line=000, column=012, len=01, text= 
+group=Integer   , type=00          , pos=0013, line=000, column=013, len=01, value=8, text=8
+group=Space     , type=01          , pos=0014, line=000, column=014, len=01, text= 
+group=Oper      , type=Sub         , pos=0015, line=000, column=015, len=01, value=35, text=-
+group=Space     , type=01          , pos=0016, line=000, column=016, len=01, text= 
+group=Space     , type=01          , pos=0014, line=000, column=014, len=01, text= 
+group=Oper      , type=Sub         , pos=0015, line=000, column=015, len=01, value=35, text=-
+group=Space     , type=01          , pos=0016, line=000, column=016, len=01, text= 
+group=Integer   , type=00          , pos=0017, line=000, column=017, len=01, value=4, text=4
+group=Separator , type=RightBracket, pos=0018, line=000, column=018, len=01, value=58, text=)
+group=Space     , type=01          , pos=0016, line=000, column=016, len=01, text= 
+group=Integer   , type=00          , pos=0017, line=000, column=017, len=01, value=4, text=4
+group=Separator , type=RightBracket, pos=0018, line=000, column=018, len=01, value=58, text=)
+group=Space     , type=01          , pos=0019, line=000, column=019, len=01, text= 
+group=Separator , type=RightBracket, pos=0018, line=000, column=018, len=01, value=58, text=)
+group=Space     , type=01          , pos=0019, line=000, column=019, len=01, text= 
+group=Oper      , type=Div         , pos=0020, line=000, column=020, len=01, value=30, text=/
+group=Space     , type=01          , pos=0021, line=000, column=021, len=01, text= 
+group=Space     , type=01          , pos=0019, line=000, column=019, len=01, text= 
+group=Oper      , type=Div         , pos=0020, line=000, column=020, len=01, value=30, text=/
+group=Space     , type=01          , pos=0021, line=000, column=021, len=01, text= 
+group=Integer   , type=00          , pos=0022, line=000, column=022, len=01, value=3, text=3
+group=Space     , type=01          , pos=0023, line=000, column=023, len=01, text= 
+group=Space     , type=01          , pos=0021, line=000, column=021, len=01, text= 
+group=Integer   , type=00          , pos=0022, line=000, column=022, len=01, value=3, text=3
+group=Space     , type=01          , pos=0023, line=000, column=023, len=01, text= 
+group=Oper      , type=Sub         , pos=0024, line=000, column=024, len=01, value=35, text=-
+group=Space     , type=01          , pos=0025, line=000, column=025, len=01, text= 
+group=Space     , type=01          , pos=0023, line=000, column=023, len=01, text= 
+group=Oper      , type=Sub         , pos=0024, line=000, column=024, len=01, value=35, text=-
+group=Space     , type=01          , pos=0025, line=000, column=025, len=01, text= 
+group=Integer   , type=00          , pos=0026, line=000, column=026, len=01, value=7, text=7
+group=Space     , type=01          , pos=0027, line=000, column=027, len=01, text=
+group=Space     , type=01          , pos=0025, line=000, column=025, len=01, text= 
+group=Integer   , type=00          , pos=0026, line=000, column=026, len=01, value=7, text=7
+group=Space     , type=01          , pos=0027, line=000, column=027, len=01, text=
+group=Line      , type=00          , pos=0028, line=000, column=028, len=01, text=
+group=Oper      , type=Add         , pos=0029, line=001, column=000, len=01, value=33, text=+
+group=Space     , type=01          , pos=0027, line=000, column=-02, len=01, text=
+group=Line      , type=00          , pos=0028, line=000, column=-01, len=01, text=
+group=Oper      , type=Add         , pos=0029, line=001, column=000, len=01, value=33, text=+
+group=Space     , type=01          , pos=0030, line=001, column=001, len=01, text= 
+group=Oper      , type=Add         , pos=0029, line=001, column=000, len=01, value=33, text=+
+group=Space     , type=01          , pos=0030, line=001, column=001, len=01, text= 
+group=Separator , type=LeftBracket , pos=0031, line=001, column=002, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0032, line=001, column=003, len=01, value=57, text=(
+group=Space     , type=01          , pos=0030, line=001, column=001, len=01, text= 
+group=Separator , type=LeftBracket , pos=0031, line=001, column=002, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0032, line=001, column=003, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0033, line=001, column=004, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0032, line=001, column=003, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0033, line=001, column=004, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0034, line=001, column=005, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0033, line=001, column=004, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0034, line=001, column=005, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0035, line=001, column=006, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0034, line=001, column=005, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0035, line=001, column=006, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0036, line=001, column=007, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0035, line=001, column=006, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0036, line=001, column=007, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0037, line=001, column=008, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0036, line=001, column=007, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0037, line=001, column=008, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0038, line=001, column=009, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0037, line=001, column=008, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0038, line=001, column=009, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0039, line=001, column=010, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0038, line=001, column=009, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0039, line=001, column=010, len=01, value=57, text=(
+group=Eof       , type=00          , pos=0040, line=001, column=011, len=00
+
+count=50
+
+time: 0.000s
+
+P:\01_Parse>rem   8 - write 
+
+P:\01_Parse>TranParse.exe 8 0008 
+TranParse.exe
+8
+0008
+
+
+count=41
+
+time: 0.000s
+
+P:\01_Parse>rem   9 - lexer 
+
+P:\01_Parse>TranParse.exe 9 0007 test_lexer.cpp 
+TranParse.exe
+9
+0007
+test_lexer.cpp
+
+group=Integer   , type=00          , pos=0000, line=000, column=000, len=01, value=3, text=3
+group=Oper      , type=Add         , pos=0000, line=000, column=002, len=01, value=33, text=+
+group=Integer   , type=00          , pos=0000, line=000, column=004, len=04, value=6, text=0x06
+group=Oper      , type=Multi       , pos=0000, line=000, column=009, len=01, value=29, text=*
+group=Separator , type=LeftBracket , pos=0000, line=000, column=011, len=01, value=57, text=(
+group=Integer   , type=00          , pos=0000, line=000, column=012, len=01, value=7, text=7
+group=Oper      , type=Add         , pos=0000, line=000, column=014, len=01, value=33, text=+
+group=Integer   , type=00          , pos=0000, line=000, column=016, len=01, value=8, text=8
+group=Separator , type=RightBracket, pos=0000, line=000, column=017, len=01, value=58, text=)
+group=Oper      , type=Add         , pos=0000, line=001, column=022, len=01, value=33, text=+
+group=Integer   , type=00          , pos=0000, line=001, column=024, len=02, value=12, text=12
+group=Eof       , type=00          , pos=0000, line=002, column=000, len=00
+
+count=10
+
+time: 0.000s
+
+P:\01_Parse>rem   0x0A - Z(),E(),T(),F() 
+
+P:\01_Parse>TranParse.exe 0x0A 4001 zetf.cpp 
+TranParse.exe
+0x0A
+4001
+zetf.cpp
+
+3 + 6 * (7 + 8 - 4) / 3 - 7
++ (((((((((
+  Z
+    E
+      T
+        F
+group=Integer   , type=00          , pos=0000, line=000, column=000, len=01, value=3, text=3
+       ~F
+group=Oper      , type=Add         , pos=0002, line=000, column=002, len=01, value=33, text=+
+     ~T
+      T
+        F
+group=Integer   , type=00          , pos=0004, line=000, column=004, len=01, value=6, text=6
+       ~F
+group=Oper      , type=Multi       , pos=0006, line=000, column=006, len=01, value=29, text=*
+        F
+group=Separator , type=LeftBracket , pos=0008, line=000, column=008, len=01, value=57, text=(
+group=Integer   , type=00          , pos=0009, line=000, column=009, len=01, value=7, text=7
+          E
+            T
+              F
+             ~F
+group=Oper      , type=Add         , pos=0011, line=000, column=011, len=01, value=33, text=+
+           ~T
+            T
+              F
+group=Integer   , type=00          , pos=0013, line=000, column=013, len=01, value=8, text=8
+             ~F
+group=Oper      , type=Sub         , pos=0015, line=000, column=015, len=01, value=35, text=-
+           ~T
+            T
+              F
+group=Integer   , type=00          , pos=0017, line=000, column=017, len=01, value=4, text=4
+group=Separator , type=RightBracket, pos=0018, line=000, column=018, len=01, value=58, text=)
+             ~F
+           ~T
+         ~E
+       ~F
+group=Oper      , type=Div         , pos=0020, line=000, column=020, len=01, value=30, text=/
+        F
+group=Integer   , type=00          , pos=0022, line=000, column=022, len=01, value=3, text=3
+       ~F
+group=Oper      , type=Sub         , pos=0024, line=000, column=024, len=01, value=35, text=-
+     ~T
+      T
+        F
+group=Integer   , type=00          , pos=0026, line=000, column=026, len=01, value=7, text=7
+       ~F
+group=Oper      , type=Add         , pos=0029, line=001, column=000, len=01, value=33, text=+
+     ~T
+      T
+        F
+group=Separator , type=LeftBracket , pos=0031, line=001, column=002, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0032, line=001, column=003, len=01, value=57, text=(
+          E
+            T
+              F
+group=Separator , type=LeftBracket , pos=0033, line=001, column=004, len=01, value=57, text=(
+                E
+                  T
+                    F
+group=Separator , type=LeftBracket , pos=0034, line=001, column=005, len=01, value=57, text=(
+                      E
+                        T
+                          F
+group=Separator , type=LeftBracket , pos=0035, line=001, column=006, len=01, value=57, text=(
+                            E
+                              T
+                                F
+group=Separator , type=LeftBracket , pos=0036, line=001, column=007, len=01, value=57, text=(
+                                  E
+                                    T
+                                      F
+group=Separator , type=LeftBracket , pos=0037, line=001, column=008, len=01, value=57, text=(
+                                        E
+                                          T
+                                            F
+group=Separator , type=LeftBracket , pos=0038, line=001, column=009, len=01, value=57, text=(
+                                              E
+                                                T
+                                                  F
+group=Separator , type=LeftBracket , pos=0039, line=001, column=010, len=01, value=57, text=(
+                                                    E
+                                                      T
+                                                        F
+group=Eof       , type=00          , pos=0040, line=001, column=011, len=00
+                                                          E
+                                                            T
+                                                              F
+                                                             ~!F
+                                                           ~!T
+                                                         ~!E
+                                                       ~!F
+                                                     ~!T
+                                                   ~!E
+                                                 ~!F
+                                               ~!T
+                                             ~!E
+                                           ~!F
+                                         ~!T
+                                       ~!E
+                                     ~!F
+                                   ~!T
+                                 ~!E
+                               ~!F
+                             ~!T
+                           ~!E
+                         ~!F
+                       ~!T
+                     ~!E
+                   ~!F
+                 ~!T
+               ~!E
+             ~!F
+           ~!T
+         ~!E
+       ~!F
+     ~!T
+   ~!E
+ ~!Z
+
+count=0
+
+time: 0.000s
+
+P:\01_Parse>rem   0x0B - Z(),E(),T(),E_(),T_(),F() 
+
+P:\01_Parse>TranParse.exe 0x0B 4001 zetf.cpp 
+TranParse.exe
+0x0B
+4001
+zetf.cpp
+
+3 + 6 * (7 + 8 - 4) / 3 - 7
++ (((((((((
+  Z
+    E
+      T
+        F
+group=Integer   , type=00          , pos=0000, line=000, column=000, len=01, value=3, text=3
+       ~F
+        T_
+group=Oper      , type=Add         , pos=0002, line=000, column=002, len=01, value=33, text=+
+       ~T_
+     ~T
+      E_
+        T
+          F
+group=Integer   , type=00          , pos=0004, line=000, column=004, len=01, value=6, text=6
+         ~F
+          T_
+group=Oper      , type=Multi       , pos=0006, line=000, column=006, len=01, value=29, text=*
+            F
+group=Separator , type=LeftBracket , pos=0008, line=000, column=008, len=01, value=57, text=(
+group=Integer   , type=00          , pos=0009, line=000, column=009, len=01, value=7, text=7
+              E
+                T
+                  F
+                 ~F
+                  T_
+group=Oper      , type=Add         , pos=0011, line=000, column=011, len=01, value=33, text=+
+                 ~T_
+               ~T
+                E_
+                  T
+                    F
+group=Integer   , type=00          , pos=0013, line=000, column=013, len=01, value=8, text=8
+                   ~F
+                    T_
+group=Oper      , type=Sub         , pos=0015, line=000, column=015, len=01, value=35, text=-
+                   ~T_
+                 ~T
+                  E_
+                    T
+                      F
+group=Integer   , type=00          , pos=0017, line=000, column=017, len=01, value=4, text=4
+group=Separator , type=RightBracket, pos=0018, line=000, column=018, len=01, value=58, text=)
+                     ~F
+                      T_
+                     ~T_
+                   ~T
+                    E_
+                   ~E_
+                 ~E_
+               ~E_
+             ~E
+           ~F
+            T_
+group=Oper      , type=Div         , pos=0020, line=000, column=020, len=01, value=30, text=/
+              F
+group=Integer   , type=00          , pos=0022, line=000, column=022, len=01, value=3, text=3
+             ~F
+              T_
+group=Oper      , type=Sub         , pos=0024, line=000, column=024, len=01, value=35, text=-
+             ~T_
+           ~T_
+         ~T_
+       ~T
+        E_
+          T
+            F
+group=Integer   , type=00          , pos=0026, line=000, column=026, len=01, value=7, text=7
+           ~F
+            T_
+group=Oper      , type=Add         , pos=0029, line=001, column=000, len=01, value=33, text=+
+           ~T_
+         ~T
+          E_
+            T
+              F
+group=Separator , type=LeftBracket , pos=0031, line=001, column=002, len=01, value=57, text=(
+group=Separator , type=LeftBracket , pos=0032, line=001, column=003, len=01, value=57, text=(
+                E
+                  T
+                    F
+group=Separator , type=LeftBracket , pos=0033, line=001, column=004, len=01, value=57, text=(
+                      E
+                        T
+                          F
+group=Separator , type=LeftBracket , pos=0034, line=001, column=005, len=01, value=57, text=(
+                            E
+                              T
+                                F
+group=Separator , type=LeftBracket , pos=0035, line=001, column=006, len=01, value=57, text=(
+                                  E
+                                    T
+                                      F
+group=Separator , type=LeftBracket , pos=0036, line=001, column=007, len=01, value=57, text=(
+                                        E
+                                          T
+                                            F
+group=Separator , type=LeftBracket , pos=0037, line=001, column=008, len=01, value=57, text=(
+                                              E
+                                                T
+                                                  F
+group=Separator , type=LeftBracket , pos=0038, line=001, column=009, len=01, value=57, text=(
+                                                    E
+                                                      T
+                                                        F
+group=Separator , type=LeftBracket , pos=0039, line=001, column=010, len=01, value=57, text=(
+                                                          E
+                                                            T
+                                                              F
+group=Eof       , type=00          , pos=0040, line=001, column=011, len=00
+                                                                E
+                                                                  T
+                                                                    F
+                                                                   ~!F
+                                                                 ~!T
+                                                               ~!E
+                                                             ~!F
+                                                           ~!T
+                                                         ~!E
+                                                       ~!F
+                                                     ~!T
+                                                   ~!E
+                                                 ~!F
+                                               ~!T
+                                             ~!E
+                                           ~!F
+                                         ~!T
+                                       ~!E
+                                     ~!F
+                                   ~!T
+                                 ~!E
+                               ~!F
+                             ~!T
+                           ~!E
+                         ~!F
+                       ~!T
+                     ~!E
+                   ~!F
+                 ~!T
+               ~!E
+             ~!F
+           ~!T
+         ~!E_
+       ~!E_
+     ~!E_
+   ~!E
+ ~!Z
+
+count=0
+
+time: 0.000s

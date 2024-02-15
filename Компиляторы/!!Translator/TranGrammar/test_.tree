@@ -1,0 +1,23 @@
+
+TNodeStatements type = Void      , 
+  TNodeDefine     type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=004, len=01, text=i
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      TNodeExpressions type = Unknown   , 
+        TNodeBinary     type = Unknown   ,   group=Priority  , type=Assign      , line=000, column=006, len=01, value=37, text==
+          TNodeVar        type = Int       ,   group=Ident     , type=00          , line=000, column=004, len=01, text=i
+            TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=004, len=01, text=i
+          TNodeExpressions type = Unknown   , 
+            TNodeIndex      type = Unknown   ,   group=Syntax    , type=IdentArr    , line=000, column=008, len=03, value=1, text=arr
+              T_NodeList      type = CInt      ,   group=Syntax    , type=IdentArr    , line=000, column=008, len=03, value=1, text=arr
+                TNodeExpressions type = CInt      , 
+                  TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=000, column=012, len=01, value=3, text=3 part=256  part=256  part=16 
+      alloc=Global , offset=00
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=001, column=005, len=04, value=3, text=ffff
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeExpressions type = Unknown   , 
+        TNodeIndex      type = Unknown   ,   group=Syntax    , type=IdentArr    , line=001, column=014, len=03, value=1, text=arr
+          T_NodeList      type = CInt      ,   group=Syntax    , type=IdentArr    , line=001, column=014, len=03, value=1, text=arr
+            TNodeExpressions type = CInt      , 
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=001, column=018, len=01, value=0, text=0 part=256  part=16  number=2, size=0 number=1, size=0 number=0, size=1

@@ -1,0 +1,17 @@
+program Toy2;
+
+  type  T1=array 100 of array 200 of integer;
+        T2=T1;
+  var   V1:T1;
+        V2:T2;
+  begin
+    V1=V2;
+    V2[1]=V1[2];
+
+      type  T3=array 300 of T1;
+      var   V3:T3;
+    begin
+      V3[50]=V1;
+    end
+  end
+end

@@ -1,0 +1,33 @@
+{S_                       ,<Separator,LeftBracket>  }[  0] S_                 -> Assign                   
+{                         ,<Integer>                }[  0] S_                 -> Assign                   
+{                         ,<Number>                 }[  0] S_                 -> Assign                   
+{                         ,<Ident>                  }[  0] S_                 -> Assign                   
+{Assign                   ,<Separator,LeftBracket>  }[  0] Assign             -> E                        _f_00002_                
+{                         ,<Integer>                }[  0] Assign             -> E                        _f_00002_                
+{                         ,<Number>                 }[  0] Assign             -> E                        _f_00002_                
+{                         ,<Ident>                  }[  0] Assign             -> E                        _f_00002_                
+{_f_00002_                ,<Priority,Assign>        }[  0] _f_00002_          -> <Priority,Assign>        Assign                   
+{                         ,Eof                      }[  1] _f_00002_          -> 
+{E                        ,<Separator,LeftBracket>  }[  0] E                  -> T                        _f_00005_                
+{                         ,<Integer>                }[  0] E                  -> T                        _f_00005_                
+{                         ,<Number>                 }[  0] E                  -> T                        _f_00005_                
+{                         ,<Ident>                  }[  0] E                  -> T                        _f_00005_                
+{_f_00004_                ,<Priority,Term>          }[  0] _f_00004_          -> <Priority,Term>          T                        
+{_f_00005_                ,<Separator,RightBracket> }[  1] _f_00005_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00005_          -> 
+{                         ,<Priority,Term>          }[  0] _f_00005_          -> _f_00004_                _f_00005_                
+{                         ,Eof                      }[  1] _f_00005_          -> 
+{T                        ,<Separator,LeftBracket>  }[  0] T                  -> F                        _f_00008_                
+{                         ,<Integer>                }[  0] T                  -> F                        _f_00008_                
+{                         ,<Number>                 }[  0] T                  -> F                        _f_00008_                
+{                         ,<Ident>                  }[  0] T                  -> F                        _f_00008_                
+{_f_00007_                ,<Priority,Factor>        }[  0] _f_00007_          -> <Priority,Factor>        F                        
+{_f_00008_                ,<Separator,RightBracket> }[  1] _f_00008_          -> 
+{                         ,<Priority,Assign>        }[  1] _f_00008_          -> 
+{                         ,<Priority,Term>          }[  1] _f_00008_          -> 
+{                         ,<Priority,Factor>        }[  0] _f_00008_          -> _f_00007_                _f_00008_                
+{                         ,Eof                      }[  1] _f_00008_          -> 
+{F                        ,<Separator,LeftBracket>  }[  0] F                  -> <Separator,LeftBracket>  E                        <Separator,RightBracket> 
+{                         ,<Integer>                }[  2] F                  -> <Integer>                
+{                         ,<Number>                 }[  3] F                  -> <Number>                 
+{                         ,<Ident>                  }[  1] F                  -> <Ident>                  

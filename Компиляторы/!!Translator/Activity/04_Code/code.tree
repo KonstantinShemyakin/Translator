@@ -1,0 +1,26 @@
+
+TNodeStatements type = Void      , 
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=000, column=000, len=03, value=65555, text=int
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=004, len=01, text=i
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Priority  , type=Assign      , line=000, column=006, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=000, column=004, len=01, text=i
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=004, len=01, text=i
+          TNodeExpressions type = CInt      , 
+            TNodeBinary     type = CInt      ,   group=Priority  , type=Term        , line=000, column=011, len=01, value=33, text=+
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=000, column=008, len=02, value=12, text=12
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=000, column=013, len=02, value=13, text=13 part=256  part=16 
+      alloc=Global , offset=00
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=002, column=005, len=01, value=3, text=f
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeDo         type = Unknown   ,   group=Separator , type=LeftCramp   , line=004, column=006, len=01, value=53, text={
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=006, column=012, len=01, value=2, text=2 part=241 
+        TNodeStatements type = Void      , 
+          TNodeExpressions type = Void      , 
+            TNodeCall       type = Void      ,   group=Syntax    , type=IdentFunc   , line=005, column=001, len=01, value=3, text=f
+              TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=002, column=005, len=01, value=3, text=f
+              T_NodeList      type = Unknown   ,   group=Syntax    , type=IdentFunc   , line=005, column=001, len=01, value=3, text=f part=16  number=4, size=0 number=3, size=0 number=2, size=0 number=1, size=0 number=0, size=1

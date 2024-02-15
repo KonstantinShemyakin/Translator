@@ -1,0 +1,46 @@
+Comparing files test_L.tree and TEST_L.TREE_
+***** test_L.tree
+    8:  nt
+    9:            TNodeCast       type = CInt      , 
+   10:              T_NodeList      type = Int       , 
+   11:                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=002, column=022, len=01, text=i
+   12:                  TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2
+   13:  , text=int
+   14:                  TNodeExpressions type = CInt      , 
+   15:                    TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=002, column=024, len=01, value
+   16:  =37, text==
+   17:                      TNodeCast       type = RInt      , 
+   18:                        TNodeVar        type = Int       ,   group=Ident     , type=00          , line=002, column=022, len=01, t
+   19:  ext=i
+   20:                          TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=002, column=022, len=01,
+   21:   text=i
+   22:                      TNodeExpressions type = CInt      , 
+   23:                        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=002, column=026, len=02, v
+   24:  alue=12, text=12 part=256  part=16 
+   25:                  alloc=Local  , offset=00
+   26:                TNodeVar        type = Int       ,   group=Ident     , type=00          , line=002, column=022, len=01, text=i
+   27:                  TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=002, column=022, len=01, text=i
+   28:          TNodeNull       type = Unknown   , 
+***** TEST_L.TREE_
+    8:  nt
+    9:            TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=002, column=022, len=01, text=i
+   10:              TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, te
+   11:  xt=int
+   12:              TNodeExpressions type = CInt      , 
+   13:                TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=002, column=024, len=01, value=37,
+   14:   text==
+   15:                  TNodeCast       type = RInt      , 
+   16:                    TNodeVar        type = Int       ,   group=Ident     , type=00          , line=002, column=022, len=01, text=
+   17:  i
+   18:                      TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=002, column=022, len=01, tex
+   19:  t=i
+   20:                  TNodeExpressions type = CInt      , 
+   21:                    TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=002, column=026, len=02, value
+   22:  =12, text=12 part=256  part=16 
+   23:              alloc=Local  , offset=00
+   24:            TNodeCast       type = CInt      , 
+   25:              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=002, column=022, len=01, text=i
+   26:                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=002, column=022, len=01, text=i
+   27:          TNodeNull       type = Unknown   , 
+*****
+

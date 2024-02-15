@@ -1,0 +1,15 @@
+{S_                       ,<Separator,LeftBracket>  }[  0] S_                 -> E                        
+{                         ,<Ident>                  }[  0] S_                 -> E                        
+{E                        ,<Separator,LeftBracket>  }[  0] E                  -> T                        E_                       
+{                         ,<Ident>                  }[  0] E                  -> T                        E_                       
+{E_                       ,<Oper,Add>               }[  0] E_                 -> <Oper,Add>               T                        E_                       
+{                         ,<Separator,RightBracket> }[  1] E_                 -> 
+{                         ,Eof                      }[  1] E_                 -> 
+{T                        ,<Separator,LeftBracket>  }[  0] T                  -> F                        T_                       
+{                         ,<Ident>                  }[  0] T                  -> F                        T_                       
+{T_                       ,<Oper,Add>               }[  1] T_                 -> 
+{                         ,<Oper,Multi>             }[  0] T_                 -> <Oper,Multi>             F                        T_                       
+{                         ,<Separator,RightBracket> }[  1] T_                 -> 
+{                         ,Eof                      }[  1] T_                 -> 
+{F                        ,<Separator,LeftBracket>  }[  0] F                  -> <Separator,LeftBracket>  E                        <Separator,RightBracket> 
+{                         ,<Ident>                  }[  1] F                  -> <Ident>                  

@@ -1,0 +1,1 @@
+..\TranGrammar.exe 1 0830 text.cpp ..\..\Table\LL_TC_LL1.tab

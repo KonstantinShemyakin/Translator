@@ -1,0 +1,38 @@
+
+TNodeDefFunc    line=000, column=005, len=05, text=f_for
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = NewVar    , addr  = 001, Local  , mode = 002, type = Int       
+command = NewVar    , addr  = 002, Local  , mode = 002, type = Int       
+command = Label     , param = 004, mode = 001, type = Void      
+command = PushVar   , addr  = 002, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = GoTo      , label = 014, If   , mode = 001, type = Unknown   
+command = GoTo      , label = 033, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 009, mode = 002, type = Void      
+command = PushVar   , addr  = 002, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = Oper      , oper  = PostInc       , mode = 001, type = Void      
+command = GoTo      , label = 004, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 014, mode = 001, type = Void      
+command = NewVar    , addr  = 003, Local  , mode = 002, type = Int       
+command = PushVar   , addr  = 002, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = GoTo      , label = 021, Else , mode = 002, type = Unknown   
+command = Pop       , param = 001, mode = 000, type = Void      
+command = GoTo      , label = 009, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 021, mode = 001, type = Void      
+command = NewVar    , addr  = 004, Local  , mode = 002, type = Int       
+command = PushVar   , addr  = 002, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = Oper      , oper  = Not           , mode = 000, type = CInt      
+command = GoTo      , label = 029, Else , mode = 002, type = Unknown   
+command = Pop       , param = 003, mode = 000, type = Void      
+command = GoTo      , label = 033, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 029, mode = 001, type = Void      
+command = Pop       , param = 001, mode = 000, type = Void      
+command = Pop       , param = 001, mode = 000, type = Void      
+command = GoTo      , label = 009, GoTo , mode = 003, type = Unknown   
+command = Label     , param = 033, mode = 002, type = Void      
+command = Pop       , param = 001, mode = 000, type = Void      
+command = Pop       , param = 002, mode = 000, type = Void      
+command = Exit      , param = 000, mode = 000, type = Void      

@@ -1,0 +1,358 @@
+
+C:\21_12_01>TableBuilder.exe 0x000B16 0x0009114B Table\JAVA_BNF.tab JAVA.bnf 
+TableBuilder.exe
+0x000B16
+0x0009114B
+Table\JAVA_BNF.tab
+JAVA.bnf
+
+
+level=6, step=3320
+--- semantic_tree = 0, syntax_tree = 1, lexemes = 0 ----
+
+--- RuleNames --- <170> ---
+
+
+#define: PRIOR_ASSIGN 
+
+true
+
+--- Grammar --- formula=170, produce=338, item=597, maker=0, used=161, vector=0, type=000000 ---
+
+FIRST
+FOLLOW
+Situation
+00000
+00100
+00200
+00300
+00400
+00500
+00508, delete=3884, empty=0, add=507, true_count=40298, false_count=-150717, closure_count=4392
+--- Situations --- <508> --- <6784> ---
+
+--- GOTOtable --- <4391> ---
+
+Action
+00000,00000
+Duplicate:
+{Situation: 00036         ,<Ident,14>                } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00036         ,<Ident,14>                } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00036         ,<Ident,15>                } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00036         ,<Ident,15>                } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00036         ,<Reserv,Short>           } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00036         ,<Reserv,Short>           } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00036         ,<Reserv,Int>             } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00036         ,<Reserv,Int>             } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00036         ,<Reserv,Long>            } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00036         ,<Reserv,Long>            } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00036         ,<Reserv,Float>           } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00036         ,<Reserv,Float>           } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00036         ,<Reserv,Double>          } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00036         ,<Reserv,Double>          } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00036         ,<Reserv,Char>            } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00036         ,<Reserv,Char>            } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00036         ,<Reserv,Boolean>         } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00036         ,<Reserv,Boolean>         } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00036         ,<Reserv,Byte>            } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00036         ,<Reserv,Byte>            } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00050         ,<Ident,14>                } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00050         ,<Ident,14>                } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00050         ,<Ident,15>                } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00050         ,<Ident,15>                } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00050         ,<Reserv,Short>           } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00050         ,<Reserv,Short>           } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00050         ,<Reserv,Int>             } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00050         ,<Reserv,Int>             } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00050         ,<Reserv,Long>            } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00050         ,<Reserv,Long>            } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00050         ,<Reserv,Float>           } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00050         ,<Reserv,Float>           } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00050         ,<Reserv,Double>          } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00050         ,<Reserv,Double>          } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00050         ,<Reserv,Char>            } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00050         ,<Reserv,Char>            } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00050         ,<Reserv,Boolean>         } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00050         ,<Reserv,Boolean>         } -> Reduce  [  1] method_modifiers_or_not-> 
+
+Duplicate:
+{Situation: 00050         ,<Reserv,Byte>            } -> Reduce  [  1] field_modifiers_or_not-> 
+{Situation: 00050         ,<Reserv,Byte>            } -> Reduce  [  1] method_modifiers_or_not-> 
+
+00100,00845
+Duplicate:
+{Situation: 00150         ,<Separator,RightBracket> } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00150         ,<Separator,RightBracket> } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00150         ,<Separator,Comma>        } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00150         ,<Separator,Comma>        } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00150         ,<Separator,Semicolon>    } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00150         ,<Separator,Semicolon>    } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00151         ,<Separator,RightBracket> } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00151         ,<Separator,RightBracket> } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00151         ,<Separator,Comma>        } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00151         ,<Separator,Comma>        } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00151         ,<Separator,Semicolon>    } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00151         ,<Separator,Semicolon>    } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00153         ,<Separator,RightBracket> } -> Reduce  [  5] statement_expression-> method_invocation
+{Situation: 00153         ,<Separator,RightBracket> } -> Reduce  [  5] primary_no_new_array-> method_invocation
+
+Duplicate:
+{Situation: 00153         ,<Separator,Comma>        } -> Reduce  [  5] statement_expression-> method_invocation
+{Situation: 00153         ,<Separator,Comma>        } -> Reduce  [  5] primary_no_new_array-> method_invocation
+
+Duplicate:
+{Situation: 00153         ,<Separator,Semicolon>    } -> Reduce  [  5] statement_expression-> method_invocation
+{Situation: 00153         ,<Separator,Semicolon>    } -> Reduce  [  5] primary_no_new_array-> method_invocation
+
+Duplicate:
+{Situation: 00154         ,<Oper,RShift>            } -> Reduce  [  1] left_hand_side     -> field_access
+{Situation: 00154         ,<Oper,RShift>            } -> Reduce  [  4] primary_no_new_array-> field_access
+
+Duplicate:
+{Situation: 00157         ,<Separator,RightBracket> } -> Reduce  [  6] statement_expression-> class_instance_creation_expression
+{Situation: 00157         ,<Separator,RightBracket> } -> Reduce  [  3] primary_no_new_array-> class_instance_creation_expression
+
+Duplicate:
+{Situation: 00157         ,<Separator,Comma>        } -> Reduce  [  6] statement_expression-> class_instance_creation_expression
+{Situation: 00157         ,<Separator,Comma>        } -> Reduce  [  3] primary_no_new_array-> class_instance_creation_expression
+
+Duplicate:
+{Situation: 00157         ,<Separator,Semicolon>    } -> Reduce  [  6] statement_expression-> class_instance_creation_expression
+{Situation: 00157         ,<Separator,Semicolon>    } -> Reduce  [  3] primary_no_new_array-> class_instance_creation_expression
+
+Duplicate:
+{Situation: 00159         ,<Oper,RShift>            } -> Reduce  [  2] left_hand_side     -> array_access
+{Situation: 00159         ,<Oper,RShift>            } -> Reduce  [  6] primary_no_new_array-> array_access
+
+Duplicate:
+{Situation: 00160         ,<Oper,RShift>            } -> Reduce  [  0] left_hand_side     -> expression_name
+{Situation: 00160         ,<Oper,RShift>            } -> Reduce  [  1] postfix_expression -> expression_name
+
+Duplicate:
+{Situation: 00194         ,<Reserv,This>            } -> Reduce  [  1] explicit_constructor_invocation_or_not-> 
+{Situation: 00194         ,<Reserv,This>            } -> Shift   Situation: 00288         
+:=Shift   Situation: 00288         
+
+Duplicate:
+{Situation: 00194         ,<Reserv,Super>           } -> Reduce  [  1] explicit_constructor_invocation_or_not-> 
+{Situation: 00194         ,<Reserv,Super>           } -> Shift   Situation: 00289         
+:=Shift   Situation: 00289         
+
+00200,03251
+Duplicate:
+{Situation: 00282         ,<Separator,RightCramp>   } -> Reduce  [  1] variable_initializer-> array_initializer
+{Situation: 00282         ,<Separator,RightCramp>   } -> Reduce  [  3] variable_initializer-> array_initializer
+
+Duplicate:
+{Situation: 00282         ,<Separator,Comma>        } -> Reduce  [  1] variable_initializer-> array_initializer
+{Situation: 00282         ,<Separator,Comma>        } -> Reduce  [  3] variable_initializer-> array_initializer
+
+Duplicate:
+{Situation: 00282         ,<Separator,Semicolon>    } -> Reduce  [  1] variable_initializer-> array_initializer
+{Situation: 00282         ,<Separator,Semicolon>    } -> Reduce  [  3] variable_initializer-> array_initializer
+
+Duplicate:
+{Situation: 00282         ,<Ident,10>                } -> Reduce  [  1] variable_initializer-> array_initializer
+{Situation: 00282         ,<Ident,10>                } -> Reduce  [  3] variable_initializer-> array_initializer
+
+Duplicate:
+{Situation: 00282         ,<Ident,13>                } -> Reduce  [  1] variable_initializer-> array_initializer
+{Situation: 00282         ,<Ident,13>                } -> Reduce  [  3] variable_initializer-> array_initializer
+
+Duplicate:
+{Situation: 00282         ,<Ident,14>                } -> Reduce  [  1] variable_initializer-> array_initializer
+{Situation: 00282         ,<Ident,14>                } -> Reduce  [  3] variable_initializer-> array_initializer
+
+Duplicate:
+{Situation: 00282         ,<Ident,15>                } -> Reduce  [  1] variable_initializer-> array_initializer
+{Situation: 00282         ,<Ident,15>                } -> Reduce  [  3] variable_initializer-> array_initializer
+
+Duplicate:
+{Situation: 00282         ,<Reserv,Void>            } -> Reduce  [  1] variable_initializer-> array_initializer
+{Situation: 00282         ,<Reserv,Void>            } -> Reduce  [  3] variable_initializer-> array_initializer
+
+Duplicate:
+{Situation: 00282         ,<Reserv,Short>           } -> Reduce  [  1] variable_initializer-> array_initializer
+{Situation: 00282         ,<Reserv,Short>           } -> Reduce  [  3] variable_initializer-> array_initializer
+
+Duplicate:
+{Situation: 00282         ,<Reserv,Int>             } -> Reduce  [  1] variable_initializer-> array_initializer
+{Situation: 00282         ,<Reserv,Int>             } -> Reduce  [  3] variable_initializer-> array_initializer
+
+Duplicate:
+{Situation: 00282         ,<Reserv,Long>            } -> Reduce  [  1] variable_initializer-> array_initializer
+{Situation: 00282         ,<Reserv,Long>            } -> Reduce  [  3] variable_initializer-> array_initializer
+
+Duplicate:
+{Situation: 00282         ,<Reserv,Float>           } -> Reduce  [  1] variable_initializer-> array_initializer
+{Situation: 00282         ,<Reserv,Float>           } -> Reduce  [  3] variable_initializer-> array_initializer
+
+Duplicate:
+{Situation: 00282         ,<Reserv,Double>          } -> Reduce  [  1] variable_initializer-> array_initializer
+{Situation: 00282         ,<Reserv,Double>          } -> Reduce  [  3] variable_initializer-> array_initializer
+
+Duplicate:
+{Situation: 00282         ,<Reserv,Char>            } -> Reduce  [  1] variable_initializer-> array_initializer
+{Situation: 00282         ,<Reserv,Char>            } -> Reduce  [  3] variable_initializer-> array_initializer
+
+Duplicate:
+{Situation: 00282         ,<Reserv,Boolean>         } -> Reduce  [  1] variable_initializer-> array_initializer
+{Situation: 00282         ,<Reserv,Boolean>         } -> Reduce  [  3] variable_initializer-> array_initializer
+
+Duplicate:
+{Situation: 00282         ,<Reserv,Byte>            } -> Reduce  [  1] variable_initializer-> array_initializer
+{Situation: 00282         ,<Reserv,Byte>            } -> Reduce  [  3] variable_initializer-> array_initializer
+
+Duplicate:
+{Situation: 00283         ,<Separator,RightCramp>   } -> Reduce  [  0] variable_initializer-> expression
+{Situation: 00283         ,<Separator,RightCramp>   } -> Reduce  [  2] variable_initializer-> expression
+
+Duplicate:
+{Situation: 00283         ,<Separator,Comma>        } -> Reduce  [  0] variable_initializer-> expression
+{Situation: 00283         ,<Separator,Comma>        } -> Reduce  [  2] variable_initializer-> expression
+
+Duplicate:
+{Situation: 00283         ,<Separator,Semicolon>    } -> Reduce  [  0] variable_initializer-> expression
+{Situation: 00283         ,<Separator,Semicolon>    } -> Reduce  [  2] variable_initializer-> expression
+
+Duplicate:
+{Situation: 00283         ,<Ident,10>                } -> Reduce  [  0] variable_initializer-> expression
+{Situation: 00283         ,<Ident,10>                } -> Reduce  [  2] variable_initializer-> expression
+
+Duplicate:
+{Situation: 00283         ,<Ident,13>                } -> Reduce  [  0] variable_initializer-> expression
+{Situation: 00283         ,<Ident,13>                } -> Reduce  [  2] variable_initializer-> expression
+
+Duplicate:
+{Situation: 00283         ,<Ident,14>                } -> Reduce  [  0] variable_initializer-> expression
+{Situation: 00283         ,<Ident,14>                } -> Reduce  [  2] variable_initializer-> expression
+
+Duplicate:
+{Situation: 00283         ,<Ident,15>                } -> Reduce  [  0] variable_initializer-> expression
+{Situation: 00283         ,<Ident,15>                } -> Reduce  [  2] variable_initializer-> expression
+
+Duplicate:
+{Situation: 00283         ,<Reserv,Void>            } -> Reduce  [  0] variable_initializer-> expression
+{Situation: 00283         ,<Reserv,Void>            } -> Reduce  [  2] variable_initializer-> expression
+
+Duplicate:
+{Situation: 00283         ,<Reserv,Short>           } -> Reduce  [  0] variable_initializer-> expression
+{Situation: 00283         ,<Reserv,Short>           } -> Reduce  [  2] variable_initializer-> expression
+
+Duplicate:
+{Situation: 00283         ,<Reserv,Int>             } -> Reduce  [  0] variable_initializer-> expression
+{Situation: 00283         ,<Reserv,Int>             } -> Reduce  [  2] variable_initializer-> expression
+
+Duplicate:
+{Situation: 00283         ,<Reserv,Long>            } -> Reduce  [  0] variable_initializer-> expression
+{Situation: 00283         ,<Reserv,Long>            } -> Reduce  [  2] variable_initializer-> expression
+
+Duplicate:
+{Situation: 00283         ,<Reserv,Float>           } -> Reduce  [  0] variable_initializer-> expression
+{Situation: 00283         ,<Reserv,Float>           } -> Reduce  [  2] variable_initializer-> expression
+
+Duplicate:
+{Situation: 00283         ,<Reserv,Double>          } -> Reduce  [  0] variable_initializer-> expression
+{Situation: 00283         ,<Reserv,Double>          } -> Reduce  [  2] variable_initializer-> expression
+
+Duplicate:
+{Situation: 00283         ,<Reserv,Char>            } -> Reduce  [  0] variable_initializer-> expression
+{Situation: 00283         ,<Reserv,Char>            } -> Reduce  [  2] variable_initializer-> expression
+
+Duplicate:
+{Situation: 00283         ,<Reserv,Boolean>         } -> Reduce  [  0] variable_initializer-> expression
+{Situation: 00283         ,<Reserv,Boolean>         } -> Reduce  [  2] variable_initializer-> expression
+
+Duplicate:
+{Situation: 00283         ,<Reserv,Byte>            } -> Reduce  [  0] variable_initializer-> expression
+{Situation: 00283         ,<Reserv,Byte>            } -> Reduce  [  2] variable_initializer-> expression
+
+00300,05774
+Duplicate:
+{Situation: 00359         ,<Separator,RightCramp>   } -> Reduce  [  1] array_initializer_comma_or_not-> 
+{Situation: 00359         ,<Separator,RightCramp>   } -> Reduce  [  1] array_initializer_comma-> 
+
+Duplicate:
+{Situation: 00360         ,<Separator,Comma>        } -> Reduce  [  0] variable_initializers_or_not-> variable_initializers
+{Situation: 00360         ,<Separator,Comma>        } -> Shift   Situation: 00416         
+:=Shift   Situation: 00416         
+
+00400,08631
+Duplicate:
+{Situation: 00442         ,<Reserv,Case>            } -> Reduce  [  1] switch_block_statement_groups_or_not-> 
+{Situation: 00442         ,<Reserv,Case>            } -> Shift   Situation: 00469         
+:=Shift   Situation: 00469         
+
+Duplicate:
+{Situation: 00442         ,<Reserv,Default>         } -> Reduce  [  1] switch_block_statement_groups_or_not-> 
+{Situation: 00442         ,<Reserv,Default>         } -> Shift   Situation: 00470         
+:=Shift   Situation: 00470         
+
+Duplicate:
+{Situation: 00465         ,<Reserv,Case>            } -> Reduce  [  0] switch_block_statement_groups_or_not-> switch_block_statement_groups
+{Situation: 00465         ,<Reserv,Case>            } -> Shift   Situation: 00469         
+:=Shift   Situation: 00469         
+
+Duplicate:
+{Situation: 00465         ,<Reserv,Default>         } -> Reduce  [  0] switch_block_statement_groups_or_not-> switch_block_statement_groups
+{Situation: 00465         ,<Reserv,Default>         } -> Shift   Situation: 00470         
+:=Shift   Situation: 00470         
+
+00500,11027
+00508,11199, not_find=78651, empty=0, shift=1755, reduce=6814, goto=2629
+
+--- LR table --- <508,11199> ---
+
+Duplicate: 75
+
+time: 0.296s
+
+C:\21_12_01>rem TranGrammar.exe 1 00044010 Test_ETF.cpp Table\JAVA_BNF.tab  

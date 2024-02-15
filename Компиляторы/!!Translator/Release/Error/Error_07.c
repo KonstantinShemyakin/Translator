@@ -1,0 +1,4 @@
+// Initialization 
+void f()
+{
+}

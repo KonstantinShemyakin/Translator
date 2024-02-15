@@ -1,0 +1,426 @@
+
+S_                       
+                         ::= Program                  
+                         
+Program                  
+                         ::= Defines                  
+                         
+DefParType               
+                         ::= const                       Syntax_DefType              &                        
+                         |   Syntax_DefType              &                        
+                         |   const                       Syntax_DefType           
+                         |   Syntax_DefType           
+                         
+DefBegParVar             
+                         ::= DefParType                  Ident                    
+                         
+DefParVar                
+                         ::= DefBegParVar                =                           Assign                   
+                         |   DefBegParVar             
+                         
+DefBegParArr             
+                         ::= DefParType                  Ident                       DefBegRanges             
+                         
+DefParArr                
+                         ::= DefBegParArr                =                           Assign                   
+                         |   DefBegParArr             
+                         
+DefParItem               
+                         ::= DefParArr                
+                         |   DefParVar                
+                         
+DefParams                
+                         ::= DefParams                   ,                           DefParItem               
+                         |   DefParItem               
+                         
+BodyFunc                 
+                         ::= ;                        
+                         |   '{'                         '}'                      
+                         |   '{'                         StmExpr                     '}'                      
+                         
+DefFuncParBody           
+                         ::= )                        
+                         |   DefParams                   )                        
+                         
+DefParBodyFunc           
+                         ::= DefFuncParBody              BodyFunc                 
+                         
+DefVoidType              
+                         ::= static                      void                     
+                         |   void                     
+                         
+DefType                  
+                         ::= static                      const                       Syntax_DefType           
+                         |   static                      Syntax_DefType           
+                         |   const                       Syntax_DefType           
+                         |   Syntax_DefType           
+                         
+CommaDefItem             
+                         ::= CommaDefItem                ,                           DefItem                  
+                         |   DefItem                  
+                         
+Define                   
+                         ::= DefType                     CommaDefItem             
+                         
+DefineBegRanges          
+                         ::= ]                           DefRanges                
+                         |   ]                        
+                         |   Assign                      ]                           DefRanges                
+                         |   Assign                      ]                        
+                         
+DefineBegArr             
+                         ::= DefineBegRanges          
+                         
+DefineArr                
+                         ::= IdentLeftScrape             =                           Initializer              
+                         |   IdentLeftScrape          
+                         
+IdentLeftScrape          
+                         ::= Ident                       [                           DefineBegArr             
+                         
+DefineVarAssign          
+                         ::= ,                           CommaDefItem                ;                        
+                         |   ;                        
+                         
+DefVariableAssign        
+                         ::= Ident                       =                           Assign                   
+                         
+DefVarComma              
+                         ::= Ident                    
+                         
+DefVarSemicolon          
+                         ::= Ident                    
+                         
+DefFuncArrVar            
+                         ::= DefType                     Ident                       (                           DefParBodyFunc           
+                         |   DefType                     DefineArr                   ,                           CommaDefItem                ;                        
+                         |   DefType                     DefineArr                   ;                        
+                         |   DefType                     DefVariableAssign           DefineVarAssign          
+                         |   DefType                     DefVarComma                 ,                           CommaDefItem                ;                        
+                         |   DefType                     DefVarSemicolon             ;                        
+                         
+DefFuncDefine            
+                         ::= DefVoidType                 Ident                       (                           DefParBodyFunc           
+                         |   DefFuncArrVar            
+                         
+AInitItem                
+                         ::= Initializer              
+                         |   Assign                   
+                         
+AInitial                 
+                         ::= AInitial                    ,                           AInitItem                
+                         |   AInitItem                
+                         
+Initializer              
+                         ::= '{'                         '}'                      
+                         |   '{'                         AInitial                    '}'                      
+                         
+DefRange                 
+                         ::= [                           Assign                      ]                        
+                         
+DefRanges                
+                         ::= DefRanges                   DefRange                 
+                         |   DefRange                 
+                         
+DefBegRanges             
+                         ::= [                           ]                           DefRanges                
+                         |   [                           ]                        
+                         |   DefRanges                
+                         
+DefBegArr                
+                         ::= Ident                       DefBegRanges             
+                         
+DefArr                   
+                         ::= DefBegArr                   =                           Initializer              
+                         |   DefBegArr                
+                         
+DefVarIdent              
+                         ::= Ident                    
+                         
+DefVarAssign             
+                         ::= =                           Assign                   
+                         
+DefVar                   
+                         ::= DefVarIdent                 DefVarAssign             
+                         |   DefVarIdent              
+                         
+DefIAV                   
+                         ::= DefArr                   
+                         |   DefVar                   
+                         
+RefDefIAV                
+                         ::= &                           DefIAV                   
+                         
+DefItem                  
+                         ::= RefDefIAV                
+                         |   DefIAV                   
+                         
+Expressions              
+                         ::= Expressions                 ,                           Assign                   
+                         |   Assign                   
+                         
+PriorAssign              
+                         ::= +=                       
+                         |   -=                       
+                         |   *=                       
+                         |   /=                       
+                         |   %=                       
+                         |   =                        
+                         |   |=                       
+                         |   ^=                       
+                         |   &=                       
+                         |   <<=                      
+                         |   >>=                      
+                         
+PriorQuestion            
+                         ::= ?                        
+                         
+PriorOrOr                
+                         ::= ||                       
+                         
+PriorAndAnd              
+                         ::= &&                       
+                         
+PriorOr                  
+                         ::= '|'                      
+                         
+PriorXOr                 
+                         ::= ^                        
+                         
+PriorAnd                 
+                         ::= &                        
+                         
+PriorEqu                 
+                         ::= ==                       
+                         |   !=                       
+                         
+PriorCompare             
+                         ::= <=                       
+                         |   <                        
+                         |   >=                       
+                         |   >                        
+                         
+PriorShift               
+                         ::= <<                       
+                         |   >>                       
+                         
+PriorTerm                
+                         ::= +                        
+                         |   -                        
+                         
+PriorFactor              
+                         ::= *                        
+                         |   /                        
+                         |   %                        
+                         
+PriorUnary               
+                         ::= !                        
+                         |   ~                        
+                         
+PriorIncDec              
+                         ::= ++                       
+                         |   --                       
+                         
+Assign                   
+                         ::= Question                    PriorAssign                 Assign                   
+                         |   Question                 
+                         
+Question                 
+                         ::= OrOr                        PriorQuestion               ExpressionValue             :                           Question                 
+                         |   OrOr                     
+                         
+OrOr                     
+                         ::= OrOr                        PriorOrOr                   AndAnd                   
+                         |   AndAnd                   
+                         
+AndAnd                   
+                         ::= AndAnd                      PriorAndAnd                 Or                       
+                         |   Or                       
+                         
+Or                       
+                         ::= Or                          PriorOr                     XOr                      
+                         |   XOr                      
+                         
+XOr                      
+                         ::= XOr                         PriorXOr                    And                      
+                         |   And                      
+                         
+And                      
+                         ::= And                         PriorAnd                    Equ                      
+                         |   Equ                      
+                         
+Equ                      
+                         ::= Equ                         PriorEqu                    Compare                  
+                         |   Compare                  
+                         
+Compare                  
+                         ::= Compare                     PriorCompare                Shift                    
+                         |   Shift                    
+                         
+Shift                    
+                         ::= Shift                       PriorShift                  Term                     
+                         |   Term                     
+                         
+Term                     
+                         ::= Term                        PriorTerm                   Factor                   
+                         |   Factor                   
+                         
+Factor                   
+                         ::= Factor                      PriorFactor                 Unary                    
+                         |   Unary                    
+                         
+UnaryIncDec              
+                         ::= PrimaryExpr                 PriorIncDec              
+                         |   PrimaryExpr              
+                         
+DefTypeCast              
+                         ::= const                       Syntax_DefType           
+                         |   Syntax_DefType           
+                         
+Unary                    
+                         ::= PriorUnary                  Unary                    
+                         |   PriorTerm                   Unary                    
+                         |   PriorIncDec                 Unary                    
+                         |   (                           DefTypeCast                 )                           Unary                    
+                         |   UnaryIncDec              
+                         
+Primary                  
+                         ::= (                           ExpressionNone              )                        
+                         
+PrimaryExpr              
+                         ::= Integer                  
+                         |   Number                   
+                         |   Ident                       Ranges                   
+                         |   Ident                       CallParams               
+                         |   Syntax_DefType              Primary                  
+                         |   Ident                    
+                         |   Primary                  
+                         
+Range                    
+                         ::= [                           ExpressionValue             ]                        
+                         
+Ranges                   
+                         ::= Ranges                      Range                    
+                         |   Range                    
+                         
+CallParams               
+                         ::= (                           )                        
+                         |   (                           ExpressionValueList         )                        
+                         
+CompaundStmnt            
+                         ::= '{'                         '}'                      
+                         |   '{'                         StmExpr                     '}'                      
+                         
+ConditionVar             
+                         ::= &                           DefVar                   
+                         |   DefVar                   
+                         
+Condition                
+                         ::= DefType                     ConditionVar             
+                         |   ExpressionCondition      
+                         
+ForPrefix                
+                         ::= ;                        
+                         |   DefineSemi               
+                         |   ExprSemi                 
+                         
+ForCondition             
+                         ::= ;                        
+                         |   Condition                   ;                        
+                         
+ForPostfix               
+                         ::= )                        
+                         |   ExpressionExpression        )                        
+                         
+ForStmnt                 
+                         ::= for                         (                           ForPrefix                   ForCondition                ForPostfix                  DefExpr                  
+                         
+DoStmnt                  
+                         ::= do                          DefExpr                     while                       (                           Condition                   )                           ;                        
+                         
+WhileStmnt               
+                         ::= while                       (                           Condition                   )                           DefExpr                  
+                         
+GoToStmnt                
+                         ::= goto                        Ident                       ;                        
+                         
+BreakStmnt               
+                         ::= break                       ;                        
+                         
+ContinueStmnt            
+                         ::= continue                    ;                        
+                         
+ReturnValue              
+                         ::= ;                        
+                         |   ExpressionValue             ;                        
+                         
+ReturnStmnt              
+                         ::= return                      ReturnValue              
+                         
+BegIfStmnt               
+                         ::= if                          (                           Condition                   )                           DefExpr                  
+                         
+LabelIdent               
+                         ::= Ident                       :                        
+                         
+LabelList                
+                         ::= LabelIdent               
+                         
+Statement                
+                         ::= BegIfStmnt                  else                        DefExpr                  
+                         |   BegIfStmnt               
+                         |   LabelList                   DefExpr                  
+                         |   DoStmnt                  
+                         |   WhileStmnt               
+                         |   ForStmnt                 
+                         |   GoToStmnt                
+                         |   BreakStmnt               
+                         |   ContinueStmnt            
+                         |   ReturnStmnt              
+                         |   CompaundStmnt            
+                         
+DefineSemi               
+                         ::= Define                      ;                        
+                         
+ExprSemi                 
+                         ::= ExpressionExpression        ;                        
+                         
+DefExpr                  
+                         ::= ;                        
+                         |   DefineSemi               
+                         |   Statement                
+                         |   ExprSemi                 
+                         
+StmExprList              
+                         ::= StmExprList                 DefExpr                  
+                         |   DefExpr                  
+                         
+StmExpr                  
+                         ::= StmExprList              
+                         
+DefFAV                   
+                         ::= ;                        
+                         |   DefFuncDefine            
+                         
+DefinesList              
+                         ::= DefinesList                 DefFAV                   
+                         |   DefFAV                   
+                         
+Defines                  
+                         ::= DefinesList              
+                         
+ExpressionExpression     
+                         ::= Expressions              
+                         
+ExpressionCondition      
+                         ::= Expressions              
+                         
+ExpressionNone           
+                         ::= Expressions              
+                         
+ExpressionValue          
+                         ::= Expressions              
+                         
+ExpressionValueList      
+                         ::= Expressions              
+                         

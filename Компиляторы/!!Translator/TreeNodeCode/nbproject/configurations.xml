@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>../Translator/ASyntax.cpp</itemPath>
+      <itemPath>../Translator/Grammar.cpp</itemPath>
+      <itemPath>../Translator/GrammarStock.cpp</itemPath>
+      <itemPath>../Translator/InHelp.cpp</itemPath>
+      <itemPath>../Translator/Maker.cpp</itemPath>
+      <itemPath>../Translator/Parse.cpp</itemPath>
+      <itemPath>../Translator/Rules.cpp</itemPath>
+      <itemPath>../Translator/SNodes.cpp</itemPath>
+      <itemPath>../Translator/TNodes.cpp</itemPath>
+      <itemPath>../Translator/TSemantic.cpp</itemPath>
+      <itemPath>../Translator/Tables.cpp</itemPath>
+      <itemPath>../Translator/Variables.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+    <itemPath>../Translator/ASemantic.cpp</itemPath>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <compilerSet>MinGW|MinGW</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+      </compileType>
+      <item path="../Translator/ASemantic.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/ASyntax.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/Grammar.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/GrammarStock.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/InHelp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/Maker.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/Parse.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/Rules.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/SNodes.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/TNodes.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/TSemantic.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/Tables.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/Variables.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <compilerSet>MinGW|MinGW</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+      </compileType>
+      <item path="../Translator/ASemantic.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/ASyntax.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/Grammar.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/GrammarStock.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/InHelp.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/Maker.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/Parse.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/Rules.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/SNodes.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/TNodes.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/TSemantic.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/Tables.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../Translator/Variables.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

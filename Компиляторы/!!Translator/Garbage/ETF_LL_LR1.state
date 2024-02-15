@@ -1,0 +1,227 @@
+
+--- Situations --- <30> --- <135> ---
+
+--- (00000) --- <10> ---
+
+(0,Empty                    )[  0] S_                 ->  . E
+(0,<Priority,Term>          )[  0] F                  ->  . '('   E   ')'
+(0,<Priority,Factor>        )[  0] F                  ->  . '('   E   ')'
+(0,Empty                    )[  0] F                  ->  . '('   E   ')'
+(0,<Priority,Term>          )[  1] F                  ->  . <Integer>
+(0,<Priority,Factor>        )[  1] F                  ->  . <Integer>
+(0,Empty                    )[  1] F                  ->  . <Integer>
+(0,Empty                    )[  0] E                  ->  . T   E_
+(0,<Priority,Term>          )[  0] T                  ->  . F   T_
+(0,Empty                    )[  0] T                  ->  . F   T_
+
+--- (00001) --- <6> ---
+
+(1,<Priority,Term>          )[  0] T                  -> F . T_
+(1,Empty                    )[  0] T                  -> F . T_
+(0,<Priority,Term>          )[  0] T_                 ->  . <Priority,Factor>   F   T_
+(0,Empty                    )[  0] T_                 ->  . <Priority,Factor>   F   T_
+(0,<Priority,Term>          )[  1] T_                 ->  . Empty
+(0,Empty                    )[  1] T_                 ->  . Empty
+
+--- (00002) --- <1> ---
+
+(1,Empty                    )[  0] S_                 -> E . 
+
+--- (00003) --- <3> ---
+
+(1,Empty                    )[  0] E                  -> T . E_
+(0,Empty                    )[  0] E_                 ->  . <Priority,Term>   T   E_
+(0,Empty                    )[  1] E_                 ->  . Empty
+
+--- (00004) --- <12> ---
+
+(1,<Priority,Term>          )[  0] F                  -> '(' . E   ')'
+(1,<Priority,Factor>        )[  0] F                  -> '(' . E   ')'
+(1,Empty                    )[  0] F                  -> '(' . E   ')'
+(0,<Separator,RightBracket> )[  0] F                  ->  . '('   E   ')'
+(0,<Priority,Term>          )[  0] F                  ->  . '('   E   ')'
+(0,<Priority,Factor>        )[  0] F                  ->  . '('   E   ')'
+(0,<Separator,RightBracket> )[  1] F                  ->  . <Integer>
+(0,<Priority,Term>          )[  1] F                  ->  . <Integer>
+(0,<Priority,Factor>        )[  1] F                  ->  . <Integer>
+(0,<Separator,RightBracket> )[  0] E                  ->  . T   E_
+(0,<Separator,RightBracket> )[  0] T                  ->  . F   T_
+(0,<Priority,Term>          )[  0] T                  ->  . F   T_
+
+--- (00005) --- <3> ---
+
+(1,<Priority,Term>          )[  1] F                  -> <Integer> . 
+(1,<Priority,Factor>        )[  1] F                  -> <Integer> . 
+(1,Empty                    )[  1] F                  -> <Integer> . 
+
+--- (00006) --- <2> ---
+
+(2,<Priority,Term>          )[  0] T                  -> F   T_ . 
+(2,Empty                    )[  0] T                  -> F   T_ . 
+
+--- (00007) --- <8> ---
+
+(1,<Priority,Term>          )[  0] T_                 -> <Priority,Factor> . F   T_
+(1,Empty                    )[  0] T_                 -> <Priority,Factor> . F   T_
+(0,<Priority,Term>          )[  0] F                  ->  . '('   E   ')'
+(0,<Priority,Factor>        )[  0] F                  ->  . '('   E   ')'
+(0,Empty                    )[  0] F                  ->  . '('   E   ')'
+(0,<Priority,Term>          )[  1] F                  ->  . <Integer>
+(0,<Priority,Factor>        )[  1] F                  ->  . <Integer>
+(0,Empty                    )[  1] F                  ->  . <Integer>
+
+--- (00008) --- <1> ---
+
+(2,Empty                    )[  0] E                  -> T   E_ . 
+
+--- (00009) --- <9> ---
+
+(1,Empty                    )[  0] E_                 -> <Priority,Term> . T   E_
+(0,<Priority,Term>          )[  0] F                  ->  . '('   E   ')'
+(0,<Priority,Factor>        )[  0] F                  ->  . '('   E   ')'
+(0,Empty                    )[  0] F                  ->  . '('   E   ')'
+(0,<Priority,Term>          )[  1] F                  ->  . <Integer>
+(0,<Priority,Factor>        )[  1] F                  ->  . <Integer>
+(0,Empty                    )[  1] F                  ->  . <Integer>
+(0,<Priority,Term>          )[  0] T                  ->  . F   T_
+(0,Empty                    )[  0] T                  ->  . F   T_
+
+--- (00010) --- <6> ---
+
+(1,<Separator,RightBracket> )[  0] T                  -> F . T_
+(1,<Priority,Term>          )[  0] T                  -> F . T_
+(0,<Separator,RightBracket> )[  0] T_                 ->  . <Priority,Factor>   F   T_
+(0,<Priority,Term>          )[  0] T_                 ->  . <Priority,Factor>   F   T_
+(0,<Separator,RightBracket> )[  1] T_                 ->  . Empty
+(0,<Priority,Term>          )[  1] T_                 ->  . Empty
+
+--- (00011) --- <3> ---
+
+(2,<Priority,Term>          )[  0] F                  -> '('   E . ')'
+(2,<Priority,Factor>        )[  0] F                  -> '('   E . ')'
+(2,Empty                    )[  0] F                  -> '('   E . ')'
+
+--- (00012) --- <3> ---
+
+(1,<Separator,RightBracket> )[  0] E                  -> T . E_
+(0,<Separator,RightBracket> )[  0] E_                 ->  . <Priority,Term>   T   E_
+(0,<Separator,RightBracket> )[  1] E_                 ->  . Empty
+
+--- (00013) --- <12> ---
+
+(1,<Separator,RightBracket> )[  0] F                  -> '(' . E   ')'
+(1,<Priority,Term>          )[  0] F                  -> '(' . E   ')'
+(1,<Priority,Factor>        )[  0] F                  -> '(' . E   ')'
+(0,<Separator,RightBracket> )[  0] F                  ->  . '('   E   ')'
+(0,<Priority,Term>          )[  0] F                  ->  . '('   E   ')'
+(0,<Priority,Factor>        )[  0] F                  ->  . '('   E   ')'
+(0,<Separator,RightBracket> )[  1] F                  ->  . <Integer>
+(0,<Priority,Term>          )[  1] F                  ->  . <Integer>
+(0,<Priority,Factor>        )[  1] F                  ->  . <Integer>
+(0,<Separator,RightBracket> )[  0] E                  ->  . T   E_
+(0,<Separator,RightBracket> )[  0] T                  ->  . F   T_
+(0,<Priority,Term>          )[  0] T                  ->  . F   T_
+
+--- (00014) --- <3> ---
+
+(1,<Separator,RightBracket> )[  1] F                  -> <Integer> . 
+(1,<Priority,Term>          )[  1] F                  -> <Integer> . 
+(1,<Priority,Factor>        )[  1] F                  -> <Integer> . 
+
+--- (00015) --- <6> ---
+
+(2,<Priority,Term>          )[  0] T_                 -> <Priority,Factor>   F . T_
+(2,Empty                    )[  0] T_                 -> <Priority,Factor>   F . T_
+(0,<Priority,Term>          )[  0] T_                 ->  . <Priority,Factor>   F   T_
+(0,Empty                    )[  0] T_                 ->  . <Priority,Factor>   F   T_
+(0,<Priority,Term>          )[  1] T_                 ->  . Empty
+(0,Empty                    )[  1] T_                 ->  . Empty
+
+--- (00016) --- <3> ---
+
+(2,Empty                    )[  0] E_                 -> <Priority,Term>   T . E_
+(0,Empty                    )[  0] E_                 ->  . <Priority,Term>   T   E_
+(0,Empty                    )[  1] E_                 ->  . Empty
+
+--- (00017) --- <2> ---
+
+(2,<Separator,RightBracket> )[  0] T                  -> F   T_ . 
+(2,<Priority,Term>          )[  0] T                  -> F   T_ . 
+
+--- (00018) --- <8> ---
+
+(1,<Separator,RightBracket> )[  0] T_                 -> <Priority,Factor> . F   T_
+(1,<Priority,Term>          )[  0] T_                 -> <Priority,Factor> . F   T_
+(0,<Separator,RightBracket> )[  0] F                  ->  . '('   E   ')'
+(0,<Priority,Term>          )[  0] F                  ->  . '('   E   ')'
+(0,<Priority,Factor>        )[  0] F                  ->  . '('   E   ')'
+(0,<Separator,RightBracket> )[  1] F                  ->  . <Integer>
+(0,<Priority,Term>          )[  1] F                  ->  . <Integer>
+(0,<Priority,Factor>        )[  1] F                  ->  . <Integer>
+
+--- (00019) --- <3> ---
+
+(3,<Priority,Term>          )[  0] F                  -> '('   E   ')' . 
+(3,<Priority,Factor>        )[  0] F                  -> '('   E   ')' . 
+(3,Empty                    )[  0] F                  -> '('   E   ')' . 
+
+--- (00020) --- <1> ---
+
+(2,<Separator,RightBracket> )[  0] E                  -> T   E_ . 
+
+--- (00021) --- <9> ---
+
+(1,<Separator,RightBracket> )[  0] E_                 -> <Priority,Term> . T   E_
+(0,<Separator,RightBracket> )[  0] F                  ->  . '('   E   ')'
+(0,<Priority,Term>          )[  0] F                  ->  . '('   E   ')'
+(0,<Priority,Factor>        )[  0] F                  ->  . '('   E   ')'
+(0,<Separator,RightBracket> )[  1] F                  ->  . <Integer>
+(0,<Priority,Term>          )[  1] F                  ->  . <Integer>
+(0,<Priority,Factor>        )[  1] F                  ->  . <Integer>
+(0,<Separator,RightBracket> )[  0] T                  ->  . F   T_
+(0,<Priority,Term>          )[  0] T                  ->  . F   T_
+
+--- (00022) --- <3> ---
+
+(2,<Separator,RightBracket> )[  0] F                  -> '('   E . ')'
+(2,<Priority,Term>          )[  0] F                  -> '('   E . ')'
+(2,<Priority,Factor>        )[  0] F                  -> '('   E . ')'
+
+--- (00023) --- <2> ---
+
+(3,<Priority,Term>          )[  0] T_                 -> <Priority,Factor>   F   T_ . 
+(3,Empty                    )[  0] T_                 -> <Priority,Factor>   F   T_ . 
+
+--- (00024) --- <1> ---
+
+(3,Empty                    )[  0] E_                 -> <Priority,Term>   T   E_ . 
+
+--- (00025) --- <6> ---
+
+(2,<Separator,RightBracket> )[  0] T_                 -> <Priority,Factor>   F . T_
+(2,<Priority,Term>          )[  0] T_                 -> <Priority,Factor>   F . T_
+(0,<Separator,RightBracket> )[  0] T_                 ->  . <Priority,Factor>   F   T_
+(0,<Priority,Term>          )[  0] T_                 ->  . <Priority,Factor>   F   T_
+(0,<Separator,RightBracket> )[  1] T_                 ->  . Empty
+(0,<Priority,Term>          )[  1] T_                 ->  . Empty
+
+--- (00026) --- <3> ---
+
+(2,<Separator,RightBracket> )[  0] E_                 -> <Priority,Term>   T . E_
+(0,<Separator,RightBracket> )[  0] E_                 ->  . <Priority,Term>   T   E_
+(0,<Separator,RightBracket> )[  1] E_                 ->  . Empty
+
+--- (00027) --- <3> ---
+
+(3,<Separator,RightBracket> )[  0] F                  -> '('   E   ')' . 
+(3,<Priority,Term>          )[  0] F                  -> '('   E   ')' . 
+(3,<Priority,Factor>        )[  0] F                  -> '('   E   ')' . 
+
+--- (00028) --- <2> ---
+
+(3,<Separator,RightBracket> )[  0] T_                 -> <Priority,Factor>   F   T_ . 
+(3,<Priority,Term>          )[  0] T_                 -> <Priority,Factor>   F   T_ . 
+
+--- (00029) --- <1> ---
+
+(3,<Separator,RightBracket> )[  0] E_                 -> <Priority,Term>   T   E_ . 

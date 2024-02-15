@@ -1,0 +1,149 @@
+TranGrammar.exe
+2
+4FF8
+ETFtest.cpp
+..\ETF\ETF_LR_TC_LR1.tab
+
+3 + 6 * (7 + 8)
+
+--- LR table --- <22,71> ---
+
+--- Grammar --- formula=4, produce=7, item=13, maker=3, used=0, vector=0, type=050322 ---
+group=Integer   , type=00          , pos=0000, line=000, column=000, len=01, value=3, text=3
+
+>> group=Integer   , type=00          , pos=0000, line=000, column=000, len=01, value=3, text=3
+{Situation: 00000         ,<Integer>                } -> Shift   Situation: 00005         
+
+>> [0] -> [1] group=Integer   , type=00          , pos=0000, line=000, column=000, len=01, value=3, text=3
+<2 Situation: 00005         
+group=Priority  , type=Term        , pos=0002, line=000, column=002, len=01, value=33, text=+
+{Situation: 00005         ,<Priority,Term>          } -> Reduce  [  1] F                  
+
+TNodeCommand    type = CInt      ,   command = PushInt   , param = 003, mode = 000, type = CInt       -->> 00000
+Maker[Number,0], ret=1 n=[0,0],l=[1,0],t=[0,1],e=[0,0],b=[0,0],i=[0,0],s=[0,0]
+>2 Situation: 00005         
+{Situation: 00000         ,F                        } => Goto    Situation: 00003         
+<2 Situation: 00003         
+{Situation: 00003         ,<Priority,Term>          } -> Reduce  [  1] T                  
+>2 Situation: 00003         
+{Situation: 00000         ,T                        } => Goto    Situation: 00002         
+<2 Situation: 00002         
+{Situation: 00002         ,<Priority,Term>          } -> Reduce  [  1] E                  
+>2 Situation: 00002         
+{Situation: 00000         ,E                        } => Goto    Situation: 00001         
+<2 Situation: 00001         
+{Situation: 00001         ,<Priority,Term>          } -> Shift   Situation: 00006         
+
+>> [0] -> [1] group=Priority  , type=Term        , pos=0002, line=000, column=002, len=01, value=33, text=+
+<3 Situation: 00006         
+group=Integer   , type=00          , pos=0004, line=000, column=004, len=01, value=6, text=6
+{Situation: 00006         ,<Integer>                } -> Shift   Situation: 00005         
+
+>> [1] -> [2] group=Integer   , type=00          , pos=0004, line=000, column=004, len=01, value=6, text=6
+<4 Situation: 00005         
+group=Priority  , type=Factor      , pos=0006, line=000, column=006, len=01, value=29, text=*
+{Situation: 00005         ,<Priority,Factor>        } -> Reduce  [  1] F                  
+
+TNodeCommand    type = CInt      ,   command = PushInt   , param = 006, mode = 000, type = CInt       -->> 00001
+Maker[Number,0], ret=1 n=[0,0],l=[2,1],t=[1,2],e=[0,0],b=[0,0],i=[0,0],s=[0,0]
+>4 Situation: 00005         
+{Situation: 00006         ,F                        } => Goto    Situation: 00003         
+<4 Situation: 00003         
+{Situation: 00003         ,<Priority,Factor>        } -> Reduce  [  1] T                  
+>4 Situation: 00003         
+{Situation: 00006         ,T                        } => Goto    Situation: 00013         
+<4 Situation: 00013         
+{Situation: 00013         ,<Priority,Factor>        } -> Shift   Situation: 00007         
+
+>> [1] -> [2] group=Priority  , type=Factor      , pos=0006, line=000, column=006, len=01, value=29, text=*
+<5 Situation: 00007         
+group=Separator , type=LeftBracket , pos=0008, line=000, column=008, len=01, value=55, text=(
+{Situation: 00007         ,<Separator,LeftBracket>  } -> Shift   Situation: 00004         
+
+>> [2] -> [2] group=Separator , type=LeftBracket , pos=0008, line=000, column=008, len=01, value=55, text=(
+<6 Situation: 00004         
+group=Integer   , type=00          , pos=0009, line=000, column=009, len=01, value=7, text=7
+{Situation: 00004         ,<Integer>                } -> Shift   Situation: 00012         
+
+>> [2] -> [3] group=Integer   , type=00          , pos=0009, line=000, column=009, len=01, value=7, text=7
+<7 Situation: 00012         
+group=Priority  , type=Term        , pos=0011, line=000, column=011, len=01, value=33, text=+
+{Situation: 00012         ,<Priority,Term>          } -> Reduce  [  1] F                  
+
+TNodeCommand    type = CInt      ,   command = PushInt   , param = 007, mode = 000, type = CInt       -->> 00002
+Maker[Number,0], ret=1 n=[0,0],l=[3,2],t=[2,3],e=[0,0],b=[0,0],i=[0,0],s=[0,0]
+>7 Situation: 00012         
+{Situation: 00004         ,F                        } => Goto    Situation: 00010         
+<7 Situation: 00010         
+{Situation: 00010         ,<Priority,Term>          } -> Reduce  [  1] T                  
+>7 Situation: 00010         
+{Situation: 00004         ,T                        } => Goto    Situation: 00009         
+<7 Situation: 00009         
+{Situation: 00009         ,<Priority,Term>          } -> Reduce  [  1] E                  
+>7 Situation: 00009         
+{Situation: 00004         ,E                        } => Goto    Situation: 00008         
+<7 Situation: 00008         
+{Situation: 00008         ,<Priority,Term>          } -> Shift   Situation: 00016         
+
+>> [2] -> [3] group=Priority  , type=Term        , pos=0011, line=000, column=011, len=01, value=33, text=+
+<8 Situation: 00016         
+group=Integer   , type=00          , pos=0013, line=000, column=013, len=01, value=8, text=8
+{Situation: 00016         ,<Integer>                } -> Shift   Situation: 00012         
+
+>> [3] -> [4] group=Integer   , type=00          , pos=0013, line=000, column=013, len=01, value=8, text=8
+<9 Situation: 00012         
+group=Separator , type=RightBracket, pos=0014, line=000, column=014, len=01, value=56, text=)
+{Situation: 00012         ,<Separator,RightBracket> } -> Reduce  [  1] F                  
+
+TNodeCommand    type = CInt      ,   command = PushInt   , param = 008, mode = 000, type = CInt       -->> 00003
+Maker[Number,0], ret=1 n=[0,0],l=[4,3],t=[3,4],e=[0,0],b=[0,0],i=[0,0],s=[0,0]
+>9 Situation: 00012         
+{Situation: 00016         ,F                        } => Goto    Situation: 00010         
+<9 Situation: 00010         
+{Situation: 00010         ,<Separator,RightBracket> } -> Reduce  [  1] T                  
+>9 Situation: 00010         
+{Situation: 00016         ,T                        } => Goto    Situation: 00019         
+<9 Situation: 00019         
+{Situation: 00019         ,<Separator,RightBracket> } -> Reduce  [  0] E                  
+
+TNodeCommand    type = CInt      ,   command = Oper      , oper  = Add           , mode = 000, type = CInt       -->> 00004
+Maker[Binary,0], ret=1 n=[0,0],l=[3,2],t=[4,3],e=[0,0],b=[0,0],i=[0,0],s=[0,0]
+>9 Situation: 00019         >8 Situation: 00016         >7 Situation: 00008         
+{Situation: 00004         ,E                        } => Goto    Situation: 00008         
+<7 Situation: 00008         
+{Situation: 00008         ,<Separator,RightBracket> } -> Shift   Situation: 00015         
+
+>> [2] -> [2] group=Separator , type=RightBracket, pos=0014, line=000, column=014, len=01, value=56, text=)
+<8 Situation: 00015         
+group=Eof       , type=00          , pos=0015, line=000, column=015, len=00
+{Situation: 00015         ,Eof                      } -> Reduce  [  0] F                  
+>8 Situation: 00015         >7 Situation: 00008         >6 Situation: 00004         
+{Situation: 00007         ,F                        } => Goto    Situation: 00014         
+<6 Situation: 00014         
+{Situation: 00014         ,Eof                      } -> Reduce  [  0] T                  
+
+TNodeCommand    type = CInt      ,   command = Oper      , oper  = Multi         , mode = 000, type = CInt       -->> 00005
+Maker[Binary,0], ret=1 n=[0,0],l=[2,1],t=[3,2],e=[0,0],b=[0,0],i=[0,0],s=[0,0]
+>6 Situation: 00014         >5 Situation: 00007         >4 Situation: 00013         
+{Situation: 00006         ,T                        } => Goto    Situation: 00013         
+<4 Situation: 00013         
+{Situation: 00013         ,Eof                      } -> Reduce  [  0] E                  
+
+TNodeCommand    type = CInt      ,   command = Oper      , oper  = Add           , mode = 000, type = CInt       -->> 00006
+Maker[Binary,0], ret=1 n=[0,0],l=[1,0],t=[2,1],e=[0,0],b=[0,0],i=[0,0],s=[0,0]
+>4 Situation: 00013         >3 Situation: 00006         >2 Situation: 00001         
+{Situation: 00000         ,E                        } => Goto    Situation: 00001         
+<2 Situation: 00001         
+{Situation: 00001         ,Eof                      } -> Accept  
+
+level=9, step=24
+--- semantic_tree = 0, syntax_tree = 0, lexemes = 0 ----
+
+store_parse=0, restore_parse=0, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+true
+group=Eof       , type=00          , pos=0015, line=000, column=015, len=00
+
+time: 0.006s

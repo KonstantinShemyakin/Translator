@@ -1,0 +1,14 @@
+S_       ::= S
+
+S        ::= A        B
+
+A        ::= Ident
+
+B        ::=  C        D
+         |   Ident    E
+
+C        ::= Ident    Integer
+
+D        ::= Integer  Integer
+
+E        ::= Integer  Integer  Ident

@@ -1,0 +1,26 @@
+TranGrammar.exe
+0
+4FF8
+ETFtest.cpp
+..\ETF\ETF_LL_LL1.tab
+
+3 + 6 * (7 + 8)
+
+--- M table --- <15> ---
+
+--- Grammar --- formula=6, produce=9, item=15, maker=0, used=0, vector=0, type=050000 ---
+group=Integer   , type=00          , pos=0000, line=000, column=000, len=01, value=3, text=3
+
+*00001* {S_                       ,<Integer>                }
+*00001* S_                       , ret=-1
+level=1, step=1
+--- semantic_tree = 0, syntax_tree = 0, lexemes = 0 ----
+
+store_parse=0, restore_parse=0, store_syntax=0, restore_syntax=0
+trunc_node=0, trunc_lexeme=0, trunc_snode=0
+trunc_type=0
+
+false
+group=Oper      , type=Add         , pos=0002, line=000, column=002, len=01, value=33, text=+
+
+time: 0.001s

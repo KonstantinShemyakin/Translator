@@ -1,0 +1,1355 @@
+
+TNodeStatements type = Void      , 
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=000, column=005, len=04, value=0, text=f011
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=000, column=014, len=03, value=65555, text=int
+        TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=018, len=01, text=i
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          TNodeExpressions type = CInt      , 
+            TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=000, column=019, len=01, value=37, text==
+              TNodeCast       type = RInt      , 
+                TNodeVar        type = Int       ,   group=Ident     , type=00          , line=000, column=018, len=01, text=i
+                  TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=018, len=01, text=i
+              TNodeExpressions type = CInt      , 
+                TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=000, column=020, len=01, value=0, text=0 part=256  part=16 
+          alloc=Local  , offset=00
+        TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=022, len=01, text=j
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          TNodeExpressions type = CInt      , 
+            TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=000, column=023, len=01, value=37, text==
+              TNodeCast       type = RInt      , 
+                TNodeVar        type = Int       ,   group=Ident     , type=00          , line=000, column=022, len=01, text=j
+                  TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=022, len=01, text=j
+              TNodeCast       type = CInt      , 
+                TNodeExpressions type = Int       , 
+                  TNodeVar        type = Int       ,   group=Ident     , type=00          , line=000, column=024, len=01, text=i
+                    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=018, len=01, text=i part=256  part=16 
+          alloc=Local  , offset=01
+      T_NodeList      type = CInt      , 
+        TNodeUserLabel  type = Void      ,   group=Syntax    , type=Label       , line=000, column=027, len=02, value=4, text=L1          go_to=00 (2,2)
+        TNodeExpressions type = CInt      , 
+          TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=000, column=031, len=01, value=37, text==
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=000, column=030, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=018, len=01, text=i
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=000, column=032, len=02, value=12, text=12 part=16 
+      TNodeStatements type = Void      , 
+        TNodeStatements type = Void      , 
+          TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=000, column=038, len=03, value=65555, text=int
+            TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=042, len=01, text=k
+              TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+              alloc=Local  , offset=02
+          TNodeUserGoTo   type = Unknown   ,   group=Ident     , type=00          , line=000, column=050, len=03, text=L15 (2,2) (3,0) (4,1)
+          T_NodeList      type = Unknown   , 
+            TNodeUserLabel  type = Void      ,   group=Syntax    , type=Label       , line=000, column=055, len=03, value=7, text=L15              go_to=00 (2,2) (3,0) (4,1)
+            TNodeUserGoTo   type = Unknown   ,   group=Ident     , type=00          , line=000, column=065, len=02, text=L2 (2,2) (3,0) (4,1) number=4, size=1 number=3, size=0
+      TNodeStatements type = Void      , 
+        TNodeStatements type = Void      , 
+          TNodeStatements type = Void      , 
+            TNodeStatements type = Void      , 
+              TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=000, column=074, len=03, value=65555, text=int
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=000, column=078, len=03, text=jjj
+                  TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+                  alloc=Local  , offset=02
+              T_NodeList      type = Unknown   , 
+                TNodeUserLabel  type = Void      ,   group=Syntax    , type=Label       , line=000, column=083, len=02, value=8, text=L2                  go_to=00 (2,2) (5,0) (6,0) (7,0) (8,1)
+                TNodeNull       type = Unknown   ,  number=8, size=1 number=7, size=0 number=6, size=0 number=5, size=0 number=2, size=2 number=1, size=0
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=001, column=005, len=04, value=10, text=f000
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=003, column=003, len=01, value=55, text=(
+        TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=003, column=004, len=03, value=65555, text=int
+          TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=003, column=008, len=01, text=i
+            TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+            alloc=Local  , offset=00
+        TNodeNull       type = Unknown   , 
+        TNodeNull       type = Unknown   , 
+        TNodeNull       type = Unknown   ,  number=11, size=1
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=004, column=003, len=01, value=55, text=(
+        TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=004, column=004, len=03, value=65555, text=int
+          TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=004, column=008, len=01, text=i
+            TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+            alloc=Local  , offset=00
+        TNodeNull       type = Unknown   , 
+        TNodeNull       type = Unknown   , 
+        TNodeExpressions type = CInt      , 
+          TNodeBinary     type = CInt      ,   group=Oper      , type=AddAssign   , line=004, column=013, len=02, value=15, text=+=
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=004, column=012, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=004, column=008, len=01, text=i
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=004, column=015, len=01, value=2, text=2 part=16  number=12, size=1
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=005, column=003, len=01, value=55, text=(
+        TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=005, column=004, len=03, value=65555, text=int
+          TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=005, column=008, len=01, text=i
+            TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+            alloc=Local  , offset=00
+        TNodeNull       type = Unknown   , 
+        TNodeExpressions type = CInt      , 
+          TNodeUnary      type = CInt      ,   group=Oper      , type=PostInc     , line=005, column=012, len=02, value=51, text=++
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=005, column=011, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=005, column=008, len=01, text=i part=16 
+        TNodeNull       type = Unknown   ,  number=13, size=1
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=006, column=003, len=01, value=55, text=(
+        TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=006, column=004, len=03, value=65555, text=int
+          TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=006, column=008, len=01, text=i
+            TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+            alloc=Local  , offset=00
+        TNodeNull       type = Unknown   , 
+        TNodeExpressions type = CInt      , 
+          TNodeUnary      type = CInt      ,   group=Oper      , type=PostInc     , line=006, column=012, len=02, value=51, text=++
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=006, column=011, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=006, column=008, len=01, text=i part=16 
+        TNodeExpressions type = CInt      , 
+          TNodeBinary     type = CInt      ,   group=Oper      , type=AddAssign   , line=006, column=016, len=02, value=15, text=+=
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=006, column=015, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=006, column=008, len=01, text=i
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=006, column=018, len=01, value=2, text=2 part=16  number=14, size=1
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=007, column=003, len=01, value=55, text=(
+        TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=007, column=004, len=03, value=65555, text=int
+          TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=007, column=008, len=01, text=i
+            TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+            alloc=Local  , offset=00
+        TNodeExpressions type = CInt      , 
+          TNodeBinary     type = CInt      ,   group=Oper      , type=LT          , line=007, column=011, len=01, value=43, text=<
+            TNodeCast       type = CInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=007, column=010, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=007, column=008, len=01, text=i
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=007, column=012, len=01, value=5, text=5 part=241 
+        TNodeNull       type = Unknown   , 
+        TNodeNull       type = Unknown   ,  number=15, size=1
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=008, column=003, len=01, value=55, text=(
+        TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=008, column=004, len=03, value=65555, text=int
+          TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=008, column=008, len=01, text=i
+            TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+            alloc=Local  , offset=00
+        TNodeExpressions type = CInt      , 
+          TNodeBinary     type = CInt      ,   group=Oper      , type=LT          , line=008, column=011, len=01, value=43, text=<
+            TNodeCast       type = CInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=008, column=010, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=008, column=008, len=01, text=i
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=008, column=012, len=01, value=5, text=5 part=241 
+        TNodeNull       type = Unknown   , 
+        TNodeExpressions type = CInt      , 
+          TNodeBinary     type = CInt      ,   group=Oper      , type=AddAssign   , line=008, column=016, len=02, value=15, text=+=
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=008, column=015, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=008, column=008, len=01, text=i
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=008, column=018, len=01, value=2, text=2 part=16  number=16, size=1
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=009, column=003, len=01, value=55, text=(
+        TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=009, column=004, len=03, value=65555, text=int
+          TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=009, column=008, len=01, text=i
+            TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+            alloc=Local  , offset=00
+        TNodeExpressions type = CInt      , 
+          TNodeBinary     type = CInt      ,   group=Oper      , type=LT          , line=009, column=011, len=01, value=43, text=<
+            TNodeCast       type = CInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=009, column=010, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=009, column=008, len=01, text=i
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=009, column=012, len=01, value=5, text=5 part=241 
+        TNodeExpressions type = CInt      , 
+          TNodeUnary      type = CInt      ,   group=Oper      , type=PostInc     , line=009, column=015, len=02, value=51, text=++
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=009, column=014, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=009, column=008, len=01, text=i part=16 
+        TNodeNull       type = Unknown   ,  number=17, size=1
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=010, column=003, len=01, value=55, text=(
+        TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=010, column=004, len=03, value=65555, text=int
+          TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=010, column=008, len=01, text=i
+            TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+            alloc=Local  , offset=00
+        TNodeExpressions type = CInt      , 
+          TNodeBinary     type = CInt      ,   group=Oper      , type=LT          , line=010, column=011, len=01, value=43, text=<
+            TNodeCast       type = CInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=010, column=010, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=010, column=008, len=01, text=i
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=010, column=012, len=01, value=5, text=5 part=241 
+        TNodeExpressions type = CInt      , 
+          TNodeUnary      type = CInt      ,   group=Oper      , type=PostInc     , line=010, column=015, len=02, value=51, text=++
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=010, column=014, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=010, column=008, len=01, text=i part=16 
+        TNodeExpressions type = CInt      , 
+          TNodeBinary     type = CInt      ,   group=Oper      , type=AddAssign   , line=010, column=019, len=02, value=15, text=+=
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=010, column=018, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=010, column=008, len=01, text=i
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=010, column=021, len=01, value=2, text=2 part=16  number=18, size=1 number=10, size=0 number=9, size=0
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=013, column=000, len=03, value=65555, text=int
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=013, column=005, len=01, text=i
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      alloc=Global , offset=00
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=013, column=008, len=01, text=j
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=013, column=009, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=013, column=008, len=01, text=j
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=013, column=008, len=01, text=j
+          TNodeExpressions type = CInt      , 
+            TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=013, column=011, len=01, value=37, text==
+              TNodeCast       type = RInt      , 
+                TNodeVar        type = Int       ,   group=Ident     , type=00          , line=013, column=010, len=01, text=i
+                  TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=013, column=005, len=01, text=i
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=013, column=012, len=02, value=12, text=12 part=256  part=16 
+      alloc=Global , offset=01
+    TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=013, column=016, len=03, value=13, text=arr
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      T_NodeList      type = CInt      , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=013, column=020, len=01, value=3, text=3
+      alloc=Global , offset=02
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=013, column=028, len=04, value=15, text=ffff
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=013, column=039, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=013, column=037, len=01, text=i
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=013, column=005, len=01, text=i
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=013, column=041, len=01, value=5, text=5 part=16 
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=SubAssign   , line=013, column=045, len=02, value=16, text=-=
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=013, column=044, len=01, text=j
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=013, column=008, len=01, text=j
+          TNodeUnary      type = CInt      ,   group=Oper      , type=PostInc     , line=013, column=048, len=02, value=51, text=++
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=013, column=047, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=013, column=005, len=01, text=i part=16 
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=013, column=058, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeIndex      type = Int       ,   group=Syntax    , type=IdentArr    , line=013, column=052, len=03, value=13, text=arr
+              TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=013, column=016, len=03, value=13, text=arr
+              T_NodeList      type = CInt      ,   group=Syntax    , type=IdentArr    , line=013, column=052, len=03, value=13, text=arr
+                TNodeExpressions type = CInt      , 
+                  TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=013, column=056, len=01, value=0, text=0 part=256 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=013, column=059, len=01, value=2, text=2 part=16 
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=013, column=068, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeIndex      type = Int       ,   group=Syntax    , type=IdentArr    , line=013, column=062, len=03, value=13, text=arr
+              TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=013, column=016, len=03, value=13, text=arr
+              T_NodeList      type = CInt      ,   group=Syntax    , type=IdentArr    , line=013, column=062, len=03, value=13, text=arr
+                TNodeExpressions type = CInt      , 
+                  TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=013, column=066, len=01, value=1, text=1 part=256 
+          TNodeUnary      type = CInt      ,   group=Oper      , type=PostInc     , line=013, column=075, len=02, value=51, text=++
+            TNodeCast       type = RInt      , 
+              TNodeIndex      type = Int       ,   group=Syntax    , type=IdentArr    , line=013, column=069, len=03, value=13, text=arr
+                TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=013, column=016, len=03, value=13, text=arr
+                T_NodeList      type = CInt      ,   group=Syntax    , type=IdentArr    , line=013, column=069, len=03, value=13, text=arr
+                  TNodeExpressions type = CInt      , 
+                    TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=013, column=073, len=01, value=0, text=0 part=256  part=16 
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=013, column=085, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeIndex      type = Int       ,   group=Syntax    , type=IdentArr    , line=013, column=079, len=03, value=13, text=arr
+              TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=013, column=016, len=03, value=13, text=arr
+              T_NodeList      type = CInt      ,   group=Syntax    , type=IdentArr    , line=013, column=079, len=03, value=13, text=arr
+                TNodeExpressions type = CInt      , 
+                  TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=013, column=083, len=01, value=2, text=2 part=256 
+          TNodeBinary     type = CInt      ,   group=Oper      , type=Add         , line=013, column=092, len=01, value=33, text=+
+            TNodeCast       type = CInt      , 
+              TNodeIndex      type = Int       ,   group=Syntax    , type=IdentArr    , line=013, column=086, len=03, value=13, text=arr
+                TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=013, column=016, len=03, value=13, text=arr
+                T_NodeList      type = CInt      ,   group=Syntax    , type=IdentArr    , line=013, column=086, len=03, value=13, text=arr
+                  TNodeExpressions type = CInt      , 
+                    TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=013, column=090, len=01, value=0, text=0 part=256 
+            TNodeCast       type = CInt      , 
+              TNodeIndex      type = Int       ,   group=Syntax    , type=IdentArr    , line=013, column=093, len=03, value=13, text=arr
+                TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=013, column=016, len=03, value=13, text=arr
+                T_NodeList      type = CInt      ,   group=Syntax    , type=IdentArr    , line=013, column=093, len=03, value=13, text=arr
+                  TNodeExpressions type = CInt      , 
+                    TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=013, column=097, len=01, value=1, text=1 part=256  part=16  number=20, size=0 number=19, size=0
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=014, column=000, len=03, value=65555, text=int
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=014, column=005, len=02, text=i0
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      alloc=Global , offset=03
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=014, column=008, len=02, text=j0
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      alloc=Global , offset=04
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=014, column=011, len=02, text=k0
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=014, column=013, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=014, column=011, len=02, text=k0
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=014, column=011, len=02, text=k0
+          TNodeExpressions type = CInt      , 
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=014, column=014, len=01, value=1, text=1 part=256  part=16 
+      alloc=Global , offset=05
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=014, column=022, len=04, value=20, text=f001
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=014, column=034, len=01, value=55, text=(
+        TNodeNull       type = Unknown   , 
+        TNodeNull       type = Unknown   , 
+        TNodeNull       type = Unknown   , 
+        TNodeNull       type = Unknown   ,  number=23, size=0 number=22, size=0 number=21, size=0
+  TNodeNull       type = Unknown   , 
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefArr      , line=015, column=000, len=03, value=65555, text=int
+    TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=015, column=005, len=04, value=21, text=a000
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      T_NodeList      type = CInt      , 
+        TNodeCommand    type = CInt      ,           command = PushInt   , param = 003, mode = 000, type = CInt      
+      T_NodeList      type = CInt      , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=015, column=013, len=02, value=10, text=10
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=015, column=016, len=02, value=11, text=11
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=015, column=019, len=02, value=12, text=12
+      alloc=Global , offset=06
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefArr      , line=015, column=024, len=03, value=65555, text=int
+    TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=015, column=028, len=04, value=24, text=b000
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      T_NodeList      type = CInt      , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=015, column=033, len=01, value=2, text=2
+      T_NodeList      type = Int       , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=015, column=037, len=02, value=20, text=20
+        TNodeIndex      type = Int       ,   group=Syntax    , type=IdentArr    , line=015, column=040, len=04, value=21, text=a000
+          TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=015, column=005, len=04, value=21, text=a000
+          T_NodeList      type = CInt      ,   group=Syntax    , type=IdentArr    , line=015, column=040, len=04, value=21, text=a000
+            TNodeExpressions type = CInt      , 
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=015, column=045, len=01, value=1, text=1 part=256 
+      alloc=Global , offset=07
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefArr      , line=016, column=000, len=03, value=65555, text=int
+    TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=016, column=005, len=04, value=26, text=a001
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      T_NodeList      type = CInt      , 
+        TNodeCommand    type = CInt      ,           command = PushInt   , param = 003, mode = 000, type = CInt      
+      T_NodeList      type = CInt      , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=016, column=013, len=02, value=10, text=10
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=016, column=016, len=02, value=11, text=11
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=016, column=019, len=02, value=12, text=12
+      alloc=Global , offset=08
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=016, column=024, len=03, value=65555, text=int
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=016, column=028, len=04, text=i002
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=016, column=032, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=016, column=028, len=04, text=i002
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=016, column=028, len=04, text=i002
+          TNodeExpressions type = CInt      , 
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=016, column=033, len=01, value=0, text=0 part=256  part=16 
+      alloc=Global , offset=09
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=016, column=036, len=04, text=j002
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      alloc=Global , offset=10
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=017, column=000, len=03, value=65555, text=int
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=017, column=005, len=04, text=i003
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=017, column=010, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=017, column=005, len=04, text=i003
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=017, column=005, len=04, text=i003
+          TNodeExpressions type = CInt      , 
+            TNodeBinary     type = CInt      ,   group=Oper      , type=Add         , line=017, column=015, len=01, value=33, text=+
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=017, column=012, len=02, value=12, text=12
+              TNodeBinary     type = CInt      ,   group=Oper      , type=Multi       , line=017, column=019, len=01, value=29, text=*
+                TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=017, column=017, len=01, value=5, text=5
+                TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=017, column=021, len=01, value=6, text=6 part=256  part=16 
+      alloc=Global , offset=11
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=017, column=024, len=04, text=j003
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=017, column=029, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=017, column=024, len=04, text=j003
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=017, column=024, len=04, text=j003
+          TNodeExpressions type = CInt      , 
+            TNodeUnary      type = CInt      ,   group=Oper      , type=UnaryAdd    , line=017, column=031, len=01, value=49, text=+
+              TNodeUnary      type = CInt      ,   group=Oper      , type=PostInc     , line=017, column=036, len=02, value=51, text=++
+                TNodeCast       type = RInt      , 
+                  TNodeVar        type = Int       ,   group=Ident     , type=00          , line=017, column=032, len=04, text=i003
+                    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=017, column=005, len=04, text=i003 part=256  part=16 
+      alloc=Global , offset=12
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=017, column=045, len=04, value=32, text=f003
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=017, column=058, len=01, value=55, text=(
+        TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=017, column=059, len=03, value=65555, text=int
+          TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=017, column=063, len=01, text=i
+            TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+            TNodeExpressions type = CInt      , 
+              TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=017, column=064, len=01, value=37, text==
+                TNodeCast       type = RInt      , 
+                  TNodeVar        type = Int       ,   group=Ident     , type=00          , line=017, column=063, len=01, text=i
+                    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=017, column=063, len=01, text=i
+                TNodeExpressions type = CInt      , 
+                  TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=017, column=065, len=01, value=0, text=0 part=256  part=16 
+            alloc=Local  , offset=00
+        TNodeExpressions type = CInt      , 
+          TNodeBinary     type = CInt      ,   group=Oper      , type=LT          , line=017, column=069, len=01, value=43, text=<
+            TNodeCast       type = CInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=017, column=068, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=017, column=063, len=01, text=i
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=017, column=070, len=01, value=4, text=4 part=241 
+        TNodeExpressions type = CInt      , 
+          TNodeUnary      type = CInt      ,   group=Oper      , type=PostInc     , line=017, column=073, len=02, value=51, text=++
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=017, column=072, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=017, column=063, len=01, text=i part=16 
+        TNodeStatements type = Void      , 
+          TNodeStatements type = Void      , 
+            TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=017, column=079, len=03, value=65555, text=int
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=017, column=083, len=01, text=j
+                TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+                alloc=Local  , offset=01
+            TNodeExpressions type = Void      , 
+              TNodeCall       type = Void      ,   group=Syntax    , type=IdentFunc   , line=017, column=086, len=04, value=32, text=f003
+                TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=017, column=045, len=04, value=32, text=f003
+                T_NodeList      type = Unknown   ,   group=Syntax    , type=IdentFunc   , line=017, column=086, len=04, value=32, text=f003 part=16 
+            TNodeBreak      type = Unknown   ,   group=Separator , type=Semicolon   , line=017, column=099, len=01, value=62, text=;
+            TNodeContinue   type = Unknown   ,   group=Separator , type=Semicolon   , line=017, column=109, len=01, value=62, text=; number=28, size=1 number=27, size=0 number=26, size=1 number=25, size=0 number=24, size=0
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=018, column=005, len=04, value=34, text=f004
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeExpressions type = CInt      , 
+        TNodeUnary      type = CInt      ,   group=Oper      , type=PostInc     , line=018, column=020, len=02, value=51, text=++
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=018, column=019, len=01, text=i
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=018, column=014, len=01, text=i part=16  number=30, size=0
+    TNodeDefine     type = Unknown   , 
+      TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=018, column=014, len=01, text=i
+        TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+        alloc=Param  , offset=00 number=29, size=1
+  TNodeNull       type = Unknown   , 
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=018, column=032, len=07, value=35, text=main004
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeExpressions type = Void      , 
+        TNodeCall       type = Void      ,   group=Syntax    , type=IdentFunc   , line=018, column=044, len=04, value=34, text=f004
+          TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=018, column=005, len=04, value=34, text=f004
+          TNodeExpressions type = Int       , 
+            TNodeCast       type = Int       , 
+              TNodeNumber     type = CDouble   ,   group=Number    , type=00          , line=018, column=049, len=03, number=5.000000, text=5.0 part=512  part=16  number=32, size=0 number=31, size=0
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=019, column=000, len=03, value=65555, text=int
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=019, column=005, len=01, text=g
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=019, column=007, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=019, column=005, len=01, text=g
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=019, column=005, len=01, text=g
+          TNodeExpressions type = CInt      , 
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=019, column=009, len=02, value=99, text=99 part=256  part=16 
+      alloc=Global , offset=13
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=019, column=018, len=01, value=39, text=u
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void number=33, size=0
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=019, column=028, len=04, value=40, text=f005
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeDefine     type = Int       ,   group=Syntax    , type=DefArr      , line=019, column=037, len=03, value=65555, text=int
+        TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=019, column=041, len=01, value=41, text=a
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          T_NodeList      type = CInt      , 
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=019, column=043, len=01, value=5, text=5
+          alloc=Local  , offset=00
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=019, column=052, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeIndex      type = Int       ,   group=Syntax    , type=IdentArr    , line=019, column=047, len=01, value=41, text=a
+              TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=019, column=041, len=01, value=41, text=a
+              T_NodeList      type = CInt      ,   group=Syntax    , type=IdentArr    , line=019, column=047, len=01, value=41, text=a
+                TNodeExpressions type = CInt      , 
+                  TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=019, column=049, len=01, value=1, text=1 part=256 
+          TNodeCast       type = CInt      , 
+            TNodeNumber     type = CDouble   ,   group=Number    , type=00          , line=019, column=054, len=03, number=1.200000, text=1.2 part=16  number=35, size=1 number=34, size=0
+  TNodeNull       type = Unknown   , 
+  TNodeDefFunc    type = Int       ,   group=Syntax    , type=IdentFunc   , line=019, column=066, len=01, value=43, text=f
+    TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+    TNodeStatements type = Void      , 
+      TNodeReturn     type = Unknown   ,   group=Integer   , type=00          , line=019, column=079, len=02, value=12, text=12
+        TNodeCast       type = Int       , 
+          TNodeExpressions type = CInt      , 
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=019, column=079, len=02, value=12, text=12 part=256  number=37, size=0 number=36, size=0
+  TNodeNull       type = Unknown   , 
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=019, column=091, len=07, value=44, text=main005
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeExpressions type = Void      , 
+        TNodeCall       type = Void      ,   group=Syntax    , type=IdentFunc   , line=019, column=103, len=04, value=40, text=f005
+          TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=019, column=028, len=04, value=40, text=f005
+          T_NodeList      type = Unknown   ,   group=Syntax    , type=IdentFunc   , line=019, column=103, len=04, value=40, text=f005 part=16 
+      TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=019, column=111, len=03, value=65555, text=int
+        TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=019, column=115, len=01, text=i
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          alloc=Local  , offset=00
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=019, column=120, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=019, column=118, len=01, text=i
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=019, column=115, len=01, text=i
+          TNodeBinary     type = CInt      ,   group=Oper      , type=Add         , line=019, column=124, len=01, value=33, text=+
+            TNodeCast       type = CInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=019, column=122, len=01, text=g
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=019, column=005, len=01, text=g
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=019, column=126, len=02, value=13, text=13 part=16  number=39, size=1 number=38, size=0
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=020, column=000, len=03, value=65555, text=int
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=020, column=005, len=01, text=k
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      alloc=Global , offset=14
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=020, column=013, len=01, value=43, text=f
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeIf         type = Unknown   , 
+        TNodeExpressions type = CInt      , 
+          TNodeUnary      type = CInt      ,   group=Oper      , type=Not         , line=020, column=042, len=01, value=39, text=!
+            TNodeCast       type = CInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=020, column=043, len=01, text=j
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=020, column=026, len=01, text=j part=241 
+        TNodeExpressions type = CInt      , 
+          TNodeUnary      type = CInt      ,   group=Oper      , type=PostInc     , line=020, column=047, len=02, value=51, text=++
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=020, column=046, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=020, column=019, len=01, text=i part=16 
+        TNodeExpressions type = CInt      , 
+          TNodeUnary      type = CInt      ,   group=Oper      , type=PostDec     , line=020, column=057, len=02, value=52, text=--
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=020, column=056, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=020, column=019, len=01, text=i part=16  number=42, size=0
+      TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=020, column=061, len=03, value=65555, text=int
+        TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=020, column=065, len=01, text=q
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          alloc=Local  , offset=00
+        TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=020, column=067, len=01, text=r
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          alloc=Local  , offset=01
+        TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=020, column=069, len=01, text=w
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          alloc=Local  , offset=02
+        TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=020, column=071, len=01, text=z
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          alloc=Local  , offset=03 number=41, size=4
+    TNodeDefine     type = Unknown   , 
+      TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=020, column=019, len=01, text=i
+        TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+        alloc=Param  , offset=00
+      TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=020, column=026, len=01, text=j
+        TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+        alloc=Param  , offset=01
+      TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=020, column=033, len=01, text=t
+        TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+        alloc=Param  , offset=02 number=40, size=3
+  TNodeNull       type = Unknown   , 
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=020, column=082, len=07, value=51, text=main006
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeExpressions type = Void      , 
+        TNodeCall       type = Void      ,   group=Syntax    , type=IdentFunc   , line=020, column=094, len=01, value=43, text=f
+          TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=020, column=013, len=01, value=43, text=f
+          TNodeExpressions type = Int       , 
+            TNodeCast       type = Int       , 
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=020, column=096, len=01, value=5, text=5
+            TNodeCast       type = Int       , 
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=020, column=098, len=01, value=1, text=1
+            TNodeCast       type = Int       , 
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=020, column=100, len=01, value=6, text=6 part=512  part=16 
+      TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=020, column=104, len=03, value=65555, text=int
+        TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=020, column=108, len=01, text=w
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          alloc=Local  , offset=00 number=44, size=1 number=43, size=0
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=021, column=005, len=04, value=52, text=f007
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeReturn     type = Unknown   ,   group=Separator , type=Semicolon   , line=021, column=020, len=01, value=62, text=;
+      TNodeReturn     type = Unknown   ,   group=Integer   , type=00          , line=021, column=029, len=03, value=123, text=123
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=021, column=029, len=03, value=123, text=123 part=256  number=46, size=0 number=45, size=0
+  TNodeDefFunc    type = Int       ,   group=Syntax    , type=IdentFunc   , line=021, column=040, len=01, value=48, text=r
+    TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+    TNodeStatements type = Void      , 
+      TNodeReturn     type = Unknown   ,   group=Number    , type=00          , line=021, column=053, len=03, number=1.200000, text=1.2
+        TNodeCast       type = Int       , 
+          TNodeExpressions type = CDouble   , 
+            TNodeNumber     type = CDouble   ,   group=Number    , type=00          , line=021, column=053, len=03, number=1.200000, text=1.2 part=256 
+      TNodeReturn     type = Unknown   ,   group=Separator , type=Semicolon   , line=021, column=064, len=01, value=62, text=; number=48, size=0 number=47, size=0
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=022, column=005, len=04, value=54, text=f008
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeIf         type = Unknown   , 
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=022, column=018, len=02, value=12, text=12 part=241 
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=022, column=022, len=02, value=13, text=13 part=16 
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=022, column=031, len=02, value=14, text=14 part=16  number=51, size=0
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=022, column=038, len=01, value=55, text=(
+        TNodeNull       type = Unknown   , 
+        TNodeNull       type = Unknown   , 
+        TNodeNull       type = Unknown   , 
+        TNodeNull       type = Unknown   ,  number=52, size=0
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=022, column=048, len=01, value=55, text=(
+        TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=022, column=049, len=03, value=65555, text=int
+          TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=022, column=053, len=01, text=i
+            TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+            TNodeExpressions type = CInt      , 
+              TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=022, column=054, len=01, value=37, text==
+                TNodeCast       type = RInt      , 
+                  TNodeVar        type = Int       ,   group=Ident     , type=00          , line=022, column=053, len=01, text=i
+                    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=022, column=053, len=01, text=i
+                TNodeExpressions type = CInt      , 
+                  TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=022, column=055, len=01, value=0, text=0 part=256  part=16 
+            alloc=Local  , offset=00
+        TNodeExpressions type = CInt      , 
+          TNodeBinary     type = CInt      ,   group=Oper      , type=LT          , line=022, column=059, len=01, value=43, text=<
+            TNodeCast       type = CInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=022, column=058, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=022, column=053, len=01, text=i
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=022, column=060, len=01, value=4, text=4 part=241 
+        TNodeExpressions type = CInt      , 
+          TNodeUnary      type = CInt      ,   group=Oper      , type=PostInc     , line=022, column=064, len=02, value=51, text=++
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=022, column=063, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=022, column=053, len=01, text=i part=16 
+        TNodeStatements type = Void      ,  number=54, size=0 number=53, size=1 number=50, size=0 number=49, size=0
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=023, column=005, len=04, value=56, text=f009
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=023, column=017, len=01, value=55, text=(
+        TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=023, column=018, len=03, value=65555, text=int
+          TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=023, column=022, len=01, text=i
+            TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+            alloc=Local  , offset=00
+        TNodeCast       type = CInt      , 
+          TNodeExpressions type = Int       , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=023, column=024, len=01, text=i
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=023, column=022, len=01, text=i part=241 
+        TNodeNull       type = Unknown   , 
+        TNodeStatements type = Void      , 
+          TNodeStatements type = Void      , 
+            TNodeExpressions type = CInt      , 
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=023, column=030, len=02, value=25, text=25 part=16 
+            TNodeBreak      type = Unknown   ,   group=Separator , type=Semicolon   , line=023, column=039, len=01, value=62, text=; number=59, size=0 number=58, size=0 number=57, size=1 number=56, size=0 number=55, size=0
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=024, column=005, len=04, value=58, text=f010
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=024, column=014, len=03, value=65555, text=int
+        TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=024, column=018, len=01, text=i
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          TNodeExpressions type = CInt      , 
+            TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=024, column=019, len=01, value=37, text==
+              TNodeCast       type = RInt      , 
+                TNodeVar        type = Int       ,   group=Ident     , type=00          , line=024, column=018, len=01, text=i
+                  TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=024, column=018, len=01, text=i
+              TNodeExpressions type = CInt      , 
+                TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=024, column=020, len=01, value=0, text=0 part=256  part=16 
+          alloc=Local  , offset=00
+        TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=024, column=022, len=01, text=j
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          TNodeExpressions type = CInt      , 
+            TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=024, column=023, len=01, value=37, text==
+              TNodeCast       type = RInt      , 
+                TNodeVar        type = Int       ,   group=Ident     , type=00          , line=024, column=022, len=01, text=j
+                  TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=024, column=022, len=01, text=j
+              TNodeCast       type = CInt      , 
+                TNodeExpressions type = Int       , 
+                  TNodeVar        type = Int       ,   group=Ident     , type=00          , line=024, column=024, len=01, text=i
+                    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=024, column=018, len=01, text=i part=256  part=16 
+          alloc=Local  , offset=01
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=024, column=028, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=024, column=027, len=01, text=i
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=024, column=018, len=01, text=i
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=024, column=029, len=02, value=12, text=12 part=16 
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=024, column=036, len=01, value=55, text=(
+        TNodeNull       type = Unknown   , 
+        TNodeExpressions type = CInt      , 
+          TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=024, column=039, len=01, value=37, text==
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=024, column=038, len=01, text=j
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=024, column=022, len=01, text=j
+            TNodeCast       type = CInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=024, column=040, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=024, column=018, len=01, text=i part=241 
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=024, column=042, len=01, value=1, text=1
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=024, column=044, len=01, value=2, text=2
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=024, column=046, len=01, value=3, text=3 part=16 
+        TNodeStatements type = Void      ,  number=63, size=0 number=62, size=0
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=AddAssign   , line=024, column=052, len=02, value=15, text=+=
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=024, column=051, len=01, text=j
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=024, column=022, len=01, text=j
+          TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=024, column=055, len=01, value=37, text==
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=024, column=054, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=024, column=018, len=01, text=i
+            TNodeUnary      type = CInt      ,   group=Oper      , type=PostInc     , line=024, column=057, len=02, value=51, text=++
+              TNodeCast       type = RInt      , 
+                TNodeVar        type = Int       ,   group=Ident     , type=00          , line=024, column=056, len=01, text=i
+                  TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=024, column=018, len=01, text=i part=16  number=61, size=2 number=60, size=0
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=025, column=005, len=04, value=59, text=r011
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeReturn     type = Unknown   ,   group=Separator , type=Semicolon   , line=025, column=020, len=01, value=62, text=; number=65, size=0 number=64, size=0
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=025, column=029, len=04, value=0, text=f011
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=025, column=038, len=03, value=65555, text=int
+        TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=025, column=042, len=01, text=i
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          TNodeExpressions type = CInt      , 
+            TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=025, column=043, len=01, value=37, text==
+              TNodeCast       type = RInt      , 
+                TNodeVar        type = Int       ,   group=Ident     , type=00          , line=025, column=042, len=01, text=i
+                  TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=025, column=042, len=01, text=i
+              TNodeExpressions type = CInt      , 
+                TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=025, column=044, len=01, value=0, text=0 part=256  part=16 
+          alloc=Local  , offset=00
+        TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=025, column=046, len=01, text=j
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          TNodeExpressions type = CInt      , 
+            TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=025, column=047, len=01, value=37, text==
+              TNodeCast       type = RInt      , 
+                TNodeVar        type = Int       ,   group=Ident     , type=00          , line=025, column=046, len=01, text=j
+                  TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=025, column=046, len=01, text=j
+              TNodeCast       type = CInt      , 
+                TNodeExpressions type = Int       , 
+                  TNodeVar        type = Int       ,   group=Ident     , type=00          , line=025, column=048, len=01, text=i
+                    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=025, column=042, len=01, text=i part=256  part=16 
+          alloc=Local  , offset=01
+      T_NodeList      type = CInt      , 
+        TNodeUserLabel  type = Void      ,   group=Syntax    , type=Label       , line=025, column=051, len=02, value=4, text=L1          go_to=00 (67,2)
+        TNodeExpressions type = CInt      , 
+          TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=025, column=055, len=01, value=37, text==
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=025, column=054, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=025, column=042, len=01, text=i
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=025, column=056, len=02, value=12, text=12 part=16 
+      TNodeStatements type = Void      , 
+        TNodeStatements type = Void      , 
+          TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=025, column=062, len=03, value=65555, text=int
+            TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=025, column=066, len=01, text=k
+              TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+              alloc=Local  , offset=02
+          TNodeUserGoTo   type = Unknown   ,   group=Ident     , type=00          , line=025, column=074, len=03, text=L15 (67,2) (68,0) (69,1)
+          T_NodeList      type = Unknown   , 
+            TNodeUserLabel  type = Void      ,   group=Syntax    , type=Label       , line=025, column=079, len=03, value=7, text=L15              go_to=00 (67,2) (68,0) (69,1)
+            TNodeUserGoTo   type = Unknown   ,   group=Ident     , type=00          , line=025, column=089, len=02, text=L2 (67,2) (68,0) (69,1) number=69, size=1 number=68, size=0
+      TNodeStatements type = Void      , 
+        TNodeStatements type = Void      , 
+          TNodeStatements type = Void      , 
+            TNodeStatements type = Void      , 
+              TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=025, column=098, len=03, value=65555, text=int
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=025, column=102, len=03, text=jjj
+                  TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+                  alloc=Local  , offset=02
+              T_NodeList      type = Unknown   , 
+                TNodeUserLabel  type = Void      ,   group=Syntax    , type=Label       , line=025, column=107, len=02, value=8, text=L2                  go_to=00 (67,2) (70,0) (71,0) (72,0) (73,1)
+                TNodeNull       type = Unknown   ,  number=73, size=1 number=72, size=0 number=71, size=0 number=70, size=0 number=67, size=2 number=66, size=0
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=026, column=000, len=03, value=65555, text=int
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=026, column=005, len=04, text=i012
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=026, column=009, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=026, column=005, len=04, text=i012
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=026, column=005, len=04, text=i012
+          TNodeCast       type = CInt      , 
+            TNodeExpressions type = Int       , 
+              TNodePrimary    type = Int       , 
+                TNodeExpressions type = Int       , 
+                  TNodeCast       type = Int       ,   group=Syntax    , type=Cast        , line=026, column=011, len=03, value=65555, text=int
+                    TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+                    TNodePrimary    type = CInt      , 
+                      TNodeExpressions type = CInt      , 
+                        TNodeCast       type = CInt      ,   group=Syntax    , type=CastUnary   , line=026, column=022, len=03, value=196627, text=int
+                          TNodeType       type = CInt      ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+                          TNodeNumber     type = CDouble   ,   group=Number    , type=00          , line=026, column=026, len=04, number=12.200000, text=12.2 part=0  part=0  part=256  part=16 
+      alloc=Global , offset=15
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=027, column=005, len=04, value=62, text=f013
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=027, column=014, len=03, value=65555, text=int
+        TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=027, column=018, len=01, text=i
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          alloc=Local  , offset=00
+      T_NodeList      type = Int       , 
+        TNodeUserLabel  type = Void      ,   group=Syntax    , type=Label       , line=027, column=021, len=02, value=4, text=L1          go_to=00 (75,1)
+        T_NodeList      type = Int       , 
+          TNodeUserLabel  type = Void      ,   group=Syntax    , type=Label       , line=027, column=025, len=02, value=8, text=L2            go_to=01 (75,1)
+          TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=027, column=029, len=03, value=65555, text=int
+            TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=027, column=033, len=01, text=g
+              TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+              alloc=Local  , offset=01
+      TNodeUserGoTo   type = Unknown   ,   group=Ident     , type=00          , line=027, column=041, len=02, text=L2
+        TNodeUserLabel  type = Void      ,   group=Syntax    , type=Label       , line=027, column=025, len=02, value=8, text=L2          go_to=01 (75,1) (75,2)
+      T_NodeList      type = Unknown   , 
+        TNodeUserLabel  type = Void      ,   group=Syntax    , type=Label       , line=027, column=045, len=02, value=63, text=L3          go_to=00 (75,2)
+        T_NodeList      type = Unknown   , 
+          TNodeUserLabel  type = Void      ,   group=Syntax    , type=Label       , line=027, column=049, len=02, value=64, text=L4            go_to=00 (75,2)
+          TNodeNull       type = Unknown   ,  number=75, size=2 number=74, size=0
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=028, column=005, len=04, value=65, text=r014
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeExpressions type = CInt      , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=026, len=01, value=1, text=1 part=16 
+      TNodeExpressions type = CInt      , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=028, len=01, value=2, text=2 part=16 
+      TNodeExpressions type = CInt      , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=030, len=01, value=3, text=3 part=16 
+      TNodeExpressions type = CInt      , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=033, len=01, value=4, text=4
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=035, len=01, value=5, text=5
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=037, len=01, value=6, text=6 part=16 
+      TNodeExpressions type = Void      , 
+        TNodeCall       type = Void      ,   group=Syntax    , type=IdentFunc   , line=028, column=040, len=04, value=65, text=r014
+          TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=028, column=005, len=04, value=65, text=r014
+          TNodeExpressions type = Int       , 
+            TNodeCast       type = Int       , 
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=045, len=01, value=7, text=7
+            TNodeCast       type = Int       , 
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=047, len=01, value=8, text=8 part=512  part=16 
+      TNodeIf         type = Unknown   , 
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=055, len=01, value=9, text=9
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=057, len=02, value=10, text=10 part=241 
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=061, len=02, value=11, text=11 part=16 
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=070, len=02, value=12, text=12 part=16  number=78, size=0
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=028, column=078, len=01, value=55, text=(
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=079, len=02, value=21, text=21
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=082, len=02, value=22, text=22 part=16 
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=085, len=02, value=23, text=23
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=088, len=02, value=24, text=24 part=241 
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=091, len=02, value=25, text=25
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=028, column=094, len=02, value=26, text=26 part=16 
+        TNodeStatements type = Void      ,  number=80, size=0 number=79, size=0 number=77, size=0
+    TNodeDefine     type = Unknown   , 
+      TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=028, column=014, len=01, text=i
+        TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+        alloc=Param  , offset=00
+      TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=028, column=021, len=01, text=j
+        TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+        alloc=Param  , offset=01 number=76, size=2
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=029, column=005, len=04, value=74, text=f015
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeExpressions type = Void      , 
+        TNodeCall       type = Void      ,   group=Syntax    , type=IdentFunc   , line=029, column=026, len=04, value=65, text=r014
+          TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=028, column=005, len=04, value=65, text=r014
+          TNodeExpressions type = Int       , 
+            TNodeCast       type = Int       , 
+              TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=029, column=032, len=01, value=37, text==
+                TNodeCast       type = RInt      , 
+                  TNodeVar        type = Int       ,   group=Ident     , type=00          , line=029, column=031, len=01, text=i
+                    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=029, column=014, len=01, text=i
+                TNodeBinary     type = CInt      ,   group=Oper      , type=Sub         , line=029, column=034, len=01, value=35, text=-
+                  TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=029, column=033, len=01, value=7, text=7
+                  TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=029, column=035, len=01, value=6, text=6
+            TNodeCast       type = Int       , 
+              TNodeBinary     type = CInt      ,   group=Oper      , type=Add         , line=029, column=038, len=01, value=33, text=+
+                TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=029, column=037, len=01, value=8, text=8
+                TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=029, column=039, len=01, value=9, text=9 part=512  part=16 
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=029, column=044, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=029, column=043, len=01, text=i
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=029, column=014, len=01, text=i
+          TNodeBinary     type = CInt      ,   group=Oper      , type=Sub         , line=029, column=046, len=01, value=35, text=-
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=029, column=045, len=01, value=7, text=7
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=029, column=047, len=01, value=6, text=6 part=16  number=82, size=0
+    TNodeDefine     type = Unknown   , 
+      TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=029, column=014, len=01, text=i
+        TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+        alloc=Param  , offset=00
+      TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=029, column=021, len=01, text=j
+        TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+        alloc=Param  , offset=01 number=81, size=2
+  TNodeDefFunc    type = Int       ,   group=Syntax    , type=IdentFunc   , line=030, column=005, len=04, value=75, text=f016
+    TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+    TNodeStatements type = Void      , 
+      TNodeIf         type = Unknown   , 
+        TNodeExpressions type = CInt      , 
+          TNodeCast       type = CInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=030, column=030, len=01, text=i
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=030, column=014, len=01, text=i part=241 
+        TNodeReturn     type = Unknown   ,   group=Number    , type=00          , line=030, column=040, len=03, number=2.100000, text=2.1
+          TNodeCast       type = Int       , 
+            TNodeExpressions type = CDouble   , 
+              TNodeNumber     type = CDouble   ,   group=Number    , type=00          , line=030, column=040, len=03, number=2.100000, text=2.1 part=256 
+        TNodeStatements type = Void      , 
+          TNodeStatements type = Void      , 
+            TNodeExpressions type = CInt      , 
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=030, column=052, len=02, value=13, text=13 part=16 
+            TNodeReturn     type = Unknown   ,   group=Integer   , type=00          , line=030, column=063, len=01, value=2, text=2
+              TNodeCast       type = Int       , 
+                TNodeExpressions type = CInt      , 
+                  TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=030, column=063, len=01, value=2, text=2 part=256  number=87, size=0 number=86, size=0 number=85, size=0 number=84, size=0
+    TNodeDefine     type = Unknown   , 
+      TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=030, column=014, len=01, text=i
+        TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+        alloc=Param  , offset=00
+      TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=030, column=021, len=01, text=j
+        TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+        alloc=Param  , offset=01 number=83, size=2
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=031, column=000, len=03, value=65555, text=int
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=031, column=005, len=04, text=j016
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=031, column=010, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=031, column=005, len=04, text=j016
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=031, column=005, len=04, text=j016
+          TNodeExpressions type = CInt      , 
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=031, column=012, len=01, value=5, text=5 part=256  part=16 
+      alloc=Global , offset=16
+    TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=031, column=015, len=04, value=78, text=a016
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      T_NodeList      type = CInt      , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=031, column=020, len=01, value=3, text=3
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=031, column=023, len=01, value=4, text=4
+      alloc=Global , offset=17
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=031, column=027, len=03, value=65555, text=int
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=031, column=031, len=04, text=i016
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=031, column=036, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=031, column=031, len=04, text=i016
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=031, column=031, len=04, text=i016
+          TNodeCast       type = CInt      , 
+            TNodeExpressions type = Int       , 
+              TNodeIndex      type = Int       ,   group=Syntax    , type=IdentArr    , line=031, column=038, len=04, value=78, text=a016
+                TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=031, column=015, len=04, value=78, text=a016
+                T_NodeList      type = CInt      ,   group=Syntax    , type=IdentArr    , line=031, column=038, len=04, value=78, text=a016
+                  TNodeExpressions type = CInt      , 
+                    TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=031, column=043, len=01, value=2, text=2 part=256 
+                  TNodeExpressions type = CInt      , 
+                    TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=031, column=046, len=01, value=3, text=3 part=256  part=256  part=16 
+      alloc=Global , offset=18
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=032, column=000, len=03, value=65555, text=int
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=032, column=005, len=04, text=i017
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=032, column=010, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=032, column=005, len=04, text=i017
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=032, column=005, len=04, text=i017
+          TNodeCast       type = CInt      , 
+            TNodeExpressions type = CDouble   , 
+              TNodeTrio       type = CDouble   ,   group=Oper      , type=Question    , line=032, column=014, len=01, value=48, text=?
+                TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=032, column=012, len=01, value=5, text=5
+                TNodeExpressions type = CDouble   , 
+                  TNodeNumber     type = CDouble   ,   group=Number    , type=00          , line=032, column=016, len=03, number=6.300000, text=6.3 part=256 
+                TNodeCast       type = CDouble   , 
+                  TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=032, column=022, len=01, value=7, text=7 part=256  part=16 
+      alloc=Global , offset=19
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=033, column=005, len=04, value=82, text=f017
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeIf         type = Unknown   , 
+        TNodeExpressions type = CInt      , 
+          TNodeLogical    type = CInt      ,   group=Oper      , type=AndAnd      , line=033, column=045, len=02, value=25, text=&&
+            TNodeLogical    type = CInt      ,   group=Oper      , type=AndAnd      , line=033, column=030, len=02, value=25, text=&&
+              TNodePrimary    type = CInt      , 
+                TNodeExpressions type = CInt      , 
+                  TNodeLogical    type = CInt      ,   group=Oper      , type=OrOr        , line=033, column=022, len=02, value=23, text=||
+                    TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=033, column=019, len=02, value=11, text=11
+                    TNodeCast       type = CInt      , 
+                      TNodeNumber     type = CDouble   ,   group=Number    , type=00          , line=033, column=025, len=03, number=1.200000, text=1.2 part=0 
+              TNodePrimary    type = CInt      , 
+                TNodeExpressions type = CInt      , 
+                  TNodeLogical    type = CInt      ,   group=Oper      , type=OrOr        , line=033, column=037, len=02, value=23, text=||
+                    TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=033, column=034, len=02, value=13, text=13
+                    TNodeUnary      type = CInt      ,   group=Oper      , type=Not         , line=033, column=040, len=01, value=39, text=!
+                      TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=033, column=041, len=02, value=21, text=21 part=0 
+            TNodeUnary      type = CInt      ,   group=Oper      , type=Not         , line=033, column=048, len=01, value=39, text=!
+              TNodePrimary    type = CInt      , 
+                TNodeExpressions type = CInt      , 
+                  TNodeLogical    type = CInt      ,   group=Oper      , type=OrOr        , line=033, column=053, len=02, value=23, text=||
+                    TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=033, column=050, len=02, value=22, text=22
+                    TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=033, column=056, len=02, value=23, text=23 part=0  part=241 
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=033, column=061, len=02, value=31, text=31 part=16 
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=033, column=070, len=02, value=32, text=32 part=16  number=90, size=0 number=89, size=0 number=88, size=0
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=034, column=005, len=04, value=85, text=f018
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeIf         type = Unknown   , 
+        TNodeExpressions type = CInt      , 
+          TNodeUnary      type = CInt      ,   group=Oper      , type=Not         , line=034, column=018, len=01, value=39, text=!
+            TNodePrimary    type = CInt      , 
+              TNodeExpressions type = CInt      , 
+                TNodeLogical    type = CInt      ,   group=Oper      , type=OrOr        , line=034, column=023, len=02, value=23, text=||
+                  TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=034, column=020, len=02, value=11, text=11
+                  TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=034, column=026, len=02, value=12, text=12 part=0  part=241 
+        TNodeExpressions type = CInt      , 
+          TNodeBinary     type = CInt      ,   group=Oper      , type=Add         , line=034, column=032, len=01, value=33, text=+
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=034, column=031, len=01, value=2, text=2
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=034, column=033, len=01, value=1, text=1 part=16 
+        TNodeExpressions type = CInt      , 
+          TNodeBinary     type = CInt      ,   group=Oper      , type=Sub         , line=034, column=042, len=01, value=35, text=-
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=034, column=041, len=01, value=3, text=3
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=034, column=043, len=01, value=1, text=1 part=16  number=93, size=0 number=92, size=0 number=91, size=0
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=035, column=005, len=04, value=86, text=f019
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=035, column=014, len=03, value=65555, text=int
+        TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=035, column=018, len=01, text=i
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          TNodeExpressions type = CInt      , 
+            TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=035, column=020, len=01, value=37, text==
+              TNodeCast       type = RInt      , 
+                TNodeVar        type = Int       ,   group=Ident     , type=00          , line=035, column=018, len=01, text=i
+                  TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=035, column=018, len=01, text=i
+              TNodeExpressions type = CInt      , 
+                TNodePrimary    type = CInt      , 
+                  TNodeExpressions type = CInt      , 
+                    TNodeLogical    type = CInt      ,   group=Oper      , type=OrOr        , line=035, column=026, len=02, value=23, text=||
+                      TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=035, column=023, len=02, value=11, text=11
+                      TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=035, column=029, len=02, value=12, text=12 part=0  part=256  part=16 
+          alloc=Local  , offset=00 number=95, size=1 number=94, size=0
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=036, column=005, len=04, value=87, text=f020
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=036, column=018, len=01, value=55, text=(
+        TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=036, column=019, len=03, value=65555, text=int
+          TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=036, column=023, len=01, text=i
+            TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+            alloc=Local  , offset=00
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=036, column=025, len=02, value=33, text=33 part=241 
+        TNodeExpressions type = CInt      , 
+          TNodeUnary      type = CInt      ,   group=Oper      , type=PostInc     , line=036, column=029, len=02, value=51, text=++
+            TNodeCast       type = RInt      , 
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=036, column=028, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=036, column=023, len=01, text=i part=16 
+        TNodeStatements type = Void      , 
+          TNodeStatements type = Void      , 
+            TNodeContinue   type = Unknown   ,   group=Separator , type=Semicolon   , line=036, column=043, len=01, value=62, text=;
+            TNodeExpressions type = CInt      , 
+              TNodeUnary      type = CInt      ,   group=Oper      , type=PostDec     , line=036, column=046, len=02, value=52, text=--
+                TNodeCast       type = RInt      , 
+                  TNodeVar        type = Int       ,   group=Ident     , type=00          , line=036, column=045, len=01, text=i
+                    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=036, column=023, len=01, text=i part=16 
+            TNodeBreak      type = Unknown   ,   group=Separator , type=Semicolon   , line=036, column=055, len=01, value=62, text=;
+            TNodeExpressions type = CInt      , 
+              TNodeUnary      type = CInt      ,   group=Oper      , type=PostInc     , line=036, column=058, len=02, value=51, text=++
+                TNodeCast       type = RInt      , 
+                  TNodeVar        type = Int       ,   group=Ident     , type=00          , line=036, column=057, len=01, text=i
+                    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=036, column=023, len=01, text=i part=16  number=100, size=0 number=99, size=0 number=98, size=1 number=97, size=0 number=96, size=0
+  TNodeDefine     type = SCInt     ,   group=Syntax    , type=DefArr      , line=037, column=013, len=03, value=458771, text=int
+    TNodeDefArr     type = SCInt     ,   group=Syntax    , type=IdentArr    , line=037, column=017, len=01, value=89, text=A
+      TNodeType       type = SCInt     ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      T_NodeList      type = CInt      , 
+        TNodeCommand    type = CInt      ,           command = PushInt   , param = 002, mode = 000, type = CInt      
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=037, column=021, len=01, value=3, text=3
+      T_NodeList      type = CInt      , 
+        T_NodeList      type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=037, column=028, len=01, value=1, text=1
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=037, column=030, len=01, value=2, text=2
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=037, column=032, len=01, value=3, text=3
+        T_NodeList      type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=037, column=036, len=01, value=4, text=4
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=037, column=038, len=01, value=5, text=5
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=037, column=040, len=01, value=6, text=6
+      alloc=Global , offset=20
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefArr      , line=037, column=045, len=03, value=65555, text=int
+    TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=037, column=049, len=01, value=41, text=a
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      T_NodeList      type = CInt      , 
+        TNodeCommand    type = CInt      ,           command = PushInt   , param = -01, mode = 000, type = CInt      
+      alloc=Global , offset=21
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=037, column=054, len=01, text=i
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      alloc=Global , offset=22
+    TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=037, column=057, len=01, value=90, text=b
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      T_NodeList      type = CInt      , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=037, column=059, len=01, value=7, text=7
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=037, column=062, len=01, value=8, text=8
+      alloc=Global , offset=23
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=038, column=005, len=04, value=91, text=f021
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      ,  number=102, size=0 number=101, size=0
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=039, column=005, len=04, value=92, text=F022
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeExpressions type = Int       , 
+        TNodeCall       type = Int       ,   group=Syntax    , type=IdentFunc   , line=039, column=014, len=01, value=43, text=f
+          TNodeDefFunc    type = Int       ,   group=Syntax    , type=IdentFunc   , line=019, column=066, len=01, value=43, text=f
+          T_NodeList      type = Unknown   ,   group=Syntax    , type=IdentFunc   , line=039, column=014, len=01, value=43, text=f part=16  number=104, size=0 number=103, size=0
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=040, column=005, len=07, value=93, text=main023
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeExpressions type = Int       , 
+        TNodeCall       type = Int       ,   group=Syntax    , type=IdentFunc   , line=040, column=017, len=01, value=43, text=f
+          TNodeDefFunc    type = Int       ,   group=Syntax    , type=IdentFunc   , line=019, column=066, len=01, value=43, text=f
+          T_NodeList      type = Unknown   ,   group=Syntax    , type=IdentFunc   , line=040, column=017, len=01, value=43, text=f part=16 
+      TNodeExpressions type = Void      , 
+        TNodeCall       type = Void      ,   group=Syntax    , type=IdentFunc   , line=040, column=022, len=04, value=10, text=f000
+          TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=001, column=005, len=04, value=10, text=f000
+          T_NodeList      type = Unknown   ,   group=Syntax    , type=IdentFunc   , line=040, column=022, len=04, value=10, text=f000 part=16 
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=040, column=037, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeIndex      type = Int       ,   group=Syntax    , type=IdentArr    , line=040, column=030, len=01, value=41, text=a
+              TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=037, column=049, len=01, value=41, text=a
+              T_NodeList      type = CInt      ,   group=Syntax    , type=IdentArr    , line=040, column=030, len=01, value=41, text=a
+                TNodeExpressions type = CInt      , 
+                  TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=040, column=032, len=01, value=2, text=2
+                  TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=040, column=034, len=01, value=1, text=1 part=256 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=040, column=039, len=02, value=12, text=12 part=16 
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=040, column=045, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=040, column=043, len=01, text=i
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=037, column=054, len=01, text=i
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=040, column=047, len=02, value=33, text=33 part=16 
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=040, column=053, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=040, column=051, len=01, text=i
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=037, column=054, len=01, text=i
+          TNodeCast       type = CInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=040, column=055, len=01, text=i
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=037, column=054, len=01, text=i part=16  number=106, size=0 number=105, size=0
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefArr      , line=041, column=000, len=03, value=65555, text=int
+    TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=041, column=005, len=04, value=94, text=a024
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      T_NodeList      type = CInt      , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=041, column=010, len=01, value=3, text=3
+      T_NodeList      type = CDouble   , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=041, column=017, len=02, value=11, text=11
+        TNodeNumber     type = CDouble   ,   group=Number    , type=00          , line=041, column=021, len=05, number=12.210000, text=12.21
+      alloc=Global , offset=24
+    TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=041, column=030, len=04, value=96, text=b024
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      T_NodeList      type = CInt      , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=041, column=035, len=01, value=2, text=2
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=041, column=038, len=01, value=3, text=3
+      T_NodeList      type = CInt      , 
+        T_NodeList      type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=041, column=046, len=02, value=21, text=21
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=041, column=050, len=02, value=22, text=22
+        T_NodeList      type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=041, column=058, len=02, value=31, text=31
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=041, column=062, len=02, value=32, text=32
+      alloc=Global , offset=25
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefArr      , line=042, column=000, len=03, value=65555, text=int
+    TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=042, column=005, len=04, value=97, text=a025
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      T_NodeList      type = CInt      , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=042, column=010, len=01, value=1, text=1
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=042, column=013, len=01, value=1, text=1
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=042, column=016, len=01, value=1, text=1
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=042, column=019, len=01, value=1, text=1
+      T_NodeList      type = CInt      , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=042, column=026, len=04, value=1111, text=1111
+      alloc=Global , offset=26
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefArr      , line=043, column=000, len=03, value=65555, text=int
+    TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=043, column=005, len=04, value=99, text=a026
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      T_NodeList      type = CInt      , 
+        TNodeCommand    type = CInt      ,           command = PushInt   , param = 003, mode = 000, type = CInt      
+      T_NodeList      type = CInt      , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=043, column=015, len=02, value=21, text=21
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=043, column=018, len=02, value=22, text=22
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=043, column=021, len=02, value=23, text=23
+      alloc=Global , offset=27
+  TNodeDefine     type = SCInt     ,   group=Syntax    , type=DefArr      , line=044, column=013, len=03, value=458771, text=int
+    TNodeDefArr     type = SCInt     ,   group=Syntax    , type=IdentArr    , line=044, column=017, len=04, value=100, text=A027
+      TNodeType       type = SCInt     ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      T_NodeList      type = CInt      , 
+        TNodeCommand    type = CInt      ,           command = PushInt   , param = 002, mode = 000, type = CInt      
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=044, column=024, len=01, value=3, text=3
+      T_NodeList      type = CInt      , 
+        T_NodeList      type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=044, column=031, len=01, value=1, text=1
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=044, column=033, len=01, value=2, text=2
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=044, column=035, len=01, value=3, text=3
+        T_NodeList      type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=044, column=039, len=01, value=4, text=4
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=044, column=041, len=01, value=5, text=5
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=044, column=043, len=01, value=6, text=6
+      alloc=Global , offset=28
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefArr      , line=045, column=000, len=03, value=65555, text=int
+    TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=045, column=005, len=04, value=101, text=A028
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      T_NodeList      type = CInt      , 
+        TNodeCommand    type = CInt      ,           command = PushInt   , param = 001, mode = 000, type = CInt      
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=045, column=012, len=01, value=3, text=3
+      T_NodeList      type = CInt      , 
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=045, column=018, len=01, value=1, text=1
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=045, column=020, len=01, value=2, text=2
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=045, column=022, len=01, value=3, text=3
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=045, column=024, len=01, value=4, text=4
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=045, column=026, len=01, value=5, text=5
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=045, column=028, len=01, value=6, text=6
+      alloc=Global , offset=29
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefArr      , line=046, column=000, len=03, value=65555, text=int
+    TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=046, column=005, len=04, value=102, text=A029
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      T_NodeList      type = CInt      , 
+        TNodeCommand    type = CInt      ,           command = PushInt   , param = 002, mode = 000, type = CInt      
+        TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=046, column=012, len=01, value=3, text=3
+      T_NodeList      type = CInt      , 
+        T_NodeList      type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=046, column=019, len=02, value=31, text=31
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=046, column=022, len=02, value=32, text=32
+        T_NodeList      type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=046, column=027, len=02, value=43, text=43
+      alloc=Global , offset=30
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=047, column=005, len=04, value=104, text=f030
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeIf         type = Unknown   , 
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=047, column=018, len=03, value=111, text=111 part=241 
+        TNodeExpressions type = CInt      , 
+          TNodeUnary      type = CInt      ,   group=Oper      , type=UnarySub    , line=047, column=023, len=01, value=50, text=-
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=047, column=024, len=02, value=22, text=22 part=16 
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=047, column=033, len=02, value=33, text=33 part=16  number=109, size=0
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=047, column=041, len=01, value=55, text=(
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=047, column=042, len=03, value=111, text=111 part=16 
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=047, column=046, len=01, value=0, text=0 part=241 
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=047, column=048, len=03, value=222, text=222 part=16 
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=047, column=052, len=03, value=333, text=333 part=16  number=110, size=0 number=108, size=0 number=107, size=0
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=048, column=005, len=04, value=108, text=f031
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeFor        type = Unknown   ,   group=Separator , type=LeftBracket , line=048, column=018, len=01, value=55, text=(
+        TNodeNull       type = Unknown   , 
+        TNodeNull       type = Unknown   , 
+        TNodeExpressions type = CInt      , 
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=048, column=021, len=03, value=222, text=222
+          TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=048, column=025, len=03, value=333, text=333 part=16 
+        TNodeNull       type = Unknown   ,  number=113, size=0 number=112, size=0 number=111, size=0
+  TNodeDefine     type = Int       ,   group=Syntax    , type=DefVar      , line=049, column=000, len=03, value=65555, text=int
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=049, column=005, len=04, text=a032
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=049, column=010, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=049, column=005, len=04, text=a032
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=049, column=005, len=04, text=a032
+          TNodeExpressions type = CInt      , 
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=049, column=012, len=01, value=2, text=2 part=256  part=16 
+      alloc=Global , offset=31
+    TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=049, column=015, len=04, text=b032
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      TNodeExpressions type = CInt      , 
+        TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=049, column=020, len=01, value=37, text==
+          TNodeCast       type = RInt      , 
+            TNodeVar        type = Int       ,   group=Ident     , type=00          , line=049, column=015, len=04, text=b032
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=049, column=015, len=04, text=b032
+          TNodeExpressions type = CInt      , 
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=049, column=022, len=01, value=3, text=3 part=256  part=16 
+      alloc=Global , offset=32
+    TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=049, column=025, len=04, value=111, text=A032
+      TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+      T_NodeList      type = CInt      , 
+        TNodeCast       type = CInt      , 
+          TNodeVar        type = Int       ,   group=Ident     , type=00          , line=049, column=030, len=04, text=a032
+            TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=049, column=005, len=04, text=a032
+        TNodeCast       type = CInt      , 
+          TNodeVar        type = Int       ,   group=Ident     , type=00          , line=049, column=036, len=04, text=b032
+            TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=049, column=015, len=04, text=b032
+      alloc=Global , offset=33
+  TNodeDefFunc    type = Void      ,   group=Syntax    , type=IdentFunc   , line=050, column=006, len=10, value=112, text=init_array
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeDefine     type = Int       ,   group=Syntax    , type=DefArr      , line=052, column=000, len=03, value=65555, text=int
+        TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=052, column=004, len=01, value=41, text=a
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          T_NodeList      type = CInt      , 
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=052, column=006, len=01, value=3, text=3
+          T_NodeList      type = Int       , 
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=052, column=013, len=01, value=1, text=1
+            TNodeIndex      type = Int       ,   group=Syntax    , type=IdentArr    , line=052, column=016, len=01, value=41, text=a
+              TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=052, column=004, len=01, value=41, text=a
+              T_NodeList      type = CInt      ,   group=Syntax    , type=IdentArr    , line=052, column=016, len=01, value=41, text=a
+                TNodeExpressions type = CInt      , 
+                  TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=052, column=018, len=01, value=2, text=2 part=256 
+          alloc=Local  , offset=00
+        TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=052, column=024, len=01, value=90, text=b
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          T_NodeList      type = CInt      , 
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=052, column=026, len=01, value=2, text=2
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=052, column=029, len=01, value=2, text=2
+          T_NodeList      type = Unknown   , 
+            T_NodeList      type = CInt      , 
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=052, column=036, len=01, value=1, text=1
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=052, column=038, len=01, value=2, text=2
+            T_NodeList      type = Unknown   , 
+          alloc=Local  , offset=01
+      TNodeDefine     type = SCInt     ,   group=Syntax    , type=DefArr      , line=053, column=013, len=03, value=458771, text=int
+        TNodeDefArr     type = SCInt     ,   group=Syntax    , type=IdentArr    , line=053, column=017, len=01, value=89, text=A
+          TNodeType       type = SCInt     ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          T_NodeList      type = CInt      , 
+            TNodeCommand    type = CInt      ,               command = PushInt   , param = 002, mode = 000, type = CInt      
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=053, column=021, len=01, value=3, text=3
+          T_NodeList      type = CInt      , 
+            T_NodeList      type = CInt      , 
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=053, column=028, len=01, value=1, text=1
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=053, column=030, len=01, value=2, text=2
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=053, column=032, len=01, value=3, text=3
+            T_NodeList      type = CInt      , 
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=053, column=036, len=01, value=4, text=4
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=053, column=038, len=01, value=5, text=5
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=053, column=040, len=01, value=6, text=6
+          alloc=Local  , offset=02
+      TNodeDefine     type = Int       ,   group=Syntax    , type=DefArr      , line=054, column=000, len=03, value=65555, text=int
+        TNodeDefArr     type = Int       ,   group=Syntax    , type=IdentArr    , line=054, column=004, len=02, value=113, text=b2
+          TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          T_NodeList      type = CInt      , 
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=054, column=007, len=01, value=3, text=3
+            TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=054, column=010, len=01, value=2, text=2
+          T_NodeList      type = CInt      , 
+            T_NodeList      type = CInt      , 
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=054, column=018, len=01, value=1, text=1
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=054, column=020, len=01, value=2, text=2
+            T_NodeList      type = CInt      , 
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=054, column=025, len=01, value=3, text=3
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=054, column=027, len=01, value=4, text=4
+            T_NodeList      type = CInt      , 
+              TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=054, column=032, len=01, value=5, text=5
+          alloc=Local  , offset=03 number=115, size=4 number=114, size=0
+  TNodeDefFunc    type = SVoid     ,   group=Syntax    , type=IdentFunc   , line=057, column=012, len=03, value=114, text=f_s
+    TNodeType       type = SVoid     ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeDefine     type = SCInt     ,   group=Syntax    , type=DefVar      , line=057, column=033, len=03, value=458771, text=int
+        TNodeDefVar     type = SCInt     ,   group=Ident     , type=00          , line=057, column=037, len=01, text=i
+          TNodeType       type = SCInt     ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          TNodeExpressions type = CInt      , 
+            TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=057, column=039, len=01, value=37, text==
+              TNodeCast       type = RInt      , 
+                TNodeVar        type = SCInt     ,   group=Ident     , type=00          , line=057, column=037, len=01, text=i
+                  TNodeDefVar     type = SCInt     ,   group=Ident     , type=00          , line=057, column=037, len=01, text=i
+              TNodeExpressions type = CInt      , 
+                TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=057, column=041, len=02, value=12, text=12 part=256  part=16 
+          alloc=Local  , offset=00
+        TNodeDefVar     type = SCInt     ,   group=Ident     , type=00          , line=057, column=045, len=01, text=k
+          TNodeType       type = SCInt     ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          alloc=Local  , offset=01
+      TNodeDefine     type = RInt      ,   group=Syntax    , type=DefVar      , line=057, column=048, len=03, value=589843, text=int
+        TNodeDefVar     type = RInt      ,   group=Ident     , type=00          , line=057, column=053, len=01, text=j
+          TNodeType       type = RInt      ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          TNodeExpressions type = CInt      , 
+            TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=057, column=055, len=01, value=37, text==
+              TNodeVar        type = RInt      ,   group=Ident     , type=00          , line=057, column=053, len=01, text=j
+                TNodeDefVar     type = RInt      ,   group=Ident     , type=00          , line=057, column=053, len=01, text=j
+              TNodeExpressions type = SCInt     , 
+                TNodeVar        type = SCInt     ,   group=Ident     , type=00          , line=057, column=057, len=01, text=i
+                  TNodeDefVar     type = SCInt     ,   group=Ident     , type=00          , line=057, column=037, len=01, text=i part=256  part=16 
+          alloc=Local  , offset=02
+        TNodeDefVar     type = RInt      ,   group=Ident     , type=00          , line=057, column=061, len=01, text=m
+          TNodeType       type = RInt      ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+          alloc=Local  , offset=03 number=117, size=4 number=116, size=0 number=0, size=34

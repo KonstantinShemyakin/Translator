@@ -1,0 +1,54 @@
+{Situation: 00000         ,E                        } -> Situation: 00001         
+{                         ,T                        } -> Situation: 00002         
+{                         ,F                        } -> Situation: 00003         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00004         
+{                         ,<Integer>                } -> Situation: 00005         
+{Situation: 00001         ,<Priority,Term>          } -> Situation: 00006         
+{Situation: 00002         ,<Priority,Factor>        } -> Situation: 00007         
+{Situation: 00004         ,E                        } -> Situation: 00008         
+{                         ,T                        } -> Situation: 00009         
+{                         ,F                        } -> Situation: 00010         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00011         
+{                         ,<Integer>                } -> Situation: 00012         
+{Situation: 00006         ,T                        } -> Situation: 00013         
+{                         ,F                        } -> Situation: 00003         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00004         
+{                         ,<Integer>                } -> Situation: 00005         
+{Situation: 00007         ,F                        } -> Situation: 00014         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00004         
+{                         ,<Integer>                } -> Situation: 00005         
+{Situation: 00008         ,<Separator,RightBracket> } -> Situation: 00015         
+{                         ,<Priority,Term>          } -> Situation: 00016         
+{Situation: 00009         ,<Priority,Factor>        } -> Situation: 00017         
+{Situation: 00011         ,E                        } -> Situation: 00018         
+{                         ,T                        } -> Situation: 00019         
+{                         ,F                        } -> Situation: 00020         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00021         
+{                         ,<Integer>                } -> Situation: 00022         
+{Situation: 00013         ,<Priority,Factor>        } -> Situation: 00007         
+{Situation: 00016         ,T                        } -> Situation: 00023         
+{                         ,F                        } -> Situation: 00010         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00011         
+{                         ,<Integer>                } -> Situation: 00012         
+{Situation: 00017         ,F                        } -> Situation: 00024         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00011         
+{                         ,<Integer>                } -> Situation: 00012         
+{Situation: 00018         ,<Separator,RightBracket> } -> Situation: 00025         
+{                         ,<Priority,Term>          } -> Situation: 00026         
+{Situation: 00019         ,<Priority,Factor>        } -> Situation: 00027         
+{Situation: 00021         ,E                        } -> Situation: 00028         
+{                         ,T                        } -> Situation: 00019         
+{                         ,F                        } -> Situation: 00020         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00021         
+{                         ,<Integer>                } -> Situation: 00022         
+{Situation: 00023         ,<Priority,Factor>        } -> Situation: 00017         
+{Situation: 00026         ,T                        } -> Situation: 00029         
+{                         ,F                        } -> Situation: 00020         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00021         
+{                         ,<Integer>                } -> Situation: 00022         
+{Situation: 00027         ,F                        } -> Situation: 00030         
+{                         ,<Separator,LeftBracket>  } -> Situation: 00021         
+{                         ,<Integer>                } -> Situation: 00022         
+{Situation: 00028         ,<Separator,RightBracket> } -> Situation: 00031         
+{                         ,<Priority,Term>          } -> Situation: 00026         
+{Situation: 00029         ,<Priority,Factor>        } -> Situation: 00027         

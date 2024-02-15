@@ -1,0 +1,60 @@
+
+--- Grammar --- formula=18, produce=39, item=154, maker=0, used=18, vector=0, type=000000 ---
+
+S_:                      used=1, mode=0000, 00000
+[  0] S_                 -> rules                    
+rules:                   used=1, mode=0000, 00001
+[  0] rules              -> rule                     _f_00002_                
+_f_00002_:               used=1, mode=8000, 00002
+[  0] _f_00002_          -> rule                     
+rule:                    used=2, mode=0000, 00003
+[  0] rule               -> <Space>                  <Separator,BNFSet>       item_list                
+item_list:               used=3, mode=0000, 00004
+[  0] item_list          -> item_symbol              _f_00005_                
+_f_00005_:               used=1, mode=8000, 00005
+[  0] _f_00005_          -> item_symbol              
+item_symbol:             used=2, mode=0000, 00006
+[  0] item_symbol        -> <Space>                  
+[  1] item_symbol        -> item                     
+item:                    used=1, mode=0000, 00007
+[  0] item               -> <Separator,LeftScrape>   or_list                  <Separator,RightScrape>  
+[  1] item               -> <Separator,LeftScrape>   or_list                  <Separator,RightScrape>  <Meta,Ellipsis>          
+[  2] item               -> <Separator,LeftCramp>    or_list                  <Separator,RightCramp>   
+[  3] item               -> _f_00008_                
+_f_00008_:               used=1, mode=2000, 00008
+[  0] _f_00008_          -> _f_00009_                
+[  1] _f_00008_          -> _f_00010_                
+[  2] _f_00008_          -> _f_00011_                
+_f_00009_:               used=1, mode=2000, 00009
+[  0] _f_00009_          -> <Meta,LeftMaker>         Ident_Maker              <Separator,LeftBracket>  <Ident>                  <Separator,Comma>        int_body                 <Separator,RightBracket> <Separator,Semicolon>    <Meta,RightMaker>        
+[  1] _f_00009_          -> <Meta,LeftMaker>         Ident_Maker              <Separator,LeftBracket>  <Ident>                  <Separator,RightBracket> <Separator,Semicolon>    <Meta,RightMaker>        
+_f_00010_:               used=1, mode=2000, 00010
+[  0] _f_00010_          -> <Meta,LeftMaker>         <Reserv,Node>            <Separator,LeftBracket>  <Ident>                  <Separator,Comma>        node_body                <Separator,Comma>        int_body                 <Separator,RightBracket> <Separator,Semicolon>    <Meta,RightMaker>        
+[  1] _f_00010_          -> <Meta,LeftMaker>         <Reserv,Node>            <Separator,LeftBracket>  <Ident>                  <Separator,Comma>        node_body                <Separator,RightBracket> <Separator,Semicolon>    <Meta,RightMaker>        
+_f_00011_:               used=1, mode=2000, 00011
+[  0] _f_00011_          -> <Meta,LeftMaker>         <Reserv,Turn>            <Separator,LeftBracket>  <Ident>                  <Separator,Comma>        <Ident>                  <Separator,Comma>        int_body                 <Separator,RightBracket> <Separator,Semicolon>    <Meta,RightMaker>        
+[  1] _f_00011_          -> <Meta,LeftMaker>         <Reserv,Turn>            <Separator,LeftBracket>  <Ident>                  <Separator,Comma>        <Ident>                  <Separator,RightBracket> <Separator,Semicolon>    <Meta,RightMaker>        _f_00012_                
+_f_00012_:               used=1, mode=2000, 00012
+[  0] _f_00012_          -> <Meta,LeftMaker>         <Reserv,Call>            <Separator,LeftBracket>  <Ident>                  <Separator,Comma>        int_body                 <Separator,Comma>        int_body                 <Separator,RightBracket> <Separator,Semicolon>    <Meta,RightMaker>        
+[  1] _f_00012_          -> <Meta,LeftMaker>         <Reserv,Call>            <Separator,LeftBracket>  <Ident>                  <Separator,Comma>        int_body                 <Separator,RightBracket> <Separator,Semicolon>    <Meta,RightMaker>        
+or_list:                 used=3, mode=0000, 00013
+[  0] or_list            -> item_list                _f_00014_                
+_f_00014_:               used=1, mode=8000, 00014
+[  0] _f_00014_          -> <Oper,Or>                item_list                
+Ident_Maker:             used=2, mode=0000, 00015
+[  0] Ident_Maker        -> <Reserv,All>             
+[  1] Ident_Maker        -> <Reserv,Make>            
+[  2] Ident_Maker        -> <Reserv,Code>            
+[  3] Ident_Maker        -> <Reserv,Tree>            
+[  4] Ident_Maker        -> <Reserv,Yacc>            
+node_body:               used=2, mode=0000, 00016
+[  0] node_body          -> <Separator,LeftBracket>  int_body                 <Separator,RightBracket> 
+[  1] node_body          -> <Separator,LeftBracket>  int_body                 <Separator,Comma>        int_body                 <Separator,RightBracket> 
+[  2] node_body          -> <Separator,LeftBracket>  int_body                 <Separator,Comma>        int_body                 <Separator,Comma>        int_body                 <Separator,RightBracket> 
+[  3] node_body          -> <Separator,LeftBracket>  int_body                 <Separator,Comma>        int_body                 <Separator,Comma>        int_body                 <Separator,Comma>        int_body                 <Separator,RightBracket> 
+[  4] node_body          -> <Separator,LeftBracket>  int_body                 <Separator,Comma>        int_body                 <Separator,Comma>        int_body                 <Separator,Comma>        int_body                 <Separator,Comma>        int_body                 <Separator,RightBracket> 
+int_body:                used=21, mode=0000, 00017
+[  0] int_body           -> <Integer>                
+[  1] int_body           -> <Ident>                  
+[  2] int_body           -> <Ident>                  <Separator,ColonColon>   <Ident>                  
+[  3] int_body           -> <Oper,Sub>               <Integer>                

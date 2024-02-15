@@ -1,0 +1,348 @@
+
+S_                       
+                         ::= Program                  
+                         
+Program                  
+                         ::= Defines                  
+                         
+DefParInit               
+                         ::= =                           Assign                   
+                         |   
+                         
+DefParVar                
+                         ::= Syntax_DefVar               Ident                       DefParInit               
+                         
+DefParArr                
+                         ::= Syntax_DefArr               Syntax_IdentArr             DefArrDA                    DefParInit               
+                         
+DefPar                   
+                         ::= DefParArr                
+                         |   DefParVar                
+                         
+DefParItem               
+                         ::= DefPar                   
+                         
+DefParList               
+                         ::= ,                           DefParItem                  DefParList               
+                         |   
+                         
+DefParams                
+                         ::= DefParItem                  DefParList               
+                         
+BodyFunc                 
+                         ::= ;                        
+                         |   Syntax_EmptyCramp        
+                         |   '{'                         StmExpr                     '}'                      
+                         
+DefFunc_                 
+                         ::= Syntax_EmptyBracket      
+                         |   (                           DefParams                   )                        
+                         
+DefFunc                  
+                         ::= Syntax_DefFunc              Syntax_IdentFunc            DefFunc_                    BodyFunc                 
+                         
+AInitialList             
+                         ::= ,                           AInitItem                   AInitialList             
+                         |   
+                         
+AInitial                 
+                         ::= AInitItem                   AInitialList             
+                         
+Initializer              
+                         ::= Syntax_EmptyCramp        
+                         |   '{'                         AInitial                    '}'                      
+                         
+AInitItem                
+                         ::= Initializer              
+                         |   Assign                   
+                         
+DefAInit                 
+                         ::= =                           Initializer              
+                         |   
+                         
+DRanges                  
+                         ::= [                           Assign                      ]                           DRanges                  
+                         |   
+                         
+DefArrD1A                
+                         ::= Syntax_EmptyScrape       
+                         |   [                           Assign                      ]                        
+                         
+DefArrDA                 
+                         ::= DefArrD1A                   DRanges                  
+                         
+DefArr                   
+                         ::= Syntax_IdentArr             DefArrDA                    DefAInit                 
+                         
+DefVarAssign             
+                         ::= =                           Assign                   
+                         
+DefVarInit               
+                         ::= DefVarAssign             
+                         |   
+                         
+DefVar                   
+                         ::= Ident                       DefVarInit               
+                         
+DefIAV                   
+                         ::= DefArr                   
+                         |   DefVar                   
+                         
+DefItem                  
+                         ::= Priority_And                DefIAV                   
+                         |   DefIAV                   
+                         
+DefType                  
+                         ::= Syntax_DefArr            
+                         |   Syntax_DefVar            
+                         
+DefineList               
+                         ::= ,                           DefItem                     DefineList               
+                         |   
+                         
+Define                   
+                         ::= DefType                     DefItem                     DefineList               
+                         
+ConditionDef             
+                         ::= Priority_And                DefVar                   
+                         |   DefVar                   
+                         
+Condition                
+                         ::= Syntax_DefVar               ConditionDef             
+                         |   ExpressionCondition      
+                         
+ExprList                 
+                         ::= ,                           Assign                      ExprList                 
+                         |   
+                         
+Expressions              
+                         ::= Assign                      ExprList                 
+                         
+PriorAssign              
+                         ::= Priority_Assign          
+                         
+AssignList               
+                         ::= PriorAssign                 Assign                   
+                         |   
+                         
+Assign                   
+                         ::= Question                    AssignList               
+                         
+QuestionList             
+                         ::= Priority_Question           ExpressionValue             :                           Question                 
+                         |   
+                         
+Question                 
+                         ::= OrOr                        QuestionList             
+                         
+OrOr                     
+                         ::= AndAnd                      OrOr_                    
+                         
+OrOr_                    
+                         ::= Priority_OrOr               AndAnd                      OrOr_                    
+                         |   
+                         
+AndAnd                   
+                         ::= Or                          AndAnd_                  
+                         
+AndAnd_                  
+                         ::= Priority_AndAnd             Or                          AndAnd_                  
+                         |   
+                         
+Or                       
+                         ::= XOr                         Or_                      
+                         
+Or_                      
+                         ::= Priority_Or                 XOr                         Or_                      
+                         |   
+                         
+XOr                      
+                         ::= And                         XOr_                     
+                         
+XOr_                     
+                         ::= Priority_XOr                And                         XOr_                     
+                         |   
+                         
+And                      
+                         ::= Equ                         And_                     
+                         
+And_                     
+                         ::= Priority_And                Equ                         And_                     
+                         |   
+                         
+Equ                      
+                         ::= Compare                     Equ_                     
+                         
+Equ_                     
+                         ::= Priority_Equ                Compare                     Equ_                     
+                         |   
+                         
+Compare                  
+                         ::= Shift                       Compare_                 
+                         
+Compare_                 
+                         ::= Priority_Compare            Shift                       Compare_                 
+                         |   
+                         
+Shift                    
+                         ::= Term                        Shift_                   
+                         
+Shift_                   
+                         ::= Priority_Shift              Term                        Shift_                   
+                         |   
+                         
+Term                     
+                         ::= Factor                      Term_                    
+                         
+Term_                    
+                         ::= Priority_Term               Factor                      Term_                    
+                         |   
+                         
+Factor                   
+                         ::= Unary                       Factor_                  
+                         
+Factor_                  
+                         ::= Priority_Factor             Unary                       Factor_                  
+                         |   
+                         
+UnaryIncDec              
+                         ::= Priority_IncDec          
+                         |   
+                         
+Unary                    
+                         ::= Priority_Unary              Unary                    
+                         |   Priority_Term               Unary                    
+                         |   Priority_IncDec             Unary                    
+                         |   Syntax_CastUnary            Unary                    
+                         |   PrimaryExpr                 UnaryIncDec              
+                         
+Primary                  
+                         ::= (                           ExpressionNone              )                        
+                         
+PrimaryExpr              
+                         ::= Integer                  
+                         |   Number                   
+                         |   Syntax_IdentArr             Ranges                   
+                         |   Syntax_IdentFunc            CallParams               
+                         |   Syntax_Cast                 Primary                  
+                         |   Ident                    
+                         |   Primary                  
+                         
+RangesList               
+                         ::= [                           ExpressionValue             ]                           RangesList               
+                         |   
+                         
+Ranges                   
+                         ::= RangesList               
+                         
+CallParams               
+                         ::= Syntax_EmptyBracket      
+                         |   (                           ExpressionValueList         )                        
+                         
+CompaundStmnt            
+                         ::= Syntax_EmptyCramp        
+                         |   '{'                         StmExpr                     '}'                      
+                         
+IfStmnt_                 
+                         ::= else                        DefExpr                  
+                         |   
+                         
+IfStmnt                  
+                         ::= if                          (                           Condition                   )                           DefExpr                     IfStmnt_                 
+                         
+ForPrefix                
+                         ::= ;                        
+                         |   DefineSemi               
+                         |   ExprSemi                 
+                         
+ForCondition             
+                         ::= ;                        
+                         |   Condition                   ;                        
+                         
+ForPosfix                
+                         ::= )                        
+                         |   ExpressionExpression        )                        
+                         
+ForStmnt                 
+                         ::= for                         (                           ForPrefix                   ForCondition                ForPosfix                   DefExpr                  
+                         
+DoStmnt                  
+                         ::= do                          DefExpr                     while                       (                           Condition                   )                           ;                        
+                         
+WhileStmnt               
+                         ::= while                       (                           Condition                   )                           DefExpr                  
+                         
+GoToStmnt                
+                         ::= goto                        Ident                       ;                        
+                         
+BreakStmnt               
+                         ::= break                       ;                        
+                         
+ContinueStmnt            
+                         ::= continue                    ;                        
+                         
+ReturnVal                
+                         ::= ExpressionValue          
+                         |   
+                         
+ReturnStmnt              
+                         ::= return                      ReturnVal                   ;                        
+                         
+Statement                
+                         ::= Syntax_Label                :                           DefExpr                  
+                         |   IfStmnt                  
+                         |   DoStmnt                  
+                         |   WhileStmnt               
+                         |   ForStmnt                 
+                         |   GoToStmnt                
+                         |   BreakStmnt               
+                         |   ContinueStmnt            
+                         |   ReturnStmnt              
+                         |   CompaundStmnt            
+                         
+DefineSemi               
+                         ::= Define                      ;                        
+                         
+ExprSemi                 
+                         ::= ExpressionExpression        ;                        
+                         
+DefExpr                  
+                         ::= ;                        
+                         |   DefineSemi               
+                         |   Statement                
+                         |   ExprSemi                 
+                         
+StmExprList              
+                         ::= DefExpr                     StmExprList              
+                         |   
+                         
+StmExpr                  
+                         ::= StmExprList              
+                         
+DefFAV                   
+                         ::= ;                        
+                         |   DefFunc                  
+                         |   DefineSemi               
+                         
+DefinesList              
+                         ::= DefFAV                      DefinesList              
+                         |   
+                         
+Defines                  
+                         ::= DefinesList              
+                         
+ExpressionExpression     
+                         ::= Expressions              
+                         
+ExpressionCondition      
+                         ::= Expressions              
+                         
+ExpressionNone           
+                         ::= Expressions              
+                         
+ExpressionValue          
+                         ::= Expressions              
+                         
+ExpressionValueList      
+                         ::= Expressions              
+                         

@@ -1,0 +1,11 @@
+
+S_                       
+                         : E                        
+                         ;
+E                        
+                         : E                           <Priority,Term>             E                           { MAKE(Binary); }        
+                         | E                           <Priority,Factor>           E                           { MAKE(Binary); }        
+                         | <Separator,LeftBracket>     E                           <Separator,RightBracket> 
+                         | <Integer>                   { MAKE(Number); }        
+//                         | <Number>                    { MAKE(Number); }        
+                         ;

@@ -1,0 +1,10 @@
+S_                       -> Eof                      
+Assign                   -> Eof                      
+_f_00002_                -> Eof                      
+E                        -> <Separator,RightBracket> <Priority,Assign>        Eof                      
+_f_00004_                -> <Separator,RightBracket> <Priority,Assign>        <Priority,Term>          Eof                      
+_f_00005_                -> <Separator,RightBracket> <Priority,Assign>        Eof                      
+T                        -> <Separator,RightBracket> <Priority,Assign>        <Priority,Term>          Eof                      
+_f_00007_                -> <Separator,RightBracket> <Priority,Assign>        <Priority,Term>          <Priority,Factor>        Eof                      
+_f_00008_                -> <Separator,RightBracket> <Priority,Assign>        <Priority,Term>          Eof                      
+F                        -> <Separator,RightBracket> <Priority,Assign>        <Priority,Term>          <Priority,Factor>        Eof                      

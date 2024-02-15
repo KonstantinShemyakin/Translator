@@ -1,0 +1,14 @@
+Cast       Oper           0 None           0 None           0, cast  = I___IR_       
+Binary     Oper           1 Oper           0 Integer        0, oper  = Assign        
+Cast       Oper           2 Oper           1 None           0, cast  = I___IR_       
+Binary     Oper           3 Oper           2 Integer        1, oper  = Assign        
+Cast       Oper           4 Oper           3 None           0, cast  = I___IR_       
+Cast       Oper           5 Oper           4 None           0, cast  = I___IC_       
+Cast       Oper           6 Oper           5 None           0, cast  = I___IC_       
+Binary     Oper           7 Oper           5 Oper           6, oper  = GT            
+Binary     Oper           8 Integer        1 Integer        2, oper  = Add           
+Cast       Oper           9 Oper           8 None           0, cast  = I___IC_       
+Cast       Oper          10 Oper           9 None           0, cast  = I___IC_       
+Binary     Oper          11 Oper          10 Integer        3, oper  = Multi         
+Binary     Oper          12 Oper           9 Oper          11, oper  = Add           
+Binary     Oper          13 Oper           4 Oper          12, oper  = Assign        

@@ -1,0 +1,20 @@
+TNodeDefFunc    line=003, column=005, len=01, text=f
+Label      Label          2                                                   
+Goto       Command        1 Label          1 Integer        2                 , goto  = Else          
+None      
+None      
+Goto       Command        4 Label          2                                  , goto  = GoTo          
+Label      Label          1                                                   
+
+Label          0 refer =     0     3
+Label          1 refer =     1     5
+Label          2 refer =     1     0
+
+Cast       Oper           0 Global         0                                  , cast  = I___IR_       , type = RInt      
+Binary     Oper           1 Integer        0 Integer        1                 , oper  = Add           , type = CInt      
+Binary     Oper           2 Oper           0 Oper           1                 , oper  = Assign        , type = CInt      
+
+Integer        0 12
+Integer        1 13
+Integer        2 2
+

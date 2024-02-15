@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project basedir=".." default="compile">
+  <property name="java.base-package" value="com.oreilly.tiger" />
+  <path id="classpath">
+    <pathelement path="classes"/>
+  </path>
+
+  <target name="compile">
+    <echo message="Compiling all Java files..." />
+    <javac srcdir="src" 
+           destdir="classes" 
+           debug="on" 
+           source="1.5"
+           excludes="**/CollegeGrade.java, **/ExtendedEnum.java">
+      <classpath refid="classpath"/>
+    </javac>
+  </target>
+
+  <target name="compile-check">
+    <echo message="Compiling (and checking) all Java files..." />
+    <javac srcdir="src" 
+           destdir="classes" 
+           debug="on" 
+           source="1.5"
+           excludes="**/CollegeGrade.java, **/ExtendedEnum.java">
+      <compilerarg value="-Xlint:unchecked" />
+      <compilerarg value="-Xlint:deprecation" />
+      <classpath refid="classpath"/>
+    </javac>
+  </target>
+
+  <target name="compile-ch03-errors">
+    <echo message="Compiling all Java files..." />
+    <javac srcdir="src" 
+           destdir="classes" 
+           debug="on" 
+           source="1.5">
+      <classpath refid="classpath"/>
+    </javac>
+  </target>
+
+  <target name="compile-1.4">
+    <echo message="Compiling all Java files..." />
+    <javac srcdir="src/com/oreilly/tiger/ch04" 
+           destdir="classes" 
+           debug="on" 
+           source="1.4">
+      <classpath refid="classpath"/>
+    </javac>
+  </target>
+
+  <target name="run">
+    <echo message="Running Java class ${classToRun}" />
+    <java classname="${classToRun}">
+      <classpath refid="classpath"/>
+    </java>
+  </target>
+
+  <target name="run-ch01" depends="compile">
+    <echo message="Running Chapter 1 examples from Tiger: A Developer's Notebook" />
+
+    <echo message="" />
+    <echo message="Running ArraysTester..." />
+    <java classname="${java.base-package}.ch01.ArraysTester">
+      <classpath refid="classpath"/>
+    </java>
+
+    <echo message="" />
+    <echo message="Running QueueTester..." />
+    <java classname="${java.base-package}.ch01.QueueTester">
+      <classpath refid="classpath"/>
+    </java>
+
+    <echo message="" />
+    <echo message="Running PriorityQueueTester..." />
+    <java classname="${java.base-package}.ch01.PriorityQueueTester">
+      <classpath refid="classpath"/>
+    </java>
+
+    <echo message="" />
+    <echo message="Running StringBuilderTester..." />
+    <java classname="${java.base-package}.ch01.StringBuilderTester">
+      <classpath refid="classpath"/>
+    </java>
+  </target>
+
+  <target name="run-ch02" depends="compile">
+    <echo message="Running Chapter 2 examples from Tiger: A Developer's Notebook" />
+
+    <echo message="" />
+    <echo message="Running BadIdea..." />
+    <java classname="${java.base-package}.ch02.BadIdea">
+      <classpath refid="classpath"/>
+    </java>
+
+    <echo message="" />
+    <echo message="Running GenericsTester..." />
+    <java classname="${java.base-package}.ch02.GenericsTester">
+      <classpath refid="classpath"/>
+    </java>
+  </target>
+
+  <target name="run-ch03" depends="compile">
+    <echo message="Running Chapter 3 examples from Tiger: A Developer's Notebook" />
+
+    <echo message="" />
+    <echo message="Running GradeTester..." />
+    <java classname="${java.base-package}.ch03.GradeTester">
+      <classpath refid="classpath"/>
+    </java>
+
+    <echo message="" />
+    <echo message="Running AntStatusTester..." />
+    <java classname="${java.base-package}.ch03.AntStatusTester">
+      <classpath refid="classpath"/>
+    </java>
+  </target>
+
+  <target name="run-ch04" depends="compile">
+    <echo message="Running Chapter 4 examples from Tiger: A Developer's Notebook" />
+
+    <echo message="" />
+    <echo message="Running ConversionTester..." />
+    <java classname="${java.base-package}.ch04.ConversionTester">
+      <classpath refid="classpath"/>
+    </java>
+  </target>
+
+  <target name="run-ch05" depends="compile">
+    <echo message="Running Chapter 5 examples from Tiger: A Developer's Notebook" />
+
+    <echo message="" />
+    <echo message="Running VarargsTester..." />
+    <java classname="${java.base-package}.ch05.VarargsTester">
+      <classpath refid="classpath"/>
+    </java>
+  </target>
+
+  <target name="run-ch06" depends="compile">
+    <echo message="Running Chapter 6 examples from Tiger: A Developer's Notebook" />
+
+    <echo message="" />
+    <echo message="Running ReflectionTester..." />
+    <java classname="${java.base-package}.ch06.ReflectionTester">
+      <classpath refid="classpath"/>
+    </java>
+  </target>
+
+  <target name="run-ch07" depends="compile">
+    <echo message="Running Chapter 7 examples from Tiger: A Developer's Notebook" />
+
+    <echo message="" />
+    <echo message="Running ForInTester..." />
+    <java classname="${java.base-package}.ch07.ForInTester">
+      <arg value="word1" />
+      <arg value="word2" />
+      <arg value="word3" />
+      <arg value="word4" />
+      <arg value="word1" />
+      <classpath refid="classpath"/>
+    </java>
+
+    <echo message="" />
+    <echo message="Running ForInDemo..." />
+    <java classname="${java.base-package}.ch07.ForInDemo">
+      <arg value="word1" />
+      <arg value="word2" />
+      <arg value="word3" />
+      <arg value="word4" />
+      <arg value="word1" />
+      <classpath refid="classpath"/>
+    </java>
+
+    <echo message="" />
+    <echo message="Running ForInGenericsDemo..." />
+    <java classname="${java.base-package}.ch07.ForInGenericsDemo">
+      <arg value="word1" />
+      <arg value="word2" />
+      <arg value="word3" />
+      <arg value="word4" />
+      <arg value="word1" />
+      <classpath refid="classpath"/>
+    </java>
+
+    <echo message="" />
+    <echo message="Running CustomObjectTester..." />
+    <java classname="${java.base-package}.ch07.CustomObjectTester">
+      <classpath refid="classpath"/>
+    </java>
+
+    <echo message="" />
+    <echo message="Running TextFile..." />
+    <java classname="${java.base-package}.ch07.TextFile">
+      <arg value="build.xml" />
+      <classpath refid="classpath"/>
+    </java>
+  </target>
+
+  <target name="run-ch08" depends="compile">
+    <echo message="Running Chapter 8 examples from Tiger: A Developer's Notebook" />
+
+    <echo message="" />
+    <echo message="Running StaticImporter..." />
+    <java classname="${java.base-package}.ch08.StaticImporter">
+      <arg value="Brett" />
+      <arg value="great" />
+      <classpath refid="classpath"/>
+    </java>
+  </target>
+
+  <target name="run-ch09" depends="compile">
+    <echo message="Running Chapter 9 examples from Tiger: A Developer's Notebook" />
+
+    <echo message="" />
+    <echo message="Running FormatTester..." />
+    <java classname="${java.base-package}.ch09.FormatTester">
+      <arg value="build.xml" />
+      <classpath refid="classpath"/>
+    </java>
+  </target>
+
+  <target name="run-ch10" depends="compile">
+    <echo message="Running Chapter 10 examples from Tiger: A Developer's Notebook" />
+
+    <echo message="" />
+    <echo message="Running ThreadTester..." />
+    <java classname="${java.base-package}.ch10.ThreadTester">
+      <classpath refid="classpath"/>
+    </java>
+
+    <echo message="" />
+    <echo message="Running ScheduleTester..." />
+    <java classname="${java.base-package}.ch10.ScheduleTester">
+      <classpath refid="classpath"/>
+    </java>
+  </target>
+
+  <target name="javadoc">
+    <javadoc source="1.5"
+             destdir="docs/api"
+             author="true"
+             version="true"
+             use="true"
+             windowtitle="Tiger: A Developer's Notebook">
+      <packageset dir="src" defaultexcludes="yes" />
+
+      <doctitle><![CDATA[<h1>Tiger: A Developer's Notebook</h1>]]></doctitle>
+      <bottom><![CDATA[<i>copyright &#169; 2004 O'Reilly Media, Inc. All Rights Reserved.</i>]]></bottom>
+    </javadoc>
+  </target>
+
+  <target name="clean">
+    <echo message="Cleaning all compiled bytecode..." />
+    <delete dir="classes" />
+    <delete dir="docs" />
+
+    <mkdir dir="classes" />
+  </target>
+</project>

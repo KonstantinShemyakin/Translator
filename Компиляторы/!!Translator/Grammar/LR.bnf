@@ -1,0 +1,175 @@
+
+S_             
+               ::= Program              
+               
+Program        ::= Defines              
+               
+DefinesList    ::= DefFAV             /. TREE(BegStmExpr,1);   ./   [  DefFAV        /. TREE(AddToList); ./    ]...
+               
+Defines        ::= /. CODE(BegStmExpr); ./       DefinesList        /. CODE(EndBlock); ./      
+                         
+DefBegParVar   ::= Ident_lexeme         /. MAKE(DefParVar); ./        
+               
+DefParVar      ::= DefBegParVar         =                           /. CODE(BegParVarAssign); ./  Assign                      /. MAKE(ParVarAssign); ./     
+               |   DefBegParVar         
+               
+DefBegParArr   ::= Syntax_IdentArr      /. MAKE(DefParArr); ./      DefBegRanges                
+               
+DefParArr      ::= DefBegParArr         =                           /. CODE(BegParVarAssign); ./   Assign                      /. MAKE(ParVarAssign); ./     
+               |   DefBegParArr         
+               
+DefParItem     ::= Syntax_DefArr        DefParArr                
+               |   Syntax_DefVar        DefParVar                
+               
+DefParams      ::= DefParams            ,                           DefParItem                  /. TREE(AddToList); ./       
+               |   DefParItem           /. TREE(AddToList); ./        
+               
+BodyFunc       ::= ;                    /. MAKE(BodyFunc); ./         
+               |   Syntax_EmptyCramp    /. MAKE(BodyFunc,1); ./       
+               |   '{'                  /. CODE(EndParams); ./      /. MAKE(BegStmExpr); ./       StmExpr                     '}'                         /. MAKE(BodyFunc,2); ./    
+               
+DefFunc_       ::= Syntax_EmptyBracket  
+               |   (                    /. TREE(Define,2); ./       DefParams                   )                           /. TREE(EndParams); ./        
+               
+DefFunc        
+               ::= Syntax_DefFunc       Syntax_IdentFunc            /. MAKE(FuncIdent); ./        DefFunc_                    BodyFunc                    
+               
+AInitItem      
+               ::= Initializer          
+               |   Assign               /. CODE(AInitItem); ./     
+               
+AInitial       
+               ::= AInitial             ,                           AInitItem                   /. TREE(AddToList); ./        
+               |   AInitItem            /. TREE(AddToList); ./        
+               
+Initializer    
+               ::= Syntax_EmptyCramp    /. CODE(BegInitial); ./     /. TREE(NodeList); ./         
+               |   '{'                  /. CODE(BegInitial,1); ./   /. TREE(NodeList); ./         AInitial                    '}'                         /. CODE(EndInitial); ./    
+               
+DefRanges_     
+               ::= '['                  Assign                      ']'                        
+               
+DefRanges      
+               ::= DefRanges            DefRanges_                  /. MAKE(DRange); ./           
+               |   DefRanges_           /. MAKE(DRange); ./           
+               
+DefBegRanges   
+               ::= Syntax_EmptyScrape   /. MAKE(DefArrD1AEmpty); ./   DefRanges                
+               |   Syntax_EmptyScrape   /. MAKE(DefArrD1AEmpty); ./   
+               |   DefRanges            
+               
+DefBegArr      
+               ::= Syntax_IdentArr      /. MAKE(DefArray); ./         DefBegRanges                /. CODE(EndRanges); ./        
+               
+DefArr         
+               ::= DefBegArr            =                           /. CODE(BegAInit); ./         Initializer                 /. MAKE(EndAInit); ./         
+               |   DefBegArr            
+               
+DefVarIdent    
+               ::= Ident_lexeme         /. MAKE(DefIdent); ./         
+               
+DefVarAssign   
+               ::= DefVarIdent          =                           /. CODE(BegDefVarAssign); ./                              Assign                      /. MAKE(DefVarAssign); ./     
+               
+DefVar         
+               ::= DefVarAssign         
+               |   DefVarIdent          
+               
+DefIAV         
+               ::= DefArr               
+               |   DefVar               
+               
+RefDefIAV      
+               ::= Priority_And         DefIAV                      /. TREE(RefDef); ./           
+               
+DefItem        
+               ::= RefDefIAV            
+               |   DefIAV               
+               
+DefType        
+               ::= Syntax_DefArr        
+               |   Syntax_DefVar        
+               
+DefineComma    
+               ::= DefineComma          ,                           DefItem                     /. TREE(AddToList); ./        
+               |   DefItem              /. TREE(AddToList); ./        
+               
+Define         
+               ::= DefType              /. MAKE(Define); ./           DefineComma                 /. CODE(EndDefine); ./     
+               
+CompaundStmnt  
+               ::= Syntax_EmptyCramp    /. MAKE(Compaund); ./         /. CODE(EndBlock); ./         
+               |   '{'                  /. MAKE(Compaund); ./         
+               
+Condition_V    
+               ::= Priority_And         DefVarAssign                /. TREE(RefDef); ./           
+               |   DefVarAssign         
+               
+Condition      
+               ::= Syntax_DefVar        /. MAKE(Define); ./           Condition_V                 /. MAKE(PushDef); ./       
+               |   ExpressionCondition  
+               
+For_Prefix     
+               ::= ;                    /. TREE(NodeNull); ./         
+               |   DefineSemi           
+               |   ExprSemi             
+               
+For_Condition  
+               ::= ;                    /. MAKE(NodeNull); ./         
+               |   Condition            ;                        
+               
+For_Postfix    
+               ::= )                    /. TREE(NodeNull); ./         
+               |   ExpressionExpression )                        
+               
+ForStmnt       
+               ::= for                  (                           /. CODE(BegFor); ./           For_Prefix                  /. CODE(PrefFor); ./          For_Condition               /. CODE(ConditionFor); ./     For_Postfix                 /. CODE(PostFor); ./          DefExpr                     /. MAKE(For); ./              
+               
+ReturnValue    
+               ::= ;                    /. MAKE(Return); ./           
+               |   ExpressionValue      ;                           /. MAKE(Return,1); ./         
+               
+ReturnStmnt    
+               ::= return               ReturnValue              
+               
+BegIfStmnt     
+               ::= if                   (                           /. CODE(BegIf); ./          Condition                   )                           /. CODE(Then); ./             DefExpr                     
+               
+Statement      
+               ::= BegIfStmnt           else                        /. CODE(Else); ./           DefExpr                     /. MAKE(If,1); ./             
+               |   BegIfStmnt           /. MAKE(If); ./            
+               |   Syntax_Label         :                           /. CODE(Label); ./          DefExpr                     /. TREE(Label); ./            
+               |   do                   DefExpr                     while                       (                           Condition                   )                           ;                           /. MAKE(Do); ./               
+               |   while                (                           Condition                   )                           DefExpr                     /. MAKE(While); ./            
+               |   ForStmnt             
+               |   switch               (                           )                        
+               |   goto                 Ident_lexeme                ;                           /. MAKE(GoTo); ./             
+               |   break                ;                           /. MAKE(Break); ./            
+               |   continue             ;                           /. MAKE(Continue); ./         
+               |   ReturnStmnt          
+               |   CompaundStmnt        
+               
+DefineSemi     
+               ::= Define               ;                        
+               
+ExprSemi       
+               ::= ExpressionExpression ;                        
+               
+DefExpr        
+               ::= ;                    /. TREE(NodeNull); ./         
+               |   DefineSemi           
+               |   Statement            
+               |   ExprSemi             
+               
+StmExprList    
+               ::= StmExprList          DefExpr                     /. TREE(AddToList); ./        
+               |   DefExpr              /. TREE(AddToList); ./        
+               
+StmExpr        
+               ::= StmExprList          /. CODE(EndBlock); ./      
+               
+DefFAV         
+               ::= ;                    /. TREE(NodeNull); ./          
+               |   DefFunc                  
+               |   DefineSemi               
+                         

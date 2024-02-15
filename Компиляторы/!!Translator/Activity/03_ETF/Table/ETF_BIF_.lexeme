@@ -1,0 +1,8 @@
+
+--- Lexemes --- <12> ---
+
+<Separator,LeftBracket>  <Separator,RightBracket> <Separator,Colon>        
+<Integer>                
+<Number>                 
+<Ident>                  
+<Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        <Priority,Term>          <Priority,Factor>        

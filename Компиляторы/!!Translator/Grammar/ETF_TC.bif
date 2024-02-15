@@ -1,0 +1,11 @@
+S_       ::=   E_
+
+E        ::=   T  [  {  +  |  -  }  T  /. MAKE(Binary); ./ ]...
+
+T        ::=   F  [  {  *  |  /  }  F  /. MAKE(Binary); ./ ]...         
+
+F        ::=   {  (  E  )  |  Integer  /. MAKE(Number); ./  |  Number /. MAKE(Number); ./  }
+
+E_       ::=   /. TREE(BegStmExprLL); ./   E   /. TREE(AddToList); ./
+
+

@@ -1,0 +1,4 @@
+
+TNodeDefFunc    pos=0005, line=000, column=005, len=01, text=f
+TNodeDefFunc    pos=0021, line=001, column=005, len=01, text=f
+command = Exit      , param = 001, mode = 000, type = Void      

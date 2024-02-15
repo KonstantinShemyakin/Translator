@@ -1,0 +1,25 @@
+{S_                       ,<Separator,LeftBracket>  }[  0] S_                 -> E                        
+{                         ,<Integer>                }[  0] S_                 -> E                        
+{                         ,<Number>                 }[  0] S_                 -> E                        
+{E                        ,<Separator,LeftBracket>  }[  0] E                  -> T                        _f_00003_                
+{                         ,<Integer>                }[  0] E                  -> T                        _f_00003_                
+{                         ,<Number>                 }[  0] E                  -> T                        _f_00003_                
+{_f_00002_                ,<Priority,Term>          }[  0] _f_00002_          -> <Priority,Term>          T                        
+{_f_00003_                ,<Separator,RightBracket> }[  1] _f_00003_          -> 
+{                         ,<Priority,Term>          }[  0] _f_00003_          -> _f_00002_                _f_00003_                
+{                         ,Eof                      }[  1] _f_00003_          -> 
+{T                        ,<Separator,LeftBracket>  }[  0] T                  -> F                        _f_00007_                
+{                         ,<Integer>                }[  0] T                  -> F                        _f_00007_                
+{                         ,<Number>                 }[  0] T                  -> F                        _f_00007_                
+{_f_00005_                ,<Oper,Multi>             }[  0] _f_00005_          -> _f_00006_                F                        
+{                         ,<Oper,Div>               }[  0] _f_00005_          -> _f_00006_                F                        
+{_f_00006_                ,<Oper,Multi>             }[  0] _f_00006_          -> <Oper,Multi>             
+{                         ,<Oper,Div>               }[  1] _f_00006_          -> <Oper,Div>               
+{_f_00007_                ,<Oper,Multi>             }[  0] _f_00007_          -> _f_00005_                _f_00007_                
+{                         ,<Oper,Div>               }[  0] _f_00007_          -> _f_00005_                _f_00007_                
+{                         ,<Separator,RightBracket> }[  1] _f_00007_          -> 
+{                         ,<Priority,Term>          }[  1] _f_00007_          -> 
+{                         ,Eof                      }[  1] _f_00007_          -> 
+{F                        ,<Separator,LeftBracket>  }[  0] F                  -> <Separator,LeftBracket>  E                        <Separator,RightBracket> 
+{                         ,<Integer>                }[  1] F                  -> <Integer>                
+{                         ,<Number>                 }[  2] F                  -> <Number>                 

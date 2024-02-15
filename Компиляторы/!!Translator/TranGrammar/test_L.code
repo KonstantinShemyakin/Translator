@@ -1,0 +1,42 @@
+TNodeDefFunc    line=000, column=004, len=01, text=f
+command = PushInt   , param = 012, mode = 000, type = CInt      
+command = Cast      , cast  = IC__I__       , mode = 000, type = Int       
+command = Return    , param = 000, mode = 000, type = Int       
+command = Exit      , param = 000, mode = 000, type = Void      
+
+TNodeDefFunc    line=001, column=005, len=04, text=f004
+command = PushVar   , addr  = 000, Param  , mode = 003, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = Oper      , oper  = PostInc       , mode = 001, type = Void      
+command = Exit      , param = 001, mode = 000, type = Void      
+
+TNodeDefFunc    line=001, column=032, len=07, text=main004
+command = PushNum   , param = 000, mode = 000, type = CDouble   
+command = Cast      , cast  = DC__I__       , mode = 000, type = Int       
+command = Call      , param = 001, mode = 000, type = Void      
+command = Exit      , param = 002, mode = 000, type = Void      
+
+TNodeDefFunc    line=002, column=005, len=04, text=f003
+command = NewVar    , addr  = 000, Local  , mode = 002, type = Int       
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = PushVar   , addr  = 000, Local  , mode = 002, type = Int       
+command = Cast      , cast  = I___IC_       , mode = 000, type = CInt      
+command = PushInt   , param = 004, mode = 000, type = CInt      
+command = Oper      , oper  = LT            , mode = 000, type = CInt      
+command = GoTo      , label = 013, Else , mode = 002, type = Unknown   
+command = NewVar    , addr  = 001, Local  , mode = 002, type = Int       
+command = Call      , param = 003, mode = 000, type = Void      
+command = Pop       , param = 002, mode = 000, type = Void      
+command = Label     , param = 013, mode = 001, type = Void      
+command = Pop       , param = 001, mode = 000, type = Void      
+command = Exit      , param = 003, mode = 000, type = Void      
+
+
+Integer        0 12
+Integer        1 0
+Integer        2 4
+
+Number         0 5.000000

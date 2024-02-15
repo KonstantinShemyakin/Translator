@@ -1,0 +1,28 @@
+
+S_                       
+                         ::= E                        
+                         
+E                        
+                         ::= T                           
+                         [
+                         Priority_Term               T                        
+                         
+                         ]... 
+                         
+T                        
+                         ::= F                           
+                         [
+                         
+                             { 
+                             *                        
+                         |   /                        
+                             }    F                        
+                         
+                         ]... 
+                         
+F                        
+                         ::= { 
+                             (                           E                           )                        
+                         |   Integer_lexeme           
+                         |   Number_lexeme            
+                             } 

@@ -1,0 +1,596 @@
+
+S_                       
+                         ::= Program                  
+                         
+Program                  
+                         ::= Defines                  
+                         
+DefParType               
+                         ::= const                       Syntax_DefType              _f_00124_                
+                         |   Syntax_DefType              _f_00125_                
+                         
+DefBegParVar             
+                         ::= DefParType                  Ident_lexeme                { MAKE(DefParVar); }     
+                         
+DefParVar                
+                         ::= DefBegParVar                _f_00126_                
+                         
+DefBegParArr             
+                         ::= DefParType                  Ident_lexeme                { MAKE(DefParArr); }        DefBegRanges             
+                         
+DefParArr                
+                         ::= DefBegParArr                _f_00126_                
+                         
+DefParItem               
+                         ::= DefParArr                
+                         |   DefParVar                
+                         
+DefParams                
+                         ::= DefParItem                  { TREE(AddToList); }        _f_00106_                
+                         
+BodyFunc                 
+                         ::= ;                           { MAKE(BodyFunc); }      
+                         |   '{'                         _f_00127_                
+                         
+DefFuncParBody           
+                         ::= )                           { TREE(EndParams); }     
+                         |   DefParItem                  { TREE(AddToList); }        _f_00106_                   )                           { TREE(EndParams); }     
+                         
+DefParBodyFunc           
+                         ::= { TREE(Define,2); }         DefFuncParBody              BodyFunc                 
+                         
+DefVoidType              
+                         ::= static                      void                        { MAKE(DefType,36); }    
+                         |   void                        { MAKE(DefType,32); }    
+                         
+DefType                  
+                         ::= static                      _f_00128_                
+                         |   const                       Syntax_DefType              { MAKE(DefType,3); }     
+                         |   Syntax_DefType              { MAKE(DefType,1); }     
+                         
+CommaDefItem             
+                         ::= DefItem                     { TREE(AddToList); }        _f_00107_                
+                         
+Define                   
+                         ::= DefType                     { MAKE(Define,1); }         CommaDefItem                { CODE(EndDefine); }     
+                         
+DefineBegRanges          
+                         ::= ]                           { MAKE(DefArrD1AEmpty); }   _f_00129_                
+                         |   Assign                      ]                           { MAKE(DRange); }           _f_00129_                
+                         
+DefineBegArr             
+                         ::= ]                           { MAKE(DefArrD1AEmpty); }   _f_00130_                
+                         |   Assign                      ]                           { MAKE(DRange); }           _f_00130_                
+                         
+DefineArr                
+                         ::= IdentLeftScrape             _f_00131_                
+                         
+IdentLeftScrape          
+                         ::= Ident_lexeme                [                           { MAKE(Define); }           { MAKE(DefArray); }         DefineBegArr             
+                         
+DefineVarAssign          
+                         ::= ,                           CommaDefItem                ;                           { CODE(EndDefine); }     
+                         |   ;                           { CODE(EndDefine); }     
+                         
+DefVariableAssign        
+                         ::= Ident_lexeme                { MAKE(Define); }           { MAKE(DefIdent); }         =                           { CODE(BegDefVarAssign); }                           Assign                      { MAKE(DefVarAssign); }     { TREE(AddToList); }     
+                         
+DefVarComma              
+                         ::= Ident_lexeme                { MAKE(Define); }           { MAKE(DefIdent); }         { TREE(AddToList); }     
+                         
+DefVarSemicolon          
+                         ::= Ident_lexeme                { MAKE(Define); }           { MAKE(DefIdent); }         { TREE(AddToList); }     
+                         
+DefFuncArrVar            
+                         ::= DefType                     _f_00132_                
+                         
+DefFuncDefine            
+                         ::= DefVoidType                 Ident_lexeme                (                           { MAKE(FuncIdent); }        DefParBodyFunc           
+                         |   DefFuncArrVar            
+                         
+AInitItem                
+                         ::= Initializer              
+                         |   Assign                      { CODE(AInitItem); }     
+                         
+AInitial                 
+                         ::= Initializer                 { TREE(AddToList); }        _f_00108_                
+                         |   Assign                      { CODE(AInitItem); }        { TREE(AddToList); }        _f_00108_                
+                         
+Initializer              
+                         ::= '{'                         _f_00133_                
+                         
+DefRange                 
+                         ::= [                           Assign                      ]                        
+                         
+DefRanges                
+                         ::= DefRange                    { MAKE(DRange); }           _f_00109_                
+                         
+DefBegRanges             
+                         ::= [                           ]                           { MAKE(DefArrD1AEmpty); }   _f_00129_                
+                         |   DefRange                    { MAKE(DRange); }           _f_00109_                
+                         
+DefBegArr                
+                         ::= Ident_lexeme                { MAKE(DefArray); }         DefBegRanges                { CODE(EndRanges); }     
+                         
+DefArr                   
+                         ::= DefBegArr                   _f_00131_                
+                         
+DefVarIdent              
+                         ::= Ident_lexeme                { MAKE(DefIdent); }      
+                         
+DefVarAssign             
+                         ::= =                           { CODE(BegDefVarAssign); }                           Assign                      { MAKE(DefVarAssign); }  
+                         
+DefVar                   
+                         ::= DefVarIdent                 _f_00134_                
+                         
+DefIAV                   
+                         ::= DefArr                   
+                         |   DefVar                   
+                         
+RefDefIAV                
+                         ::= &                           DefIAV                      { TREE(RefDef); }        
+                         
+DefItem                  
+                         ::= RefDefIAV                
+                         |   DefIAV                   
+                         
+Expressions              
+                         ::= Assign                      { MAKE(ExpressionsLR); }    _f_00110_                
+                         
+PriorAssign              
+                         ::= +=                       
+                         |   -=                       
+                         |   *=                       
+                         |   /=                       
+                         |   %=                       
+                         |   =                        
+                         |   |=                       
+                         |   ^=                       
+                         |   &=                       
+                         |   <<=                      
+                         |   >>=                      
+                         
+PriorQuestion            
+                         ::= ?                        
+                         
+PriorOrOr                
+                         ::= ||                       
+                         
+PriorAndAnd              
+                         ::= &&                       
+                         
+PriorOr                  
+                         ::= '|'                      
+                         
+PriorXOr                 
+                         ::= ^                        
+                         
+PriorAnd                 
+                         ::= &                        
+                         
+PriorEqu                 
+                         ::= ==                       
+                         |   !=                       
+                         
+PriorCompare             
+                         ::= <=                       
+                         |   <                        
+                         |   >=                       
+                         |   >                        
+                         
+PriorShift               
+                         ::= <<                       
+                         |   >>                       
+                         
+PriorTerm                
+                         ::= +                        
+                         |   -                        
+                         
+PriorFactor              
+                         ::= *                        
+                         |   /                        
+                         |   %                        
+                         
+PriorUnary               
+                         ::= !                        
+                         |   ~                        
+                         
+PriorIncDec              
+                         ::= ++                       
+                         |   --                       
+                         
+Assign                   
+                         ::= Question                    _f_00135_                
+                         
+Question                 
+                         ::= OrOr                        _f_00136_                
+                         
+OrOr                     
+                         ::= AndAnd                      _f_00111_                
+                         
+AndAnd                   
+                         ::= Or                          _f_00112_                
+                         
+Or                       
+                         ::= XOr                         _f_00113_                
+                         
+XOr                      
+                         ::= And                         _f_00114_                
+                         
+And                      
+                         ::= Equ                         _f_00115_                
+                         
+Equ                      
+                         ::= Compare                     _f_00116_                
+                         
+Compare                  
+                         ::= Shift                       _f_00117_                
+                         
+Shift                    
+                         ::= Term                        _f_00118_                
+                         
+Term                     
+                         ::= Factor                      _f_00119_                
+                         
+Factor                   
+                         ::= Unary                       _f_00120_                
+                         
+UnaryIncDec              
+                         ::= PrimaryExpr                 _f_00137_                
+                         
+DefTypeCast              
+                         ::= const                       Syntax_DefType              { MAKE(DefType,3); }     
+                         |   Syntax_DefType              { MAKE(DefType,1); }     
+                         
+Unary                    
+                         ::= PriorUnary                  Unary                       { MAKE(Unary); }         
+                         |   PriorTerm                   Unary                       { MAKE(Unary); }         
+                         |   PriorIncDec                 Unary                       { MAKE(Unary); }         
+                         |   (                           DefTypeCast                 )                           Unary                       { MAKE(Cast); }          
+                         |   UnaryIncDec              
+                         
+Primary                  
+                         ::= (                           ExpressionNone              )                           { TREE(Primary); }       
+                         
+PrimaryExpr              
+                         ::= Integer_lexeme              { MAKE(Number); }        
+                         |   Number_lexeme               { MAKE(Number); }        
+                         |   Ident_lexeme                _f_00138_                
+                         |   Syntax_DefType              Primary                     { MAKE(Cast); }          
+                         |   Primary                  
+                         
+Range                    
+                         ::= [                           ExpressionValue             ]                        
+                         
+Ranges                   
+                         ::= Range                       { MAKE(BegIndexLR); }       _f_00121_                
+                         
+CallParams               
+                         ::= (                           _f_00139_                
+                         
+CompaundStmnt            
+                         ::= '{'                         _f_00140_                
+                         
+ConditionVar             
+                         ::= &                           DefVar                      { TREE(RefDef); }        
+                         |   DefVar                   
+                         
+Condition                
+                         ::= DefType                     { MAKE(Define,1); }         ConditionVar                { MAKE(PushDef); }       
+                         |   ExpressionCondition      
+                         
+ForPrefix                
+                         ::= ;                           { TREE(NodeNull); }      
+                         |   DefineSemi               
+                         |   ExprSemi                 
+                         
+ForCondition             
+                         ::= ;                           { MAKE(NodeNull); }      
+                         |   DefType                     { MAKE(Define,1); }         ConditionVar                { MAKE(PushDef); }          ;                        
+                         |   ExpressionCondition         ;                        
+                         
+ForPostfix               
+                         ::= )                           { TREE(NodeNull); }      
+                         |   ExpressionExpression        )                        
+                         
+ForStmnt                 
+                         ::= for                         (                           { CODE(BegFor); }           ForPrefix                   { CODE(PrefFor); }          ForCondition                { CODE(ConditionFor); }     ForPostfix                  { CODE(PostFor); }          DefExpr                     { MAKE(For); }           
+                         
+DoStmnt                  
+                         ::= do                          DefExpr                     while                       (                           Condition                   )                           ;                           { MAKE(Do); }            
+                         
+WhileStmnt               
+                         ::= while                       (                           Condition                   )                           DefExpr                     { MAKE(While); }         
+                         
+GoToStmnt                
+                         ::= goto                        Ident_lexeme                ;                           { MAKE(GoTo); }          
+                         
+BreakStmnt               
+                         ::= break                       ;                           { MAKE(Break); }         
+                         
+ContinueStmnt            
+                         ::= continue                    ;                           { MAKE(Continue); }      
+                         
+ReturnValue              
+                         ::= ;                           { MAKE(Return); }        
+                         |   ExpressionValue             ;                           { MAKE(Return,1); }      
+                         
+ReturnStmnt              
+                         ::= return                      ReturnValue              
+                         
+BegIfStmnt               
+                         ::= if                          (                           { CODE(BegIf); }            Condition                   )                           { CODE(Then); }             DefExpr                  
+                         
+LabelIdent               
+                         ::= Ident_lexeme                :                           { CODE(Label); }         
+                         
+LabelList                
+                         ::= LabelIdent               
+                         
+Statement                
+                         ::= BegIfStmnt                  _f_00141_                
+                         |   LabelList                   DefExpr                     { TREE(Label); }         
+                         |   DoStmnt                  
+                         |   WhileStmnt               
+                         |   ForStmnt                 
+                         |   GoToStmnt                
+                         |   BreakStmnt               
+                         |   ContinueStmnt            
+                         |   ReturnStmnt              
+                         |   CompaundStmnt            
+                         
+DefineSemi               
+                         ::= Define                      ;                        
+                         
+ExprSemi                 
+                         ::= ExpressionExpression        ;                        
+                         
+DefExpr                  
+                         ::= ;                           { TREE(NodeNull); }      
+                         |   DefineSemi               
+                         |   Statement                
+                         |   ExpressionExpression        ;                        
+                         
+StmExprList              
+                         ::= ;                           { TREE(NodeNull); }         { TREE(AddToList); }        _f_00122_                
+                         |   DefineSemi                  { TREE(AddToList); }        _f_00122_                
+                         |   Statement                   { TREE(AddToList); }        _f_00122_                
+                         |   ExpressionExpression        ;                           { TREE(AddToList); }        _f_00122_                
+                         
+StmExpr                  
+                         ::= ;                           { TREE(NodeNull); }         { TREE(AddToList); }        _f_00122_                   { CODE(EndBlock); }      
+                         |   DefineSemi                  { TREE(AddToList); }        _f_00122_                   { CODE(EndBlock); }      
+                         |   Statement                   { TREE(AddToList); }        _f_00122_                   { CODE(EndBlock); }      
+                         |   ExpressionExpression        ;                           { TREE(AddToList); }        _f_00122_                   { CODE(EndBlock); }      
+                         
+DefFAV                   
+                         ::= ;                           { TREE(NodeNull); }      
+                         |   DefFuncDefine            
+                         
+DefinesList              
+                         ::= DefFAV                      { TREE(BegStmExprLR,1); }   _f_00123_                
+                         
+Defines                  
+                         ::= { CODE(BegStmExprLR); }     DefinesList                 { CODE(EndBlock); }      
+                         
+ExpressionExpression     
+                         ::= Unary                       _f_00120_                   _f_00119_                   _f_00118_                   _f_00117_                   _f_00116_                   _f_00115_                   _f_00114_                   _f_00113_                   _f_00112_                   _f_00111_                   _f_00143_                
+                         
+ExpressionCondition      
+                         ::= Unary                       _f_00120_                   _f_00119_                   _f_00118_                   _f_00117_                   _f_00116_                   _f_00115_                   _f_00114_                   _f_00113_                   _f_00112_                   _f_00111_                   _f_00145_                
+                         
+ExpressionNone           
+                         ::= Unary                       _f_00120_                   _f_00119_                   _f_00118_                   _f_00117_                   _f_00116_                   _f_00115_                   _f_00114_                   _f_00113_                   _f_00112_                   _f_00111_                   _f_00147_                
+                         
+ExpressionValue          
+                         ::= Unary                       _f_00120_                   _f_00119_                   _f_00118_                   _f_00117_                   _f_00116_                   _f_00115_                   _f_00114_                   _f_00113_                   _f_00112_                   _f_00111_                   _f_00149_                
+                         
+ExpressionValueList      
+                         ::= Unary                       _f_00120_                   _f_00119_                   _f_00118_                   _f_00117_                   _f_00116_                   _f_00115_                   _f_00114_                   _f_00113_                   _f_00112_                   _f_00111_                   _f_00151_                
+                         
+_f_00106_                
+                         ::= ,                           DefParItem                  { TREE(AddToList); }        _f_00106_                
+                         |   
+                         
+_f_00107_                
+                         ::= ,                           DefItem                     { TREE(AddToList); }        _f_00107_                
+                         |   
+                         
+_f_00108_                
+                         ::= ,                           AInitItem                   { TREE(AddToList); }        _f_00108_                
+                         |   
+                         
+_f_00109_                
+                         ::= DefRange                    { MAKE(DRange); }           _f_00109_                
+                         |   
+                         
+_f_00110_                
+                         ::= ,                           Assign                      { TREE(AddToList); }        { CODE(AddToExpr); }        _f_00110_                
+                         |   
+                         
+_f_00111_                
+                         ::= PriorOrOr                   AndAnd                      { MAKE(Binary); }           { TURN(Make,Binary,-2); }   _f_00111_                
+                         |   
+                         
+_f_00112_                
+                         ::= PriorAndAnd                 Or                          { MAKE(Binary); }           { TURN(Make,Binary,-2); }   _f_00112_                
+                         |   
+                         
+_f_00113_                
+                         ::= PriorOr                     XOr                         { MAKE(Binary); }           { TURN(Make,Binary,-2); }   _f_00113_                
+                         |   
+                         
+_f_00114_                
+                         ::= PriorXOr                    And                         { MAKE(Binary); }           { TURN(Make,Binary,-2); }   _f_00114_                
+                         |   
+                         
+_f_00115_                
+                         ::= PriorAnd                    Equ                         { MAKE(Binary); }           { TURN(Make,Binary,-2); }   _f_00115_                
+                         |   
+                         
+_f_00116_                
+                         ::= PriorEqu                    Compare                     { MAKE(Binary); }           { TURN(Make,Binary,-2); }   _f_00116_                
+                         |   
+                         
+_f_00117_                
+                         ::= PriorCompare                Shift                       { MAKE(Binary); }           { TURN(Make,Binary,-2); }   _f_00117_                
+                         |   
+                         
+_f_00118_                
+                         ::= PriorShift                  Term                        { MAKE(Binary); }           { TURN(Make,Binary,-2); }   _f_00118_                
+                         |   
+                         
+_f_00119_                
+                         ::= PriorTerm                   Factor                      { MAKE(Binary); }           { TURN(Make,Binary,-2); }   _f_00119_                
+                         |   
+                         
+_f_00120_                
+                         ::= PriorFactor                 Unary                       { MAKE(Binary); }           { TURN(Make,Binary,-2); }   _f_00120_                
+                         |   
+                         
+_f_00121_                
+                         ::= Range                       { MAKE(IndexLR); }          _f_00121_                
+                         |   
+                         
+_f_00122_                
+                         ::= ;                           { TREE(NodeNull); }         { TREE(AddToList); }        _f_00122_                
+                         |   DefineSemi                  { TREE(AddToList); }        _f_00122_                
+                         |   Statement                   { TREE(AddToList); }        _f_00122_                
+                         |   Unary                       _f_00120_                   _f_00119_                   _f_00118_                   _f_00117_                   _f_00116_                   _f_00115_                   _f_00114_                   _f_00113_                   _f_00112_                   _f_00111_                   _f_00153_                
+                         |   
+                         
+_f_00123_                
+                         ::= DefFAV                      { TREE(AddToList); }        _f_00123_                
+                         |   
+                         
+_f_00124_                
+                         ::= &                           { MAKE(DefType,11); }    
+                         |   { MAKE(DefType,3); }     
+                         
+_f_00125_                
+                         ::= &                           { MAKE(DefType,9); }     
+                         |   { MAKE(DefType,1); }     
+                         
+_f_00126_                
+                         ::= 
+                         |   =                           { CODE(BegParVarAssign); }                           Assign                      { MAKE(ParVarAssign); }  
+                         
+_f_00127_                
+                         ::= '}'                         { MAKE(BodyFunc,1); }    
+                         |   { CODE(EndParams); }        { MAKE(BegStmExprLR); }     StmExpr                     '}'                         { MAKE(BodyFunc,2); }    
+                         
+_f_00128_                
+                         ::= const                       Syntax_DefType              { MAKE(DefType,7); }     
+                         |   Syntax_DefType              { MAKE(DefType,5); }     
+                         
+_f_00129_                
+                         ::= 
+                         |   DefRanges                
+                         
+_f_00130_                
+                         ::= DefRanges                   { CODE(EndRanges); }     
+                         |   { CODE(EndRanges); }     
+                         
+_f_00131_                
+                         ::= 
+                         |   =                           { CODE(BegAInit); }         Initializer                 { MAKE(EndAInit); }      
+                         
+_f_00132_                
+                         ::= DefineArr                   { TREE(AddToList); }        DefineVarAssign          
+                         |   DefVariableAssign           DefineVarAssign          
+                         |   DefVarComma                 ,                           CommaDefItem                ;                           { CODE(EndDefine); }     
+                         |   DefVarSemicolon             ;                           { CODE(EndDefine); }     
+                         |   Ident_lexeme                (                           { MAKE(FuncIdent); }        DefParBodyFunc           
+                         
+_f_00133_                
+                         ::= '}'                         { CODE(BegInitial); }       { TREE(NodeListLR); }    
+                         |   { CODE(BegInitial,1); }     { TREE(NodeListLR); }       AInitial                    '}'                         { CODE(EndInitial); }    
+                         
+_f_00134_                
+                         ::= 
+                         |   DefVarAssign             
+                         
+_f_00135_                
+                         ::= 
+                         |   PriorAssign                 Assign                      { MAKE(Binary); }        
+                         
+_f_00136_                
+                         ::= 
+                         |   PriorQuestion               { CODE(BegQuestion); }      ExpressionValue             :                           { CODE(MidQuestion); }      Question                    { MAKE(Question); }      
+                         
+_f_00137_                
+                         ::= 
+                         |   PriorIncDec                 { MAKE(IncDec); }        
+                         
+_f_00138_                
+                         ::= Ranges                      { MAKE(EndIndex); }      
+                         |   CallParams               
+                         |   { MAKE(Ident); }         
+                         
+_f_00139_                
+                         ::= ExpressionValueList         )                           { MAKE(Params,1); }      
+                         |   )                           { MAKE(Params); }        
+                         
+_f_00140_                
+                         ::= '}'                         { MAKE(Compaund); }         { CODE(EndBlock); }      
+                         |   { MAKE(Compaund); }         StmExpr                     '}'                      
+                         
+_f_00141_                
+                         ::= else                        { CODE(Else); }             DefExpr                     { MAKE(If,1); }          
+                         |   { MAKE(If); }            
+                         
+_f_00142_                
+                         ::= PriorAssign                 Assign                      { MAKE(Binary); }           { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,16); }                       
+                         |   { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,16); }                       
+                         
+_f_00143_                
+                         ::= PriorAssign                 Assign                      { MAKE(Binary); }           { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,16); }                       
+                         |   PriorQuestion               { CODE(BegQuestion); }      ExpressionValue             :                           { CODE(MidQuestion); }      Question                    { MAKE(Question); }         _f_00142_                
+                         |   { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,16); }                       
+                         
+_f_00144_                
+                         ::= PriorAssign                 Assign                      { MAKE(Binary); }           { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,241); }                      
+                         |   { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,241); }                      
+                         
+_f_00145_                
+                         ::= PriorAssign                 Assign                      { MAKE(Binary); }           { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,241); }                      
+                         |   PriorQuestion               { CODE(BegQuestion); }      ExpressionValue             :                           { CODE(MidQuestion); }      Question                    { MAKE(Question); }         _f_00144_                
+                         |   { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,241); }                      
+                         
+_f_00146_                
+                         ::= PriorAssign                 Assign                      { MAKE(Binary); }           { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR); } 
+                         |   { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR); } 
+                         
+_f_00147_                
+                         ::= PriorAssign                 Assign                      { MAKE(Binary); }           { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR); } 
+                         |   PriorQuestion               { CODE(BegQuestion); }      ExpressionValue             :                           { CODE(MidQuestion); }      Question                    { MAKE(Question); }         _f_00146_                
+                         |   { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR); } 
+                         
+_f_00148_                
+                         ::= PriorAssign                 Assign                      { MAKE(Binary); }           { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,256); }                      
+                         |   { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,256); }                      
+                         
+_f_00149_                
+                         ::= PriorAssign                 Assign                      { MAKE(Binary); }           { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,256); }                      
+                         |   PriorQuestion               { CODE(BegQuestion); }      ExpressionValue             :                           { CODE(MidQuestion); }      Question                    { MAKE(Question); }         _f_00148_                
+                         |   { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,256); }                      
+                         
+_f_00150_                
+                         ::= PriorAssign                 Assign                      { MAKE(Binary); }           { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,512); }                      
+                         |   { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,512); }                      
+                         
+_f_00151_                
+                         ::= PriorAssign                 Assign                      { MAKE(Binary); }           { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,512); }                      
+                         |   PriorQuestion               { CODE(BegQuestion); }      ExpressionValue             :                           { CODE(MidQuestion); }      Question                    { MAKE(Question); }         _f_00150_                
+                         |   { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,512); }                      
+                         
+_f_00152_                
+                         ::= PriorAssign                 Assign                      { MAKE(Binary); }           { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,16); }                          ;                           { TREE(AddToList); }        _f_00122_                
+                         |   { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,16); }                          ;                           { TREE(AddToList); }        _f_00122_                
+                         
+_f_00153_                
+                         ::= PriorAssign                 Assign                      { MAKE(Binary); }           { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,16); }                          ;                           { TREE(AddToList); }        _f_00122_                
+                         |   PriorQuestion               { CODE(BegQuestion); }      ExpressionValue             :                           { CODE(MidQuestion); }      Question                    { MAKE(Question); }         _f_00152_                
+                         |   { MAKE(ExpressionsLR); }    _f_00110_                   { MAKE(ExpressionSLR,16); }                          ;                           { TREE(AddToList); }        _f_00122_                
+                         

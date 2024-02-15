@@ -1,0 +1,26 @@
+
+S_                       
+                         : _E                       
+                         ;
+E_                       
+                         : <Priority,Term>             T                           { MAKE(Binary); }           E_                       
+                         | Empty                    
+                         ;
+F                        
+                         : <Separator,LeftBracket>     E                           <Separator,RightBracket> 
+                         | <Integer>                   { MAKE(Number); }        
+                         | <Number>                    { MAKE(Number); }        
+                         ;
+T_                       
+                         : <Priority,Factor>           F                           { MAKE(Binary); }           T_                       
+                         | Empty                    
+                         ;
+_E                       
+                         : { MAKE(BegStmExprLL); }     E                           { TREE(AddToList); }        { CODE(EndBlock); }      
+                         ;
+E                        
+                         : T                           E_                       
+                         ;
+T                        
+                         : F                           T_                       
+                         ;

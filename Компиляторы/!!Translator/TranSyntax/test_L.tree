@@ -1,0 +1,23 @@
+
+TNodeStatements type = Void      , 
+  TNodeDefFunc    type = Void      ,   group=Ident     , type=00          , line=002, column=005, len=04, text=f001
+    TNodeType       type = Void      ,   group=Reserv    , type=Void        , line=000, column=000, len=00, value=0, text=void
+    TNodeStatements type = Void      , 
+      TNodeIf         type = Unknown   ,   group=Reserv    , type=If          , line=002, column=014, len=02, value=8, text=if
+        TNodeDefine     type = Int       ,   group=Reserv    , type=Int         , line=002, column=018, len=03, value=2, text=int
+          TNodeCast       type = CInt      , 
+            T_NodeList      type = Int       , 
+              TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=002, column=022, len=01, text=i
+                TNodeType       type = Int       ,   group=Reserv    , type=Int         , line=000, column=000, len=00, value=2, text=int
+                TNodeExpressions type = CInt      , 
+                  TNodeBinary     type = CInt      ,   group=Oper      , type=Assign      , line=002, column=024, len=01, value=37, text==
+                    TNodeCast       type = RInt      , 
+                      TNodeVar        type = Int       ,   group=Ident     , type=00          , line=002, column=022, len=01, text=i
+                        TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=002, column=022, len=01, text=i
+                    TNodeExpressions type = CInt      , 
+                      TNodeNumber     type = CInt      ,   group=Integer   , type=00          , line=002, column=026, len=02, value=12, text=12 part=256  part=16 
+                alloc=Local  , offset=00
+              TNodeVar        type = Int       ,   group=Ident     , type=00          , line=002, column=022, len=01, text=i
+                TNodeDefVar     type = Int       ,   group=Ident     , type=00          , line=002, column=022, len=01, text=i
+        TNodeNull       type = Unknown   , 
+        TNodeNull       type = Unknown   ,  number=3, size=1 number=2, size=0 number=1, size=0 number=0, size=0

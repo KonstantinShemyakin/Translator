@@ -1,0 +1,24 @@
+
+S_
+          : E
+          ;
+E
+          : '('   E   ')'   T_   E_
+          | <Integer>   T_   E_
+          ;
+E_
+          : <Priority,Term>   T   E_
+          | Empty
+          ;
+T
+          : '('   E   ')'   T_
+          | <Integer>   T_
+          ;
+T_
+          : <Priority,Factor>   F   T_
+          | Empty
+          ;
+F
+          : '('   E   ')'
+          | <Integer>
+          ;

@@ -1,0 +1,684 @@
+
+level=6, step=3218
+--- semantic_tree = 0, syntax_tree = 1, lexemes = 0 ----
+
+--- RuleNames --- <166> ---
+
+
+true
+
+--- Grammar --- formula=166, produce=325, item=581, maker=0, used=155, vector=0, type=000000 ---
+
+FIRST
+step =  1, change =      76, item =     250, attempt = (   82,      82), vector =  130
+step =  2, change =      96, item =     346, attempt = (   85,     167), vector =  157
+step =  3, change =     169, item =     515, attempt = (   88,     255), vector =  204
+step =  4, change =     251, item =     766, attempt = (   98,     353), vector =  248
+step =  5, change =     313, item =    1079, attempt = (   94,     447), vector =  286
+step =  6, change =     351, item =    1430, attempt = (   90,     537), vector =  324
+step =  7, change =     320, item =    1750, attempt = (   78,     615), vector =  343
+step =  8, change =     295, item =    2045, attempt = (   61,     676), vector =  365
+step =  9, change =     280, item =    2325, attempt = (   50,     726), vector =  390
+step = 10, change =     270, item =    2595, attempt = (   47,     773), vector =  401
+step = 11, change =     242, item =    2837, attempt = (   44,     817), vector =  406
+step = 12, change =     222, item =    3059, attempt = (   31,     848), vector =  411
+step = 13, change =     216, item =    3275, attempt = (   19,     867), vector =  416
+step = 14, change =     236, item =    3511, attempt = (   17,     884), vector =  432
+step = 15, change =     279, item =    3790, attempt = (   24,     908), vector =  444
+step = 16, change =     414, item =    4204, attempt = (   47,     955), vector =  500
+step = 17, change =     665, item =    4869, attempt = (   58,    1013), vector =  531
+step = 18, change =     780, item =    5649, attempt = (   67,    1080), vector =  551
+step = 19, change =     802, item =    6451, attempt = (   75,    1155), vector =  555
+step = 20, change =     536, item =    6987, attempt = (   86,    1241), vector =  558
+step = 21, change =     293, item =    7280, attempt = (   83,    1324), vector =  561
+step = 22, change =     126, item =    7406, attempt = (   68,    1392), vector =  561
+step = 23, change =      52, item =    7458, attempt = (   48,    1440), vector =  562
+step = 24, change =      53, item =    7511, attempt = (   58,    1498), vector =  562
+step = 25, change =      44, item =    7555, attempt = (   52,    1550), vector =  562
+step = 26, change =      24, item =    7579, attempt = (   31,    1581), vector =  562
+step = 27, change =      22, item =    7601, attempt = (   13,    1594), vector =  562
+step = 28, change =      22, item =    7623, attempt = (   11,    1605), vector =  562
+step = 29, change =      21, item =    7644, attempt = (    9,    1614), vector =  562
+step = 30, change =      21, item =    7665, attempt = (    7,    1621), vector =  562
+step = 31, change =      20, item =    7685, attempt = (    6,    1627), vector =  562
+step = 32, change =       1, item =    7686, attempt = (    4,    1631), vector =  562
+step = 33, change =       0, item =    7686, attempt = (    2,    1633), vector =  562
+
+EFF
+step =  1, change =     450, item =     901, attempt = (   92,      92), vector =  651
+step =  2, change =     588, item =    1489, attempt = (   79,     171), vector =  834
+step =  3, change =     541, item =    2030, attempt = (   75,     246), vector =  880
+step =  4, change =     566, item =    2596, attempt = (   81,     327), vector =  943
+step =  5, change =     595, item =    3191, attempt = (   76,     403), vector =  973
+step =  6, change =     457, item =    3648, attempt = (   67,     470), vector =  988
+step =  7, change =     327, item =    3975, attempt = (   52,     522), vector = 1003
+step =  8, change =     263, item =    4238, attempt = (   43,     565), vector = 1018
+step =  9, change =     258, item =    4496, attempt = (   34,     599), vector = 1033
+step = 10, change =     231, item =    4727, attempt = (   28,     627), vector = 1048
+step = 11, change =     226, item =    4953, attempt = (   26,     653), vector = 1063
+step = 12, change =     225, item =    5178, attempt = (   21,     674), vector = 1063
+step = 13, change =     260, item =    5438, attempt = (   18,     692), vector = 1063
+step = 14, change =     415, item =    5853, attempt = (   21,     713), vector = 1063
+step = 15, change =     482, item =    6335, attempt = (   20,     733), vector = 1063
+step = 16, change =     229, item =    6564, attempt = (   18,     751), vector = 1063
+step = 17, change =     247, item =    6811, attempt = (   16,     767), vector = 1063
+step = 18, change =     293, item =    7104, attempt = (   14,     781), vector = 1063
+step = 19, change =     383, item =    7487, attempt = (   11,     792), vector = 1063
+step = 20, change =     101, item =    7588, attempt = (    9,     801), vector = 1063
+step = 21, change =       6, item =    7594, attempt = (    3,     804), vector = 1063
+step = 22, change =       0, item =    7594, attempt = (    0,     804), vector = 1063
+
+FOLLOW
+step =  1, change =   10764, item =   13088, attempt = ( 1081,    1081), vector = 1141
+step =  2, change =   27948, item =   41036, attempt = ( 1968,    3049), vector = 1195
+step =  3, change =   54384, item =   95420, attempt = ( 2937,    5986), vector = 1220
+step =  4, change =   84453, item =  179873, attempt = ( 4017,   10003), vector = 1254
+step =  5, change =   99281, item =  279154, attempt = ( 4976,   14979), vector = 1264
+step =  6, change =   88105, item =  367259, attempt = ( 5763,   20742), vector = 1306
+step =  7, change =   75971, item =  443230, attempt = ( 6199,   26941), vector = 1322
+step =  8, change =   68880, item =  512110, attempt = ( 6304,   33245), vector = 1335
+step =  9, change =   68492, item =  580602, attempt = ( 5970,   39215), vector = 1344
+step = 10, change =   66792, item =  647394, attempt = ( 5610,   44825), vector = 1349
+step = 11, change =   71254, item =  718648, attempt = ( 5188,   50013), vector = 1353
+step = 12, change =   71760, item =  790408, attempt = ( 4953,   54966), vector = 1357
+step = 13, change =   72245, item =  862653, attempt = ( 4703,   59669), vector = 1361
+step = 14, change =   82928, item =  945581, attempt = ( 4443,   64112), vector = 1365
+step = 15, change =   85059, item = 1030640, attempt = ( 4131,   68243), vector = 1367
+step = 16, change =   96581, item = 1127221, attempt = ( 4199,   72442), vector = 1372
+step = 17, change =  105095, item = 1232316, attempt = ( 4374,   76816), vector = 1374
+step = 18, change =  132768, item = 1365084, attempt = ( 4526,   81342), vector = 1376
+step = 19, change =  128470, item = 1493554, attempt = ( 5005,   86347), vector = 1378
+step = 20, change =  104646, item = 1598200, attempt = ( 5467,   91814), vector = 1390
+step = 21, change =   88163, item = 1686363, attempt = ( 5719,   97533), vector = 1394
+step = 22, change =   79771, item = 1766134, attempt = ( 5933,  103466), vector = 1400
+step = 23, change =   64280, item = 1830414, attempt = ( 5982,  109448), vector = 1400
+step = 24, change =   48068, item = 1878482, attempt = ( 5891,  115339), vector = 1400
+step = 25, change =   36255, item = 1914737, attempt = ( 5520,  120859), vector = 1400
+step = 26, change =   29276, item = 1944013, attempt = ( 5002,  125861), vector = 1400
+step = 27, change =   26307, item = 1970320, attempt = ( 4460,  130321), vector = 1400
+step = 28, change =   21951, item = 1992271, attempt = ( 4131,  134452), vector = 1400
+step = 29, change =   16530, item = 2008801, attempt = ( 3799,  138251), vector = 1400
+step = 30, change =   13739, item = 2022540, attempt = ( 3423,  141674), vector = 1400
+step = 31, change =   13247, item = 2035787, attempt = ( 3197,  144871), vector = 1400
+step = 32, change =   13320, item = 2049107, attempt = ( 3109,  147980), vector = 1400
+step = 33, change =   13368, item = 2062475, attempt = ( 3099,  151079), vector = 1400
+step = 34, change =   13778, item = 2076253, attempt = ( 3229,  154308), vector = 1400
+step = 35, change =   15807, item = 2092060, attempt = ( 3401,  157709), vector = 1400
+step = 36, change =   16952, item = 2109012, attempt = ( 3714,  161423), vector = 1400
+step = 37, change =   14503, item = 2123515, attempt = ( 3916,  165339), vector = 1400
+step = 38, change =   11678, item = 2135193, attempt = ( 3871,  169210), vector = 1400
+step = 39, change =    9918, item = 2145111, attempt = ( 3792,  173002), vector = 1400
+step = 40, change =    8053, item = 2153164, attempt = ( 3475,  176477), vector = 1400
+step = 41, change =    5763, item = 2158927, attempt = ( 3145,  179622), vector = 1400
+step = 42, change =    4028, item = 2162955, attempt = ( 2586,  182208), vector = 1400
+step = 43, change =    2897, item = 2165852, attempt = ( 2056,  184264), vector = 1400
+step = 44, change =    2216, item = 2168068, attempt = ( 1680,  185944), vector = 1400
+step = 45, change =    1613, item = 2169681, attempt = ( 1306,  187250), vector = 1400
+step = 46, change =     963, item = 2170644, attempt = (  930,  188180), vector = 1400
+step = 47, change =     464, item = 2171108, attempt = (  592,  188772), vector = 1400
+step = 48, change =     248, item = 2171356, attempt = (  388,  189160), vector = 1400
+step = 49, change =     145, item = 2171501, attempt = (  256,  189416), vector = 1400
+step = 50, change =      70, item = 2171571, attempt = (  155,  189571), vector = 1400
+step = 51, change =      22, item = 2171593, attempt = (   81,  189652), vector = 1400
+step = 52, change =       3, item = 2171596, attempt = (   39,  189691), vector = 1400
+step = 53, change =       0, item = 2171596, attempt = (    9,  189700), vector = 1400
+
+Situation
+00000,00001,00000
+00100,00180,00242
+00200,00283,00778
+00300,00361,01689
+00400,00437,03139
+00493,04186
+--- Situations --- <493> --- <6544> ---
+
+--- GOTOtable --- <4186> ---
+
+A: (1)-> reference_type            . <Ident,16>
+B: (3)-> relational_expression    <Reserv,Instanceof>      reference_type            .
+->  { <Ident,16>                <Ident>                   }  { <Ident,16>                <Separator,LeftScrape>    }
+A: (1)-> switch_block_statement_groups                      . switch_block_statement_group
+B: (1)-> switch_block_statement_groups                      .
+->  { <Reserv,Default>         <Separator,Colon>         }  { <Reserv,Case>            <Separator,LeftBracket>   }  { <Reserv,Case>            <Ident,5>                 }  { <Reserv,Case>            <Reserv,Super>            }  { <Reserv,Case>            <Reserv,New>              }  { <Reserv,Case>            <Ident,6>                 }  { <Reserv,Case>            <Oper,MinusMinus>         }  { <Reserv,Case>            <Oper,PlusPlus>           }  { <Reserv,Case>            <Oper,Tilda>              }  { <Reserv,Case>            <Oper,Not>                }  { <Reserv,Case>            <Reserv,This>             }  { <Reserv,Case>            <Oper,Add>                }  { <Reserv,Case>            <Oper,Sub>                }  { <Reserv,Case>            <Integer>                 }  { <Reserv,Case>            <Number>                  }  { <Reserv,Case>            <Reserv,Null>             }
+Invalid: 2
+
+Action
+00000,00000
+00100,04858
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Separator,Semicolon>     } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Separator,Semicolon>     } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,If>               } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,If>               } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Switch>           } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Switch>           } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,While>            } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,While>            } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,For>              } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,For>              } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Synchronized>     } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Synchronized>     } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Separator,LeftCramp>     } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Separator,LeftCramp>     } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Ident>                   } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Ident>                   } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Break>            } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Break>            } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Continue>         } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Continue>         } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Return>           } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Return>           } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Super>            } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Super>            } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,New>              } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,New>              } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Ident,16>                 } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Ident,16>                 } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Ident,14>                 } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Ident,14>                 } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Ident,15>                 } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Ident,15>                 } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Try>              } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Try>              } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Ident,6>                 } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Ident,6>                 } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Oper,MinusMinus>         } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Oper,MinusMinus>         } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Oper,PlusPlus>           } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Oper,PlusPlus>           } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Ident,5>                 } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Ident,5>                 } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,This>             } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,This>             } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Integer>                 } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Integer>                 } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Number>                  } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Number>                  } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Null>             } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Null>             } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Do>               } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Do>               } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Throw>            } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Throw>            } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Separator,LeftBracket>   } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Separator,LeftBracket>   } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Comma>        <Integer>                 } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Comma>        <Integer>                 } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Comma>        <Number>                  } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Comma>        <Number>                  } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Comma>        <Ident,5>                 } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Comma>        <Ident,5>                 } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Comma>        <Reserv,This>             } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Comma>        <Reserv,This>             } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Comma>        <Reserv,Null>             } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Comma>        <Reserv,Null>             } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Comma>        <Separator,LeftBracket>   } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Comma>        <Separator,LeftBracket>   } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Comma>        <Reserv,Super>            } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Comma>        <Reserv,Super>            } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Comma>        <Reserv,New>              } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Comma>        <Reserv,New>              } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Comma>        <Ident,6>                 } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Comma>        <Ident,6>                 } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Comma>        <Oper,MinusMinus>         } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Comma>        <Oper,MinusMinus>         } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Comma>        <Oper,PlusPlus>           } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Comma>        <Oper,PlusPlus>           } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Separator,RightCramp>    } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Separator,RightCramp>    } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Separator,Semicolon>     } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Separator,Semicolon>     } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,If>               } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,If>               } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Switch>           } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Switch>           } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,While>            } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,While>            } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,For>              } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,For>              } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Synchronized>     } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Synchronized>     } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Super>            } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Super>            } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,New>              } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,New>              } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Separator,LeftCramp>     } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Separator,LeftCramp>     } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Ident>                   } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Ident>                   } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Break>            } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Break>            } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Continue>         } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Continue>         } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Return>           } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Return>           } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Ident,6>                 } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Ident,6>                 } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Try>              } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Try>              } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Oper,MinusMinus>         } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Oper,MinusMinus>         } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Oper,PlusPlus>           } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Oper,PlusPlus>           } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Ident,5>                 } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Ident,5>                 } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,This>             } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,This>             } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Integer>                 } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Integer>                 } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Number>                  } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Number>                  } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Null>             } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Null>             } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Separator,LeftBracket>   } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Separator,LeftBracket>   } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Do>               } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Do>               } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Throw>            } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,RightBracket> <Reserv,Throw>            } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Oper,Tilda>              } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Oper,Tilda>              } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Oper,Not>                } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Oper,Not>                } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Oper,Add>                } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Oper,Add>                } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Oper,Sub>                } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Oper,Sub>                } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Default>          } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Default>          } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Case>             } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Case>             } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Else>             } } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00136         , { <Separator,Semicolon>    <Reserv,Else>             } } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Separator,Semicolon>     } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Separator,Semicolon>     } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,If>               } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,If>               } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Switch>           } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Switch>           } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,While>            } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,While>            } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,For>              } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,For>              } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Synchronized>     } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Synchronized>     } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Separator,LeftCramp>     } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Separator,LeftCramp>     } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Ident>                   } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Ident>                   } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Break>            } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Break>            } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Continue>         } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Continue>         } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Return>           } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Return>           } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Super>            } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Super>            } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,New>              } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,New>              } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Ident,16>                 } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Ident,16>                 } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Ident,14>                 } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Ident,14>                 } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Ident,15>                 } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Ident,15>                 } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Try>              } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Try>              } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Ident,6>                 } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Ident,6>                 } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Oper,MinusMinus>         } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Oper,MinusMinus>         } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Oper,PlusPlus>           } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Oper,PlusPlus>           } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Ident,5>                 } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Ident,5>                 } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,This>             } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,This>             } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Integer>                 } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Integer>                 } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Number>                  } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Number>                  } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Null>             } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Null>             } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Do>               } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Do>               } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Throw>            } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Reserv,Throw>            } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00137         , { <Separator,Semicolon>    <Separator,LeftBracket>   } } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00137         , { <Separator,Semicolon>    <Separator,LeftBracket>   } } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+00200,29763
+00300,58758
+
+
+
+
+
+
+
+level=6, step=3224
+--- semantic_tree = 0, syntax_tree = 1, lexemes = 0 ----
+
+--- RuleNames --- <166> ---
+
+
+#define: PRIOR_ASSIGN
+
+true
+
+--- Grammar --- formula=166, produce=325, item=583, maker=0, used=163, vector=0, type=000000 ---
+
+FIRST
+FOLLOW
+Situation
+00000
+00100
+00200
+00300
+00400
+00500
+00512, delete=3698, empty=0, add=511, true_count=38489, false_count=-145221, closure_count=4210
+--- Situations --- <512> --- <6581> ---
+
+--- GOTOtable --- <4209> ---
+
+Action
+00000,00000
+00100,00632
+Duplicate:
+{Situation: 00156         ,<Separator,RightBracket> } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00156         ,<Separator,RightBracket> } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00156         ,<Separator,Comma>        } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00156         ,<Separator,Comma>        } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00156         ,<Separator,Semicolon>    } -> Reduce  [  4] statement_expression-> postdecrement_expression
+{Situation: 00156         ,<Separator,Semicolon>    } -> Reduce  [  3] postfix_expression -> postdecrement_expression
+
+Duplicate:
+{Situation: 00157         ,<Separator,RightBracket> } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00157         ,<Separator,RightBracket> } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00157         ,<Separator,Comma>        } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00157         ,<Separator,Comma>        } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00157         ,<Separator,Semicolon>    } -> Reduce  [  2] statement_expression-> postincrement_expression
+{Situation: 00157         ,<Separator,Semicolon>    } -> Reduce  [  2] postfix_expression -> postincrement_expression
+
+Duplicate:
+{Situation: 00159         ,<Separator,RightBracket> } -> Reduce  [  5] statement_expression-> method_invocation
+{Situation: 00159         ,<Separator,RightBracket> } -> Reduce  [  5] primary_no_new_array-> method_invocation
+
+Duplicate:
+{Situation: 00159         ,<Separator,Comma>        } -> Reduce  [  5] statement_expression-> method_invocation
+{Situation: 00159         ,<Separator,Comma>        } -> Reduce  [  5] primary_no_new_array-> method_invocation
+
+Duplicate:
+{Situation: 00159         ,<Separator,Semicolon>    } -> Reduce  [  5] statement_expression-> method_invocation
+{Situation: 00159         ,<Separator,Semicolon>    } -> Reduce  [  5] primary_no_new_array-> method_invocation
+
+Duplicate:
+{Situation: 00163         ,<Separator,RightBracket> } -> Reduce  [  6] statement_expression-> class_instance_creation_expression
+{Situation: 00163         ,<Separator,RightBracket> } -> Reduce  [  3] primary_no_new_array-> class_instance_creation_expression
+
+Duplicate:
+{Situation: 00163         ,<Separator,Comma>        } -> Reduce  [  6] statement_expression-> class_instance_creation_expression
+{Situation: 00163         ,<Separator,Comma>        } -> Reduce  [  3] primary_no_new_array-> class_instance_creation_expression
+
+Duplicate:
+{Situation: 00163         ,<Separator,Semicolon>    } -> Reduce  [  6] statement_expression-> class_instance_creation_expression
+{Situation: 00163         ,<Separator,Semicolon>    } -> Reduce  [  3] primary_no_new_array-> class_instance_creation_expression
+
+00200,02623
+Duplicate:
+{Situation: 00202         ,<Reserv,This>            } -> Reduce  [  1] explicit_constructor_invocation_or_not->
+{Situation: 00202         ,<Reserv,This>            } -> Shift   Situation: 00296
+:=Shift   Situation: 00296
+
+Duplicate:
+{Situation: 00202         ,<Reserv,Super>           } -> Reduce  [  1] explicit_constructor_invocation_or_not->
+{Situation: 00202         ,<Reserv,Super>           } -> Shift   Situation: 00297
+:=Shift   Situation: 00297
+
+00300,04803
+Duplicate:
+{Situation: 00365         ,<Separator,Comma>        } -> Reduce  [  0] variable_initializers_or_not-> variable_initializers
+{Situation: 00365         ,<Separator,Comma>        } -> Shift   Situation: 00421
+:=Shift   Situation: 00421
+
+Duplicate:
+{Situation: 00391         ,<Ident,16>                } -> Reduce  [  5] relational_expression-> relational_expression   <Reserv,Instanceof>   reference_type
+{Situation: 00391         ,<Ident,16>                } -> Shift   Situation: 00121
+:=Shift   Situation: 00121
+
+00400,07253
+Duplicate:
+{Situation: 00446         ,<Reserv,Case>            } -> Reduce  [  1] switch_block_statement_groups_or_not->
+{Situation: 00446         ,<Reserv,Case>            } -> Shift   Situation: 00473
+:=Shift   Situation: 00473
+
+Duplicate:
+{Situation: 00446         ,<Reserv,Default>         } -> Reduce  [  1] switch_block_statement_groups_or_not->
+{Situation: 00446         ,<Reserv,Default>         } -> Shift   Situation: 00474
+:=Shift   Situation: 00474
+
+Duplicate:
+{Situation: 00469         ,<Reserv,Case>            } -> Reduce  [  0] switch_block_statement_groups_or_not-> switch_block_statement_groups
+{Situation: 00469         ,<Reserv,Case>            } -> Shift   Situation: 00473
+:=Shift   Situation: 00473
+
+Duplicate:
+{Situation: 00469         ,<Reserv,Default>         } -> Reduce  [  0] switch_block_statement_groups_or_not-> switch_block_statement_groups
+{Situation: 00469         ,<Reserv,Default>         } -> Shift   Situation: 00474
+:=Shift   Situation: 00474
+
+00500,09505
+00512,09772, not_find=80383, empty=0, shift=1640, reduce=5570, goto=2561
+
+--- LR table --- <512,9772> ---
+
+Duplicate: 20
+
+time: 3.713s

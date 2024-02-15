@@ -1,0 +1,10 @@
+TNodeDefFunc    line=001, column=005, len=04, text=ffff
+command = Exit      , param = 000, mode = 000, type = Void      
+
+command = NewVar    , addr  = 000, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 000, Global , mode = 001, type = Int       
+command = Oper      , oper  = None          , mode = 001, type = Void      
+
+Integer        0 3
+Integer        1 0
+

@@ -1,0 +1,30 @@
+S_                       -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  
+Assign                   -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  
+_f_00002_                -> <Priority,Assign>        Empty                    
+Question                 -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  
+_f_00004_                -> <Priority,OrOr>          
+_f_00005_                -> <Priority,OrOr>          Empty                    
+_f_00006_                -> <Priority,Question>      Empty                    
+AndAnd                   -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  
+_f_00008_                -> <Priority,AndAnd>        
+_f_00009_                -> <Priority,AndAnd>        Empty                    
+Or                       -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  
+E                        -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  
+_f_00012_                -> <Priority,Term>          
+_f_00013_                -> <Priority,Term>          Empty                    
+T                        -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  
+_f_00015_                -> <Priority,Factor>        
+_f_00016_                -> <Priority,Factor>        Empty                    
+F                        -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  
+<Separator,LeftBracket>  -> <Separator,LeftBracket>  
+<Separator,RightBracket> -> <Separator,RightBracket> 
+<Separator,Colon>        -> <Separator,Colon>        
+<Integer>                -> <Integer>                
+<Number>                 -> <Number>                 
+<Ident>                  -> <Ident>                  
+<Priority,Assign>        -> <Priority,Assign>        
+<Priority,Question>      -> <Priority,Question>      
+<Priority,OrOr>          -> <Priority,OrOr>          
+<Priority,AndAnd>        -> <Priority,AndAnd>        
+<Priority,Term>          -> <Priority,Term>          
+<Priority,Factor>        -> <Priority,Factor>        

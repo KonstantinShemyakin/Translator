@@ -1,0 +1,31 @@
+
+S_                       
+                         ::= Assign                   
+                         
+Assign                   
+                         ::= E                           
+                             [ 
+                             Priority_Assign             Assign                   
+                             ] 
+                         
+E                        
+                         ::= T                           
+                         [
+                         Priority_Term               T                        
+                         
+                         ]... 
+                         
+T                        
+                         ::= F                           
+                         [
+                         Priority_Factor             F                        
+                         
+                         ]... 
+                         
+F                        
+                         ::= { 
+                             (                           E                           )                        
+                         |   Ident                    
+                         |   Integer                  
+                         |   Number                   
+                             } 

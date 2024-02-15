@@ -1,0 +1,247 @@
+
+--- Grammar --- formula=88, produce=156, item=381, maker=121, used=88, vector=0, type=010371 ---
+
+S_:                      used=1, 00000
+[  0] S_                 -> Program                  
+Program:                 used=1, 00001
+[  0] Program            -> { MAKE(BegStmExprLL); }  _f_00008_                { CODE(EndBlock); }      
+_f_00002_:               used=1, 00002
+[  0] _f_00002_          -> _f_00003_                { TREE(AddToList); }     
+_f_00003_:               used=1, 00003
+[  0] _f_00003_          -> <Separator,Semicolon>    { TREE(NodeNull); }      
+[  1] _f_00003_          -> <Syntax,DefFunc>         <Syntax,IdentFunc>       { MAKE(FuncIdent); }     _f_00004_                _f_00007_                
+[  2] _f_00003_          -> DefineSemi               
+_f_00004_:               used=1, 00004
+[  0] _f_00004_          -> <Syntax,EmptyBracket>    { TREE(EndParams,2); }   
+[  1] _f_00004_          -> <Separator,LeftBracket>  { TREE(Define,2); }      DefParItem               _f_00006_                { TREE(EndParams); }     <Separator,RightBracket> 
+_f_00005_:               used=1, 00005
+[  0] _f_00005_          -> <Separator,Comma>        DefParItem               
+_f_00006_:               used=2, 00006
+[  0] _f_00006_          -> _f_00005_                _f_00006_                
+[  1] _f_00006_          -> 
+_f_00007_:               used=1, 00007
+[  0] _f_00007_          -> <Separator,Semicolon>    { MAKE(BodyFunc); }      
+[  1] _f_00007_          -> <Syntax,EmptyCramp>      { MAKE(BodyFunc,1); }    
+[  2] _f_00007_          -> <Separator,LeftCramp>    { CODE(EndParams); }     StmExpr                  <Separator,RightCramp>   { MAKE(BodyFunc,2); }    
+_f_00008_:               used=2, 00008
+[  0] _f_00008_          -> _f_00002_                _f_00008_                
+[  1] _f_00008_          -> 
+DefParInit:              used=2, 00009
+[  0] DefParInit         -> <Oper,Assign>            { CODE(BegParVarAssign); }                        Assign                   { MAKE(ParVarAssign); }  
+[  1] DefParInit         -> 
+DefParItem:              used=2, 00010
+[  0] DefParItem         -> _f_00011_                { TREE(AddToList); }     
+_f_00011_:               used=1, 00011
+[  0] _f_00011_          -> <Syntax,DefArr>          <Syntax,IdentArr>        { MAKE(DefParArr); }     DefArrDA                 DefParInit               
+[  1] _f_00011_          -> <Syntax,DefVar>          <Ident>                  { MAKE(DefParVar); }     DefParInit               
+Initializer:             used=2, 00012
+[  0] Initializer        -> <Syntax,EmptyCramp>      { CODE(BegInitial); }    { TREE(NodeListLL); }    
+[  1] Initializer        -> <Separator,LeftCramp>    { CODE(BegInitial,1); }  { TREE(NodeListLL); }    AInitItem                { TREE(AddToList); }     _f_00014_                <Separator,RightCramp>   { CODE(EndInitial); }    
+_f_00013_:               used=1, 00013
+[  0] _f_00013_          -> <Separator,Comma>        AInitItem                { TREE(AddToList); }     
+_f_00014_:               used=2, 00014
+[  0] _f_00014_          -> _f_00013_                _f_00014_                
+[  1] _f_00014_          -> 
+AInitItem:               used=2, 00015
+[  0] AInitItem          -> Initializer              
+[  1] AInitItem          -> Assign                   { CODE(AInitItem); }     
+DefArrDA:                used=2, 00016
+[  0] DefArrDA           -> _f_00017_                _f_00019_                { CODE(EndRanges); }     
+_f_00017_:               used=1, 00017
+[  0] _f_00017_          -> <Syntax,EmptyScrape>     { MAKE(DefArrD1AEmpty); }
+[  1] _f_00017_          -> <Separator,LeftScrape>   Assign                   <Separator,RightScrape>  { MAKE(DRange); }        
+_f_00018_:               used=1, 00018
+[  0] _f_00018_          -> <Separator,LeftScrape>   Assign                   <Separator,RightScrape>  { MAKE(DRange); }        
+_f_00019_:               used=2, 00019
+[  0] _f_00019_          -> _f_00018_                _f_00019_                
+[  1] _f_00019_          -> 
+DefVar:                  used=3, 00020
+[  0] DefVar             -> <Ident>                  { MAKE(DefIdent); }      _f_00021_                
+_f_00021_:               used=1, 00021
+[  0] _f_00021_          -> <Oper,Assign>            { CODE(BegDefVarAssign); }                        Assign                   { MAKE(DefVarAssign); }  
+[  1] _f_00021_          -> 
+DefIAV:                  used=2, 00022
+[  0] DefIAV             -> <Syntax,IdentArr>        { MAKE(DefArray); }      DefArrDA                 _f_00023_                
+[  1] DefIAV             -> DefVar                   
+_f_00023_:               used=1, 00023
+[  0] _f_00023_          -> <Oper,Assign>            { CODE(BegAInit); }      Initializer              { MAKE(EndAInit); }      
+[  1] _f_00023_          -> 
+DefItem:                 used=2, 00024
+[  0] DefItem            -> <Priority,And>           DefIAV                   { TREE(RefDef); }        
+[  1] DefItem            -> DefIAV                   
+Condition:               used=4, 00025
+[  0] Condition          -> <Syntax,DefVar>          { MAKE(Define); }        _f_00026_                { MAKE(PushDef); }       
+[  1] Condition          -> { CODE(Part,241); }      Expressions              { TREE(ExpressionSLL,241); }                      
+_f_00026_:               used=1, 00026
+[  0] _f_00026_          -> <Priority,And>           DefVar                   { TREE(RefDef); }        
+[  1] _f_00026_          -> DefVar                   
+Expressions:             used=5, 00027
+[  0] Expressions        -> Assign                   { MAKE(ExpressionsLL); } _f_00029_                { CODE(ExpressionSLL); } 
+_f_00028_:               used=1, 00028
+[  0] _f_00028_          -> <Separator,Comma>        Assign                   { TREE(AddToList); }     { CODE(AddToExpr); }     
+_f_00029_:               used=2, 00029
+[  0] _f_00029_          -> _f_00028_                _f_00029_                
+[  1] _f_00029_          -> 
+Assign:                  used=8, 00030
+[  0] Assign             -> Question                 _f_00031_                
+_f_00031_:               used=1, 00031
+[  0] _f_00031_          -> <Priority,Assign>        Assign                   { MAKE(Binary); }        
+[  1] _f_00031_          -> 
+Question:                used=2, 00032
+[  0] Question           -> AndAnd                   _f_00034_                _f_00035_                
+_f_00033_:               used=1, 00033
+[  0] _f_00033_          -> <Priority,OrOr>          AndAnd                   { MAKE(Binary); }        
+_f_00034_:               used=2, 00034
+[  0] _f_00034_          -> _f_00033_                _f_00034_                
+[  1] _f_00034_          -> 
+_f_00035_:               used=1, 00035
+[  0] _f_00035_          -> <Priority,Question>      { CODE(BegQuestion); }   ExpressionValue          <Separator,Colon>        { CODE(MidQuestion); }   Question                 { MAKE(Question); }      
+[  1] _f_00035_          -> 
+AndAnd:                  used=2, 00036
+[  0] AndAnd             -> Or                       _f_00038_                
+_f_00037_:               used=1, 00037
+[  0] _f_00037_          -> <Priority,AndAnd>        Or                       { MAKE(Binary); }        
+_f_00038_:               used=2, 00038
+[  0] _f_00038_          -> _f_00037_                _f_00038_                
+[  1] _f_00038_          -> 
+Or:                      used=2, 00039
+[  0] Or                 -> XOr                      _f_00041_                
+_f_00040_:               used=1, 00040
+[  0] _f_00040_          -> <Priority,Or>            XOr                      { MAKE(Binary); }        
+_f_00041_:               used=2, 00041
+[  0] _f_00041_          -> _f_00040_                _f_00041_                
+[  1] _f_00041_          -> 
+XOr:                     used=2, 00042
+[  0] XOr                -> And                      _f_00044_                
+_f_00043_:               used=1, 00043
+[  0] _f_00043_          -> <Priority,XOr>           And                      { MAKE(Binary); }        
+_f_00044_:               used=2, 00044
+[  0] _f_00044_          -> _f_00043_                _f_00044_                
+[  1] _f_00044_          -> 
+And:                     used=2, 00045
+[  0] And                -> Equ                      _f_00047_                
+_f_00046_:               used=1, 00046
+[  0] _f_00046_          -> <Priority,And>           Equ                      { MAKE(Binary); }        
+_f_00047_:               used=2, 00047
+[  0] _f_00047_          -> _f_00046_                _f_00047_                
+[  1] _f_00047_          -> 
+Equ:                     used=2, 00048
+[  0] Equ                -> Compare                  _f_00050_                
+_f_00049_:               used=1, 00049
+[  0] _f_00049_          -> <Priority,Equ>           Compare                  { MAKE(Binary); }        
+_f_00050_:               used=2, 00050
+[  0] _f_00050_          -> _f_00049_                _f_00050_                
+[  1] _f_00050_          -> 
+Compare:                 used=2, 00051
+[  0] Compare            -> Shift                    _f_00053_                
+_f_00052_:               used=1, 00052
+[  0] _f_00052_          -> <Priority,Compare>       Shift                    { MAKE(Binary); }        
+_f_00053_:               used=2, 00053
+[  0] _f_00053_          -> _f_00052_                _f_00053_                
+[  1] _f_00053_          -> 
+Shift:                   used=2, 00054
+[  0] Shift              -> Term                     _f_00056_                
+_f_00055_:               used=1, 00055
+[  0] _f_00055_          -> <Priority,Shift>         Term                     { MAKE(Binary); }        
+_f_00056_:               used=2, 00056
+[  0] _f_00056_          -> _f_00055_                _f_00056_                
+[  1] _f_00056_          -> 
+Term:                    used=2, 00057
+[  0] Term               -> Factor                   _f_00059_                
+_f_00058_:               used=1, 00058
+[  0] _f_00058_          -> <Priority,Term>          Factor                   { MAKE(Binary); }        
+_f_00059_:               used=2, 00059
+[  0] _f_00059_          -> _f_00058_                _f_00059_                
+[  1] _f_00059_          -> 
+Factor:                  used=2, 00060
+[  0] Factor             -> Unary                    _f_00062_                
+_f_00061_:               used=1, 00061
+[  0] _f_00061_          -> <Priority,Factor>        Unary                    { MAKE(Binary); }        
+_f_00062_:               used=2, 00062
+[  0] _f_00062_          -> _f_00061_                _f_00062_                
+[  1] _f_00062_          -> 
+Unary:                   used=6, 00063
+[  0] Unary              -> <Priority,Unary>         Unary                    { MAKE(Unary); }         
+[  1] Unary              -> <Priority,Term>          Unary                    { MAKE(Unary); }         
+[  2] Unary              -> <Priority,IncDec>        Unary                    { MAKE(Unary); }         
+[  3] Unary              -> <Syntax,CastUnary>       Unary                    { MAKE(Cast); }          
+[  4] Unary              -> _f_00064_                _f_00068_                
+_f_00064_:               used=1, 00064
+[  0] _f_00064_          -> <Integer>                { MAKE(Number); }        
+[  1] _f_00064_          -> <Number>                 { MAKE(Number); }        
+[  2] _f_00064_          -> <Syntax,IdentArr>        { MAKE(BegIndexLL); }    _f_00066_                { MAKE(EndIndex); }      
+[  3] _f_00064_          -> <Syntax,IdentFunc>       _f_00067_                
+[  4] _f_00064_          -> <Syntax,Cast>            Primary                  { MAKE(Cast); }          
+[  5] _f_00064_          -> <Ident>                  { MAKE(Ident); }         
+[  6] _f_00064_          -> Primary                  
+_f_00065_:               used=1, 00065
+[  0] _f_00065_          -> <Separator,LeftScrape>   ExpressionValue          <Separator,RightScrape>  { MAKE(IndexLL); }       
+_f_00066_:               used=2, 00066
+[  0] _f_00066_          -> _f_00065_                _f_00066_                
+[  1] _f_00066_          -> 
+_f_00067_:               used=1, 00067
+[  0] _f_00067_          -> <Syntax,EmptyBracket>    { MAKE(Params); }        
+[  1] _f_00067_          -> <Separator,LeftBracket>  { CODE(Part,512); }      Expressions              { TREE(ExpressionSLL,512); }                      <Separator,RightBracket> { MAKE(Params,1); }      
+_f_00068_:               used=1, 00068
+[  0] _f_00068_          -> <Priority,IncDec>        { MAKE(IncDec); }        
+[  1] _f_00068_          -> 
+Primary:                 used=2, 00069
+[  0] Primary            -> <Separator,LeftBracket>  { CODE(Part); }          Expressions              { TREE(ExpressionSLL); } <Separator,RightBracket> { TREE(Primary); }       
+DefineSemi:              used=3, 00070
+[  0] DefineSemi         -> _f_00071_                { MAKE(Define); }        DefItem                  { TREE(AddToList); }     _f_00073_                { CODE(EndDefine); }     <Separator,Semicolon>    
+_f_00071_:               used=1, 00071
+[  0] _f_00071_          -> <Syntax,DefArr>          
+[  1] _f_00071_          -> <Syntax,DefVar>          
+_f_00072_:               used=1, 00072
+[  0] _f_00072_          -> <Separator,Comma>        DefItem                  { TREE(AddToList); }     
+_f_00073_:               used=2, 00073
+[  0] _f_00073_          -> _f_00072_                _f_00073_                
+[  1] _f_00073_          -> 
+ExprSemi:                used=2, 00074
+[  0] ExprSemi           -> ExpressionExpression     <Separator,Semicolon>    
+DefExpr:                 used=7, 00075
+[  0] DefExpr            -> <Separator,Semicolon>    { TREE(NodeNull); }      
+[  1] DefExpr            -> DefineSemi               
+[  2] DefExpr            -> _f_00076_                
+[  3] DefExpr            -> ExprSemi                 
+_f_00076_:               used=1, 00076
+[  0] _f_00076_          -> <Syntax,Label>           <Separator,Colon>        { CODE(Label); }         DefExpr                  { TREE(Label); }         
+[  1] _f_00076_          -> <Reserv,If>              <Separator,LeftBracket>  { CODE(BegIf); }         Condition                <Separator,RightBracket> { CODE(Then); }          DefExpr                  _f_00077_                
+[  2] _f_00076_          -> <Reserv,Do>              { MAKE(BegDo); }         DefExpr                  <Reserv,While>           <Separator,LeftBracket>  { CODE(MidDo); }         Condition                <Separator,RightBracket> <Separator,Semicolon>    { MAKE(Do); }            
+[  3] _f_00076_          -> <Reserv,While>           { MAKE(BegWhile); }      <Separator,LeftBracket>  Condition                <Separator,RightBracket> { CODE(MidWhile); }      DefExpr                  { MAKE(While); }         
+[  4] _f_00076_          -> <Reserv,For>             <Separator,LeftBracket>  { MAKE(BegFor); }        _f_00078_                { CODE(PrefFor); }       _f_00079_                { CODE(ConditionFor); }  _f_00080_                { CODE(PostFor); }       DefExpr                  { MAKE(For); }           
+[  5] _f_00076_          -> <Reserv,GoTo>            <Ident>                  <Separator,Semicolon>    { MAKE(GoTo); }          
+[  6] _f_00076_          -> <Reserv,Break>           <Separator,Semicolon>    { MAKE(Break); }         
+[  7] _f_00076_          -> <Reserv,Continue>        <Separator,Semicolon>    { MAKE(Continue); }      
+[  8] _f_00076_          -> <Reserv,Return>          _f_00081_                <Separator,Semicolon>    
+[  9] _f_00076_          -> _f_00082_                
+_f_00077_:               used=1, 00077
+[  0] _f_00077_          -> <Reserv,Else>            { CODE(Else); }          DefExpr                  { MAKE(If,1); }          
+[  1] _f_00077_          -> { MAKE(If); }            
+_f_00078_:               used=1, 00078
+[  0] _f_00078_          -> <Separator,Semicolon>    { TREE(NodeNull); }      
+[  1] _f_00078_          -> DefineSemi               
+[  2] _f_00078_          -> ExprSemi                 
+_f_00079_:               used=1, 00079
+[  0] _f_00079_          -> <Separator,Semicolon>    { MAKE(NodeNull); }      
+[  1] _f_00079_          -> Condition                <Separator,Semicolon>    
+_f_00080_:               used=1, 00080
+[  0] _f_00080_          -> <Separator,RightBracket> { TREE(NodeNull); }      
+[  1] _f_00080_          -> ExpressionExpression     <Separator,RightBracket> 
+_f_00081_:               used=1, 00081
+[  0] _f_00081_          -> ExpressionValue          { MAKE(Return,1); }      
+[  1] _f_00081_          -> { MAKE(Return); }        
+_f_00082_:               used=1, 00082
+[  0] _f_00082_          -> <Syntax,EmptyCramp>      { MAKE(Compaund); }      { CODE(EndBlock); }      
+[  1] _f_00082_          -> <Separator,LeftCramp>    { MAKE(Compaund); }      StmExpr                  <Separator,RightCramp>   { CODE(EndBlock); }      { TREE(AddToList); }     
+StmExpr:                 used=2, 00083
+[  0] StmExpr            -> { MAKE(BegStmExprLL); }  _f_00085_                { CODE(EndBlock); }      
+_f_00084_:               used=1, 00084
+[  0] _f_00084_          -> DefExpr                  { TREE(AddToList); }     
+_f_00085_:               used=2, 00085
+[  0] _f_00085_          -> _f_00084_                _f_00085_                
+[  1] _f_00085_          -> 
+ExpressionExpression:    used=2, 00086
+[  0] ExpressionExpression-> { CODE(Part,16); }       Expressions              { TREE(ExpressionSLL,16); }                       
+ExpressionValue:         used=3, 00087
+[  0] ExpressionValue    -> { CODE(Part,256); }      Expressions              { TREE(ExpressionSLL,256); }                      

@@ -1,0 +1,24 @@
+
+S_                       
+                         ::= _E                       
+                         
+_E                       
+                         ::= /. MAKE(BegStmExprLL); ./   E                           /. TREE(AddToList); ./      /. CODE(EndBlock); ./    
+                         
+E                        
+                         ::= T                           
+                         [
+                         Priority_Term               T                           /. MAKE(Binary); ./      
+                         ]... 
+                         
+T                        
+                         ::= F                           
+                         [
+                         Priority_Factor             F                           /. MAKE(Binary); ./      
+                         ]... 
+                         
+F                        
+                         ::= { 
+                             (                           E                           )                        
+                         |   Integer_lexeme              /. MAKE(Number); ./      
+                             } 

@@ -1,0 +1,592 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:st1="urn:schemas-microsoft-com:office:smarttags" xmlns="http://www.w3.org/TR/REC-html40"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 11">
+<meta name="Originator" content="Microsoft Word 11">
+<link rel="File-List" href="http://trpl7.ru/index.files/filelist.xml">
+<link rel="Edit-Time-Data" href="http://trpl7.ru/index.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Теория и реализация языков программирования</title>
+</head><body style="tab-interval:36.0pt" vlink="purple" link="blue" lang="RU"><o:smarttagtype namespaceuri="urn:schemas-microsoft-com:office:smarttags" name="metricconverter">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Обычный;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	font-weight:normal;}
+h2
+	{mso-style-next:Обычный;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:navy;
+	font-weight:bold;}
+h3
+	{mso-style-next:Обычный;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	text-align:right;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:navy;
+	font-weight:normal;}
+h4
+	{mso-style-next:Обычный;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:yellow;
+	mso-ansi-language:EN-US;
+	font-weight:bold;}
+h5
+	{mso-style-next:Обычный;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:yellow;
+	font-weight:normal;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	color:yellow;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;}
+span.mo
+	{mso-style-name:mo;}
+span.mjxassistivemathml
+	{mso-style-name:mjx_assistive_mathml;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Обычная таблица";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="155650"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+
+
+
+
+<div class="Section1">
+
+<table class="MsoNormalTable" style="width:1420.4pt;margin-left:-7.4pt;background:#CCFF99;border-collapse:
+ collapse;mso-padding-alt:0cm 5.4pt 0cm 5.4pt" width="2367" cellspacing="0" cellpadding="0" border="0">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td style="width:37.15pt;background:#FFCC99;padding:0cm 5.4pt 0cm 5.4pt" width="62" valign="top">
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td colspan="3" style="width:138.9pt;background:#FFCC99;
+  padding:0cm 5.4pt 0cm 5.4pt" width="232" valign="top">
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style="text-align:right" align="right"><span style="font-size:11.0pt;mso-bidi-font-size:10.0pt"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style="text-align:right" align="right"><o:p>&nbsp;</o:p></p>
+  </td>
+  <td colspan="4" style="width:443.3pt;background:#FFCC99;
+  padding:0cm 5.4pt 0cm 5.4pt" width="739" valign="top">
+  <p class="MsoNormal" style="margin-top:7.0pt;text-align:center" align="center"><a href="http://www.mipt.ru/"><span style="text-decoration:none;text-underline:
+  none"><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+   o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+   stroked="f">
+   <v:stroke joinstyle="miter"/>
+   <v:formulas>
+    <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+    <v:f eqn="sum @0 1 0"/>
+    <v:f eqn="sum 0 0 @1"/>
+    <v:f eqn="prod @2 1 2"/>
+    <v:f eqn="prod @3 21600 pixelWidth"/>
+    <v:f eqn="prod @3 21600 pixelHeight"/>
+    <v:f eqn="sum @0 0 1"/>
+    <v:f eqn="prod @6 1 2"/>
+    <v:f eqn="prod @7 21600 pixelWidth"/>
+    <v:f eqn="sum @8 21600 0"/>
+    <v:f eqn="prod @7 21600 pixelHeight"/>
+    <v:f eqn="sum @10 21600 0"/>
+   </v:formulas>
+   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" aspectratio="t"/>
+  </v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:55.8pt;
+   height:14.4pt'>
+   <v:imagedata src="index.files/image003.png" o:title="mfti"/>
+  </v:shape><![endif]--><!--[if !vml]--><img src="%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F%20%D0%B8%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D1%8F%D0%B7%D1%8B%D0%BA%D0%BE%D0%B2%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_files/image002.gif" v:shapes="_x0000_i1025" width="74" height="19" border="0"><!--[endif]--></span></a><span style="color:purple"><o:p></o:p></span></p>
+  </td>
+  <td colspan="2" style="width:232.85pt;background:#FFCC99;
+  padding:0cm 5.4pt 0cm 5.4pt" width="388" valign="top">
+  <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td style="width:568.2pt;background:#FFCC99;padding:
+  0cm 5.4pt 0cm 5.4pt" width="947" valign="top">
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1">
+  <td style="width:37.15pt;background:#FFCC99;padding:0cm 5.4pt 0cm 5.4pt" width="62" valign="top">
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td style="width:87.25pt;background:#FFCC99;padding:
+  0cm 5.4pt 0cm 5.4pt" width="145" valign="top">
+  <p class="MsoNormal" style="margin-top:6.0pt;text-align:center" align="center"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td colspan="7" style="width:579.4pt;background:#FFCC99;
+  padding:0cm 5.4pt 0cm 5.4pt" width="966" valign="top">
+  <h1 style="margin-top:6.0pt;line-height:150%"><span style="font-family:Arial;
+  color:#333333;mso-bidi-font-weight:bold">Теория и реализация языков
+  программирования<span style="mso-spacerun:yes">&nbsp; </span><o:p></o:p></span></h1>
+  <h1 style="line-height:150%"><span style="font-family:Arial;color:#333333;
+  mso-bidi-font-weight:bold">2017-2018</span><b><span style="color:purple"> <o:p></o:p></span></b></h1>
+  </td>
+  <td style="width:148.4pt;background:#FFCC99;padding:
+  0cm 5.4pt 0cm 5.4pt" width="247" valign="top">
+  <p class="MsoNormal" style="margin-top:6.0pt;margin-right:19.85pt;
+  margin-bottom:0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:right" align="right"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td style="width:568.2pt;background:#FFCC99;padding:
+  0cm 5.4pt 0cm 5.4pt" width="947" valign="top">
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:2;height:317.6pt">
+  <td rowspan="8" style="width:37.15pt;background:#FFCC99;
+  padding:0cm 5.4pt 0cm 5.4pt;height:317.6pt" width="62" valign="top">
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td colspan="4" rowspan="4" style="width:179.7pt;background:
+  #FFFFCC;padding:0cm 5.4pt 0cm 5.4pt;height:317.6pt" width="300" valign="top">
+  <p class="MsoNormal" style="margin-top:6.0pt"><span style="color:#333333"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style="margin-top:6.0pt;line-height:150%"><span style="font-family:Arial;color:#333333"><a href="http://trpl7.ru/t-books/guides.htm"><span style="color:#333333">Избранные пособия по курсу в сети</span></a><o:p></o:p></span></p>
+  <p class="MsoNormal" style="margin-top:6.0pt;line-height:150%"><span style="font-family:Arial;color:#333333"><a href="http://trpl7.ru/t-books/printed_guides.htm"><span style="color:#333333">Избранные книги по курсу</span></a><o:p></o:p></span></p>
+  <p class="MsoNormal" style="margin-top:6.0pt;line-height:150%"><span style="font-family:Arial"><a href="http://trpl7.ru/Conspectus/_trpl_2012.htm"><span style="color:windowtext">Конспекты по семинарам (ТРЯП</span></a>)<o:p></o:p></span></p>
+  <p class="MsoNormal" style="margin-top:6.0pt;line-height:150%"><span style="font-family:Arial;color:#333333"><a href="http://trpl7.ru/AutoLang.htm"><span style="color:#333333">Пакет программ на </span><span style="color:#333333;mso-ansi-language:EN-US" lang="EN-US">Java</span><span style="color:#333333"> по курсу (пробный выпуск)</span></a><o:p></o:p></span></p>
+  <p class="MsoNormal" style="margin-top:6.0pt;line-height:150%"><span style="font-family:Arial;color:#333333"><a href="http://trpl7.ru/CC_Bison.htm"><span style="color:#333333">Неукротимый </span><span style="color:#333333;
+  mso-ansi-language:EN-US" lang="EN-US">Bison</span></a><o:p></o:p></span></p>
+  <p class="MsoNormal" style="margin-top:6.0pt;line-height:150%"><span style="font-family:Arial;color:#333333"><a href="http://trpl7.ru/Qwestion_Answer.htm"><span style="color:#333333">Вопрос-ответ</span></a><o:p></o:p></span></p>
+  <p class="MsoNormal" style="margin-top:6.0pt;line-height:150%"><span style="font-family:Arial;color:#333333"><a href="http://trpl7.ru/books/zametki.htm"><span style="color:#333333">Заметки на попутные темы</span></a><o:p></o:p></span></p>
+  <p class="MsoNormal" style="line-height:150%"><span style="font-family:Arial;
+  color:#333333"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style="line-height:150%"><span style="color:#333333"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td colspan="2" style="width:314.05pt;background:#FFCC99;
+  padding:0cm 5.4pt 0cm 5.4pt;height:317.6pt" width="523" valign="top">
+  <p class="MsoNormal" style="text-align:center" align="center"><span style="color:#6600CC"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style="text-align:center" align="center"><span style="color:#6600CC"><!--[if gte vml 1]><v:shape id="_x0000_i1026" type="#_x0000_t75"
+   style='width:243.6pt;height:340.2pt'>
+   <v:imagedata src="index.files/image004.jpg" o:title="В"/>
+  </v:shape><![endif]--><!--[if !vml]--><img src="%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F%20%D0%B8%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D1%8F%D0%B7%D1%8B%D0%BA%D0%BE%D0%B2%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_files/image006.jpg" v:shapes="_x0000_i1026" width="325" height="454" border="0"><!--[endif]--><o:p></o:p></span></p>
+  <p class="MsoNormal" style="margin-top:6.0pt;text-align:center" align="center"><span style="color:#6600CC"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td colspan="3" style="width:321.3pt;background:#FFFFCC;
+  padding:0cm 5.4pt 0cm 5.4pt;height:317.6pt" width="536" valign="top">
+  <p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:
+  6.0pt;margin-left:0cm"><i><span style="font-size:11.0pt;mso-bidi-font-size:
+  10.0pt;color:#6600CC"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ </span></span></i><i><span style="font-family:Arial;color:#6600CC">Новости:</span></i><span style="font-family:Arial;color:#6600CC"><span style="mso-spacerun:yes">&nbsp;&nbsp;
+  </span><o:p></o:p></span></p>
+  <p class="MsoNormal" style="line-height:150%"><span style="font-family:Arial">29.12.17
+  - 9.01.18.<span style="color:#6600CC"> </span><b style="mso-bidi-font-weight:
+  normal"><span style="color:purple">Экзамен</span></b> по курсу назначен на <b style="mso-bidi-font-weight:normal"><span style="color:purple">10 января 2018
+  </span></b>с <b style="mso-bidi-font-weight:normal"><span style="color:purple">9:00</span></b>
+  в <b style="mso-bidi-font-weight:normal"><span style="color:purple">115 КПМ</span></b>.
+  В 10:00 приходят те, кто хочет получить автомат, но не сделал этого на
+  досрочном экзамене. <o:p></o:p></span></p>
+  <p class="MsoNormal" style="line-height:150%"><span style="font-family:Arial">Те,
+  <span style="color:purple">кто не сдал задание</span>, приходят также в 13:00
+  на написание штрафной части экзамена.<o:p></o:p></span></p>
+  <p style="margin:0cm;margin-bottom:.0001pt;line-height:150%"><span style="font-size:8.5pt;line-height:150%;font-family:Arial">&lt;…&gt;<o:p></o:p></span></p>
+  <p style="margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  0cm;line-height:150%"><span style="font-size:10.0pt;line-height:150%;
+  font-family:Arial">16.11.17. Обнародованы <span style="color:#6600CC"><a href="http://rubtsov.su/public/fl/2017/fl17_test1.pdf"><span style="color:#6600CC">критерии и решения по КР-2017-1</span></a></span>.<o:p></o:p></span></p>
+  <p style="margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  0cm;line-height:150%"><span style="font-size:9.5pt;line-height:150%;
+  font-family:Arial">11.10.17. Обнародованы <span style="color:#6600CC"><a href="http://www.rubtsov.su/fl_course17/exam_vars"><span style="color:#6600CC">некоторые
+  варианты по курсовым контрольным за прошлые годы</span></a></span>. Можно попробовать
+  свои силы.<o:p></o:p></span></p>
+  <p style="margin-top:6.0pt;margin-right:0cm;margin-bottom:6.0pt;margin-left:
+  0cm;line-height:150%"><span style="font-size:9.5pt;line-height:150%;
+  font-family:Arial">09.17. Обнародованы<span style="color:#6600CC"><a href="http://trpl7.ru/t-books/TRPL_prog_&amp;_task-2017.pdf"><span style="color:#6600CC;
+  text-decoration:none;text-underline:none"> </span><span style="color:#6600CC">Программа
+  и задание по ТРЯП на 2017-18 уч. год</span></a></span>. (приводится текущий
+  выпуск). <span style="color:#6600CC"><a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%90%D1%85%D0%BE_%E2%80%94_%D0%9A%D0%BE%D1%80%D0%B0%D1%81%D0%B8%D0%BA#.D0.9F.D1.80.D0.B8.D0.BD.D1.86.D0.B8.D0.BF_.D1.80.D0.B0.D0.B1.D0.BE.D1.82.D1.8B"><span style="color:#6600CC">Алгоритм Ахо-Корасик</span></a></span> в Вики.<o:p></o:p></span></p>
+  <p style="margin:0cm;margin-bottom:.0001pt;line-height:150%"><span style="font-size:8.5pt;line-height:150%;font-family:Arial">&lt;…&gt;<o:p></o:p></span></p>
+  <p style="margin:0cm;margin-bottom:.0001pt;line-height:150%"><span style="font-size:9.5pt;line-height:150%;font-family:Arial">16.12.16.
+  Обнародованы <span style="color:#6600CC"><a href="http://trpl7.ru/seminars/fl16_test2_crit.pdf"><span style="color:#6600CC">критерии и
+  разбалловка по БКР2</span></a></span>.<o:p></o:p></span></p>
+  <p style="margin:0cm;margin-bottom:.0001pt"><span style="font-size:9.5pt;
+  font-family:Arial">16.11.16. </span><span style="font-size:10.0pt;font-family:
+  Arial">С&nbsp;<span style="color:#6600CC"><a href="https://dl.dropboxusercontent.com/u/31418200/fl/2016/fl16_test1_sol_cr.pdf"><span style="color:#6600CC">критериями проверки и решениями</span></a></span> </span><span style="font-size:9.5pt;font-family:Arial">по 1-му в-ту БКР </span><span style="font-size:10.0pt;font-family:Arial">можно познакомиться по ссылке.</span></p>
+  <p class="MsoBodyText" style="line-height:130%"><span style="font-size:9.5pt;
+  line-height:130%;font-family:Arial;color:windowtext">…<o:p></o:p></span></p>
+  <p class="MsoBodyText" style="line-height:130%"><span style="font-size:9.5pt;
+  line-height:130%;font-family:Arial;color:windowtext">19.9.16. </span><span style="font-size:9.5pt;line-height:130%;font-family:Arial;color:#6600CC"><a href="http://trpl7.ru/t-books/TRPL_programm-2016_v2-print.pdf"><span style="color:#6600CC">Задание
+  на 2016-2017 учебный год по курсу ТРЯП доступно в электронном виде</span></a></span><span style="font-size:9.5pt;line-height:130%;font-family:Arial;color:windowtext">.<o:p></o:p></span></p>
+  <p class="MsoNormal"><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;
+  color:#6600CC"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;
+  font-family:Arial;color:#6600CC">См. также «<a href="https://vk.com/club1694"><span style="color:#6600CC">ФУПМ в социальной сети ВКонтакте</span></a>»<o:p></o:p></span></p>
+  </td>
+  <td rowspan="8" style="width:568.2pt;background:#FFCC99;
+  padding:0cm 5.4pt 0cm 5.4pt;height:317.6pt" width="947" valign="top">
+  <p class="MsoNormal"><span style="font-size:9.0pt;mso-bidi-font-size:10.0pt;
+  color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:3;height:45.5pt">
+  <td style="width:157.0pt;background:#FFFFCC;padding:
+  0cm 5.4pt 0cm 5.4pt;height:45.5pt" width="262" valign="top">
+  <p class="MsoNormal" style="text-align:center" align="center"><span style="color:#6600CC"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td style="width:157.05pt;background:#FFFFCC;padding:
+  0cm 5.4pt 0cm 5.4pt;height:45.5pt" width="262" valign="top">
+  <p class="MsoNormal" style="text-align:center" align="center"><span style="color:#6600CC"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td colspan="3" rowspan="8" style="width:321.3pt;background:
+  #FFFFCC;padding:0cm 5.4pt 0cm 5.4pt;height:45.5pt" width="536" valign="top">
+  <p class="MsoNormal"><span style="font-family:Arial"><o:p>&nbsp;</o:p></span></p>
+  <p style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:8.5pt;
+  margin-bottom:.0001pt;line-height:150%"><span style="font-size:10.0pt;
+  line-height:150%;font-family:Arial">&lt;…&gt;<o:p></o:p></span></p>
+  <p class="MsoBodyText" style="margin-left:8.5pt;line-height:130%"><span style="font-size:9.5pt;line-height:130%;font-family:Arial;color:windowtext">16.11.12.
+  </span><span style="font-size:9.5pt;line-height:130%;font-family:Arial;
+  color:#6600CC"><a href="http://trpl7.ru/Conspectus/trpl_2012_20.htm"><span style="color:#6600CC">Наброски
+  решений некоторых задач</span></a></span><span style="font-size:9.5pt;
+  line-height:130%;font-family:Arial;color:windowtext"> по прошедшему экзамену
+  (для готовящихся к пересдаче). </span><span style="font-size:9.5pt;
+  line-height:130%;font-family:Arial;color:#6600CC"><a href="http://trpl7.ru/Conspectus/trpl_2012_20.pdf"><span style="color:#6600CC">Тоже в </span><span style="color:#6600CC;mso-ansi-language:EN-US" lang="EN-US">pdf</span></a>.</span><span style="font-size:9.5pt;line-height:130%;font-family:Arial;color:windowtext"><o:p></o:p></span></p>
+  <p class="MsoBodyText" style="margin-left:8.5pt;line-height:130%"><span style="font-size:9.5pt;line-height:130%;font-family:Arial;color:windowtext"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoBodyText" style="margin-left:8.5pt;line-height:130%"><span style="font-size:9.5pt;line-height:130%;font-family:Arial;color:windowtext">1.09.09.
+  В эльвиде (с разрешения авторов) </span><span style="font-size:9.5pt;
+  line-height:130%;font-family:Arial;color:#6600CC"><a href="http://trpl7.ru/t-books/printed_guides.htm"><span style="color:#6600CC">доступны первые
+  две главы</span></a></span><span style="font-size:9.5pt;line-height:130%;
+  font-family:Arial;color:windowtext"> классического для ФУПМ пособия по ТРЯП,
+  по которому студенты изучали этот предмет более 20 лет (с <st1:metricconverter productid="1973 г" w:st="on">1973 г</st1:metricconverter>.). <o:p></o:p></span></p>
+  <p class="MsoBodyText" style="margin-left:8.5pt;line-height:130%"><span style="font-size:9.5pt;line-height:130%;font-family:Arial;color:windowtext"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoBodyText" style="margin-left:8.5pt;line-height:130%"><span style="font-size:9.5pt;line-height:130%;font-family:Arial;color:windowtext">14.</span><span style="font-size:9.5pt;line-height:130%;font-family:Arial;
+  color:windowtext;mso-ansi-language:EN-US" lang="EN-US">XII</span><span style="font-size:
+  9.5pt;line-height:130%;font-family:Arial;color:windowtext">.06. Обнародован </span><span style="font-size:9.5pt;line-height:130%;font-family:Arial;color:#6600CC"><a href="http://trpl7.ru/t-books/TRYAP_def.htm"><span style="color:#6600CC">Примерный список
+  определений для сдачи зачёта или экзамена по обсуждаемым курсам</span></a>.</span><span style="font-size:9.5pt;line-height:130%;font-family:Arial;color:windowtext"> <o:p></o:p></span></p>
+  <p class="MsoBodyText" style="margin-left:8.5pt;line-height:130%"><span style="font-size:9.5pt;line-height:130%;font-family:Arial;color:windowtext"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style="margin-left:8.5pt;line-height:130%"><span style="font-size:9.5pt;line-height:130%;font-family:Arial;color:#6600CC"><a href="http://trpl7.ru/news.htm"><span style="color:#6600CC">Архив новостей</span></a><o:p></o:p></span></p>
+  <p class="MsoNormal" style="margin-bottom:6.0pt"><i><span style="font-size:
+  11.0pt;mso-bidi-font-size:10.0pt;color:#6600CC"><o:p>&nbsp;</o:p></span></i></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:4;height:45.35pt">
+  <td style="width:157.0pt;background:#FFFFCC;padding:
+  0cm 5.4pt 0cm 5.4pt;height:45.35pt" width="262" valign="top">
+  <p class="MsoNormal" style="margin-top:6.0pt;text-align:center" align="center"><b><span style="font-family:Arial;color:#6600CC"><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td style="width:157.05pt;background:#FFFFCC;padding:
+  0cm 5.4pt 0cm 5.4pt;height:45.35pt" width="262" valign="top">
+  <p class="MsoNormal" style="margin-top:6.0pt;text-align:center" align="center"><span style="font-family:Arial;color:#6600CC;mso-bidi-font-weight:bold"><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:5;height:45.35pt">
+  <td style="width:157.0pt;background:#FFFFCC;padding:
+  0cm 5.4pt 0cm 5.4pt;height:45.35pt" width="262" valign="top">
+  <p class="MsoNormal" style="margin-top:6.0pt;text-align:center;
+  line-height:150%" align="center"><b><span style="font-size:10.5pt;line-height:150%;
+  font-family:Arial;color:#6600CC;mso-bidi-font-style:italic"><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td style="width:157.05pt;background:#FFFFCC;padding:
+  0cm 5.4pt 0cm 5.4pt;height:45.35pt" width="262" valign="top">
+  <p class="MsoNormal" style="margin-top:6.0pt;text-align:center;
+  line-height:150%" align="center"><b><span style="font-size:10.5pt;line-height:
+  150%;font-family:Arial;color:#6600CC;mso-ansi-language:EN-US;mso-bidi-font-style:
+  italic" lang="EN-US"><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:6;height:45.35pt">
+  <td colspan="4" rowspan="4" style="width:179.7pt;background:
+  #FFFFCC;padding:0cm 5.4pt 0cm 5.4pt;height:45.35pt" width="300" valign="top">
+  <p class="MsoNormal" style="margin-top:6.0pt"><span style="color:#333333"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td style="width:157.0pt;background:#FFFFCC;padding:
+  0cm 5.4pt 0cm 5.4pt;height:45.35pt" width="262" valign="top">
+  <p class="MsoNormal" style="margin-top:6.0pt;text-align:center;
+  line-height:150%" align="center"><b><span style="font-size:10.5pt;line-height:150%;
+  font-family:Arial;color:#6600CC;mso-bidi-font-style:italic"><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td style="width:157.05pt;background:#FFFFCC;padding:
+  0cm 5.4pt 0cm 5.4pt;height:45.35pt" width="262" valign="top">
+  <p class="MsoNormal" style="margin-top:6.0pt;text-align:center;
+  line-height:150%" align="center"><b><span style="font-size:10.5pt;line-height:
+  150%;font-family:Arial;color:#6600CC;mso-ansi-language:EN-US;mso-bidi-font-style:
+  italic" lang="EN-US"><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:7;height:45.35pt">
+  <td style="width:157.0pt;background:#FFFFCC;padding:
+  0cm 5.4pt 0cm 5.4pt;height:45.35pt" width="262" valign="top">
+  <p class="MsoNormal" style="margin-top:6.0pt;text-align:center;
+  line-height:150%" align="center"><span style="font-size:11.0pt;line-height:150%;font-family:
+  Arial;color:#6600CC;mso-bidi-font-weight:bold;mso-bidi-font-style:italic"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td style="width:157.05pt;background:#FFFFCC;padding:
+  0cm 5.4pt 0cm 5.4pt;height:45.35pt" width="262" valign="top">
+  <h4 style="margin-top:6.0pt;line-height:150%"><span style="mso-bidi-font-size:
+  11.0pt;line-height:150%;font-family:Arial;color:#6600CC;mso-ansi-language:
+  RU;font-weight:normal;mso-bidi-font-weight:bold;mso-bidi-font-style:italic"><o:p>&nbsp;</o:p></span></h4>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:8;height:45.35pt">
+  <td style="width:157.0pt;background:#FFFFCC;padding:
+  0cm 5.4pt 0cm 5.4pt;height:45.35pt" width="262" valign="top">
+  <p class="MsoNormal" style="margin-top:6.0pt;text-align:center;
+  line-height:150%" align="center"><b><span style="font-size:10.5pt;line-height:150%;
+  font-family:Arial;color:#6600CC;mso-bidi-font-style:italic"><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td style="width:157.05pt;background:#FFFFCC;padding:
+  0cm 5.4pt 0cm 5.4pt;height:45.35pt" width="262" valign="top">
+  <p class="MsoNormal" style="margin-top:6.0pt;text-align:center;
+  line-height:150%" align="center"><b><span style="font-size:10.5pt;line-height:
+  150%;font-family:Arial;color:#6600CC;mso-ansi-language:EN-US;mso-bidi-font-style:
+  italic" lang="EN-US"><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:9;height:45.35pt">
+  <td style="width:157.0pt;background:#FFFFCC;padding:
+  0cm 5.4pt 0cm 5.4pt;height:45.35pt" width="262" valign="top">
+  <p class="MsoNormal" style="margin-top:6.0pt;text-align:center" align="center"><b><span style="font-family:Arial;color:#6600CC"><o:p>&nbsp;</o:p></span></b></p>
+  </td>
+  <td style="width:157.05pt;background:#FFFFCC;padding:
+  0cm 5.4pt 0cm 5.4pt;height:45.35pt" width="262" valign="top">
+  <h4 style="margin-top:6.0pt;line-height:150%"><span style="font-size:10.0pt;
+  line-height:150%;font-family:Arial;color:#6600CC;mso-ansi-language:RU;
+  mso-bidi-font-style:italic"><o:p>&nbsp;</o:p></span></h4>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:10">
+  <td style="width:37.15pt;background:#FFCC99;padding:0cm 5.4pt 0cm 5.4pt" width="62" valign="top">
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td colspan="2" style="width:112.8pt;background:#FFCC99;
+  padding:0cm 5.4pt 0cm 5.4pt" width="188" valign="top">
+  <p class="MsoNormal"><span style="font-size:11.0pt;mso-bidi-font-size:10.0pt;
+  color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td colspan="4" style="width:380.95pt;background:#FFCC99;
+  padding:0cm 5.4pt 0cm 5.4pt" width="635" valign="top">
+  <p class="MsoNormal" style="margin-top:6.0pt;text-align:center;
+  line-height:150%" align="center"><span style="font-family:Arial">При пересылке через сеть
+  рассматриваются только решения, подготовленные для </span><span style="font-family:Arial;mso-ansi-language:EN-US" lang="EN-US">Latex</span><span style="font-family:Arial" lang="EN-US"> </span><span style="font-family:Arial">и
+  в текстовых редакторах </span><span style="font-family:Arial;
+  mso-ansi-language:EN-US" lang="EN-US">OpenOffice</span><span style="font-family:Arial"> и </span><span style="font-family:Arial;mso-ansi-language:EN-US" lang="EN-US">MsWord</span><span style="font-family:Arial">.<o:p></o:p></span></p>
+  <p class="MsoNormal" style="text-align:center;line-height:150%" align="center"><span style="font-family:Arial">Фотоснимки и т.п. рукописных текстов не обсуждаются
+  и не рассматриваются.<o:p></o:p></span></p>
+  </td>
+  <td style="width:568.2pt;background:#FFCC99;padding:
+  0cm 5.4pt 0cm 5.4pt" width="947" valign="top">
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:11">
+  <td style="width:37.15pt;background:#FFCC99;padding:0cm 5.4pt 0cm 5.4pt" width="62" valign="top">
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td colspan="2" style="width:112.8pt;background:#FFCC99;
+  padding:0cm 5.4pt 0cm 5.4pt" width="188" valign="top">
+  <p class="MsoNormal"><span style="font-size:11.0pt;mso-bidi-font-size:10.0pt;
+  color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td colspan="4" style="width:380.95pt;background:#FFCC99;
+  padding:0cm 5.4pt 0cm 5.4pt" width="635" valign="top">
+  <p class="MsoNormal" style="text-align:justify;line-height:150%"><span style="font-family:Arial"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td colspan="3" style="width:321.3pt;background:#FFCC99;padding:0cm 5.4pt 0cm 5.4pt" width="536">
+  <p class="MsoNormal" style="mso-layout-grid-align:auto;punctuation-wrap:hanging;
+  text-autospace:ideograph-other"><span style="font-size:9.0pt;mso-bidi-font-size:
+  10.0pt;color:#6600CC"><!--[if gte vml 1]><v:shape id="_x0000_i1027" type="#_x0000_t75"
+   style='width:181.8pt;height:204.6pt'>
+   <v:imagedata src="index.files/image005.gif" o:title="Elka_vs_cat"/>
+   <o:lock v:ext="edit" cropping="t"/>
+  </v:shape><![endif]--><!--[if !vml]--><img src="%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F%20%D0%B8%20%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D1%8F%D0%B7%D1%8B%D0%BA%D0%BE%D0%B2%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_files/image005.gif" v:shapes="_x0000_i1027" width="242" height="273" border="0"><!--[endif]--></span><span style="color:purple"><o:p></o:p></span></p>
+  </td>
+  <td style="width:568.2pt;background:#FFCC99;padding:
+  0cm 5.4pt 0cm 5.4pt" width="947" valign="top">
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:12;mso-yfti-lastrow:yes">
+  <td style="width:37.15pt;background:#FFCC99;padding:0cm 5.4pt 0cm 5.4pt" width="62" valign="top">
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td colspan="9" style="width:815.05pt;background:#FFCC99;
+  padding:0cm 5.4pt 0cm 5.4pt" width="1358" valign="top">
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style="text-align:center" align="center"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="font-size:11.0pt;mso-bidi-font-size:10.0pt;
+  color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td style="width:568.2pt;background:#FFCC99;padding:
+  0cm 5.4pt 0cm 5.4pt" width="947" valign="top">
+  <p class="MsoNormal"><span style="color:purple"><o:p>&nbsp;</o:p></span></p>
+  </td>
+ </tr>
+ <!--[if !supportMisalignedColumns]-->
+ <tr height="0">
+  <td style="border:none" width="62"></td>
+  <td style="border:none" width="145"></td>
+  <td style="border:none" width="43"></td>
+  <td style="border:none" width="44"></td>
+  <td style="border:none" width="68"></td>
+  <td style="border:none" width="262"></td>
+  <td style="border:none" width="262"></td>
+  <td style="border:none" width="147"></td>
+  <td style="border:none" width="141"></td>
+  <td style="border:none" width="247"></td>
+  <td style="border:none" width="947"></td>
+ </tr>
+ <!--[endif]-->
+</tbody></table>
+
+<p class="MsoNormal" style="mso-layout-grid-align:auto;punctuation-wrap:hanging;
+text-autospace:ideograph-other"><span style="font-size:12.0pt;display:none;
+mso-hide:all"><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+
+
+
+</o:smarttagtype></body></html>

@@ -1,0 +1,84 @@
+Comparing files def_formula_NR.cpp and DEF_STACK_NR.CPP
+***** def_formula_NR.cpp
+   68:  
+   69:     FORMULA(DefFuncParBody)
+   70:        PRODUCE SYM(RightBracket) PARAM(MAKE_TREE(EndParams),0x01) MAKE_NODE(Define,L(0),0) END
+***** DEF_STACK_NR.CPP
+   68:  
+   69:     FORMULA(DefFuncPar)
+   70:        PRODUCE SYM(RightBracket) PARAM(MAKE_TREE(EndParams),0x01) MAKE_NODE(Define,L(0),0) END
+*****
+
+***** def_formula_NR.cpp
+   73:  
+   74:     FORMULA(DefParBodyFunc) 
+   75:        PRODUCE PARAM(MAKE_TREE(Define), 0x02) RULE(DefFuncParBody) RULE(BodyFunc) MAKE_NODE(NodeTwo,L(0,1,2),0) END
+   76:     END
+***** DEF_STACK_NR.CPP
+   73:  
+   74:     FORMULA(DefPBFuncMaker)
+   75:        PRODUCE PARAM(MAKE_TREE(Define), 0x02) RULE(DefFuncPar) MAKE_NODE(DefFunc,L(0,1),2) END
+   76:     END
+*****
+
+***** def_formula_NR.cpp
+   77:  
+   78:     FORMULA(DefVoidType)
+   79:        PRODUCE WORD(Static)             WORD(Void) PARAM(MAKE_ALL(DefType),0x24) END
+   80:        PRODUCE                          WORD(Void) PARAM(MAKE_ALL(DefType),0x20) END
+   81:     END
+***** DEF_STACK_NR.CPP
+   77:  
+   78:     FORMULA(DefParBodyFunc)
+   79:        PRODUCE RULE(DefPBFuncMaker) RULE(BodyFunc) MAKE_NODE(NodeTwo,L(0,1,2),0) END
+   80:     END
+*****
+
+***** def_formula_NR.cpp
+   82:  
+   83:     FORMULA(DefType)
+***** DEF_STACK_NR.CPP
+   81:  
+   82:     FORMULA(DefVoidType)
+   83:        PRODUCE WORD(Static)             WORD(Void) PARAM(MAKE_ALL(DefType),0x24) END
+   84:        PRODUCE                          WORD(Void) PARAM(MAKE_ALL(DefType),0x20) END
+   85:     END
+   86:  
+   87:     FORMULA(DefType)
+*****
+
+***** def_formula_NR.cpp
+  138:  
+  139:     FORMULA(DefFuncArrVar)
+***** DEF_STACK_NR.CPP
+  142:  
+  143:     FORMULA(DefFuncAVMaker)
+  144:        PRODUCE RULE(DefType) LEX(Ident) SYM(LeftBracket) MAKE(FuncIdent) MAKE_NODE(DefFunc,L(2,1),1)  END
+  145:     END
+  146:  
+  147:     FORMULA(DefFuncArrVar)
+*****
+
+***** def_formula_NR.cpp
+  140:        PRODUCE 
+  141:           RULE(DefType) LEX(Ident) SYM(LeftBracket) MAKE(FuncIdent) RULE(DefParBodyFunc) MAKE_NODE(DefFunc,L(2,1,4),0) 
+  142:        END
+***** DEF_STACK_NR.CPP
+  148:        PRODUCE 
+  149:           RULE(DefType) LEX(Ident) SYM(LeftBracket) MAKE(FuncIdent) MAKE_NODE(DefFunc,L(2,1),1) RULE(DefParBodyFunc) MAKE_NODE(D
+  150:  efFunc,L(2,1,5),0)
+  151:        END
+*****
+
+***** def_formula_NR.cpp
+  162:     FORMULA(DefFuncDefine)
+  163:        PRODUCE RULE(DefVoidType) LEX(Ident) SYM(LeftBracket) MAKE(FuncIdent) RULE(DefParBodyFunc) MAKE_NODE(DefFunc,L(2,1,4),0) 
+  164:  END
+  165:        PRODUCE RULE(DefFuncArrVar) END
+***** DEF_STACK_NR.CPP
+  171:     FORMULA(DefFuncDefine)
+  172:        PRODUCE RULE(DefVoidType) LEX(Ident) SYM(LeftBracket) MAKE(FuncIdent) MAKE_NODE(DefFunc,L(2,1),1) RULE(DefParBodyFunc) MA
+  173:  KE_NODE(DefFunc,L(2,1,5),0) END
+  174:        PRODUCE RULE(DefFuncArrVar) END
+*****
+

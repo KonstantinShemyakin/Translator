@@ -1,0 +1,147 @@
+S_                       -> Eof                      
+Program                  -> Eof                      
+DefParInit               -> <Separator,RightBracket> <Separator,Comma>        
+DefParVar                -> <Separator,RightBracket> <Separator,Comma>        
+DefParArr                -> <Separator,RightBracket> <Separator,Comma>        
+DefPar                   -> <Separator,RightBracket> <Separator,Comma>        
+DefParItem               -> <Separator,RightBracket> <Separator,Comma>        
+DefParList               -> <Separator,RightBracket> 
+DefParams                -> <Separator,RightBracket> 
+BodyFunc                 -> <Separator,Semicolon>    <Syntax,DefFunc>         <Syntax,DefArr>          <Syntax,DefVar>          Eof                      
+DefFunc_                 -> <Separator,LeftCramp>    <Separator,Semicolon>    <Syntax,EmptyCramp>      
+DefFunc                  -> <Separator,Semicolon>    <Syntax,DefFunc>         <Syntax,DefArr>          <Syntax,DefVar>          Eof                      
+AInitialList             -> <Separator,RightCramp>   
+AInitial                 -> <Separator,RightCramp>   
+Initializer              -> <Separator,RightCramp>   <Separator,Comma>        <Separator,Semicolon>    
+AInitItem                -> <Separator,RightCramp>   <Separator,Comma>        
+DefAInit                 -> <Separator,Comma>        <Separator,Semicolon>    
+DRanges                  -> <Oper,Assign>            <Separator,RightBracket> <Separator,Comma>        <Separator,Semicolon>    
+DefArrD1A                -> <Oper,Assign>            <Separator,RightBracket> <Separator,LeftScrape>   <Separator,Comma>        <Separator,Semicolon>    
+DefArrDA                 -> <Oper,Assign>            <Separator,RightBracket> <Separator,Comma>        <Separator,Semicolon>    
+DefArr                   -> <Separator,Comma>        <Separator,Semicolon>    
+DefVarAssign             -> <Separator,RightBracket> <Separator,Comma>        <Separator,Semicolon>    
+DefVarInit               -> <Separator,RightBracket> <Separator,Comma>        <Separator,Semicolon>    
+DefVar                   -> <Separator,RightBracket> <Separator,Comma>        <Separator,Semicolon>    
+DefIAV                   -> <Separator,Comma>        <Separator,Semicolon>    
+DefItem                  -> <Separator,Comma>        <Separator,Semicolon>    
+DefType                  -> <Ident>                  <Priority,And>           <Syntax,IdentArr>        
+DefineList               -> <Separator,Semicolon>    
+Define                   -> <Separator,Semicolon>    
+ConditionDef             -> <Separator,RightBracket> <Separator,Semicolon>    
+Condition                -> <Separator,RightBracket> <Separator,Semicolon>    
+ExprList                 -> <Separator,RightBracket> <Separator,RightScrape>  <Separator,Semicolon>    <Separator,Colon>        
+Expressions              -> <Separator,RightBracket> <Separator,RightScrape>  <Separator,Semicolon>    <Separator,Colon>        
+PriorAssign              -> <Separator,LeftBracket>  <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,Cast>            
+                            <Syntax,CastUnary>       
+AssignList               -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        
+Assign                   -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        
+QuestionList             -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        
+Question                 -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        
+OrOr                     -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      
+OrOr_                    -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      
+AndAnd                   -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          
+AndAnd_                  -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          
+Or                       -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+Or_                      -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+XOr                      -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            
+XOr_                     -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            
+And                      -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           
+And_                     -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           
+Equ                      -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           <Priority,And>           
+Equ_                     -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           <Priority,And>           
+Compare                  -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           <Priority,And>           <Priority,Equ>           
+Compare_                 -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           <Priority,And>           <Priority,Equ>           
+Shift                    -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           <Priority,And>           <Priority,Equ>           <Priority,Compare>       
+Shift_                   -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           <Priority,And>           <Priority,Equ>           <Priority,Compare>       
+Term                     -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           <Priority,And>           <Priority,Equ>           <Priority,Compare>       <Priority,Shift>         
+Term_                    -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           <Priority,And>           <Priority,Equ>           <Priority,Compare>       <Priority,Shift>         
+Factor                   -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           <Priority,And>           <Priority,Equ>           <Priority,Compare>       <Priority,Shift>         <Priority,Term>          
+Factor_                  -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           <Priority,And>           <Priority,Equ>           <Priority,Compare>       <Priority,Shift>         <Priority,Term>          
+UnaryIncDec              -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           <Priority,And>           <Priority,Equ>           <Priority,Compare>       <Priority,Shift>         <Priority,Term>          <Priority,Factor>        
+Unary                    -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           <Priority,And>           <Priority,Equ>           <Priority,Compare>       <Priority,Shift>         <Priority,Term>          <Priority,Factor>        
+Primary                  -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           <Priority,And>           <Priority,Equ>           <Priority,Compare>       <Priority,Shift>         <Priority,Term>          <Priority,Factor>        <Priority,IncDec>        
+PrimaryExpr              -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           <Priority,And>           <Priority,Equ>           <Priority,Compare>       <Priority,Shift>         <Priority,Term>          <Priority,Factor>        <Priority,IncDec>        
+RangesList               -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           <Priority,And>           <Priority,Equ>           <Priority,Compare>       <Priority,Shift>         <Priority,Term>          <Priority,Factor>        <Priority,IncDec>        
+Ranges                   -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           <Priority,And>           <Priority,Equ>           <Priority,Compare>       <Priority,Shift>         <Priority,Term>          <Priority,Factor>        <Priority,IncDec>        
+CallParams               -> <Separator,RightCramp>   <Separator,RightBracket> <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        <Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        
+                            <Priority,Or>            <Priority,XOr>           <Priority,And>           <Priority,Equ>           <Priority,Compare>       <Priority,Shift>         <Priority,Term>          <Priority,Factor>        <Priority,IncDec>        
+CompaundStmnt            -> <Separator,LeftCramp>    <Separator,RightCramp>   <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              
+                            <Reserv,Else>            <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       
+                            <Syntax,IdentArr>        <Syntax,DefArr>          <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+IfStmnt_                 -> <Separator,LeftCramp>    <Separator,RightCramp>   <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              
+                            <Reserv,Else>            <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       
+                            <Syntax,IdentArr>        <Syntax,DefArr>          <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+IfStmnt                  -> <Separator,LeftCramp>    <Separator,RightCramp>   <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              
+                            <Reserv,Else>            <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       
+                            <Syntax,IdentArr>        <Syntax,DefArr>          <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+ForPrefix                -> <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        
+                            <Syntax,DefVar>          <Syntax,Cast>            <Syntax,CastUnary>       
+ForCondition             -> <Separator,LeftBracket>  <Separator,RightBracket> <Integer>                <Number>                 <Ident>                  <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        
+                            <Syntax,Cast>            <Syntax,CastUnary>       
+ForPosfix                -> <Separator,LeftCramp>    <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              <Reserv,Do>              
+                            <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,DefArr>          
+                            <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+ForStmnt                 -> <Separator,LeftCramp>    <Separator,RightCramp>   <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              
+                            <Reserv,Else>            <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       
+                            <Syntax,IdentArr>        <Syntax,DefArr>          <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+DoStmnt                  -> <Separator,LeftCramp>    <Separator,RightCramp>   <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              
+                            <Reserv,Else>            <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       
+                            <Syntax,IdentArr>        <Syntax,DefArr>          <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+WhileStmnt               -> <Separator,LeftCramp>    <Separator,RightCramp>   <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              
+                            <Reserv,Else>            <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       
+                            <Syntax,IdentArr>        <Syntax,DefArr>          <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+GoToStmnt                -> <Separator,LeftCramp>    <Separator,RightCramp>   <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              
+                            <Reserv,Else>            <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       
+                            <Syntax,IdentArr>        <Syntax,DefArr>          <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+BreakStmnt               -> <Separator,LeftCramp>    <Separator,RightCramp>   <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              
+                            <Reserv,Else>            <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       
+                            <Syntax,IdentArr>        <Syntax,DefArr>          <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+ContinueStmnt            -> <Separator,LeftCramp>    <Separator,RightCramp>   <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              
+                            <Reserv,Else>            <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       
+                            <Syntax,IdentArr>        <Syntax,DefArr>          <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+ReturnVal                -> <Separator,Semicolon>    
+ReturnStmnt              -> <Separator,LeftCramp>    <Separator,RightCramp>   <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              
+                            <Reserv,Else>            <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       
+                            <Syntax,IdentArr>        <Syntax,DefArr>          <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+Statement                -> <Separator,LeftCramp>    <Separator,RightCramp>   <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              
+                            <Reserv,Else>            <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       
+                            <Syntax,IdentArr>        <Syntax,DefArr>          <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+DefineSemi               -> <Separator,LeftCramp>    <Separator,RightCramp>   <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              
+                            <Reserv,Else>            <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       
+                            <Syntax,IdentArr>        <Syntax,DefFunc>         <Syntax,DefArr>          <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      Eof                      
+ExprSemi                 -> <Separator,LeftCramp>    <Separator,RightCramp>   <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              
+                            <Reserv,Else>            <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       
+                            <Syntax,IdentArr>        <Syntax,DefArr>          <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+DefExpr                  -> <Separator,LeftCramp>    <Separator,RightCramp>   <Separator,LeftBracket>  <Separator,Semicolon>    <Integer>                <Number>                 <Ident>                  <Reserv,For>             <Reserv,While>           <Reserv,If>              
+                            <Reserv,Else>            <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          <Priority,Term>          <Priority,Unary>         <Priority,IncDec>        <Syntax,IdentFunc>       
+                            <Syntax,IdentArr>        <Syntax,DefArr>          <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      
+StmExprList              -> <Separator,RightCramp>   
+StmExpr                  -> <Separator,RightCramp>   
+DefFAV                   -> <Separator,Semicolon>    <Syntax,DefFunc>         <Syntax,DefArr>          <Syntax,DefVar>          Eof                      
+DefinesList              -> Eof                      
+Defines                  -> Eof                      
+ExpressionExpression     -> <Separator,RightBracket> <Separator,Semicolon>    
+ExpressionCondition      -> <Separator,RightBracket> <Separator,Semicolon>    
+ExpressionNone           -> <Separator,RightBracket> 
+ExpressionValue          -> <Separator,RightScrape>  <Separator,Semicolon>    <Separator,Colon>        
+ExpressionValueList      -> <Separator,RightBracket> 

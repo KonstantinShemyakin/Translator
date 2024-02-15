@@ -1,0 +1,11 @@
+
+--- Lexemes --- <47> ---
+
+<Oper,Assign>            
+<Separator,LeftCramp>    <Separator,RightCramp>   <Separator,LeftBracket>  <Separator,RightBracket> <Separator,LeftScrape>   <Separator,RightScrape>  <Separator,Comma>        <Separator,Semicolon>    <Separator,Colon>        
+<Integer>                
+<Number>                 
+<Ident>                  
+<Reserv,For>             <Reserv,While>           <Reserv,If>              <Reserv,Else>            <Reserv,Do>              <Reserv,GoTo>            <Reserv,Continue>        <Reserv,Break>           <Reserv,Return>          
+<Priority,Assign>        <Priority,Question>      <Priority,OrOr>          <Priority,AndAnd>        <Priority,Or>            <Priority,XOr>           <Priority,And>           <Priority,Equ>           <Priority,Compare>       <Priority,Shift>         <Priority,Term>          <Priority,Factor>        <Priority,Unary>         <Priority,IncDec>        
+<Syntax,IdentFunc>       <Syntax,IdentArr>        <Syntax,DefFunc>         <Syntax,DefArr>          <Syntax,DefVar>          <Syntax,Label>           <Syntax,Cast>            <Syntax,CastUnary>       <Syntax,EmptyCramp>      <Syntax,EmptyBracket>    <Syntax,EmptyScrape>     

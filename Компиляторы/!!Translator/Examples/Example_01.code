@@ -1,0 +1,63 @@
+command = NewVar    , addr  = 000, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 000, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 000, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 001, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 001, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 001, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 002, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 002, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 002, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 003, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 003, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 003, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 004, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 004, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 004, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 005, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 005, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 005, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 006, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 006, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 006, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 007, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 007, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 007, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 008, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 008, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 008, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = NewVar    , addr  = 009, Global , mode = 001, type = Int       
+command = PushVar   , addr  = 009, Global , mode = 001, type = Int       
+command = Cast      , cast  = I___IR_       , mode = 000, type = RInt      
+command = PushInt   , param = 009, mode = 000, type = CInt      
+command = Oper      , oper  = Assign        , mode = 001, type = Void      
+command = Pop       , param = 010, mode = 000, type = Void      
+
+Integer        0 0
+Integer        1 1
+Integer        2 2
+Integer        3 3
+Integer        4 4
+Integer        5 5
+Integer        6 6
+Integer        7 7
+Integer        8 8
+Integer        9 9
+

@@ -1,0 +1,156 @@
+На вход подается грамматика в виде
+Список терминальных символов, заканчивющися ";"
+Список нетерминальных символов, заканчивющися ";"
+Аксиома, ";"
+Список правил, разделенных ";", в виде нетерминал, правая часть. "$" обозначает пустую строку.
+
+Например, 
+
+a  + * ( )  ;
+T T0 F E E0 ;
+E ; 
+E T E0 ; E0 + T E0 ; E0 $ ; T F T0 ;  T0 * F T0 ; T0 $ ; F a ; F ( E ) ; 
+
+Файл со входом имеет заканчивается символом "#".
+например,
+
+a #
+
+Протокол работы
+
+E=[T, E0]
+E0=[+, T, E0]
+E0=[$]
+T=[F, T0]
+T0=[*, F, T0]
+T0=[$]
+F=[a]
+F=[(, E, )]
+Rule E=[T, E0]
+Rule T=[F, T0]
+Rule E0=[$]
+Rule E0=[T, E0, +]
+Rule F=[a]
+Rule F=[E, (, )]
+Rule T0=[$]
+Rule T0=[F, *, T0]
+Rule E=[T, E0]
+Rule T=[F, T0]
+Rule E0=[$]
+Rule E0=[T, E0, +]
+Rule F=[a]
+Rule F=[E, (, )]
+Rule T0=[$]
+Rule T0=[F, *, T0]
+Rule E=[T, E0]
+Rule T=[F, T0]
+Rule E0=[$]
+Rule E0=[T, E0, +]
+Rule F=[a]
+Rule F=[E, (, )]
+Rule T0=[$]
+Rule T0=[F, *, T0]
+Rule E=[T, E0]
+Rule T=[F, T0]
+Rule E0=[$]
+Rule E0=[T, E0, +]
+Rule F=[a]
+Rule F=[E, (, )]
+Rule T0=[$]
+Rule T0=[F, *, T0]
+First 2 E=[a, (]
+First 2 T=[a, (]
+First 2 E0=[$, +]
+First 2 F=[a, (]
+First 2 T0=[$, *]
+word =[T, E0]
+word =[F, T0]
+word =[$]
+word =[T, E0, +]
+word =[E, (, )]
+word =[a]
+word =[$]
+word =[F, *, T0]
+Rule E=[T, E0]
+sub rhs =[E0]
+word =[E0]
+Follow T=[+]
+Rule T=[F, T0]
+sub rhs =[T0]
+word =[T0]
+Follow F=[*]
+Rule E0=[$]
+Rule E0=[T, E0, +]
+sub rhs =[E0]
+word =[E0]
+Follow T=[+]
+Rule F=[E, (, )]
+sub rhs =[)]
+word =[)]
+Follow E=[#, )]
+Rule F=[a]
+Rule T0=[$]
+Rule T0=[F, *, T0]
+sub rhs =[T0]
+word =[T0]
+Follow F=[*]
+FOLLOW E=[#, )]
+FOLLOW T=[+]
+FOLLOW E0=[]
+FOLLOW F=[*]
+FOLLOW T0=[]
+Rule E=[T, E0]
+beta =[E0]
+word =[E0]
+betaFirst =[$, +]
+Follow T=[#, +, )]
+Follow E0=[#, )]
+Rule T=[F, T0]
+beta =[T0]
+word =[T0]
+betaFirst =[$, *]
+Follow F=[#, *, +, )]
+Follow T0=[#, +, )]
+Rule E0=[$]
+Rule E0=[T, E0, +]
+beta =[E0]
+word =[E0]
+betaFirst =[$, +]
+Rule F=[a]
+Rule F=[E, (, )]
+beta =[)]
+word =[)]
+betaFirst =[)]
+Rule T0=[$]
+Rule T0=[F, *, T0]
+beta =[T0]
+word =[T0]
+betaFirst =[$, *]
+1 =[a, (]
+Table E a 1
+Table E ( 1
+4 =[a, (]
+Table T a 4
+Table T ( 4
+3 =[$]
+Table E0 # 3
+Table E0 ) 3
+2 =[+]
+Table E0 + 2
+8 =[(]
+Table F ( 8
+7 =[a]
+Table F a 7
+6 =[$]
+Table T0 # 6
+Table T0 + 6
+Table T0 ) 6
+5 =[*]
+Table T0 * 5
+Rule 1
+Rule 4
+Rule 7
+Shift a
+Rule 6
+Rule 3
+  

@@ -1,0 +1,11 @@
+del /Q *.action
+del /Q *.core
+del /Q *.code
+del /Q *.first
+del /Q *.follow
+del /Q *.goto
+del /Q *.lexeme
+del /Q *.state
+del /Q *.tab
+del /Q *.tree
+del /Q *.auto

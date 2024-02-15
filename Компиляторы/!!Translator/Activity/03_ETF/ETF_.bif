@@ -1,0 +1,41 @@
+
+S_                       
+                         ::= Assign                        
+                         
+Assign                   
+                         ::= Question
+                             [ 
+                             Priority_Assign          Assign                   
+                             ]                 
+                         
+Question                 
+                         ::= OrOr
+                             [                   
+                              Priority_Question          Assign     :    Question                 
+                             ]                     
+                         
+OrOr                     
+                         ::= AndAnd
+                             [ 
+                             Priority_OrOr               AndAnd                   
+                             ]...                   
+                         
+AndAnd                   
+                         ::= Or 
+                             [  
+                             Priority_AndAnd             Or                       
+                             ]...                       
+                         
+Or                       ::= E    
+
+E                        
+                         ::= T      [     Priority_Term     T     ]... 
+T                        
+                         ::= F      [     Priority_Factor   F     ]... 
+F                        
+                         ::= { 
+                             (      E     )                        
+                         |   Ident_Lexeme             
+                         |   Integer_Lexeme           
+                         |   Number_Lexeme            
+                             } 
