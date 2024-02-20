@@ -46,6 +46,46 @@ public class TScanner {
     public void scanFile(String scan_location) {
         File to_scan = new File(scan_location);
         try(FileReader scan_stream = new FileReader(to_scan)) {
+            BufferedReader scan_lexems = new BufferedReader(scan_stream);
+            
+            String line;
+            String lexem;
+            Lexemme buffer;
+            int line = -1;
+            int column = 0;
+            int pos = 0;
+            int current_char = 0;
+            do {
+                current_char = 0;
+                column = 0;
+                line++;
+                line = scan_lexems.readLine();
+                if(line != null) {
+                    while(current_char != line.length()) {
+                        buffer = new Lexemme();
+                        if(Character.isDigit(line.charAt(current_char))) {
+                            
+                        }
+                        else if (!Character.isLetterOrDigit(line.charAt(current_char))) {
+                            
+                        }
+                        else if (line.charAt(current_char) == ' ') {
+                            
+                        }
+                        // Check if readLine() function reads '\n' symbol from the end
+                        /*else if (line.charAt(current_char) == '\0')
+                        {
+                            
+                        }
+                        else if (line.charAt(current_char) == '\n')
+                        {
+                            
+                        }*/
+                    }
+                }
+            } while (line != null);
+        /////////////Implementation with symbol by symbol file reading
+        /////////////Total shit
             char symb;
             String lexem = "";
             Lexemme buffer;
@@ -146,6 +186,81 @@ public class TScanner {
         catch(IOException ex) {
             System.out.println(ex);
         }
+    }
+    
+    public String collectNumber(String text, int startIndex, boolean exponent = false) {
+        Lexemme.TGroup group = Lexemme.TGroup.Integer;
+        int current_char = startIndex;
+        
+        String number = "";
+        
+        boolean dot_met = false;
+        boolean exp_met = false;
+        
+        while(Character.isDigit(text.charAt(current_char))) {
+            number += text.charAt(current_char));
+            current_char++;
+            if(text.charAt(current_char)) == '.') {
+                if(!dot_met) {
+                    dot_met = true;
+                    
+                }
+            } 
+            else if (text.charAt(current_char)) == 'E' ||
+                     text.charAt(current_char)) == 'e') {
+                         
+            }
+        }
+        
+        do {
+            
+                if (Character.isDigit(symb))
+                {
+                    buffer.line = line;
+                    buffer.pos = pos;
+                    buffer.column = column;
+                    while(Character.isDigit(symb)) {
+                        if (buffer.group == Lexemme.TGroup.None) buffer.group = Lexemme.TGroup.Integer;
+                        lexem += symb;
+                        buffer.len++;
+                        pos++;
+                        column++;
+                        symb = (char)scan_stream.read();
+                        if (symb == '.') {
+                            /* if already met dot and met another */ // Make flag to see if dot already met make error
+                            if (buffer.group != Lexemme.TGroup.Number) buffer.group = Lexemme.TGroup.Number;
+                            lexem += symb;
+                            buffer.len++;
+                            pos++;
+                            column++;
+                            symb = (char)scan_stream.read();
+                        }
+                        else if (symb == 'E' || symb == 'e') {
+                            // Make flag if E already met throw error
+                            // Remove dot flag
+                            if (buffer.group != Lexemme.TGroup.Number) buffer.group = Lexemme.TGroup.Number;
+                            lexem += symb;
+                            buffer.len++;
+                            pos++;
+                            column++;
+                            symb = (char)scan_stream.read();
+                            if (symb == '-' || symb == '+') {
+                                lexem += symb;
+                                buffer.len++;
+                                pos++;
+                                column++;
+                                symb = (char)scan_stream.read();
+                            }
+                        }
+                    }
+                    if (buffer.group == Lexemme.TGroup.Integer) {
+                        buffer.value = Integer.parseInt(lexem);
+                        buffer.text = lexem;
+                    }
+                    else {
+                        //buffer.value = Double.parseDouble(lexem) how to get double value
+                        buffer.text = lexem;
+                    }
     }
     
     public void printLexems() {
