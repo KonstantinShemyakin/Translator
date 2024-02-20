@@ -188,14 +188,13 @@ public class TScanner {
         }
     }
     
-    public String collectNumber(String text, int startIndex, boolean exponent = false) {
+    public String collectNumber(String text, int startIndex, boolean exponent = true) {
         Lexemme.TGroup group = Lexemme.TGroup.Integer;
         int current_char = startIndex;
         
         String number = "";
         
         boolean dot_met = false;
-        boolean exp_met = false;
         
         while(Character.isDigit(text.charAt(current_char))) {
             number += text.charAt(current_char));
@@ -203,15 +202,29 @@ public class TScanner {
             if(text.charAt(current_char)) == '.') {
                 if(!dot_met) {
                     dot_met = true;
-                    
+                    group = Lexemme.TGroup.Number;
+                    number += text.charAt(current_char));
+                    current_char++;
                 }
+                else {/*throw an error here*/}
             } 
             else if (text.charAt(current_char)) == 'E' ||
                      text.charAt(current_char)) == 'e') {
-                         
+                if(!exponent) {/*throw error here*/}
+                group = Lexemme.TGroup.Number;
+                number += text.charAt(current_char));
+                current_char++;
+                if(text.charAt(current_char)) == '-' ||
+                   text.charAt(current_char)) == '+') {
+                    number += text.charAt(current_char));
+                    current_char++;   
+                }
+                number += collectNumber(text, current_char, false);
             }
         }
-        
+        if(group == Lexemme.TGroup.Integer) return "I" + number;
+        else return "N" + number;
+        /*
         do {
             
                 if (Character.isDigit(symb))
@@ -226,9 +239,9 @@ public class TScanner {
                         pos++;
                         column++;
                         symb = (char)scan_stream.read();
-                        if (symb == '.') {
+                        if (symb == '.') {*/
                             /* if already met dot and met another */ // Make flag to see if dot already met make error
-                            if (buffer.group != Lexemme.TGroup.Number) buffer.group = Lexemme.TGroup.Number;
+                            /*if (buffer.group != Lexemme.TGroup.Number) buffer.group = Lexemme.TGroup.Number;
                             lexem += symb;
                             buffer.len++;
                             pos++;
@@ -260,7 +273,7 @@ public class TScanner {
                     else {
                         //buffer.value = Double.parseDouble(lexem) how to get double value
                         buffer.text = lexem;
-                    }
+                    }*/
     }
     
     public void printLexems() {
