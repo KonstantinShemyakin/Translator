@@ -17,10 +17,16 @@ public class ScannerPrint {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        File dir_parcer = new File("C:\\Users\\Student\\Documents\\01_Parse");
-        File dir_scanner = new File("C:\\Users\\Student\\Documents\\Lego\\Scanner");
+        //File dir_scanner = new File("C:\\Users\\Student\\Documents\\Lego\\Scanner");
         
-        File file_lexems = new File(dir_parcer, );
+        TScanner my_scanner = new TScanner();
+        
+        my_scanner.parceFile("C:\\Users\\Student\\Documents\\01_Parce\\test.lex");
+        my_scanner.printLexems();
+        
+        TScanner scan_file = new TScanner();
+        
+        
         // TODO code application logic here
     }
 }
