@@ -20,6 +20,8 @@ import java.io.IOException;
 public class TLexemTable {
     ArrayList<TLexemTableInfo> lexems = new ArrayList<>();
     
+    private int search_pointer = 0;
+    
     public TLexemTable() {
         lexems.add(new TLexemTableInfo(2, 52, 0, 78, "..."));
         lexems.add(new TLexemTableInfo(2, 51, 0, 12, "->"));
@@ -134,12 +136,17 @@ public class TLexemTable {
     }*/
     
     public TLexemTableInfo matchLexem(String lexem, boolean full_match) {
-        for(int i = 0; i < lexems.size(); i++) {
+        for(int i = search_pointer; i < lexems.size(); i++) {
             if(full_match)
                 if(lexems.get(i).text.equals(lexem)) return lexems.get(i);
             else
-                if(lexems.get(i).text.startsWith(lexem)) return lexems.get(i);
+                if(lexems.get(i).text.startsWith(lexem)) {
+                    search_pointer = i + 1;
+                    return lexems.get(i);
+                }
         }
         return null;
     }
+    
+    public void resetSearch() {search_pointer = 0}
 }

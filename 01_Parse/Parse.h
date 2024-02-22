@@ -282,7 +282,8 @@ struct T_ScanStore
    T_ScanStore() :store_pos(0), store_line(0), store_lexeme(0), store_node(0), store_tree(0), store_type(0) {}
 public:
    int  store_pos, store_line; // scan
-   int  store_lexeme, store_node, store_tree, store_type; // syntax
+   int  store_lexeme, stor
+   e_node, store_tree, store_type; // syntax
 };
 
 struct CharsKey {

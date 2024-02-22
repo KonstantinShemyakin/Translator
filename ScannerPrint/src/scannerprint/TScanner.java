@@ -65,139 +65,108 @@ public class TScanner {
                         buffer = new Lexemme();
                         if(Character.isDigit(line.charAt(current_char))) {
                             lexem = collectNumber(line, current_char);
+                            
+                            buffer.column = column;
+                            buffer.pos = pos;
+                            buffer.line = line_num;
+                            
                             if(lexem.charAt(0) == 'I'){
                                 buffer.group = Lexemme.TGroup.Integer;
                                 lexem = lexem.substring(1);
-                                buffer.value = Integer.parseInt(lexem);
-                                buffer.text = lexem;
-                                buffer.column = column;
-                                buffer.len = lexem.length();
-                                buffer.pos = pos;
-                                buffer.line = line_num;
+                                buffer.value = Integer.parseInt(lexem);   
                             }
-                            else buffer.group = Lexemme.TGroup.Number;
-                            
-                        }
-                        else if (!Character.isLetterOrDigit(line.charAt(current_char))) {
-                            
-                        }
+                            else {
+                                buffer.group = Lexemme.TGroup.Number;
+                                lexem = lexem.substring(1);
+                                // Ask how value is calculated for float numbers
+                                //buffer.value = Double.parseDouble(lexem); 
+                            }
+                            buffer.len = lexem.length();
+                            buffer.text = lexem;                            
+                        }                        
                         else if (line.charAt(current_char) == ' ') {
-                            
+                            buffer.column = column;
+                            buffer.line = line_num;
+                            buffer.pos = pos;
+                            buffer.group = Lexemme.TGroup.Space;
+                            int space_pointer = current_char;
+                            while(line.charAt(space_pointer) == ' ') {
+                                buffer.len++;
+                                space_pointer++;
+                            }
+                            //Add value
                         }
                         // Check if readLine() function reads '\n' symbol from the end
-                        /*else if (line.charAt(current_char) == '\0')
+                        else if (line.charAt(current_char) == '\0')
                         {
-                            
+                            buffer.group = Lexemme.TGroup.Eof;
+                            buffer.line = line_num;
+                            buffer.pos = pos;
+                            buffer.column = column;
+                            //Add value
                         }
                         else if (line.charAt(current_char) == '\n')
                         {
-                            
-                        }*/
+                            buffer.group = Lexemme.TGroup.Line;
+                            buffer.line = line_num;
+                            buffer.pos = pos;
+                            buffer.column = column;
+                            //Add value
+                        }
+                        else if (!Character.isLetterOrDigit(line.charAt(current_char))) {
+                            TLexemTableInfo identified = identifyOperator(line, current_char);
+                            if (identified != null) {
+                                buffer.group = identified.group;
+                                buffer.line = line_num;
+                                buffer.pos = pos;
+                                buffer.column = column;
+                                buffer.type = identified.type;
+                                buffer.text = identified.text;
+                                buffer.len = identified.text.length();
+                                //Add value
+                            }
+                            else {
+                                // do something if unknown
+                            }
+                        }
+                        lexems.add(buffer);
+                        current_char += buffer.len;
+                        pos += buffer.len;
+                        column += buffer.len;
                     }
                 }
             } while (line != null);
-        /////////////Implementation with symbol by symbol file reading
-        /////////////Total shit
-            char symb;
-            String lexem = "";
-            Lexemme buffer;
-            do {
-                int line = 0;
-                int column = 0;
-                int pos = 0;
-                buffer = new Lexemme();
-                symb = (char)scan_stream.read();
-                if (Character.isDigit(symb))
-                {
-                    buffer.line = line;
-                    buffer.pos = pos;
-                    buffer.column = column;
-                    while(Character.isDigit(symb)) {
-                        if (buffer.group == Lexemme.TGroup.None) buffer.group = Lexemme.TGroup.Integer;
-                        lexem += symb;
-                        buffer.len++;
-                        pos++;
-                        column++;
-                        symb = (char)scan_stream.read();
-                        if (symb == '.') {
-                            /* if already met dot and met another */ // Make flag to see if dot already met make error
-                            if (buffer.group != Lexemme.TGroup.Number) buffer.group = Lexemme.TGroup.Number;
-                            lexem += symb;
-                            buffer.len++;
-                            pos++;
-                            column++;
-                            symb = (char)scan_stream.read();
-                        }
-                        else if (symb == 'E' || symb == 'e') {
-                            // Make flag if E already met throw error
-                            // Remove dot flag
-                            if (buffer.group != Lexemme.TGroup.Number) buffer.group = Lexemme.TGroup.Number;
-                            lexem += symb;
-                            buffer.len++;
-                            pos++;
-                            column++;
-                            symb = (char)scan_stream.read();
-                            if (symb == '-' || symb == '+') {
-                                lexem += symb;
-                                buffer.len++;
-                                pos++;
-                                column++;
-                                symb = (char)scan_stream.read();
-                            }
-                        }
-                    }
-                    if (buffer.group == Lexemme.TGroup.Integer) {
-                        buffer.value = Integer.parseInt(lexem);
-                        buffer.text = lexem;
-                    }
-                    else {
-                        //buffer.value = Double.parseDouble(lexem) how to get double value
-                        buffer.text = lexem;
-                    }
-                }
-                else if (symb == '\n') {
-                    buffer.column = column;
-                    buffer.line = line;
-                    buffer.pos = pos;
-                    buffer.group = Lexemme.TGroup.Line;
-                    column = 0;
-                    line++;
-                    pos++;
-                }
-                else if (symb == '\0') {
-                    buffer.column = column;
-                    buffer.line = line;
-                    buffer.pos = pos;
-                    buffer.group = Lexemme.TGroup.Eof;
+    }
+    
+    public String collectIdentifier(String text, int startIndex) {
+        String identifier = "";
+        int current_char = startIndex;
+        
+        while(Character.isLetterOrDigit(text.charAt(current_char)) ||
+              text.charAt(current_char) == '_') {
+            identifier += text.charAt(current_char);
+            current_char++;
+        }
+    }
+    
+    public TLexemTableInfo identifyOperator(String text, int startIndex) {
+        lexem_table.resetSearch();
+        
+        TLexemTableInfo found_lexem;
+        boolean found;
+        do {
+            found_lexem = lexem_table.matchLexem(text.charAt(startIndex));
+            if(found_lexem == null) return null;
+            if(found_lexem.text.length() + startIndex >= text.length()) continue;
+            found = true;
+            for(int i = 1; i < found_lexem.text.length(); i++) {
+                if (text.charAt(i + startIndex) != found_lexem.text.charAt(i)) {
+                    found = false;
                     break;
                 }
-                else if (!Character.isLetterOrDigit(symb)) {
-                    lexem += symb;
-                    
-                    TLexemTableInfo found;
-                    bool 
-                    do {
-                        found = lexem_table.matchLexem(lexem, false);
-                        if (found != null) {
-                            symb = (char)scan_stream.read();
-                            if(symb == '\0' || symb == '\n'){
-                                
-                            }
-                            lexem += symb;
-                            pos++;
-                        }
-                    } while (found != null);
-                    lexem = lexem.substring(0, lexem.length() - 2);
-                    pos--;
-                    symb
-                }
-                
-            } while(symb != -1);
-        }
-        
-        catch(IOException ex) {
-            System.out.println(ex);
-        }
+            }
+            if (found) return found_lexem;
+        } while (true/*found_lexem != null*/);
     }
     
     public String collectNumber(String text, int startIndex, boolean exponent = true) {
