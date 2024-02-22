@@ -51,19 +51,31 @@ public class TScanner {
             String line;
             String lexem;
             Lexemme buffer;
-            int line = -1;
+            int line_num = -1;
             int column = 0;
             int pos = 0;
             int current_char = 0;
             do {
                 current_char = 0;
                 column = 0;
-                line++;
+                line_num++;
                 line = scan_lexems.readLine();
                 if(line != null) {
                     while(current_char != line.length()) {
                         buffer = new Lexemme();
                         if(Character.isDigit(line.charAt(current_char))) {
+                            lexem = collectNumber(line, current_char);
+                            if(lexem.charAt(0) == 'I'){
+                                buffer.group = Lexemme.TGroup.Integer;
+                                lexem = lexem.substring(1);
+                                buffer.value = Integer.parseInt(lexem);
+                                buffer.text = lexem;
+                                buffer.column = column;
+                                buffer.len = lexem.length();
+                                buffer.pos = pos;
+                                buffer.line = line_num;
+                            }
+                            else buffer.group = Lexemme.TGroup.Number;
                             
                         }
                         else if (!Character.isLetterOrDigit(line.charAt(current_char))) {
