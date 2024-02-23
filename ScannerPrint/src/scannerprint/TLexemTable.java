@@ -56,9 +56,9 @@ public class TLexemTable {
         lexems.add(new TLexemTableInfo(1, 04, 12, 65535, "/"));
         lexems.add(new TLexemTableInfo(1, 05, 12, 65535, "%"));
         lexems.add(new TLexemTableInfo(1, 22, 14, 65535, "++"));
-        lexems.add(new TLexemTableInfo(1, 01, 11, 65535, "+"));
+        lexems.add(new TLexemTableInfo(1, 1, 11, 65535, "+"));
         lexems.add(new TLexemTableInfo(1, 23, 14, 65535, "--"));
-        lexems.add(new TLexemTableInfo(1, 02, 11, 65535, "-"));
+        lexems.add(new TLexemTableInfo(1, 2, 11, 65535, "-"));
         lexems.add(new TLexemTableInfo(1, 24, 8, 65535, "=="));
         lexems.add(new TLexemTableInfo(1, 14, 1, 65535, "="));
         lexems.add(new TLexemTableInfo(1, 25, 8, 65535, "!="));
@@ -74,10 +74,10 @@ public class TLexemTable {
         lexems.add(new TLexemTableInfo(1, 29, 9, 65535, ">="));
         lexems.add(new TLexemTableInfo(1, 28, 9, 65535, ">"));
         lexems.add(new TLexemTableInfo(1, 40, 2, 65535, "?"));
-        lexems.add(new TLexemTableInfo(1, 47, 13, 65535, "+"));
-        lexems.add(new TLexemTableInfo(1, 48, 13, 65535, "-"));
         lexems.add(new TLexemTableInfo(1, 49, 14, 65535, "++"));
+        lexems.add(new TLexemTableInfo(1, 47, 13, 65535, "+"));
         lexems.add(new TLexemTableInfo(1, 50, 14, 65535, "--"));
+        lexems.add(new TLexemTableInfo(1, 48, 13, 65535, "-"));
         lexems.add(new TLexemTableInfo(2, 34, 0, 65535, "{"));
         lexems.add(new TLexemTableInfo(2, 35, 0, 65535, "}"));
         lexems.add(new TLexemTableInfo(2, 36, 0, 65535, "("));
@@ -134,19 +134,31 @@ public class TLexemTable {
         }
         return found_lexems;
     }*/
+
+    /**
+     *
+     * @param lexem
+     * @param full_match
+     * @return
+     */
+
     
     public TLexemTableInfo matchLexem(String lexem, boolean full_match) {
+        TLexemTableInfo cur_lexem;
         for(int i = search_pointer; i < lexems.size(); i++) {
-            if(full_match)
+            cur_lexem = lexems.get(i);
+            if(full_match) {
                 if(lexems.get(i).text.equals(lexem)) return lexems.get(i);
-            else
+            }
+            else {
                 if(lexems.get(i).text.startsWith(lexem)) {
                     search_pointer = i + 1;
                     return lexems.get(i);
                 }
+            }
         }
         return null;
     }
     
-    public void resetSearch() {search_pointer = 0}
+    public void resetSearch() {search_pointer = 0;}
 }

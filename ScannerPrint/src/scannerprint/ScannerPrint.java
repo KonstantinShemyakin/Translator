@@ -19,13 +19,15 @@ public class ScannerPrint {
     public static void main(String[] args) {
         //File dir_scanner = new File("C:\\Users\\Student\\Documents\\Lego\\Scanner");
         
-        TScanner my_scanner = new TScanner();
+        //TScanner my_scanner = new TScanner();
         
-        my_scanner.parceFile("C:\\Users\\Student\\Documents\\01_Parce\\test.lex");
-        my_scanner.printLexems();
+        //my_scanner.parceFile("C:\\Projects\\Translator\\01_Parse\\test.lex");
+        //my_scanner.printLexems();
         
         TScanner scan_file = new TScanner();
         
+        scan_file.scanFile("C:\\Projects\\Translator\\01_Parse\\test.cpp");
+        scan_file.printLexems();
         
         // TODO code application logic here
     }

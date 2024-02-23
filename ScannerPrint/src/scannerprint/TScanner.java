@@ -28,9 +28,9 @@ public class TScanner {
         File to_parce = new File(parce_location);
         try(FileReader parce_stream = new FileReader(to_parce)) {
             BufferedReader reader = new BufferedReader(parce_stream);
-            String line = "";
+            String line;
             Lexemme buffer;
-            while(line != null) {
+            while(true) {
                 line = reader.readLine();
                 if (line == null || line.equals("")) break;
                 buffer = new Lexemme();
@@ -49,12 +49,12 @@ public class TScanner {
             BufferedReader scan_lexems = new BufferedReader(scan_stream);
             
             String line;
-            String lexem;
+            String prev_line = "";
             Lexemme buffer;
             int line_num = -1;
-            int column = 0;
+            int column;
             int pos = 0;
-            int current_char = 0;
+            int current_char;
             do {
                 current_char = 0;
                 column = 0;
@@ -64,7 +64,7 @@ public class TScanner {
                     while(current_char != line.length()) {
                         buffer = new Lexemme();
                         if(Character.isDigit(line.charAt(current_char))) {
-                            lexem = collectNumber(line, current_char);
+                            String lexem = collectNumber(line, current_char, true);
                             
                             buffer.column = column;
                             buffer.pos = pos;
@@ -103,6 +103,7 @@ public class TScanner {
                             buffer.line = line_num;
                             buffer.pos = pos;
                             buffer.column = column;
+                            current_char++;
                             //Add value
                         }
                         else if (line.charAt(current_char) == '\n')
@@ -111,6 +112,7 @@ public class TScanner {
                             buffer.line = line_num;
                             buffer.pos = pos;
                             buffer.column = column;
+                            current_char++;
                             //Add value
                         }
                         else if (!Character.isLetterOrDigit(line.charAt(current_char))) {
@@ -135,7 +137,23 @@ public class TScanner {
                         column += buffer.len;
                     }
                 }
+                else {
+                    buffer = new Lexemme();
+                    
+                    buffer.group = Lexemme.TGroup.Eof;
+                    buffer.line = line_num - 1;
+                    buffer.pos = pos;
+                    buffer.column = prev_line.length();
+                    
+                    lexems.add(buffer);
+                    //Add value
+                }
+                prev_line = line;
             } while (line != null);
+        }
+        catch(IOException ex) {
+            System.out.println(ex);
+        }
     }
     
     public String collectIdentifier(String text, int startIndex) {
@@ -147,6 +165,7 @@ public class TScanner {
             identifier += text.charAt(current_char);
             current_char++;
         }
+        return identifier;
     }
     
     public TLexemTableInfo identifyOperator(String text, int startIndex) {
@@ -155,7 +174,7 @@ public class TScanner {
         TLexemTableInfo found_lexem;
         boolean found;
         do {
-            found_lexem = lexem_table.matchLexem(text.charAt(startIndex));
+            found_lexem = lexem_table.matchLexem(String.format("%c",text.charAt(startIndex)), false);
             if(found_lexem == null) return null;
             if(found_lexem.text.length() + startIndex >= text.length()) continue;
             found = true;
@@ -169,7 +188,7 @@ public class TScanner {
         } while (true/*found_lexem != null*/);
     }
     
-    public String collectNumber(String text, int startIndex, boolean exponent = true) {
+    public String collectNumber(String text, int startIndex, boolean exponent) {
         Lexemme.TGroup group = Lexemme.TGroup.Integer;
         int current_char = startIndex;
         
@@ -178,26 +197,29 @@ public class TScanner {
         boolean dot_met = false;
         
         while(Character.isDigit(text.charAt(current_char))) {
-            number += text.charAt(current_char));
+            number += text.charAt(current_char);
             current_char++;
-            if(text.charAt(current_char)) == '.') {
+            if(current_char >= text.length() || 
+               text.charAt(current_char) == '\0' ||
+               text.charAt(current_char) == '\n') break;
+            if(text.charAt(current_char) == '.') {
                 if(!dot_met) {
                     dot_met = true;
                     group = Lexemme.TGroup.Number;
-                    number += text.charAt(current_char));
+                    number += text.charAt(current_char);
                     current_char++;
                 }
                 else {/*throw an error here*/}
             } 
-            else if (text.charAt(current_char)) == 'E' ||
-                     text.charAt(current_char)) == 'e') {
+            else if (text.charAt(current_char) == 'E' ||
+                     text.charAt(current_char) == 'e') {
                 if(!exponent) {/*throw error here*/}
                 group = Lexemme.TGroup.Number;
-                number += text.charAt(current_char));
+                number += text.charAt(current_char);
                 current_char++;
-                if(text.charAt(current_char)) == '-' ||
-                   text.charAt(current_char)) == '+') {
-                    number += text.charAt(current_char));
+                if(text.charAt(current_char) == '-' ||
+                   text.charAt(current_char) == '+') {
+                    number += text.charAt(current_char);
                     current_char++;   
                 }
                 number += collectNumber(text, current_char, false);

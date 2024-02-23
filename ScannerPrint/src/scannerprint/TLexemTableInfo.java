@@ -18,7 +18,7 @@ public class TLexemTableInfo {
     
     public TLexemTableInfo() {}
     
-    public TLexemTableInfo(Lexemme.TGroup group, int priority, int type, int mask, String text) {
+    public TLexemTableInfo(Lexemme.TGroup group, int type, int priority, int mask, String text) {
         this.group = group;
         this.priority = priority;
         this.type = type;
@@ -26,7 +26,7 @@ public class TLexemTableInfo {
         this.mask = mask;
     }
     
-    public TLexemTableInfo(int group, int priority, int type, int mask, String text) {
+    public TLexemTableInfo(int group, int type, int priority, int mask, String text) {
         this.group = Lexemme.getGroup(group);
         this.priority = priority;
         this.type = type;
