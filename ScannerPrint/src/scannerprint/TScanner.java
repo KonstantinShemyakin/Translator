@@ -97,8 +97,7 @@ public class TScanner {
                             //Add value
                         }
                         // Check if readLine() function reads '\n' symbol from the end
-                        else if (line.charAt(current_char) == '\0')
-                        {
+                        else if (line.charAt(current_char) == '\0') {
                             buffer.group = Lexemme.TGroup.Eof;
                             buffer.line = line_num;
                             buffer.pos = pos;
@@ -106,13 +105,23 @@ public class TScanner {
                             current_char++;
                             //Add value
                         }
-                        else if (line.charAt(current_char) == '\n')
-                        {
+                        else if (line.charAt(current_char) == '\n') {
                             buffer.group = Lexemme.TGroup.Line;
                             buffer.line = line_num;
                             buffer.pos = pos;
                             buffer.column = column;
                             current_char++;
+                            //Add value
+                        }
+                        else if (line.charAt(current_char) == '"') {
+                            String lexem = collectString(line, current_char);
+                            
+                            buffer.group = Lexemme.TGroup.String;
+                            buffer.line = line_num;
+                            buffer.pos = pos;
+                            buffer.column = column;
+                            buffer.text = lexem;
+                            buffer.len = lexem.length();
                             //Add value
                         }
                         else if (!Character.isLetterOrDigit(line.charAt(current_char))) {
@@ -154,6 +163,21 @@ public class TScanner {
         catch(IOException ex) {
             System.out.println(ex);
         }
+    }
+    
+    public String collectString(String text, int startIndex) {
+        if (text.charAt(startIndex) != '"') return null;
+        String lexeme_string = "\"";
+        int current_char = startIndex + 1;
+        while(text.charAt(current_char) != '"' || 
+              current_char != text.length()) {
+            lexeme_string += text.charAt(current_char); 
+            current_char++;
+        }
+        if (current_char == text.length()) {
+            //throw an error here
+        }
+        return lexeme_string;
     }
     
     public String collectIdentifier(String text, int startIndex) {
