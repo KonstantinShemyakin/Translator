@@ -61,10 +61,10 @@ public class TScanner {
             int column;
             int pos = 0;
             int current_char;
-                    while(current_char != line.length()) {
+                    while(current_char != file.length()) {
                         buffer = new Lexemme();
-                        if(Character.isDigit(line.charAt(current_char))) {
-                            String lexem = collectNumber(line, current_char, true);
+                        if(Character.isDigit(file.charAt(current_char))) {
+                            String lexem = collectNumber(file, current_char, true);
                             
                             buffer.column = column;
                             buffer.pos = pos;
@@ -83,20 +83,20 @@ public class TScanner {
                             buffer.len = lexem.length();
                             buffer.text = lexem;                            
                         }                        
-                        else if (line.charAt(current_char) == ' ') {
+                        else if (file.charAt(current_char) == ' ') {
                             buffer.column = column;
                             buffer.line = line_num;
                             buffer.pos = pos;
                             buffer.group = Lexemme.TGroup.Space;
                             int space_pointer = current_char;
-                            while(line.charAt(space_pointer) == ' ') {
+                            while(file.charAt(space_pointer) == ' ') {
                                 buffer.len++;
                                 space_pointer++;
                             }
                             //Add value
                         }
                         // Check if readLine() function reads '\n' symbol from the end
-                        else if (line.charAt(current_char) == '\0') {
+                        else if (file.charAt(current_char) == '\0') {
                             buffer.group = Lexemme.TGroup.Eof;
                             buffer.line = line_num;
                             buffer.pos = pos;
@@ -104,7 +104,7 @@ public class TScanner {
                             current_char++;
                             //Add value
                         }
-                        else if (line.charAt(current_char) == '\n') {
+                        else if (file.charAt(current_char) == '\n') {
                             buffer.group = Lexemme.TGroup.Line;
                             buffer.line = line_num;
                             buffer.pos = pos;
@@ -114,8 +114,8 @@ public class TScanner {
                             column = 0;
                             //Add value
                         }
-                        else if (line.charAt(current_char) == '"') {
-                            String lexem = collectString(line, current_char);
+                        else if (file.charAt(current_char) == '"') {
+                            String lexem = collectString(file, current_char);
                             
                             buffer.group = Lexemme.TGroup.String;
                             buffer.line = line_num;
@@ -125,8 +125,8 @@ public class TScanner {
                             buffer.len = lexem.length();
                             //Add value
                         }
-                        else if (!Character.isLetterOrDigit(line.charAt(current_char))) {
-                            TLexemTableInfo identified = identifyOperator(line, current_char);
+                        else if (!Character.isLetterOrDigit(file.charAt(current_char))) {
+                            TLexemTableInfo identified = identifyOperator(file, current_char);
                             if (identified != null) {
                                 buffer.group = identified.group;
                                 buffer.line = line_num;
