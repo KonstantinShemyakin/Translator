@@ -260,56 +260,6 @@ public class TScanner {
         }
         if(group == Lexemme.TGroup.Integer) return "I" + number;
         else return "N" + number;
-        /*
-        do {
-            
-                if (Character.isDigit(symb))
-                {
-                    buffer.line = line;
-                    buffer.pos = pos;
-                    buffer.column = column;
-                    while(Character.isDigit(symb)) {
-                        if (buffer.group == Lexemme.TGroup.None) buffer.group = Lexemme.TGroup.Integer;
-                        lexem += symb;
-                        buffer.len++;
-                        pos++;
-                        column++;
-                        symb = (char)scan_stream.read();
-                        if (symb == '.') {*/
-                            /* if already met dot and met another */ // Make flag to see if dot already met make error
-                            /*if (buffer.group != Lexemme.TGroup.Number) buffer.group = Lexemme.TGroup.Number;
-                            lexem += symb;
-                            buffer.len++;
-                            pos++;
-                            column++;
-                            symb = (char)scan_stream.read();
-                        }
-                        else if (symb == 'E' || symb == 'e') {
-                            // Make flag if E already met throw error
-                            // Remove dot flag
-                            if (buffer.group != Lexemme.TGroup.Number) buffer.group = Lexemme.TGroup.Number;
-                            lexem += symb;
-                            buffer.len++;
-                            pos++;
-                            column++;
-                            symb = (char)scan_stream.read();
-                            if (symb == '-' || symb == '+') {
-                                lexem += symb;
-                                buffer.len++;
-                                pos++;
-                                column++;
-                                symb = (char)scan_stream.read();
-                            }
-                        }
-                    }
-                    if (buffer.group == Lexemme.TGroup.Integer) {
-                        buffer.value = Integer.parseInt(lexem);
-                        buffer.text = lexem;
-                    }
-                    else {
-                        //buffer.value = Double.parseDouble(lexem) how to get double value
-                        buffer.text = lexem;
-                    }*/
     }
     
     public void printLexems() {
@@ -323,6 +273,15 @@ public class TScanner {
         Lexemme lexem = lexems.get(cur_lexem);
         if(lexem.group == group && 
            lexem.type == type) {
+            cur_lexem++;
+            return true;
+        }
+        else return false;
+    }
+    
+    public boolean Match(Lexemme.TGroup group) {
+        Lexemme lexem = lexems.get(cur_lexem);
+        if(lexem.group == group) {
             cur_lexem++;
             return true;
         }
