@@ -48,19 +48,19 @@ public class TScanner {
         try(FileReader scan_stream = new FileReader(to_scan)) {
             BufferedReader scan_lexems = new BufferedReader(scan_stream);
             
-            String line;
+            String file = "";
+            String line = scan_lexems.readLine();
+            while(line != null) {
+                file += line;
+                if((line = scan_lexems.readLine()) != null) file += '\n';
+            }
+            file += '\0';
             String prev_line = "";
             Lexemme buffer;
             int line_num = -1;
             int column;
             int pos = 0;
             int current_char;
-            do {
-                current_char = 0;
-                column = 0;
-                line_num++;
-                line = scan_lexems.readLine();
-                if(line != null) {
                     while(current_char != line.length()) {
                         buffer = new Lexemme();
                         if(Character.isDigit(line.charAt(current_char))) {
@@ -78,7 +78,6 @@ public class TScanner {
                             else {
                                 buffer.group = Lexemme.TGroup.Number;
                                 lexem = lexem.substring(1);
-                                // Ask how value is calculated for float numbers
                                 //buffer.value = Double.parseDouble(lexem); 
                             }
                             buffer.len = lexem.length();
@@ -111,6 +110,8 @@ public class TScanner {
                             buffer.pos = pos;
                             buffer.column = column;
                             current_char++;
+                            line_num++;
+                            column = 0;
                             //Add value
                         }
                         else if (line.charAt(current_char) == '"') {
@@ -145,20 +146,6 @@ public class TScanner {
                         pos += buffer.len;
                         column += buffer.len;
                     }
-                }
-                else {
-                    buffer = new Lexemme();
-                    
-                    buffer.group = Lexemme.TGroup.Eof;
-                    buffer.line = line_num - 1;
-                    buffer.pos = pos;
-                    buffer.column = prev_line.length();
-                    
-                    lexems.add(buffer);
-                    //Add value
-                }
-                prev_line = line;
-            } while (line != null);
         }
         catch(IOException ex) {
             System.out.println(ex);
@@ -166,13 +153,35 @@ public class TScanner {
     }
     
     public String collectString(String text, int startIndex) {
+        char[][] escapes = {{'t' , '\t'},
+                            {'n' , '\n'},
+                            {'\\', '\\'},
+                            {'"' , '\"'},
+                            {'\'', '\''}}; 
+        //Make array of escapes and escape values and search escape values if found
         if (text.charAt(startIndex) != '"') return null;
         String lexeme_string = "\"";
         int current_char = startIndex + 1;
         while(text.charAt(current_char) != '"' || 
               current_char != text.length()) {
-            lexeme_string += text.charAt(current_char); 
-            current_char++;
+            if(text.charAt(current_char) == '\\') {
+                int start = current_char;
+                current_char++;
+                for(int i = 0; i < escapes.size(); i++) {
+                    if(text.charAt(current_char) == escapes[i][0]) {
+                        lexeme_string += escapes[i][1];
+                        current_char++;
+                        break;
+                    }
+                }
+                if(current_char - 1 == start) {
+                    // throw an error here, escape sequence not found
+                }
+            }
+            else {
+                lexeme_string += text.charAt(current_char); 
+                current_char++;
+            }
         }
         if (current_char == text.length()) {
             //throw an error here
