@@ -279,9 +279,28 @@ public class TScanner {
         else return false;
     }
     
+    public boolean Match(Lexemme.TGroup group, Lexemme.TType type) {
+        Lexemme lexem = lexems.get(cur_lexem);
+        if(lexem.group == group && 
+           lexem.type == type.ordinal()) {
+            cur_lexem++;
+            return true;
+        }
+        else return false;
+    }
+    
     public boolean Match(Lexemme.TGroup group) {
         Lexemme lexem = lexems.get(cur_lexem);
         if(lexem.group == group) {
+            cur_lexem++;
+            return true;
+        }
+        else return false;
+    }
+    
+    public boolean Match(Lexemme.TType type) {
+        Lexemme lexem = lexems.get(cur_lexem);
+        if(lexem.type == type.ordinal()) {
             cur_lexem++;
             return true;
         }
