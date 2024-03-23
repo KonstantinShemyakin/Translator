@@ -143,18 +143,22 @@ public class TLexemTable {
      */
 
     
-    public TLexemTableInfo matchLexem(String lexem, boolean full_match) {
+    public TLexemTableInfo matchLexem(String lexem) {
         TLexemTableInfo cur_lexem;
         for(int i = search_pointer; i < lexems.size(); i++) {
             cur_lexem = lexems.get(i);
-            if(full_match) {
-                if(lexems.get(i).text.equals(lexem)) return lexems.get(i);
-            }
-            else {
-                if(lexems.get(i).text.startsWith(lexem)) {
-                    search_pointer = i + 1;
-                    return lexems.get(i);
-                }
+            if(cur_lexem.text.equals(lexem)) return lexems.get(i);
+        }
+        return null;
+    }
+    
+    public TLexemTableInfo findLexem(String lexem) {
+        TLexemTableInfo cur_lexem;
+        for(int i = search_pointer; i < lexems.size(); i++) {
+            cur_lexem = lexems.get(i);
+            if(cur_lexem.text.startsWith(lexem)) {
+                search_pointer = i + 1;
+                return cur_lexem;
             }
         }
         return null;

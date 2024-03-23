@@ -207,7 +207,7 @@ public class TScanner {
         TLexemTableInfo found_lexem;
         boolean found;
         do {
-            found_lexem = lexem_table.matchLexem(String.format("%c",text.charAt(startIndex)), false);
+            found_lexem = lexem_table.findLexem(String.format("%c",text.charAt(startIndex)));
             if(found_lexem == null) return null;
             if(found_lexem.text.length() + startIndex >= text.length()) continue;
             found = true;
@@ -304,6 +304,15 @@ public class TScanner {
             cur_lexem++;
             return true;
         }
-        else return false;
+        return false;
+    }
+    
+    public boolean Match(Lexemme.TPriority priority) {
+        TLexemTableInfo lexem_info = lexem_table.matchLexem(lexems.get(cur_lexem).text);
+        if(lexem_info.priority == priority.ordinal()) {
+            cur_lexem++;
+            return true;
+        }
+        return false;
     }
 }
