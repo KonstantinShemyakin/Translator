@@ -10,6 +10,38 @@ const char* lexeme_type[] = { "None", "Add", "Sub", "Multi", "Div", "Mod", "AddA
 enum TLexeme::TPriority { None, Assign, Question, OrOr, AndAnd, Or, XOr, And, Equ, Compare, Shift, Term, Factor, Unary, IncDec,  };
 const char* lexeme_priority[] = { "None", "Assign", "Question", "OrOr", "AndAnd", "Or", "XOr", "And", "Equ", "Compare", "Shift", "Term", "Factor", "Unary", "IncDec",  };
 
+None            :  
+Assign          : +=              -=              *=              /=              %=              &=              |=              ^=              =               <<=             >>>=            >>=              
+Question        : ?                
+OrOr            : ||               
+AndAnd          : &&               
+Or              : |                
+XOr             : ^                
+And             : &                
+Equ             : ==              !=               
+Compare         : <=              <               >=              >                
+Shift           : <<              >>>             >>               
+Term            : +               -                
+Factor          : *               /               %                
+Unary           : ~               !               +               -                
+IncDec          : ++              --              ++              --               
+ 
+None            :  
+Assign          : AddAssign       SubAssign       MultiAssign     DivAssign       ModAssign       AndAssign       OrAssign        XOrAssign       Assign          LShiftAssign    RZShiftAssign   RShiftAssign     
+Question        : Question         
+OrOr            : OrOr             
+AndAnd          : AndAnd           
+Or              : Or               
+XOr             : XOr              
+And             : And              
+Equ             : Equ             NotEqu           
+Compare         : LE              LT              GE              GT               
+Shift           : LShift          RZShift         RShift           
+Term            : Add             Sub              
+Factor          : Multi           Div             Mod              
+Unary           : Tilda           Not             UnaryAdd        UnarySub         
+IncDec          : PlusPlus        MinusMinus      PostInc         PostDec          
+ 
 enum TLexeme::TSyntax { None, IdentFunc, IdentArr, DefFunc, DefArr, DefVar, DefType, Label, Cast, CastUnary, EmptyCramp, EmptyBracket, EmptyScrape,  };
 const char* lexeme_syntax[] = { "None", "IdentFunc", "IdentArr", "DefFunc", "DefArr", "DefVar", "DefType", "Label", "Cast", "CastUnary", "EmptyCramp", "EmptyBracket", "EmptyScrape",  };
 
