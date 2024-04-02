@@ -34,10 +34,10 @@ public class PSyntax {
 	
 	boolean OrOr()
 	{
-		if (!AndAnd()) return false;
+            if (!AndAnd()) return false;
 	    while (parent_scanner.Match(Lexemme.TPriority.OrOr)) {
-		   if (!AndAnd()) return false;
-		}
+		if (!AndAnd()) return false;
+            }
 	    return true;
 	}
 	

@@ -58,9 +58,9 @@ public class TScanner {
             String prev_line = "";
             Lexemme buffer;
             int line_num = -1;
-            int column;
+            int column = 0;
             int pos = 0;
-            int current_char;
+            int current_char = 0;
                     while(current_char != file.length()) {
                         buffer = new Lexemme();
                         if(Character.isDigit(file.charAt(current_char))) {
@@ -167,7 +167,7 @@ public class TScanner {
             if(text.charAt(current_char) == '\\') {
                 int start = current_char;
                 current_char++;
-                for(int i = 0; i < escapes.size(); i++) {
+                for(int i = 0; i < escapes.length; i++) {
                     if(text.charAt(current_char) == escapes[i][0]) {
                         lexeme_string += escapes[i][1];
                         current_char++;
