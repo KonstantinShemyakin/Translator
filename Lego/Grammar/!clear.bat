@@ -1,0 +1,1 @@
+del /Q *.tab *.grammar

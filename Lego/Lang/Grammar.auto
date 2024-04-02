@@ -1,0 +1,228 @@
+enum BIF_AutoType {
+   BIF_S_, BIF_Program, BIF__f_00002_, BIF__f_00003_, BIF_ItemsDefine, BIF__f_00005_, BIF__f_00006_, BIF_VarDefine, BIF__f_00008_, BIF_ArrayDefine, BIF__f_00010_, BIF__f_00011_, BIF_FuncDefine, BIF_FormalParameters, BIF__f_00014_, BIF__f_00015_, 
+   BIF_FormalParameter, BIF__f_00017_, BIF_FuncBody, BIF_VarsDefStatement, BIF__f_00020_, BIF__f_00021_, BIF_ExprStatement, BIF_Statement, BIF_CompaundStmnt, BIF__f_00025_, BIF__f_00026_, BIF_Expression, BIF_Assign, BIF__f_00029_, BIF_Question, BIF__f_00031_, 
+   BIF_OrOr, BIF__f_00033_, BIF__f_00034_, BIF_AndAnd, BIF__f_00036_, BIF__f_00037_, BIF_Or, BIF__f_00039_, BIF__f_00040_, BIF_XOr, BIF__f_00042_, BIF__f_00043_, BIF_And, BIF__f_00045_, BIF__f_00046_, BIF_Equ, 
+   BIF__f_00048_, BIF__f_00049_, BIF_Compare, BIF__f_00051_, BIF__f_00052_, BIF_Shift, BIF__f_00054_, BIF__f_00055_, BIF_Term, BIF__f_00057_, BIF__f_00058_, BIF_Factor, BIF__f_00060_, BIF__f_00061_, BIF_Unary, BIF__f_00063_, 
+   BIF__f_00064_, BIF__f_00065_, BIF__f_00066_, BIF__f_00067_, BIF_Primary, BIF_Expressions, BIF__f_00070_, BIF__f_00071_
+};
+
+   switch(type) {
+
+   case BIF_S_: {
+      } break;
+
+   case BIF_Program: {
+      } break;
+
+   case BIF__f_00002_: {
+      } break;
+
+   case BIF__f_00003_: {
+      } break;
+
+   case BIF_ItemsDefine: {
+      } break;
+
+   case BIF__f_00005_: {
+      } break;
+
+   case BIF__f_00006_: {
+      } break;
+
+   case BIF_VarDefine: {
+      } break;
+
+   case BIF__f_00008_: {
+      } break;
+
+   case BIF_ArrayDefine: {
+      } break;
+
+   case BIF__f_00010_: {
+      } break;
+
+   case BIF__f_00011_: {
+      } break;
+
+   case BIF_FuncDefine: {
+      } break;
+
+   case BIF_FormalParameters: {
+      } break;
+
+   case BIF__f_00014_: {
+      } break;
+
+   case BIF__f_00015_: {
+      } break;
+
+   case BIF_FormalParameter: {
+      } break;
+
+   case BIF__f_00017_: {
+      } break;
+
+   case BIF_FuncBody: {
+      } break;
+
+   case BIF_VarsDefStatement: {
+      } break;
+
+   case BIF__f_00020_: {
+      } break;
+
+   case BIF__f_00021_: {
+      } break;
+
+   case BIF_ExprStatement: {
+      } break;
+
+   case BIF_Statement: {
+      } break;
+
+   case BIF_CompaundStmnt: {
+      } break;
+
+   case BIF__f_00025_: {
+      } break;
+
+   case BIF__f_00026_: {
+      } break;
+
+   case BIF_Expression: {
+      } break;
+
+   case BIF_Assign: {
+      } break;
+
+   case BIF__f_00029_: {
+      } break;
+
+   case BIF_Question: {
+      } break;
+
+   case BIF__f_00031_: {
+      } break;
+
+   case BIF_OrOr: {
+      } break;
+
+   case BIF__f_00033_: {
+      } break;
+
+   case BIF__f_00034_: {
+      } break;
+
+   case BIF_AndAnd: {
+      } break;
+
+   case BIF__f_00036_: {
+      } break;
+
+   case BIF__f_00037_: {
+      } break;
+
+   case BIF_Or: {
+      } break;
+
+   case BIF__f_00039_: {
+      } break;
+
+   case BIF__f_00040_: {
+      } break;
+
+   case BIF_XOr: {
+      } break;
+
+   case BIF__f_00042_: {
+      } break;
+
+   case BIF__f_00043_: {
+      } break;
+
+   case BIF_And: {
+      } break;
+
+   case BIF__f_00045_: {
+      } break;
+
+   case BIF__f_00046_: {
+      } break;
+
+   case BIF_Equ: {
+      } break;
+
+   case BIF__f_00048_: {
+      } break;
+
+   case BIF__f_00049_: {
+      } break;
+
+   case BIF_Compare: {
+      } break;
+
+   case BIF__f_00051_: {
+      } break;
+
+   case BIF__f_00052_: {
+      } break;
+
+   case BIF_Shift: {
+      } break;
+
+   case BIF__f_00054_: {
+      } break;
+
+   case BIF__f_00055_: {
+      } break;
+
+   case BIF_Term: {
+      } break;
+
+   case BIF__f_00057_: {
+      } break;
+
+   case BIF__f_00058_: {
+      } break;
+
+   case BIF_Factor: {
+      } break;
+
+   case BIF__f_00060_: {
+      } break;
+
+   case BIF__f_00061_: {
+      } break;
+
+   case BIF_Unary: {
+      } break;
+
+   case BIF__f_00063_: {
+      } break;
+
+   case BIF__f_00064_: {
+      } break;
+
+   case BIF__f_00065_: {
+      } break;
+
+   case BIF__f_00066_: {
+      } break;
+
+   case BIF__f_00067_: {
+      } break;
+
+   case BIF_Primary: {
+      } break;
+
+   case BIF_Expressions: {
+      } break;
+
+   case BIF__f_00070_: {
+      } break;
+
+   case BIF__f_00071_: {
+      } break;
+   default: {
+      } break;
+   }

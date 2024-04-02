@@ -1,0 +1,250 @@
+
+[  0] S_                 
+  [  0] _f_00003_          
+    [  1] _f_00002_          
+      group=Reserv    , type=Define      , pos=0000, line=000, column=000, len=03, value=65555, text=int
+      [  1] VarDefine          
+        group=Ident     , type=00          , pos=0004, line=000, column=004, len=01, text=k
+        [  0] _f_00007_          
+          group=Oper      , type=Assign      , pos=0006, line=000, column=006, len=01, value=37, text==
+          [  0] Assign             
+            [  0] Question           
+              [  0] OrOr               
+                [  0] AndAnd             
+                  [  0] Or                 
+                    [  0] XOr                
+                      [  0] And                
+                        [  0] Equ                
+                          [  0] Compare            
+                            [  0] Shift              
+                              [  0] Term               
+                                [  0] Factor             
+                                  [  3] Unary              
+                                    [  1] _f_00061_          
+                                      group=Ident     , type=00          , pos=0008, line=000, column=008, len=01, text=i
+                                      [  0] Expressions        
+                                        [  0] Assign             
+                                          [  0] Question           
+                                            [  0] OrOr               
+                                              [  0] AndAnd             
+                                                [  0] Or                 
+                                                  [  0] XOr                
+                                                    [  0] And                
+                                                      [  0] Equ                
+                                                        [  0] Compare            
+                                                          [  0] Shift              
+                                                            [  0] Term               
+                                                              [  0] Factor             
+                                                                [  3] Unary              
+                                                                  group=Integer   , type=00          , pos=0010, line=000, column=010, len=01, value=0, text=1
+                                        [  0] _f_00069_          
+                                          [  0] Assign             
+                                            [  0] Question           
+                                              [  0] OrOr               
+                                                [  0] AndAnd             
+                                                  [  0] Or                 
+                                                    [  0] XOr                
+                                                      [  0] And                
+                                                        [  0] Equ                
+                                                          [  0] Compare            
+                                                            [  0] Shift              
+                                                              [  0] Term               
+                                                                [  0] Factor             
+                                                                  [  3] Unary              
+                                                                    group=Integer   , type=00          , pos=0012, line=000, column=012, len=01, value=1, text=2
+                                          [  0] _f_00069_          
+                                            [  0] Assign             
+                                              [  0] Question           
+                                                [  0] OrOr               
+                                                  [  0] AndAnd             
+                                                    [  0] Or                 
+                                                      [  0] XOr                
+                                                        [  0] And                
+                                                          [  0] Equ                
+                                                            [  0] Compare            
+                                                              [  0] Shift              
+                                                                [  0] Term               
+                                                                  [  0] Factor             
+                                                                    [  3] Unary              
+                                                                      group=Integer   , type=00          , pos=0014, line=000, column=014, len=01, value=2, text=3
+            [  0] _f_00027_          
+              group=Oper      , type=Assign      , pos=0017, line=000, column=017, len=01, value=37, text==
+              [  0] Assign             
+                [  0] Question           
+                  [  0] OrOr               
+                    [  0] AndAnd             
+                      [  0] Or                 
+                        [  0] XOr                
+                          [  0] And                
+                            [  0] Equ                
+                              [  0] Compare            
+                                [  0] Shift              
+                                  [  0] Term               
+                                    [  0] Factor             
+                                      [  3] Unary              
+                                        group=Integer   , type=00          , pos=0019, line=000, column=019, len=01, value=2, text=3
+                                    [  0] _f_00056_          
+                                      [  0] _f_00055_          
+                                        group=Oper      , type=Add         , pos=0021, line=000, column=021, len=01, value=33, text=+
+                                        [  0] Factor             
+                                          [  3] Unary              
+                                            group=Integer   , type=00          , pos=0023, line=000, column=023, len=01, value=3, text=6
+                                          [  0] _f_00059_          
+                                            [  0] _f_00058_          
+                                              group=Oper      , type=Multi       , pos=0025, line=000, column=025, len=01, value=29, text=*
+                                              [  3] Unary              
+                                                [  0] Expressions        
+                                                  [  0] Assign             
+                                                    [  0] Question           
+                                                      [  0] OrOr               
+                                                        [  0] AndAnd             
+                                                          [  0] Or                 
+                                                            [  0] XOr                
+                                                              [  0] And                
+                                                                [  0] Equ                
+                                                                  [  0] Compare            
+                                                                    [  0] Shift              
+                                                                      [  0] Term               
+                                                                        [  0] Factor             
+                                                                          [  3] Unary              
+                                                                            group=Integer   , type=00          , pos=0028, line=000, column=028, len=01, value=4, text=7
+                                                                        [  0] _f_00056_          
+                                                                          [  0] _f_00055_          
+                                                                            group=Oper      , type=Add         , pos=0030, line=000, column=030, len=01, value=33, text=+
+                                                                            [  0] Factor             
+                                                                              [  3] Unary              
+                                                                                group=Integer   , type=00          , pos=0032, line=000, column=032, len=01, value=5, text=8
+                                      [  0] _f_00056_          
+                                        [  0] _f_00055_          
+                                          group=Oper      , type=Sub         , pos=0035, line=000, column=035, len=01, value=35, text=-
+                                          [  0] Factor             
+                                            [  3] Unary              
+                                              group=Integer   , type=00          , pos=0037, line=000, column=037, len=01, value=6, text=5
+                                [  0] _f_00050_          
+                                  [  0] _f_00049_          
+                                    group=Oper      , type=LT          , pos=0039, line=000, column=039, len=01, value=43, text=<
+                                    [  0] Shift              
+                                      [  0] Term               
+                                        [  0] Factor             
+                                          [  3] Unary              
+                                            [  0] _f_00061_          
+                                              group=Ident     , type=00          , pos=0041, line=000, column=041, len=01, text=a
+                                              [  0] Assign             
+                                                [  0] Question           
+                                                  [  0] OrOr               
+                                                    [  0] AndAnd             
+                                                      [  0] Or                 
+                                                        [  0] XOr                
+                                                          [  0] And                
+                                                            [  0] Equ                
+                                                              [  0] Compare            
+                                                                [  0] Shift              
+                                                                  [  0] Term               
+                                                                    [  0] Factor             
+                                                                      [  3] Unary              
+                                                                        group=Integer   , type=00          , pos=0043, line=000, column=043, len=01, value=0, text=1
+                                              [  0] _f_00063_          
+                                                [  0] Assign             
+                                                  [  0] Question           
+                                                    [  0] OrOr               
+                                                      [  0] AndAnd             
+                                                        [  0] Or                 
+                                                          [  0] XOr                
+                                                            [  0] And                
+                                                              [  0] Equ                
+                                                                [  0] Compare            
+                                                                  [  0] Shift              
+                                                                    [  0] Term               
+                                                                      [  0] Factor             
+                                                                        [  3] Unary              
+                                                                          group=Integer   , type=00          , pos=0046, line=000, column=046, len=01, value=1, text=2
+    [  0] _f_00003_          
+      [  1] _f_00002_          
+        group=Reserv    , type=Define      , pos=0051, line=001, column=000, len=03, value=65555, text=int
+        [  1] VarDefine          
+          group=Ident     , type=00          , pos=0055, line=001, column=004, len=01, text=i
+          [  0] _f_00007_          
+            group=Oper      , type=Assign      , pos=0056, line=001, column=005, len=01, value=37, text==
+            [  0] Assign             
+              [  0] Question           
+                [  0] OrOr               
+                  [  0] AndAnd             
+                    [  0] Or                 
+                      [  0] XOr                
+                        [  0] And                
+                          [  0] Equ                
+                            [  0] Compare            
+                              [  0] Shift              
+                                [  0] Term               
+                                  [  0] Factor             
+                                    [  3] Unary              
+                                      group=Integer   , type=00          , pos=0057, line=001, column=006, len=02, value=7, text=12
+      [  0] _f_00003_          
+        [  0] _f_00002_          
+          group=Reserv    , type=Define      , pos=0062, line=002, column=000, len=04, value=2097169, text=void
+          group=Ident     , type=00          , pos=0067, line=002, column=005, len=01, text=f
+          [  1] FormalParameters   
+            [  0] FormalParameter    
+              group=Reserv    , type=Define      , pos=0069, line=002, column=007, len=03, value=65555, text=int
+              group=Ident     , type=00          , pos=0073, line=002, column=011, len=01, text=i
+          [  0] FuncBody           
+        [  0] _f_00003_          
+          [  1] _f_00002_          
+            group=Reserv    , type=Define      , pos=0078, line=003, column=000, len=03, value=65555, text=int
+            [  0] ArrayDefine        
+              group=Ident     , type=00          , pos=0082, line=003, column=004, len=01, text=a
+              group=Integer   , type=00          , pos=0084, line=003, column=006, len=01, value=1, text=2
+              [  0] _f_00010_          
+                group=Integer   , type=00          , pos=0087, line=003, column=009, len=01, value=2, text=3
+          [  0] _f_00003_          
+            [  0] _f_00002_          
+              group=Reserv    , type=Define      , pos=0092, line=004, column=000, len=03, value=65555, text=int
+              group=Ident     , type=00          , pos=0096, line=004, column=004, len=01, text=f
+              [  1] FormalParameters   
+                [  0] FormalParameter    
+                  group=Reserv    , type=Define      , pos=0098, line=004, column=006, len=03, value=65555, text=int
+                  [  0] ArrayDefine        
+                    group=Ident     , type=00          , pos=0102, line=004, column=010, len=01, text=a
+                    group=Integer   , type=00          , pos=0104, line=004, column=012, len=01, value=6, text=5
+              [  1] CompaundStmnt      
+                [  0] VarsDefStatement   
+                  group=Reserv    , type=Define      , pos=0109, line=004, column=017, len=03, value=65555, text=int
+                  [  1] VarDefine          
+                    group=Ident     , type=00          , pos=0113, line=004, column=021, len=01, text=i
+                    [  0] _f_00007_          
+                      group=Oper      , type=Assign      , pos=0115, line=004, column=023, len=01, value=37, text==
+                      [  0] Assign             
+                        [  0] Question           
+                          [  0] OrOr               
+                            [  0] AndAnd             
+                              [  0] Or                 
+                                [  0] XOr                
+                                  [  0] And                
+                                    [  0] Equ                
+                                      [  0] Compare            
+                                        [  0] Shift              
+                                          [  0] Term               
+                                            [  0] Factor             
+                                              [  3] Unary              
+                                                group=Integer   , type=00          , pos=0117, line=004, column=025, len=02, value=7, text=12
+                [  0] _f_00024_          
+                  [  0] CompaundStmnt      
+                  [  0] _f_00024_          
+                    [  1] CompaundStmnt      
+                      [  0] Assign             
+                        [  0] Question           
+                          [  0] OrOr               
+                            [  0] AndAnd             
+                              [  0] Or                 
+                                [  0] XOr                
+                                  [  0] And                
+                                    [  0] Equ                
+                                      [  0] Compare            
+                                        [  0] Shift              
+                                          [  0] Term               
+                                            [  0] Factor             
+                                              [  3] Unary              
+                                                group=Ident     , type=00          , pos=0126, line=004, column=034, len=01, text=i
+                                                group=Oper      , type=PlusPlus    , pos=0127, line=004, column=035, len=02, value=32, text=++
+                    [  0] _f_00024_          
+                      [  1] Statement          

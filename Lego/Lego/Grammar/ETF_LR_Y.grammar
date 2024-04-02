@@ -1,0 +1,20 @@
+
+Z                        
+                         :   E                        
+                         ;
+E                        
+                         :   E                           <Oper,Add>                  T                        
+                         |   E                           <Oper,Sub>                  T                        
+                         |   T                        
+                         ;
+T                        
+                         :   T                           <Oper,Multi>                F                        
+                         |   T                           <Oper,Div>                  F                        
+                         |   F                        
+                         ;
+F                        
+                         :   <Separator,LeftBracket>     E                           <Separator,RightBracket> 
+                         |   <Integer>                
+                         |   <Number>                 
+                         |   <Ident>                  
+                         ;

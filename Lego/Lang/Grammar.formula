@@ -1,0 +1,136 @@
+
+--- BIF_Grammar --- formula=57, produce=76, item=148, maker=0, used=57, vector=0, type=040071 ---
+
+S_:                      used=1, mode=0000, 00000
+[  0] S_                 -> Program                  
+Program:                 used=1, mode=0000, 00001
+[  0] Program            -> _f_00002_                
+_f_00002_:               used=1, mode=8000, 00002
+[  0] _f_00002_          -> Define                   
+Define:                  used=1, mode=0000, 00003
+[  0] Define             -> FuncDefine               
+[  1] Define             -> ItemsDefine              
+ItemsDefine:             used=1, mode=0000, 00004
+[  0] ItemsDefine        -> <Syntax,DefType>         VarDefine                _f_00005_                <Separator,Semicolon>    
+_f_00005_:               used=1, mode=8000, 00005
+[  0] _f_00005_          -> <Separator,Comma>        VarDefine                
+VarDefine:               used=4, mode=0000, 00006
+[  0] VarDefine          -> ArrayDefine              
+[  1] VarDefine          -> SimpleVarDefine          
+SimpleVarDefine:         used=1, mode=0000, 00007
+[  0] SimpleVarDefine    -> <Ident>                  _f_00008_                
+_f_00008_:               used=1, mode=4000, 00008
+[  0] _f_00008_          -> <Oper,Assign>            Expression               
+ArrayDefine:             used=2, mode=0000, 00009
+[  0] ArrayDefine        -> <Syntax,IdentArr>        <Separator,LeftScrape>   <Integer>                <Separator,RightScrape>  _f_00010_                
+_f_00010_:               used=1, mode=8000, 00010
+[  0] _f_00010_          -> <Separator,LeftScrape>   <Integer>                <Separator,RightScrape>  
+FuncDefine:              used=1, mode=0000, 00011
+[  0] FuncDefine         -> <Syntax,DefFunc>         <Syntax,IdentFunc>       FormalParameters         FuncBody                 
+FormalParameters:        used=1, mode=0000, 00012
+[  0] FormalParameters   -> <Syntax,EmptyBracket>    
+[  1] FormalParameters   -> <Separator,LeftBracket>  FormalParameter          _f_00013_                <Separator,RightBracket> 
+_f_00013_:               used=1, mode=8000, 00013
+[  0] _f_00013_          -> <Separator,Comma>        FormalParameter          
+FormalParameter:         used=2, mode=0000, 00014
+[  0] FormalParameter    -> <Syntax,DefType>         _f_00015_                
+_f_00015_:               used=1, mode=2000, 00015
+[  0] _f_00015_          -> ArrayDefine              
+[  1] _f_00015_          -> <Ident>                  
+FuncBody:                used=1, mode=0000, 00016
+[  0] FuncBody           -> <Separator,Semicolon>    
+[  1] FuncBody           -> CompaundStmnt            
+VarsDefStatement:        used=2, mode=0000, 00017
+[  0] VarsDefStatement   -> VarsOrArrsDefine         
+[  1] VarsDefStatement   -> Statement                
+[  2] VarsDefStatement   -> ExprStatement            
+VarsOrArrsDefine:        used=1, mode=0000, 00018
+[  0] VarsOrArrsDefine   -> <Syntax,DefType>         VarDefine                _f_00019_                <Separator,Semicolon>    
+_f_00019_:               used=1, mode=8000, 00019
+[  0] _f_00019_          -> <Separator,Comma>        VarDefine                
+ExprStatement:           used=1, mode=0000, 00020
+[  0] ExprStatement      -> <Separator,Semicolon>    
+[  1] ExprStatement      -> Expression               <Separator,Semicolon>    
+Statement:               used=1, mode=0000, 00021
+[  0] Statement          -> CompaundStmnt            
+[  1] Statement          -> <Reserv,Return>          <Separator,Semicolon>    
+CompaundStmnt:           used=2, mode=0000, 00022
+[  0] CompaundStmnt      -> <Syntax,EmptyCramp>      
+[  1] CompaundStmnt      -> <Separator,LeftCramp>    VarsDefStatement         _f_00023_                <Separator,RightCramp>   
+_f_00023_:               used=1, mode=8000, 00023
+[  0] _f_00023_          -> VarsDefStatement         
+Expression:              used=7, mode=0000, 00024
+[  0] Expression         -> Assign                   
+Assign:                  used=2, mode=0000, 00025
+[  0] Assign             -> Question                 _f_00026_                
+_f_00026_:               used=1, mode=4000, 00026
+[  0] _f_00026_          -> <Priority,Assign>        Assign                   
+Question:                used=2, mode=0000, 00027
+[  0] Question           -> OrOr                     _f_00028_                
+_f_00028_:               used=1, mode=4000, 00028
+[  0] _f_00028_          -> <Priority,Question>      Expression               <Separator,Colon>        Question                 
+OrOr:                    used=1, mode=0000, 00029
+[  0] OrOr               -> AndAnd                   _f_00030_                
+_f_00030_:               used=1, mode=8000, 00030
+[  0] _f_00030_          -> <Priority,OrOr>          AndAnd                   
+AndAnd:                  used=2, mode=0000, 00031
+[  0] AndAnd             -> Or                       _f_00032_                
+_f_00032_:               used=1, mode=8000, 00032
+[  0] _f_00032_          -> <Priority,AndAnd>        Or                       
+Or:                      used=2, mode=0000, 00033
+[  0] Or                 -> XOr                      _f_00034_                
+_f_00034_:               used=1, mode=8000, 00034
+[  0] _f_00034_          -> <Priority,Or>            XOr                      
+XOr:                     used=2, mode=0000, 00035
+[  0] XOr                -> And                      _f_00036_                
+_f_00036_:               used=1, mode=8000, 00036
+[  0] _f_00036_          -> <Priority,XOr>           And                      
+And:                     used=2, mode=0000, 00037
+[  0] And                -> Equ                      _f_00038_                
+_f_00038_:               used=1, mode=8000, 00038
+[  0] _f_00038_          -> <Priority,And>           Equ                      
+Equ:                     used=2, mode=0000, 00039
+[  0] Equ                -> Compare                  _f_00040_                
+_f_00040_:               used=1, mode=8000, 00040
+[  0] _f_00040_          -> <Priority,Equ>           Compare                  
+Compare:                 used=2, mode=0000, 00041
+[  0] Compare            -> Shift                    _f_00042_                
+_f_00042_:               used=1, mode=8000, 00042
+[  0] _f_00042_          -> <Priority,Compare>       Shift                    
+Shift:                   used=2, mode=0000, 00043
+[  0] Shift              -> Term                     _f_00044_                
+_f_00044_:               used=1, mode=8000, 00044
+[  0] _f_00044_          -> <Priority,Shift>         Term                     
+Term:                    used=2, mode=0000, 00045
+[  0] Term               -> Factor                   _f_00046_                
+_f_00046_:               used=1, mode=8000, 00046
+[  0] _f_00046_          -> <Priority,Term>          Factor                   
+Factor:                  used=2, mode=0000, 00047
+[  0] Factor             -> Unary                    _f_00048_                
+_f_00048_:               used=1, mode=8000, 00048
+[  0] _f_00048_          -> <Priority,Factor>        Unary                    
+Unary:                   used=5, mode=0000, 00049
+[  0] Unary              -> <Priority,Unary>         Unary                    
+[  1] Unary              -> <Priority,Term>          Unary                    
+[  2] Unary              -> <Priority,IncDec>        Unary                    
+[  3] Unary              -> _f_00050_                _f_00053_                
+_f_00050_:               used=1, mode=2000, 00050
+[  0] _f_00050_          -> <Syntax,IdentArr>        <Separator,LeftScrape>   Expression               <Separator,RightScrape>  _f_00051_                
+[  1] _f_00050_          -> <Syntax,IdentFunc>       _f_00052_                
+[  2] _f_00050_          -> Primary                  
+_f_00051_:               used=1, mode=8000, 00051
+[  0] _f_00051_          -> <Separator,LeftScrape>   Expression               <Separator,RightScrape>  
+_f_00052_:               used=1, mode=2000, 00052
+[  0] _f_00052_          -> <Syntax,EmptyBracket>    
+[  1] _f_00052_          -> <Separator,LeftBracket>  Expressions              <Separator,RightBracket> 
+_f_00053_:               used=1, mode=4000, 00053
+[  0] _f_00053_          -> <Priority,IncDec>        
+Primary:                 used=1, mode=0000, 00054
+[  0] Primary            -> <Integer>                
+[  1] Primary            -> <Number>                 
+[  2] Primary            -> <Ident>                  
+[  3] Primary            -> <Separator,LeftBracket>  Expressions              <Separator,RightBracket> 
+Expressions:             used=2, mode=0000, 00055
+[  0] Expressions        -> Expression               _f_00056_                
+_f_00056_:               used=1, mode=8000, 00056
+[  0] _f_00056_          -> <Separator,Comma>        Expression               

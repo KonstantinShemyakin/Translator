@@ -1,0 +1,26 @@
+rem   opGrammar     = 0x00000001, opFollow      = 0x00000002, opMaker          = 0x00000004, opLexeme        = 0x00000008,
+rem   opFirst       = 0x00000010, opEFF         = 0x00000020, opBNF            = 0x00000040, opBIF           = 0x00000080,
+rem   opFormula     = 0x00000100, opAuto        = 0x00000200, opOutput         = 0x00000400, opC2A           = 0x00000800,
+rem   opAction      = 0x00001000, opTable       = 0x00002000, opFiUnattainable = 0x00004000, opSplitting     = 0x00008000,
+rem   opState       = 0x00010000, opStateCore   = 0x00020000, opStateSort      = 0x00040000, opGoTo          = 0x00080000,
+rem   opAssociation = 0x00100000, opCompression = 0x00200000, opNoDefType      = 0x00400000, opNoPriorAssign = 0x00800000,
+rem   opChainRule   = 0x01000000, opTrueBIF     = 0x02000000, opLeftFactoring  = 0x04000000, opLeftRecursion = 0x08000000,
+rem   opEof2Empty   = 0x10000000,                                                            opSelfParsing   = 0x80000000,
+rem   opCell        = opAction  , opAhead = opC2A, opLLk = opC2A, opFiUn = opC2A, opSplittingAddition = opFiUnattainable
+
+
+rem   omPrintOther    = 0x00000001, omPrintSpace   = 0x00000002, omPrintLine   = 0x00000004, omPrintLexeme   = 0x00000008,
+rem   omPrintTree     = 0x00000010, omEraseCode    = 0x00000020, omPrintCode   = 0x00000040, omPrintOperator = 0x00000080,
+rem   omPrintRule     = 0x00000100, omPrintMaker   = 0x00000200, omPrintStack  = 0x00000400, omPrintCodes    = 0x00000800,
+rem   omPrintSNode    = 0x00001000, omPrintSyntax  = 0x00002000, omPrintSource = 0x00004000, omPrintSemantic = 0x00008000,
+rem   omSelectProduce = 0x00010000, omTrimUnit     = 0x00020000, omAutoTree    = 0x00040000, omTreeTraversal = 0x00080000,
+rem   omQuadruple     = 0x00100000, omAtOnce       = 0x00200000, omAutoNoDigit = 0x00400000, omSyntaxOnly    = 0x00800000,
+rem   omWriteLexeme   = 0x01000000
+
+enum T_Grammar { 
+   gtNone = 0x0000, gtLL        = 0x00000001, gtLR     = 0x00000002, gtLLk         = 0x00000004,
+   slNone = 0x0000, slSyntax    = 0x00000010, slPrior  = 0x00000020, slPriorAssign = 0x00000040, slMeta      = 0x00000080,
+   mtNone = 0x0000, mtTree      = 0x00000100, mtCode   = 0x00000200, mtSNode       = 0x00000400, mtYacc      = 0x00000800, 
+                    mtTurn      = 0x00001000, mtEmpty  = 0x00002000, mtHead        = 0x00004000, slSimple    = 0x00008000,
+                    slNoDefType = 0x00010000, slNoSave = 0x00020000, slNoDefArrVar = 0x00040000, mtCall      = 0x00080000
+};
