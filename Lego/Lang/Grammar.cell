@@ -1,0 +1,98 @@
+{S_                       ,<Syntax,DefFunc>         }[  0] S_                 -> Program                  
+{                         ,<Syntax,DefType>         }[  0] S_                 -> Program                  
+{                         ,Eof                      }[  0] S_                 -> Program                  
+{Program                  ,<Syntax,DefFunc>         }[  0] Program            -> _f_00003_                
+{                         ,<Syntax,DefType>         }[  0] Program            -> _f_00003_                
+{                         ,Eof                      }[  0] Program            -> _f_00003_                
+{_f_00002_                ,<Syntax,DefFunc>         }[  0] _f_00002_          -> <Syntax,DefFunc>         <Syntax,IdentFunc>       FormalParameters         FuncBody                 
+{                         ,<Syntax,DefType>         }[  1] _f_00002_          -> <Syntax,DefType>         VarDefine                _f_00005_                <Separator,Semicolon>    
+{_f_00003_                ,<Syntax,DefFunc>         }[  0] _f_00003_          -> _f_00002_                _f_00003_                
+{                         ,<Syntax,DefType>         }[  0] _f_00003_          -> _f_00002_                _f_00003_                
+{                         ,Eof                      }[  1] _f_00003_          -> 
+{_f_00004_                ,<Separator,Comma>        }[  0] _f_00004_          -> <Separator,Comma>        VarDefine                
+{_f_00005_                ,<Separator,Comma>        }[  0] _f_00005_          -> _f_00004_                _f_00005_                
+{                         ,<Separator,Semicolon>    }[  1] _f_00005_          -> 
+{VarDefine                ,<Ident>                  }[  1] VarDefine          -> <Ident>                  _f_00007_                
+{                         ,<Syntax,IdentArr>        }[  0] VarDefine          -> ArrayDefine              
+{_f_00007_                ,<Oper,Assign>            }[  0] _f_00007_          -> <Oper,Assign>            Expression               
+{                         ,<Separator,Comma>        }[  1] _f_00007_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00007_          -> 
+{ArrayDefine              ,<Syntax,IdentArr>        }[  0] ArrayDefine        -> <Syntax,IdentArr>        <Separator,LeftScrape>   <Integer>                <Separator,RightScrape>  _f_00010_                
+{_f_00009_                ,<Separator,LeftScrape>   }[  0] _f_00009_          -> <Separator,LeftScrape>   <Integer>                <Separator,RightScrape>  
+{_f_00010_                ,<Separator,RightBracket> }[  1] _f_00010_          -> 
+{                         ,<Separator,LeftScrape>   }[  0] _f_00010_          -> _f_00009_                _f_00010_                
+{                         ,<Separator,Comma>        }[  1] _f_00010_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00010_          -> 
+{FormalParameters         ,<Separator,LeftBracket>  }[  1] FormalParameters   -> <Separator,LeftBracket>  FormalParameter          _f_00013_                <Separator,RightBracket> 
+{                         ,<Syntax,EmptyBracket>    }[  0] FormalParameters   -> <Syntax,EmptyBracket>    
+{_f_00012_                ,<Separator,Comma>        }[  0] _f_00012_          -> <Separator,Comma>        FormalParameter          
+{_f_00013_                ,<Separator,RightBracket> }[  1] _f_00013_          -> 
+{                         ,<Separator,Comma>        }[  0] _f_00013_          -> _f_00012_                _f_00013_                
+{FormalParameter          ,<Syntax,DefType>         }[  0] FormalParameter    -> <Syntax,DefType>         _f_00015_                
+{_f_00015_                ,<Ident>                  }[  1] _f_00015_          -> <Ident>                  
+{                         ,<Syntax,IdentArr>        }[  0] _f_00015_          -> ArrayDefine              
+{FuncBody                 ,<Separator,LeftCramp>    }[  1] FuncBody           -> CompaundStmnt            
+{                         ,<Separator,Semicolon>    }[  0] FuncBody           -> <Separator,Semicolon>    
+{                         ,<Syntax,EmptyCramp>      }[  1] FuncBody           -> CompaundStmnt            
+{VarsDefStatement         ,<Separator,LeftCramp>    }[  3] VarsDefStatement   -> CompaundStmnt            
+{                         ,<Separator,Semicolon>    }[  2] VarsDefStatement   -> ExprStatement            
+{                         ,<Integer>                }[  2] VarsDefStatement   -> ExprStatement            
+{                         ,<Reserv,For>             }[  1] VarsDefStatement   -> Statement                
+{                         ,<Reserv,While>           }[  1] VarsDefStatement   -> Statement                
+{                         ,<Reserv,If>              }[  1] VarsDefStatement   -> Statement                
+{                         ,<Reserv,Return>          }[  1] VarsDefStatement   -> Statement                
+{                         ,<Syntax,DefType>         }[  0] VarsDefStatement   -> VarsOrArrsDefine         
+{                         ,<Syntax,EmptyCramp>      }[  3] VarsDefStatement   -> CompaundStmnt            
+{VarsOrArrsDefine         ,<Syntax,DefType>         }[  0] VarsOrArrsDefine   -> <Syntax,DefType>         VarDefine                _f_00020_                <Separator,Semicolon>    
+{_f_00019_                ,<Separator,Comma>        }[  0] _f_00019_          -> <Separator,Comma>        VarDefine                
+{_f_00020_                ,<Separator,Comma>        }[  0] _f_00020_          -> _f_00019_                _f_00020_                
+{                         ,<Separator,Semicolon>    }[  1] _f_00020_          -> 
+{ExprStatement            ,<Separator,Semicolon>    }[  0] ExprStatement      -> <Separator,Semicolon>    
+{                         ,<Integer>                }[  1] ExprStatement      -> Expression               <Separator,Semicolon>    
+{Statement                ,<Reserv,For>             }[  3] Statement          -> <Reserv,For>             <Separator,LeftBracket>  _f_00024_                ExprStatement            _f_00025_                <Separator,RightBracket> VarsDefStatement         
+{                         ,<Reserv,While>           }[  2] Statement          -> <Reserv,While>           <Separator,LeftBracket>  Expression               <Separator,RightBracket> VarsDefStatement         
+{                         ,<Reserv,If>              }[  1] Statement          -> <Reserv,If>              <Separator,LeftBracket>  Expression               <Separator,RightBracket> VarsDefStatement         _f_00026_                
+{                         ,<Reserv,Return>          }[  0] Statement          -> <Reserv,Return>          _f_00023_                <Separator,Semicolon>    
+{_f_00023_                ,<Separator,Semicolon>    }[  1] _f_00023_          -> 
+{                         ,<Integer>                }[  0] _f_00023_          -> Expression               
+{_f_00024_                ,<Separator,Semicolon>    }[  1] _f_00024_          -> ExprStatement            
+{                         ,<Integer>                }[  1] _f_00024_          -> ExprStatement            
+{                         ,<Syntax,DefType>         }[  0] _f_00024_          -> VarsOrArrsDefine         
+{_f_00025_                ,<Separator,RightBracket> }[  1] _f_00025_          -> 
+{                         ,<Integer>                }[  0] _f_00025_          -> Expression               _f_00032_                
+{_f_00026_                ,<Separator,LeftCramp>    }[  1] _f_00026_          -> 
+{                         ,<Separator,RightCramp>   }[  1] _f_00026_          -> 
+{                         ,<Separator,Semicolon>    }[  1] _f_00026_          -> 
+{                         ,<Integer>                }[  1] _f_00026_          -> 
+{                         ,<Reserv,For>             }[  1] _f_00026_          -> 
+{                         ,<Reserv,While>           }[  1] _f_00026_          -> 
+{                         ,<Reserv,If>              }[  1] _f_00026_          -> 
+{                         ,<Reserv,Else>            }[  0] _f_00026_          -> <Reserv,Else>            VarsDefStatement         
+{                         ,<Reserv,Return>          }[  1] _f_00026_          -> 
+{                         ,<Syntax,DefType>         }[  1] _f_00026_          -> 
+{                         ,<Syntax,EmptyCramp>      }[  1] _f_00026_          -> 
+{CompaundStmnt            ,<Separator,LeftCramp>    }[  1] CompaundStmnt      -> <Separator,LeftCramp>    VarsDefStatement         _f_00029_                <Separator,RightCramp>   
+{                         ,<Syntax,EmptyCramp>      }[  0] CompaundStmnt      -> <Syntax,EmptyCramp>      
+{_f_00028_                ,<Separator,LeftCramp>    }[  0] _f_00028_          -> VarsDefStatement         
+{                         ,<Separator,Semicolon>    }[  0] _f_00028_          -> VarsDefStatement         
+{                         ,<Integer>                }[  0] _f_00028_          -> VarsDefStatement         
+{                         ,<Reserv,For>             }[  0] _f_00028_          -> VarsDefStatement         
+{                         ,<Reserv,While>           }[  0] _f_00028_          -> VarsDefStatement         
+{                         ,<Reserv,If>              }[  0] _f_00028_          -> VarsDefStatement         
+{                         ,<Reserv,Return>          }[  0] _f_00028_          -> VarsDefStatement         
+{                         ,<Syntax,DefType>         }[  0] _f_00028_          -> VarsDefStatement         
+{                         ,<Syntax,EmptyCramp>      }[  0] _f_00028_          -> VarsDefStatement         
+{_f_00029_                ,<Separator,LeftCramp>    }[  0] _f_00029_          -> _f_00028_                _f_00029_                
+{                         ,<Separator,RightCramp>   }[  1] _f_00029_          -> 
+{                         ,<Separator,Semicolon>    }[  0] _f_00029_          -> _f_00028_                _f_00029_                
+{                         ,<Integer>                }[  0] _f_00029_          -> _f_00028_                _f_00029_                
+{                         ,<Reserv,For>             }[  0] _f_00029_          -> _f_00028_                _f_00029_                
+{                         ,<Reserv,While>           }[  0] _f_00029_          -> _f_00028_                _f_00029_                
+{                         ,<Reserv,If>              }[  0] _f_00029_          -> _f_00028_                _f_00029_                
+{                         ,<Reserv,Return>          }[  0] _f_00029_          -> _f_00028_                _f_00029_                
+{                         ,<Syntax,DefType>         }[  0] _f_00029_          -> _f_00028_                _f_00029_                
+{                         ,<Syntax,EmptyCramp>      }[  0] _f_00029_          -> _f_00028_                _f_00029_                
+{Expression               ,<Integer>                }[  0] Expression         -> <Integer>                
+{_f_00031_                ,<Separator,Comma>        }[  0] _f_00031_          -> <Separator,Comma>        Expression               
+{_f_00032_                ,<Separator,RightBracket> }[  1] _f_00032_          -> 
+{                         ,<Separator,Comma>        }[  0] _f_00032_          -> _f_00031_                _f_00032_                

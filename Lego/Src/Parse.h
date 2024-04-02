@@ -460,6 +460,7 @@ struct T_Parse
 	bool line_is_space;
 	T_Parse(T_Scan *s) : scan(s), lex(), forward(), option(0), line_is_space(false), store_count(0), restore_count(0) {}
 	T_Lexeme::T_Group Lex(T_Lexeme &l);
+   virtual T_Lexeme::T_Group Lexeme(T_Lexeme &l) { return Lex(l); }
 	T_Lexeme::T_Group T_Scan__Lex(T_Lexeme &l);
 	const T_Lexeme& Cur() { SkipSpace(); return lex; }
 	T_Scan& Scan() { return *scan; }

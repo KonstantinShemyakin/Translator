@@ -1,0 +1,291 @@
+
+S_                       
+                         ::= Program                  
+                         
+Program                  
+                         ::= Defines                  
+                         
+DefBegParVar             
+                         ::= Ident_lexeme                { MAKE(DefParVar); }        { TURN(Make,DefVar,-1); }
+                         
+DefParVar                
+                         ::= DefBegParVar                =                           { CODE(BegParVarAssign); }                           { TURN(Command,Lexeme,-1); }                         Assign                      { MAKE(ParVarAssign); }     { TURN(Down,None); }     
+                         |   DefBegParVar             
+                         
+DefBegParArr             
+                         ::= Syntax_IdentArr             { MAKE(DefParArr); }        { TURN(Make,List); }        DefBegRanges                { TURN(Make,DefArr,-2); }
+                         
+DefParArr                
+                         ::= DefBegParArr                =                           { CODE(BegParVarAssign); }                           { TURN(Command,Lexeme,-1); }                         Assign                      { MAKE(ParVarAssign); }     { TURN(Down,None); }     
+                         |   DefBegParArr             
+                         
+DefParItem               
+                         ::= Syntax_DefArr               { TURN(Push,Type); }        DefParArr                
+                         |   Syntax_DefVar               { TURN(Push,Type); }        DefParVar                
+                         
+DefParams                
+                         ::= DefParams                   ,                           DefParItem                  { TREE(AddToList); }        { TURN(Down,None); }     
+                         |   DefParItem                  { TREE(AddToList); }        { TURN(Down,None); }     
+                         
+BodyFunc                 
+                         ::= ;                           { MAKE(BodyFunc); }         { TURN(Make,Null); }     
+                         |   Syntax_EmptyCramp           { MAKE(BodyFunc,1); }       { TURN(Make,Statements); }                        
+                         |   '{'                         { CODE(EndParams); }        { MAKE(BegStmExprLR); }     { TURN(Make,Statements); }                           StmExpr                     '}'                         { MAKE(BodyFunc,2); }    
+                         
+DefFunc_                 
+                         ::= Syntax_EmptyBracket         { TREE(EndParams,2); }      { TURN(Make,Null); }        { TURN(Down,None); }     
+                         |   (                           { TREE(Define,2); }         { TURN(Make,Define); }      DefParams                   )                           { TREE(EndParams); }        { TURN(Down,None,1); }   
+                         
+DefFunc                  
+                         ::= Syntax_DefFunc              { TURN(Push,Type); }        Syntax_IdentFunc            { MAKE(FuncIdent); }        { TURN(Make,DefFunc,-1); }                           DefFunc_                    BodyFunc                    { TURN(Down,None); }     
+                         
+AInitItem                
+                         ::= Initializer              
+                         |   Assign                      { CODE(AInitItem); }     
+                         
+AInitial                 
+                         ::= AInitial                    ,                           AInitItem                   { TREE(AddToList); }        { TURN(Down,None); }     
+                         |   AInitItem                   { TREE(AddToList); }        { TURN(Down,None); }     
+                         
+Initializer              
+                         ::= Syntax_EmptyCramp           { CODE(BegInitial); }       { TREE(NodeListLR); }       { TURN(Make,List); }     
+                         |   '{'                         { CODE(BegInitial,1); }     { TREE(NodeListLR); }       { TURN(Make,List); }        AInitial                    '}'                         { CODE(EndInitial); }    
+                         
+DefRanges_               
+                         ::= [                           Assign                      ]                        
+                         
+DefRanges                
+                         ::= DefRanges                   DefRanges_                  { MAKE(DRange); }           { TURN(Down,None); }     
+                         |   DefRanges_                  { MAKE(DRange); }           { TURN(Down,None); }     
+                         
+DefBegRanges             
+                         ::= Syntax_EmptyScrape          { MAKE(DefArrD1AEmpty); }   { TURN(Put,Null); }         { TURN(Down,None); }        DefRanges                
+                         |   Syntax_EmptyScrape          { MAKE(DefArrD1AEmpty); }   { TURN(Put,Null); }         { TURN(Down,None); }     
+                         |   DefRanges                
+                         
+DefBegArr                
+                         ::= Syntax_IdentArr             { MAKE(DefArray); }         { TURN(Push,DefArr); }      { TURN(Make,Ranges); }      DefBegRanges                { CODE(EndRanges); }        { TURN(Down,None); }     
+                         
+DefArr                   
+                         ::= DefBegArr                   =                           { CODE(BegAInit); }         { TURN(Command,Lexeme,-1); }                         Initializer                 { MAKE(EndAInit); }         { TURN(Down,None); }     
+                         |   DefBegArr                
+                         
+DefVarIdent              
+                         ::= Ident_lexeme                { MAKE(DefIdent); }         { TURN(Push,DefVar); }   
+                         
+DefVarAssign             
+                         ::= =                           { CODE(BegDefVarAssign); }                           { TURN(Command,Lexeme,-1); }                         Assign                      { MAKE(DefVarAssign); }     { TURN(Down,None); }     
+                         
+DefVar                   
+                         ::= DefVarIdent                 DefVarAssign             
+                         |   DefVarIdent              
+                         
+DefIAV                   
+                         ::= DefArr                   
+                         |   DefVar                   
+                         
+RefDefIAV                
+                         ::= Priority_And                DefIAV                      { TREE(RefDef); }           { TURN(Command,Lexeme,-1); }                      
+                         
+DefItem                  
+                         ::= RefDefIAV                
+                         |   DefIAV                   
+                         
+DefType                  
+                         ::= Syntax_DefArr            
+                         |   Syntax_DefVar            
+                         
+DefineComma              
+                         ::= DefineComma                 ,                           DefItem                     { TREE(AddToList); }        { TURN(Down,None); }     
+                         |   DefItem                     { TREE(AddToList); }        { TURN(Down,None); }     
+                         
+Define                   
+                         ::= DefType                     { MAKE(Define); }           { TURN(Push,Type); }        { TURN(Make,Define,1); }    DefineComma                 { CODE(EndDefine); }     
+                         
+Expressions              
+                         ::= Expressions                 ,                           Assign                      { TREE(AddToList); }        { TURN(Down,None); }        { CODE(AddToExpr); }     
+                         |   Assign                      { MAKE(ExpressionsLR); }    { TURN(Make,Expressions,1); }                     
+                         
+PriorAssign              
+                         ::= Priority_Assign          
+                         
+Assign                   
+                         ::= Question                    PriorAssign                 Assign                      { MAKE(Binary); }           { TURN(Make,Binary,-2); }
+                         |   Question                 
+                         
+Question                 
+                         ::= OrOr                        Priority_Question           { CODE(BegQuestion); }      ExpressionValue             :                           { CODE(MidQuestion); }      Question                    { MAKE(Question); }         { TURN(Make,Trio,-3); }  
+                         |   OrOr                     
+                         
+OrOr                     
+                         ::= OrOr                        Priority_OrOr               AndAnd                      { MAKE(Binary); }           { TURN(Make,Binary,-2); }   { NODE(Binary,(2,1,3)); }
+                         |   AndAnd                   
+                         
+AndAnd                   
+                         ::= AndAnd                      Priority_AndAnd             Or                          { MAKE(Binary); }           { TURN(Make,Binary,-2); }   { NODE(Binary,(2,1,3)); }
+                         |   Or                       
+                         
+Or                       
+                         ::= Or                          Priority_Or                 XOr                         { MAKE(Binary); }           { TURN(Make,Binary,-2); }   { NODE(Binary,(2,1,3)); }
+                         |   XOr                      
+                         
+XOr                      
+                         ::= XOr                         Priority_XOr                And                         { MAKE(Binary); }           { TURN(Make,Binary,-2); }   { NODE(Binary,(2,1,3)); }
+                         |   And                      
+                         
+And                      
+                         ::= And                         Priority_And                Equ                         { MAKE(Binary); }           { TURN(Make,Binary,-2); }   { NODE(Binary,(2,1,3)); }
+                         |   Equ                      
+                         
+Equ                      
+                         ::= Equ                         Priority_Equ                Compare                     { MAKE(Binary); }           { TURN(Make,Binary,-2); }   { NODE(Binary,(2,1,3)); }
+                         |   Compare                  
+                         
+Compare                  
+                         ::= Compare                     Priority_Compare            Shift                       { MAKE(Binary); }           { TURN(Make,Binary,-2); }   { NODE(Binary,(2,1,3)); }
+                         |   Shift                    
+                         
+Shift                    
+                         ::= Shift                       Priority_Shift              Term                        { MAKE(Binary); }           { TURN(Make,Binary,-2); }   { NODE(Binary,(2,1,3)); }
+                         |   Term                     
+                         
+Term                     
+                         ::= Term                        Priority_Term               Factor                      { MAKE(Binary); }           { TURN(Make,Binary,-2); }   { NODE(Binary,(2,1,3)); }
+                         |   Factor                   
+                         
+Factor                   
+                         ::= Factor                      Priority_Factor             Unary                       { MAKE(Binary); }           { TURN(Make,Binary,-2); }   { NODE(Binary,(2,1,3)); }
+                         |   Unary                    
+                         
+UnaryIncDec              
+                         ::= PrimaryExpr                 Priority_IncDec             { MAKE(IncDec); }           { TURN(Make,IncDec,-1); }
+                         |   PrimaryExpr              
+                         
+Unary                    
+                         ::= Priority_Unary              Unary                       { MAKE(Unary); }            { TURN(Make,Unary,-1); } 
+                         |   Priority_Term               Unary                       { MAKE(Unary); }            { TURN(Make,Unary,-1); } 
+                         |   Priority_IncDec             Unary                       { MAKE(Unary); }            { TURN(Make,Unary,-1); } 
+                         |   Syntax_CastUnary            Unary                       { MAKE(Cast); }             { TURN(Make,Cast,-1); }  
+                         |   UnaryIncDec              
+                         
+Primary                  
+                         ::= (                           ExpressionNone              )                           { TREE(Primary); }          { TURN(Make,Primary,1); }
+                         
+PrimaryExpr              
+                         ::= Integer_lexeme              { MAKE(Number); }           { TURN(Push,Number); }   
+                         |   Number_lexeme               { MAKE(Number); }           { TURN(Push,Number); }   
+                         |   Syntax_IdentArr             { TURN(Push,Index); }       Ranges                      { MAKE(EndIndex); }         { TURN(Down,None); }     
+                         |   Syntax_IdentFunc            { TURN(Push,Call); }        CallParams                  { TURN(Down,None); }     
+                         |   Syntax_Cast                 Primary                     { MAKE(Cast); }             { TURN(Make,Cast,-1); }  
+                         |   Ident_lexeme                { MAKE(Ident); }            { TURN(Push,Var); }      
+                         |   Primary                  
+                         
+Range                    
+                         ::= [                           ExpressionValue             ]                        
+                         
+Ranges                   
+                         ::= Ranges                      Range                       { MAKE(IndexLR); }          { TURN(Down,None); }     
+                         |   Range                       { MAKE(BegIndexLR); }       { TURN(Make,Ranges,1); } 
+                         
+CallParams               
+                         ::= Syntax_EmptyBracket         { MAKE(Params); }           { TURN(Make,Null); }     
+                         |   (                           ExpressionValueList         )                           { MAKE(Params,1); }      
+                         
+CompaundStmnt            
+                         ::= Syntax_EmptyCramp           { MAKE(Compaund); }         { CODE(EndBlock); }         { TURN(Make,Statements); }                        
+                         |   '{'                         { MAKE(Compaund); }         { TURN(Make,Statements); }                           StmExpr                     '}'                      
+                         
+Condition_V              
+                         ::= Priority_And                DefVarAssign                { TREE(RefDef); }           { TURN(Command,Lexeme,-1); }                      
+                         |   DefVarAssign             
+                         
+Condition                
+                         ::= Syntax_DefVar               { MAKE(Define); }           Condition_V                 { MAKE(PushDef); }       
+                         |   ExpressionCondition      
+                         
+For_Prefix               
+                         ::= ;                           { TREE(NodeNull); }         { TURN(Make,Null); }     
+                         |   DefineSemi               
+                         |   ExprSemi                 
+                         
+For_Condition            
+                         ::= ;                           { MAKE(NodeNull); }         { TURN(Make,Null); }     
+                         |   Condition                   ;                        
+                         
+For_Postfix              
+                         ::= )                           { TREE(NodeNull); }         { TURN(Make,Null); }     
+                         |   ExpressionExpression        )                        
+                         
+ForStmnt                 
+                         ::= for                         (                           { MAKE(BegFor); }           For_Prefix                  { CODE(PrefFor); }          For_Condition               { CODE(ConditionFor); }     For_Postfix                 { CODE(PostFor); }          DefExpr                     { MAKE(For); }              { TURN(Make,For,4); }    
+                         
+ReturnValue              
+                         ::= ;                           { MAKE(Return); }           { TURN(Make,Return); }   
+                         |   ExpressionValue             ;                           { MAKE(Return,1); }         { TURN(Make,Return,1); } 
+                         
+ReturnStmnt              
+                         ::= return                      ReturnValue              
+                         
+BegIfStmnt               
+                         ::= if                          (                           { CODE(BegIf); }            Condition                   )                           { CODE(Then); }             DefExpr                     { TURN(Make,If,2); }     
+                         
+Statement                
+                         ::= BegIfStmnt                  else                        { CODE(Else); }             DefExpr                     { MAKE(If,1); }             { TURN(Down,None); }     
+                         |   BegIfStmnt                  { MAKE(If); }            
+                         |   Syntax_Label                :                           { CODE(Label); }            { TURN(Push,Label); }       DefExpr                     { TREE(Label); }            { TURN(Make,List,2); }   
+                         |   do                          { MAKE(BegDo); }            DefExpr                     while                       (                           Condition                   )                           ;                           { MAKE(Do); }               { TURN(Make,Do,-2); }    
+                         |   while                       { MAKE(BegWhile); }         (                           Condition                   )                           DefExpr                     { MAKE(While); }            { TURN(Make,While,-2); } 
+                         |   ForStmnt                 
+                         |   switch                      (                           )                        
+                         |   goto                        Ident_lexeme                ;                           { MAKE(GoTo); }             { TURN(Push,GoTo); }     
+                         |   break                       ;                           { MAKE(Break); }            { TURN(Make,Break); }    
+                         |   continue                    ;                           { MAKE(Continue); }         { TURN(Make,Continue); } 
+                         |   ReturnStmnt              
+                         |   CompaundStmnt            
+                         
+DefineSemi               
+                         ::= Define                      ;                        
+                         
+ExprSemi                 
+                         ::= ExpressionExpression        ;                        
+                         
+DefExpr                  
+                         ::= ;                           { TREE(NodeNull); }         { TURN(Make,Null); }     
+                         |   DefineSemi               
+                         |   Statement                
+                         |   ExprSemi                 
+                         
+StmExprList              
+                         ::= StmExprList                 DefExpr                     { TREE(AddToList); }        { TURN(Down,None); }     
+                         |   DefExpr                     { TREE(AddToList); }        { TURN(Down,None); }     
+                         
+StmExpr                  
+                         ::= StmExprList                 { CODE(EndBlock); }      
+                         
+DefFAV                   
+                         ::= ;                           { TREE(NodeNull); }         { TURN(Make,Null); }     
+                         |   DefFunc                  
+                         |   DefineSemi               
+                         
+DefinesList              
+                         ::= DefinesList                 DefFAV                      { TREE(AddToList); }        { TURN(Down,None); }     
+                         |   DefFAV                      { TREE(BegStmExprLR,1); }   { TURN(Down,None); }     
+                         
+Defines                  
+                         ::= { CODE(BegStmExprLR); }     { TURN(Make,Statements); }                           DefinesList                 { CODE(EndBlock); }      
+                         
+ExpressionExpression     
+                         ::= Expressions                 { MAKE(ExpressionSLR,16); }                          { TURN(Command,Param,16); }                       
+                         
+ExpressionCondition      
+                         ::= Expressions                 { MAKE(ExpressionSLR,241); }                         { TURN(Command,Param,241); }                      
+                         
+ExpressionNone           
+                         ::= Expressions                 { MAKE(ExpressionSLR); }    { TURN(Command,Param); } 
+                         
+ExpressionValue          
+                         ::= Expressions                 { MAKE(ExpressionSLR,256); }                         { TURN(Command,Param,256); }                      
+                         
+ExpressionValueList      
+                         ::= Expressions                 { MAKE(ExpressionSLR,512); }                         { TURN(Command,Param,512); }                      
+                         

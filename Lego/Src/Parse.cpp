@@ -1254,6 +1254,37 @@ FUNCTION_PRINT_TITLE(print_names)
    PRINT_TITLE(lexeme_word,TLexeme::TWord)
    PRINT_TITLE(lexeme_type,TLexeme::TType)
    PRINT_TITLE(lexeme_priority,TLexeme::TPriority)
+
+   int priority = 0;
+   for (const char* item : lexeme_priority) {
+      int len_title = strlen(item);
+   	fprintf(file,"%s%*c : ", item, 15-len_title, ' ');
+
+      for (const T_Symbol symbol : symbol_table().table) {
+         if (!symbol.text || !symbol.priority || (symbol.priority != priority)) continue;
+         int len_text = strlen(symbol.text);
+         fprintf(file, "%s%*c ", symbol.text, 15 - len_text, ' ');
+      }
+      fprintf(file," \n");
+      priority++;
+   }
+   fprintf(file," \n"); 
+
+   priority = 0;
+   for (const char* item : lexeme_priority) {
+      int len_title = strlen(item);
+   	fprintf(file,"%s%*c : ", item, 15-len_title, ' ');
+
+      for (const T_Symbol symbol : symbol_table().table) {
+         if (!symbol.text || !symbol.priority || (symbol.priority != priority)) continue;
+         int len_type = strlen(lexeme_type_title(symbol.type));
+         fprintf(file, "%s%*c ", lexeme_type_title(symbol.type), 15 - len_type, ' ');
+      }
+      fprintf(file," \n");
+      priority++;
+   }
+   fprintf(file," \n"); 
+
    PRINT_TITLE(lexeme_syntax,TLexeme::TSyntax)
    PRINT_TITLE(syntax_error,TError)
 END_PRINT_TITLE

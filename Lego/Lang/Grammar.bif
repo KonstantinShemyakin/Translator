@@ -1,0 +1,93 @@
+S_                ::=  Program
+
+Program           ::=  [ Define ]...
+
+Define            ::=  { FuncDefine | ItemsDefine }
+
+ItemsDefine       ::=  Syntax_DefType  VarDefine [ , VarDefine]... ;
+
+VarDefine         ::=  { ArrayDefine | SimpleVarDefine }
+
+SimpleVarDefine   ::=  Ident  [ = Expression ]
+
+ArrayDefine       ::=  Syntax_IdentArr '[' Integer ']' [ '[' Integer ']' ]...
+
+FuncDefine        ::=  Syntax_DefFunc Syntax_IdentFunc FormalParameters FuncBody
+
+FormalParameters  ::=  { Syntax_EmptyBracket     |     ( FormalParameter [, FormalParameter ]... )  }
+
+FormalParameter   ::=  Syntax_DefType  { ArrayDefine  |  Ident   }
+
+FuncBody          ::=  { ; | CompaundStmnt       }
+
+VarsDefStatement  ::=  { ItemsDefine   |  SimpleStatement  |  ExprStatement  |  CompaundStmnt  }
+
+ExprStatement     ::=  { Expression ;  | ; }
+
+Statement         ::=  VarsDefStatement
+
+SimpleStatement   ::=  {
+                            ReturnStatement
+                       |    IfStatement
+                       |    ForStatement
+                       }
+
+ReturnStatement   ::=  {
+						return ExprStatement
+					   }
+					  
+IfStatement		  ::=  { if ( Expression ) Statement [ else Statement ] }
+					   
+ForStatement	  ::=  for ( { ItemsDefine | [ Expressions ] ; } ExprStatement [ Expressions ] ) Statement
+
+CompaundStmnt     ::=  { Syntax_EmptyCramp   |    '{' VarsDefStatement  [ VarsDefStatement ]... '}'   }
+
+Expression        ::=  Assign                      
+                         
+Assign            ::=  Question    [  Priority_Assign Assign  ] 
+                         
+Question          ::=  OrOr        [  Priority_Question       Expression      :    Question ] 
+                         
+OrOr              ::=  AndAnd      [  Priority_OrOr   AndAnd  ]... 
+
+AndAnd            ::=  Or          [  Priority_AndAnd  Or     ]... 
+                         
+Or                ::=  XOr         [  Priority_Or      XOr    ]... 
+                         
+XOr               ::=  And         [  Priority_XOr     And    ]... 
+                         
+And               ::=  Equ         [  Priority_And     Equ    ]... 
+                         
+Equ               ::=  Compare     [  Priority_Equ  Compare   ]... 
+                         
+Compare           ::=  Shift       [  Priority_Compare Shift  ]... 
+                         
+Shift             ::=  Term        [  Priority_Shift   Term   ]... 
+                         
+Term              ::=  Factor      [  Priority_Term    Factor ]... 
+                         
+Factor            ::=  Unary       [  Priority_Factor  Unary  ]... 
+                         
+Unary                    
+                  ::=  { 
+                           Priority_Unary              Unary                    
+                       |   Priority_Term               Unary                    
+                       |   Priority_IncDec             Unary                    
+                       |   
+                                   { 
+                                       Syntax_IdentArr      '['  Expression  ']'           [   '['  Expression  ']'  ]... 
+                                   |   Syntax_IdentFunc     {   Syntax_EmptyBracket    |   (    Expressions    )   } 
+                                   |   Primary                  
+                                   }    
+                                   [   Priority_IncDec   ] 
+                       } 
+Primary           ::=  { 
+                           Integer                  
+                       |   Number
+                       |   Ident                    
+                       |   (       Expressions   )                        
+                       }                  
+                         
+                         
+Expressions       ::= Expression  [ ,  Expression     ]... 
+                         

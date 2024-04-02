@@ -234,6 +234,24 @@ int print_symbol(const char *file_name)
       fprintf(file,"\n");
    }
 
+   for (const T_Symbol symbol : symbol_table().table) {
+      if (!symbol.text) continue;
+      fprintf(file,"%02d %02d %02d %08d %s", symbol.group, symbol.type, symbol.priority, symbol.mask, symbol.text);
+      fprintf(file,"\n");
+   }
+
+   for (const T_Symbol symbol : symbol_table().table) {
+      if (!symbol.text) continue;
+      fprintf(file,"(%2d, %2d, %2d, %8d, \"%s\")", symbol.group, symbol.type, symbol.priority, symbol.mask, symbol.text);
+      fprintf(file,"\n");
+   }
+
+   for (const T_Symbol symbol : symbol_table().table) {
+      if (!symbol.text) continue;
+      fprintf(file,"p.Add(%02d, %02d, %02d, %08d, \"%s\");", symbol.group, symbol.type, symbol.priority, symbol.mask, symbol.text);
+      fprintf(file,"\n");
+   }
+
    free(file_sym);
 
 	return count;
@@ -259,7 +277,7 @@ int print_word(const char *file_name)
 
    for (int i = 0; i < table.count; i++) {
       const T_Word& item = table.Word(i);
-      fprintf(file,"%02d 0x%08X %s", item.type, item.mask, item.text);
+      fprintf(file,"(%2d, %8d, \"%s\")", item.type, item.mask, item.text);
       fprintf(file,"\n");
    }
 
@@ -280,7 +298,7 @@ int scan_write(T_Parse &scan, const char *file_name)
    T_Lexeme::T_Group group;
 	do {
       count++;
-      group = scan.Lex(lexeme);
+      group = scan.Lexeme(lexeme);
       if (!lexeme.Match(T_Lexeme::grSpace) && !lexeme.Match(T_Lexeme::grLine)) {
          lexeme.write(printer, &scan.Scan());
       }
@@ -501,7 +519,7 @@ bool test(int type, int option, const char *file)
    parse.Mask(mask);
    parse.Source(source,file);
 
-   switch (type) {
+   switch (type & 0x00FF) {
    case 0 :
       count = print_source(source);
       break;
@@ -530,6 +548,7 @@ bool test(int type, int option, const char *file)
    	count = scan_store(parse);
       break;
    case 8 : {
+      parse.syntax_lexeme = T_SyntaxLexeme(type >> 8);
    	count = scan_write(parse, file);
       } break;
    case 0x09 : { // FlexLexer
@@ -568,7 +587,7 @@ int main(int argc, const char* argv[])
    in_help.option = 0x4001;
 
    in_help.type = 0x0D;
-   in_help.file = "scaner";
+   in_help.file = "scanner";
 /*
 // TranParse.exe 6 01000001 test_group.cpp
    in_help.type = 4;
@@ -580,6 +599,14 @@ int main(int argc, const char* argv[])
    in_help.type = 0x08;
    in_help.file = "scaner.c";
 */
+// TranParse.exe 0x00047008 8 test_g.cpp
+   int syntax_lexeme = T_SyntaxLexeme::slNoDefArrVar | T_SyntaxLexeme::slSyntax;
+   syntax_lexeme |= T_SyntaxLexeme::slPrior | T_SyntaxLexeme::slPriorAssign;
+   syntax_lexeme |= T_SyntaxLexeme::slNoDefType;
+   in_help.type = (syntax_lexeme << 8) | 0x08;
+   in_help.option = 0x00000008;
+   in_help.file = "test_g.cpp";
+
    if (!in_help.input(argc,argv)) return 0;
    test(in_help.type, in_help.option, in_help.file);
 

@@ -1,0 +1,80 @@
+enum TLexeme::TGroup { None, Oper, Separator, Integer, Number, String, Ident, Reserv, Space, Line, Error, Priority, Syntax, Eof, Preproc, Meta, Grammar,  };
+const char* group[] = { "None", "Oper", "Separator", "Integer", "Number", "String", "Ident", "Reserv", "Space", "Line", "Error", "Priority", "Syntax", "Eof", "Preproc", "Meta", "Grammar",  };
+
+enum TLexeme::TWord { None, For, While, If, Else, Do, GoTo, Continue, Break, Return, Switch, Case, Try, Throw, Catch, Enum, Default, Void, Short, Int, Long, Float, Double, Define, Const, Static, Auto, Char, Extern, Register, Signed, Sizeof, Struct, Typedef, Union, Unsigned, Volatile, Bool, Complex, Imaginary, Inline, Restrict, All, Make, Node, Code, Tree, Yacc, Turn, Call, Class,  };
+const char* lexeme_word[] = { "None", "For", "While", "If", "Else", "Do", "GoTo", "Continue", "Break", "Return", "Switch", "Case", "Try", "Throw", "Catch", "Enum", "Default", "Void", "Short", "Int", "Long", "Float", "Double", "Define", "Const", "Static", "Auto", "Char", "Extern", "Register", "Signed", "Sizeof", "Struct", "Typedef", "Union", "Unsigned", "Volatile", "Bool", "Complex", "Imaginary", "Inline", "Restrict", "All", "Make", "Node", "Code", "Tree", "Yacc", "Turn", "Call", "Class",  };
+
+enum TLexeme::TType { None, Add, Sub, Multi, Div, Mod, AddAssign, SubAssign, MultiAssign, DivAssign, ModAssign, AndAssign, OrAssign, XOrAssign, Assign, Or, And, OrOr, AndAnd, XOr, Tilda, Not, PlusPlus, MinusMinus, Equ, NotEqu, LT, LE, GT, GE, LShift, RShift, LShiftAssign, RShiftAssign, LeftCramp, RightCramp, LeftBracket, RightBracket, LeftScrape, RightScrape, Question, ColonColon, Slach, Point, Comma, Semicolon, Colon, UnaryAdd, UnarySub, PostInc, PostDec, Pointer, Ellipsis, ModMod, ModBegin, ModEnd, ModToken, ModLeft, ModRight, BNFSet, Define, Undef, Ifdef, Ifndef, Else, Endif, LeftMaker, RightMaker, Hint, BegHint, EndHint, At, RZShift, RZShiftAssign,  };
+const char* lexeme_type[] = { "None", "Add", "Sub", "Multi", "Div", "Mod", "AddAssign", "SubAssign", "MultiAssign", "DivAssign", "ModAssign", "AndAssign", "OrAssign", "XOrAssign", "Assign", "Or", "And", "OrOr", "AndAnd", "XOr", "Tilda", "Not", "PlusPlus", "MinusMinus", "Equ", "NotEqu", "LT", "LE", "GT", "GE", "LShift", "RShift", "LShiftAssign", "RShiftAssign", "LeftCramp", "RightCramp", "LeftBracket", "RightBracket", "LeftScrape", "RightScrape", "Question", "ColonColon", "Slach", "Point", "Comma", "Semicolon", "Colon", "UnaryAdd", "UnarySub", "PostInc", "PostDec", "Pointer", "Ellipsis", "ModMod", "ModBegin", "ModEnd", "ModToken", "ModLeft", "ModRight", "BNFSet", "Define", "Undef", "Ifdef", "Ifndef", "Else", "Endif", "LeftMaker", "RightMaker", "Hint", "BegHint", "EndHint", "At", "RZShift", "RZShiftAssign",  };
+
+enum TLexeme::TPriority { None, Assign, Question, OrOr, AndAnd, Or, XOr, And, Equ, Compare, Shift, Term, Factor, Unary, IncDec,  };
+const char* lexeme_priority[] = { "None", "Assign", "Question", "OrOr", "AndAnd", "Or", "XOr", "And", "Equ", "Compare", "Shift", "Term", "Factor", "Unary", "IncDec",  };
+
+None            :  
+Assign          : +=              -=              *=              /=              %=              &=              |=              ^=              =               <<=             >>>=            >>=              
+Question        : ?                
+OrOr            : ||               
+AndAnd          : &&               
+Or              : |                
+XOr             : ^                
+And             : &                
+Equ             : ==              !=               
+Compare         : <=              <               >=              >                
+Shift           : <<              >>>             >>               
+Term            : +               -                
+Factor          : *               /               %                
+Unary           : ~               !               +               -                
+IncDec          : ++              --              ++              --               
+ 
+None            :  
+Assign          : AddAssign       SubAssign       MultiAssign     DivAssign       ModAssign       AndAssign       OrAssign        XOrAssign       Assign          LShiftAssign    RZShiftAssign   RShiftAssign     
+Question        : Question         
+OrOr            : OrOr             
+AndAnd          : AndAnd           
+Or              : Or               
+XOr             : XOr              
+And             : And              
+Equ             : Equ             NotEqu           
+Compare         : LE              LT              GE              GT               
+Shift           : LShift          RZShift         RShift           
+Term            : Add             Sub              
+Factor          : Multi           Div             Mod              
+Unary           : Tilda           Not             UnaryAdd        UnarySub         
+IncDec          : PlusPlus        MinusMinus      PostInc         PostDec          
+ 
+enum TLexeme::TSyntax { None, IdentFunc, IdentArr, DefFunc, DefArr, DefVar, DefType, Label, Cast, CastUnary, EmptyCramp, EmptyBracket, EmptyScrape,  };
+const char* lexeme_syntax[] = { "None", "IdentFunc", "IdentArr", "DefFunc", "DefArr", "DefVar", "DefType", "Label", "Cast", "CastUnary", "EmptyCramp", "EmptyBracket", "EmptyScrape",  };
+
+enum TError { None, Symbol, End, NoEnd, Primary, NoInteger, NoIdent, NoValue, DefArr, DefFunc, Define, DefVoid, Statement, Switch, UnknownIdent, DuplicateIdent, Break, Continue, UnknownOper, UnknownCast, UnknownParam, UnknownFunc, DuplicateBody, UnknownBody, UnknownLabel, DuplicateLabel, ErrorLabel, UnusedLabel, InvalidType, NoReturn, Ranges, Uninitialized, InvalidInit, Impossible,  };
+const char* syntax_error[] = { "None", "Symbol", "End", "NoEnd", "Primary", "NoInteger", "NoIdent", "NoValue", "DefArr", "DefFunc", "Define", "DefVoid", "Statement", "Switch", "UnknownIdent", "DuplicateIdent", "Break", "Continue", "UnknownOper", "UnknownCast", "UnknownParam", "UnknownFunc", "DuplicateBody", "UnknownBody", "UnknownLabel", "DuplicateLabel", "ErrorLabel", "UnusedLabel", "InvalidType", "NoReturn", "Ranges", "Uninitialized", "InvalidInit", "Impossible",  };
+
+enum GSymbol::TType { None, Formula, Produce, Terminal, Vector, Empty, Eof, Maker, Rule, Point, Para, Situation, Table,  };
+const char* item_title[] = { "None", "Formula", "Produce", "Terminal", "Vector", "Empty", "Eof", "Maker", "Rule", "Point", "Para", "Situation", "Table",  };
+
+enum SNode::SType { None, Node, Unary, Binary, Logical, Trio, Number, Primary, Type, Cast, IncDec, Expressions, Compaund, Statements, DefVar, DefArr, DefFunc, Define, Var, Call, Index, For, While, Do, Label, GoTo, Break, Continue, Return, If, SwitchCase, SwitchItem, Switch, List, Ranges, Null, NodeOne, NodeTwo, RefDef, Lexeme, Param, Formula, Produce, Maker, Tokens, Enums, Item,  };
+const char* title_snode[] = { "None", "Node", "Unary", "Binary", "Logical", "Trio", "Number", "Primary", "Type", "Cast", "IncDec", "Expressions", "Compaund", "Statements", "DefVar", "DefArr", "DefFunc", "Define", "Var", "Call", "Index", "For", "While", "Do", "Label", "GoTo", "Break", "Continue", "Return", "If", "SwitchCase", "SwitchItem", "Switch", "List", "Ranges", "Null", "NodeOne", "NodeTwo", "RefDef", "Lexeme", "Param", "Formula", "Produce", "Maker", "Tokens", "Enums", "Item",  };
+
+enum SNode::TTurn { None, Push, Put, Add, Make, Down, Up, Swap, Command,  };
+const char* title_turn[] = { "None", "Push", "Put", "Add", "Make", "Down", "Up", "Swap", "Command",  };
+
+enum TAction { None, Shift, Reduce, Accept, Goto, Error, Fi, Produce, Pop,  };
+const char* title_action[] = { "None", "Shift", "Reduce", "Accept", "Goto", "Error", "Fi", "Produce", "Pop",  };
+
+enum TBaseType { Void, Short, Int, Long, Float, Double, CVoid, CShort, CInt, CLong, CFloat, CDouble, RVoid, RShort, RInt, RLong, RFloat, RDouble, CRVoid, CRShort, CRInt, CRLong, CRFloat, CRDouble, SVoid, SShort, SInt, SLong, SFloat, SDouble, SCVoid, SCShort, SCInt, SCLong, SCFloat, SCDouble, SRVoid, SRShort, SRInt, SRLong, SRFloat, SRDouble, SCRVoid, SCRShort, SCRInt, SCRLong, SCRFloat, SCRDouble,  };
+const char* base_type_title[] = { "Void", "Short", "Int", "Long", "Float", "Double", "CVoid", "CShort", "CInt", "CLong", "CFloat", "CDouble", "RVoid", "RShort", "RInt", "RLong", "RFloat", "RDouble", "CRVoid", "CRShort", "CRInt", "CRLong", "CRFloat", "CRDouble", "SVoid", "SShort", "SInt", "SLong", "SFloat", "SDouble", "SCVoid", "SCShort", "SCInt", "SCLong", "SCFloat", "SCDouble", "SRVoid", "SRShort", "SRInt", "SRLong", "SRFloat", "SRDouble", "SCRVoid", "SCRShort", "SCRInt", "SCRLong", "SCRFloat", "SCRDouble",  };
+
+enum TAlloc { None   , Global , Local  , Param  , Integer, Number , Oper   , Label  , Command ,  };
+const char* alloc_title[] = { "None   ", "Global ", "Local  ", "Param  ", "Integer", "Number ", "Oper   ", "Label  ", "Command ",  };
+
+enum TQuadr::TType { None, Const, Binary, Unary, Cast, Set, Goto, If, Param, Call, Return, Index, Range, Variable, Array, Referense, Pointer, Refer, Label,  };
+const char* quadruple_type[] = { "None", "Const", "Binary", "Unary", "Cast", "Set", "Goto", "If", "Param", "Call", "Return", "Index", "Range", "Variable", "Array", "Referense", "Pointer", "Refer", "Label",  };
+
+enum TCommand::TType { None, Cast, Oper, Call, GoTo, Label, NewVar, NewArr, PushVar, PushVal, PushArr, PushAal, PushInt, PushNum, Pop, Return, Exit, InitArr,  };
+const char* command_title[] = { "None", "Cast", "Oper", "Call", "GoTo", "Label", "NewVar", "NewArr", "PushVar", "PushVal", "PushArr", "PushAal", "PushInt", "PushNum", "Pop", "Return", "Exit", "InitArr",  };
+
+enum TCommand::TGoTo { None, If, Else, GoTo,  };
+const char* command_title_mode_goto[] = { "None", "If", "Else", "GoTo",  };
+
+enum TCommand::TAlloc { None, Global, Local, Param,  };
+const char* command_title_alloc[] = { "None", "Global", "Local", "Param",  };
+
